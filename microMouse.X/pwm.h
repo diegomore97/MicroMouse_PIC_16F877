@@ -4,7 +4,7 @@
 #define BITS_PWM 1023
 
 #define  TMR2PRESCALE 16
-#define  FRECUENCIA_PWM 300
+#define  FRECUENCIA_PWM 500
 
 void configPwm(unsigned char channel);
 void pwmDuty(unsigned int cicloTrabajo, unsigned char channel);
