@@ -23,16 +23,14 @@ void main(void) {
 
     UART_init(9600); //9600 Baudios
 
-    pwmDuty(95, 1);
-    pwmDuty(0, 2);
+    pwmDuty(0, 1); //Iniciar en ciclo de trabajo 0 MOTOR 1
+    pwmDuty(0, 2); //Iniciar en ciclo de trabajo 0 MOTOR 2
 
     while (1) {
 
-        for (int i = 0; i < 10; i++) {
-            sprintf(buffer, "%d\n", i);
-            UART_printf(buffer);
-            __delay_ms(100);
-        }
+        sprintf(buffer, "\rDistancia: %d cm\r\n", dameDistancia(1));
+        UART_printf(buffer);
+        __delay_ms(1000);
 
 
     }

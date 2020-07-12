@@ -1,7 +1,7 @@
 [p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PICREGULAR PICMID ]
 [d version 1.1 ]
 [d edition pro ]
-[d chip 16F877 ]
+[d chip 16F877A ]
 [d frameptr 0 ]
 "13 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/pwm.h
 [v _map map `(l  1 e 4 0 ]
@@ -15,6 +15,8 @@
 [v _UART_write UART_write `(v  1 e 1 0 ]
 "44
 [v _UART_printf UART_printf `(v  1 e 1 0 ]
+"6 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/ultrasonico.h
+[v _dameDistancia dameDistancia `(us  1 e 2 0 ]
 "5 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\aldiv.c
 [v ___aldiv __aldiv `(l  1 e 4 0 ]
 "505 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\doprnt.c
@@ -52,16 +54,16 @@
 `uc 1 RB6 1 0 :1:6 
 `uc 1 RB7 1 0 :1:7 
 ]
-"233 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877.h
+"233 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h
 [u S49 . 1 `S40 1 . 1 0 ]
 [v _PORTBbits PORTBbits `VES49  1 e 1 @6 ]
-"634
-[v _TMR1L TMR1L `VEuc  1 e 1 @14 ]
 "641
-[v _TMR1H TMR1H `VEuc  1 e 1 @15 ]
+[v _TMR1L TMR1L `VEuc  1 e 1 @14 ]
 "648
+[v _TMR1H TMR1H `VEuc  1 e 1 @15 ]
+"655
 [v _T1CON T1CON `VEuc  1 e 1 @16 ]
-"887
+"892
 [v _CCPR1L CCPR1L `VEuc  1 e 1 @21 ]
 [s S128 . 1 `uc 1 RX9D 1 0 :1:0 
 `uc 1 OERR 1 0 :1:1 
@@ -72,7 +74,7 @@
 `uc 1 RX9 1 0 :1:6 
 `uc 1 SPEN 1 0 :1:7 
 ]
-"989
+"994
 [s S137 . 1 `uc 1 RCD8 1 0 :1:0 
 `uc 1 . 1 0 :5:1 
 `uc 1 RC9 1 0 :1:6 
@@ -85,11 +87,11 @@
 ]
 [u S147 . 1 `S128 1 . 1 0 `S137 1 . 1 0 `S141 1 . 1 0 `S144 1 . 1 0 ]
 [v _RCSTAbits RCSTAbits `VES147  1 e 1 @24 ]
-"1054
+"1059
 [v _TXREG TXREG `VEuc  1 e 1 @25 ]
-"1061
+"1066
 [v _RCREG RCREG `VEuc  1 e 1 @26 ]
-"1075
+"1080
 [v _CCPR2L CCPR2L `VEuc  1 e 1 @27 ]
 [s S175 . 1 `uc 1 TRISB0 1 0 :1:0 
 `uc 1 TRISB1 1 0 :1:1 
@@ -100,7 +102,7 @@
 `uc 1 TRISB6 1 0 :1:6 
 `uc 1 TRISB7 1 0 :1:7 
 ]
-"1387
+"1392
 [u S184 . 1 `S175 1 . 1 0 ]
 [v _TRISBbits TRISBbits `VES184  1 e 1 @134 ]
 [s S69 . 1 `uc 1 TRISC0 1 0 :1:0 
@@ -112,10 +114,10 @@
 `uc 1 TRISC6 1 0 :1:6 
 `uc 1 TRISC7 1 0 :1:7 
 ]
-"1449
+"1454
 [u S78 . 1 `S69 1 . 1 0 ]
 [v _TRISCbits TRISCbits `VES78  1 e 1 @135 ]
-"1804
+"1816
 [v _PR2 PR2 `VEuc  1 e 1 @146 ]
 [s S91 . 1 `uc 1 TX9D 1 0 :1:0 
 `uc 1 TRMT 1 0 :1:1 
@@ -126,7 +128,7 @@
 `uc 1 TX9 1 0 :1:6 
 `uc 1 CSRC 1 0 :1:7 
 ]
-"2013
+"2025
 [s S100 . 1 `uc 1 TXD8 1 0 :1:0 
 `uc 1 . 1 0 :5:1 
 `uc 1 nTX8 1 0 :1:6 
@@ -136,39 +138,39 @@
 ]
 [u S107 . 1 `S91 1 . 1 0 `S100 1 . 1 0 `S104 1 . 1 0 ]
 [v _TXSTAbits TXSTAbits `VES107  1 e 1 @152 ]
-"2068
+"2080
 [v _SPBRG SPBRG `VEuc  1 e 1 @153 ]
-"2278
+"2446
 [v _CCP1M2 CCP1M2 `VEb  1 e 0 @186 ]
-"2281
+"2449
 [v _CCP1M3 CCP1M3 `VEb  1 e 0 @187 ]
-"2284
+"2452
 [v _CCP1X CCP1X `VEb  1 e 0 @189 ]
-"2287
+"2455
 [v _CCP1Y CCP1Y `VEb  1 e 0 @188 ]
-"2302
+"2470
 [v _CCP2M2 CCP2M2 `VEb  1 e 0 @234 ]
-"2305
+"2473
 [v _CCP2M3 CCP2M3 `VEb  1 e 0 @235 ]
-"2308
+"2476
 [v _CCP2X CCP2X `VEb  1 e 0 @237 ]
-"2311
+"2479
 [v _CCP2Y CCP2Y `VEb  1 e 0 @236 ]
-"2536
+"2743
 [v _RCIF RCIF `VEb  1 e 0 @101 ]
-"2665
+"2872
 [v _T2CKPS0 T2CKPS0 `VEb  1 e 0 @144 ]
-"2668
+"2875
 [v _T2CKPS1 T2CKPS1 `VEb  1 e 0 @145 ]
-"2683
+"2890
 [v _TMR1IF TMR1IF `VEb  1 e 0 @96 ]
-"2686
+"2893
 [v _TMR1ON TMR1ON `VEb  1 e 0 @128 ]
-"2695
+"2902
 [v _TMR2ON TMR2ON `VEb  1 e 0 @146 ]
-"2755
+"2962
 [v _TRISC1 TRISC1 `VEb  1 e 0 @1081 ]
-"2758
+"2965
 [v _TRISC2 TRISC2 `VEb  1 e 0 @1082 ]
 "358 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\doprnt.c
 [v _dpowers dpowers `DC[5]ui  1 s 10 dpowers ]
@@ -177,29 +179,27 @@
 "11
 [v _main main `(v  1 e 1 0 ]
 {
-"31
-[v main@i i `i  1 a 2 77 ]
-"40
+"38
 } 0
 "505 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\doprnt.c
 [v _sprintf sprintf `(i  1 e 2 0 ]
 {
 [v sprintf@sp sp `*.4uc  1 a 1 wreg ]
 "545
-[v sprintf@val val `ui  1 a 2 9 ]
+[v sprintf@val val `ui  1 a 2 14 ]
 "512
-[v sprintf@c c `uc  1 a 1 12 ]
+[v sprintf@c c `uc  1 a 1 17 ]
 "521
-[v sprintf@prec prec `c  1 a 1 8 ]
+[v sprintf@prec prec `c  1 a 1 13 ]
 "525
-[v sprintf@flag flag `uc  1 a 1 7 ]
+[v sprintf@flag flag `uc  1 a 1 12 ]
 "507
-[v sprintf@ap ap `[1]*.4v  1 a 1 6 ]
+[v sprintf@ap ap `[1]*.4v  1 a 1 11 ]
 "505
 [v sprintf@sp sp `*.4uc  1 a 1 wreg ]
-[v sprintf@f f `*.24DCuc  1 p 1 0 ]
+[v sprintf@f f `*.24DCuc  1 p 1 5 ]
 "550
-[v sprintf@sp sp `*.4uc  1 a 1 11 ]
+[v sprintf@sp sp `*.4uc  1 a 1 16 ]
 "1567
 } 0
 "5 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\lwmod.c
@@ -211,18 +211,6 @@
 [v ___lwmod@divisor divisor `ui  1 p 2 8 ]
 [v ___lwmod@dividend dividend `ui  1 p 2 10 ]
 "25
-} 0
-"5 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\lwdiv.c
-[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
-{
-"10
-[v ___lwdiv@quotient quotient `ui  1 a 2 5 ]
-"11
-[v ___lwdiv@counter counter `uc  1 a 1 7 ]
-"5
-[v ___lwdiv@divisor divisor `ui  1 p 2 0 ]
-[v ___lwdiv@dividend dividend `ui  1 p 2 2 ]
-"30
 } 0
 "17 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/pwm.h
 [v _pwmDuty pwmDuty `(v  1 e 1 0 ]
@@ -337,6 +325,32 @@
 [v ___fldiv@a a `d  1 p 4 0 ]
 [v ___fldiv@b b `d  1 p 4 4 ]
 "185
+} 0
+"6 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/ultrasonico.h
+[v _dameDistancia dameDistancia `(us  1 e 2 0 ]
+{
+[v dameDistancia@numeroSensor numeroSensor `uc  1 a 1 wreg ]
+"8
+[v dameDistancia@conteo conteo `ui  1 a 2 3 ]
+"9
+[v dameDistancia@distancia distancia `us  1 a 2 1 ]
+"6
+[v dameDistancia@numeroSensor numeroSensor `uc  1 a 1 wreg ]
+"11
+[v dameDistancia@numeroSensor numeroSensor `uc  1 a 1 0 ]
+"62
+} 0
+"5 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+{
+"10
+[v ___lwdiv@quotient quotient `ui  1 a 2 5 ]
+"11
+[v ___lwdiv@counter counter `uc  1 a 1 7 ]
+"5
+[v ___lwdiv@divisor divisor `ui  1 p 2 0 ]
+[v ___lwdiv@dividend dividend `ui  1 p 2 2 ]
+"30
 } 0
 "44 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/pwm.h
 [v _configPwm configPwm `(v  1 e 1 0 ]
