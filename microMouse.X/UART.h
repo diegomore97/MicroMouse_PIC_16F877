@@ -1,6 +1,9 @@
 #ifndef UART_H
 #define	UART_H
 
+#define RX TRISC7
+#define TX TRISC6
+
 void UART_init(long BAUD);
 unsigned char UART_read(void);
 void UART_write(char dato);
@@ -10,8 +13,8 @@ void UART_printf(char* cadena);
 void UART_init(long BAUD) {
     
     long frecuenciaCristal = _XTAL_FREQ;
-    TRISCbits.TRISC6 = 0; //TX OUTPUT
-    TRISCbits.TRISC7 = 1; //RX INPUT
+    TX = 0; //TX OUTPUT
+    RX = 1; //RX INPUT
 
     //Baudios
     SPBRG = (frecuenciaCristal / 16 / BAUD) - 1;

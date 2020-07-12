@@ -1,6 +1,16 @@
 #ifndef ULTRASONICO_H
 #define	ULTRASONICO_H
 
+#define PIN_TRIGGER TRISB0
+#define PIN_ECHO_1  TRISB1
+#define PIN_ECHO_2  TRISB2
+#define PIN_ECHO_3  TRISB3
+
+#define TRIGGER RB0
+#define ECHO_1  RB1
+#define ECHO_2  RB2
+#define ECHO_3  RB3
+
 unsigned short dameDistancia(unsigned char numeroSensor);
 
 unsigned short dameDistancia(unsigned char numeroSensor) {
@@ -11,33 +21,33 @@ unsigned short dameDistancia(unsigned char numeroSensor) {
     TMR1H = 0x00; // Se carga La parte Alta del Timer 1;
     TMR1L = 0x00; // Se carga la Parte Baja del Timer 1
     conteo = 0; // Garantizo que conteo sea 0;
-    PORTBbits.RB0 = 1; // Activamos el Pulso en el Trigguer
+    TRIGGER = 1; // Activamos el Pulso en el Trigguer
     __delay_us(12); //Esperamos 12 Micro Segundos, Minimo deben ser 10.
-    PORTBbits.RB0 = 0; // Apagamos el Pulso del trigguer
+    TRIGGER = 0; // Apagamos el Pulso del trigguer
 
     switch (numeroSensor) {
 
         case 1:
 
-            while (!PORTBbits.RB1); // Esperamos que el Echo se active para poder empezar la cuenta
+            while (!ECHO_1); // Esperamos que el Echo se active para poder empezar la cuenta
             TMR1ON = 1; // Ponemos a contar el Timer 1
-            while (PORTBbits.RB1 && !TMR1IF); // Hasta que no se apague el ECHO o Se Desborde el Timer esperamos
+            while (ECHO_1 && !TMR1IF); // Hasta que no se apague el ECHO o Se Desborde el Timer esperamos
 
             break;
 
         case 2:
 
-            while (!PORTBbits.RB2); // Esperamos que el Echo se active para poder empezar la cuenta
+            while (!ECHO_2); // Esperamos que el Echo se active para poder empezar la cuenta
             TMR1ON = 1; // Ponemos a contar el Timer 1
-            while (PORTBbits.RB2 && !TMR1IF); // Hasta que no se apague el ECHO o Se Desborde el Timer esperamos
+            while (ECHO_2 && !TMR1IF); // Hasta que no se apague el ECHO o Se Desborde el Timer esperamos
 
             break;
 
         case 3:
 
-            while (!PORTBbits.RB3); // Esperamos que el Echo se active para poder empezar la cuenta
+            while (!ECHO_3); // Esperamos que el Echo se active para poder empezar la cuenta
             TMR1ON = 1; // Ponemos a contar el Timer 1
-            while (PORTBbits.RB3 && !TMR1IF); // Hasta que no se apague el ECHO o Se Desborde el Timer esperamos
+            while (ECHO_3 && !TMR1IF); // Hasta que no se apague el ECHO o Se Desborde el Timer esperamos
 
             break;
 

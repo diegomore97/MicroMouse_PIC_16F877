@@ -6,6 +6,9 @@
 #define  TMR2PRESCALE 16
 #define  FRECUENCIA_PWM 500
 
+#define PIN_PWM_1 TRISC2
+#define PIN_PWM_2 TRISC1
+
 void configPwm(unsigned char channel);
 void pwmDuty(unsigned int cicloTrabajo, unsigned char channel);
 long map(long x, long in_min, long in_max, long out_min, long out_max);
@@ -60,7 +63,7 @@ void configPwm(unsigned char channel) {
     switch (channel) {
 
         case 1:
-            TRISC2 = 0; // hacer pin de puerto en C como salida           
+            PIN_PWM_1 = 0; // hacer pin de puerto en C como salida           
             CCP1M3 = 1; //Modo PWM
             CCP1M2 = 1; //Modo PWM
 
@@ -68,7 +71,7 @@ void configPwm(unsigned char channel) {
             break;
 
         case 2:
-            TRISC1 = 0; // hacer pin de puerto en C como salida
+            PIN_PWM_2 = 0; // hacer pin de puerto en C como salida
             CCP2M3 = 1; //Modo PWM
             CCP2M2 = 1; //Modo PWM
             break;

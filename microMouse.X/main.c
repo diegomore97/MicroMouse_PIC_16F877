@@ -10,12 +10,12 @@ char buffer[TAMANO_CADENA]; //Variable para Debug
 
 void main(void) {
 
-    TRISBbits.TRISB0 = 0; //Pin Trigger Salida
-    TRISBbits.TRISB1 = 1; //Pin Echo Entrada Sensor 1
-    TRISBbits.TRISB2 = 1; //Pin Echo Entrada Sensor 2
-    TRISBbits.TRISB3 = 1; //Pin Echo Entrada Sensor 3
+    PIN_TRIGGER = 0; //Pin Trigger Salida
+    PIN_ECHO_1  = 1; //Pin Echo Entrada Sensor 1
+    PIN_ECHO_2  = 1; //Pin Echo Entrada Sensor 2
+    PIN_ECHO_3  = 1; //Pin Echo Entrada Sensor 3
 
-    PORTBbits.RB0 = 0; // Trigguer apagado
+    TRIGGER = 0; // Trigguer apagado
     T1CON = 0b00000000; // FOSC / 4 Y que el preescaler 1:1; Iniciamoa Con el TMR1ON Apagado
 
     configPwm(1); //Frencuencia de PWM de 300 Hz para el canal 1
@@ -23,8 +23,8 @@ void main(void) {
 
     UART_init(9600); //9600 Baudios
 
-    pwmDuty(0, 1); //Iniciar en ciclo de trabajo 0 MOTOR 1
-    pwmDuty(0, 2); //Iniciar en ciclo de trabajo 0 MOTOR 2
+    pwmDuty(50, 1); //Iniciar en ciclo de trabajo 0 MOTOR 1
+    pwmDuty(50, 2); //Iniciar en ciclo de trabajo 0 MOTOR 2
 
     while (1) {
 

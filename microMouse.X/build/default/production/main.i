@@ -1743,14 +1743,7 @@ extern __bank0 __bit __timeout;
 # 1 "main.c" 2
 
 # 1 "./pwm.h" 1
-
-
-
-
-
-
-
-
+# 12 "./pwm.h"
 void configPwm(unsigned char channel);
 void pwmDuty(unsigned int cicloTrabajo, unsigned char channel);
 long map(long x, long in_min, long in_max, long out_min, long out_max);
@@ -1825,9 +1818,7 @@ void configPwm(unsigned char channel) {
 # 2 "main.c" 2
 
 # 1 "./ultrasonico.h" 1
-
-
-
+# 14 "./ultrasonico.h"
 unsigned short dameDistancia(unsigned char numeroSensor);
 
 unsigned short dameDistancia(unsigned char numeroSensor) {
@@ -1838,33 +1829,33 @@ unsigned short dameDistancia(unsigned char numeroSensor) {
     TMR1H = 0x00;
     TMR1L = 0x00;
     conteo = 0;
-    PORTBbits.RB0 = 1;
+    RB0 = 1;
     _delay((unsigned long)((12)*(4000000/4000000.0)));
-    PORTBbits.RB0 = 0;
+    RB0 = 0;
 
     switch (numeroSensor) {
 
         case 1:
 
-            while (!PORTBbits.RB1);
+            while (!RB1);
             TMR1ON = 1;
-            while (PORTBbits.RB1 && !TMR1IF);
+            while (RB1 && !TMR1IF);
 
             break;
 
         case 2:
 
-            while (!PORTBbits.RB2);
+            while (!RB2);
             TMR1ON = 1;
-            while (PORTBbits.RB2 && !TMR1IF);
+            while (RB2 && !TMR1IF);
 
             break;
 
         case 3:
 
-            while (!PORTBbits.RB3);
+            while (!RB3);
             TMR1ON = 1;
-            while (PORTBbits.RB3 && !TMR1IF);
+            while (RB3 && !TMR1IF);
 
             break;
 
@@ -1893,6 +1884,9 @@ unsigned short dameDistancia(unsigned char numeroSensor) {
 
 
 
+
+
+
 void UART_init(long BAUD);
 unsigned char UART_read(void);
 void UART_write(char dato);
@@ -1902,8 +1896,8 @@ void UART_printf(char* cadena);
 void UART_init(long BAUD) {
 
     long frecuenciaCristal = 4000000;
-    TRISCbits.TRISC6 = 0;
-    TRISCbits.TRISC7 = 1;
+    TRISC6 = 0;
+    TRISC7 = 1;
 
 
     SPBRG = (frecuenciaCristal / 16 / BAUD) - 1;
@@ -2046,12 +2040,12 @@ char buffer[50];
 
 void main(void) {
 
-    TRISBbits.TRISB0 = 0;
-    TRISBbits.TRISB1 = 1;
-    TRISBbits.TRISB2 = 1;
-    TRISBbits.TRISB3 = 1;
+    TRISB0 = 0;
+    TRISB1 = 1;
+    TRISB2 = 1;
+    TRISB3 = 1;
 
-    PORTBbits.RB0 = 0;
+    RB0 = 0;
     T1CON = 0b00000000;
 
     configPwm(1);
@@ -2059,8 +2053,8 @@ void main(void) {
 
     UART_init(9600);
 
-    pwmDuty(0, 1);
-    pwmDuty(0, 2);
+    pwmDuty(50, 1);
+    pwmDuty(50, 2);
 
     while (1) {
 

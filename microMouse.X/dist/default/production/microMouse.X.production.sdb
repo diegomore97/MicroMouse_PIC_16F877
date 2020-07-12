@@ -3,19 +3,19 @@
 [d edition pro ]
 [d chip 16F877A ]
 [d frameptr 0 ]
-"13 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/pwm.h
+"16 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/pwm.h
 [v _map map `(l  1 e 4 0 ]
-"17
+"20
 [v _pwmDuty pwmDuty `(v  1 e 1 0 ]
-"44
+"47
 [v _configPwm configPwm `(v  1 e 1 0 ]
-"10 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/UART.h
+"13 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/UART.h
 [v _UART_init UART_init `(v  1 e 1 0 ]
-"39
+"42
 [v _UART_write UART_write `(v  1 e 1 0 ]
-"44
+"47
 [v _UART_printf UART_printf `(v  1 e 1 0 ]
-"6 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/ultrasonico.h
+"16 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/ultrasonico.h
 [v _dameDistancia dameDistancia `(us  1 e 2 0 ]
 "5 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\aldiv.c
 [v ___aldiv __aldiv `(l  1 e 4 0 ]
@@ -45,19 +45,7 @@
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
 "11 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
 [v _main main `(v  1 e 1 0 ]
-[s S40 . 1 `uc 1 RB0 1 0 :1:0 
-`uc 1 RB1 1 0 :1:1 
-`uc 1 RB2 1 0 :1:2 
-`uc 1 RB3 1 0 :1:3 
-`uc 1 RB4 1 0 :1:4 
-`uc 1 RB5 1 0 :1:5 
-`uc 1 RB6 1 0 :1:6 
-`uc 1 RB7 1 0 :1:7 
-]
-"233 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h
-[u S49 . 1 `S40 1 . 1 0 ]
-[v _PORTBbits PORTBbits `VES49  1 e 1 @6 ]
-"641
+"641 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h
 [v _TMR1L TMR1L `VEuc  1 e 1 @14 ]
 "648
 [v _TMR1H TMR1H `VEuc  1 e 1 @15 ]
@@ -65,7 +53,7 @@
 [v _T1CON T1CON `VEuc  1 e 1 @16 ]
 "892
 [v _CCPR1L CCPR1L `VEuc  1 e 1 @21 ]
-[s S128 . 1 `uc 1 RX9D 1 0 :1:0 
+[s S92 . 1 `uc 1 RX9D 1 0 :1:0 
 `uc 1 OERR 1 0 :1:1 
 `uc 1 FERR 1 0 :1:2 
 `uc 1 ADDEN 1 0 :1:3 
@@ -75,51 +63,27 @@
 `uc 1 SPEN 1 0 :1:7 
 ]
 "994
-[s S137 . 1 `uc 1 RCD8 1 0 :1:0 
+[s S101 . 1 `uc 1 RCD8 1 0 :1:0 
 `uc 1 . 1 0 :5:1 
 `uc 1 RC9 1 0 :1:6 
 ]
-[s S141 . 1 `uc 1 . 1 0 :6:0 
+[s S105 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 nRC8 1 0 :1:6 
 ]
-[s S144 . 1 `uc 1 . 1 0 :6:0 
+[s S108 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 RC8_9 1 0 :1:6 
 ]
-[u S147 . 1 `S128 1 . 1 0 `S137 1 . 1 0 `S141 1 . 1 0 `S144 1 . 1 0 ]
-[v _RCSTAbits RCSTAbits `VES147  1 e 1 @24 ]
+[u S111 . 1 `S92 1 . 1 0 `S101 1 . 1 0 `S105 1 . 1 0 `S108 1 . 1 0 ]
+[v _RCSTAbits RCSTAbits `VES111  1 e 1 @24 ]
 "1059
 [v _TXREG TXREG `VEuc  1 e 1 @25 ]
 "1066
 [v _RCREG RCREG `VEuc  1 e 1 @26 ]
 "1080
 [v _CCPR2L CCPR2L `VEuc  1 e 1 @27 ]
-[s S175 . 1 `uc 1 TRISB0 1 0 :1:0 
-`uc 1 TRISB1 1 0 :1:1 
-`uc 1 TRISB2 1 0 :1:2 
-`uc 1 TRISB3 1 0 :1:3 
-`uc 1 TRISB4 1 0 :1:4 
-`uc 1 TRISB5 1 0 :1:5 
-`uc 1 TRISB6 1 0 :1:6 
-`uc 1 TRISB7 1 0 :1:7 
-]
-"1392
-[u S184 . 1 `S175 1 . 1 0 ]
-[v _TRISBbits TRISBbits `VES184  1 e 1 @134 ]
-[s S69 . 1 `uc 1 TRISC0 1 0 :1:0 
-`uc 1 TRISC1 1 0 :1:1 
-`uc 1 TRISC2 1 0 :1:2 
-`uc 1 TRISC3 1 0 :1:3 
-`uc 1 TRISC4 1 0 :1:4 
-`uc 1 TRISC5 1 0 :1:5 
-`uc 1 TRISC6 1 0 :1:6 
-`uc 1 TRISC7 1 0 :1:7 
-]
-"1454
-[u S78 . 1 `S69 1 . 1 0 ]
-[v _TRISCbits TRISCbits `VES78  1 e 1 @135 ]
 "1816
 [v _PR2 PR2 `VEuc  1 e 1 @146 ]
-[s S91 . 1 `uc 1 TX9D 1 0 :1:0 
+[s S55 . 1 `uc 1 TX9D 1 0 :1:0 
 `uc 1 TRMT 1 0 :1:1 
 `uc 1 BRGH 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -129,15 +93,15 @@
 `uc 1 CSRC 1 0 :1:7 
 ]
 "2025
-[s S100 . 1 `uc 1 TXD8 1 0 :1:0 
+[s S64 . 1 `uc 1 TXD8 1 0 :1:0 
 `uc 1 . 1 0 :5:1 
 `uc 1 nTX8 1 0 :1:6 
 ]
-[s S104 . 1 `uc 1 . 1 0 :6:0 
+[s S68 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 TX8_9 1 0 :1:6 
 ]
-[u S107 . 1 `S91 1 . 1 0 `S100 1 . 1 0 `S104 1 . 1 0 ]
-[v _TXSTAbits TXSTAbits `VES107  1 e 1 @152 ]
+[u S71 . 1 `S55 1 . 1 0 `S64 1 . 1 0 `S68 1 . 1 0 ]
+[v _TXSTAbits TXSTAbits `VES71  1 e 1 @152 ]
 "2080
 [v _SPBRG SPBRG `VEuc  1 e 1 @153 ]
 "2446
@@ -156,6 +120,14 @@
 [v _CCP2X CCP2X `VEb  1 e 0 @237 ]
 "2479
 [v _CCP2Y CCP2Y `VEb  1 e 0 @236 ]
+"2674
+[v _RB0 RB0 `VEb  1 e 0 @48 ]
+"2677
+[v _RB1 RB1 `VEb  1 e 0 @49 ]
+"2680
+[v _RB2 RB2 `VEb  1 e 0 @50 ]
+"2683
+[v _RB3 RB3 `VEb  1 e 0 @51 ]
 "2743
 [v _RCIF RCIF `VEb  1 e 0 @101 ]
 "2872
@@ -168,10 +140,22 @@
 [v _TMR1ON TMR1ON `VEb  1 e 0 @128 ]
 "2902
 [v _TMR2ON TMR2ON `VEb  1 e 0 @146 ]
+"2935
+[v _TRISB0 TRISB0 `VEb  1 e 0 @1072 ]
+"2938
+[v _TRISB1 TRISB1 `VEb  1 e 0 @1073 ]
+"2941
+[v _TRISB2 TRISB2 `VEb  1 e 0 @1074 ]
+"2944
+[v _TRISB3 TRISB3 `VEb  1 e 0 @1075 ]
 "2962
 [v _TRISC1 TRISC1 `VEb  1 e 0 @1081 ]
 "2965
 [v _TRISC2 TRISC2 `VEb  1 e 0 @1082 ]
+"2977
+[v _TRISC6 TRISC6 `VEb  1 e 0 @1086 ]
+"2980
+[v _TRISC7 TRISC7 `VEb  1 e 0 @1087 ]
 "358 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\doprnt.c
 [v _dpowers dpowers `DC[5]ui  1 s 10 dpowers ]
 "9 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
@@ -212,17 +196,17 @@
 [v ___lwmod@dividend dividend `ui  1 p 2 10 ]
 "25
 } 0
-"17 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/pwm.h
+"20 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/pwm.h
 [v _pwmDuty pwmDuty `(v  1 e 1 0 ]
 {
-"19
+"22
 [v pwmDuty@duty duty `l  1 a 4 71 ]
-"17
+"20
 [v pwmDuty@cicloTrabajo cicloTrabajo `ui  1 p 2 63 ]
 [v pwmDuty@channel channel `uc  1 p 1 65 ]
-"42
+"45
 } 0
-"13
+"16
 [v _map map `(l  1 e 4 0 ]
 {
 [v map@x x `l  1 p 4 14 ]
@@ -230,7 +214,7 @@
 [v map@in_max in_max `l  1 p 4 22 ]
 [v map@out_min out_min `l  1 p 4 26 ]
 [v map@out_max out_max `l  1 p 4 30 ]
-"15
+"18
 } 0
 "15 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\Umul32.c
 [v ___lmul __lmul `(ul  1 e 4 0 ]
@@ -270,17 +254,17 @@
 "8 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\sprcmul.c
 [v ___flmul __flmul `(d  1 e 4 0 ]
 {
-[s S604 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+[s S527 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
 "13
-[s S609 . 4 `i 1 wordA 2 0 `i 1 wordB 2 2 ]
-[u S612 . 4 `l 1 i 4 0 `d 1 f 4 0 `S604 1 fAsBytes 4 0 `S609 1 fAsWords 4 0 ]
-[v ___flmul@prod prod `S612  1 a 4 46 ]
+[s S532 . 4 `i 1 wordA 2 0 `i 1 wordB 2 2 ]
+[u S535 . 4 `l 1 i 4 0 `d 1 f 4 0 `S527 1 fAsBytes 4 0 `S532 1 fAsWords 4 0 ]
+[v ___flmul@prod prod `S535  1 a 4 46 ]
 "12
 [v ___flmul@grs grs `ul  1 a 4 40 ]
-[s S681 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+[s S604 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
 "14
-[u S684 . 2 `i 1 i 2 0 `ui 1 n 2 0 `S681 1 nAsBytes 2 0 ]
-[v ___flmul@temp temp `S684  1 a 2 50 ]
+[u S607 . 2 `i 1 i 2 0 `ui 1 n 2 0 `S604 1 nAsBytes 2 0 ]
+[v ___flmul@temp temp `S607  1 a 2 50 ]
 "10
 [v ___flmul@bexp bexp `uc  1 a 1 45 ]
 "11
@@ -326,19 +310,19 @@
 [v ___fldiv@b b `d  1 p 4 4 ]
 "185
 } 0
-"6 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/ultrasonico.h
+"16 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/ultrasonico.h
 [v _dameDistancia dameDistancia `(us  1 e 2 0 ]
 {
 [v dameDistancia@numeroSensor numeroSensor `uc  1 a 1 wreg ]
-"8
+"18
 [v dameDistancia@conteo conteo `ui  1 a 2 3 ]
-"9
+"19
 [v dameDistancia@distancia distancia `us  1 a 2 1 ]
-"6
+"16
 [v dameDistancia@numeroSensor numeroSensor `uc  1 a 1 wreg ]
-"11
+"21
 [v dameDistancia@numeroSensor numeroSensor `uc  1 a 1 0 ]
-"62
+"72
 } 0
 "5 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\lwdiv.c
 [v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
@@ -352,35 +336,35 @@
 [v ___lwdiv@dividend dividend `ui  1 p 2 2 ]
 "30
 } 0
-"44 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/pwm.h
+"47 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/pwm.h
 [v _configPwm configPwm `(v  1 e 1 0 ]
 {
 [v configPwm@channel channel `uc  1 a 1 wreg ]
 [v configPwm@channel channel `uc  1 a 1 wreg ]
 [v configPwm@channel channel `uc  1 a 1 2 ]
-"79
+"82
 } 0
-"44 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/UART.h
+"47 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/UART.h
 [v _UART_printf UART_printf `(v  1 e 1 0 ]
 {
 [v UART_printf@cadena cadena `*.4uc  1 a 1 wreg ]
 [v UART_printf@cadena cadena `*.4uc  1 a 1 wreg ]
 [v UART_printf@cadena cadena `*.4uc  1 a 1 2 ]
-"48
+"51
 } 0
-"39
+"42
 [v _UART_write UART_write `(v  1 e 1 0 ]
 {
 [v UART_write@dato dato `uc  1 a 1 wreg ]
 [v UART_write@dato dato `uc  1 a 1 wreg ]
 [v UART_write@dato dato `uc  1 a 1 0 ]
-"42
+"45
 } 0
-"10
+"13
 [v _UART_init UART_init `(v  1 e 1 0 ]
 {
 [v UART_init@BAUD BAUD `l  1 p 4 14 ]
-"31
+"34
 } 0
 "5 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\aldiv.c
 [v ___aldiv __aldiv `(l  1 e 4 0 ]
