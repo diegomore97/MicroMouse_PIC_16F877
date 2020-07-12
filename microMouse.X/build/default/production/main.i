@@ -2053,8 +2053,8 @@ void main(void) {
 
     UART_init(9600);
 
-    pwmDuty(50, 1);
-    pwmDuty(50, 2);
+    pwmDuty(0, 1);
+    pwmDuty(0, 2);
 
     while (1) {
 

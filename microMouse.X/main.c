@@ -23,8 +23,8 @@ void main(void) {
 
     UART_init(9600); //9600 Baudios
 
-    pwmDuty(50, 1); //Iniciar en ciclo de trabajo 0 MOTOR 1
-    pwmDuty(50, 2); //Iniciar en ciclo de trabajo 0 MOTOR 2
+    pwmDuty(0, 1); //Iniciar en ciclo de trabajo 0 MOTOR 1
+    pwmDuty(0, 2); //Iniciar en ciclo de trabajo 0 MOTOR 2
 
     while (1) {
 

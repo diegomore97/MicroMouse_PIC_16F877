@@ -852,11 +852,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 24:     UART_init(9600);
 [e ( _UART_init (1 -> -> 9600 `i `l ]
 "26
-[; ;main.c: 26:     pwmDuty(50, 1);
-[e ( _pwmDuty (2 , -> -> 50 `i `ui -> -> 1 `i `uc ]
+[; ;main.c: 26:     pwmDuty(0, 1);
+[e ( _pwmDuty (2 , -> -> 0 `i `ui -> -> 1 `i `uc ]
 "27
-[; ;main.c: 27:     pwmDuty(50, 2);
-[e ( _pwmDuty (2 , -> -> 50 `i `ui -> -> 2 `i `uc ]
+[; ;main.c: 27:     pwmDuty(0, 2);
+[e ( _pwmDuty (2 , -> -> 0 `i `ui -> -> 2 `i `uc ]
 "29
 [; ;main.c: 29:     while (1) {
 [e :U 154 ]
