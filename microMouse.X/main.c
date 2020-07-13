@@ -9,7 +9,7 @@
 char buffer[TAMANO_CADENA]; //Variable para Debug
 
 void main(void) {
-
+    
     PIN_TRIGGER = 0; //Pin Trigger Salida
     PIN_ECHO_1  = 1; //Pin Echo Entrada Sensor 1
     PIN_ECHO_2  = 1; //Pin Echo Entrada Sensor 2

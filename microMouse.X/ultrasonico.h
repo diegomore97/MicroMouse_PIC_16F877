@@ -6,10 +6,10 @@
 #define PIN_ECHO_2  TRISB2
 #define PIN_ECHO_3  TRISB3
 
-#define TRIGGER RB0
-#define ECHO_1  RB1
-#define ECHO_2  RB2
-#define ECHO_3  RB3
+#define TRIGGER LATB0
+#define ECHO_1  PORTBbits.RB1
+#define ECHO_2  PORTBbits.RB2
+#define ECHO_3  PORTBbits.RB3
 
 unsigned short dameDistancia(unsigned char numeroSensor);
 
