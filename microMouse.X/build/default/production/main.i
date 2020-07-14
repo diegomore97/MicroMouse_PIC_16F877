@@ -6023,7 +6023,8 @@ typedef enum {
     ENFRENTE = 1,
     ATRAS,
     IZQUIERDA,
-    DERECHA
+    DERECHA,
+    ALTO
 } Direccion;
 
 typedef struct {
@@ -6103,6 +6104,10 @@ void llegarDestino(void) {
 
             break;
 
+        case ALTO:
+
+            break;
+
     }
 
     mouse.curr_state = mouse.Next_state;
@@ -6146,6 +6151,15 @@ void moverCarrito(void) {
             LATB4 = 0;
             LATB5 = 0;
             LATB6 = 1;
+            LATB7 = 0;
+
+            break;
+
+        case ALTO:
+
+            LATB4 = 0;
+            LATB5 = 0;
+            LATB6 = 0;
             LATB7 = 0;
 
             break;
