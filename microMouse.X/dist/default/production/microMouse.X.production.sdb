@@ -3,6 +3,13 @@
 [d edition pro ]
 [d chip 18F4550 ]
 [d frameptr 4065 ]
+"35 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+[e E3522 . `uc
+ENFRENTE 1
+ATRAS 2
+IZQUIERDA 3
+DERECHA 4
+]
 "16 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/pwm.h
 [v _map map `(l  1 e 4 0 ]
 "20
@@ -73,7 +80,11 @@
 [v ___omul __omul `(uo  1 e 8 0 ]
 "10 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
 [v ___xxtofl __xxtofl `(d  1 e 4 0 ]
-"11 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+"44 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+[v _inicializarMouse inicializarMouse `(v  1 e 1 0 ]
+"114
+[v _moverCarrito moverCarrito `(v  1 e 1 0 ]
+"158
 [v _main main `(v  1 e 1 0 ]
 [s S47 . 1 `uc 1 RB0 1 0 :1:0 
 `uc 1 RB1 1 0 :1:1 
@@ -182,6 +193,14 @@
 [v _CCP2M3 CCP2M3 `VEb  1 e 0 @32211 ]
 "9948
 [v _LATB0 LATB0 `VEb  1 e 0 @31824 ]
+"9960
+[v _LATB4 LATB4 `VEb  1 e 0 @31828 ]
+"9963
+[v _LATB5 LATB5 `VEb  1 e 0 @31829 ]
+"9966
+[v _LATB6 LATB6 `VEb  1 e 0 @31830 ]
+"9969
+[v _LATB7 LATB7 `VEb  1 e 0 @31831 ]
 "10443
 [v _RCIF RCIF `VEb  1 e 0 @31989 ]
 "10773
@@ -202,6 +221,14 @@
 [v _TRISB2 TRISB2 `VEb  1 e 0 @31898 ]
 "10911
 [v _TRISB3 TRISB3 `VEb  1 e 0 @31899 ]
+"10914
+[v _TRISB4 TRISB4 `VEb  1 e 0 @31900 ]
+"10917
+[v _TRISB5 TRISB5 `VEb  1 e 0 @31901 ]
+"10920
+[v _TRISB6 TRISB6 `VEb  1 e 0 @31902 ]
+"10923
+[v _TRISB7 TRISB7 `VEb  1 e 0 @31903 ]
 "10929
 [v _TRISC1 TRISC1 `VEb  1 e 0 @31905 ]
 "10932
@@ -218,19 +245,22 @@
 [v _dbuf dbuf `[32]uc  1 s 32 dbuf ]
 "69
 [v _nout nout `i  1 s 2 nout ]
-"9 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+[s S211 . 2 `E3522 1 curr_state 1 0 `E3522 1 Next_state 1 1 ]
+"35 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+[v _mouse mouse `S211  1 e 2 0 ]
+"38
 [v _buffer buffer `[50]uc  1 e 50 0 ]
-"11
+"158
 [v _main main `(v  1 e 1 0 ]
 {
-"38
+"194
 } 0
 "9 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\nf_sprintf.c
 [v _sprintf sprintf `(i  1 e 2 0 ]
 {
-[s S789 _IO_FILE 6 `*.39uc 1 buffer 2 0 `i 1 count 2 2 `i 1 limit 2 4 ]
+[s S817 _IO_FILE 6 `*.39uc 1 buffer 2 0 `i 1 count 2 2 `i 1 limit 2 4 ]
 "13
-[v sprintf@f f `S789  1 a 6 4 ]
+[v sprintf@f f `S817  1 a 6 4 ]
 "12
 [v sprintf@ap ap `[1]*.39v  1 a 2 2 ]
 "9
@@ -243,9 +273,9 @@
 {
 "1371
 [v vfprintf@cfmt cfmt `*.25uc  1 a 2 85 ]
-[s S281 _IO_FILE 0 ]
+[s S309 _IO_FILE 0 ]
 "1368
-[v vfprintf@fp fp `*.39S281  1 p 2 79 ]
+[v vfprintf@fp fp `*.39S309  1 p 2 79 ]
 [v vfprintf@fmt fmt `*.25Cuc  1 p 2 81 ]
 [v vfprintf@ap ap `*.39*.39v  1 p 2 83 ]
 "1382
@@ -255,9 +285,9 @@
 {
 "674
 [v vfpfcnvrt@ll ll `o  1 a 8 71 ]
-[s S281 _IO_FILE 0 ]
+[s S309 _IO_FILE 0 ]
 "670
-[v vfpfcnvrt@fp fp `*.39S281  1 p 2 63 ]
+[v vfpfcnvrt@fp fp `*.39S309  1 p 2 63 ]
 [v vfpfcnvrt@fmt fmt `*.39*.25uc  1 p 2 65 ]
 [v vfpfcnvrt@ap ap `*.39*.39v  1 p 2 67 ]
 "1365
@@ -272,9 +302,9 @@
 [v dtoa@s s `i  1 a 2 51 ]
 [v dtoa@w w `i  1 a 2 49 ]
 [v dtoa@p p `i  1 a 2 47 ]
-[s S281 _IO_FILE 0 ]
+[s S309 _IO_FILE 0 ]
 "274
-[v dtoa@fp fp `*.39S281  1 p 2 27 ]
+[v dtoa@fp fp `*.39S309  1 p 2 27 ]
 [v dtoa@d d `o  1 p 8 29 ]
 "315
 } 0
@@ -284,9 +314,9 @@
 "74
 [v pad@w w `i  1 a 2 25 ]
 [v pad@i i `i  1 a 2 23 ]
-[s S281 _IO_FILE 0 ]
+[s S309 _IO_FILE 0 ]
 "72
-[v pad@fp fp `*.39S281  1 p 2 16 ]
+[v pad@fp fp `*.39S309  1 p 2 16 ]
 [v pad@buf buf `*.39uc  1 p 2 18 ]
 [v pad@p p `i  1 p 2 20 ]
 "95
@@ -309,16 +339,16 @@
 [v fputs@c c `uc  1 a 1 13 ]
 "8
 [v fputs@s s `*.39Cuc  1 p 2 9 ]
-[s S789 _IO_FILE 6 `*.39uc 1 buffer 2 0 `i 1 count 2 2 `i 1 limit 2 4 ]
-[v fputs@fp fp `*.39S789  1 p 2 11 ]
+[s S817 _IO_FILE 6 `*.39uc 1 buffer 2 0 `i 1 count 2 2 `i 1 limit 2 4 ]
+[v fputs@fp fp `*.39S817  1 p 2 11 ]
 "19
 } 0
 "8 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\nf_fputc.c
 [v _fputc fputc `(i  1 e 2 0 ]
 {
 [v fputc@c c `i  1 p 2 0 ]
-[s S789 _IO_FILE 6 `*.39uc 1 buffer 2 0 `i 1 count 2 2 `i 1 limit 2 4 ]
-[v fputc@fp fp `*.39S789  1 p 2 2 ]
+[s S817 _IO_FILE 6 `*.39uc 1 buffer 2 0 `i 1 count 2 2 `i 1 limit 2 4 ]
+[v fputc@fp fp `*.39S817  1 p 2 2 ]
 "21
 } 0
 "7 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\putch.c
@@ -355,6 +385,11 @@
 [v ___aodiv@dividend dividend `o  1 p 8 0 ]
 [v ___aodiv@divisor divisor `o  1 p 8 8 ]
 "43
+} 0
+"44 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+[v _inicializarMouse inicializarMouse `(v  1 e 1 0 ]
+{
+"51
 } 0
 "20 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/pwm.h
 [v _pwmDuty pwmDuty `(v  1 e 1 0 ]
@@ -414,17 +449,17 @@
 "8 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
 [v ___flmul __flmul `(d  1 e 4 0 ]
 {
-[s S652 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+[s S680 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
 "13
-[s S657 . 4 `s 1 wordA 2 0 `s 1 wordB 2 2 ]
-[u S660 . 4 `l 1 i 4 0 `d 1 f 4 0 `S652 1 fAsBytes 4 0 `S657 1 fAsWords 4 0 ]
-[v ___flmul@prod prod `S660  1 a 4 58 ]
+[s S685 . 4 `s 1 wordA 2 0 `s 1 wordB 2 2 ]
+[u S688 . 4 `l 1 i 4 0 `d 1 f 4 0 `S680 1 fAsBytes 4 0 `S685 1 fAsWords 4 0 ]
+[v ___flmul@prod prod `S688  1 a 4 58 ]
 "12
 [v ___flmul@grs grs `ul  1 a 4 52 ]
-[s S728 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+[s S756 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
 "14
-[u S731 . 2 `s 1 i 2 0 `us 1 n 2 0 `S728 1 nAsBytes 2 0 ]
-[v ___flmul@temp temp `S731  1 a 2 62 ]
+[u S759 . 2 `s 1 i 2 0 `us 1 n 2 0 `S756 1 nAsBytes 2 0 ]
+[v ___flmul@temp temp `S759  1 a 2 62 ]
 "10
 [v ___flmul@bexp bexp `uc  1 a 1 57 ]
 "11

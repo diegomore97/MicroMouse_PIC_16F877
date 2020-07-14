@@ -52,7 +52,7 @@ void configPwm(unsigned char channel) {
     } else if (TMR2PRESCALE == 4) {
         T2CKPS0 = 1;
         T2CKPS1 = 0;
-    } else if (TMR2PRESCALE == 16) {
+    } else { //Prescaler 16
         T2CKPS0 = 1;
         T2CKPS1 = 1;
     }

@@ -5732,7 +5732,7 @@ void configPwm(unsigned char channel) {
     } else if (16 == 4) {
         T2CKPS0 = 1;
         T2CKPS1 = 0;
-    } else if (16 == 16) {
+    } else {
         T2CKPS0 = 1;
         T2CKPS1 = 1;
     }
@@ -6018,11 +6018,141 @@ char *ctermid(char *);
 
 char *tempnam(const char *, const char *);
 # 5 "main.c" 2
+# 23 "main.c"
+typedef enum {
+    ENFRENTE = 1,
+    ATRAS,
+    IZQUIERDA,
+    DERECHA
+} Direccion;
 
+typedef struct {
+    Direccion curr_state;
+    Direccion Next_state;
+} Mouse;
 
+Mouse mouse;
 
 
 char buffer[50];
+
+void llegarDestino(void);
+void inicializarMouse(void);
+void moverCarrito(void);
+
+void inicializarMouse(void) {
+
+    mouse.curr_state = ENFRENTE;
+
+    pwmDuty(80, 1);
+    pwmDuty(80, 2);
+
+}
+
+void llegarDestino(void) {
+
+    unsigned char contRepeticiones = 0;
+
+    switch (mouse.curr_state) {
+
+        case ENFRENTE:
+
+            if (dameDistancia(ENFRENTE) < 5)
+                mouse.Next_state = ATRAS;
+            else
+                mouse.Next_state = ENFRENTE;
+
+            break;
+
+        case ATRAS:
+
+            if (dameDistancia(ENFRENTE) < 5)
+                mouse.Next_state = ATRAS;
+            else {
+                if (dameDistancia(IZQUIERDA) < 3) {
+
+                    if (dameDistancia(DERECHA) < 3)
+                        mouse.Next_state = ATRAS;
+                    else
+                        mouse.Next_state = DERECHA;
+                } else
+                    mouse.Next_state = IZQUIERDA;
+            }
+
+            break;
+
+        case IZQUIERDA:
+
+            contRepeticiones++;
+
+            if (contRepeticiones < 1)
+                mouse.Next_state = IZQUIERDA;
+            else
+                mouse.Next_state = ENFRENTE;
+
+            break;
+
+        case DERECHA:
+
+            contRepeticiones++;
+
+            if (contRepeticiones < 1)
+                mouse.Next_state = DERECHA;
+            else
+                mouse.Next_state = ENFRENTE;
+
+            break;
+
+    }
+
+    mouse.curr_state = mouse.Next_state;
+    moverCarrito();
+
+}
+
+void moverCarrito(void) {
+
+    switch (mouse.curr_state) {
+
+        case ENFRENTE:
+
+            LATB4 = 1;
+            LATB5 = 0;
+            LATB6 = 1;
+            LATB7 = 0;
+
+            break;
+
+        case ATRAS:
+
+            LATB4 = 0;
+            LATB5 = 1;
+            LATB6 = 0;
+            LATB7 = 1;
+
+            break;
+
+        case IZQUIERDA:
+
+            LATB4 = 1;
+            LATB5 = 0;
+            LATB6 = 0;
+            LATB7 = 0;
+
+            break;
+
+        case DERECHA:
+
+            LATB4 = 0;
+            LATB5 = 0;
+            LATB6 = 1;
+            LATB7 = 0;
+
+            break;
+
+    }
+
+}
 
 void main(void) {
 
@@ -6031,7 +6161,17 @@ void main(void) {
     TRISB2 = 1;
     TRISB3 = 1;
 
+    TRISB4 = 0;
+    TRISB5 = 0;
+    TRISB6 = 0;
+    TRISB7 = 0;
+
     LATB0 = 0;
+    LATB4 = 0;
+    LATB5 = 0;
+    LATB6 = 0;
+    LATB7 = 0;
+
     T1CON = 0b00000000;
 
     configPwm(1);
@@ -6039,8 +6179,7 @@ void main(void) {
 
     UART_init(9600);
 
-    pwmDuty(0, 1);
-    pwmDuty(0, 2);
+    inicializarMouse();
 
     while (1) {
 

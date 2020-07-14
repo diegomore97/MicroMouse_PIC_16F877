@@ -27,7 +27,7 @@ unsigned short dameDistancia(unsigned char numeroSensor) {
 
     switch (numeroSensor) {
 
-        case 1:
+        case 1: //ENFRENTE
 
             while (!ECHO_1); // Esperamos que el Echo se active para poder empezar la cuenta
             TMR1ON = 1; // Ponemos a contar el Timer 1
@@ -35,7 +35,7 @@ unsigned short dameDistancia(unsigned char numeroSensor) {
 
             break;
 
-        case 2:
+        case 2: //IZQUIERDA
 
             while (!ECHO_2); // Esperamos que el Echo se active para poder empezar la cuenta
             TMR1ON = 1; // Ponemos a contar el Timer 1
@@ -43,7 +43,7 @@ unsigned short dameDistancia(unsigned char numeroSensor) {
 
             break;
 
-        case 3:
+        case 3: //DERECHA
 
             while (!ECHO_3); // Esperamos que el Echo se active para poder empezar la cuenta
             TMR1ON = 1; // Ponemos a contar el Timer 1
