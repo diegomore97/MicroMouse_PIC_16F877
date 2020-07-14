@@ -46,8 +46,8 @@ void inicializarMouse(void) {
 
     mouse.curr_state = ENFRENTE;
 
-    pwmDuty(VELOCIDAD_MOTORES, 1); //Iniciar en ciclo de trabajo 0 MOTOR 1
-    pwmDuty(VELOCIDAD_MOTORES, 2); //Iniciar en ciclo de trabajo 0 MOTOR 2
+    pwmDuty(VELOCIDAD_MOTORES, 1); //Iniciar ciclo de trabajo MOTOR 1
+    pwmDuty(VELOCIDAD_MOTORES, 2); //Iniciar ciclo de trabajo MOTOR 2
 
 }
 
@@ -189,8 +189,8 @@ void main(void) {
 
     T1CON = 0b00000000; // FOSC / 4 Y que el preescaler 1:1; Iniciamoa Con el TMR1ON Apagado
 
-    configPwm(1); //Frencuencia de PWM de 300 Hz para el canal 1
-    configPwm(2); //Frencuencia de PWM de 300 Hz para el canal 2
+    configPwm(1); //Frencuencia de PWM de 500 Hz para el canal 1
+    configPwm(2); //Frencuencia de PWM de 500 Hz para el canal 2
 
     UART_init(9600); //9600 Baudios
 
