@@ -114,6 +114,7 @@ _TRISC6 7CA6 0 ABS 0
 ?___fltol 41 0 COMRAM 1
 _TRISB7 7C9F 0 ABS 0
 _TRISC7 7CA7 0 ABS 0
+_inicializarComportamientoBasico 23E2 0 CODE 0
 __end_of_putch 2438 0 CODE 0
 __Heeprom_data 0 0 EEDATA 0
 __Leeprom_data 0 0 EEDATA 0
@@ -213,7 +214,6 @@ ___aldiv@sign 16 0 COMRAM 1
 ___fldiv@sign 1F 0 COMRAM 1
 ___aodiv@sign 12 0 COMRAM 1
 __CFG_USBDIV$1 0 0 ABS 0
-__size_of_inicializarMouse 0 0 ABS 0
 __size_of_abs 0 0 ABS 0
 ___lmul@multiplicand 5 0 COMRAM 1
 __size_of___aodiv 0 0 ABS 0
@@ -294,13 +294,11 @@ __ptext8 1E0E 0 CODE 0
 __end_of_UART_printf 23E2 0 CODE 0
 __ptext9 2436 0 CODE 0
 _vfpfcnvrt 12BC 0 CODE 0
-__end_of_inicializarMouse 240A 0 CODE 0
 __Hclrtext 0 0 ABS 0
 __Lclrtext 0 0 ABS 0
 strlen@a 3 0 COMRAM 1
 __end_of__initialization 2416 0 CODE 0
 __size_of___xxtofl 0 0 ABS 0
-_inicializarMouse 23E2 0 CODE 0
 ___rparam_used 1 0 ABS 0
 __size_of_dtoa 0 0 ABS 0
 __end_of___lwdiv 211A 0 CODE 0
@@ -370,6 +368,7 @@ __end_of_pad 1F9E 0 CODE 0
 __CFG_WRT1$OFF 0 0 ABS 0
 __size_of___lwdiv 0 0 ABS 0
 __end_of_dameDistancia 1BFC 0 CODE 0
+__size_of_inicializarComportamientoBasico 0 0 ABS 0
 __HbssBANK0 0 0 ABS 0
 __LbssBANK0 0 0 ABS 0
 __CFG_WRT2$OFF 0 0 ABS 0
@@ -455,6 +454,7 @@ __Hreset_vec 0 0 CODE 0
 __Lreset_vec 0 0 CODE 0
 __CFG_CP2$OFF 0 0 ABS 0
 __CFG_CP3$OFF 0 0 ABS 0
+__end_of_inicializarComportamientoBasico 240A 0 CODE 0
 ___xxtofl@exp A 0 COMRAM 1
 vfpfcnvrt@ap 44 0 COMRAM 1
 __accesstop 60 0 ABS 0
@@ -524,7 +524,7 @@ text19 816 2437 CODE 816 0
 %locals
 dist/default/production\microMouse.X.production.o
 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h
-C:\Users\DIEGOM~1\AppData\Local\Temp\s8c4.s
+C:\Users\DIEGOM~1\AppData\Local\Temp\s2q8.s
 675 240A 0 CODE 0
 677 240A 0 CODE 0
 680 240A 0 CODE 0
@@ -540,28 +540,28 @@ C:\Users\DIEGOM~1\AppData\Local\Temp\s8c4.s
 721 241A 0 CODE 0
 722 241C 0 CODE 0
 main.c
-172 1F9E 0 CODE 0
-174 1F9E 0 CODE 0
-175 1FA0 0 CODE 0
-176 1FA2 0 CODE 0
-177 1FA4 0 CODE 0
-179 1FA6 0 CODE 0
-180 1FA8 0 CODE 0
-181 1FAA 0 CODE 0
-182 1FAC 0 CODE 0
-184 1FAE 0 CODE 0
-185 1FB0 0 CODE 0
-186 1FB2 0 CODE 0
-187 1FB4 0 CODE 0
-188 1FB6 0 CODE 0
-190 1FB8 0 CODE 0
-192 1FBC 0 CODE 0
-193 1FC2 0 CODE 0
-195 1FC8 0 CODE 0
-197 1FDC 0 CODE 0
-201 1FE0 0 CODE 0
-202 2002 0 CODE 0
-203 200E 0 CODE 0
+173 1F9E 0 CODE 0
+175 1F9E 0 CODE 0
+176 1FA0 0 CODE 0
+177 1FA2 0 CODE 0
+178 1FA4 0 CODE 0
+180 1FA6 0 CODE 0
+181 1FA8 0 CODE 0
+182 1FAA 0 CODE 0
+183 1FAC 0 CODE 0
+185 1FAE 0 CODE 0
+186 1FB0 0 CODE 0
+187 1FB2 0 CODE 0
+188 1FB4 0 CODE 0
+189 1FB6 0 CODE 0
+191 1FB8 0 CODE 0
+193 1FBC 0 CODE 0
+194 1FC2 0 CODE 0
+196 1FC8 0 CODE 0
+198 1FDC 0 CODE 0
+202 1FE0 0 CODE 0
+203 2002 0 CODE 0
+204 200E 0 CODE 0
 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\nf_sprintf.c
 9 2256 0 CODE 0
 15 2256 0 CODE 0
@@ -720,11 +720,11 @@ C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aodiv.c
 42 193E 0 CODE 0
 43 195E 0 CODE 0
 main.c
-45 23E2 0 CODE 0
-47 23E2 0 CODE 0
-49 23E8 0 CODE 0
-50 23F8 0 CODE 0
-52 2408 0 CODE 0
+46 23E2 0 CODE 0
+48 23E2 0 CODE 0
+50 23E8 0 CODE 0
+51 23F8 0 CODE 0
+53 2408 0 CODE 0
 ./pwm.h
 20 1470 0 CODE 0
 22 1470 0 CODE 0

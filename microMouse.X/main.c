@@ -31,18 +31,19 @@ typedef enum {
 typedef struct {
     Direccion curr_state;
     Direccion Next_state;
-} Mouse;
+} ComportamientoBasico;
 
-Mouse mouse;
+ComportamientoBasico mouse;
 
 
 char buffer[TAMANO_CADENA]; //Variable para Debug
 
-void llegarDestino(void);
-void inicializarMouse(void);
 void moverCarrito(void);
 
-void inicializarMouse(void) {
+void inicializarComportamientoBasico(void);
+void comportamientoBasico(void);
+
+void inicializarComportamientoBasico(void) {
 
     mouse.curr_state = ENFRENTE;
 
@@ -51,7 +52,7 @@ void inicializarMouse(void) {
 
 }
 
-void llegarDestino(void) {
+void comportamientoBasico(void) {
 
     unsigned char contRepeticiones = 0;
 
@@ -194,7 +195,7 @@ void main(void) {
 
     UART_init(9600); //9600 Baudios
 
-    inicializarMouse();
+    inicializarComportamientoBasico();
 
     while (1) {
 

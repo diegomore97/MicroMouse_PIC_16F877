@@ -81,11 +81,11 @@ ALTO 5
 [v ___omul __omul `(uo  1 e 8 0 ]
 "10 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
 [v ___xxtofl __xxtofl `(d  1 e 4 0 ]
-"45 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
-[v _inicializarMouse inicializarMouse `(v  1 e 1 0 ]
-"119
+"46 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+[v _inicializarComportamientoBasico inicializarComportamientoBasico `(v  1 e 1 0 ]
+"120
 [v _moverCarrito moverCarrito `(v  1 e 1 0 ]
-"172
+"173
 [v _main main `(v  1 e 1 0 ]
 [s S47 . 1 `uc 1 RB0 1 0 :1:0 
 `uc 1 RB1 1 0 :1:1 
@@ -251,10 +251,10 @@ ALTO 5
 [v _mouse mouse `S212  1 e 2 0 ]
 "39
 [v _buffer buffer `[50]uc  1 e 50 0 ]
-"172
+"173
 [v _main main `(v  1 e 1 0 ]
 {
-"208
+"209
 } 0
 "9 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\nf_sprintf.c
 [v _sprintf sprintf `(i  1 e 2 0 ]
@@ -387,10 +387,10 @@ ALTO 5
 [v ___aodiv@divisor divisor `o  1 p 8 8 ]
 "43
 } 0
-"45 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
-[v _inicializarMouse inicializarMouse `(v  1 e 1 0 ]
+"46 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+[v _inicializarComportamientoBasico inicializarComportamientoBasico `(v  1 e 1 0 ]
 {
-"52
+"53
 } 0
 "20 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/pwm.h
 [v _pwmDuty pwmDuty `(v  1 e 1 0 ]

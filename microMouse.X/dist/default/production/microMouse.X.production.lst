@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.10 build 88905656 
-                                                                                               Tue Jul 14 10:29:26 2020
+                                                                                               Tue Jul 14 20:05:32 2020
 
 Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1 
      1                           	processor	18F4550
@@ -664,7 +664,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
    650 ;;
    651 ;; *************** function _main *****************
    652 ;; Defined at:
-   653 ;;		line 172 in file "main.c"
+   653 ;;		line 173 in file "main.c"
    654 ;; Parameters:    Size  Location     Type
    655 ;;		None
    656 ;; Auto vars:     Size  Location     Type
@@ -689,7 +689,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
    675 ;;		_UART_printf
    676 ;;		_configPwm
    677 ;;		_dameDistancia
-   678 ;;		_inicializarMouse
+   678 ;;		_inicializarComportamientoBasico
    679 ;;		_sprintf
    680 ;; This function is called by:
    681 ;;		Startup code after reset
@@ -702,58 +702,58 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
    688  001F9E                     _main:
    689                           	opt callstack 23
    690  001F9E                     
-   691                           ;main.c: 174:     TRISB0 = 0;
+   691                           ;main.c: 175:     TRISB0 = 0;
    692  001F9E  9093               	bcf	3987,0,c	;volatile
    693                           
-   694                           ;main.c: 175:     TRISB1 = 1;
+   694                           ;main.c: 176:     TRISB1 = 1;
    695  001FA0  8293               	bsf	3987,1,c	;volatile
    696                           
-   697                           ;main.c: 176:     TRISB2 = 1;
+   697                           ;main.c: 177:     TRISB2 = 1;
    698  001FA2  8493               	bsf	3987,2,c	;volatile
    699                           
-   700                           ;main.c: 177:     TRISB3 = 1;
+   700                           ;main.c: 178:     TRISB3 = 1;
    701  001FA4  8693               	bsf	3987,3,c	;volatile
    702                           
-   703                           ;main.c: 179:     TRISB4 = 0;
+   703                           ;main.c: 180:     TRISB4 = 0;
    704  001FA6  9893               	bcf	3987,4,c	;volatile
    705                           
-   706                           ;main.c: 180:     TRISB5 = 0;
+   706                           ;main.c: 181:     TRISB5 = 0;
    707  001FA8  9A93               	bcf	3987,5,c	;volatile
    708                           
-   709                           ;main.c: 181:     TRISB6 = 0;
+   709                           ;main.c: 182:     TRISB6 = 0;
    710  001FAA  9C93               	bcf	3987,6,c	;volatile
    711                           
-   712                           ;main.c: 182:     TRISB7 = 0;
+   712                           ;main.c: 183:     TRISB7 = 0;
    713  001FAC  9E93               	bcf	3987,7,c	;volatile
    714                           
-   715                           ;main.c: 184:     LATB0 = 0;
+   715                           ;main.c: 185:     LATB0 = 0;
    716  001FAE  908A               	bcf	3978,0,c	;volatile
    717                           
-   718                           ;main.c: 185:     LATB4 = 0;
+   718                           ;main.c: 186:     LATB4 = 0;
    719  001FB0  988A               	bcf	3978,4,c	;volatile
    720                           
-   721                           ;main.c: 186:     LATB5 = 0;
+   721                           ;main.c: 187:     LATB5 = 0;
    722  001FB2  9A8A               	bcf	3978,5,c	;volatile
    723                           
-   724                           ;main.c: 187:     LATB6 = 0;
+   724                           ;main.c: 188:     LATB6 = 0;
    725  001FB4  9C8A               	bcf	3978,6,c	;volatile
    726                           
-   727                           ;main.c: 188:     LATB7 = 0;
+   727                           ;main.c: 189:     LATB7 = 0;
    728  001FB6  9E8A               	bcf	3978,7,c	;volatile
    729  001FB8                     
-   730                           ;main.c: 190:     T1CON = 0b00000000;
+   730                           ;main.c: 191:     T1CON = 0b00000000;
    731  001FB8  0E00               	movlw	0
    732  001FBA  6ECD               	movwf	205,c	;volatile
    733  001FBC                     
-   734                           ;main.c: 192:     configPwm(1);
+   734                           ;main.c: 193:     configPwm(1);
    735  001FBC  0E01               	movlw	1
    736  001FBE  EC54  F011         	call	_configPwm
    737  001FC2                     
-   738                           ;main.c: 193:     configPwm(2);
+   738                           ;main.c: 194:     configPwm(2);
    739  001FC2  0E02               	movlw	2
    740  001FC4  EC54  F011         	call	_configPwm
    741  001FC8                     
-   742                           ;main.c: 195:     UART_init(9600);
+   742                           ;main.c: 196:     UART_init(9600);
    743  001FC8  0E80               	movlw	128
    744  001FCA  6E1B               	movwf	UART_init@BAUD^0,c
    745  001FCC  0E25               	movlw	37
@@ -764,11 +764,11 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
    750  001FD6  6E1E               	movwf	(UART_init@BAUD+3)^0,c
    751  001FD8  EC8D  F010         	call	_UART_init	;wreg free
    752  001FDC                     
-   753                           ;main.c: 197:     inicializarMouse();
-   754  001FDC  ECF1  F011         	call	_inicializarMouse	;wreg free
+   753                           ;main.c: 198:     inicializarComportamientoBasico();
+   754  001FDC  ECF1  F011         	call	_inicializarComportamientoBasico	;wreg free
    755  001FE0                     l2787:
    756                           
-   757                           ;main.c: 201:         sprintf(buffer, "\rDistancia: %d cm\r\n", dameDistancia(1));
+   757                           ;main.c: 202:         sprintf(buffer, "\rDistancia: %d cm\r\n", dameDistancia(1));
    758  001FE0  0E6A               	movlw	low _buffer
    759  001FE2  6E58               	movwf	sprintf@s^0,c
    760  001FE4  0E00               	movlw	high _buffer
@@ -783,14 +783,14 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
    769  001FFA  C009  F05D         	movff	?_dameDistancia+1,?_sprintf+5
    770  001FFE  EC2B  F011         	call	_sprintf	;wreg free
    771  002002                     
-   772                           ;main.c: 202:         UART_printf(buffer);
+   772                           ;main.c: 203:         UART_printf(buffer);
    773  002002  0E6A               	movlw	low _buffer
    774  002004  6E02               	movwf	UART_printf@cadena^0,c
    775  002006  0E00               	movlw	high _buffer
    776  002008  6E03               	movwf	(UART_printf@cadena+1)^0,c
    777  00200A  ECD9  F011         	call	_UART_printf	;wreg free
    778  00200E                     
-   779                           ;main.c: 203:         _delay((unsigned long)((1000)*(4000000/4000.0)));
+   779                           ;main.c: 204:         _delay((unsigned long)((1000)*(4000000/4000.0)));
    780  00200E  0E06               	movlw	6
    781  002010  6E5F               	movwf	(??_main+1)^0,c
    782  002012  0E13               	movlw	19
@@ -2702,9 +2702,9 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   2618  001960                     __end_of___aodiv:
   2619                           	opt callstack 0
   2620                           
-  2621 ;; *************** function _inicializarMouse *****************
+  2621 ;; *************** function _inicializarComportamientoBasico *****************
   2622 ;; Defined at:
-  2623 ;;		line 45 in file "main.c"
+  2623 ;;		line 46 in file "main.c"
   2624 ;; Parameters:    Size  Location     Type
   2625 ;;		None
   2626 ;; Auto vars:     Size  Location     Type
@@ -2735,16 +2735,16 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   2651                           	psect	text13
   2652  0023E2                     __ptext13:
   2653                           	opt callstack 0
-  2654  0023E2                     _inicializarMouse:
+  2654  0023E2                     _inicializarComportamientoBasico:
   2655                           	opt callstack 27
   2656  0023E2                     
-  2657                           ;main.c: 47:     mouse.curr_state = ENFRENTE;
+  2657                           ;main.c: 48:     mouse.curr_state = ENFRENTE;
   2658  0023E2  0E01               	movlw	1
   2659  0023E4  0100               	movlb	0	; () banked
   2660  0023E6  6F68               	movwf	_mouse& (0+255),b
   2661  0023E8                     
   2662                           ; BSR set to: 0
-  2663                           ;main.c: 49:     pwmDuty(80, 1);
+  2663                           ;main.c: 50:     pwmDuty(80, 1);
   2664  0023E8  0E00               	movlw	0
   2665  0023EA  6E4C               	movwf	(pwmDuty@cicloTrabajo+1)^0,c
   2666  0023EC  0E50               	movlw	80
@@ -2753,7 +2753,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   2669  0023F2  6E4D               	movwf	pwmDuty@channel^0,c
   2670  0023F4  EC38  F00A         	call	_pwmDuty	;wreg free
   2671  0023F8                     
-  2672                           ;main.c: 50:     pwmDuty(80, 2);
+  2672                           ;main.c: 51:     pwmDuty(80, 2);
   2673  0023F8  0E00               	movlw	0
   2674  0023FA  6E4C               	movwf	(pwmDuty@cicloTrabajo+1)^0,c
   2675  0023FC  0E50               	movlw	80
@@ -2762,7 +2762,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   2678  002402  6E4D               	movwf	pwmDuty@channel^0,c
   2679  002404  EC38  F00A         	call	_pwmDuty	;wreg free
   2680  002408  0012               	return		;funcret
-  2681  00240A                     __end_of_inicializarMouse:
+  2681  00240A                     __end_of_inicializarComportamientoBasico:
   2682                           	opt callstack 0
   2683                           
   2684 ;; *************** function _pwmDuty *****************
@@ -2796,7 +2796,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   2712 ;;		___xxtofl
   2713 ;;		_map
   2714 ;; This function is called by:
-  2715 ;;		_inicializarMouse
+  2715 ;;		_inicializarComportamientoBasico
   2716 ;; This function uses a non-reentrant model
   2717 ;;
   2718                           
@@ -4640,7 +4640,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   4554 ;;		___lwdiv
   4555 ;; This function is called by:
   4556 ;;		_main
-  4557 ;;		_llegarDestino
+  4557 ;;		_comportamientoBasico
   4558 ;; This function uses a non-reentrant model
   4559 ;;
   4560                           
@@ -5592,7 +5592,7 @@ Critical Paths under _main in COMRAM
     _pad->_fputs
     _fputs->_fputc
     _abs->___aomod
-    _inicializarMouse->_pwmDuty
+    _inicializarComportamientoBasico->_pwmDuty
     _pwmDuty->___fltol
     _map->___aldiv
     ___fltol->___flmul
@@ -5646,7 +5646,7 @@ Call Graph Tables:
                         _UART_printf
                           _configPwm
                       _dameDistancia
-                   _inicializarMouse
+    _inicializarComportamientoBasico
                             _sprintf
  ---------------------------------------------------------------------------------
  (1) _sprintf                                             16    10      6    6456
@@ -5700,7 +5700,7 @@ Call Graph Tables:
  (5) ___aodiv                                             26    10     16     452
                                               0 COMRAM    26    10     16
  ---------------------------------------------------------------------------------
- (1) _inicializarMouse                                     0     0      0    5988
+ (1) _inicializarComportamientoBasico                      0     0      0    5988
                             _pwmDuty
  ---------------------------------------------------------------------------------
  (2) _pwmDuty                                             12     9      3    5988
@@ -5776,7 +5776,7 @@ Call Graph Tables:
    _configPwm
    _dameDistancia
      ___lwdiv
-   _inicializarMouse
+   _inicializarComportamientoBasico
      _pwmDuty
        ___fldiv
          ___xxtofl (ARG)
@@ -5849,367 +5849,548 @@ CODE                 0      0       0       0        0.0%
 
 
 Microchip Technology PIC18 Macro Assembler V2.10 build 88905656 
-Symbol Table                                                                                   Tue Jul 14 10:29:26 2020
+Symbol Table                                                                                   Tue Jul 14 20:05:32 2020
 
-             ___fldiv@aexp 0027               ___fldiv@bexp 0026               ___fldiv@sign 001F  
-                       l91 20A4                         l99 1622                __CFG_BORV$3 000000  
-             __CFG_CP0$OFF 000000               __CFG_CP1$OFF 000000               __CFG_CP2$OFF 000000  
-             __CFG_CP3$OFF 000000                        l110 22F6                        l104 22AA  
-                      l107 22B6                        l123 1BA6                        l115 1AE4  
-                      l108 22F4                        l109 22C0                        l125 1B14  
-                      l117 1AF2                        l134 1B44                        l118 1AF4  
-                      l127 1B22                        l144 1BFA                        l136 1B52  
-                      l128 1B24                        l137 1B54                        l401 195E  
-                      l242 1F60                        l250 107A                        l147 2188  
-                      l156 2426                        l172 2408                        l244 1F9C  
-                      l252 1082                        l165 23E0                        l414 1AC2  
-                      l270 12BA                        l159 2434                        l239 1F1E  
-                      l283 224C                        l284 2254                        l277 146E  
-                      l366 1D06                        l298 21E2                        l299 21F2  
-                      l901 08DA                        l910 0B48                        l911 0B36  
-                      l584 1E0C                        l905 0C3E                        l908 0AD0  
-                      l918 0C00                        l942 167A                        l871 0E38  
-                      l880 0E7E                        l785 2118                        l945 17D6  
-                      l778 2110                        l882 0EF6                        l874 0DFC  
-                      l962 2372                        l883 0EE4                        l956 176E  
-                      l869 0FD8                        l949 1712                        l965 237A  
-                      l992 22A6                        l977 1ED6                        l985 233A  
-                      l995 2436               __CFG_CPB$OFF 000000                        _PR2 000FCB  
-             __CFG_CPD$OFF 000000               __CFG_BOR$OFF 000000                        _abs 233C  
-                      _map 202C                        _pad 1ED8                        wreg 000FE8  
-             ___flmul@aexp 0039               ___flmul@bexp 003A               ___flmul@sign 0034  
-             ___flmul@temp 003F               ___flmul@prod 003B               __CFG_LVP$OFF 000000  
-        ?_inicializarMouse 0001               ___fltol@exp1 004A               __CFG_WDT$OFF 000000  
-                     l1001 23B0                       l2001 191E                       l2003 193E  
-                     l2011 1972                       ?_abs 0013                       l2021 19E2  
-                     l2013 1992                       l2101 1292                       l2111 21B8  
-                     l2031 1A5A                       l2023 19EA                       l2015 1996  
-                     l2007 1960                       l2121 1C1E                       l2113 21C2  
-                     l2105 218A                       l2033 1A6C                       l2025 19FE  
-                     l2017 19A4                       l2009 1964                       l2131 1C54  
-                     l2123 1C22                       l2115 1BFC                       l2211 0C5C  
-                     l2107 219A                       l2027 1A0C                       l2035 1A72  
-                     l2019 19C4                       l2051 1052                       l2043 0FDA  
-                     l2141 1C96                       l2133 1C6A                       l2125 1C30  
-                     l2117 1C00                       l2301 0E9C                       l2213 0C6C  
-                     l2221 0C96                       l2205 0C40                       l2109 21A8  
-                     l2037 1A82                       l2029 1A3A                       l2061 10AA  
-                     l2053 1054                       l2045 0FFA                       l2143 1CB4  
-                     l2135 1C72                       l2151 1CD6                       l2127 1C40  
-                     l2119 1C0E                       l2311 0F06                       l2303 0EA0  
-                     l2231 0CC2                       l2223 0CA6                       l2215 0C7C  
-                     l2207 0C4C                       l2039 1AA2                       l2071 1148  
-                     l2063 10B0                       l2055 106E                       l2047 1022  
-                     l2153 1CE6                       l2145 1CC4                       l2137 1C7E  
-                     l2129 1C44                       l2321 0F68                       l2313 0F12  
-                     l2305 0EAE                       l2233 0CD2                       l2241 0CFC  
-                     l2225 0CAC                       l2217 0C8C                       l2209 0C5A  
-                     l2401 0990                       l2081 11F0                       l2073 114E  
-                     l2065 10B8                       l2057 108A                       l2049 1042  
-                     l2155 1CF6                       l2147 1CC6                       l2139 1C8C  
-                     l2331 0FC6                       l2323 0F7E                       l2315 0F20  
-                     l2307 0EDC                       l2251 0D3E                       l2243 0D0C  
-                     l2235 0CE2                       l2227 0CB2                       l2219 0C8E  
-                     l2411 09E6                       l2403 09A0                       l2091 1256  
-                     l2083 120A                       l2075 1154                       l2067 10C0  
-                     l2059 109C                       l2171 1304                       l2163 12BC  
-                     l2149 1CD0                       l2333 0FCC                       l2325 0F98  
-                     l2317 0F4A                       l2245 0D22                       l2237 0CF2  
-                     l2229 0CC0                       l2421 0A8A                       l2413 0A02  
-                     l2405 09AC                       l2093 125C                       l2085 1224  
-                     l2069 10C6                       l2077 11B8                       l2181 13CC  
-                     l2173 1328                       l2165 12E0                       l2335 0FCE  
-                     l2327 0FB4                       l2319 0F4E                       l2271 0DC0  
-                     l2263 0D76                       l2247 0D32                       l2255 0D52  
-                     l2239 0CF4                       l2431 0AE0                       l2423 0A98  
-                     l2415 0A0E                       l2407 09BC                       l2351 0842  
-                     l2343 0816                       l2511 1DEC                       l2159 202C  
-                     l2095 126E                       l2079 11D2                       l2087 1234  
-                     l2183 13F0                       l2191 141E                       l2175 134C  
-                     l2167 12EE                       l2601 20DE                       l2329 0FB8  
-                     l2281 0E06                       l2273 0DC8                       l2265 0D90  
-                     l2257 0D62                       l2249 0D3A                       l2433 0AEE  
-                     l2425 0AB6                       l2417 0A2A                       l2409 09D6  
-                     l2361 087E                       l2353 0852                       l2345 0822  
-                     l2513 1DFC                       l2505 1DC0                       l2521 1644  
-                     l2097 127A                       l2089 1246                       l2193 142C  
-                     l2185 13FE                       l2177 1394                       l2169 1300  
-                     l2611 210A                       l2603 20E4                       l2291 0E5E  
-                     l2283 0E24                       l2275 0DD8                       l2267 0DA0  
-                     l2259 0D62                       l2443 0B58                       l2451 0BA0  
-                     l2435 0AF2                       l2427 0AC0                       l2419 0A54  
-                     l2371 08B4                       l2363 0884                       l2355 0862  
-                     l2347 0830                       l2507 1DCC                       l2531 16BC  
-                     l2523 168A                       l2099 1282                       l2187 1412  
-                     l2613 22AA                       l2605 20FA                       l2293 0E64  
-                     l2285 0E26                       l2277 0DEC                       l2269 0DB0  
-                     l2461 0C14                       l2453 0BBA                       l2445 0B64  
-                     l2437 0B00                       l2429 0ACE                       l2373 08C4  
-                     l2365 0892                       l2357 0868                       l2349 0832  
-                     l2509 1DDC                       l2541 1744                       l2533 16C8  
-                     l2525 16A0                       l2517 1626                       l2197 1438  
-                     l2701 2256                       l2623 22CA                       l2607 2102  
-                     l2631 1AD6                       l2295 0E6E                       l2287 0E36  
-                     l2279 0DFA                       l2463 0C22                       l2455 0BCE  
-                     l2447 0B72                       l2439 0B2E                       l2391 0946  
-                     l2383 090E                       l2375 08CA                       l2367 0894  
-                     l2359 0878                       l2551 1782                       l2543 1750  
-                     l2535 16FA                       l2519 1636                       l1911 1E3C  
-                     l2199 145C                       l2703 2268                       l2609 2104  
-                     l2641 1B62                       l2633 1AD8                       l2297 0E7C  
-                     l2289 0E48                       l2465 0C24                       l2457 0BE8  
-                     l2449 0B9C                       l2393 095E                       l2385 091A  
-                     l2377 08EA                       l2369 08A4                       l2481 1D5C  
-                     l2473 1D08                       l2553 17A6                       l2545 175E  
-                     l2537 16FC                       l2529 16B4                       l1913 1E5A  
-                     l1905 1E0E                       l1921 2304                       l2705 2270  
-                     l2619 22AE                       l2651 1BE8                       l2635 1ADE  
-                     l2299 0E8E                       l2459 0C04                       l2467 0C2A  
-                     l2395 096A                       l2387 0924                       l2379 08FA  
-                     l2483 1D5E                       l2475 1D1E                       l2555 17B6  
-                     l2547 177C                       l2539 1708                       l2571 15B6  
-                     l2563 1470                       l1915 1E90                       l1907 1E20  
-                     l1923 2316                       l1931 238C                       l2707 2278  
-                     l2581 2422                       l2653 1BE8                       l2637 1B02  
-                     l2645 1B74                       l2629 1AC6                       l2469 0C2E  
-                     l2397 0976                       l2389 093A                       l2485 1D6E  
-                     l2557 17C4                       l2549 177E                       l2565 14D0  
-                     l1909 1E32                       l1925 231A                       l1933 23A4  
-                     l1941 1EFC                       l2709 2294                       l2671 2152  
-                     l2663 211A                       l2591 20A6                       l2655 1BF2  
-                     l2647 1BB6                       l2639 1B32                       l2399 0984  
-                     l2495 1D98                       l2487 1D72                       l2479 1D32  
-                     l2559 17C6                       l2575 15F8                       l2567 14EE  
-                     l1919 22F8                       l1927 237C                       l1951 1F42  
-                     l1943 1F0A                       l2583 21F4                       l2681 2182  
-                     l2673 217A                       l2665 211A                       l2593 20AE  
-                     l2649 1BC8                       l2497 1DA2                       l2489 1D80  
-                     l2569 1574                       l1961 2356                       l1929 2388  
-                     l1953 1F70                       l1945 1F16                       l1937 1ED8  
-                     l2585 21FC                       l2683 2184                       l2675 217C  
-                     l2667 211C                       l2691 23C4                       l2595 20C0  
-                     l2499 1DAC                       l1971 180E                       l1963 17D8  
-                     l1955 1F84                       l1947 1F2A                       l1939 1EE8  
-                     l2587 220A                       l2685 2186                       l2677 217E  
-                     l2669 211E                       l2693 23C8                       l2597 20C8  
-                     l2853 160C                       l1981 186A                       l1973 181C  
-                     l1965 17DC                       l1949 1F3E                       l2589 2230  
-                     l2781 1FC2                       ?_map 001B                       ?_pad 0011  
-                     l2679 2180                       l2687 23B2                       l2599 20D0  
-                     l2855 1B88                       l2695 23E2                       l1991 18D4  
-                     l1983 1872                       l1975 183C                       l1967 17EA  
-                     l1959 233C                       l2791 200E                       l2783 1FC8  
-                     l2775 1F9E                       l2689 23B6                       l2857 22DE  
-                     l2697 23E8                       l1993 18F4                       l1985 1886  
-                     l1977 1840                       l1969 180A                       l2785 1FDC  
-                     l2777 1FB8                       l2699 23F8                       l1995 18F6  
-                     l1987 1894                       l1979 184C                       l2787 1FE0  
-                     l2779 1FBC                       l1997 1908                       l1989 18A6  
-                     l2789 2002                       l1999 190E                       STR_1 0801  
-                     u2000 0E5E                       u2001 0E5A                       u2010 0E7C  
-                     u2011 0E78                       u2100 0FC6                       u2020 0E9C  
-                     u2101 0FC2                       u2021 0E98                       u2030 0EAE  
-                     u2110 0830                       u2031 0EAA                       u2111 082C  
-                     u2040 0EDC                       u2200 0ACE                       u2120 0842  
-                     u1400 1E90                       u2041 0ED8                       u2201 0ACA  
-                     u2121 083E                       u1401 1E8C                       u2050 0EF2  
-                     u2210 0AEE                       u2130 0852                       u1410 233A  
-                     u2051 0EEE                       u2211 0AEA                       u2131 084E  
-                     u1411 2336                       u2060 0F06                       u2220 0B00  
-                     u2140 0892                       u2300 1D1E                       u1420 23A4  
-                     u2061 0F02                       u2221 0AFC                       u2141 088E  
-                     u2301 1D1A                       u1501 1846                       u1421 23A0  
-                     u2070 0F20                       u2230 0B2E                       u2150 08A4  
-                     u2310 1D52                       u1510 186A                       u1430 1EE8  
-                     u2071 0F1C                       u2231 0B2A                       u2151 08A0  
-                     u1511 1866                       u1431 1EE4                       u2080 0F68  
-                     u2240 0B44                       u2160 08B4                       u2320 1D80  
-                     u2400 16F6                       u1520 1894                       u1600 1A82  
-                     u1440 1F0A                       u2081 0F64                       u2241 0B40  
-                     u2161 08B0                       u2321 1D7C                       u2401 16F2  
-                     u1521 1890                       u1601 1A7E                       u1441 1F06  
-                     u2090 0F98                       u2250 0B58                       u2170 08EA  
-                     u2330 1D94                       u2410 1740                       u1530 18D4  
-                     u1370 1E20                       u1450 1F60                       u1610 100A  
-                     u2091 0F94                       u2251 0B54                       u2171 08E6  
-                     u2331 1D90                       u2315 1D48                       u2411 173C  
-                     u1531 18D0                       u1371 1E1C                       u1451 1F5C  
-                     u1611 1004                       u2500 2434                       u2260 0B72  
-                     u2180 08FA                       u2340 1DBC                       u2420 175E  
-                     u1540 191E                       u1380 1E32                       u1460 1F70  
-                     u1700 120A                       u1620 100C                       u2501 2430  
-                     u2261 0B6E                       u2181 08F6                       u2341 1DB8  
-                     u2421 175A                       u1541 191A                       u1381 1E2E  
-                     u1461 1F6C                       u1701 1206                       u2270 0BBA  
-                     u2190 0A74                       u2350 1DDC                       u2430 176E  
-                     u1550 1972                       u1470 2356                       u1390 1E5A  
-                     u1710 1224                       u1630 1022                       u2510 224C  
-                     u2271 0BB6                       u2351 1DD8                       u2431 176A  
-                     u1551 196E                       u1471 2352                       u1391 1E56  
-                     u1711 1220                       u1631 101E                       u2511 2248  
-                     u1800 1C6A                       u2520 20C0                       u2600 1B40  
-                     u2280 0BE8                       u2360 1DEC                       u2440 177C  
-                     u1480 17EA                       u1560 19A4                       u1720 1234  
-                     u1640 1052                       u1801 1C66                       u2521 20BC  
-                     u2601 1B3C                       u2281 0BE4                       u2361 1DE8  
-                     u2441 1778                       u1481 17E6                       u1561 19A0  
-                     u1721 1230                       u1641 104E                       u1810 1C8C  
-                     u2530 20DE                       u2610 1B52                       u2290 0C22  
-                     u2450 17B6                       u2370 1636                       u1490 181C  
-                     u1570 19E2                       u1730 1246                       u1650 106E  
-                     u1811 1C88                       u2531 20DA                       u2611 1B4E  
-                     u2291 0C1E                       u2195 0A6A                       u2451 17B2  
-                     u2371 1632                       u1491 1818                       u1571 19DE  
-                     u1731 1242                       u1651 106A                       u1820 1CB4  
-                     u2540 20FA                       u2620 1B62                       u1900 0C7C  
-                     u2460 17C4                       u2380 1644                       u1580 1A0C  
-                     u1740 1256                       u1660 109C                       u1821 1CB0  
-                     u2541 20F6                       u2621 1B5E                       u1901 0C78  
-                     u2461 17C0                       u2381 1640                       u1581 1A08  
-                     u1741 1252                       u1661 1098                       u1830 1CE6  
-                     u2630 1B70                       u2550 1AF2                       u1910 0CC0  
-                     u2390 16A0                       u2470 14EE                       u1590 1A3A  
-                     u1750 126E                       u1670 10AA                       u1831 1CE2  
-                     u2631 1B6C                       u2551 1AEE                       u1911 0CBC  
-                     u2391 169C                       u2471 14EA                       u1591 1A36  
-                     u1751 126A                       u1671 10A6                       u2640 1BB6  
-                     u2560 1B02                       u1920 0CD2                       u1760 21A8  
-                     u1680 11D2                       u1840 12E0                       u2641 1BB2  
-                     u2561 1AFE                       u1921 0CCE                       u1761 21A4  
-                     u1681 11CE                       u1841 12DC                       u2650 23E0  
-                     u2570 1B10                       u1930 0CE2                       u1770 21E2  
-                     u1690 11F0                       u1850 1328                       u2651 23DC  
-                     u2571 1B0C                       u1931 0CDE                       u1771 21DE  
-                     u1691 11EC                       u1851 1324                       u1780 1C0E  
-                     u2580 1B22                       u1940 0D22                       u1860 134C  
-                     u1781 1C0A                       u2581 1B1E                       u1941 0D1E  
-                     u2485 1588                       u1861 1348                       u1790 1C30  
-                     u2590 1B32                       u1950 0D62                       u2486 1592  
-                     u1870 13F0                       u1791 1C2C                       u2591 1B2E  
-                     u1951 0D5E                       u2495 15CA                       u2487 15A2  
-                     u1871 13EC                       u2727 2018                       u1960 0DD8  
-                     u1880 0C5A                       u2496 15D4                       u2737 1ADA  
-                     u1961 0DD4                       u1881 0C56                       u2497 15E4  
-                     u1970 0DFA                       u1890 0C6C                       u1971 0DF6  
-                     u1891 0C68                       u1980 0E24                       u1981 0E20  
-                     u1990 0E48                       u1991 0E44                       _RCIF 007CF5  
-       ??_inicializarMouse 0057                       abs@a 0013                       _dbuf 009C  
-                     _main 1F9E                       _dtoa 0FDA                       _prec 0064  
-                     _nout 0060                       pad@i 0018                       pad@p 0015  
-                     fsr1h 000FE2                       fsr2h 000FDA                       indf2 000FDF  
-                     fsr1l 000FE1                       pad@w 001A                       map@x 001B  
-                     fsr2l 000FD9                       prodh 000FF4                       prodl 000FF3  
-                     start 0000              __CFG_IESO$OFF 000000            ___fldiv@new_exp 0020  
-            __CFG_MCLRE$ON 000000               ___param_bank 000000                      ??_abs 0015  
-                    ??_map 002F                      ??_pad 0017              __CFG_PLLDIV$1 000000  
-           __CFG_CCP2MX$ON 000000              ___fltol@sign1 0049            __end_of___aldiv 1D08  
-          __end_of___aodiv 1960                      ?_main 0001                      ?_dtoa 001C  
-          __end_of___aomod 1AC4            __end_of___fldiv 0FDA            __end_of___flmul 0C40  
-          __end_of___fltol 1E0E                      _T1CON 000FCD                      _LATB0 007C50  
-                    _LATB4 007C54                      _LATB5 007C55                      _LATB6 007C56  
-                    _LATB7 007C57            __end_of___lwdiv 211A                      _RCREG 000FAE  
-             vfpfcnvrt@fmt 0042                      _TMR1H 000FCF                      _TMR1L 000FCE  
-                    _SPBRG 000FAF              __CFG_USBDIV$1 000000                      _TXREG 000FAD  
-            __CFG_PWRT$OFF 000000              __CFG_WRT0$OFF 000000              __CFG_WRT1$OFF 000000  
-            __CFG_WRT2$OFF 000000        ___lmul@multiplicand 0005              __CFG_WRT3$OFF 000000  
-           __CFG_EBTR0$OFF 000000             __CFG_FCMEN$OFF 000000             __CFG_EBTR1$OFF 000000  
-           __CFG_EBTR2$OFF 000000             __CFG_EBTR3$OFF 000000              __CFG_WRTB$OFF 000000  
-            __CFG_WRTC$OFF 000000              __CFG_WRTD$OFF 000000             __CFG_EBTRB$OFF 000000  
-       __size_of_UART_init 0070                      _flags 0066                      _fputc 1E0E  
-                    _fputs 22F8                      _mouse 0068                ?_UART_write 0001  
-                    pad@fp 0011                      _width 0062                      _putch 2436  
-                    dtoa@d 001E                      dtoa@i 003E                      dtoa@n 0036  
-                    dtoa@p 0030                      dtoa@s 0034                      dtoa@w 0032  
-                    tablat 000FF5            __end_of_pwmDuty 1624                      status 000FD8  
-          __end_of_sprintf 22A8             __CFG_ICPRT$OFF 000000            __initialization 240A  
-             __end_of_main 202C               __end_of_dtoa 12BC        dameDistancia@conteo 000F  
-   dameDistancia@distancia 000D                     ??_main 005E                     ??_dtoa 0026  
-            __activetblptr 000002                     _CCP1M2 007DEA                     _CCP1M3 007DEB  
-                   _CCP2M2 007DD2                     _CCP2M3 007DD3                     ?_fputc 0001  
-                   ?_fputs 000A                     _CCPR1L 000FBE                     _CCPR2L 000FBB  
-                   ?_putch 0001                     _TMR1IF 007CF0                     _TMR1ON 007E68  
-                   _TMR2ON 007E52                     _TRISB0 007C98                     _TRISB1 007C99  
-                   _TRISB2 007C9A                     _TRISC1 007CA1                     _TRISB3 007C9B  
-                   _TRISC2 007CA2                     _TRISB4 007C9C                     _TRISB5 007C9D  
-                   _TRISB6 007C9E                     _TRISB7 007C9F                     _TRISC6 007CA6  
-                   _TRISC7 007CA7           __end_of___xxtofl 17D8             __CFG_XINST$OFF 000000  
-             vfprintf@cfmt 0056  dameDistancia@numeroSensor 000C                     ___lmul 218A  
-                ??___aldiv 0015                  ??___aodiv 0011                  ??___aomod 0011  
-        __end_of_UART_init 218A                  ??___fldiv 0017                  ??___flmul 0030  
-                ??___fltol 0045                  ??___lwdiv 0005                     _buffer 006A  
-      __size_of_UART_write 0016               ?_UART_printf 0002                     clear_0 2410  
-                   pad@buf 0013                     dtoa@fp 001C                     _strlen 237C  
-                   fputc@c 0001                     fputs@c 000E                     fputs@i 000F  
-                   fputs@s 000A               __mediumconst 0000                     tblptrh 000FF7  
-                   tblptrl 000FF6                     tblptru 000FF8                  ??_pwmDuty 004E  
-                   putch@c 0001           __end_of_vfprintf 2256                  ??_sprintf 005E  
-             ___xxtofl@arg 000B               ___xxtofl@exp 000A               ___xxtofl@val 0001  
-               __accesstop 0060    __end_of__initialization 2416            __CFG_PBADEN$OFF 000000  
-          __CFG_FOSC$XT_XT 000000              ___rparam_used 000001                 ___fltol@f1 0041  
-   __size_of_dameDistancia 0138             __pcstackCOMRAM 0001              __end_of_fputc 1ED8  
-            __end_of_fputs 233C              __end_of_putch 2438         __size_of_configPwm 0050  
-                  ??_fputc 0005                    ??_fputs 000E                    ??_putch 0001  
-               __pbssBANK0 0060                    ?___lmul 0001  __size_of_inicializarMouse 0028  
-                  _CCP1CON 000FBD                    _CCP2CON 000FBA             ___lmul@product 0009  
-                  ?_strlen 0001                    _T2CKPS0 007E50                    _T2CKPS1 007E51  
-                ?___xxtofl 0001              _dameDistancia 1AC4         __size_of_vfpfcnvrt 01B4  
-             ??_UART_write 0001            __CFG_VREGEN$OFF 000000                    __Hparam 0000  
-                  __Lparam 0000          __end_of_configPwm 22F8                    ___aldiv 1BFC  
-                  ___aodiv 17D8                    ___aomod 1960                    ___fldiv 0C40  
-          __size_of___lmul 006A                    ___flmul 0816                    ___fltol 1D08  
-                  ___lwdiv 20A6                  ?_vfprintf 0050               __psmallconst 0800  
-          __CFG_STVREN$OFF 000000                    __pcinit 240A                    __ramtop 0800  
-       __end_of_UART_write 2436                    __ptext0 1F9E                    __ptext1 2256  
-                  __ptext2 21F4                    __ptext3 12BC                    __ptext4 0FDA  
-                  __ptext5 1ED8                    __ptext6 237C                    __ptext7 22F8  
-                  __ptext8 1E0E                    __ptext9 2436            __size_of_strlen 0036  
-     __size_of_UART_printf 0030               __size_of_abs 0040               __size_of_map 007A  
-             __size_of_pad 00C6                 ??___xxtofl 0005             ?_dameDistancia 0008  
-         ___aldiv@dividend 000D                    _pwmDuty 1470                    _sprintf 2256  
-     end_of_initialization 2416                    fputc@fp 0003              __Lmediumconst 0000  
-                  fputs@fp 000C          __end_of_vfpfcnvrt 1470                  _RCSTAbits 000FAB  
-         ___aldiv@quotient 0017                    postdec2 000FDD                    postinc0 000FEE  
-                  postinc1 000FE6                    postinc2 000FDE                 ??_vfprintf 0056  
-                  strlen@a 0003                    strlen@s 0001                  _PORTBbits 000F81  
-                _UART_init 211A                pwmDuty@duty 0053              ___xxtofl@sign 0009  
-              ___fldiv@grs 0022                ___fldiv@rem 001B                 map@out_max 002B  
-               map@out_min 0027                ___flmul@grs 0035             _UART_init$1069 0023  
-                _TXSTAbits 000FAC           _inicializarMouse 23E2             __end_of___lmul 21F4  
-              vfpfcnvrt@ap 0044                vfpfcnvrt@fp 0040                vfpfcnvrt@ll 0048  
-               ?_UART_init 001B            ??_dameDistancia 000A             __end_of_strlen 23B2  
-      start_initialization 240A                __end_of_abs 237C                __end_of_map 20A6  
-              __end_of_pad 1F9E        pwmDuty@cicloTrabajo 004B                vfprintf@fmt 0052  
-                 ??___lmul 0009           __CFG_LPT1OSC$OFF 000000                   ??_strlen 0003  
-                ___fldiv@a 0013                  ___fldiv@b 000F                  ___flmul@a 002C  
-                ___flmul@b 0028              __pcstackBANK0 00BC           ___aodiv@dividend 0001  
-        __size_of___xxtofl 01B4          UART_printf@cadena 0002           ___lwdiv@dividend 0001  
-                 ?___aldiv 000D                   ?___aodiv 0001                   ?___aomod 0001  
-                 ?___fldiv 000F           ___aodiv@quotient 0013                   ?___flmul 0028  
-                 ?___fltol 0041                   ?___lwdiv 0001                  _configPwm 22A8  
-              ??_UART_init 001F          __size_of_vfprintf 0062                __smallconst 0800  
-                 ?_pwmDuty 004B           ___lwdiv@quotient 0005                   ?_sprintf 0058  
-           __size_of_fputc 00CA             __size_of_fputs 0044             __size_of_putch 0002  
-          ___aldiv@divisor 0011            ___aldiv@counter 0015           __CFG_WDTPS$32768 000000  
-            ??_UART_printf 0004                  _vfpfcnvrt 12BC                 ?_configPwm 0001  
-                map@in_max 0023                  map@in_min 001F           configPwm@channel 0003  
-           UART_write@dato 0001   __end_of_inicializarMouse 240A          ___lmul@multiplier 0001  
-                 __Hrparam 0000              UART_init@BAUD 001B                 vfprintf@ap 0054  
-                 __Lrparam 0000                 vfprintf@fp 0050           __size_of___aldiv 010C  
-         __size_of___aodiv 0188           __size_of___aomod 0164           __size_of___fldiv 039A  
-         __size_of___flmul 042A           __size_of___fltol 0106                 ?_vfpfcnvrt 0040  
-         __size_of___lwdiv 0074            ___aodiv@divisor 0009            ___aodiv@counter 0011  
-               sprintf@fmt 005A                   ___xxtofl 1624        __end_of_UART_printf 23E2  
-                 _dtoa$357 002E            ___lwdiv@divisor 0003            ___lwdiv@counter 0007  
-                 __ptext10 233C                   __ptext11 1960                   __ptext20 0C40  
-                 __ptext12 17D8                   __ptext21 1AC4                   __ptext13 23E2  
-                 __ptext22 20A6                   __ptext14 1470                   __ptext23 22A8  
-                 __ptext15 202C                   __ptext24 23B2                   __ptext16 218A  
-                 __ptext25 2420                   __ptext17 1624                   __ptext26 211A  
-                 __ptext18 1D08                   __ptext27 1BFC                   __ptext19 0816  
-         __size_of_pwmDuty 01B4           __size_of_sprintf 0052              __size_of_main 008E  
-            __size_of_dtoa 02E2                   _vfprintf 21F4                ??_configPwm 0001  
-         ___aomod@dividend 0001      __CFG_CPUDIV$OSC1_PLL2 000000      __end_of_dameDistancia 1BFC  
-                sprintf@ap 00BE            ___aomod@divisor 0009                ??_vfpfcnvrt 0046  
-          ___aomod@counter 0011                _UART_printf 23B2             pwmDuty@channel 004D  
-                 sprintf@f 00C0                   sprintf@s 0058               ___aldiv@sign 0016  
-               _UART_write 2420               ___aodiv@sign 0012               ___aomod@sign 0012  
+                            ___fldiv@aexp 0027                              ___fldiv@bexp 0026  
+                            ___fldiv@sign 001F                                        l91 20A4  
+                                      l99 1622                               __CFG_BORV$3 000000  
+                            __CFG_CP0$OFF 000000                              __CFG_CP1$OFF 000000  
+                            __CFG_CP2$OFF 000000                              __CFG_CP3$OFF 000000  
+                                     l110 22F6                                       l104 22AA  
+                                     l107 22B6                                       l123 1BA6  
+                                     l115 1AE4                                       l108 22F4  
+                                     l109 22C0                                       l125 1B14  
+                                     l117 1AF2                                       l134 1B44  
+                                     l118 1AF4                                       l127 1B22  
+                                     l144 1BFA                                       l136 1B52  
+                                     l128 1B24                                       l137 1B54  
+                                     l401 195E                                       l242 1F60  
+                                     l250 107A                                       l147 2188  
+                                     l156 2426                                       l172 2408  
+                                     l244 1F9C                                       l252 1082  
+                                     l165 23E0                                       l414 1AC2  
+                                     l270 12BA                                       l159 2434  
+                                     l239 1F1E                                       l283 224C  
+                                     l284 2254                                       l277 146E  
+                                     l366 1D06                                       l298 21E2  
+                                     l299 21F2                                       l901 08DA  
+                                     l910 0B48                                       l911 0B36  
+                                     l584 1E0C                                       l905 0C3E  
+                                     l908 0AD0                                       l918 0C00  
+                                     l942 167A                                       l871 0E38  
+                                     l880 0E7E                                       l785 2118  
+                                     l945 17D6                                       l778 2110  
+                                     l882 0EF6                                       l874 0DFC  
+                                     l962 2372                                       l883 0EE4  
+                                     l956 176E                                       l869 0FD8  
+                                     l949 1712                                       l965 237A  
+                                     l992 22A6                                       l977 1ED6  
+                                     l985 233A                                       l995 2436  
+                            __CFG_CPB$OFF 000000                                       _PR2 000FCB  
+                            __CFG_CPD$OFF 000000                              __CFG_BOR$OFF 000000  
+                                     _abs 233C                                       _map 202C  
+                                     _pad 1ED8                                       wreg 000FE8  
+                            ___flmul@aexp 0039                              ___flmul@bexp 003A  
+                            ___flmul@sign 0034                              ___flmul@temp 003F  
+                            ___flmul@prod 003B                              __CFG_LVP$OFF 000000  
+                            ___fltol@exp1 004A                              __CFG_WDT$OFF 000000  
+                                    l1001 23B0                                      l2001 191E  
+                                    l2003 193E                                      l2011 1972  
+                                    ?_abs 0013                                      l2021 19E2  
+                                    l2013 1992                                      l2101 1292  
+                                    l2111 21B8                                      l2031 1A5A  
+                                    l2023 19EA                                      l2015 1996  
+                                    l2007 1960                                      l2121 1C1E  
+                                    l2113 21C2                                      l2105 218A  
+                                    l2033 1A6C                                      l2025 19FE  
+                                    l2017 19A4                                      l2009 1964  
+                                    l2131 1C54                                      l2123 1C22  
+                                    l2115 1BFC                                      l2211 0C5C  
+                                    l2107 219A                                      l2027 1A0C  
+                                    l2035 1A72                                      l2019 19C4  
+                                    l2051 1052                                      l2043 0FDA  
+                                    l2141 1C96                                      l2133 1C6A  
+                                    l2125 1C30                                      l2117 1C00  
+                                    l2301 0E9C                                      l2213 0C6C  
+                                    l2221 0C96                                      l2205 0C40  
+                                    l2109 21A8                                      l2037 1A82  
+                                    l2029 1A3A                                      l2061 10AA  
+                                    l2053 1054                                      l2045 0FFA  
+                                    l2143 1CB4                                      l2135 1C72  
+                                    l2151 1CD6                                      l2127 1C40  
+                                    l2119 1C0E                                      l2311 0F06  
+                                    l2303 0EA0                                      l2231 0CC2  
+                                    l2223 0CA6                                      l2215 0C7C  
+                                    l2207 0C4C                                      l2039 1AA2  
+                                    l2071 1148                                      l2063 10B0  
+                                    l2055 106E                                      l2047 1022  
+                                    l2153 1CE6                                      l2145 1CC4  
+                                    l2137 1C7E                                      l2129 1C44  
+                                    l2321 0F68                                      l2313 0F12  
+                                    l2305 0EAE                                      l2233 0CD2  
+                                    l2241 0CFC                                      l2225 0CAC  
+                                    l2217 0C8C                                      l2209 0C5A  
+                                    l2401 0990                                      l2081 11F0  
+                                    l2073 114E                                      l2065 10B8  
+                                    l2057 108A                                      l2049 1042  
+                                    l2155 1CF6                                      l2147 1CC6  
+                                    l2139 1C8C                                      l2331 0FC6  
+                                    l2323 0F7E                                      l2315 0F20  
+                                    l2307 0EDC                                      l2251 0D3E  
+                                    l2243 0D0C                                      l2235 0CE2  
+                                    l2227 0CB2                                      l2219 0C8E  
+                                    l2411 09E6                                      l2403 09A0  
+                                    l2091 1256                                      l2083 120A  
+                                    l2075 1154                                      l2067 10C0  
+                                    l2059 109C                                      l2171 1304  
+                                    l2163 12BC                                      l2149 1CD0  
+                                    l2333 0FCC                                      l2325 0F98  
+                                    l2317 0F4A                                      l2245 0D22  
+                                    l2237 0CF2                                      l2229 0CC0  
+                                    l2421 0A8A                                      l2413 0A02  
+                                    l2405 09AC                                      l2093 125C  
+                                    l2085 1224                                      l2069 10C6  
+                                    l2077 11B8                                      l2181 13CC  
+                                    l2173 1328                                      l2165 12E0  
+                                    l2335 0FCE                                      l2327 0FB4  
+                                    l2319 0F4E                                      l2271 0DC0  
+                                    l2263 0D76                                      l2247 0D32  
+                                    l2255 0D52                                      l2239 0CF4  
+                                    l2431 0AE0                                      l2423 0A98  
+                                    l2415 0A0E                                      l2407 09BC  
+                                    l2351 0842                                      l2343 0816  
+                                    l2511 1DEC                                      l2159 202C  
+                                    l2095 126E                                      l2079 11D2  
+                                    l2087 1234                                      l2183 13F0  
+                                    l2191 141E                                      l2175 134C  
+                                    l2167 12EE                                      l2601 20DE  
+                                    l2329 0FB8                                      l2281 0E06  
+                                    l2273 0DC8                                      l2265 0D90  
+                                    l2257 0D62                                      l2249 0D3A  
+                                    l2433 0AEE                                      l2425 0AB6  
+                                    l2417 0A2A                                      l2409 09D6  
+                                    l2361 087E                                      l2353 0852  
+                                    l2345 0822                                      l2513 1DFC  
+                                    l2505 1DC0                                      l2521 1644  
+                                    l2097 127A                                      l2089 1246  
+                                    l2193 142C                                      l2185 13FE  
+                                    l2177 1394                                      l2169 1300  
+                                    l2611 210A                                      l2603 20E4  
+                                    l2291 0E5E                                      l2283 0E24  
+                                    l2275 0DD8                                      l2267 0DA0  
+                                    l2259 0D62                                      l2443 0B58  
+                                    l2451 0BA0                                      l2435 0AF2  
+                                    l2427 0AC0                                      l2419 0A54  
+                                    l2371 08B4                                      l2363 0884  
+                                    l2355 0862                                      l2347 0830  
+                                    l2507 1DCC                                      l2531 16BC  
+                                    l2523 168A                                      l2099 1282  
+                                    l2187 1412                                      l2613 22AA  
+                                    l2605 20FA                                      l2293 0E64  
+                                    l2285 0E26                                      l2277 0DEC  
+                                    l2269 0DB0                                      l2461 0C14  
+                                    l2453 0BBA                                      l2445 0B64  
+                                    l2437 0B00                                      l2429 0ACE  
+                                    l2373 08C4                                      l2365 0892  
+                                    l2357 0868                                      l2349 0832  
+                                    l2509 1DDC                                      l2541 1744  
+                                    l2533 16C8                                      l2525 16A0  
+                                    l2517 1626                                      l2197 1438  
+                                    l2701 2256                                      l2623 22CA  
+                                    l2607 2102                                      l2631 1AD6  
+                                    l2295 0E6E                                      l2287 0E36  
+                                    l2279 0DFA                                      l2463 0C22  
+                                    l2455 0BCE                                      l2447 0B72  
+                                    l2439 0B2E                                      l2391 0946  
+                                    l2383 090E                                      l2375 08CA  
+                                    l2367 0894                                      l2359 0878  
+                                    l2551 1782                                      l2543 1750  
+                                    l2535 16FA                                      l2519 1636  
+                                    l1911 1E3C                                      l2199 145C  
+                                    l2703 2268                                      l2609 2104  
+                                    l2641 1B62                                      l2633 1AD8  
+                                    l2297 0E7C                                      l2289 0E48  
+                                    l2465 0C24                                      l2457 0BE8  
+                                    l2449 0B9C                                      l2393 095E  
+                                    l2385 091A                                      l2377 08EA  
+                                    l2369 08A4                                      l2481 1D5C  
+                                    l2473 1D08                                      l2553 17A6  
+                                    l2545 175E                                      l2537 16FC  
+                                    l2529 16B4                                      l1913 1E5A  
+                                    l1905 1E0E                                      l1921 2304  
+                                    l2705 2270                                      l2619 22AE  
+                                    l2651 1BE8                                      l2635 1ADE  
+                                    l2299 0E8E                                      l2459 0C04  
+                                    l2467 0C2A                                      l2395 096A  
+                                    l2387 0924                                      l2379 08FA  
+                                    l2483 1D5E                                      l2475 1D1E  
+                                    l2555 17B6                                      l2547 177C  
+                                    l2539 1708                                      l2571 15B6  
+                                    l2563 1470                                      l1915 1E90  
+                                    l1907 1E20                                      l1923 2316  
+                                    l1931 238C                                      l2707 2278  
+                                    l2581 2422                                      l2653 1BE8  
+                                    l2637 1B02                                      l2645 1B74  
+                                    l2629 1AC6                                      l2469 0C2E  
+                                    l2397 0976                                      l2389 093A  
+                                    l2485 1D6E                                      l2557 17C4  
+                                    l2549 177E                                      l2565 14D0  
+                                    l1909 1E32                                      l1925 231A  
+                                    l1933 23A4                                      l1941 1EFC  
+                                    l2709 2294                                      l2671 2152  
+                                    l2663 211A                                      l2591 20A6  
+                                    l2655 1BF2                                      l2647 1BB6  
+                                    l2639 1B32                                      l2399 0984  
+                                    l2495 1D98                                      l2487 1D72  
+                                    l2479 1D32                                      l2559 17C6  
+                                    l2575 15F8                                      l2567 14EE  
+                                    l1919 22F8                                      l1927 237C  
+                                    l1951 1F42                                      l1943 1F0A  
+                                    l2583 21F4                                      l2681 2182  
+                                    l2673 217A                                      l2665 211A  
+                                    l2593 20AE                                      l2649 1BC8  
+                                    l2497 1DA2                                      l2489 1D80  
+                                    l2569 1574                                      l1961 2356  
+                                    l1929 2388                                      l1953 1F70  
+                                    l1945 1F16                                      l1937 1ED8  
+                                    l2585 21FC                                      l2683 2184  
+                                    l2675 217C                                      l2667 211C  
+                                    l2691 23C4                                      l2595 20C0  
+                                    l2499 1DAC                                      l1971 180E  
+                                    l1963 17D8                                      l1955 1F84  
+                                    l1947 1F2A                                      l1939 1EE8  
+                                    l2587 220A                                      l2685 2186  
+                                    l2677 217E                                      l2669 211E  
+                                    l2693 23C8                                      l2597 20C8  
+                                    l2853 160C                                      l1981 186A  
+                                    l1973 181C                                      l1965 17DC  
+                                    l1949 1F3E                                      l2589 2230  
+                                    l2781 1FC2                                      ?_map 001B  
+                                    ?_pad 0011                                      l2679 2180  
+                                    l2687 23B2                                      l2599 20D0  
+                                    l2855 1B88                                      l2695 23E2  
+                                    l1991 18D4                                      l1983 1872  
+                                    l1975 183C                                      l1967 17EA  
+                                    l1959 233C                                      l2791 200E  
+                                    l2783 1FC8                                      l2775 1F9E  
+                                    l2689 23B6                                      l2857 22DE  
+                                    l2697 23E8                                      l1993 18F4  
+                                    l1985 1886                                      l1977 1840  
+                                    l1969 180A                                      l2785 1FDC  
+                                    l2777 1FB8                                      l2699 23F8  
+                                    l1995 18F6                                      l1987 1894  
+                                    l1979 184C                                      l2787 1FE0  
+                                    l2779 1FBC                                      l1997 1908  
+                                    l1989 18A6                                      l2789 2002  
+                                    l1999 190E                                      STR_1 0801  
+                                    u2000 0E5E                                      u2001 0E5A  
+                                    u2010 0E7C                                      u2011 0E78  
+                                    u2100 0FC6                                      u2020 0E9C  
+                                    u2101 0FC2                                      u2021 0E98  
+                                    u2030 0EAE                                      u2110 0830  
+                                    u2031 0EAA                                      u2111 082C  
+                                    u2040 0EDC                                      u2200 0ACE  
+                                    u2120 0842                                      u1400 1E90  
+                                    u2041 0ED8                                      u2201 0ACA  
+                                    u2121 083E                                      u1401 1E8C  
+                                    u2050 0EF2                                      u2210 0AEE  
+                                    u2130 0852                                      u1410 233A  
+                                    u2051 0EEE                                      u2211 0AEA  
+                                    u2131 084E                                      u1411 2336  
+                                    u2060 0F06                                      u2220 0B00  
+                                    u2140 0892                                      u2300 1D1E  
+                                    u1420 23A4                                      u2061 0F02  
+                                    u2221 0AFC                                      u2141 088E  
+                                    u2301 1D1A                                      u1501 1846  
+                                    u1421 23A0                                      u2070 0F20  
+                                    u2230 0B2E                                      u2150 08A4  
+                                    u2310 1D52                                      u1510 186A  
+                                    u1430 1EE8                                      u2071 0F1C  
+                                    u2231 0B2A                                      u2151 08A0  
+                                    u1511 1866                                      u1431 1EE4  
+                                    u2080 0F68                                      u2240 0B44  
+                                    u2160 08B4                                      u2320 1D80  
+                                    u2400 16F6                                      u1520 1894  
+                                    u1600 1A82                                      u1440 1F0A  
+                                    u2081 0F64                                      u2241 0B40  
+                                    u2161 08B0                                      u2321 1D7C  
+                                    u2401 16F2                                      u1521 1890  
+                                    u1601 1A7E                                      u1441 1F06  
+                                    u2090 0F98                                      u2250 0B58  
+                                    u2170 08EA                                      u2330 1D94  
+                                    u2410 1740                                      u1530 18D4  
+                                    u1370 1E20                                      u1450 1F60  
+                                    u1610 100A                                      u2091 0F94  
+                                    u2251 0B54                                      u2171 08E6  
+                                    u2331 1D90                                      u2315 1D48  
+                                    u2411 173C                                      u1531 18D0  
+                                    u1371 1E1C                                      u1451 1F5C  
+                                    u1611 1004                                      u2500 2434  
+                                    u2260 0B72                                      u2180 08FA  
+                                    u2340 1DBC                                      u2420 175E  
+                                    u1540 191E                                      u1380 1E32  
+                                    u1460 1F70                                      u1700 120A  
+                                    u1620 100C                                      u2501 2430  
+                                    u2261 0B6E                                      u2181 08F6  
+                                    u2341 1DB8                                      u2421 175A  
+                                    u1541 191A                                      u1381 1E2E  
+                                    u1461 1F6C                                      u1701 1206  
+                                    u2270 0BBA                                      u2190 0A74  
+                                    u2350 1DDC                                      u2430 176E  
+                                    u1550 1972                                      u1470 2356  
+                                    u1390 1E5A                                      u1710 1224  
+                                    u1630 1022                                      u2510 224C  
+                                    u2271 0BB6                                      u2351 1DD8  
+                                    u2431 176A                                      u1551 196E  
+                                    u1471 2352                                      u1391 1E56  
+                                    u1711 1220                                      u1631 101E  
+                                    u2511 2248                                      u1800 1C6A  
+                                    u2520 20C0                                      u2600 1B40  
+                                    u2280 0BE8                                      u2360 1DEC  
+                                    u2440 177C                                      u1480 17EA  
+                                    u1560 19A4                                      u1720 1234  
+                                    u1640 1052                                      u1801 1C66  
+                                    u2521 20BC                                      u2601 1B3C  
+                                    u2281 0BE4                                      u2361 1DE8  
+                                    u2441 1778                                      u1481 17E6  
+                                    u1561 19A0                                      u1721 1230  
+                                    u1641 104E                                      u1810 1C8C  
+                                    u2530 20DE                                      u2610 1B52  
+                                    u2290 0C22                                      u2450 17B6  
+                                    u2370 1636                                      u1490 181C  
+                                    u1570 19E2                                      u1730 1246  
+                                    u1650 106E                                      u1811 1C88  
+                                    u2531 20DA                                      u2611 1B4E  
+                                    u2291 0C1E                                      u2195 0A6A  
+                                    u2451 17B2                                      u2371 1632  
+                                    u1491 1818                                      u1571 19DE  
+                                    u1731 1242                                      u1651 106A  
+                                    u1820 1CB4                                      u2540 20FA  
+                                    u2620 1B62                                      u1900 0C7C  
+                                    u2460 17C4                                      u2380 1644  
+                                    u1580 1A0C                                      u1740 1256  
+                                    u1660 109C                                      u1821 1CB0  
+                                    u2541 20F6                                      u2621 1B5E  
+                                    u1901 0C78                                      u2461 17C0  
+                                    u2381 1640                                      u1581 1A08  
+                                    u1741 1252                                      u1661 1098  
+                                    u1830 1CE6                                      u2630 1B70  
+                                    u2550 1AF2                                      u1910 0CC0  
+                                    u2390 16A0                                      u2470 14EE  
+                                    u1590 1A3A                                      u1750 126E  
+                                    u1670 10AA                                      u1831 1CE2  
+                                    u2631 1B6C                                      u2551 1AEE  
+                                    u1911 0CBC                                      u2391 169C  
+                                    u2471 14EA                                      u1591 1A36  
+                                    u1751 126A                                      u1671 10A6  
+                                    u2640 1BB6                                      u2560 1B02  
+                                    u1920 0CD2                                      u1760 21A8  
+                                    u1680 11D2                                      u1840 12E0  
+                                    u2641 1BB2                                      u2561 1AFE  
+                                    u1921 0CCE                                      u1761 21A4  
+                                    u1681 11CE                                      u1841 12DC  
+                                    u2650 23E0                                      u2570 1B10  
+                                    u1930 0CE2                                      u1770 21E2  
+                                    u1690 11F0                                      u1850 1328  
+                                    u2651 23DC                                      u2571 1B0C  
+                                    u1931 0CDE                                      u1771 21DE  
+                                    u1691 11EC                                      u1851 1324  
+                                    u1780 1C0E                                      u2580 1B22  
+                                    u1940 0D22                                      u1860 134C  
+                                    u1781 1C0A                                      u2581 1B1E  
+                                    u1941 0D1E                                      u2485 1588  
+                                    u1861 1348                                      u1790 1C30  
+                                    u2590 1B32                                      u1950 0D62  
+                                    u2486 1592                                      u1870 13F0  
+                                    u1791 1C2C                                      u2591 1B2E  
+                                    u1951 0D5E                                      u2495 15CA  
+                                    u2487 15A2                                      u1871 13EC  
+                                    u2727 2018                                      u1960 0DD8  
+                                    u1880 0C5A                                      u2496 15D4  
+                                    u2737 1ADA                                      u1961 0DD4  
+                                    u1881 0C56                                      u2497 15E4  
+                                    u1970 0DFA                                      u1890 0C6C  
+                                    u1971 0DF6                                      u1891 0C68  
+                                    u1980 0E24                                      u1981 0E20  
+                                    u1990 0E48                                      u1991 0E44  
+                                    _RCIF 007CF5                                      abs@a 0013  
+                                    _dbuf 009C                                      _main 1F9E  
+                                    _dtoa 0FDA                                      _prec 0064  
+                                    _nout 0060                                      pad@i 0018  
+                                    pad@p 0015                                      fsr1h 000FE2  
+                                    fsr2h 000FDA                                      indf2 000FDF  
+                                    fsr1l 000FE1                                      pad@w 001A  
+                                    map@x 001B                                      fsr2l 000FD9  
+                                    prodh 000FF4                                      prodl 000FF3  
+                                    start 0000                             __CFG_IESO$OFF 000000  
+                         ___fldiv@new_exp 0020                             __CFG_MCLRE$ON 000000  
+                            ___param_bank 000000                                     ??_abs 0015  
+                                   ??_map 002F                                     ??_pad 0017  
+                           __CFG_PLLDIV$1 000000                            __CFG_CCP2MX$ON 000000  
+                           ___fltol@sign1 0049                           __end_of___aldiv 1D08  
+                         __end_of___aodiv 1960                                     ?_main 0001  
+                                   ?_dtoa 001C                           __end_of___aomod 1AC4  
+                         __end_of___fldiv 0FDA                           __end_of___flmul 0C40  
+                         __end_of___fltol 1E0E                                     _T1CON 000FCD  
+                                   _LATB0 007C50                                     _LATB4 007C54  
+                                   _LATB5 007C55                                     _LATB6 007C56  
+                                   _LATB7 007C57                           __end_of___lwdiv 211A  
+                                   _RCREG 000FAE                              vfpfcnvrt@fmt 0042  
+                                   _TMR1H 000FCF                                     _TMR1L 000FCE  
+                                   _SPBRG 000FAF                             __CFG_USBDIV$1 000000  
+                                   _TXREG 000FAD                             __CFG_PWRT$OFF 000000  
+                           __CFG_WRT0$OFF 000000                             __CFG_WRT1$OFF 000000  
+                           __CFG_WRT2$OFF 000000                       ___lmul@multiplicand 0005  
+                           __CFG_WRT3$OFF 000000                            __CFG_EBTR0$OFF 000000  
+                          __CFG_FCMEN$OFF 000000                            __CFG_EBTR1$OFF 000000  
+                          __CFG_EBTR2$OFF 000000                            __CFG_EBTR3$OFF 000000  
+                           __CFG_WRTB$OFF 000000                             __CFG_WRTC$OFF 000000  
+                           __CFG_WRTD$OFF 000000                            __CFG_EBTRB$OFF 000000  
+                      __size_of_UART_init 0070                                     _flags 0066  
+                                   _fputc 1E0E                                     _fputs 22F8  
+                                   _mouse 0068                               ?_UART_write 0001  
+                                   pad@fp 0011                                     _width 0062  
+                                   _putch 2436                                     dtoa@d 001E  
+                                   dtoa@i 003E                                     dtoa@n 0036  
+                                   dtoa@p 0030                                     dtoa@s 0034  
+                                   dtoa@w 0032                                     tablat 000FF5  
+                         __end_of_pwmDuty 1624                                     status 000FD8  
+                         __end_of_sprintf 22A8                            __CFG_ICPRT$OFF 000000  
+                         __initialization 240A                              __end_of_main 202C  
+                            __end_of_dtoa 12BC                       dameDistancia@conteo 000F  
+                  dameDistancia@distancia 000D                                    ??_main 005E  
+                                  ??_dtoa 0026                             __activetblptr 000002  
+                                  _CCP1M2 007DEA                                    _CCP1M3 007DEB  
+                                  _CCP2M2 007DD2                                    _CCP2M3 007DD3  
+                                  ?_fputc 0001                                    ?_fputs 000A  
+                                  _CCPR1L 000FBE                                    _CCPR2L 000FBB  
+                                  ?_putch 0001                                    _TMR1IF 007CF0  
+                                  _TMR1ON 007E68                                    _TMR2ON 007E52  
+                                  _TRISB0 007C98                                    _TRISB1 007C99  
+                                  _TRISB2 007C9A                                    _TRISC1 007CA1  
+                                  _TRISB3 007C9B                                    _TRISC2 007CA2  
+                                  _TRISB4 007C9C                                    _TRISB5 007C9D  
+                                  _TRISB6 007C9E                                    _TRISB7 007C9F  
+                                  _TRISC6 007CA6                                    _TRISC7 007CA7  
+                        __end_of___xxtofl 17D8                            __CFG_XINST$OFF 000000  
+                            vfprintf@cfmt 0056                 dameDistancia@numeroSensor 000C  
+                                  ___lmul 218A                                 ??___aldiv 0015  
+                               ??___aodiv 0011                                 ??___aomod 0011  
+                       __end_of_UART_init 218A                                 ??___fldiv 0017  
+                               ??___flmul 0030                                 ??___fltol 0045  
+                               ??___lwdiv 0005                                    _buffer 006A  
+                     __size_of_UART_write 0016                              ?_UART_printf 0002  
+                                  clear_0 2410                                    pad@buf 0013  
+                                  dtoa@fp 001C                                    _strlen 237C  
+                                  fputc@c 0001                                    fputs@c 000E  
+                                  fputs@i 000F                                    fputs@s 000A  
+                            __mediumconst 0000                                    tblptrh 000FF7  
+                                  tblptrl 000FF6                                    tblptru 000FF8  
+                               ??_pwmDuty 004E                                    putch@c 0001  
+                        __end_of_vfprintf 2256                                 ??_sprintf 005E  
+                            ___xxtofl@arg 000B                              ___xxtofl@exp 000A  
+                            ___xxtofl@val 0001                                __accesstop 0060  
+                 __end_of__initialization 2416                           __CFG_PBADEN$OFF 000000  
+                         __CFG_FOSC$XT_XT 000000                             ___rparam_used 000001  
+                              ___fltol@f1 0041                    __size_of_dameDistancia 0138  
+                          __pcstackCOMRAM 0001                             __end_of_fputc 1ED8  
+                           __end_of_fputs 233C                             __end_of_putch 2438  
+                      __size_of_configPwm 0050                                   ??_fputc 0005  
+                                 ??_fputs 000E                                   ??_putch 0001  
+                              __pbssBANK0 0060                                   ?___lmul 0001  
+                                 _CCP1CON 000FBD                                   _CCP2CON 000FBA  
+                          ___lmul@product 0009                                   ?_strlen 0001  
+                                 _T2CKPS0 007E50                                   _T2CKPS1 007E51  
+                               ?___xxtofl 0001                             _dameDistancia 1AC4  
+                      __size_of_vfpfcnvrt 01B4                              ??_UART_write 0001  
+                         __CFG_VREGEN$OFF 000000                                   __Hparam 0000  
+                                 __Lparam 0000                         __end_of_configPwm 22F8  
+                                 ___aldiv 1BFC                                   ___aodiv 17D8  
+                                 ___aomod 1960                                   ___fldiv 0C40  
+                         __size_of___lmul 006A                                   ___flmul 0816  
+                                 ___fltol 1D08                                   ___lwdiv 20A6  
+                               ?_vfprintf 0050                              __psmallconst 0800  
+                         __CFG_STVREN$OFF 000000                                   __pcinit 240A  
+                                 __ramtop 0800                        __end_of_UART_write 2436  
+                                 __ptext0 1F9E                                   __ptext1 2256  
+                                 __ptext2 21F4                                   __ptext3 12BC  
+                                 __ptext4 0FDA                                   __ptext5 1ED8  
+                                 __ptext6 237C                                   __ptext7 22F8  
+                                 __ptext8 1E0E                                   __ptext9 2436  
+                         __size_of_strlen 0036                      __size_of_UART_printf 0030  
+                            __size_of_abs 0040                              __size_of_map 007A  
+                            __size_of_pad 00C6                                ??___xxtofl 0005  
+                          ?_dameDistancia 0008                          ___aldiv@dividend 000D  
+                                 _pwmDuty 1470                                   _sprintf 2256  
+                    end_of_initialization 2416                                   fputc@fp 0003  
+                           __Lmediumconst 0000                                   fputs@fp 000C  
+                       __end_of_vfpfcnvrt 1470                                 _RCSTAbits 000FAB  
+                        ___aldiv@quotient 0017                                   postdec2 000FDD  
+                                 postinc0 000FEE                                   postinc1 000FE6  
+                                 postinc2 000FDE                                ??_vfprintf 0056  
+                                 strlen@a 0003                                   strlen@s 0001  
+                               _PORTBbits 000F81                                 _UART_init 211A  
+                             pwmDuty@duty 0053                             ___xxtofl@sign 0009  
+                             ___fldiv@grs 0022                               ___fldiv@rem 001B  
+                              map@out_max 002B                                map@out_min 0027  
+                             ___flmul@grs 0035                            _UART_init$1069 0023  
+                               _TXSTAbits 000FAC                            __end_of___lmul 21F4  
+                             vfpfcnvrt@ap 0044                               vfpfcnvrt@fp 0040  
+                             vfpfcnvrt@ll 0048                                ?_UART_init 001B  
+                         ??_dameDistancia 000A                            __end_of_strlen 23B2  
+                     start_initialization 240A                               __end_of_abs 237C  
+                             __end_of_map 20A6                               __end_of_pad 1F9E  
+                     pwmDuty@cicloTrabajo 004B                               vfprintf@fmt 0052  
+                                ??___lmul 0009                          __CFG_LPT1OSC$OFF 000000  
+                                ??_strlen 0003                                 ___fldiv@a 0013  
+                               ___fldiv@b 000F                                 ___flmul@a 002C  
+                               ___flmul@b 0028                             __pcstackBANK0 00BC  
+                        ___aodiv@dividend 0001                         __size_of___xxtofl 01B4  
+                       UART_printf@cadena 0002                          ___lwdiv@dividend 0001  
+                                ?___aldiv 000D                                  ?___aodiv 0001  
+                                ?___aomod 0001                                  ?___fldiv 000F  
+                        ___aodiv@quotient 0013                                  ?___flmul 0028  
+                                ?___fltol 0041                                  ?___lwdiv 0001  
+                               _configPwm 22A8                               ??_UART_init 001F  
+                       __size_of_vfprintf 0062                               __smallconst 0800  
+                                ?_pwmDuty 004B                          ___lwdiv@quotient 0005  
+                                ?_sprintf 0058                            __size_of_fputc 00CA  
+                          __size_of_fputs 0044                            __size_of_putch 0002  
+                         ___aldiv@divisor 0011                           ___aldiv@counter 0015  
+                        __CFG_WDTPS$32768 000000                             ??_UART_printf 0004  
+                               _vfpfcnvrt 12BC                                ?_configPwm 0001  
+                               map@in_max 0023                                 map@in_min 001F  
+                        configPwm@channel 0003                            UART_write@dato 0001  
+                       ___lmul@multiplier 0001                                  __Hrparam 0000  
+                           UART_init@BAUD 001B                                vfprintf@ap 0054  
+                                __Lrparam 0000                                vfprintf@fp 0050  
+                        __size_of___aldiv 010C                          __size_of___aodiv 0188  
+                        __size_of___aomod 0164                          __size_of___fldiv 039A  
+                        __size_of___flmul 042A                          __size_of___fltol 0106  
+                              ?_vfpfcnvrt 0040                          __size_of___lwdiv 0074  
+                         ___aodiv@divisor 0009                           ___aodiv@counter 0011  
+                              sprintf@fmt 005A                                  ___xxtofl 1624  
+                     __end_of_UART_printf 23E2                                  _dtoa$357 002E  
+                         ___lwdiv@divisor 0003                           ___lwdiv@counter 0007  
+                                __ptext10 233C                                  __ptext11 1960  
+                                __ptext20 0C40                                  __ptext12 17D8  
+                                __ptext21 1AC4                                  __ptext13 23E2  
+                                __ptext22 20A6                                  __ptext14 1470  
+                                __ptext23 22A8                                  __ptext15 202C  
+                                __ptext24 23B2                                  __ptext16 218A  
+                                __ptext25 2420                                  __ptext17 1624  
+                                __ptext26 211A                                  __ptext18 1D08  
+                                __ptext27 1BFC                                  __ptext19 0816  
+                        __size_of_pwmDuty 01B4   __end_of_inicializarComportamientoBasico 240A  
+__size_of_inicializarComportamientoBasico 0028         ??_inicializarComportamientoBasico 0057  
+        ?_inicializarComportamientoBasico 0001           _inicializarComportamientoBasico 23E2  
+                        __size_of_sprintf 0052                             __size_of_main 008E  
+                           __size_of_dtoa 02E2                                  _vfprintf 21F4  
+                             ??_configPwm 0001                          ___aomod@dividend 0001  
+                   __CFG_CPUDIV$OSC1_PLL2 000000                     __end_of_dameDistancia 1BFC  
+                               sprintf@ap 00BE                           ___aomod@divisor 0009  
+                             ??_vfpfcnvrt 0046                           ___aomod@counter 0011  
+                             _UART_printf 23B2                            pwmDuty@channel 004D  
+                                sprintf@f 00C0                                  sprintf@s 0058  
+                            ___aldiv@sign 0016                                _UART_write 2420  
+                            ___aodiv@sign 0012                              ___aomod@sign 0012  
