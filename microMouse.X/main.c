@@ -20,6 +20,12 @@
 #define IN3 LATB6
 #define IN4 LATB7
 
+#define PIN_BOTON_INICIO_ALTO TRISB0
+#define BOTON_INICIO_ALTO PORTBbits.RB0
+#define PIN_INDICADOR_ESTADO TRISDbits.RD2
+#define INDICADOR_ESTADO LATD2
+#define RETARDO_ANTIREBOTE 100
+
 typedef enum {
     ENFRENTE = 1,
     ATRAS,
@@ -34,7 +40,7 @@ typedef struct {
 } ComportamientoBasico;
 
 ComportamientoBasico mouse;
-
+unsigned char pausa = 1; //Bit que indica estado del sistema
 
 char buffer[TAMANO_CADENA]; //Variable para Debug
 
@@ -42,6 +48,47 @@ void moverCarrito(void);
 
 void inicializarComportamientoBasico(void);
 void comportamientoBasico(void);
+void antiRebote(unsigned char pin);
+void probarUltrasonico(unsigned char numeroSensor);
+
+void __interrupt() boton(void) {
+
+    if (INT0IF) //Si la bandera de interrupción es 1
+    {
+        antiRebote(1); //Funcion de antirebote
+        if (pausa) {
+            pausa = 0;
+            INDICADOR_ESTADO = 1;
+            __delay_ms(3000); //3 segundos de espera para posicionar el carro
+        } else {
+            INDICADOR_ESTADO = 0;
+            pausa = 1;
+        }
+
+        INT0IF = 0;
+    }
+}
+
+void probarUltrasonico(unsigned char numeroSensor) {
+    sprintf(buffer, "\rDistancia: %d cm\r\n", dameDistancia(numeroSensor));
+    UART_printf(buffer);
+    __delay_ms(1000);
+}
+
+void antiRebote(unsigned char pin) {
+
+    switch (pin) {
+        case 1:
+            while (!BOTON_INICIO_ALTO);
+            while (BOTON_INICIO_ALTO);
+            __delay_ms(RETARDO_ANTIREBOTE);
+            break;
+
+        default:
+            break;
+
+    }
+}
 
 void inicializarComportamientoBasico(void) {
 
@@ -172,6 +219,11 @@ void moverCarrito(void) {
 
 void main(void) {
 
+    //Configuración de INT0
+    INTCONbits.GIE = 1; //Habilitando interrupciones
+    INTCONbits.INT0IE = 1; //Habilitar INT0
+    INTCON2bits.INTEDG0 = 1; //Interrupción se activa en flanco de subida
+
     PIN_TRIGGER = 0; //Pin Trigger Salida
     PIN_ECHO_1 = 1; //Pin Echo Entrada Sensor 1
     PIN_ECHO_2 = 1; //Pin Echo Entrada Sensor 2
@@ -182,11 +234,16 @@ void main(void) {
     PIN_IN3 = 0; //Declarando como salida
     PIN_IN4 = 0; //Declarando como salida
 
+    PIN_INDICADOR_ESTADO = 0; //Salida
+    PIN_BOTON_INICIO_ALTO = 1; //Pin como entrada
+
     TRIGGER = 0; // Trigguer apagado
     IN1 = 0; //Motor 1 Apagado
     IN2 = 0; //Motor 2 Apagado
     IN3 = 0; //Motor 3 Apagado
     IN4 = 0; //Motor 4 Apagado
+    INDICADOR_ESTADO = 0; //Led apagado
+
 
     T1CON = 0b00000000; // FOSC / 4 Y que el preescaler 1:1; Iniciamoa Con el TMR1ON Apagado
 
@@ -199,9 +256,13 @@ void main(void) {
 
     while (1) {
 
-        sprintf(buffer, "\rDistancia: %d cm\r\n", dameDistancia(1));
-        UART_printf(buffer);
-        __delay_ms(1000);
+        if (!pausa) {
+            INDICADOR_ESTADO = 1;
+            probarUltrasonico(ENFRENTE);
+            //comportamientoBasico();
+        } else {
+
+        }
 
 
     }

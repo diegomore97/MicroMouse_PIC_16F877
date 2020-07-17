@@ -5774,9 +5774,9 @@ unsigned short dameDistancia(unsigned char numeroSensor) {
     TMR1H = 0x00;
     TMR1L = 0x00;
     conteo = 0;
-    LATB0 = 1;
+    LATD3 = 1;
     _delay((unsigned long)((12)*(4000000/4000000.0)));
-    LATB0 = 0;
+    LATD3 = 0;
 
     switch (numeroSensor) {
 
@@ -6018,7 +6018,7 @@ char *ctermid(char *);
 
 char *tempnam(const char *, const char *);
 # 5 "main.c" 2
-# 23 "main.c"
+# 29 "main.c"
 typedef enum {
     ENFRENTE = 1,
     ATRAS,
@@ -6033,7 +6033,7 @@ typedef struct {
 } ComportamientoBasico;
 
 ComportamientoBasico mouse;
-
+unsigned char pausa = 1;
 
 char buffer[50];
 
@@ -6041,6 +6041,47 @@ void moverCarrito(void);
 
 void inicializarComportamientoBasico(void);
 void comportamientoBasico(void);
+void antiRebote(unsigned char pin);
+void probarUltrasonico(unsigned char numeroSensor);
+
+void __attribute__((picinterrupt(("")))) boton(void) {
+
+    if (INT0IF)
+    {
+        antiRebote(1);
+        if (pausa) {
+            pausa = 0;
+            LATD2 = 1;
+            _delay((unsigned long)((3000)*(4000000/4000.0)));
+        } else {
+            LATD2 = 0;
+            pausa = 1;
+        }
+
+        INT0IF = 0;
+    }
+}
+
+void probarUltrasonico(unsigned char numeroSensor) {
+    sprintf(buffer, "\rDistancia: %d cm\r\n", dameDistancia(numeroSensor));
+    UART_printf(buffer);
+    _delay((unsigned long)((1000)*(4000000/4000.0)));
+}
+
+void antiRebote(unsigned char pin) {
+
+    switch (pin) {
+        case 1:
+            while (!PORTBbits.RB0);
+            while (PORTBbits.RB0);
+            _delay((unsigned long)((100)*(4000000/4000.0)));
+            break;
+
+        default:
+            break;
+
+    }
+}
 
 void inicializarComportamientoBasico(void) {
 
@@ -6171,7 +6212,12 @@ void moverCarrito(void) {
 
 void main(void) {
 
-    TRISB0 = 0;
+
+    INTCONbits.GIE = 1;
+    INTCONbits.INT0IE = 1;
+    INTCON2bits.INTEDG0 = 1;
+
+    TRISD3 = 0;
     TRISB1 = 1;
     TRISB2 = 1;
     TRISB3 = 1;
@@ -6181,11 +6227,16 @@ void main(void) {
     TRISB6 = 0;
     TRISB7 = 0;
 
-    LATB0 = 0;
+    TRISDbits.RD2 = 0;
+    TRISB0 = 1;
+
+    LATD3 = 0;
     LATB4 = 0;
     LATB5 = 0;
     LATB6 = 0;
     LATB7 = 0;
+    LATD2 = 0;
+
 
     T1CON = 0b00000000;
 
@@ -6198,9 +6249,13 @@ void main(void) {
 
     while (1) {
 
-        sprintf(buffer, "\rDistancia: %d cm\r\n", dameDistancia(1));
-        UART_printf(buffer);
-        _delay((unsigned long)((1000)*(4000000/4000.0)));
+        if (!pausa) {
+            LATD2 = 1;
+            probarUltrasonico(ENFRENTE);
+
+        } else {
+
+        }
 
 
     }

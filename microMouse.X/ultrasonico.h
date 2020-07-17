@@ -1,12 +1,12 @@
 #ifndef ULTRASONICO_H
 #define	ULTRASONICO_H
 
-#define PIN_TRIGGER TRISB0
+#define PIN_TRIGGER TRISD3
 #define PIN_ECHO_1  TRISB1
 #define PIN_ECHO_2  TRISB2
 #define PIN_ECHO_3  TRISB3
 
-#define TRIGGER LATB0
+#define TRIGGER LATD3
 #define ECHO_1  PORTBbits.RB1
 #define ECHO_2  PORTBbits.RB2
 #define ECHO_3  PORTBbits.RB3
