@@ -11,6 +11,14 @@
 #define ECHO_2  PORTBbits.RB2
 #define ECHO_3  PORTBbits.RB3
 
+typedef enum {
+    ENFRENTE = 1,
+    ATRAS,
+    IZQUIERDA,
+    DERECHA,
+    ALTO
+} Direccion;
+
 unsigned short dameDistancia(unsigned char numeroSensor);
 
 unsigned short dameDistancia(unsigned char numeroSensor) {
@@ -27,7 +35,7 @@ unsigned short dameDistancia(unsigned char numeroSensor) {
 
     switch (numeroSensor) {
 
-        case 1: //ENFRENTE
+        case ENFRENTE: //ENFRENTE
 
             while (!ECHO_1); // Esperamos que el Echo se active para poder empezar la cuenta
             TMR1ON = 1; // Ponemos a contar el Timer 1
@@ -35,7 +43,7 @@ unsigned short dameDistancia(unsigned char numeroSensor) {
 
             break;
 
-        case 2: //IZQUIERDA
+        case IZQUIERDA: //IZQUIERDA
 
             while (!ECHO_2); // Esperamos que el Echo se active para poder empezar la cuenta
             TMR1ON = 1; // Ponemos a contar el Timer 1
@@ -43,7 +51,7 @@ unsigned short dameDistancia(unsigned char numeroSensor) {
 
             break;
 
-        case 3: //DERECHA
+        case DERECHA: //DERECHA
 
             while (!ECHO_3); // Esperamos que el Echo se active para poder empezar la cuenta
             TMR1ON = 1; // Ponemos a contar el Timer 1

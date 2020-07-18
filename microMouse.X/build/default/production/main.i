@@ -5764,6 +5764,14 @@ void configPwm(unsigned char channel) {
 
 # 1 "./ultrasonico.h" 1
 # 14 "./ultrasonico.h"
+typedef enum {
+    ENFRENTE = 1,
+    ATRAS,
+    IZQUIERDA,
+    DERECHA,
+    ALTO
+} Direccion;
+
 unsigned short dameDistancia(unsigned char numeroSensor);
 
 unsigned short dameDistancia(unsigned char numeroSensor) {
@@ -5780,7 +5788,7 @@ unsigned short dameDistancia(unsigned char numeroSensor) {
 
     switch (numeroSensor) {
 
-        case 1:
+        case ENFRENTE:
 
             while (!PORTBbits.RB1);
             TMR1ON = 1;
@@ -5788,7 +5796,7 @@ unsigned short dameDistancia(unsigned char numeroSensor) {
 
             break;
 
-        case 2:
+        case IZQUIERDA:
 
             while (!PORTBbits.RB2);
             TMR1ON = 1;
@@ -5796,7 +5804,7 @@ unsigned short dameDistancia(unsigned char numeroSensor) {
 
             break;
 
-        case 3:
+        case DERECHA:
 
             while (!PORTBbits.RB3);
             TMR1ON = 1;
@@ -6019,14 +6027,6 @@ char *ctermid(char *);
 char *tempnam(const char *, const char *);
 # 5 "main.c" 2
 # 29 "main.c"
-typedef enum {
-    ENFRENTE = 1,
-    ATRAS,
-    IZQUIERDA,
-    DERECHA,
-    ALTO
-} Direccion;
-
 typedef struct {
     Direccion curr_state;
     Direccion Next_state;
@@ -6063,9 +6063,27 @@ void __attribute__((picinterrupt(("")))) boton(void) {
 }
 
 void probarUltrasonico(unsigned char numeroSensor) {
-    sprintf(buffer, "\rDistancia: %d cm\r\n", dameDistancia(numeroSensor));
+
+    switch (numeroSensor) {
+
+        case ENFRENTE:
+            UART_printf("\rEnfrente: \r\n");
+            break;
+
+        case IZQUIERDA:
+            UART_printf("\rIzquierda: \r\n");
+            break;
+
+        case DERECHA:
+            UART_printf("\rDerecha: \r\n");
+            break;
+
+    }
+
+    sprintf(buffer, "\rDistancia: %d cm\r\n\n", dameDistancia(numeroSensor));
     UART_printf(buffer);
     _delay((unsigned long)((1000)*(4000000/4000.0)));
+
 }
 
 void antiRebote(unsigned char pin) {
@@ -6250,8 +6268,9 @@ void main(void) {
     while (1) {
 
         if (!pausa) {
-            LATD2 = 1;
+
             probarUltrasonico(ENFRENTE);
+
 
         } else {
 

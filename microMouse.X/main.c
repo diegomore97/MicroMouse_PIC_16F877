@@ -26,14 +26,6 @@
 #define INDICADOR_ESTADO LATD2
 #define RETARDO_ANTIREBOTE 100
 
-typedef enum {
-    ENFRENTE = 1,
-    ATRAS,
-    IZQUIERDA,
-    DERECHA,
-    ALTO
-} Direccion;
-
 typedef struct {
     Direccion curr_state;
     Direccion Next_state;
@@ -70,9 +62,27 @@ void __interrupt() boton(void) {
 }
 
 void probarUltrasonico(unsigned char numeroSensor) {
-    sprintf(buffer, "\rDistancia: %d cm\r\n", dameDistancia(numeroSensor));
+
+    switch (numeroSensor) {
+
+        case ENFRENTE:
+            UART_printf("\rEnfrente: \r\n");
+            break;
+
+        case IZQUIERDA:
+            UART_printf("\rIzquierda: \r\n");
+            break;
+
+        case DERECHA:
+            UART_printf("\rDerecha: \r\n");
+            break;
+
+    }
+
+    sprintf(buffer, "\rDistancia: %d cm\r\n\n", dameDistancia(numeroSensor));
     UART_printf(buffer);
     __delay_ms(1000);
+
 }
 
 void antiRebote(unsigned char pin) {
@@ -257,9 +267,10 @@ void main(void) {
     while (1) {
 
         if (!pausa) {
-            INDICADOR_ESTADO = 1;
+
             probarUltrasonico(ENFRENTE);
             //comportamientoBasico();
+
         } else {
 
         }
