@@ -6043,6 +6043,7 @@ void inicializarComportamientoBasico(void);
 void comportamientoBasico(void);
 void antiRebote(unsigned char pin);
 void probarUltrasonico(unsigned char numeroSensor);
+void probarSensores(void);
 
 void __attribute__((picinterrupt(("")))) boton(void) {
 
@@ -6060,6 +6061,12 @@ void __attribute__((picinterrupt(("")))) boton(void) {
 
         INT0IF = 0;
     }
+}
+
+void probarSensores(void) {
+    probarUltrasonico(ENFRENTE);
+    probarUltrasonico(IZQUIERDA);
+    probarUltrasonico(DERECHA);
 }
 
 void probarUltrasonico(unsigned char numeroSensor) {
@@ -6269,7 +6276,7 @@ void main(void) {
 
         if (!pausa) {
 
-            probarUltrasonico(ENFRENTE);
+            probarSensores();
 
 
         } else {
