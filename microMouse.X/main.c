@@ -20,6 +20,9 @@
 #define IN3 LATB6
 #define IN4 LATB7
 
+#define ENA 1
+#define ENB 2
+
 #define PIN_BOTON_INICIO_ALTO TRISB0
 #define BOTON_INICIO_ALTO PORTBbits.RB0
 #define PIN_INDICADOR_ESTADO TRISDbits.RD2
@@ -111,8 +114,8 @@ void inicializarComportamientoBasico(void) {
 
     mouse.curr_state = ENFRENTE;
 
-    pwmDuty(VELOCIDAD_MOTORES, 1); //Iniciar ciclo de trabajo MOTOR 1
-    pwmDuty(VELOCIDAD_MOTORES, 2); //Iniciar ciclo de trabajo MOTOR 2
+    pwmDuty(VELOCIDAD_MOTORES, ENA); //Iniciar ciclo de trabajo MOTOR 1
+    pwmDuty(VELOCIDAD_MOTORES, ENB); //Iniciar ciclo de trabajo MOTOR 2
 
 }
 
