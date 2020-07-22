@@ -8,7 +8,9 @@
 #define UMBRAL_OBSTACULO 3 //expresado en cm | sensibilidad antes de que choque con un objeto
 #define UMBRAL_OBSTACULO_ENFRENTE 5 //expresado en cm | sensibilidad antes de que choque con un objeto
 #define VELOCIDAD_MOTORES 80 //Porcentaje de ciclo de trabajo a la que trabajaran los motores
-#define REPETICIONES_VUELTA 1 //Repeteciones para que el auto gire 90 grados
+#define REPETICIONES_VUELTA 5 //Repeteciones para que el auto gire 90 grados
+#define DOBLE 2 //Propocional a la contante de REPETICIONES_VUELTA para que el auto gire 180 grados
+#define MAX_MOVIMIENTOS_GUARDADOS 50 //Para mapear y regresar a algun lugarsi llegamos a un callejon
 
 #define PIN_IN1  TRISB4
 #define PIN_IN2  TRISB5
@@ -46,6 +48,9 @@ void comportamientoBasico(void);
 void antiRebote(unsigned char pin);
 void probarUltrasonico(unsigned char numeroSensor);
 void probarSensores(void);
+void regresarCruceAnterior(unsigned char* movimientos, unsigned char numMovimientos);
+unsigned char hayCruce(void);
+void limpiarMovimientos(unsigned char* movimientos, unsigned char* numMovimientos);
 
 void __interrupt() boton(void) {
 
@@ -121,33 +126,30 @@ void inicializarComportamientoBasico(void) {
 
 void comportamientoBasico(void) {
 
-    unsigned char contRepeticiones = 0;
+    static unsigned char espejearCarroY = 0;
+    static unsigned char movimientosRealizados[MAX_MOVIMIENTOS_GUARDADOS];
+    static unsigned char contRepeticiones = 0;
+    static unsigned char numMovimientos = 0;
+    static unsigned char mapear = 0;
 
     switch (mouse.curr_state) {
 
         case ENFRENTE:
 
-            if (dameDistancia(ENFRENTE) < UMBRAL_OBSTACULO_ENFRENTE) //Ultrasonico ENFRENTE
-                mouse.Next_state = ATRAS;
-            else
-                mouse.Next_state = ENFRENTE;
-
-            break;
-
-        case ATRAS:
-
-            if (dameDistancia(ENFRENTE) < UMBRAL_OBSTACULO_ENFRENTE) //Ultrasonico ENFRENTE
-                mouse.Next_state = ATRAS;
-            else {
+            if (dameDistancia(ENFRENTE) < UMBRAL_OBSTACULO_ENFRENTE) //Ultrasonico ENFRENTE              
+            {
                 if (dameDistancia(IZQUIERDA) < UMBRAL_OBSTACULO) {
 
-                    if (dameDistancia(DERECHA) < UMBRAL_OBSTACULO) //callejon
-                        mouse.Next_state = ATRAS;
-                    else
+                    if (dameDistancia(DERECHA) < UMBRAL_OBSTACULO) { //callejon
+                        mapear = 0;
+                        espejearCarroY = 1;
+                        mouse.Next_state = IZQUIERDA;
+                    } else
                         mouse.Next_state = DERECHA;
                 } else
                     mouse.Next_state = IZQUIERDA;
-            }
+            } else
+                mouse.Next_state = ENFRENTE;
 
             break;
 
@@ -155,10 +157,17 @@ void comportamientoBasico(void) {
 
             contRepeticiones++;
 
-            if (contRepeticiones < REPETICIONES_VUELTA)
+            if ((contRepeticiones < REPETICIONES_VUELTA) && !espejearCarroY)
                 mouse.Next_state = IZQUIERDA;
-            else
-                mouse.Next_state = ENFRENTE;
+            else if ((contRepeticiones < (REPETICIONES_VUELTA * DOBLE)) && espejearCarroY)
+                mouse.Next_state = IZQUIERDA;
+            else {
+                //Se acabo el espejeo
+                espejearCarroY = 0;
+                contRepeticiones = 0;
+                regresarCruceAnterior(movimientosRealizados, numMovimientos);
+                limpiarMovimientos(movimientosRealizados, &numMovimientos);
+            }
 
             break;
 
@@ -168,8 +177,10 @@ void comportamientoBasico(void) {
 
             if (contRepeticiones < REPETICIONES_VUELTA)
                 mouse.Next_state = DERECHA;
-            else
+            else {
                 mouse.Next_state = ENFRENTE;
+                contRepeticiones = 0;
+            }
 
             break;
 
@@ -180,6 +191,14 @@ void comportamientoBasico(void) {
     }
 
     mouse.curr_state = mouse.Next_state;
+
+    if (hayCruce()) {
+        mapear = 1;
+    }
+
+    if (mapear)
+        movimientosRealizados[numMovimientos++] = mouse.curr_state;
+
     moverCarrito(); //Mandar señales al Puente H
 
 }
@@ -197,15 +216,6 @@ void moverCarrito(void) {
 
             break;
 
-        case ATRAS:
-
-            IN1 = 0;
-            IN2 = 1;
-            IN3 = 0;
-            IN4 = 1;
-
-            break;
-
         case IZQUIERDA:
 
             IN1 = 1;
@@ -235,6 +245,35 @@ void moverCarrito(void) {
 
     }
 
+}
+
+void regresarCruceAnterior(unsigned char* movimientos, unsigned char numMovimientos) {
+
+    for (int i = numMovimientos - 1; i >= 0; i--) { //Del final al Principio
+
+        if (movimientos[i] == IZQUIERDA)
+            mouse.curr_state = DERECHA;
+        else if (movimientos[i] == DERECHA)
+            mouse.curr_state = IZQUIERDA;
+        else
+            mouse.curr_state = movimientos[i];
+
+        moverCarrito(); //Mandar señales al Puente H
+    }
+
+    mouse.curr_state = ENFRENTE;
+}
+
+unsigned char hayCruce(void) {
+    return (dameDistancia(IZQUIERDA) > UMBRAL_OBSTACULO) &&
+            (dameDistancia(DERECHA) > UMBRAL_OBSTACULO);
+}
+
+void limpiarMovimientos(unsigned char* movimientos, unsigned char* numMovimientos) {
+    for (int i = 0; i < *numMovimientos; i++)
+        movimientos[i] = 0;
+
+    *numMovimientos = 0;
 }
 
 void main(void) {

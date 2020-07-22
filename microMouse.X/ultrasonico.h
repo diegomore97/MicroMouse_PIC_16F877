@@ -13,7 +13,6 @@
 
 typedef enum {
     ENFRENTE = 1,
-    ATRAS,
     IZQUIERDA,
     DERECHA,
     ALTO

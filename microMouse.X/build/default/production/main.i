@@ -5766,7 +5766,6 @@ void configPwm(unsigned char channel) {
 # 14 "./ultrasonico.h"
 typedef enum {
     ENFRENTE = 1,
-    ATRAS,
     IZQUIERDA,
     DERECHA,
     ALTO
@@ -6026,7 +6025,7 @@ char *ctermid(char *);
 
 char *tempnam(const char *, const char *);
 # 5 "main.c" 2
-# 32 "main.c"
+# 34 "main.c"
 typedef struct {
     Direccion curr_state;
     Direccion Next_state;
@@ -6044,6 +6043,9 @@ void comportamientoBasico(void);
 void antiRebote(unsigned char pin);
 void probarUltrasonico(unsigned char numeroSensor);
 void probarSensores(void);
+void regresarCruceAnterior(unsigned char* movimientos, unsigned char numMovimientos);
+unsigned char hayCruce(void);
+void limpiarMovimientos(unsigned char* movimientos, unsigned char* numMovimientos);
 
 void __attribute__((picinterrupt(("")))) boton(void) {
 
@@ -6119,33 +6121,30 @@ void inicializarComportamientoBasico(void) {
 
 void comportamientoBasico(void) {
 
-    unsigned char contRepeticiones = 0;
+    static unsigned char espejearCarroY = 0;
+    static unsigned char movimientosRealizados[50];
+    static unsigned char contRepeticiones = 0;
+    static unsigned char numMovimientos = 0;
+    static unsigned char mapear = 0;
 
     switch (mouse.curr_state) {
 
         case ENFRENTE:
 
             if (dameDistancia(ENFRENTE) < 5)
-                mouse.Next_state = ATRAS;
-            else
-                mouse.Next_state = ENFRENTE;
-
-            break;
-
-        case ATRAS:
-
-            if (dameDistancia(ENFRENTE) < 5)
-                mouse.Next_state = ATRAS;
-            else {
+            {
                 if (dameDistancia(IZQUIERDA) < 3) {
 
-                    if (dameDistancia(DERECHA) < 3)
-                        mouse.Next_state = ATRAS;
-                    else
+                    if (dameDistancia(DERECHA) < 3) {
+                        mapear = 0;
+                        espejearCarroY = 1;
+                        mouse.Next_state = IZQUIERDA;
+                    } else
                         mouse.Next_state = DERECHA;
                 } else
                     mouse.Next_state = IZQUIERDA;
-            }
+            } else
+                mouse.Next_state = ENFRENTE;
 
             break;
 
@@ -6153,10 +6152,17 @@ void comportamientoBasico(void) {
 
             contRepeticiones++;
 
-            if (contRepeticiones < 1)
+            if ((contRepeticiones < 5) && !espejearCarroY)
                 mouse.Next_state = IZQUIERDA;
-            else
-                mouse.Next_state = ENFRENTE;
+            else if ((contRepeticiones < (5 * 2)) && espejearCarroY)
+                mouse.Next_state = IZQUIERDA;
+            else {
+
+                espejearCarroY = 0;
+                contRepeticiones = 0;
+                regresarCruceAnterior(movimientosRealizados, numMovimientos);
+                limpiarMovimientos(movimientosRealizados, &numMovimientos);
+            }
 
             break;
 
@@ -6164,10 +6170,12 @@ void comportamientoBasico(void) {
 
             contRepeticiones++;
 
-            if (contRepeticiones < 1)
+            if (contRepeticiones < 5)
                 mouse.Next_state = DERECHA;
-            else
+            else {
                 mouse.Next_state = ENFRENTE;
+                contRepeticiones = 0;
+            }
 
             break;
 
@@ -6178,6 +6186,14 @@ void comportamientoBasico(void) {
     }
 
     mouse.curr_state = mouse.Next_state;
+
+    if (hayCruce()) {
+        mapear = 1;
+    }
+
+    if (mapear)
+        movimientosRealizados[numMovimientos++] = mouse.curr_state;
+
     moverCarrito();
 
 }
@@ -6195,15 +6211,6 @@ void moverCarrito(void) {
 
             break;
 
-        case ATRAS:
-
-            LATB4 = 0;
-            LATB5 = 1;
-            LATB6 = 0;
-            LATB7 = 1;
-
-            break;
-
         case IZQUIERDA:
 
             LATB4 = 1;
@@ -6233,6 +6240,35 @@ void moverCarrito(void) {
 
     }
 
+}
+
+void regresarCruceAnterior(unsigned char* movimientos, unsigned char numMovimientos) {
+
+    for (int i = numMovimientos - 1; i >= 0; i--) {
+
+        if (movimientos[i] == IZQUIERDA)
+            mouse.curr_state = DERECHA;
+        else if (movimientos[i] == DERECHA)
+            mouse.curr_state = IZQUIERDA;
+        else
+            mouse.curr_state = movimientos[i];
+
+        moverCarrito();
+    }
+
+    mouse.curr_state = ENFRENTE;
+}
+
+unsigned char hayCruce(void) {
+    return (dameDistancia(IZQUIERDA) > 3) &&
+            (dameDistancia(DERECHA) > 3);
+}
+
+void limpiarMovimientos(unsigned char* movimientos, unsigned char* numMovimientos) {
+    for (int i = 0; i < *numMovimientos; i++)
+        movimientos[i] = 0;
+
+    *numMovimientos = 0;
 }
 
 void main(void) {
