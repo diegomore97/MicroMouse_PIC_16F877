@@ -37,6 +37,11 @@ typedef struct {
     Direccion Next_state;
 } ComportamientoBasico;
 
+typedef enum {
+    SALIR_CALLEJON = 1,
+    PUNTO_INICIAL
+} Espejeo;
+
 ComportamientoBasico mouse;
 unsigned char pausa = 1; //Bit que indica estado del sistema
 
@@ -133,6 +138,7 @@ void comportamientoBasico(void) {
     static unsigned char contRepeticiones = 0;
     static unsigned char numMovimientos = 0;
     static unsigned char mapear = 0;
+    static unsigned char contEspejeo = 0;
 
     switch (mouse.curr_state) {
 
@@ -155,6 +161,7 @@ void comportamientoBasico(void) {
                 case CALLEJON:
                     mapear = 0;
                     espejearCarroY = 1;
+                    contEspejeo++;
                     mouse.Next_state = IZQUIERDA;
                     break;
 
@@ -177,13 +184,27 @@ void comportamientoBasico(void) {
                 mouse.Next_state = IZQUIERDA;
             else {
                 //Se acabo el espejeo
+
+                switch (contEspejeo) {
+
+                    case SALIR_CALLEJON:
+                        regresarCruceAnterior(movimientosRealizados, numMovimientos);
+                        limpiarMovimientos(movimientosRealizados, &numMovimientos);
+                        espejearCarroY = 1;
+                        contEspejeo++;
+                        mouse.curr_state = IZQUIERDA;
+                        break;
+
+                    case PUNTO_INICIAL:
+                        contEspejeo = 0;
+                        mouse.curr_state = ENFRENTE;
+                        break;
+
+                }
+
                 espejearCarroY = 0;
                 contRepeticiones = 0;
-                regresarCruceAnterior(movimientosRealizados, numMovimientos);
-                limpiarMovimientos(movimientosRealizados, &numMovimientos);
 
-                espejearCarroY = 1;
-                mouse.curr_state = IZQUIERDA;
             }
 
             break;
