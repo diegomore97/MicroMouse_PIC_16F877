@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.10 build 88905656 
-                                                                                               Thu Jul 23 14:16:13 2020
+                                                                                               Thu Jul 23 17:01:45 2020
 
 Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1 
      1                           	processor	18F4550
@@ -809,7 +809,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
    795 ;;
    796 ;; *************** function _main *****************
    797 ;; Defined at:
-   798 ;;		line 349 in file "main.c"
+   798 ;;		line 353 in file "main.c"
    799 ;; Parameters:    Size  Location     Type
    800 ;;		None
    801 ;; Auto vars:     Size  Location     Type
@@ -845,76 +845,76 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
    831  0021E8                     _main:
    832                           	opt callstack 19
    833  0021E8                     
-   834                           ;main.c: 352:     INTCONbits.GIE = 1;
+   834                           ;main.c: 356:     INTCONbits.GIE = 1;
    835  0021E8  8EF2               	bsf	242,7,c	;volatile
    836                           
-   837                           ;main.c: 353:     INTCONbits.INT0IE = 1;
+   837                           ;main.c: 357:     INTCONbits.INT0IE = 1;
    838  0021EA  88F2               	bsf	242,4,c	;volatile
    839                           
-   840                           ;main.c: 354:     INTCON2bits.INTEDG0 = 1;
+   840                           ;main.c: 358:     INTCON2bits.INTEDG0 = 1;
    841  0021EC  8CF1               	bsf	241,6,c	;volatile
    842                           
-   843                           ;main.c: 356:     TRISD3 = 0;
+   843                           ;main.c: 360:     TRISD3 = 0;
    844  0021EE  9695               	bcf	3989,3,c	;volatile
    845                           
-   846                           ;main.c: 357:     TRISB1 = 1;
+   846                           ;main.c: 361:     TRISB1 = 1;
    847  0021F0  8293               	bsf	3987,1,c	;volatile
    848                           
-   849                           ;main.c: 358:     TRISB2 = 1;
+   849                           ;main.c: 362:     TRISB2 = 1;
    850  0021F2  8493               	bsf	3987,2,c	;volatile
    851                           
-   852                           ;main.c: 359:     TRISB3 = 1;
+   852                           ;main.c: 363:     TRISB3 = 1;
    853  0021F4  8693               	bsf	3987,3,c	;volatile
    854                           
-   855                           ;main.c: 361:     TRISB4 = 0;
+   855                           ;main.c: 365:     TRISB4 = 0;
    856  0021F6  9893               	bcf	3987,4,c	;volatile
    857                           
-   858                           ;main.c: 362:     TRISB5 = 0;
+   858                           ;main.c: 366:     TRISB5 = 0;
    859  0021F8  9A93               	bcf	3987,5,c	;volatile
    860                           
-   861                           ;main.c: 363:     TRISB6 = 0;
+   861                           ;main.c: 367:     TRISB6 = 0;
    862  0021FA  9C93               	bcf	3987,6,c	;volatile
    863                           
-   864                           ;main.c: 364:     TRISB7 = 0;
+   864                           ;main.c: 368:     TRISB7 = 0;
    865  0021FC  9E93               	bcf	3987,7,c	;volatile
    866                           
-   867                           ;main.c: 366:     TRISDbits.RD2 = 0;
+   867                           ;main.c: 370:     TRISDbits.RD2 = 0;
    868  0021FE  9495               	bcf	149,2,c	;volatile
    869                           
-   870                           ;main.c: 367:     TRISB0 = 1;
+   870                           ;main.c: 371:     TRISB0 = 1;
    871  002200  8093               	bsf	3987,0,c	;volatile
    872                           
-   873                           ;main.c: 369:     LATD3 = 0;
+   873                           ;main.c: 373:     LATD3 = 0;
    874  002202  968C               	bcf	3980,3,c	;volatile
    875                           
-   876                           ;main.c: 370:     LATB4 = 0;
+   876                           ;main.c: 374:     LATB4 = 0;
    877  002204  988A               	bcf	3978,4,c	;volatile
    878                           
-   879                           ;main.c: 371:     LATB5 = 0;
+   879                           ;main.c: 375:     LATB5 = 0;
    880  002206  9A8A               	bcf	3978,5,c	;volatile
    881                           
-   882                           ;main.c: 372:     LATB6 = 0;
+   882                           ;main.c: 376:     LATB6 = 0;
    883  002208  9C8A               	bcf	3978,6,c	;volatile
    884                           
-   885                           ;main.c: 373:     LATB7 = 0;
+   885                           ;main.c: 377:     LATB7 = 0;
    886  00220A  9E8A               	bcf	3978,7,c	;volatile
    887                           
-   888                           ;main.c: 374:     LATD2 = 0;
+   888                           ;main.c: 378:     LATD2 = 0;
    889  00220C  948C               	bcf	3980,2,c	;volatile
    890  00220E                     
-   891                           ;main.c: 377:     T1CON = 0b00000000;
+   891                           ;main.c: 381:     T1CON = 0b00000000;
    892  00220E  0E00               	movlw	0
    893  002210  6ECD               	movwf	205,c	;volatile
    894  002212                     
-   895                           ;main.c: 379:     configPwm(1);
+   895                           ;main.c: 383:     configPwm(1);
    896  002212  0E01               	movlw	1
    897  002214  EC3E  F012         	call	_configPwm
    898  002218                     
-   899                           ;main.c: 380:     configPwm(2);
+   899                           ;main.c: 384:     configPwm(2);
    900  002218  0E02               	movlw	2
    901  00221A  EC3E  F012         	call	_configPwm
    902  00221E                     
-   903                           ;main.c: 382:     UART_init(9600);
+   903                           ;main.c: 386:     UART_init(9600);
    904  00221E  0E80               	movlw	128
    905  002220  6E20               	movwf	UART_init@BAUD^0,c
    906  002222  0E25               	movlw	37
@@ -925,11 +925,11 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
    911  00222C  6E23               	movwf	(UART_init@BAUD+3)^0,c
    912  00222E  ECBC  F010         	call	_UART_init	;wreg free
    913  002232                     
-   914                           ;main.c: 384:     inicializarComportamientoBasico();
+   914                           ;main.c: 388:     inicializarComportamientoBasico();
    915  002232  ECE4  F012         	call	_inicializarComportamientoBasico	;wreg free
    916  002236                     l3921:
    917                           
-   918                           ;main.c: 388:         if (!pausa) {
+   918                           ;main.c: 392:         if (!pausa) {
    919  002236  0100               	movlb	0	; () banked
    920  002238  51D7               	movf	_pausa& (0+255),w,b
    921  00223A  A4D8               	btfss	status,2,c
@@ -940,10 +940,10 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
    926  002248                     u3900:
    927  002248                     
    928                           ; BSR set to: 0
-   929                           ;main.c: 390:             probarSensores();
+   929                           ;main.c: 394:             probarSensores();
    930  002248  EC02  F013         	call	_probarSensores	;wreg free
    931                           
-   932                           ;main.c: 393:         } else {
+   932                           ;main.c: 397:         } else {
    933  00224C  EF1B  F011         	goto	l3921
    934  002250  EF07  F000         	goto	start
    935  002254                     __end_of_main:
@@ -951,7 +951,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
    937                           
    938 ;; *************** function _probarSensores *****************
    939 ;; Defined at:
-   940 ;;		line 81 in file "main.c"
+   940 ;;		line 85 in file "main.c"
    941 ;; Parameters:    Size  Location     Type
    942 ;;		None
    943 ;; Auto vars:     Size  Location     Type
@@ -985,15 +985,15 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
    971  002604                     _probarSensores:
    972                           	opt callstack 19
    973  002604                     
-   974                           ;main.c: 82:     probarUltrasonico(ENFRENTE);
+   974                           ;main.c: 86:     probarUltrasonico(ENFRENTE);
    975  002604  0E01               	movlw	1
    976  002606  ECE9  F00F         	call	_probarUltrasonico
    977                           
-   978                           ;main.c: 83:     probarUltrasonico(IZQUIERDA);
+   978                           ;main.c: 87:     probarUltrasonico(IZQUIERDA);
    979  00260A  0E02               	movlw	2
    980  00260C  ECE9  F00F         	call	_probarUltrasonico
    981                           
-   982                           ;main.c: 84:     probarUltrasonico(DERECHA);
+   982                           ;main.c: 88:     probarUltrasonico(DERECHA);
    983  002610  0E03               	movlw	3
    984  002612  ECE9  F00F         	call	_probarUltrasonico
    985  002616  0012               	return		;funcret
@@ -1002,7 +1002,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
    988                           
    989 ;; *************** function _probarUltrasonico *****************
    990 ;; Defined at:
-   991 ;;		line 87 in file "main.c"
+   991 ;;		line 91 in file "main.c"
    992 ;; Parameters:    Size  Location     Type
    993 ;;  numeroSensor    1    wreg     unsigned char 
    994 ;; Auto vars:     Size  Location     Type
@@ -1043,43 +1043,43 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1029  001FD2  0100               	movlb	0	; () banked
   1030  001FD4  6FD6               	movwf	probarUltrasonico@numeroSensor& (0+255),b
   1031  001FD6                     
-  1032                           ;main.c: 89:     switch (numeroSensor) {
+  1032                           ;main.c: 93:     switch (numeroSensor) {
   1033  001FD6  EF05  F010         	goto	l3761
   1034  001FDA                     l3753:
   1035                           
   1036                           ; BSR set to: 0
-  1037                           ;main.c: 92:             UART_printf("\rEnfrente: \r\n");
+  1037                           ;main.c: 96:             UART_printf("\rEnfrente: \r\n");
   1038  001FDA  0E25               	movlw	low STR_1
   1039  001FDC  6E07               	movwf	UART_printf@cadena^0,c
   1040  001FDE  0E08               	movlw	high STR_1
   1041  001FE0  6E08               	movwf	(UART_printf@cadena+1)^0,c
   1042  001FE2  EC90  F011         	call	_UART_printf	;wreg free
   1043                           
-  1044                           ;main.c: 93:             break;
+  1044                           ;main.c: 97:             break;
   1045  001FE6  EF1F  F010         	goto	l3763
   1046  001FEA                     l3755:
   1047                           
   1048                           ; BSR set to: 0
-  1049                           ;main.c: 96:             UART_printf("\rIzquierda: \r\n");
+  1049                           ;main.c: 100:             UART_printf("\rIzquierda: \r\n");
   1050  001FEA  0E16               	movlw	low STR_2
   1051  001FEC  6E07               	movwf	UART_printf@cadena^0,c
   1052  001FEE  0E08               	movlw	high STR_2
   1053  001FF0  6E08               	movwf	(UART_printf@cadena+1)^0,c
   1054  001FF2  EC90  F011         	call	_UART_printf	;wreg free
   1055                           
-  1056                           ;main.c: 97:             break;
+  1056                           ;main.c: 101:             break;
   1057  001FF6  EF1F  F010         	goto	l3763
   1058  001FFA                     l3757:
   1059                           
   1060                           ; BSR set to: 0
-  1061                           ;main.c: 100:             UART_printf("\rDerecha: \r\n");
+  1061                           ;main.c: 104:             UART_printf("\rDerecha: \r\n");
   1062  001FFA  0E33               	movlw	low STR_3
   1063  001FFC  6E07               	movwf	UART_printf@cadena^0,c
   1064  001FFE  0E08               	movlw	high STR_3
   1065  002000  6E08               	movwf	(UART_printf@cadena+1)^0,c
   1066  002002  EC90  F011         	call	_UART_printf	;wreg free
   1067                           
-  1068                           ;main.c: 101:             break;
+  1068                           ;main.c: 105:             break;
   1069  002006  EF1F  F010         	goto	l3763
   1070  00200A                     l3761:
   1071  00200A  0100               	movlb	0	; () banked
@@ -1122,7 +1122,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1107  00203A  EF1F  F010         	goto	l3763
   1108  00203E                     l3763:
   1109                           
-  1110                           ;main.c: 105:     sprintf(buffer, "\rDistancia: %d cm\r\n\n", dameDistancia(numeroSensor
+  1110                           ;main.c: 109:     sprintf(buffer, "\rDistancia: %d cm\r\n\n", dameDistancia(numeroSensor
       +                          ));
   1111  00203E  0E00               	movlw	low _buffer
   1112  002040  0100               	movlb	0	; () banked
@@ -1139,14 +1139,14 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1123  00205A  C00E  F0C9         	movff	?_dameDistancia+1,?_sprintf+5
   1124  00205E  EC15  F012         	call	_sprintf	;wreg free
   1125  002062                     
-  1126                           ;main.c: 106:     UART_printf(buffer);
+  1126                           ;main.c: 110:     UART_printf(buffer);
   1127  002062  0E00               	movlw	low _buffer
   1128  002064  6E07               	movwf	UART_printf@cadena^0,c
   1129  002066  0E01               	movlw	high _buffer
   1130  002068  6E08               	movwf	(UART_printf@cadena+1)^0,c
   1131  00206A  EC90  F011         	call	_UART_printf	;wreg free
   1132  00206E                     
-  1133                           ;main.c: 107:     _delay((unsigned long)((1000)*(4000000/4000.0)));
+  1133                           ;main.c: 111:     _delay((unsigned long)((1000)*(4000000/4000.0)));
   1134  00206E  0E06               	movlw	6
   1135  002070  0100               	movlb	0	; () banked
   1136  002072  6FD5               	movwf	(??_probarUltrasonico+1)& (0+255),b
@@ -3542,7 +3542,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   3454                           
   3455 ;; *************** function _inicializarComportamientoBasico *****************
   3456 ;; Defined at:
-  3457 ;;		line 126 in file "main.c"
+  3457 ;;		line 130 in file "main.c"
   3458 ;; Parameters:    Size  Location     Type
   3459 ;;		None
   3460 ;; Auto vars:     Size  Location     Type
@@ -3576,11 +3576,11 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   3488  0025C8                     _inicializarComportamientoBasico:
   3489                           	opt callstack 25
   3490  0025C8                     
-  3491                           ;main.c: 128:     mouse.curr_state = ENFRENTE;
+  3491                           ;main.c: 132:     mouse.curr_state = ENFRENTE;
   3492  0025C8  0E01               	movlw	1
   3493  0025CA  6E55               	movwf	_mouse^0,c
   3494  0025CC                     
-  3495                           ;main.c: 130:     pwmDuty(80, 1);
+  3495                           ;main.c: 134:     pwmDuty(80, 1);
   3496  0025CC  0E00               	movlw	0
   3497  0025CE  6E51               	movwf	(pwmDuty@cicloTrabajo+1)^0,c
   3498  0025D0  0E50               	movlw	80
@@ -3589,7 +3589,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   3501  0025D6  6E52               	movwf	pwmDuty@channel^0,c
   3502  0025D8  EC74  F009         	call	_pwmDuty	;wreg free
   3503  0025DC                     
-  3504                           ;main.c: 131:     pwmDuty(80, 2);
+  3504                           ;main.c: 135:     pwmDuty(80, 2);
   3505  0025DC  0E00               	movlw	0
   3506  0025DE  6E51               	movwf	(pwmDuty@cicloTrabajo+1)^0,c
   3507  0025E0  0E50               	movlw	80
@@ -5858,7 +5858,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   5767                           
   5768 ;; *************** function _boton *****************
   5769 ;; Defined at:
-  5770 ;;		line 63 in file "main.c"
+  5770 ;;		line 67 in file "main.c"
   5771 ;; Parameters:    Size  Location     Type
   5772 ;;		None
   5773 ;; Auto vars:     Size  Location     Type
@@ -5903,7 +5903,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   5812                           	opt callstack 19
   5813  0023D6  0006               	pop		; remove dummy address from shadow register refresh
   5814  0023D8                     
-  5815                           ;main.c: 65:     if (INT0IF)
+  5815                           ;main.c: 69:     if (INT0IF)
   5816  0023D8  A2F2               	btfss	4082,1,c	;volatile
   5817  0023DA  EFF1  F011         	goto	i2u290_41
   5818  0023DE  EFF3  F011         	goto	i2u290_40
@@ -5911,11 +5911,11 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   5820  0023E2  EF13  F012         	goto	i2l203
   5821  0023E6                     i2u290_40:
   5822  0023E6                     
-  5823                           ;main.c: 66:     {;main.c: 67:         antiRebote(1);
+  5823                           ;main.c: 70:     {;main.c: 71:         antiRebote(1);
   5824  0023E6  0E01               	movlw	1
   5825  0023E8  ECBF  F011         	call	_antiRebote
   5826  0023EC                     
-  5827                           ;main.c: 68:         if (pausa) {
+  5827                           ;main.c: 72:         if (pausa) {
   5828  0023EC  0100               	movlb	0	; () banked
   5829  0023EE  51D7               	movf	_pausa& (0+255),w,b
   5830  0023F0  B4D8               	btfsc	status,2,c
@@ -5926,16 +5926,16 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   5835  0023FE                     i2u291_40:
   5836  0023FE                     
   5837                           ; BSR set to: 0
-  5838                           ;main.c: 69:             pausa = 0;
+  5838                           ;main.c: 73:             pausa = 0;
   5839  0023FE  0E00               	movlw	0
   5840  002400  6FD7               	movwf	_pausa& (0+255),b
   5841  002402                     
   5842                           ; BSR set to: 0
-  5843                           ;main.c: 70:             LATD2 = 1;
+  5843                           ;main.c: 74:             LATD2 = 1;
   5844  002402  848C               	bsf	3980,2,c	;volatile
   5845  002404                     
   5846                           ; BSR set to: 0
-  5847                           ;main.c: 71:             _delay((unsigned long)((3000)*(4000000/4000.0)));
+  5847                           ;main.c: 75:             _delay((unsigned long)((3000)*(4000000/4000.0)));
   5848  002404  0E10               	movlw	16
   5849  002406  6E05               	movwf	(??_boton+1)^0,c
   5850  002408  0E39               	movlw	57
@@ -5949,21 +5949,21 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   5858  002416  2E05               	decfsz	(??_boton+1)^0,f,c
   5859  002418  D7FA               	bra	i2u393_47
   5860                           
-  5861                           ;main.c: 72:         } else {
+  5861                           ;main.c: 76:         } else {
   5862  00241A  EF12  F012         	goto	i2l3129
   5863  00241E                     i2l201:
   5864                           
   5865                           ; BSR set to: 0
-  5866                           ;main.c: 73:             LATD2 = 0;
+  5866                           ;main.c: 77:             LATD2 = 0;
   5867  00241E  948C               	bcf	3980,2,c	;volatile
   5868  002420                     
   5869                           ; BSR set to: 0
-  5870                           ;main.c: 74:             pausa = 1;
+  5870                           ;main.c: 78:             pausa = 1;
   5871  002420  0E01               	movlw	1
   5872  002422  6FD7               	movwf	_pausa& (0+255),b
   5873  002424                     i2l3129:
   5874                           
-  5875                           ;main.c: 77:         INT0IF = 0;
+  5875                           ;main.c: 81:         INT0IF = 0;
   5876  002424  92F2               	bcf	4082,1,c	;volatile
   5877  002426                     i2l203:
   5878  002426  925A               	bcf	int$flags,1,c	;clear compiler interrupt flag (level 2)
@@ -5973,7 +5973,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   5882                           
   5883 ;; *************** function _antiRebote *****************
   5884 ;; Defined at:
-  5885 ;;		line 111 in file "main.c"
+  5885 ;;		line 115 in file "main.c"
   5886 ;; Parameters:    Size  Location     Type
   5887 ;;  pin             1    wreg     unsigned char 
   5888 ;; Auto vars:     Size  Location     Type
@@ -6010,7 +6010,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   5919                           ;antiRebote@pin stored from wreg
   5920  00237E  6E03               	movwf	antiRebote@pin^0,c
   5921  002380                     
-  5922                           ;main.c: 113:     switch (pin) {
+  5922                           ;main.c: 117:     switch (pin) {
   5923  002380  EFD9  F011         	goto	i2l3091
   5924  002384                     i2l219:
   5925  002384  A081               	btfss	129,0,c	;volatile
@@ -6027,7 +6027,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   5936  00239C  EFC9  F011         	goto	i2l222
   5937  0023A0                     i2u289_40:
   5938  0023A0                     
-  5939                           ;main.c: 117:             _delay((unsigned long)((100)*(4000000/4000.0)));
+  5939                           ;main.c: 121:             _delay((unsigned long)((100)*(4000000/4000.0)));
   5940  0023A0  0E82               	movlw	130
   5941  0023A2  6E01               	movwf	??_antiRebote^0,c
   5942  0023A4  0EDE               	movlw	222
@@ -6037,7 +6037,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   5946  0023AA  2E01               	decfsz	??_antiRebote^0,f,c
   5947  0023AC  D7FC               	bra	i2u394_47
   5948                           
-  5949                           ;main.c: 118:             break;
+  5949                           ;main.c: 122:             break;
   5950  0023AE  EFEA  F011         	goto	i2l227
   5951  0023B2                     i2l3091:
   5952  0023B2  5003               	movf	antiRebote@pin^0,w,c
@@ -6540,7 +6540,7 @@ CODE                 0      0       0       0        0.0%
 
 
 Microchip Technology PIC18 Macro Assembler V2.10 build 88905656 
-Symbol Table                                                                                   Thu Jul 23 14:16:13 2020
+Symbol Table                                                                                   Thu Jul 23 17:01:45 2020
 
                        ?_probarUltrasonico 0001                               ___fldiv@aexp 002C  
                              ___fldiv@bexp 002B                               ___fldiv@sign 0024  

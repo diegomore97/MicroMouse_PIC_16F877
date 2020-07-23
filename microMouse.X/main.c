@@ -5,14 +5,13 @@
 #include "UART.h"
 #include <stdio.h>
 
-#define TAMANO_CADENA 50 //Tamaño de la cadena de la variable para debug
-#define UMBRAL_OBSTACULO 3 //expresado en cm | sensibilidad antes de que choque con un objeto
+//**************MODIFICAR ESTAS CONSTANTES SEGUN LA CONVENIENCIA DEL PLANO****************************
+#define UMBRAL_OBSTACULO_LATERAL 3 //expresado en cm | sensibilidad antes de que choque con un objeto
 #define UMBRAL_OBSTACULO_ENFRENTE 5 //expresado en cm | sensibilidad antes de que choque con un objeto
 #define VELOCIDAD_MOTORES 80 //Porcentaje de ciclo de trabajo a la que trabajaran los motores
 #define REPETICIONES_VUELTA 5 //Repeteciones para que el auto gire 90 grados
-#define DOBLE 2 //Propocional a la contante de REPETICIONES_VUELTA para que el auto gire 180 grados
 #define MAX_MOVIMIENTOS_GUARDADOS 50 //Para mapear y regresar a algun lugarsi llegamos a un callejon
-#define CALLEJON 0
+//*****************************************************************************************************
 
 #define PIN_IN1  TRISB4
 #define PIN_IN2  TRISB5
@@ -24,14 +23,19 @@
 #define IN3 LATB6
 #define IN4 LATB7
 
-#define ENA 1
-#define ENB 2
-
 #define PIN_BOTON_INICIO_ALTO TRISB0
 #define BOTON_INICIO_ALTO PORTBbits.RB0
 #define PIN_INDICADOR_ESTADO TRISDbits.RD2
 #define INDICADOR_ESTADO LATD2
+
+#define ENA 1
+#define ENB 2
+
 #define RETARDO_ANTIREBOTE 100
+#define TAMANO_CADENA 50 //Tamaño de la cadena de la variable para debug
+
+#define DOBLE 2 //Propocional a la contante de REPETICIONES_VUELTA para que el auto gire 180 grados
+#define CALLEJON 0
 
 typedef struct {
     Direccion curr_state;
@@ -304,9 +308,9 @@ T_BOOL hayCruce(void) {
     
     T_UBYTE contCaminos = 0;
 
-    if (dameDistancia(IZQUIERDA) > UMBRAL_OBSTACULO)
+    if (dameDistancia(IZQUIERDA) > UMBRAL_OBSTACULO_LATERAL)
         contCaminos++;
-    if (dameDistancia(DERECHA) > UMBRAL_OBSTACULO)
+    if (dameDistancia(DERECHA) > UMBRAL_OBSTACULO_LATERAL)
         contCaminos++;
     if (dameDistancia(ENFRENTE) > UMBRAL_OBSTACULO_ENFRENTE)
         contCaminos++;
@@ -336,9 +340,9 @@ T_UBYTE decidirDireccion(void) {
 
     if (dameDistancia(mayorPrioridad) > UMBRAL_OBSTACULO_ENFRENTE) //No hay obstaculo             
         direccionElegida = mayorPrioridad;
-    else if (dameDistancia(prioridadMedia) > UMBRAL_OBSTACULO)
+    else if (dameDistancia(prioridadMedia) > UMBRAL_OBSTACULO_LATERAL)
         direccionElegida = prioridadMedia;
-    else if (dameDistancia(prioridadBaja) > UMBRAL_OBSTACULO)
+    else if (dameDistancia(prioridadBaja) > UMBRAL_OBSTACULO_LATERAL)
         direccionElegida = prioridadBaja;
     else
         direccionElegida = CALLEJON;

@@ -6038,7 +6038,7 @@ char *ctermid(char *);
 
 char *tempnam(const char *, const char *);
 # 6 "main.c" 2
-# 36 "main.c"
+# 40 "main.c"
 typedef struct {
     Direccion curr_state;
     Direccion Next_state;
