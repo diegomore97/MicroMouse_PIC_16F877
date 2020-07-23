@@ -5687,23 +5687,36 @@ extern __attribute__((nonreentrant)) void _delay3(unsigned char);
 # 65 "./config.h" 2
 # 1 "main.c" 2
 
+# 1 "./variables.h" 1
+
+
+
+typedef char T_BYTE;
+typedef unsigned char T_UBYTE;
+typedef unsigned short T_UWORD;
+typedef long T_LONG;
+typedef unsigned int T_UINT;
+typedef unsigned char T_BOOL;
+typedef float T_FLOAT;
+# 2 "main.c" 2
+
 # 1 "./pwm.h" 1
 # 12 "./pwm.h"
-void configPwm(unsigned char channel);
-void pwmDuty(unsigned int cicloTrabajo, unsigned char channel);
-long map(long x, long in_min, long in_max, long out_min, long out_max);
+void configPwm(T_UBYTE channel);
+void pwmDuty(T_UINT cicloTrabajo, T_UBYTE channel);
+T_LONG map(T_LONG x, T_LONG in_min, T_LONG in_max, T_LONG out_min, T_LONG out_max);
 
-long map(long x, long in_min, long in_max, long out_min, long out_max) {
+T_LONG map(T_LONG x, T_LONG in_min, T_LONG in_max, T_LONG out_min, T_LONG out_max) {
     return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
 }
 
-void pwmDuty(unsigned int cicloTrabajo, unsigned char channel) {
+void pwmDuty(T_UINT cicloTrabajo, T_UBYTE channel) {
 
-    long duty = map(cicloTrabajo, 0, 100, 0, 1023);
+    T_LONG duty = map(cicloTrabajo, 0, 100, 0, 1023);
 
     if (duty < 1024) {
 
-        duty = ((float) duty / 1023)*(4000000 / (500 * 16));
+        duty = ((T_FLOAT) duty / 1023)*(4000000 / (500 * 16));
 
         switch (channel) {
 
@@ -5724,7 +5737,7 @@ void pwmDuty(unsigned int cicloTrabajo, unsigned char channel) {
 
 }
 
-void configPwm(unsigned char channel) {
+void configPwm(T_UBYTE channel) {
 
     if (16 == 1) {
         T2CKPS0 = 0;
@@ -5760,7 +5773,7 @@ void configPwm(unsigned char channel) {
 
     TMR2ON = 1;
 }
-# 2 "main.c" 2
+# 3 "main.c" 2
 
 # 1 "./ultrasonico.h" 1
 # 14 "./ultrasonico.h"
@@ -5771,12 +5784,12 @@ typedef enum {
     ALTO
 } Direccion;
 
-unsigned short dameDistancia(unsigned char numeroSensor);
+T_UWORD dameDistancia(T_UBYTE numeroSensor);
 
-unsigned short dameDistancia(unsigned char numeroSensor) {
+T_UWORD dameDistancia(T_UBYTE numeroSensor) {
 
-    unsigned int conteo;
-    unsigned short distancia;
+    T_UINT conteo;
+    T_UWORD distancia;
 
     TMR1H = 0x00;
     TMR1L = 0x00;
@@ -5830,7 +5843,7 @@ unsigned short dameDistancia(unsigned char numeroSensor) {
     return distancia;
 
 }
-# 3 "main.c" 2
+# 4 "main.c" 2
 
 # 1 "./UART.h" 1
 
@@ -5839,15 +5852,15 @@ unsigned short dameDistancia(unsigned char numeroSensor) {
 
 
 
-void UART_init(long BAUD);
-unsigned char UART_read(void);
-void UART_write(char dato);
-void UART_printf(char* cadena);
+void UART_init(T_LONG BAUD);
+T_UBYTE UART_read(void);
+void UART_write(T_BYTE dato);
+void UART_printf(T_BYTE* cadena);
 
 
-void UART_init(long BAUD) {
+void UART_init(T_LONG BAUD) {
 
-    long frecuenciaCristal = 4000000;
+    T_LONG frecuenciaCristal = 4000000;
     TRISC6 = 0;
     TRISC7 = 1;
 
@@ -5868,23 +5881,23 @@ void UART_init(long BAUD) {
     RCSTAbits.CREN = 1;
 }
 
-unsigned char UART_read(void) {
+T_UBYTE UART_read(void) {
     while (!RCIF);
     RCIF = 0;
     return RCREG;
 }
 
-void UART_write(char dato) {
+void UART_write(T_BYTE dato) {
     TXREG = dato;
     while (!TXSTAbits.TRMT);
 }
 
-void UART_printf(char* cadena) {
+void UART_printf(T_BYTE* cadena) {
     while (*cadena) {
         UART_write(*cadena++);
     }
 }
-# 4 "main.c" 2
+# 5 "main.c" 2
 
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdio.h" 1 3
 # 24 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdio.h" 3
@@ -6024,8 +6037,8 @@ char *ctermid(char *);
 
 
 char *tempnam(const char *, const char *);
-# 5 "main.c" 2
-# 35 "main.c"
+# 6 "main.c" 2
+# 36 "main.c"
 typedef struct {
     Direccion curr_state;
     Direccion Next_state;
@@ -6037,21 +6050,21 @@ typedef enum {
 } Espejeo;
 
 ComportamientoBasico mouse;
-unsigned char pausa = 1;
+T_UBYTE pausa = 1;
 
-char buffer[50];
+T_BYTE buffer[50];
 
 void moverCarrito(void);
 
 void inicializarComportamientoBasico(void);
 void comportamientoBasico(void);
-void antiRebote(unsigned char pin);
-void probarUltrasonico(unsigned char numeroSensor);
+void antiRebote(T_UBYTE pin);
+void probarUltrasonico(T_UBYTE numeroSensor);
 void probarSensores(void);
-void regresarCruceAnterior(unsigned char* movimientos, unsigned char numMovimientos);
-unsigned char hayCruce(void);
-void limpiarMovimientos(unsigned char* movimientos, unsigned char* numMovimientos);
-unsigned char decidirDireccion(void);
+void regresarCruceAnterior(T_UBYTE* movimientos, T_UBYTE numMovimientos);
+T_BOOL hayCruce(void);
+void limpiarMovimientos(T_UBYTE* movimientos, T_UBYTE* numMovimientos);
+T_UBYTE decidirDireccion(void);
 
 void __attribute__((picinterrupt(("")))) boton(void) {
 
@@ -6077,7 +6090,7 @@ void probarSensores(void) {
     probarUltrasonico(DERECHA);
 }
 
-void probarUltrasonico(unsigned char numeroSensor) {
+void probarUltrasonico(T_UBYTE numeroSensor) {
 
     switch (numeroSensor) {
 
@@ -6101,7 +6114,7 @@ void probarUltrasonico(unsigned char numeroSensor) {
 
 }
 
-void antiRebote(unsigned char pin) {
+void antiRebote(T_UBYTE pin) {
 
     switch (pin) {
         case 1:
@@ -6127,12 +6140,12 @@ void inicializarComportamientoBasico(void) {
 
 void comportamientoBasico(void) {
 
-    static unsigned char espejearCarroY = 0;
-    static unsigned char movimientosRealizados[50];
-    static unsigned char contRepeticiones = 0;
-    static unsigned char numMovimientos = 0;
-    static unsigned char mapear = 0;
-    static unsigned char contEspejeo = 0;
+    static T_UBYTE espejearCarroY = 0;
+    static T_UBYTE movimientosRealizados[50];
+    static T_UBYTE contRepeticiones = 0;
+    static T_UBYTE numMovimientos = 0;
+    static T_UBYTE mapear = 0;
+    static T_UBYTE contEspejeo = 0;
 
     switch (mouse.curr_state) {
 
@@ -6178,6 +6191,8 @@ void comportamientoBasico(void) {
                 mouse.Next_state = IZQUIERDA;
             else {
 
+                espejearCarroY = 0;
+                contRepeticiones = 0;
 
                 switch (contEspejeo) {
 
@@ -6195,9 +6210,6 @@ void comportamientoBasico(void) {
                         break;
 
                 }
-
-                espejearCarroY = 0;
-                contRepeticiones = 0;
 
             }
 
@@ -6279,7 +6291,7 @@ void moverCarrito(void) {
 
 }
 
-void regresarCruceAnterior(unsigned char* movimientos, unsigned char numMovimientos) {
+void regresarCruceAnterior(T_UBYTE* movimientos, T_UBYTE numMovimientos) {
 
     for (int i = numMovimientos - 1; i >= 0; i--) {
 
@@ -6294,25 +6306,25 @@ void regresarCruceAnterior(unsigned char* movimientos, unsigned char numMovimien
     }
 }
 
-unsigned char hayCruce(void) {
+T_BOOL hayCruce(void) {
     return (dameDistancia(IZQUIERDA) > 3) &&
             (dameDistancia(DERECHA) > 3);
 }
 
-void limpiarMovimientos(unsigned char* movimientos, unsigned char* numMovimientos) {
+void limpiarMovimientos(T_UBYTE* movimientos, T_UBYTE* numMovimientos) {
     for (int i = 0; i < *numMovimientos; i++)
         movimientos[i] = 0;
 
     *numMovimientos = 0;
 }
 
-unsigned char decidirDireccion(void) {
+T_UBYTE decidirDireccion(void) {
 
-    unsigned char mayorPrioridad = ENFRENTE;
-    unsigned char prioridadMedia = IZQUIERDA;
-    unsigned char prioridadBaja = DERECHA;
+    T_UBYTE mayorPrioridad = ENFRENTE;
+    T_UBYTE prioridadMedia = IZQUIERDA;
+    T_UBYTE prioridadBaja = DERECHA;
 
-    unsigned char direccionElegida;
+    T_UBYTE direccionElegida;
 
     if (dameDistancia(mayorPrioridad) > 5)
         direccionElegida = mayorPrioridad;

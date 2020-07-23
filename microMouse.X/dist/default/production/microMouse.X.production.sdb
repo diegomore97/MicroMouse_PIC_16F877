@@ -4,14 +4,14 @@
 [d chip 18F4550 ]
 [d frameptr 4065 ]
 "61 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/ultrasonico.h
-[e E3183 . `uc
+[e E3190 . `uc
 ENFRENTE 1
 IZQUIERDA 2
 DERECHA 3
 ALTO 4
 ]
-"203 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
-[e E3532 . `uc
+"206 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+[e E3539 . `uc
 SALIR_CALLEJON 1
 PUNTO_INICIAL 2
 ]
@@ -85,15 +85,15 @@ PUNTO_INICIAL 2
 [v ___omul __omul `(uo  1 e 8 0 ]
 "10 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
 [v ___xxtofl __xxtofl `(d  1 e 4 0 ]
-"62 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+"63 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
 [v _boton boton `IIH(v  1 e 1 0 ]
-"80
+"81
 [v _probarSensores probarSensores `(v  1 e 1 0 ]
-"86
+"87
 [v _probarUltrasonico probarUltrasonico `(v  1 e 1 0 ]
-"110
+"111
 [v _antiRebote antiRebote `(v  1 e 1 0 ]
-"125
+"126
 [v _inicializarComportamientoBasico inicializarComportamientoBasico `(v  1 e 1 0 ]
 "244
 [v _moverCarrito moverCarrito `(v  1 e 1 0 ]
@@ -338,30 +338,30 @@ PUNTO_INICIAL 2
 [v _dbuf dbuf `[32]uc  1 s 32 dbuf ]
 "69
 [v _nout nout `i  1 s 2 nout ]
-[s S211 . 2 `E3183 1 curr_state 1 0 `E3183 1 Next_state 1 1 ]
-"45 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+[s S211 . 2 `E3190 1 curr_state 1 0 `E3190 1 Next_state 1 1 ]
+"46 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
 [v _mouse mouse `S211  1 e 2 0 ]
-"46
+"47
 [v _pausa pausa `uc  1 e 1 0 ]
-"48
+"49
 [v _buffer buffer `[50]uc  1 e 50 0 ]
 "335
 [v _main main `(v  1 e 1 0 ]
 {
 "386
 } 0
-"80
+"81
 [v _probarSensores probarSensores `(v  1 e 1 0 ]
 {
-"84
+"85
 } 0
-"86
+"87
 [v _probarUltrasonico probarUltrasonico `(v  1 e 1 0 ]
 {
 [v probarUltrasonico@numeroSensor numeroSensor `uc  1 a 1 wreg ]
 [v probarUltrasonico@numeroSensor numeroSensor `uc  1 a 1 wreg ]
 [v probarUltrasonico@numeroSensor numeroSensor `uc  1 a 1 26 ]
-"108
+"109
 } 0
 "9 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\nf_sprintf.c
 [v _sprintf sprintf `(i  1 e 2 0 ]
@@ -534,10 +534,10 @@ PUNTO_INICIAL 2
 [v UART_write@dato dato `uc  1 a 1 5 ]
 "45
 } 0
-"125 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+"126 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
 [v _inicializarComportamientoBasico inicializarComportamientoBasico `(v  1 e 1 0 ]
 {
-"132
+"133
 } 0
 "20 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/pwm.h
 [v _pwmDuty pwmDuty `(v  1 e 1 0 ]
@@ -666,16 +666,16 @@ PUNTO_INICIAL 2
 [v ___aldiv@divisor divisor `l  1 p 4 21 ]
 "41
 } 0
-"62 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+"63 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
 [v _boton boton `IIH(v  1 e 1 0 ]
 {
-"78
+"79
 } 0
-"110
+"111
 [v _antiRebote antiRebote `(v  1 e 1 0 ]
 {
 [v antiRebote@pin pin `uc  1 a 1 wreg ]
 [v antiRebote@pin pin `uc  1 a 1 wreg ]
 [v antiRebote@pin pin `uc  1 a 1 2 ]
-"123
+"124
 } 0

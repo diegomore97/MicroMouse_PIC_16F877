@@ -18,12 +18,12 @@ typedef enum {
     ALTO
 } Direccion;
 
-unsigned short dameDistancia(unsigned char numeroSensor);
+T_UWORD dameDistancia(T_UBYTE numeroSensor);
 
-unsigned short dameDistancia(unsigned char numeroSensor) {
+T_UWORD dameDistancia(T_UBYTE numeroSensor) {
 
-    unsigned int conteo; // Variable para poner el valor del Timer 1
-    unsigned short distancia; // Variable donde se calcula la distancia recibida
+    T_UINT conteo; // Variable para poner el valor del Timer 1
+    T_UWORD distancia; // Variable donde se calcula la distancia recibida
 
     TMR1H = 0x00; // Se carga La parte Alta del Timer 1;
     TMR1L = 0x00; // Se carga la Parte Baja del Timer 1

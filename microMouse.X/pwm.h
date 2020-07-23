@@ -9,21 +9,21 @@
 #define PIN_PWM_1 TRISC2
 #define PIN_PWM_2 TRISC1
 
-void configPwm(unsigned char channel);
-void pwmDuty(unsigned int cicloTrabajo, unsigned char channel);
-long map(long x, long in_min, long in_max, long out_min, long out_max);
+void configPwm(T_UBYTE channel);
+void pwmDuty(T_UINT cicloTrabajo, T_UBYTE channel);
+T_LONG map(T_LONG x, T_LONG in_min, T_LONG in_max, T_LONG out_min, T_LONG out_max);
 
-long map(long x, long in_min, long in_max, long out_min, long out_max) {
+T_LONG map(T_LONG x, T_LONG in_min, T_LONG in_max, T_LONG out_min, T_LONG out_max) {
     return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
 }
 
-void pwmDuty(unsigned int cicloTrabajo, unsigned char channel) {
+void pwmDuty(T_UINT cicloTrabajo, T_UBYTE channel) {
 
-    long duty = map(cicloTrabajo, 0, 100, 0, 1023);
+    T_LONG duty = map(cicloTrabajo, 0, 100, 0, 1023);
 
     if (duty < 1024) {
 
-        duty = ((float) duty / BITS_PWM)*(_XTAL_FREQ / (FRECUENCIA_PWM * TMR2PRESCALE)); //duty = (((float)duty/1023)*(1/PWM_freq)) / ((1/_XTAL_FREQ) * TMR2PRESCALE);
+        duty = ((T_FLOAT) duty / BITS_PWM)*(_XTAL_FREQ / (FRECUENCIA_PWM * TMR2PRESCALE)); //duty = (((float)duty/1023)*(1/PWM_freq)) / ((1/_XTAL_FREQ) * TMR2PRESCALE);
 
         switch (channel) {
 
@@ -44,7 +44,7 @@ void pwmDuty(unsigned int cicloTrabajo, unsigned char channel) {
 
 }
 
-void configPwm(unsigned char channel) {
+void configPwm(T_UBYTE channel) {
 
     if (TMR2PRESCALE == 1) {
         T2CKPS0 = 0;

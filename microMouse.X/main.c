@@ -1,4 +1,5 @@
 #include "config.h"
+#include "variables.h"
 #include "pwm.h"
 #include "ultrasonico.h"
 #include "UART.h"
@@ -43,21 +44,21 @@ typedef enum {
 } Espejeo;
 
 ComportamientoBasico mouse;
-unsigned char pausa = 1; //Bit que indica estado del sistema
+T_UBYTE pausa = 1; //Bit que indica estado del sistema
 
-char buffer[TAMANO_CADENA]; //Variable para Debug
+T_BYTE buffer[TAMANO_CADENA]; //Variable para Debug
 
 void moverCarrito(void);
 
 void inicializarComportamientoBasico(void);
 void comportamientoBasico(void);
-void antiRebote(unsigned char pin);
-void probarUltrasonico(unsigned char numeroSensor);
+void antiRebote(T_UBYTE pin);
+void probarUltrasonico(T_UBYTE numeroSensor);
 void probarSensores(void);
-void regresarCruceAnterior(unsigned char* movimientos, unsigned char numMovimientos);
-unsigned char hayCruce(void);
-void limpiarMovimientos(unsigned char* movimientos, unsigned char* numMovimientos);
-unsigned char decidirDireccion(void);
+void regresarCruceAnterior(T_UBYTE* movimientos, T_UBYTE numMovimientos);
+T_BOOL hayCruce(void);
+void limpiarMovimientos(T_UBYTE* movimientos, T_UBYTE* numMovimientos);
+T_UBYTE decidirDireccion(void);
 
 void __interrupt() boton(void) {
 
@@ -83,7 +84,7 @@ void probarSensores(void) {
     probarUltrasonico(DERECHA);
 }
 
-void probarUltrasonico(unsigned char numeroSensor) {
+void probarUltrasonico(T_UBYTE numeroSensor) {
 
     switch (numeroSensor) {
 
@@ -107,7 +108,7 @@ void probarUltrasonico(unsigned char numeroSensor) {
 
 }
 
-void antiRebote(unsigned char pin) {
+void antiRebote(T_UBYTE pin) {
 
     switch (pin) {
         case 1:
@@ -133,12 +134,12 @@ void inicializarComportamientoBasico(void) {
 
 void comportamientoBasico(void) {
 
-    static unsigned char espejearCarroY = 0;
-    static unsigned char movimientosRealizados[MAX_MOVIMIENTOS_GUARDADOS];
-    static unsigned char contRepeticiones = 0;
-    static unsigned char numMovimientos = 0;
-    static unsigned char mapear = 0;
-    static unsigned char contEspejeo = 0;
+    static T_UBYTE espejearCarroY = 0;
+    static T_UBYTE movimientosRealizados[MAX_MOVIMIENTOS_GUARDADOS];
+    static T_UBYTE contRepeticiones = 0;
+    static T_UBYTE numMovimientos = 0;
+    static T_UBYTE mapear = 0;
+    static T_UBYTE contEspejeo = 0;
 
     switch (mouse.curr_state) {
 
@@ -184,6 +185,8 @@ void comportamientoBasico(void) {
                 mouse.Next_state = IZQUIERDA;
             else {
                 //Se acabo el espejeo
+                espejearCarroY = 0;
+                contRepeticiones = 0;
 
                 switch (contEspejeo) {
 
@@ -201,9 +204,6 @@ void comportamientoBasico(void) {
                         break;
 
                 }
-
-                espejearCarroY = 0;
-                contRepeticiones = 0;
 
             }
 
@@ -285,7 +285,7 @@ void moverCarrito(void) {
 
 }
 
-void regresarCruceAnterior(unsigned char* movimientos, unsigned char numMovimientos) {
+void regresarCruceAnterior(T_UBYTE* movimientos, T_UBYTE numMovimientos) {
 
     for (int i = numMovimientos - 1; i >= 0; i--) { //Del final al Principio
 
@@ -300,25 +300,25 @@ void regresarCruceAnterior(unsigned char* movimientos, unsigned char numMovimien
     }
 }
 
-unsigned char hayCruce(void) {
+T_BOOL hayCruce(void) {
     return (dameDistancia(IZQUIERDA) > UMBRAL_OBSTACULO) &&
             (dameDistancia(DERECHA) > UMBRAL_OBSTACULO);
 }
 
-void limpiarMovimientos(unsigned char* movimientos, unsigned char* numMovimientos) {
+void limpiarMovimientos(T_UBYTE* movimientos, T_UBYTE* numMovimientos) {
     for (int i = 0; i < *numMovimientos; i++)
         movimientos[i] = 0;
 
     *numMovimientos = 0;
 }
 
-unsigned char decidirDireccion(void) {
+T_UBYTE decidirDireccion(void) {
 
-    unsigned char mayorPrioridad = ENFRENTE;
-    unsigned char prioridadMedia = IZQUIERDA;
-    unsigned char prioridadBaja = DERECHA;
+    T_UBYTE mayorPrioridad = ENFRENTE;
+    T_UBYTE prioridadMedia = IZQUIERDA;
+    T_UBYTE prioridadBaja = DERECHA;
 
-    unsigned char direccionElegida;
+    T_UBYTE direccionElegida;
 
     if (dameDistancia(mayorPrioridad) > UMBRAL_OBSTACULO_ENFRENTE) //No hay obstaculo             
         direccionElegida = mayorPrioridad;
