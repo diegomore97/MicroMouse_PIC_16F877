@@ -301,8 +301,22 @@ void regresarCruceAnterior(T_UBYTE* movimientos, T_UBYTE numMovimientos) {
 }
 
 T_BOOL hayCruce(void) {
-    return (dameDistancia(IZQUIERDA) > UMBRAL_OBSTACULO) &&
-            (dameDistancia(DERECHA) > UMBRAL_OBSTACULO);
+    
+    T_UBYTE contCaminos = 0;
+
+    if (dameDistancia(IZQUIERDA) > UMBRAL_OBSTACULO)
+        contCaminos++;
+    if (dameDistancia(DERECHA) > UMBRAL_OBSTACULO)
+        contCaminos++;
+    if (dameDistancia(ENFRENTE) > UMBRAL_OBSTACULO_ENFRENTE)
+        contCaminos++;
+
+    if (contCaminos > 1)
+        return 1;
+
+    else
+        return 0;
+
 }
 
 void limpiarMovimientos(T_UBYTE* movimientos, T_UBYTE* numMovimientos) {

@@ -1999,217 +1999,254 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 [e :U _hayCruce ]
 [f ]
-"304
-[; ;main.c: 304:     return (dameDistancia(IZQUIERDA) > 3) &&
-[e ) -> -> && > -> ( _dameDistancia (1 -> . `E3190 1 `uc `ui -> -> 3 `i `ui > -> ( _dameDistancia (1 -> . `E3190 2 `uc `ui -> -> 3 `i `ui `i `uc ]
+"305
+[; ;main.c: 305:     T_UBYTE contCaminos = 0;
+[v _contCaminos `uc ~T0 @X0 1 a ]
+[e = _contCaminos -> -> 0 `i `uc ]
+"307
+[; ;main.c: 307:     if (dameDistancia(IZQUIERDA) > 3)
+[e $ ! > -> ( _dameDistancia (1 -> . `E3190 1 `uc `ui -> -> 3 `i `ui 489  ]
+"308
+[; ;main.c: 308:         contCaminos++;
+[e ++ _contCaminos -> -> 1 `i `uc ]
+[e :U 489 ]
+"309
+[; ;main.c: 309:     if (dameDistancia(DERECHA) > 3)
+[e $ ! > -> ( _dameDistancia (1 -> . `E3190 2 `uc `ui -> -> 3 `i `ui 490  ]
+"310
+[; ;main.c: 310:         contCaminos++;
+[e ++ _contCaminos -> -> 1 `i `uc ]
+[e :U 490 ]
+"311
+[; ;main.c: 311:     if (dameDistancia(ENFRENTE) > 5)
+[e $ ! > -> ( _dameDistancia (1 -> . `E3190 0 `uc `ui -> -> 5 `i `ui 491  ]
+"312
+[; ;main.c: 312:         contCaminos++;
+[e ++ _contCaminos -> -> 1 `i `uc ]
+[e :U 491 ]
+"314
+[; ;main.c: 314:     if (contCaminos > 1)
+[e $ ! > -> _contCaminos `i -> 1 `i 492  ]
+"315
+[; ;main.c: 315:         return 1;
+[e ) -> -> 1 `i `uc ]
 [e $UE 488  ]
-"306
-[; ;main.c: 306: }
+[e $U 493  ]
+"317
+[; ;main.c: 317:     else
+[e :U 492 ]
+"318
+[; ;main.c: 318:         return 0;
+[e ) -> -> 0 `i `uc ]
+[e $UE 488  ]
+[e :U 493 ]
+"320
+[; ;main.c: 320: }
 [e :UE 488 ]
 }
-"308
-[; ;main.c: 308: void limpiarMovimientos(T_UBYTE* movimientos, T_UBYTE* numMovimientos) {
+"322
+[; ;main.c: 322: void limpiarMovimientos(T_UBYTE* movimientos, T_UBYTE* numMovimientos) {
 [v _limpiarMovimientos `(v ~T0 @X0 1 ef2`*uc`*uc ]
 {
 [e :U _limpiarMovimientos ]
 [v _movimientos `*uc ~T0 @X0 1 r1 ]
 [v _numMovimientos `*uc ~T0 @X0 1 r2 ]
 [f ]
-"309
-[; ;main.c: 309:     for (int i = 0; i < *numMovimientos; i++)
+"323
+[; ;main.c: 323:     for (int i = 0; i < *numMovimientos; i++)
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
-[e $U 493  ]
-[e :U 490 ]
-"310
-[; ;main.c: 310:         movimientos[i] = 0;
+[e $U 498  ]
+[e :U 495 ]
+"324
+[; ;main.c: 324:         movimientos[i] = 0;
 [e = *U + _movimientos * -> _i `x -> -> # *U _movimientos `i `x -> -> 0 `i `uc ]
 [e ++ _i -> 1 `i ]
-[e :U 493 ]
-[e $ < _i -> *U _numMovimientos `i 490  ]
-[e :U 491 ]
+[e :U 498 ]
+[e $ < _i -> *U _numMovimientos `i 495  ]
+[e :U 496 ]
 }
-"312
-[; ;main.c: 312:     *numMovimientos = 0;
+"326
+[; ;main.c: 326:     *numMovimientos = 0;
 [e = *U _numMovimientos -> -> 0 `i `uc ]
-"313
-[; ;main.c: 313: }
-[e :UE 489 ]
+"327
+[; ;main.c: 327: }
+[e :UE 494 ]
 }
-"315
-[; ;main.c: 315: T_UBYTE decidirDireccion(void) {
+"329
+[; ;main.c: 329: T_UBYTE decidirDireccion(void) {
 [v _decidirDireccion `(uc ~T0 @X0 1 ef ]
 {
 [e :U _decidirDireccion ]
 [f ]
-"317
-[; ;main.c: 317:     T_UBYTE mayorPrioridad = ENFRENTE;
+"331
+[; ;main.c: 331:     T_UBYTE mayorPrioridad = ENFRENTE;
 [v _mayorPrioridad `uc ~T0 @X0 1 a ]
 [e = _mayorPrioridad -> . `E3190 0 `uc ]
-"318
-[; ;main.c: 318:     T_UBYTE prioridadMedia = IZQUIERDA;
+"332
+[; ;main.c: 332:     T_UBYTE prioridadMedia = IZQUIERDA;
 [v _prioridadMedia `uc ~T0 @X0 1 a ]
 [e = _prioridadMedia -> . `E3190 1 `uc ]
-"319
-[; ;main.c: 319:     T_UBYTE prioridadBaja = DERECHA;
+"333
+[; ;main.c: 333:     T_UBYTE prioridadBaja = DERECHA;
 [v _prioridadBaja `uc ~T0 @X0 1 a ]
 [e = _prioridadBaja -> . `E3190 2 `uc ]
-"321
-[; ;main.c: 321:     T_UBYTE direccionElegida;
+"335
+[; ;main.c: 335:     T_UBYTE direccionElegida;
 [v _direccionElegida `uc ~T0 @X0 1 a ]
-"323
-[; ;main.c: 323:     if (dameDistancia(mayorPrioridad) > 5)
-[e $ ! > -> ( _dameDistancia (1 _mayorPrioridad `ui -> -> 5 `i `ui 495  ]
-"324
-[; ;main.c: 324:         direccionElegida = mayorPrioridad;
+"337
+[; ;main.c: 337:     if (dameDistancia(mayorPrioridad) > 5)
+[e $ ! > -> ( _dameDistancia (1 _mayorPrioridad `ui -> -> 5 `i `ui 500  ]
+"338
+[; ;main.c: 338:         direccionElegida = mayorPrioridad;
 [e = _direccionElegida _mayorPrioridad ]
-[e $U 496  ]
-"325
-[; ;main.c: 325:     else if (dameDistancia(prioridadMedia) > 3)
-[e :U 495 ]
-[e $ ! > -> ( _dameDistancia (1 _prioridadMedia `ui -> -> 3 `i `ui 497  ]
-"326
-[; ;main.c: 326:         direccionElegida = prioridadMedia;
-[e = _direccionElegida _prioridadMedia ]
-[e $U 498  ]
-"327
-[; ;main.c: 327:     else if (dameDistancia(prioridadBaja) > 3)
-[e :U 497 ]
-[e $ ! > -> ( _dameDistancia (1 _prioridadBaja `ui -> -> 3 `i `ui 499  ]
-"328
-[; ;main.c: 328:         direccionElegida = prioridadBaja;
-[e = _direccionElegida _prioridadBaja ]
-[e $U 500  ]
-"329
-[; ;main.c: 329:     else
-[e :U 499 ]
-"330
-[; ;main.c: 330:         direccionElegida = 0;
-[e = _direccionElegida -> -> 0 `i `uc ]
+[e $U 501  ]
+"339
+[; ;main.c: 339:     else if (dameDistancia(prioridadMedia) > 3)
 [e :U 500 ]
-[e :U 498 ]
-[e :U 496 ]
-"332
-[; ;main.c: 332:     return direccionElegida;
+[e $ ! > -> ( _dameDistancia (1 _prioridadMedia `ui -> -> 3 `i `ui 502  ]
+"340
+[; ;main.c: 340:         direccionElegida = prioridadMedia;
+[e = _direccionElegida _prioridadMedia ]
+[e $U 503  ]
+"341
+[; ;main.c: 341:     else if (dameDistancia(prioridadBaja) > 3)
+[e :U 502 ]
+[e $ ! > -> ( _dameDistancia (1 _prioridadBaja `ui -> -> 3 `i `ui 504  ]
+"342
+[; ;main.c: 342:         direccionElegida = prioridadBaja;
+[e = _direccionElegida _prioridadBaja ]
+[e $U 505  ]
+"343
+[; ;main.c: 343:     else
+[e :U 504 ]
+"344
+[; ;main.c: 344:         direccionElegida = 0;
+[e = _direccionElegida -> -> 0 `i `uc ]
+[e :U 505 ]
+[e :U 503 ]
+[e :U 501 ]
+"346
+[; ;main.c: 346:     return direccionElegida;
 [e ) _direccionElegida ]
-[e $UE 494  ]
-"333
-[; ;main.c: 333: }
-[e :UE 494 ]
+[e $UE 499  ]
+"347
+[; ;main.c: 347: }
+[e :UE 499 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"335
-[; ;main.c: 335: void main(void) {
+"349
+[; ;main.c: 349: void main(void) {
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"338
-[; ;main.c: 338:     INTCONbits.GIE = 1;
-[e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
-"339
-[; ;main.c: 339:     INTCONbits.INT0IE = 1;
-[e = . . _INTCONbits 0 4 -> -> 1 `i `uc ]
-"340
-[; ;main.c: 340:     INTCON2bits.INTEDG0 = 1;
-[e = . . _INTCON2bits 1 6 -> -> 1 `i `uc ]
-"342
-[; ;main.c: 342:     TRISD3 = 0;
-[e = _TRISD3 -> -> 0 `i `b ]
-"343
-[; ;main.c: 343:     TRISB1 = 1;
-[e = _TRISB1 -> -> 1 `i `b ]
-"344
-[; ;main.c: 344:     TRISB2 = 1;
-[e = _TRISB2 -> -> 1 `i `b ]
-"345
-[; ;main.c: 345:     TRISB3 = 1;
-[e = _TRISB3 -> -> 1 `i `b ]
-"347
-[; ;main.c: 347:     TRISB4 = 0;
-[e = _TRISB4 -> -> 0 `i `b ]
-"348
-[; ;main.c: 348:     TRISB5 = 0;
-[e = _TRISB5 -> -> 0 `i `b ]
-"349
-[; ;main.c: 349:     TRISB6 = 0;
-[e = _TRISB6 -> -> 0 `i `b ]
-"350
-[; ;main.c: 350:     TRISB7 = 0;
-[e = _TRISB7 -> -> 0 `i `b ]
 "352
-[; ;main.c: 352:     TRISDbits.RD2 = 0;
-[e = . . _TRISDbits 1 2 -> -> 0 `i `uc ]
+[; ;main.c: 352:     INTCONbits.GIE = 1;
+[e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
 "353
-[; ;main.c: 353:     TRISB0 = 1;
-[e = _TRISB0 -> -> 1 `i `b ]
-"355
-[; ;main.c: 355:     LATD3 = 0;
-[e = _LATD3 -> -> 0 `i `b ]
+[; ;main.c: 353:     INTCONbits.INT0IE = 1;
+[e = . . _INTCONbits 0 4 -> -> 1 `i `uc ]
+"354
+[; ;main.c: 354:     INTCON2bits.INTEDG0 = 1;
+[e = . . _INTCON2bits 1 6 -> -> 1 `i `uc ]
 "356
-[; ;main.c: 356:     LATB4 = 0;
-[e = _LATB4 -> -> 0 `i `b ]
+[; ;main.c: 356:     TRISD3 = 0;
+[e = _TRISD3 -> -> 0 `i `b ]
 "357
-[; ;main.c: 357:     LATB5 = 0;
-[e = _LATB5 -> -> 0 `i `b ]
+[; ;main.c: 357:     TRISB1 = 1;
+[e = _TRISB1 -> -> 1 `i `b ]
 "358
-[; ;main.c: 358:     LATB6 = 0;
-[e = _LATB6 -> -> 0 `i `b ]
+[; ;main.c: 358:     TRISB2 = 1;
+[e = _TRISB2 -> -> 1 `i `b ]
 "359
-[; ;main.c: 359:     LATB7 = 0;
-[e = _LATB7 -> -> 0 `i `b ]
-"360
-[; ;main.c: 360:     LATD2 = 0;
-[e = _LATD2 -> -> 0 `i `b ]
+[; ;main.c: 359:     TRISB3 = 1;
+[e = _TRISB3 -> -> 1 `i `b ]
+"361
+[; ;main.c: 361:     TRISB4 = 0;
+[e = _TRISB4 -> -> 0 `i `b ]
+"362
+[; ;main.c: 362:     TRISB5 = 0;
+[e = _TRISB5 -> -> 0 `i `b ]
 "363
-[; ;main.c: 363:     T1CON = 0b00000000;
-[e = _T1CON -> -> 0 `i `uc ]
-"365
-[; ;main.c: 365:     configPwm(1);
-[e ( _configPwm (1 -> -> 1 `i `uc ]
+[; ;main.c: 363:     TRISB6 = 0;
+[e = _TRISB6 -> -> 0 `i `b ]
+"364
+[; ;main.c: 364:     TRISB7 = 0;
+[e = _TRISB7 -> -> 0 `i `b ]
 "366
-[; ;main.c: 366:     configPwm(2);
-[e ( _configPwm (1 -> -> 2 `i `uc ]
-"368
-[; ;main.c: 368:     UART_init(9600);
-[e ( _UART_init (1 -> -> 9600 `i `l ]
+[; ;main.c: 366:     TRISDbits.RD2 = 0;
+[e = . . _TRISDbits 1 2 -> -> 0 `i `uc ]
+"367
+[; ;main.c: 367:     TRISB0 = 1;
+[e = _TRISB0 -> -> 1 `i `b ]
+"369
+[; ;main.c: 369:     LATD3 = 0;
+[e = _LATD3 -> -> 0 `i `b ]
 "370
-[; ;main.c: 370:     inicializarComportamientoBasico();
-[e ( _inicializarComportamientoBasico ..  ]
+[; ;main.c: 370:     LATB4 = 0;
+[e = _LATB4 -> -> 0 `i `b ]
+"371
+[; ;main.c: 371:     LATB5 = 0;
+[e = _LATB5 -> -> 0 `i `b ]
 "372
-[; ;main.c: 372:     while (1) {
-[e :U 503 ]
-{
+[; ;main.c: 372:     LATB6 = 0;
+[e = _LATB6 -> -> 0 `i `b ]
+"373
+[; ;main.c: 373:     LATB7 = 0;
+[e = _LATB7 -> -> 0 `i `b ]
 "374
-[; ;main.c: 374:         if (!pausa) {
-[e $ ! ! != -> _pausa `i -> 0 `i 505  ]
-{
-"376
-[; ;main.c: 376:             probarSensores();
-[e ( _probarSensores ..  ]
+[; ;main.c: 374:     LATD2 = 0;
+[e = _LATD2 -> -> 0 `i `b ]
+"377
+[; ;main.c: 377:     T1CON = 0b00000000;
+[e = _T1CON -> -> 0 `i `uc ]
 "379
-[; ;main.c: 379:         } else {
-}
-[e $U 506  ]
-[e :U 505 ]
-{
-"381
-[; ;main.c: 381:         }
-}
-[e :U 506 ]
+[; ;main.c: 379:     configPwm(1);
+[e ( _configPwm (1 -> -> 1 `i `uc ]
+"380
+[; ;main.c: 380:     configPwm(2);
+[e ( _configPwm (1 -> -> 2 `i `uc ]
+"382
+[; ;main.c: 382:     UART_init(9600);
+[e ( _UART_init (1 -> -> 9600 `i `l ]
 "384
-[; ;main.c: 384:     }
-}
-[e :U 502 ]
-[e $U 503  ]
-[e :U 504 ]
-"385
-[; ;main.c: 385:     return;
-[e $UE 501  ]
+[; ;main.c: 384:     inicializarComportamientoBasico();
+[e ( _inicializarComportamientoBasico ..  ]
 "386
-[; ;main.c: 386: }
-[e :UE 501 ]
+[; ;main.c: 386:     while (1) {
+[e :U 508 ]
+{
+"388
+[; ;main.c: 388:         if (!pausa) {
+[e $ ! ! != -> _pausa `i -> 0 `i 510  ]
+{
+"390
+[; ;main.c: 390:             probarSensores();
+[e ( _probarSensores ..  ]
+"393
+[; ;main.c: 393:         } else {
+}
+[e $U 511  ]
+[e :U 510 ]
+{
+"395
+[; ;main.c: 395:         }
+}
+[e :U 511 ]
+"398
+[; ;main.c: 398:     }
+}
+[e :U 507 ]
+[e $U 508  ]
+[e :U 509 ]
+"399
+[; ;main.c: 399:     return;
+[e $UE 506  ]
+"400
+[; ;main.c: 400: }
+[e :UE 506 ]
 }
 [p f _sprintf 8388736 ]
 [a 1C 13 69 110 102 114 101 110 116 101 58 32 13 10 0 ]
