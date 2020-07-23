@@ -6025,7 +6025,7 @@ char *ctermid(char *);
 
 char *tempnam(const char *, const char *);
 # 5 "main.c" 2
-# 34 "main.c"
+# 35 "main.c"
 typedef struct {
     Direccion curr_state;
     Direccion Next_state;
@@ -6046,6 +6046,7 @@ void probarSensores(void);
 void regresarCruceAnterior(unsigned char* movimientos, unsigned char numMovimientos);
 unsigned char hayCruce(void);
 void limpiarMovimientos(unsigned char* movimientos, unsigned char* numMovimientos);
+unsigned char decidirDireccion(void);
 
 void __attribute__((picinterrupt(("")))) boton(void) {
 
@@ -6131,20 +6132,27 @@ void comportamientoBasico(void) {
 
         case ENFRENTE:
 
-            if (dameDistancia(ENFRENTE) < 5)
-            {
-                if (dameDistancia(IZQUIERDA) < 3) {
+            switch (decidirDireccion()) {
 
-                    if (dameDistancia(DERECHA) < 3) {
-                        mapear = 0;
-                        espejearCarroY = 1;
-                        mouse.Next_state = IZQUIERDA;
-                    } else
-                        mouse.Next_state = DERECHA;
-                } else
+                case ENFRENTE:
+                    mouse.Next_state = ENFRENTE;
+                    break;
+
+                case IZQUIERDA:
                     mouse.Next_state = IZQUIERDA;
-            } else
-                mouse.Next_state = ENFRENTE;
+                    break;
+
+                case DERECHA:
+                    mouse.Next_state = DERECHA;
+                    break;
+
+                case 0:
+                    mapear = 0;
+                    espejearCarroY = 1;
+                    mouse.Next_state = IZQUIERDA;
+                    break;
+
+            }
 
             break;
 
@@ -6154,7 +6162,12 @@ void comportamientoBasico(void) {
 
             if ((contRepeticiones < 5) && !espejearCarroY)
                 mouse.Next_state = IZQUIERDA;
-            else if ((contRepeticiones < (5 * 2)) && espejearCarroY)
+            else {
+                contRepeticiones = 0;
+                mouse.Next_state = ENFRENTE;
+            }
+
+            if ((contRepeticiones < (5 * 2)) && espejearCarroY)
                 mouse.Next_state = IZQUIERDA;
             else {
 
@@ -6162,6 +6175,9 @@ void comportamientoBasico(void) {
                 contRepeticiones = 0;
                 regresarCruceAnterior(movimientosRealizados, numMovimientos);
                 limpiarMovimientos(movimientosRealizados, &numMovimientos);
+
+                espejearCarroY = 1;
+                mouse.curr_state = IZQUIERDA;
             }
 
             break;
@@ -6255,8 +6271,6 @@ void regresarCruceAnterior(unsigned char* movimientos, unsigned char numMovimien
 
         moverCarrito();
     }
-
-    mouse.curr_state = ENFRENTE;
 }
 
 unsigned char hayCruce(void) {
@@ -6269,6 +6283,26 @@ void limpiarMovimientos(unsigned char* movimientos, unsigned char* numMovimiento
         movimientos[i] = 0;
 
     *numMovimientos = 0;
+}
+
+unsigned char decidirDireccion(void) {
+
+    unsigned char mayorPrioridad = ENFRENTE;
+    unsigned char prioridadMedia = IZQUIERDA;
+    unsigned char prioridadBaja = DERECHA;
+
+    unsigned char direccionElegida;
+
+    if (dameDistancia(mayorPrioridad) > 5)
+        direccionElegida = mayorPrioridad;
+    else if (dameDistancia(prioridadMedia) > 3)
+        direccionElegida = prioridadMedia;
+    else if (dameDistancia(prioridadBaja) > 3)
+        direccionElegida = prioridadBaja;
+    else
+        direccionElegida = 0;
+
+    return direccionElegida;
 }
 
 void main(void) {

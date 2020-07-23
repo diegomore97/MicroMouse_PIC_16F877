@@ -11,6 +11,7 @@
 #define REPETICIONES_VUELTA 5 //Repeteciones para que el auto gire 90 grados
 #define DOBLE 2 //Propocional a la contante de REPETICIONES_VUELTA para que el auto gire 180 grados
 #define MAX_MOVIMIENTOS_GUARDADOS 50 //Para mapear y regresar a algun lugarsi llegamos a un callejon
+#define CALLEJON 0
 
 #define PIN_IN1  TRISB4
 #define PIN_IN2  TRISB5
@@ -51,6 +52,7 @@ void probarSensores(void);
 void regresarCruceAnterior(unsigned char* movimientos, unsigned char numMovimientos);
 unsigned char hayCruce(void);
 void limpiarMovimientos(unsigned char* movimientos, unsigned char* numMovimientos);
+unsigned char decidirDireccion(void);
 
 void __interrupt() boton(void) {
 
@@ -136,20 +138,27 @@ void comportamientoBasico(void) {
 
         case ENFRENTE:
 
-            if (dameDistancia(ENFRENTE) < UMBRAL_OBSTACULO_ENFRENTE) //Ultrasonico ENFRENTE              
-            {
-                if (dameDistancia(IZQUIERDA) < UMBRAL_OBSTACULO) {
+            switch (decidirDireccion()) {
 
-                    if (dameDistancia(DERECHA) < UMBRAL_OBSTACULO) { //callejon
-                        mapear = 0;
-                        espejearCarroY = 1;
-                        mouse.Next_state = IZQUIERDA;
-                    } else
-                        mouse.Next_state = DERECHA;
-                } else
+                case ENFRENTE:
+                    mouse.Next_state = ENFRENTE;
+                    break;
+
+                case IZQUIERDA:
                     mouse.Next_state = IZQUIERDA;
-            } else
-                mouse.Next_state = ENFRENTE;
+                    break;
+
+                case DERECHA:
+                    mouse.Next_state = DERECHA;
+                    break;
+
+                case CALLEJON:
+                    mapear = 0;
+                    espejearCarroY = 1;
+                    mouse.Next_state = IZQUIERDA;
+                    break;
+
+            }
 
             break;
 
@@ -159,7 +168,12 @@ void comportamientoBasico(void) {
 
             if ((contRepeticiones < REPETICIONES_VUELTA) && !espejearCarroY)
                 mouse.Next_state = IZQUIERDA;
-            else if ((contRepeticiones < (REPETICIONES_VUELTA * DOBLE)) && espejearCarroY)
+            else {
+                contRepeticiones = 0;
+                mouse.Next_state = ENFRENTE;
+            }
+
+            if ((contRepeticiones < (REPETICIONES_VUELTA * DOBLE)) && espejearCarroY)
                 mouse.Next_state = IZQUIERDA;
             else {
                 //Se acabo el espejeo
@@ -167,6 +181,9 @@ void comportamientoBasico(void) {
                 contRepeticiones = 0;
                 regresarCruceAnterior(movimientosRealizados, numMovimientos);
                 limpiarMovimientos(movimientosRealizados, &numMovimientos);
+
+                espejearCarroY = 1;
+                mouse.curr_state = IZQUIERDA;
             }
 
             break;
@@ -260,8 +277,6 @@ void regresarCruceAnterior(unsigned char* movimientos, unsigned char numMovimien
 
         moverCarrito(); //Mandar señales al Puente H
     }
-
-    mouse.curr_state = ENFRENTE;
 }
 
 unsigned char hayCruce(void) {
@@ -274,6 +289,26 @@ void limpiarMovimientos(unsigned char* movimientos, unsigned char* numMovimiento
         movimientos[i] = 0;
 
     *numMovimientos = 0;
+}
+
+unsigned char decidirDireccion(void) {
+
+    unsigned char mayorPrioridad = ENFRENTE;
+    unsigned char prioridadMedia = IZQUIERDA;
+    unsigned char prioridadBaja = DERECHA;
+
+    unsigned char direccionElegida;
+
+    if (dameDistancia(mayorPrioridad) > UMBRAL_OBSTACULO_ENFRENTE) //No hay obstaculo             
+        direccionElegida = mayorPrioridad;
+    else if (dameDistancia(prioridadMedia) > UMBRAL_OBSTACULO)
+        direccionElegida = prioridadMedia;
+    else if (dameDistancia(prioridadBaja) > UMBRAL_OBSTACULO)
+        direccionElegida = prioridadBaja;
+    else
+        direccionElegida = CALLEJON;
+
+    return direccionElegida;
 }
 
 void main(void) {
