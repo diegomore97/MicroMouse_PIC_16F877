@@ -5684,20 +5684,24 @@ extern __attribute__((nonreentrant)) void _delaywdt(unsigned long);
 #pragma intrinsic(_delay3)
 extern __attribute__((nonreentrant)) void _delay3(unsigned char);
 # 32 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\xc.h" 2 3
-# 66 "./config.h" 2
-# 2 "main.c" 2
+# 65 "./config.h" 2
+# 1 "main.c" 2
+
 # 1 "./variables.h" 1
 
 
 
 typedef char T_BYTE;
 typedef unsigned char T_UBYTE;
+typedef short T_WORD;
 typedef unsigned short T_UWORD;
 typedef long T_LONG;
 typedef unsigned int T_UINT;
+typedef int T_INT;
 typedef unsigned char T_BOOL;
 typedef float T_FLOAT;
-# 3 "main.c" 2
+# 2 "main.c" 2
+
 # 1 "./pwm.h" 1
 # 12 "./pwm.h"
 void configPwm(T_UBYTE channel);
@@ -5771,7 +5775,8 @@ void configPwm(T_UBYTE channel) {
 
     TMR2ON = 1;
 }
-# 4 "main.c" 2
+# 3 "main.c" 2
+
 # 1 "./ultrasonico.h" 1
 # 14 "./ultrasonico.h"
 typedef enum {
@@ -5781,12 +5786,15 @@ typedef enum {
     ALTO
 } Direccion;
 
-T_UWORD dameDistancia(T_UBYTE numeroSensor);
+T_FLOAT sensorDerecha, sensorIzquierda, sensorEnfrente;
+T_FLOAT oldSensorDerecha = 0, oldSensorIzquierda = 0, oldSensorEnfrente = 0;
 
-T_UWORD dameDistancia(T_UBYTE numeroSensor) {
+T_FLOAT dameDistancia(T_UBYTE numeroSensor);
+
+T_FLOAT dameDistancia(T_UBYTE numeroSensor) {
 
     T_UINT conteo;
-    T_UWORD distancia;
+    T_FLOAT distancia;
 
     TMR1H = 0x00;
     TMR1L = 0x00;
@@ -5840,7 +5848,8 @@ T_UWORD dameDistancia(T_UBYTE numeroSensor) {
     return distancia;
 
 }
-# 5 "main.c" 2
+# 4 "main.c" 2
+
 # 1 "./UART.h" 1
 
 
@@ -5893,7 +5902,38 @@ void UART_printf(T_BYTE* cadena) {
         UART_write(*cadena++);
     }
 }
+# 5 "main.c" 2
+
+# 1 "./adc.h" 1
+
+
+
+short dameLecturaAdc(char canalLeer);
+void configurarAdc(void);
+
+void configurarAdc(void) {
+    ADCON1 = 0b00001110;
+    ADCON2 = 0b10100101;
+}
+
+short dameLecturaAdc(char canalLeer) {
+
+    _delay((unsigned long)((20)*(4000000/4000000.0)));
+
+    ADCON0bits.ADON = 1;
+    ADCON0bits.CHS = canalLeer;
+    ADCON0bits.GO = 1;
+    ADCON0bits.GO_DONE = 1;
+
+    while (ADCON0bits.GO_DONE);
+
+    ADCON0bits.ADON = 0;
+
+    return (ADRESH << 8) +ADRESL;
+
+}
 # 6 "main.c" 2
+
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdio.h" 1 3
 # 24 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdio.h" 3
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 1 3
@@ -6033,33 +6073,499 @@ char *ctermid(char *);
 
 char *tempnam(const char *, const char *);
 # 7 "main.c" 2
-# 40 "main.c"
+
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\math.h" 1 3
+# 10 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\math.h" 3
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdint.h" 1 3
+# 22 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdint.h" 3
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 1 3
+# 127 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef unsigned long uintptr_t;
+# 142 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef long intptr_t;
+# 158 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef signed char int8_t;
+
+
+
+
+typedef short int16_t;
+# 173 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef long int32_t;
+
+
+
+
+
+typedef long long int64_t;
+# 188 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef long long intmax_t;
+
+
+
+
+
+typedef unsigned char uint8_t;
+
+
+
+
+typedef unsigned short uint16_t;
+# 209 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef unsigned long uint32_t;
+
+
+
+
+
+typedef unsigned long long uint64_t;
+# 229 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef unsigned long long uintmax_t;
+# 22 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdint.h" 2 3
+
+
+typedef int8_t int_fast8_t;
+
+typedef int64_t int_fast64_t;
+
+
+typedef int8_t int_least8_t;
+typedef int16_t int_least16_t;
+
+typedef int24_t int_least24_t;
+
+typedef int32_t int_least32_t;
+
+typedef int64_t int_least64_t;
+
+
+typedef uint8_t uint_fast8_t;
+
+typedef uint64_t uint_fast64_t;
+
+
+typedef uint8_t uint_least8_t;
+typedef uint16_t uint_least16_t;
+
+typedef uint24_t uint_least24_t;
+
+typedef uint32_t uint_least32_t;
+
+typedef uint64_t uint_least64_t;
+# 139 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdint.h" 3
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/stdint.h" 1 3
+typedef int32_t int_fast16_t;
+typedef int32_t int_fast32_t;
+typedef uint32_t uint_fast16_t;
+typedef uint32_t uint_fast32_t;
+# 139 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdint.h" 2 3
+# 10 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\math.h" 2 3
+
+
+
+
+
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 1 3
+# 33 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef float float_t;
+
+
+
+
+typedef double double_t;
+# 15 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\math.h" 2 3
+# 42 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\math.h" 3
+int __fpclassifyf(float);
+
+
+
+
+
+
+
+int __signbitf(float);
+# 59 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\math.h" 3
+double acos(double);
+float acosf(float);
+long double acosl(long double);
+
+
+
+double acosh(double);
+float acoshf(float);
+long double acoshl(long double);
+
+
+
+double asin(double);
+float asinf(float);
+long double asinl(long double);
+
+
+
+double asinh(double);
+float asinhf(float);
+long double asinhl(long double);
+
+
+
+double atan(double);
+float atanf(float);
+long double atanl(long double);
+
+
+
+double atan2(double, double);
+float atan2f(float, float);
+long double atan2l(long double, long double);
+
+
+
+double atanh(double);
+float atanhf(float);
+long double atanhl(long double);
+
+
+
+double cbrt(double);
+float cbrtf(float);
+long double cbrtl(long double);
+
+
+
+double ceil(double);
+float ceilf(float);
+long double ceill(long double);
+
+
+
+double copysign(double, double);
+float copysignf(float, float);
+long double copysignl(long double, long double);
+
+
+
+double cos(double);
+float cosf(float);
+long double cosl(long double);
+
+
+
+double cosh(double);
+float coshf(float);
+long double coshl(long double);
+
+
+
+double erf(double);
+float erff(float);
+long double erfl(long double);
+
+
+
+double erfc(double);
+float erfcf(float);
+long double erfcl(long double);
+
+
+
+double exp(double);
+float expf(float);
+long double expl(long double);
+
+
+
+double exp2(double);
+float exp2f(float);
+long double exp2l(long double);
+
+
+
+double expm1(double);
+float expm1f(float);
+long double expm1l(long double);
+
+
+
+double fabs(double);
+float fabsf(float);
+long double fabsl(long double);
+
+
+
+double fdim(double, double);
+float fdimf(float, float);
+long double fdiml(long double, long double);
+
+
+
+double floor(double);
+float floorf(float);
+long double floorl(long double);
+
+
+
+double fma(double, double, double);
+float fmaf(float, float, float);
+long double fmal(long double, long double, long double);
+
+
+
+double fmax(double, double);
+float fmaxf(float, float);
+long double fmaxl(long double, long double);
+
+
+
+double fmin(double, double);
+float fminf(float, float);
+long double fminl(long double, long double);
+
+
+
+double fmod(double, double);
+float fmodf(float, float);
+long double fmodl(long double, long double);
+
+
+
+double frexp(double, int *);
+float frexpf(float, int *);
+long double frexpl(long double, int *);
+
+
+
+double hypot(double, double);
+float hypotf(float, float);
+long double hypotl(long double, long double);
+
+
+
+int ilogb(double);
+int ilogbf(float);
+int ilogbl(long double);
+
+
+
+double ldexp(double, int);
+float ldexpf(float, int);
+long double ldexpl(long double, int);
+
+
+
+double lgamma(double);
+float lgammaf(float);
+long double lgammal(long double);
+
+
+
+long long llrint(double);
+long long llrintf(float);
+long long llrintl(long double);
+
+
+
+long long llround(double);
+long long llroundf(float);
+long long llroundl(long double);
+
+
+
+double log(double);
+float logf(float);
+long double logl(long double);
+
+
+
+double log10(double);
+float log10f(float);
+long double log10l(long double);
+
+
+
+double log1p(double);
+float log1pf(float);
+long double log1pl(long double);
+
+
+
+double log2(double);
+float log2f(float);
+long double log2l(long double);
+
+
+
+double logb(double);
+float logbf(float);
+long double logbl(long double);
+
+
+
+long lrint(double);
+long lrintf(float);
+long lrintl(long double);
+
+
+
+long lround(double);
+long lroundf(float);
+long lroundl(long double);
+
+
+
+double modf(double, double *);
+float modff(float, float *);
+long double modfl(long double, long double *);
+
+
+
+double nan(const char *);
+float nanf(const char *);
+long double nanl(const char *);
+
+
+
+double nearbyint(double);
+float nearbyintf(float);
+long double nearbyintl(long double);
+
+
+
+double nextafter(double, double);
+float nextafterf(float, float);
+long double nextafterl(long double, long double);
+
+
+
+double nexttoward(double, long double);
+float nexttowardf(float, long double);
+long double nexttowardl(long double, long double);
+
+
+
+
+double pow(double, double);
+__attribute__((nonreentrant)) float powf(float, float);
+long double powl(long double, long double);
+
+
+
+double remainder(double, double);
+float remainderf(float, float);
+long double remainderl(long double, long double);
+
+
+
+double remquo(double, double, int *);
+float remquof(float, float, int *);
+long double remquol(long double, long double, int *);
+
+
+
+double rint(double);
+float rintf(float);
+long double rintl(long double);
+
+
+
+double round(double);
+float roundf(float);
+long double roundl(long double);
+
+
+
+double scalbln(double, long);
+float scalblnf(float, long);
+long double scalblnl(long double, long);
+
+
+
+double scalbn(double, int);
+float scalbnf(float, int);
+long double scalbnl(long double, int);
+
+
+
+double sin(double);
+float sinf(float);
+long double sinl(long double);
+
+
+
+double sinh(double);
+float sinhf(float);
+long double sinhl(long double);
+
+
+
+double sqrt(double);
+float sqrtf(float);
+long double sqrtl(long double);
+
+
+
+double tan(double);
+float tanf(float);
+long double tanl(long double);
+
+
+
+double tanh(double);
+float tanhf(float);
+long double tanhl(long double);
+
+
+
+double tgamma(double);
+float tgammaf(float);
+long double tgammal(long double);
+
+
+
+double trunc(double);
+float truncf(float);
+long double truncl(long double);
+# 423 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\math.h" 3
+extern int signgam;
+
+double j0(double);
+double j1(double);
+double jn(int, double);
+
+double y0(double);
+double y1(double);
+double yn(int, double);
+# 8 "main.c" 2
+# 18 "main.c"
+T_FLOAT DISTANCIA_PRIORIDAD_ALTA;
+T_FLOAT DISTANCIA_PRIORIDAD_MEDIA;
+T_FLOAT DISTANCIA_PRIORIDAD_BAJA;
+# 54 "main.c"
 typedef struct {
     Direccion curr_state;
     Direccion Next_state;
 } ComportamientoBasico;
 
-typedef enum {
-    SALIR_CALLEJON = 1,
-    PUNTO_INICIAL
-} Espejeo;
 
 ComportamientoBasico mouse;
 T_UBYTE pausa = 1;
-
 T_BYTE buffer[50];
 
 void moverCarrito(void);
-
 void inicializarComportamientoBasico(void);
 void comportamientoBasico(void);
 void antiRebote(T_UBYTE pin);
 void probarUltrasonico(T_UBYTE numeroSensor);
 void probarSensores(void);
 void regresarCruceAnterior(T_UBYTE* movimientos, T_UBYTE numMovimientos);
-T_BOOL hayCruce(void);
+T_BOOL hayCruce(T_UBYTE* caminosRecorrer);
 void limpiarMovimientos(T_UBYTE* movimientos, T_UBYTE* numMovimientos);
-T_UBYTE decidirDireccion(void);
+T_BOOL seLlegoAlDestino(void);
+void leerSensores(void);
+void PID(void);
+void velocidadEstandar(void);
+T_UBYTE decidirDireccion(T_UBYTE* caminosRecorrer, T_UBYTE* investigandoCruce,
+        T_UBYTE* posicionInvCruce, T_UBYTE* contCaminosRecorridos);
 
 void __attribute__((picinterrupt(("")))) boton(void) {
 
@@ -6103,7 +6609,7 @@ void probarUltrasonico(T_UBYTE numeroSensor) {
 
     }
 
-    sprintf(buffer, "\rDistancia: %d cm\r\n\n", dameDistancia(numeroSensor));
+    sprintf(buffer, "\rDistancia: %.2f cm\r\n\n", dameDistancia(numeroSensor));
     UART_printf(buffer);
     _delay((unsigned long)((1000)*(4000000/4000.0)));
 
@@ -6128,8 +6634,11 @@ void inicializarComportamientoBasico(void) {
 
     mouse.curr_state = ENFRENTE;
 
-    pwmDuty(80, 1);
-    pwmDuty(80, 2);
+    oldSensorDerecha = dameDistancia(DERECHA);
+    oldSensorIzquierda = dameDistancia(IZQUIERDA);
+    oldSensorEnfrente = dameDistancia(ENFRENTE);
+
+    velocidadEstandar();
 
 }
 
@@ -6140,34 +6649,52 @@ void comportamientoBasico(void) {
     static T_UBYTE contRepeticiones = 0;
     static T_UBYTE numMovimientos = 0;
     static T_UBYTE mapear = 0;
-    static T_UBYTE contEspejeo = 0;
+    static T_UBYTE cruceDetectado = 0;
+    static T_UBYTE caminosRecorrer[3];
+    static T_UBYTE investigandoCruce = 0;
+    static T_UBYTE posicionInvCruce = 0;
+    static T_UBYTE contCaminosRecorridos = 0;
+    static T_BOOL carroRotado = 0;
+
+    leerSensores();
 
     switch (mouse.curr_state) {
 
         case ENFRENTE:
 
-            switch (decidirDireccion()) {
-
-                case ENFRENTE:
-                    mouse.Next_state = ENFRENTE;
-                    break;
-
-                case IZQUIERDA:
-                    mouse.Next_state = IZQUIERDA;
-                    break;
-
-                case DERECHA:
-                    mouse.Next_state = DERECHA;
-                    break;
+            switch (decidirDireccion(caminosRecorrer, &investigandoCruce,
+                    &posicionInvCruce, &contCaminosRecorridos)) {
 
                 case 0:
                     mapear = 0;
                     espejearCarroY = 1;
-                    contEspejeo++;
                     mouse.Next_state = IZQUIERDA;
                     break;
 
+                case ENFRENTE:
+
+                    mouse.Next_state = ENFRENTE;
+                    break;
+
+                case IZQUIERDA:
+
+                    mouse.Next_state = IZQUIERDA;
+                    break;
+
+                case DERECHA:
+
+                    mouse.Next_state = DERECHA;
+                    break;
+
+
+                case ALTO:
+                    mouse.Next_state = ALTO;
+                    break;
+
             }
+
+            if (mapear)
+                carroRotado = 1;
 
             break;
 
@@ -6178,6 +6705,7 @@ void comportamientoBasico(void) {
             if ((contRepeticiones < 5) && !espejearCarroY)
                 mouse.Next_state = IZQUIERDA;
             else {
+                carroRotado = 1;
                 contRepeticiones = 0;
                 mouse.Next_state = ENFRENTE;
             }
@@ -6189,23 +6717,13 @@ void comportamientoBasico(void) {
                 espejearCarroY = 0;
                 contRepeticiones = 0;
 
-                switch (contEspejeo) {
+                regresarCruceAnterior(movimientosRealizados, numMovimientos);
+                limpiarMovimientos(movimientosRealizados, &numMovimientos);
 
-                    case SALIR_CALLEJON:
-                        regresarCruceAnterior(movimientosRealizados, numMovimientos);
-                        limpiarMovimientos(movimientosRealizados, &numMovimientos);
-                        espejearCarroY = 1;
-                        contEspejeo++;
-                        mouse.curr_state = IZQUIERDA;
-                        break;
-
-                    case PUNTO_INICIAL:
-                        contEspejeo = 0;
-                        mouse.curr_state = ENFRENTE;
-                        break;
-
-                }
-
+                cruceDetectado = 0;
+                posicionInvCruce = 1;
+                contCaminosRecorridos++;
+                mouse.curr_state = ENFRENTE;
             }
 
             break;
@@ -6217,8 +6735,9 @@ void comportamientoBasico(void) {
             if (contRepeticiones < 5)
                 mouse.Next_state = DERECHA;
             else {
-                mouse.Next_state = ENFRENTE;
+                carroRotado = 1;
                 contRepeticiones = 0;
+                mouse.Next_state = ENFRENTE;
             }
 
             break;
@@ -6231,11 +6750,18 @@ void comportamientoBasico(void) {
 
     mouse.curr_state = mouse.Next_state;
 
-    if (hayCruce()) {
+    if (hayCruce(caminosRecorrer) && !cruceDetectado) {
+
+        if (!investigandoCruce)
+            posicionInvCruce = 1;
+
         mapear = 1;
+        cruceDetectado = 1;
+        carroRotado = 0;
+        investigandoCruce = 1;
     }
 
-    if (mapear)
+    if (mapear && carroRotado)
         movimientosRealizados[numMovimientos++] = mouse.curr_state;
 
     moverCarrito();
@@ -6290,27 +6816,110 @@ void regresarCruceAnterior(T_UBYTE* movimientos, T_UBYTE numMovimientos) {
 
     for (int i = numMovimientos - 1; i >= 0; i--) {
 
-        if (movimientos[i] == IZQUIERDA)
+        if (movimientos[i] == IZQUIERDA) {
+
             mouse.curr_state = DERECHA;
-        else if (movimientos[i] == DERECHA)
+        } else if (movimientos[i] == DERECHA) {
+
             mouse.curr_state = IZQUIERDA;
-        else
+        } else {
+
             mouse.curr_state = movimientos[i];
+        }
 
         moverCarrito();
     }
 }
 
-T_BOOL hayCruce(void) {
+T_BOOL hayCruce(T_UBYTE* caminosRecorrer) {
 
     T_UBYTE contCaminos = 0;
+    T_BOOL paredEnfrente = 0, paredDerecha = 0, paredIzquierda = 0;
 
-    if (dameDistancia(IZQUIERDA) > 3)
+    if (sensorEnfrente > 5) {
+        paredEnfrente = 1;
         contCaminos++;
-    if (dameDistancia(DERECHA) > 3)
+    }
+
+    if (sensorIzquierda > 3) {
+        paredIzquierda = 1;
         contCaminos++;
-    if (dameDistancia(ENFRENTE) > 5)
+    }
+
+    if (sensorDerecha > 3) {
+        paredDerecha = 1;
         contCaminos++;
+    }
+
+    if (IZQUIERDA == DERECHA) {
+
+        if (paredDerecha)
+            caminosRecorrer[IZQUIERDA - 1] = 1;
+        else
+            caminosRecorrer[IZQUIERDA - 1] = 0;
+
+    } else if (ENFRENTE == DERECHA) {
+
+        if (paredDerecha)
+            caminosRecorrer[ENFRENTE - 1] = 1;
+        else
+            caminosRecorrer[ENFRENTE - 1] = 0;
+
+    } else {
+
+        if (paredDerecha)
+            caminosRecorrer[DERECHA - 1] = 1;
+        else
+            caminosRecorrer[DERECHA - 1] = 0;
+
+    }
+
+    if (DERECHA == IZQUIERDA) {
+
+        if (paredIzquierda)
+            caminosRecorrer[DERECHA - 1] = 1;
+        else
+            caminosRecorrer[DERECHA - 1] = 0;
+
+    } else if (ENFRENTE == IZQUIERDA) {
+
+        if (paredIzquierda)
+            caminosRecorrer[ENFRENTE - 1] = 1;
+        else
+            caminosRecorrer[ENFRENTE - 1] = 0;
+
+    } else {
+
+        if (paredIzquierda)
+            caminosRecorrer[IZQUIERDA - 1] = 1;
+        else
+            caminosRecorrer[IZQUIERDA - 1] = 0;
+
+    }
+
+    if (DERECHA == ENFRENTE) {
+
+        if (paredEnfrente)
+            caminosRecorrer[DERECHA - 1] = 1;
+        else
+            caminosRecorrer[DERECHA - 1] = 0;
+
+    } else if (IZQUIERDA == ENFRENTE) {
+
+        if (paredEnfrente)
+            caminosRecorrer[IZQUIERDA - 1] = 1;
+        else
+            caminosRecorrer[IZQUIERDA - 1] = 0;
+
+    } else {
+
+        if (paredEnfrente)
+            caminosRecorrer[ENFRENTE - 1] = 1;
+        else
+            caminosRecorrer[ENFRENTE - 1] = 0;
+
+    }
+
 
     if (contCaminos > 1)
         return 1;
@@ -6327,24 +6936,316 @@ void limpiarMovimientos(T_UBYTE* movimientos, T_UBYTE* numMovimientos) {
     *numMovimientos = 0;
 }
 
-T_UBYTE decidirDireccion(void) {
+T_BOOL seLlegoAlDestino(void) {
 
-    T_UBYTE mayorPrioridad = DERECHA;
-    T_UBYTE prioridadMedia = IZQUIERDA;
-    T_UBYTE prioridadBaja = ENFRENTE;
+    T_BOOL llegoDestino = 0;
+
+
+    if (dameLecturaAdc(0) < 100)
+        llegoDestino = 1;
+
+    return llegoDestino;
+
+}
+
+T_UBYTE decidirDireccion(T_UBYTE* caminosRecorrer, T_UBYTE* investigandoCruce,
+        T_UBYTE* posicionInvCruce, T_UBYTE* contCaminosRecorridos) {
 
     T_UBYTE direccionElegida;
+    static T_BOOL cambioOrientacionCarro = 0;
 
-    if (dameDistancia(mayorPrioridad) > 5)
-        direccionElegida = mayorPrioridad;
-    else if (dameDistancia(prioridadMedia) > 3)
-        direccionElegida = prioridadMedia;
-    else if (dameDistancia(prioridadBaja) > 3)
-        direccionElegida = prioridadBaja;
-    else
-        direccionElegida = 0;
+
+    if (*posicionInvCruce && *investigandoCruce) {
+
+        if (*posicionInvCruce)
+            *posicionInvCruce = 0;
+
+        if (seLlegoAlDestino()) {
+            direccionElegida = ALTO;
+
+        } else {
+
+            switch (*contCaminosRecorridos) {
+                case 1:
+                    if (caminosRecorrer[DERECHA - 1 ] == 1)
+                        caminosRecorrer[DERECHA - 1 ] = 'X';
+
+                    else {
+                        if (caminosRecorrer[IZQUIERDA - 1 ] == 1)
+                            caminosRecorrer[IZQUIERDA - 1 ] = 'X';
+                    }
+                    break;
+
+                case 2:
+                    if (caminosRecorrer[IZQUIERDA - 1 ] == 1)
+                        caminosRecorrer[IZQUIERDA - 1 ] = 'X';
+                    else
+                        caminosRecorrer[ENFRENTE - 1 ] = 'X';
+
+
+                    break;
+
+                case 3:
+                    if (caminosRecorrer[ENFRENTE - 1 ] == 1)
+                        caminosRecorrer[ENFRENTE - 1 ] = 'X';
+
+
+                    break;
+
+            }
+
+        }
+
+        if (!cambioOrientacionCarro) {
+
+            if (caminosRecorrer[DERECHA - 1 ] == 1)
+                direccionElegida = DERECHA;
+            else if (caminosRecorrer[IZQUIERDA - 1] == 1)
+                direccionElegida = IZQUIERDA;
+            else if (caminosRecorrer[ENFRENTE - 1] == 1)
+                direccionElegida = ENFRENTE;
+
+
+            cambioOrientacionCarro = 1;
+
+        } else {
+
+            switch (*contCaminosRecorridos) {
+                case 1:
+                    if (DERECHA == DERECHA) {
+
+                        if (caminosRecorrer[DERECHA - 1 ] == 'X') {
+
+                            if (IZQUIERDA == IZQUIERDA &&
+                                    caminosRecorrer[IZQUIERDA - 1] == 1) {
+                                direccionElegida = ENFRENTE;
+                            } else if (IZQUIERDA == ENFRENTE &&
+                                    caminosRecorrer[IZQUIERDA - 1] == 1) {
+                                direccionElegida = DERECHA;
+                            }
+
+                        }
+
+                    } else if (IZQUIERDA == DERECHA) {
+
+                        if (caminosRecorrer[DERECHA - 1 ] == 'X') {
+
+                            if (IZQUIERDA == DERECHA &&
+                                    caminosRecorrer[IZQUIERDA - 1] == 1) {
+                                direccionElegida = ENFRENTE;
+                            } else if (IZQUIERDA == ENFRENTE &&
+                                    caminosRecorrer[IZQUIERDA - 1] == 1) {
+                                direccionElegida = IZQUIERDA;
+                            }
+
+                        }
+
+                    } else if (ENFRENTE == DERECHA) {
+
+                        if (caminosRecorrer[DERECHA - 1 ] == 'X') {
+
+                            if (IZQUIERDA == IZQUIERDA &&
+                                    caminosRecorrer[IZQUIERDA - 1] == 1) {
+                                direccionElegida = DERECHA;
+                            } else if (IZQUIERDA == DERECHA &&
+                                    caminosRecorrer[IZQUIERDA - 1] == 1) {
+                                direccionElegida = IZQUIERDA;
+                            }
+
+                        }
+
+                    }
+
+                    if (DERECHA == IZQUIERDA) {
+
+                        if (caminosRecorrer[IZQUIERDA - 1 ] == 'X') {
+
+                            if (ENFRENTE == IZQUIERDA &&
+                                    caminosRecorrer[ENFRENTE - 1] == 1) {
+                                direccionElegida = ENFRENTE;
+                            } else if (ENFRENTE == ENFRENTE &&
+                                    caminosRecorrer[ENFRENTE - 1] == 1) {
+                                direccionElegida = DERECHA;
+                            }
+
+                        }
+
+                    } else if (IZQUIERDA == IZQUIERDA) {
+
+                        if (caminosRecorrer[IZQUIERDA - 1 ] == 'X') {
+
+                            if (ENFRENTE == DERECHA &&
+                                    caminosRecorrer[ENFRENTE - 1] == 1) {
+                                direccionElegida = ENFRENTE;
+                            } else if (ENFRENTE == ENFRENTE &&
+                                    caminosRecorrer[ENFRENTE - 1] == 1) {
+                                direccionElegida = IZQUIERDA;
+                            }
+
+                        }
+
+                    } else if (ENFRENTE == IZQUIERDA) {
+
+                        if (caminosRecorrer[IZQUIERDA - 1 ] == 'X') {
+
+                            if (ENFRENTE == DERECHA &&
+                                    caminosRecorrer[ENFRENTE - 1] == 1) {
+                                direccionElegida = IZQUIERDA;
+                            } else if (ENFRENTE == IZQUIERDA &&
+                                    caminosRecorrer[ENFRENTE - 1] == 1) {
+                                direccionElegida = DERECHA;
+                            }
+
+                        }
+
+                    }
+
+                    break;
+
+                case 2:
+
+                    if (DERECHA == IZQUIERDA) {
+
+                        if (caminosRecorrer[IZQUIERDA - 1 ] == 'X') {
+
+                            if (ENFRENTE == IZQUIERDA &&
+                                    caminosRecorrer[ENFRENTE - 1] == 1) {
+                                direccionElegida = ENFRENTE;
+                            } else if (ENFRENTE == ENFRENTE &&
+                                    caminosRecorrer[ENFRENTE - 1] == 1) {
+                                direccionElegida = DERECHA;
+                            } else
+                                *contCaminosRecorridos = 3;
+
+                        }
+
+                    } else if (IZQUIERDA == IZQUIERDA) {
+
+                        if (caminosRecorrer[IZQUIERDA - 1 ] == 'X') {
+
+                            if (ENFRENTE == DERECHA &&
+                                    caminosRecorrer[ENFRENTE - 1] == 1) {
+                                direccionElegida = ENFRENTE;
+                            } else if (ENFRENTE == ENFRENTE &&
+                                    caminosRecorrer[ENFRENTE - 1] == 1) {
+                                direccionElegida = IZQUIERDA;
+                            } else
+                                *contCaminosRecorridos = 3;
+
+                        }
+
+                    } else if (ENFRENTE == IZQUIERDA) {
+
+                        if (caminosRecorrer[IZQUIERDA - 1 ] == 'X') {
+
+                            if (ENFRENTE == DERECHA &&
+                                    caminosRecorrer[ENFRENTE - 1] == 1) {
+                                direccionElegida = IZQUIERDA;
+                            } else if (ENFRENTE == IZQUIERDA &&
+                                    caminosRecorrer[ENFRENTE - 1] == 1) {
+                                direccionElegida = DERECHA;
+                            } else
+                                *contCaminosRecorridos = 3;
+
+                        }
+
+                    }
+
+                    break;
+
+                case 3:
+                    cambioOrientacionCarro = 0;
+                    *contCaminosRecorridos = 0;
+                    *investigandoCruce = 0;
+                    direccionElegida = ALTO;
+
+                    break;
+            }
+        }
+
+    } else {
+
+        if (seLlegoAlDestino()) {
+
+            direccionElegida = ALTO;
+
+        } else {
+
+
+            if (DISTANCIA_PRIORIDAD_ALTA > 5)
+                direccionElegida = DERECHA;
+            else if (DISTANCIA_PRIORIDAD_MEDIA > 3)
+                direccionElegida = IZQUIERDA;
+            else if (DISTANCIA_PRIORIDAD_BAJA > 3)
+                direccionElegida = ENFRENTE;
+            else
+                direccionElegida = 0;
+
+        }
+
+    }
 
     return direccionElegida;
+}
+
+void leerSensores(void) {
+
+    sensorDerecha = (dameDistancia(DERECHA) + oldSensorDerecha) / 2;
+    sensorIzquierda = (dameDistancia(IZQUIERDA) + oldSensorIzquierda) / 2;
+    sensorEnfrente = (dameDistancia(ENFRENTE) + oldSensorEnfrente) / 2;
+
+    oldSensorDerecha = sensorDerecha;
+    oldSensorIzquierda = sensorIzquierda;
+    oldSensorEnfrente = sensorEnfrente;
+
+    if (IZQUIERDA == DERECHA)
+        DISTANCIA_PRIORIDAD_MEDIA = sensorDerecha;
+    else if (ENFRENTE == DERECHA)
+        DISTANCIA_PRIORIDAD_BAJA = sensorDerecha;
+    else
+        DISTANCIA_PRIORIDAD_ALTA = sensorDerecha;
+
+    if (DERECHA == IZQUIERDA)
+        DISTANCIA_PRIORIDAD_ALTA = sensorIzquierda;
+    else if (ENFRENTE == IZQUIERDA)
+        DISTANCIA_PRIORIDAD_BAJA = sensorIzquierda;
+    else
+        DISTANCIA_PRIORIDAD_MEDIA = sensorIzquierda;
+
+    if (DERECHA == ENFRENTE)
+        DISTANCIA_PRIORIDAD_ALTA = sensorEnfrente;
+    else if (IZQUIERDA == ENFRENTE)
+        DISTANCIA_PRIORIDAD_MEDIA = sensorEnfrente;
+    else
+        DISTANCIA_PRIORIDAD_BAJA = sensorEnfrente;
+}
+
+void PID(void) {
+
+    T_BYTE dif = 0;
+    T_INT error;
+    static T_INT difAnt = 0;
+    T_FLOAT Kp = 1.1;
+    T_FLOAT Kd = 1.3;
+
+
+    dif = sensorIzquierda - sensorDerecha;
+
+    error = roundf(Kp * (dif) + Kd * (difAnt - dif));
+
+    difAnt = dif;
+
+    T_BYTE velocidadIzquierda = ((100 - error)<(0)?(0):((100 - error)>(100)?(100):(100 - error)));
+    T_BYTE velocidadDerecha = ((100 + error)<(0)?(0):((100 + error)>(100)?(100):(100 + error)));
+
+    pwmDuty(velocidadIzquierda, 1);
+    pwmDuty(velocidadDerecha, 2);
+}
+
+void velocidadEstandar(void) {
+    pwmDuty(70, 1);
+    pwmDuty(70, 2);
+
 }
 
 void main(void) {
@@ -6379,16 +7280,16 @@ void main(void) {
 
     configPwm(1);
     configPwm(2);
+    configurarAdc();
 
     UART_init(9600);
-
-    inicializarComportamientoBasico();
 
     while (1) {
 
         if (!pausa) {
 
             probarSensores();
+            inicializarComportamientoBasico();
 
 
         } else {

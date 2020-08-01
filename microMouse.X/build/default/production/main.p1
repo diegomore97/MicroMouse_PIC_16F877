@@ -79,10 +79,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "10830
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 10830: extern volatile __bit TMR1IF __attribute__((address(0x7CF0)));
 [v _TMR1IF `Vb ~T0 @X0 0 e@31984 ]
-"61 ./ultrasonico.h
-[; ;./ultrasonico.h: 61:     }
-[c E3190 1 2 3 4 .. ]
-[n E3190 . ENFRENTE IZQUIERDA DERECHA ALTO  ]
+"64 ./ultrasonico.h
+[; ;./ultrasonico.h: 64:     }
+[c E3192 1 2 3 4 .. ]
+[n E3192 . ENFRENTE IZQUIERDA DERECHA ALTO  ]
 "10935 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 10935: extern volatile __bit TRISC6 __attribute__((address(0x7CA6)));
 [v _TRISC6 `Vb ~T0 @X0 0 e@31910 ]
@@ -155,44 +155,97 @@ Version 4.0 HI-TECH Software Intermediate Code
 "5402
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 5402: extern volatile unsigned char TXREG __attribute__((address(0xFAD)));
 [v _TXREG `Vuc ~T0 @X0 0 e@4013 ]
-"40 main.c
-[; ;main.c: 40: typedef struct {
-[s S424 `E3190 1 `E3190 1 ]
-[n S424 . curr_state Next_state ]
+"6581
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 6581: extern volatile unsigned char ADCON1 __attribute__((address(0xFC1)));
+[v _ADCON1 `Vuc ~T0 @X0 0 e@4033 ]
+"6510
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 6510: extern volatile unsigned char ADCON2 __attribute__((address(0xFC0)));
+[v _ADCON2 `Vuc ~T0 @X0 0 e@4032 ]
+"6672
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 6672:     struct {
+[s S273 :1 `uc 1 :1 `uc 1 ]
+[n S273 . . GO_NOT_DONE ]
+"6676
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 6676:     struct {
+[s S274 :1 `uc 1 :1 `uc 1 :4 `uc 1 ]
+[n S274 . ADON GO_nDONE CHS ]
+"6681
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 6681:     struct {
+[s S275 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S275 . . GO_DONE CHS0 CHS1 CHS2 CHS3 ]
+"6689
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 6689:     struct {
+[s S276 :1 `uc 1 :1 `uc 1 ]
+[n S276 . . DONE ]
+"6693
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 6693:     struct {
+[s S277 :1 `uc 1 :1 `uc 1 ]
+[n S277 . . GO ]
+"6697
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 6697:     struct {
+[s S278 :1 `uc 1 :1 `uc 1 ]
+[n S278 . . NOT_DONE ]
+"6701
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 6701:     struct {
+[s S279 :1 `uc 1 :1 `uc 1 ]
+[n S279 . . nDONE ]
+"6705
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 6705:     struct {
+[s S280 :1 `uc 1 :1 `uc 1 ]
+[n S280 . . GODONE ]
+"6671
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 6671: typedef union {
+[u S272 `S273 1 `S274 1 `S275 1 `S276 1 `S277 1 `S278 1 `S279 1 `S280 1 ]
+[n S272 . . . . . . . . . ]
+"6710
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 6710: extern volatile ADCON0bits_t ADCON0bits __attribute__((address(0xFC2)));
+[v _ADCON0bits `VS272 ~T0 @X0 0 e@4034 ]
+"6799
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 6799: extern volatile unsigned char ADRESH __attribute__((address(0xFC4)));
+[v _ADRESH `Vuc ~T0 @X0 0 e@4036 ]
+"6792
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 6792: extern volatile unsigned char ADRESL __attribute__((address(0xFC3)));
+[v _ADRESL `Vuc ~T0 @X0 0 e@4035 ]
+"54 main.c
+[; ;main.c: 54: typedef struct {
+[s S429 `E3192 1 `E3192 1 ]
+[n S429 . curr_state Next_state ]
 [t ~ __interrupt . k ]
 [t T36 __interrupt ]
 "9828 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 9828: extern volatile __bit INT0IF __attribute__((address(0x7F91)));
 [v _INT0IF `Vb ~T0 @X0 0 e@32657 ]
-"59 main.c
-[; ;main.c: 59: void antiRebote(T_UBYTE pin);
+"67 main.c
+[; ;main.c: 67: void antiRebote(T_UBYTE pin);
 [v _antiRebote `(v ~T0 @X0 0 ef1`uc ]
 "9993 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 9993: extern volatile __bit LATD2 __attribute__((address(0x7C62)));
 [v _LATD2 `Vb ~T0 @X0 0 e@31842 ]
-"60 main.c
-[; ;main.c: 60: void probarUltrasonico(T_UBYTE numeroSensor);
+"68 main.c
+[; ;main.c: 68: void probarUltrasonico(T_UBYTE numeroSensor);
 [v _probarUltrasonico `(v ~T0 @X0 0 ef1`uc ]
 "113 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\c99\stdio.h
 [v _sprintf `(i ~T0 @X0 0 e1v`*uc`*Cuc ]
-"65 main.c
-[; ;main.c: 65: T_UBYTE decidirDireccion(void);
-[v _decidirDireccion `(uc ~T0 @X0 0 ef ]
-"62
-[; ;main.c: 62: void regresarCruceAnterior(T_UBYTE* movimientos, T_UBYTE numMovimientos);
+"76 main.c
+[; ;main.c: 76: void velocidadEstandar(void);
+[v _velocidadEstandar `(v ~T0 @X0 0 ef ]
+"74
+[; ;main.c: 74: void leerSensores(void);
+[v _leerSensores `(v ~T0 @X0 0 ef ]
+"77
+[; ;main.c: 77: T_UBYTE decidirDireccion(T_UBYTE* caminosRecorrer, T_UBYTE* investigandoCruce,
+[v _decidirDireccion `(uc ~T0 @X0 0 ef4`*uc`*uc`*uc`*uc ]
+"70
+[; ;main.c: 70: void regresarCruceAnterior(T_UBYTE* movimientos, T_UBYTE numMovimientos);
 [v _regresarCruceAnterior `(v ~T0 @X0 0 ef2`*uc`uc ]
-"64
-[; ;main.c: 64: void limpiarMovimientos(T_UBYTE* movimientos, T_UBYTE* numMovimientos);
+"72
+[; ;main.c: 72: void limpiarMovimientos(T_UBYTE* movimientos, T_UBYTE* numMovimientos);
 [v _limpiarMovimientos `(v ~T0 @X0 0 ef2`*uc`*uc ]
-"210
-[; ;main.c: 210:                 }
-[c E3539 1 2 .. ]
-[n E3539 . SALIR_CALLEJON PUNTO_INICIAL  ]
-"63
-[; ;main.c: 63: T_BOOL hayCruce(void);
-[v _hayCruce `(uc ~T0 @X0 0 ef ]
-"55
-[; ;main.c: 55: void moverCarrito(void);
+"71
+[; ;main.c: 71: T_BOOL hayCruce(T_UBYTE* caminosRecorrer);
+[v _hayCruce `(uc ~T0 @X0 0 ef1`*uc ]
+"64
+[; ;main.c: 64: void moverCarrito(void);
 [v _moverCarrito `(v ~T0 @X0 0 ef ]
 "9960 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 9960: extern volatile __bit LATB4 __attribute__((address(0x7C54)));
@@ -206,8 +259,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 "9969
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 9969: extern volatile __bit LATB7 __attribute__((address(0x7C57)));
 [v _LATB7 `Vb ~T0 @X0 0 e@31831 ]
+"343 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\c99\math.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\c99\math.h: 343: float roundf(float);
+[v _roundf `(f ~T0 @X0 0 ef1`f ]
 [p mainexit ]
-"8588
+"8588 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 8588:     struct {
 [s S360 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S360 . RBIF INT0IF TMR0IF RBIE INT0IE TMR0IE PEIE_GIEL GIE_GIEH ]
@@ -1068,161 +1124,180 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./pwm.h: 82: }
 [e :UE 374 ]
 }
-"23 ./ultrasonico.h
-[; ;./ultrasonico.h: 23: T_UWORD dameDistancia(T_UBYTE numeroSensor) {
-[v _dameDistancia `(us ~T0 @X0 1 ef1`uc ]
+"21 ./ultrasonico.h
+[; ;./ultrasonico.h: 21: T_FLOAT sensorDerecha, sensorIzquierda, sensorEnfrente;
+[v _sensorDerecha `f ~T0 @X0 1 e ]
+[v _sensorIzquierda `f ~T0 @X0 1 e ]
+[v _sensorEnfrente `f ~T0 @X0 1 e ]
+"22
+[; ;./ultrasonico.h: 22: T_FLOAT oldSensorDerecha = 0, oldSensorIzquierda = 0, oldSensorEnfrente = 0;
+[v _oldSensorDerecha `f ~T0 @X0 1 e ]
+[i _oldSensorDerecha
+-> -> 0 `i `f
+]
+[v _oldSensorIzquierda `f ~T0 @X0 1 e ]
+[i _oldSensorIzquierda
+-> -> 0 `i `f
+]
+[v _oldSensorEnfrente `f ~T0 @X0 1 e ]
+[i _oldSensorEnfrente
+-> -> 0 `i `f
+]
+"26
+[; ;./ultrasonico.h: 26: T_FLOAT dameDistancia(T_UBYTE numeroSensor) {
+[v _dameDistancia `(f ~T0 @X0 1 ef1`uc ]
 {
 [e :U _dameDistancia ]
 [v _numeroSensor `uc ~T0 @X0 1 r1 ]
 [f ]
-"25
-[; ;./ultrasonico.h: 25:     T_UINT conteo;
-[v _conteo `ui ~T0 @X0 1 a ]
-"26
-[; ;./ultrasonico.h: 26:     T_UWORD distancia;
-[v _distancia `us ~T0 @X0 1 a ]
 "28
-[; ;./ultrasonico.h: 28:     TMR1H = 0x00;
-[e = _TMR1H -> -> 0 `i `uc ]
+[; ;./ultrasonico.h: 28:     T_UINT conteo;
+[v _conteo `ui ~T0 @X0 1 a ]
 "29
-[; ;./ultrasonico.h: 29:     TMR1L = 0x00;
-[e = _TMR1L -> -> 0 `i `uc ]
-"30
-[; ;./ultrasonico.h: 30:     conteo = 0;
-[e = _conteo -> -> 0 `i `ui ]
+[; ;./ultrasonico.h: 29:     T_FLOAT distancia;
+[v _distancia `f ~T0 @X0 1 a ]
 "31
-[; ;./ultrasonico.h: 31:     LATD3 = 1;
-[e = _LATD3 -> -> 1 `i `b ]
+[; ;./ultrasonico.h: 31:     TMR1H = 0x00;
+[e = _TMR1H -> -> 0 `i `uc ]
 "32
-[; ;./ultrasonico.h: 32:     _delay((unsigned long)((12)*(4000000/4000000.0)));
-[e ( __delay (1 -> * -> -> 12 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+[; ;./ultrasonico.h: 32:     TMR1L = 0x00;
+[e = _TMR1L -> -> 0 `i `uc ]
 "33
-[; ;./ultrasonico.h: 33:     LATD3 = 0;
-[e = _LATD3 -> -> 0 `i `b ]
+[; ;./ultrasonico.h: 33:     conteo = 0;
+[e = _conteo -> -> 0 `i `ui ]
+"34
+[; ;./ultrasonico.h: 34:     LATD3 = 1;
+[e = _LATD3 -> -> 1 `i `b ]
 "35
-[; ;./ultrasonico.h: 35:     switch (numeroSensor) {
+[; ;./ultrasonico.h: 35:     _delay((unsigned long)((12)*(4000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 12 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+"36
+[; ;./ultrasonico.h: 36:     LATD3 = 0;
+[e = _LATD3 -> -> 0 `i `b ]
+"38
+[; ;./ultrasonico.h: 38:     switch (numeroSensor) {
 [e $U 385  ]
 {
-"37
-[; ;./ultrasonico.h: 37:         case ENFRENTE:
+"40
+[; ;./ultrasonico.h: 40:         case ENFRENTE:
 [e :U 386 ]
-"39
-[; ;./ultrasonico.h: 39:             while (!PORTBbits.RB1);
+"42
+[; ;./ultrasonico.h: 42:             while (!PORTBbits.RB1);
 [e $U 387  ]
 [e :U 388 ]
 [e :U 387 ]
 [e $ ! != -> . . _PORTBbits 0 1 `i -> 0 `i 388  ]
 [e :U 389 ]
-"40
-[; ;./ultrasonico.h: 40:             TMR1ON = 1;
+"43
+[; ;./ultrasonico.h: 43:             TMR1ON = 1;
 [e = _TMR1ON -> -> 1 `i `b ]
-"41
-[; ;./ultrasonico.h: 41:             while (PORTBbits.RB1 && !TMR1IF);
+"44
+[; ;./ultrasonico.h: 44:             while (PORTBbits.RB1 && !TMR1IF);
 [e $U 390  ]
 [e :U 391 ]
 [e :U 390 ]
 [e $ && != -> . . _PORTBbits 0 1 `i -> 0 `i ! _TMR1IF 391  ]
 [e :U 392 ]
-"43
-[; ;./ultrasonico.h: 43:             break;
+"46
+[; ;./ultrasonico.h: 46:             break;
 [e $U 384  ]
-"45
-[; ;./ultrasonico.h: 45:         case IZQUIERDA:
+"48
+[; ;./ultrasonico.h: 48:         case IZQUIERDA:
 [e :U 393 ]
-"47
-[; ;./ultrasonico.h: 47:             while (!PORTBbits.RB2);
+"50
+[; ;./ultrasonico.h: 50:             while (!PORTBbits.RB2);
 [e $U 394  ]
 [e :U 395 ]
 [e :U 394 ]
 [e $ ! != -> . . _PORTBbits 0 2 `i -> 0 `i 395  ]
 [e :U 396 ]
-"48
-[; ;./ultrasonico.h: 48:             TMR1ON = 1;
+"51
+[; ;./ultrasonico.h: 51:             TMR1ON = 1;
 [e = _TMR1ON -> -> 1 `i `b ]
-"49
-[; ;./ultrasonico.h: 49:             while (PORTBbits.RB2 && !TMR1IF);
+"52
+[; ;./ultrasonico.h: 52:             while (PORTBbits.RB2 && !TMR1IF);
 [e $U 397  ]
 [e :U 398 ]
 [e :U 397 ]
 [e $ && != -> . . _PORTBbits 0 2 `i -> 0 `i ! _TMR1IF 398  ]
 [e :U 399 ]
-"51
-[; ;./ultrasonico.h: 51:             break;
+"54
+[; ;./ultrasonico.h: 54:             break;
 [e $U 384  ]
-"53
-[; ;./ultrasonico.h: 53:         case DERECHA:
+"56
+[; ;./ultrasonico.h: 56:         case DERECHA:
 [e :U 400 ]
-"55
-[; ;./ultrasonico.h: 55:             while (!PORTBbits.RB3);
+"58
+[; ;./ultrasonico.h: 58:             while (!PORTBbits.RB3);
 [e $U 401  ]
 [e :U 402 ]
 [e :U 401 ]
 [e $ ! != -> . . _PORTBbits 0 3 `i -> 0 `i 402  ]
 [e :U 403 ]
-"56
-[; ;./ultrasonico.h: 56:             TMR1ON = 1;
+"59
+[; ;./ultrasonico.h: 59:             TMR1ON = 1;
 [e = _TMR1ON -> -> 1 `i `b ]
-"57
-[; ;./ultrasonico.h: 57:             while (PORTBbits.RB3 && !TMR1IF);
+"60
+[; ;./ultrasonico.h: 60:             while (PORTBbits.RB3 && !TMR1IF);
 [e $U 404  ]
 [e :U 405 ]
 [e :U 404 ]
 [e $ && != -> . . _PORTBbits 0 3 `i -> 0 `i ! _TMR1IF 405  ]
 [e :U 406 ]
-"59
-[; ;./ultrasonico.h: 59:             break;
+"62
+[; ;./ultrasonico.h: 62:             break;
 [e $U 384  ]
-"61
-[; ;./ultrasonico.h: 61:     }
+"64
+[; ;./ultrasonico.h: 64:     }
 }
 [e $U 384  ]
 [e :U 385 ]
-[e [\ -> _numeroSensor `i , $ . `E3190 0 386
- , $ . `E3190 1 393
- , $ . `E3190 2 400
+[e [\ -> _numeroSensor `i , $ . `E3192 0 386
+ , $ . `E3192 1 393
+ , $ . `E3192 2 400
  384 ]
 [e :U 384 ]
-"63
-[; ;./ultrasonico.h: 63:     TMR1ON = 0;
+"66
+[; ;./ultrasonico.h: 66:     TMR1ON = 0;
 [e = _TMR1ON -> -> 0 `i `b ]
-"65
-[; ;./ultrasonico.h: 65:     if (!TMR1IF) {
+"68
+[; ;./ultrasonico.h: 68:     if (!TMR1IF) {
 [e $ ! ! _TMR1IF 407  ]
 {
-"66
-[; ;./ultrasonico.h: 66:         conteo |= TMR1H << 8;
-[e =| _conteo -> << -> _TMR1H `i -> 8 `i `ui ]
-"67
-[; ;./ultrasonico.h: 67:         conteo |= TMR1L;
-[e =| _conteo -> _TMR1L `ui ]
 "69
-[; ;./ultrasonico.h: 69:         distancia = conteo / 58;
-[e = _distancia -> / _conteo -> -> 58 `i `ui `us ]
+[; ;./ultrasonico.h: 69:         conteo |= TMR1H << 8;
+[e =| _conteo -> << -> _TMR1H `i -> 8 `i `ui ]
 "70
-[; ;./ultrasonico.h: 70:     } else {
+[; ;./ultrasonico.h: 70:         conteo |= TMR1L;
+[e =| _conteo -> _TMR1L `ui ]
+"72
+[; ;./ultrasonico.h: 72:         distancia = conteo / 58;
+[e = _distancia -> / _conteo -> -> 58 `i `ui `f ]
+"73
+[; ;./ultrasonico.h: 73:     } else {
 }
 [e $U 408  ]
 [e :U 407 ]
 {
-"71
-[; ;./ultrasonico.h: 71:         conteo = 0;
-[e = _conteo -> -> 0 `i `ui ]
-"72
-[; ;./ultrasonico.h: 72:         TMR1IF = 0;
-[e = _TMR1IF -> -> 0 `i `b ]
-"73
-[; ;./ultrasonico.h: 73:         distancia = 0;
-[e = _distancia -> -> 0 `i `us ]
 "74
-[; ;./ultrasonico.h: 74:     }
+[; ;./ultrasonico.h: 74:         conteo = 0;
+[e = _conteo -> -> 0 `i `ui ]
+"75
+[; ;./ultrasonico.h: 75:         TMR1IF = 0;
+[e = _TMR1IF -> -> 0 `i `b ]
+"76
+[; ;./ultrasonico.h: 76:         distancia = 0;
+[e = _distancia -> -> 0 `i `f ]
+"77
+[; ;./ultrasonico.h: 77:     }
 }
 [e :U 408 ]
-"77
-[; ;./ultrasonico.h: 77:     return distancia;
+"80
+[; ;./ultrasonico.h: 80:     return distancia;
 [e ) _distancia ]
 [e $UE 383  ]
-"79
-[; ;./ultrasonico.h: 79: }
+"82
+[; ;./ultrasonico.h: 82: }
 [e :UE 383 ]
 }
 "13 ./UART.h
@@ -1342,914 +1417,2063 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./UART.h: 51: }
 [e :UE 418 ]
 }
-"50 main.c
-[; ;main.c: 50: ComportamientoBasico mouse;
-[v _mouse `S424 ~T0 @X0 1 e ]
-"51
-[; ;main.c: 51: T_UBYTE pausa = 1;
+"7 ./adc.h
+[; ;./adc.h: 7: void configurarAdc(void) {
+[v _configurarAdc `(v ~T0 @X0 1 ef ]
+{
+[e :U _configurarAdc ]
+[f ]
+"8
+[; ;./adc.h: 8:     ADCON1 = 0b00001110;
+[e = _ADCON1 -> -> 14 `i `uc ]
+"9
+[; ;./adc.h: 9:     ADCON2 = 0b10100101;
+[e = _ADCON2 -> -> 165 `i `uc ]
+"10
+[; ;./adc.h: 10: }
+[e :UE 422 ]
+}
+"12
+[; ;./adc.h: 12: short dameLecturaAdc(char canalLeer) {
+[v _dameLecturaAdc `(s ~T0 @X0 1 ef1`uc ]
+{
+[e :U _dameLecturaAdc ]
+[v _canalLeer `uc ~T0 @X0 1 r1 ]
+[f ]
+"14
+[; ;./adc.h: 14:     _delay((unsigned long)((20)*(4000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+"16
+[; ;./adc.h: 16:     ADCON0bits.ADON = 1;
+[e = . . _ADCON0bits 1 0 -> -> 1 `i `uc ]
+"17
+[; ;./adc.h: 17:     ADCON0bits.CHS = canalLeer;
+[e = . . _ADCON0bits 1 2 -> _canalLeer `uc ]
+"18
+[; ;./adc.h: 18:     ADCON0bits.GO = 1;
+[e = . . _ADCON0bits 4 1 -> -> 1 `i `uc ]
+"19
+[; ;./adc.h: 19:     ADCON0bits.GO_DONE = 1;
+[e = . . _ADCON0bits 2 1 -> -> 1 `i `uc ]
+"21
+[; ;./adc.h: 21:     while (ADCON0bits.GO_DONE);
+[e $U 424  ]
+[e :U 425 ]
+[e :U 424 ]
+[e $ != -> . . _ADCON0bits 2 1 `i -> 0 `i 425  ]
+[e :U 426 ]
+"23
+[; ;./adc.h: 23:     ADCON0bits.ADON = 0;
+[e = . . _ADCON0bits 1 0 -> -> 0 `i `uc ]
+"25
+[; ;./adc.h: 25:     return (ADRESH << 8) +ADRESL;
+[e ) -> + << -> _ADRESH `i -> 8 `i -> _ADRESL `i `s ]
+[e $UE 423  ]
+"27
+[; ;./adc.h: 27: }
+[e :UE 423 ]
+}
+"18 main.c
+[; ;main.c: 18: T_FLOAT DISTANCIA_PRIORIDAD_ALTA;
+[v _DISTANCIA_PRIORIDAD_ALTA `f ~T0 @X0 1 e ]
+"19
+[; ;main.c: 19: T_FLOAT DISTANCIA_PRIORIDAD_MEDIA;
+[v _DISTANCIA_PRIORIDAD_MEDIA `f ~T0 @X0 1 e ]
+"20
+[; ;main.c: 20: T_FLOAT DISTANCIA_PRIORIDAD_BAJA;
+[v _DISTANCIA_PRIORIDAD_BAJA `f ~T0 @X0 1 e ]
+"60
+[; ;main.c: 60: ComportamientoBasico mouse;
+[v _mouse `S429 ~T0 @X0 1 e ]
+"61
+[; ;main.c: 61: T_UBYTE pausa = 1;
 [v _pausa `uc ~T0 @X0 1 e ]
 [i _pausa
 -> -> 1 `i `uc
 ]
-"53
-[; ;main.c: 53: T_BYTE buffer[50];
+"62
+[; ;main.c: 62: T_BYTE buffer[50];
 [v _buffer `uc ~T0 @X0 -> 50 `i e ]
 [v $root$_boton `(v ~T0 @X0 0 e ]
-"67
-[; ;main.c: 67: void __attribute__((picinterrupt(("")))) boton(void) {
+"80
+[; ;main.c: 80: void __attribute__((picinterrupt(("")))) boton(void) {
 [v _boton `(v ~T36 @X0 1 ef ]
 {
 [e :U _boton ]
 [f ]
-"69
-[; ;main.c: 69:     if (INT0IF)
-[e $ ! _INT0IF 426  ]
-"70
-[; ;main.c: 70:     {
-{
-"71
-[; ;main.c: 71:         antiRebote(1);
-[e ( _antiRebote (1 -> -> 1 `i `uc ]
-"72
-[; ;main.c: 72:         if (pausa) {
-[e $ ! != -> _pausa `i -> 0 `i 427  ]
-{
-"73
-[; ;main.c: 73:             pausa = 0;
-[e = _pausa -> -> 0 `i `uc ]
-"74
-[; ;main.c: 74:             LATD2 = 1;
-[e = _LATD2 -> -> 1 `i `b ]
-"75
-[; ;main.c: 75:             _delay((unsigned long)((3000)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 3000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"76
-[; ;main.c: 76:         } else {
-}
-[e $U 428  ]
-[e :U 427 ]
-{
-"77
-[; ;main.c: 77:             LATD2 = 0;
-[e = _LATD2 -> -> 0 `i `b ]
-"78
-[; ;main.c: 78:             pausa = 1;
-[e = _pausa -> -> 1 `i `uc ]
-"79
-[; ;main.c: 79:         }
-}
-[e :U 428 ]
-"81
-[; ;main.c: 81:         INT0IF = 0;
-[e = _INT0IF -> -> 0 `i `b ]
 "82
-[; ;main.c: 82:     }
-}
-[e :U 426 ]
+[; ;main.c: 82:     if (INT0IF)
+[e $ ! _INT0IF 431  ]
 "83
-[; ;main.c: 83: }
-[e :UE 425 ]
-}
+[; ;main.c: 83:     {
+{
+"84
+[; ;main.c: 84:         antiRebote(1);
+[e ( _antiRebote (1 -> -> 1 `i `uc ]
 "85
-[; ;main.c: 85: void probarSensores(void) {
+[; ;main.c: 85:         if (pausa) {
+[e $ ! != -> _pausa `i -> 0 `i 432  ]
+{
+"86
+[; ;main.c: 86:             pausa = 0;
+[e = _pausa -> -> 0 `i `uc ]
+"87
+[; ;main.c: 87:             LATD2 = 1;
+[e = _LATD2 -> -> 1 `i `b ]
+"88
+[; ;main.c: 88:             _delay((unsigned long)((3000)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 3000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"89
+[; ;main.c: 89:         } else {
+}
+[e $U 433  ]
+[e :U 432 ]
+{
+"90
+[; ;main.c: 90:             LATD2 = 0;
+[e = _LATD2 -> -> 0 `i `b ]
+"91
+[; ;main.c: 91:             pausa = 1;
+[e = _pausa -> -> 1 `i `uc ]
+"92
+[; ;main.c: 92:         }
+}
+[e :U 433 ]
+"94
+[; ;main.c: 94:         INT0IF = 0;
+[e = _INT0IF -> -> 0 `i `b ]
+"95
+[; ;main.c: 95:     }
+}
+[e :U 431 ]
+"96
+[; ;main.c: 96: }
+[e :UE 430 ]
+}
+"98
+[; ;main.c: 98: void probarSensores(void) {
 [v _probarSensores `(v ~T0 @X0 1 ef ]
 {
 [e :U _probarSensores ]
 [f ]
-"86
-[; ;main.c: 86:     probarUltrasonico(ENFRENTE);
-[e ( _probarUltrasonico (1 -> . `E3190 0 `uc ]
-"87
-[; ;main.c: 87:     probarUltrasonico(IZQUIERDA);
-[e ( _probarUltrasonico (1 -> . `E3190 1 `uc ]
-"88
-[; ;main.c: 88:     probarUltrasonico(DERECHA);
-[e ( _probarUltrasonico (1 -> . `E3190 2 `uc ]
-"89
-[; ;main.c: 89: }
-[e :UE 429 ]
+"99
+[; ;main.c: 99:     probarUltrasonico(ENFRENTE);
+[e ( _probarUltrasonico (1 -> . `E3192 0 `uc ]
+"100
+[; ;main.c: 100:     probarUltrasonico(IZQUIERDA);
+[e ( _probarUltrasonico (1 -> . `E3192 1 `uc ]
+"101
+[; ;main.c: 101:     probarUltrasonico(DERECHA);
+[e ( _probarUltrasonico (1 -> . `E3192 2 `uc ]
+"102
+[; ;main.c: 102: }
+[e :UE 434 ]
 }
-"91
-[; ;main.c: 91: void probarUltrasonico(T_UBYTE numeroSensor) {
+"104
+[; ;main.c: 104: void probarUltrasonico(T_UBYTE numeroSensor) {
 [v _probarUltrasonico `(v ~T0 @X0 1 ef1`uc ]
 {
 [e :U _probarUltrasonico ]
 [v _numeroSensor `uc ~T0 @X0 1 r1 ]
 [f ]
-"93
-[; ;main.c: 93:     switch (numeroSensor) {
-[e $U 432  ]
+"106
+[; ;main.c: 106:     switch (numeroSensor) {
+[e $U 437  ]
 {
-"95
-[; ;main.c: 95:         case ENFRENTE:
-[e :U 433 ]
-"96
-[; ;main.c: 96:             UART_printf("\rEnfrente: \r\n");
-[e ( _UART_printf (1 :s 1C ]
-"97
-[; ;main.c: 97:             break;
-[e $U 431  ]
-"99
-[; ;main.c: 99:         case IZQUIERDA:
-[e :U 434 ]
-"100
-[; ;main.c: 100:             UART_printf("\rIzquierda: \r\n");
-[e ( _UART_printf (1 :s 2C ]
-"101
-[; ;main.c: 101:             break;
-[e $U 431  ]
-"103
-[; ;main.c: 103:         case DERECHA:
-[e :U 435 ]
-"104
-[; ;main.c: 104:             UART_printf("\rDerecha: \r\n");
-[e ( _UART_printf (1 :s 3C ]
-"105
-[; ;main.c: 105:             break;
-[e $U 431  ]
-"107
-[; ;main.c: 107:     }
-}
-[e $U 431  ]
-[e :U 432 ]
-[e [\ -> _numeroSensor `i , $ . `E3190 0 433
- , $ . `E3190 1 434
- , $ . `E3190 2 435
- 431 ]
-[e :U 431 ]
+"108
+[; ;main.c: 108:         case ENFRENTE:
+[e :U 438 ]
 "109
-[; ;main.c: 109:     sprintf(buffer, "\rDistancia: %d cm\r\n\n", dameDistancia(numeroSensor));
-[e ( _sprintf (1 , (. , &U _buffer :s 4C -> ( _dameDistancia (1 _numeroSensor `ui ]
+[; ;main.c: 109:             UART_printf("\rEnfrente: \r\n");
+[e ( _UART_printf (1 :s 1C ]
 "110
-[; ;main.c: 110:     UART_printf(buffer);
-[e ( _UART_printf (1 &U _buffer ]
-"111
-[; ;main.c: 111:     _delay((unsigned long)((1000)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;main.c: 110:             break;
+[e $U 436  ]
+"112
+[; ;main.c: 112:         case IZQUIERDA:
+[e :U 439 ]
 "113
-[; ;main.c: 113: }
-[e :UE 430 ]
+[; ;main.c: 113:             UART_printf("\rIzquierda: \r\n");
+[e ( _UART_printf (1 :s 2C ]
+"114
+[; ;main.c: 114:             break;
+[e $U 436  ]
+"116
+[; ;main.c: 116:         case DERECHA:
+[e :U 440 ]
+"117
+[; ;main.c: 117:             UART_printf("\rDerecha: \r\n");
+[e ( _UART_printf (1 :s 3C ]
+"118
+[; ;main.c: 118:             break;
+[e $U 436  ]
+"120
+[; ;main.c: 120:     }
 }
-"115
-[; ;main.c: 115: void antiRebote(T_UBYTE pin) {
+[e $U 436  ]
+[e :U 437 ]
+[e [\ -> _numeroSensor `i , $ . `E3192 0 438
+ , $ . `E3192 1 439
+ , $ . `E3192 2 440
+ 436 ]
+[e :U 436 ]
+"122
+[; ;main.c: 122:     sprintf(buffer, "\rDistancia: %.2f cm\r\n\n", dameDistancia(numeroSensor));
+[e ( _sprintf (1 , (. , &U _buffer :s 4C -> ( _dameDistancia (1 _numeroSensor `d ]
+"123
+[; ;main.c: 123:     UART_printf(buffer);
+[e ( _UART_printf (1 &U _buffer ]
+"124
+[; ;main.c: 124:     _delay((unsigned long)((1000)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"126
+[; ;main.c: 126: }
+[e :UE 435 ]
+}
+"128
+[; ;main.c: 128: void antiRebote(T_UBYTE pin) {
 [v _antiRebote `(v ~T0 @X0 1 ef1`uc ]
 {
 [e :U _antiRebote ]
 [v _pin `uc ~T0 @X0 1 r1 ]
 [f ]
-"117
-[; ;main.c: 117:     switch (pin) {
-[e $U 438  ]
-{
-"118
-[; ;main.c: 118:         case 1:
-[e :U 439 ]
-"119
-[; ;main.c: 119:             while (!PORTBbits.RB0);
-[e $U 440  ]
-[e :U 441 ]
-[e :U 440 ]
-[e $ ! != -> . . _PORTBbits 0 0 `i -> 0 `i 441  ]
-[e :U 442 ]
-"120
-[; ;main.c: 120:             while (PORTBbits.RB0);
-[e $U 443  ]
-[e :U 444 ]
-[e :U 443 ]
-[e $ != -> . . _PORTBbits 0 0 `i -> 0 `i 444  ]
-[e :U 445 ]
-"121
-[; ;main.c: 121:             _delay((unsigned long)((100)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"122
-[; ;main.c: 122:             break;
-[e $U 437  ]
-"124
-[; ;main.c: 124:         default:
-[e :U 446 ]
-"125
-[; ;main.c: 125:             break;
-[e $U 437  ]
-"127
-[; ;main.c: 127:     }
-}
-[e $U 437  ]
-[e :U 438 ]
-[e [\ -> _pin `i , $ -> 1 `i 439
- 446 ]
-[e :U 437 ]
-"128
-[; ;main.c: 128: }
-[e :UE 436 ]
-}
 "130
-[; ;main.c: 130: void inicializarComportamientoBasico(void) {
+[; ;main.c: 130:     switch (pin) {
+[e $U 443  ]
+{
+"131
+[; ;main.c: 131:         case 1:
+[e :U 444 ]
+"132
+[; ;main.c: 132:             while (!PORTBbits.RB0);
+[e $U 445  ]
+[e :U 446 ]
+[e :U 445 ]
+[e $ ! != -> . . _PORTBbits 0 0 `i -> 0 `i 446  ]
+[e :U 447 ]
+"133
+[; ;main.c: 133:             while (PORTBbits.RB0);
+[e $U 448  ]
+[e :U 449 ]
+[e :U 448 ]
+[e $ != -> . . _PORTBbits 0 0 `i -> 0 `i 449  ]
+[e :U 450 ]
+"134
+[; ;main.c: 134:             _delay((unsigned long)((100)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"135
+[; ;main.c: 135:             break;
+[e $U 442  ]
+"137
+[; ;main.c: 137:         default:
+[e :U 451 ]
+"138
+[; ;main.c: 138:             break;
+[e $U 442  ]
+"140
+[; ;main.c: 140:     }
+}
+[e $U 442  ]
+[e :U 443 ]
+[e [\ -> _pin `i , $ -> 1 `i 444
+ 451 ]
+[e :U 442 ]
+"141
+[; ;main.c: 141: }
+[e :UE 441 ]
+}
+"143
+[; ;main.c: 143: void inicializarComportamientoBasico(void) {
 [v _inicializarComportamientoBasico `(v ~T0 @X0 1 ef ]
 {
 [e :U _inicializarComportamientoBasico ]
 [f ]
-"132
-[; ;main.c: 132:     mouse.curr_state = ENFRENTE;
-[e = . _mouse 0 . `E3190 0 ]
-"134
-[; ;main.c: 134:     pwmDuty(80, 1);
-[e ( _pwmDuty (2 , -> -> 80 `i `ui -> -> 1 `i `uc ]
-"135
-[; ;main.c: 135:     pwmDuty(80, 2);
-[e ( _pwmDuty (2 , -> -> 80 `i `ui -> -> 2 `i `uc ]
-"137
-[; ;main.c: 137: }
-[e :UE 447 ]
+"145
+[; ;main.c: 145:     mouse.curr_state = ENFRENTE;
+[e = . _mouse 0 . `E3192 0 ]
+"147
+[; ;main.c: 147:     oldSensorDerecha = dameDistancia(DERECHA);
+[e = _oldSensorDerecha ( _dameDistancia (1 -> . `E3192 2 `uc ]
+"148
+[; ;main.c: 148:     oldSensorIzquierda = dameDistancia(IZQUIERDA);
+[e = _oldSensorIzquierda ( _dameDistancia (1 -> . `E3192 1 `uc ]
+"149
+[; ;main.c: 149:     oldSensorEnfrente = dameDistancia(ENFRENTE);
+[e = _oldSensorEnfrente ( _dameDistancia (1 -> . `E3192 0 `uc ]
+"151
+[; ;main.c: 151:     velocidadEstandar();
+[e ( _velocidadEstandar ..  ]
+"153
+[; ;main.c: 153: }
+[e :UE 452 ]
 }
-"139
-[; ;main.c: 139: void comportamientoBasico(void) {
+"155
+[; ;main.c: 155: void comportamientoBasico(void) {
 [v _comportamientoBasico `(v ~T0 @X0 1 ef ]
 {
 [e :U _comportamientoBasico ]
 [f ]
-"141
-[; ;main.c: 141:     static T_UBYTE espejearCarroY = 0;
-[v F3570 `uc ~T0 @X0 1 s espejearCarroY ]
-[i F3570
+"157
+[; ;main.c: 157:     static T_UBYTE espejearCarroY = 0;
+[v F4046 `uc ~T0 @X0 1 s espejearCarroY ]
+[i F4046
 -> -> 0 `i `uc
 ]
-"142
-[; ;main.c: 142:     static T_UBYTE movimientosRealizados[50];
-[v F3571 `uc ~T0 @X0 -> 50 `i s movimientosRealizados ]
-"143
-[; ;main.c: 143:     static T_UBYTE contRepeticiones = 0;
-[v F3572 `uc ~T0 @X0 1 s contRepeticiones ]
-[i F3572
--> -> 0 `i `uc
-]
-"144
-[; ;main.c: 144:     static T_UBYTE numMovimientos = 0;
-[v F3573 `uc ~T0 @X0 1 s numMovimientos ]
-[i F3573
--> -> 0 `i `uc
-]
-"145
-[; ;main.c: 145:     static T_UBYTE mapear = 0;
-[v F3574 `uc ~T0 @X0 1 s mapear ]
-[i F3574
--> -> 0 `i `uc
-]
-"146
-[; ;main.c: 146:     static T_UBYTE contEspejeo = 0;
-[v F3575 `uc ~T0 @X0 1 s contEspejeo ]
-[i F3575
--> -> 0 `i `uc
-]
-"148
-[; ;main.c: 148:     switch (mouse.curr_state) {
-[e $U 450  ]
-{
-"150
-[; ;main.c: 150:         case ENFRENTE:
-[e :U 451 ]
-"152
-[; ;main.c: 152:             switch (decidirDireccion()) {
-[e $U 453  ]
-{
-"154
-[; ;main.c: 154:                 case ENFRENTE:
-[e :U 454 ]
-"155
-[; ;main.c: 155:                     mouse.Next_state = ENFRENTE;
-[e = . _mouse 1 . `E3190 0 ]
-"156
-[; ;main.c: 156:                     break;
-[e $U 452  ]
 "158
-[; ;main.c: 158:                 case IZQUIERDA:
-[e :U 455 ]
+[; ;main.c: 158:     static T_UBYTE movimientosRealizados[50];
+[v F4047 `uc ~T0 @X0 -> 50 `i s movimientosRealizados ]
 "159
-[; ;main.c: 159:                     mouse.Next_state = IZQUIERDA;
-[e = . _mouse 1 . `E3190 1 ]
+[; ;main.c: 159:     static T_UBYTE contRepeticiones = 0;
+[v F4048 `uc ~T0 @X0 1 s contRepeticiones ]
+[i F4048
+-> -> 0 `i `uc
+]
 "160
-[; ;main.c: 160:                     break;
-[e $U 452  ]
+[; ;main.c: 160:     static T_UBYTE numMovimientos = 0;
+[v F4049 `uc ~T0 @X0 1 s numMovimientos ]
+[i F4049
+-> -> 0 `i `uc
+]
+"161
+[; ;main.c: 161:     static T_UBYTE mapear = 0;
+[v F4050 `uc ~T0 @X0 1 s mapear ]
+[i F4050
+-> -> 0 `i `uc
+]
 "162
-[; ;main.c: 162:                 case DERECHA:
-[e :U 456 ]
+[; ;main.c: 162:     static T_UBYTE cruceDetectado = 0;
+[v F4051 `uc ~T0 @X0 1 s cruceDetectado ]
+[i F4051
+-> -> 0 `i `uc
+]
 "163
-[; ;main.c: 163:                     mouse.Next_state = DERECHA;
-[e = . _mouse 1 . `E3190 2 ]
+[; ;main.c: 163:     static T_UBYTE caminosRecorrer[3];
+[v F4052 `uc ~T0 @X0 -> 3 `i s caminosRecorrer ]
 "164
-[; ;main.c: 164:                     break;
-[e $U 452  ]
+[; ;main.c: 164:     static T_UBYTE investigandoCruce = 0;
+[v F4053 `uc ~T0 @X0 1 s investigandoCruce ]
+[i F4053
+-> -> 0 `i `uc
+]
+"165
+[; ;main.c: 165:     static T_UBYTE posicionInvCruce = 0;
+[v F4054 `uc ~T0 @X0 1 s posicionInvCruce ]
+[i F4054
+-> -> 0 `i `uc
+]
 "166
-[; ;main.c: 166:                 case 0:
-[e :U 457 ]
+[; ;main.c: 166:     static T_UBYTE contCaminosRecorridos = 0;
+[v F4055 `uc ~T0 @X0 1 s contCaminosRecorridos ]
+[i F4055
+-> -> 0 `i `uc
+]
 "167
-[; ;main.c: 167:                     mapear = 0;
-[e = F3574 -> -> 0 `i `uc ]
-"168
-[; ;main.c: 168:                     espejearCarroY = 1;
-[e = F3570 -> -> 1 `i `uc ]
+[; ;main.c: 167:     static T_BOOL carroRotado = 0;
+[v F4056 `uc ~T0 @X0 1 s carroRotado ]
+[i F4056
+-> -> 0 `i `uc
+]
 "169
-[; ;main.c: 169:                     contEspejeo++;
-[e ++ F3575 -> -> 1 `i `uc ]
-"170
-[; ;main.c: 170:                     mouse.Next_state = IZQUIERDA;
-[e = . _mouse 1 . `E3190 1 ]
+[; ;main.c: 169:     leerSensores();
+[e ( _leerSensores ..  ]
 "171
-[; ;main.c: 171:                     break;
-[e $U 452  ]
+[; ;main.c: 171:     switch (mouse.curr_state) {
+[e $U 455  ]
+{
 "173
-[; ;main.c: 173:             }
-}
-[e $U 452  ]
-[e :U 453 ]
-[e [\ -> ( _decidirDireccion ..  `i , $ . `E3190 0 454
- , $ . `E3190 1 455
- , $ . `E3190 2 456
- , $ -> 0 `i 457
- 452 ]
-[e :U 452 ]
+[; ;main.c: 173:         case ENFRENTE:
+[e :U 456 ]
 "175
-[; ;main.c: 175:             break;
-[e $U 449  ]
-"177
-[; ;main.c: 177:         case IZQUIERDA:
-[e :U 458 ]
-"179
-[; ;main.c: 179:             contRepeticiones++;
-[e ++ F3572 -> -> 1 `i `uc ]
-"181
-[; ;main.c: 181:             if ((contRepeticiones < 5) && !espejearCarroY)
-[e $ ! && < -> F3572 `i -> 5 `i ! != -> F3570 `i -> 0 `i 459  ]
-"182
-[; ;main.c: 182:                 mouse.Next_state = IZQUIERDA;
-[e = . _mouse 1 . `E3190 1 ]
-[e $U 460  ]
-"183
-[; ;main.c: 183:             else {
+[; ;main.c: 175:             switch (decidirDireccion(caminosRecorrer, &investigandoCruce,
+[e $U 458  ]
+"176
+[; ;main.c: 176:                     &posicionInvCruce, &contCaminosRecorridos)) {
+{
+"178
+[; ;main.c: 178:                 case 0:
 [e :U 459 ]
-{
+"179
+[; ;main.c: 179:                     mapear = 0;
+[e = F4050 -> -> 0 `i `uc ]
+"180
+[; ;main.c: 180:                     espejearCarroY = 1;
+[e = F4046 -> -> 1 `i `uc ]
+"181
+[; ;main.c: 181:                     mouse.Next_state = IZQUIERDA;
+[e = . _mouse 1 . `E3192 1 ]
+"182
+[; ;main.c: 182:                     break;
+[e $U 457  ]
 "184
-[; ;main.c: 184:                 contRepeticiones = 0;
-[e = F3572 -> -> 0 `i `uc ]
-"185
-[; ;main.c: 185:                 mouse.Next_state = ENFRENTE;
-[e = . _mouse 1 . `E3190 0 ]
-"186
-[; ;main.c: 186:             }
-}
+[; ;main.c: 184:                 case ENFRENTE:
 [e :U 460 ]
-"188
-[; ;main.c: 188:             if ((contRepeticiones < (5 * 2)) && espejearCarroY)
-[e $ ! && < -> F3572 `i * -> 5 `i -> 2 `i != -> F3570 `i -> 0 `i 461  ]
+"186
+[; ;main.c: 186:                     mouse.Next_state = ENFRENTE;
+[e = . _mouse 1 . `E3192 0 ]
+"187
+[; ;main.c: 187:                     break;
+[e $U 457  ]
 "189
-[; ;main.c: 189:                 mouse.Next_state = IZQUIERDA;
-[e = . _mouse 1 . `E3190 1 ]
-[e $U 462  ]
-"190
-[; ;main.c: 190:             else {
+[; ;main.c: 189:                 case IZQUIERDA:
 [e :U 461 ]
-{
+"191
+[; ;main.c: 191:                     mouse.Next_state = IZQUIERDA;
+[e = . _mouse 1 . `E3192 1 ]
 "192
-[; ;main.c: 192:                 espejearCarroY = 0;
-[e = F3570 -> -> 0 `i `uc ]
-"193
-[; ;main.c: 193:                 contRepeticiones = 0;
-[e = F3572 -> -> 0 `i `uc ]
-"195
-[; ;main.c: 195:                 switch (contEspejeo) {
-[e $U 464  ]
-{
-"197
-[; ;main.c: 197:                     case SALIR_CALLEJON:
-[e :U 465 ]
-"198
-[; ;main.c: 198:                         regresarCruceAnterior(movimientosRealizados, numMovimientos);
-[e ( _regresarCruceAnterior (2 , &U F3571 F3573 ]
-"199
-[; ;main.c: 199:                         limpiarMovimientos(movimientosRealizados, &numMovimientos);
-[e ( _limpiarMovimientos (2 , &U F3571 &U F3573 ]
-"200
-[; ;main.c: 200:                         espejearCarroY = 1;
-[e = F3570 -> -> 1 `i `uc ]
-"201
-[; ;main.c: 201:                         contEspejeo++;
-[e ++ F3575 -> -> 1 `i `uc ]
-"202
-[; ;main.c: 202:                         mouse.curr_state = IZQUIERDA;
-[e = . _mouse 0 . `E3190 1 ]
-"203
-[; ;main.c: 203:                         break;
-[e $U 463  ]
-"205
-[; ;main.c: 205:                     case PUNTO_INICIAL:
-[e :U 466 ]
-"206
-[; ;main.c: 206:                         contEspejeo = 0;
-[e = F3575 -> -> 0 `i `uc ]
-"207
-[; ;main.c: 207:                         mouse.curr_state = ENFRENTE;
-[e = . _mouse 0 . `E3190 0 ]
-"208
-[; ;main.c: 208:                         break;
-[e $U 463  ]
-"210
-[; ;main.c: 210:                 }
-}
-[e $U 463  ]
-[e :U 464 ]
-[e [\ -> F3575 `i , $ . `E3539 0 465
- , $ . `E3539 1 466
- 463 ]
-[e :U 463 ]
-"212
-[; ;main.c: 212:             }
-}
+[; ;main.c: 192:                     break;
+[e $U 457  ]
+"194
+[; ;main.c: 194:                 case DERECHA:
 [e :U 462 ]
-"214
-[; ;main.c: 214:             break;
-[e $U 449  ]
+"196
+[; ;main.c: 196:                     mouse.Next_state = DERECHA;
+[e = . _mouse 1 . `E3192 2 ]
+"197
+[; ;main.c: 197:                     break;
+[e $U 457  ]
+"200
+[; ;main.c: 200:                 case ALTO:
+[e :U 463 ]
+"201
+[; ;main.c: 201:                     mouse.Next_state = ALTO;
+[e = . _mouse 1 . `E3192 3 ]
+"202
+[; ;main.c: 202:                     break;
+[e $U 457  ]
+"204
+[; ;main.c: 204:             }
+}
+[e $U 457  ]
+[e :U 458 ]
+[e [\ -> ( _decidirDireccion (4 , , , &U F4052 &U F4053 &U F4054 &U F4055 `i , $ -> 0 `i 459
+ , $ . `E3192 0 460
+ , $ . `E3192 1 461
+ , $ . `E3192 2 462
+ , $ . `E3192 3 463
+ 457 ]
+[e :U 457 ]
+"206
+[; ;main.c: 206:             if (mapear)
+[e $ ! != -> F4050 `i -> 0 `i 464  ]
+"207
+[; ;main.c: 207:                 carroRotado = 1;
+[e = F4056 -> -> 1 `i `uc ]
+[e :U 464 ]
+"209
+[; ;main.c: 209:             break;
+[e $U 454  ]
+"211
+[; ;main.c: 211:         case IZQUIERDA:
+[e :U 465 ]
+"213
+[; ;main.c: 213:             contRepeticiones++;
+[e ++ F4048 -> -> 1 `i `uc ]
+"215
+[; ;main.c: 215:             if ((contRepeticiones < 5) && !espejearCarroY)
+[e $ ! && < -> F4048 `i -> 5 `i ! != -> F4046 `i -> 0 `i 466  ]
 "216
-[; ;main.c: 216:         case DERECHA:
-[e :U 467 ]
+[; ;main.c: 216:                 mouse.Next_state = IZQUIERDA;
+[e = . _mouse 1 . `E3192 1 ]
+[e $U 467  ]
+"217
+[; ;main.c: 217:             else {
+[e :U 466 ]
+{
 "218
-[; ;main.c: 218:             contRepeticiones++;
-[e ++ F3572 -> -> 1 `i `uc ]
+[; ;main.c: 218:                 carroRotado = 1;
+[e = F4056 -> -> 1 `i `uc ]
+"219
+[; ;main.c: 219:                 contRepeticiones = 0;
+[e = F4048 -> -> 0 `i `uc ]
 "220
-[; ;main.c: 220:             if (contRepeticiones < 5)
-[e $ ! < -> F3572 `i -> 5 `i 468  ]
+[; ;main.c: 220:                 mouse.Next_state = ENFRENTE;
+[e = . _mouse 1 . `E3192 0 ]
 "221
-[; ;main.c: 221:                 mouse.Next_state = DERECHA;
-[e = . _mouse 1 . `E3190 2 ]
+[; ;main.c: 221:             }
+}
+[e :U 467 ]
+"223
+[; ;main.c: 223:             if ((contRepeticiones < (5 * 2)) && espejearCarroY)
+[e $ ! && < -> F4048 `i * -> 5 `i -> 2 `i != -> F4046 `i -> 0 `i 468  ]
+"224
+[; ;main.c: 224:                 mouse.Next_state = IZQUIERDA;
+[e = . _mouse 1 . `E3192 1 ]
 [e $U 469  ]
-"222
-[; ;main.c: 222:             else {
+"225
+[; ;main.c: 225:             else {
 [e :U 468 ]
 {
-"223
-[; ;main.c: 223:                 mouse.Next_state = ENFRENTE;
-[e = . _mouse 1 . `E3190 0 ]
-"224
-[; ;main.c: 224:                 contRepeticiones = 0;
-[e = F3572 -> -> 0 `i `uc ]
-"225
-[; ;main.c: 225:             }
+"227
+[; ;main.c: 227:                 espejearCarroY = 0;
+[e = F4046 -> -> 0 `i `uc ]
+"228
+[; ;main.c: 228:                 contRepeticiones = 0;
+[e = F4048 -> -> 0 `i `uc ]
+"230
+[; ;main.c: 230:                 regresarCruceAnterior(movimientosRealizados, numMovimientos);
+[e ( _regresarCruceAnterior (2 , &U F4047 F4049 ]
+"231
+[; ;main.c: 231:                 limpiarMovimientos(movimientosRealizados, &numMovimientos);
+[e ( _limpiarMovimientos (2 , &U F4047 &U F4049 ]
+"233
+[; ;main.c: 233:                 cruceDetectado = 0;
+[e = F4051 -> -> 0 `i `uc ]
+"234
+[; ;main.c: 234:                 posicionInvCruce = 1;
+[e = F4054 -> -> 1 `i `uc ]
+"235
+[; ;main.c: 235:                 contCaminosRecorridos++;
+[e ++ F4055 -> -> 1 `i `uc ]
+"236
+[; ;main.c: 236:                 mouse.curr_state = ENFRENTE;
+[e = . _mouse 0 . `E3192 0 ]
+"237
+[; ;main.c: 237:             }
 }
 [e :U 469 ]
-"227
-[; ;main.c: 227:             break;
-[e $U 449  ]
-"229
-[; ;main.c: 229:         case ALTO:
-[e :U 470 ]
-"231
-[; ;main.c: 231:             break;
-[e $U 449  ]
-"233
-[; ;main.c: 233:     }
-}
-[e $U 449  ]
-[e :U 450 ]
-[e [\ -> . _mouse 0 `ui , $ -> . `E3190 0 `ui 451
- , $ -> . `E3190 1 `ui 458
- , $ -> . `E3190 2 `ui 467
- , $ -> . `E3190 3 `ui 470
- 449 ]
-[e :U 449 ]
-"235
-[; ;main.c: 235:     mouse.curr_state = mouse.Next_state;
-[e = . _mouse 0 . _mouse 1 ]
-"237
-[; ;main.c: 237:     if (hayCruce()) {
-[e $ ! != -> ( _hayCruce ..  `i -> 0 `i 471  ]
-{
-"238
-[; ;main.c: 238:         mapear = 1;
-[e = F3574 -> -> 1 `i `uc ]
 "239
-[; ;main.c: 239:     }
-}
-[e :U 471 ]
+[; ;main.c: 239:             break;
+[e $U 454  ]
 "241
-[; ;main.c: 241:     if (mapear)
-[e $ ! != -> F3574 `i -> 0 `i 472  ]
-"242
-[; ;main.c: 242:         movimientosRealizados[numMovimientos++] = mouse.curr_state;
-[e = *U + &U F3571 * -> ++ F3573 -> -> 1 `i `uc `ux -> -> # *U &U F3571 `ui `ux -> . _mouse 0 `uc ]
-[e :U 472 ]
-"244
-[; ;main.c: 244:     moverCarrito();
-[e ( _moverCarrito ..  ]
+[; ;main.c: 241:         case DERECHA:
+[e :U 470 ]
+"243
+[; ;main.c: 243:             contRepeticiones++;
+[e ++ F4048 -> -> 1 `i `uc ]
+"245
+[; ;main.c: 245:             if (contRepeticiones < 5)
+[e $ ! < -> F4048 `i -> 5 `i 471  ]
 "246
-[; ;main.c: 246: }
-[e :UE 448 ]
-}
+[; ;main.c: 246:                 mouse.Next_state = DERECHA;
+[e = . _mouse 1 . `E3192 2 ]
+[e $U 472  ]
+"247
+[; ;main.c: 247:             else {
+[e :U 471 ]
+{
 "248
-[; ;main.c: 248: void moverCarrito(void) {
+[; ;main.c: 248:                 carroRotado = 1;
+[e = F4056 -> -> 1 `i `uc ]
+"249
+[; ;main.c: 249:                 contRepeticiones = 0;
+[e = F4048 -> -> 0 `i `uc ]
+"250
+[; ;main.c: 250:                 mouse.Next_state = ENFRENTE;
+[e = . _mouse 1 . `E3192 0 ]
+"251
+[; ;main.c: 251:             }
+}
+[e :U 472 ]
+"253
+[; ;main.c: 253:             break;
+[e $U 454  ]
+"255
+[; ;main.c: 255:         case ALTO:
+[e :U 473 ]
+"257
+[; ;main.c: 257:             break;
+[e $U 454  ]
+"259
+[; ;main.c: 259:     }
+}
+[e $U 454  ]
+[e :U 455 ]
+[e [\ -> . _mouse 0 `ui , $ -> . `E3192 0 `ui 456
+ , $ -> . `E3192 1 `ui 465
+ , $ -> . `E3192 2 `ui 470
+ , $ -> . `E3192 3 `ui 473
+ 454 ]
+[e :U 454 ]
+"261
+[; ;main.c: 261:     mouse.curr_state = mouse.Next_state;
+[e = . _mouse 0 . _mouse 1 ]
+"263
+[; ;main.c: 263:     if (hayCruce(caminosRecorrer) && !cruceDetectado) {
+[e $ ! && != -> ( _hayCruce (1 &U F4052 `i -> 0 `i ! != -> F4051 `i -> 0 `i 474  ]
+{
+"265
+[; ;main.c: 265:         if (!investigandoCruce)
+[e $ ! ! != -> F4053 `i -> 0 `i 475  ]
+"266
+[; ;main.c: 266:             posicionInvCruce = 1;
+[e = F4054 -> -> 1 `i `uc ]
+[e :U 475 ]
+"268
+[; ;main.c: 268:         mapear = 1;
+[e = F4050 -> -> 1 `i `uc ]
+"269
+[; ;main.c: 269:         cruceDetectado = 1;
+[e = F4051 -> -> 1 `i `uc ]
+"270
+[; ;main.c: 270:         carroRotado = 0;
+[e = F4056 -> -> 0 `i `uc ]
+"271
+[; ;main.c: 271:         investigandoCruce = 1;
+[e = F4053 -> -> 1 `i `uc ]
+"272
+[; ;main.c: 272:     }
+}
+[e :U 474 ]
+"274
+[; ;main.c: 274:     if (mapear && carroRotado)
+[e $ ! && != -> F4050 `i -> 0 `i != -> F4056 `i -> 0 `i 476  ]
+"275
+[; ;main.c: 275:         movimientosRealizados[numMovimientos++] = mouse.curr_state;
+[e = *U + &U F4047 * -> ++ F4049 -> -> 1 `i `uc `ux -> -> # *U &U F4047 `ui `ux -> . _mouse 0 `uc ]
+[e :U 476 ]
+"277
+[; ;main.c: 277:     moverCarrito();
+[e ( _moverCarrito ..  ]
+"279
+[; ;main.c: 279: }
+[e :UE 453 ]
+}
+"281
+[; ;main.c: 281: void moverCarrito(void) {
 [v _moverCarrito `(v ~T0 @X0 1 ef ]
 {
 [e :U _moverCarrito ]
 [f ]
-"250
-[; ;main.c: 250:     switch (mouse.curr_state) {
-[e $U 475  ]
-{
-"252
-[; ;main.c: 252:         case ENFRENTE:
-[e :U 476 ]
-"254
-[; ;main.c: 254:             LATB4 = 1;
-[e = _LATB4 -> -> 1 `i `b ]
-"255
-[; ;main.c: 255:             LATB5 = 0;
-[e = _LATB5 -> -> 0 `i `b ]
-"256
-[; ;main.c: 256:             LATB6 = 1;
-[e = _LATB6 -> -> 1 `i `b ]
-"257
-[; ;main.c: 257:             LATB7 = 0;
-[e = _LATB7 -> -> 0 `i `b ]
-"259
-[; ;main.c: 259:             break;
-[e $U 474  ]
-"261
-[; ;main.c: 261:         case IZQUIERDA:
-[e :U 477 ]
-"263
-[; ;main.c: 263:             LATB4 = 1;
-[e = _LATB4 -> -> 1 `i `b ]
-"264
-[; ;main.c: 264:             LATB5 = 0;
-[e = _LATB5 -> -> 0 `i `b ]
-"265
-[; ;main.c: 265:             LATB6 = 0;
-[e = _LATB6 -> -> 0 `i `b ]
-"266
-[; ;main.c: 266:             LATB7 = 0;
-[e = _LATB7 -> -> 0 `i `b ]
-"268
-[; ;main.c: 268:             break;
-[e $U 474  ]
-"270
-[; ;main.c: 270:         case DERECHA:
-[e :U 478 ]
-"272
-[; ;main.c: 272:             LATB4 = 0;
-[e = _LATB4 -> -> 0 `i `b ]
-"273
-[; ;main.c: 273:             LATB5 = 0;
-[e = _LATB5 -> -> 0 `i `b ]
-"274
-[; ;main.c: 274:             LATB6 = 1;
-[e = _LATB6 -> -> 1 `i `b ]
-"275
-[; ;main.c: 275:             LATB7 = 0;
-[e = _LATB7 -> -> 0 `i `b ]
-"277
-[; ;main.c: 277:             break;
-[e $U 474  ]
-"279
-[; ;main.c: 279:         case ALTO:
-[e :U 479 ]
-"281
-[; ;main.c: 281:             LATB4 = 0;
-[e = _LATB4 -> -> 0 `i `b ]
-"282
-[; ;main.c: 282:             LATB5 = 0;
-[e = _LATB5 -> -> 0 `i `b ]
 "283
-[; ;main.c: 283:             LATB6 = 0;
-[e = _LATB6 -> -> 0 `i `b ]
-"284
-[; ;main.c: 284:             LATB7 = 0;
-[e = _LATB7 -> -> 0 `i `b ]
-"286
-[; ;main.c: 286:             break;
-[e $U 474  ]
+[; ;main.c: 283:     switch (mouse.curr_state) {
+[e $U 479  ]
+{
+"285
+[; ;main.c: 285:         case ENFRENTE:
+[e :U 480 ]
+"287
+[; ;main.c: 287:             LATB4 = 1;
+[e = _LATB4 -> -> 1 `i `b ]
 "288
-[; ;main.c: 288:     }
-}
-[e $U 474  ]
-[e :U 475 ]
-[e [\ -> . _mouse 0 `ui , $ -> . `E3190 0 `ui 476
- , $ -> . `E3190 1 `ui 477
- , $ -> . `E3190 2 `ui 478
- , $ -> . `E3190 3 `ui 479
- 474 ]
-[e :U 474 ]
+[; ;main.c: 288:             LATB5 = 0;
+[e = _LATB5 -> -> 0 `i `b ]
+"289
+[; ;main.c: 289:             LATB6 = 1;
+[e = _LATB6 -> -> 1 `i `b ]
 "290
-[; ;main.c: 290: }
-[e :UE 473 ]
-}
+[; ;main.c: 290:             LATB7 = 0;
+[e = _LATB7 -> -> 0 `i `b ]
 "292
-[; ;main.c: 292: void regresarCruceAnterior(T_UBYTE* movimientos, T_UBYTE numMovimientos) {
+[; ;main.c: 292:             break;
+[e $U 478  ]
+"294
+[; ;main.c: 294:         case IZQUIERDA:
+[e :U 481 ]
+"296
+[; ;main.c: 296:             LATB4 = 1;
+[e = _LATB4 -> -> 1 `i `b ]
+"297
+[; ;main.c: 297:             LATB5 = 0;
+[e = _LATB5 -> -> 0 `i `b ]
+"298
+[; ;main.c: 298:             LATB6 = 0;
+[e = _LATB6 -> -> 0 `i `b ]
+"299
+[; ;main.c: 299:             LATB7 = 0;
+[e = _LATB7 -> -> 0 `i `b ]
+"301
+[; ;main.c: 301:             break;
+[e $U 478  ]
+"303
+[; ;main.c: 303:         case DERECHA:
+[e :U 482 ]
+"305
+[; ;main.c: 305:             LATB4 = 0;
+[e = _LATB4 -> -> 0 `i `b ]
+"306
+[; ;main.c: 306:             LATB5 = 0;
+[e = _LATB5 -> -> 0 `i `b ]
+"307
+[; ;main.c: 307:             LATB6 = 1;
+[e = _LATB6 -> -> 1 `i `b ]
+"308
+[; ;main.c: 308:             LATB7 = 0;
+[e = _LATB7 -> -> 0 `i `b ]
+"310
+[; ;main.c: 310:             break;
+[e $U 478  ]
+"312
+[; ;main.c: 312:         case ALTO:
+[e :U 483 ]
+"314
+[; ;main.c: 314:             LATB4 = 0;
+[e = _LATB4 -> -> 0 `i `b ]
+"315
+[; ;main.c: 315:             LATB5 = 0;
+[e = _LATB5 -> -> 0 `i `b ]
+"316
+[; ;main.c: 316:             LATB6 = 0;
+[e = _LATB6 -> -> 0 `i `b ]
+"317
+[; ;main.c: 317:             LATB7 = 0;
+[e = _LATB7 -> -> 0 `i `b ]
+"319
+[; ;main.c: 319:             break;
+[e $U 478  ]
+"321
+[; ;main.c: 321:     }
+}
+[e $U 478  ]
+[e :U 479 ]
+[e [\ -> . _mouse 0 `ui , $ -> . `E3192 0 `ui 480
+ , $ -> . `E3192 1 `ui 481
+ , $ -> . `E3192 2 `ui 482
+ , $ -> . `E3192 3 `ui 483
+ 478 ]
+[e :U 478 ]
+"323
+[; ;main.c: 323: }
+[e :UE 477 ]
+}
+"325
+[; ;main.c: 325: void regresarCruceAnterior(T_UBYTE* movimientos, T_UBYTE numMovimientos) {
 [v _regresarCruceAnterior `(v ~T0 @X0 1 ef2`*uc`uc ]
 {
 [e :U _regresarCruceAnterior ]
 [v _movimientos `*uc ~T0 @X0 1 r1 ]
 [v _numMovimientos `uc ~T0 @X0 1 r2 ]
 [f ]
-"294
-[; ;main.c: 294:     for (int i = numMovimientos - 1; i >= 0; i--) {
+"327
+[; ;main.c: 327:     for (int i = numMovimientos - 1; i >= 0; i--) {
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i - -> _numMovimientos `i -> 1 `i ]
-[e $ >= _i -> 0 `i 481  ]
-[e $U 482  ]
-[e :U 481 ]
-{
-"296
-[; ;main.c: 296:         if (movimientos[i] == IZQUIERDA)
-[e $ ! == -> *U + _movimientos * -> _i `x -> -> # *U _movimientos `i `x `i -> . `E3190 1 `i 484  ]
-"297
-[; ;main.c: 297:             mouse.curr_state = DERECHA;
-[e = . _mouse 0 . `E3190 2 ]
-[e $U 485  ]
-"298
-[; ;main.c: 298:         else if (movimientos[i] == DERECHA)
-[e :U 484 ]
-[e $ ! == -> *U + _movimientos * -> _i `x -> -> # *U _movimientos `i `x `i -> . `E3190 2 `i 486  ]
-"299
-[; ;main.c: 299:             mouse.curr_state = IZQUIERDA;
-[e = . _mouse 0 . `E3190 1 ]
-[e $U 487  ]
-"300
-[; ;main.c: 300:         else
-[e :U 486 ]
-"301
-[; ;main.c: 301:             mouse.curr_state = movimientos[i];
-[e = . _mouse 0 -> *U + _movimientos * -> _i `x -> -> # *U _movimientos `i `x `E3190 ]
-[e :U 487 ]
+[e $ >= _i -> 0 `i 485  ]
+[e $U 486  ]
 [e :U 485 ]
-"303
-[; ;main.c: 303:         moverCarrito();
+{
+"329
+[; ;main.c: 329:         if (movimientos[i] == IZQUIERDA) {
+[e $ ! == -> *U + _movimientos * -> _i `x -> -> # *U _movimientos `i `x `i -> . `E3192 1 `i 488  ]
+{
+"331
+[; ;main.c: 331:             mouse.curr_state = DERECHA;
+[e = . _mouse 0 . `E3192 2 ]
+"332
+[; ;main.c: 332:         } else if (movimientos[i] == DERECHA) {
+}
+[e $U 489  ]
+[e :U 488 ]
+[e $ ! == -> *U + _movimientos * -> _i `x -> -> # *U _movimientos `i `x `i -> . `E3192 2 `i 490  ]
+{
+"334
+[; ;main.c: 334:             mouse.curr_state = IZQUIERDA;
+[e = . _mouse 0 . `E3192 1 ]
+"335
+[; ;main.c: 335:         } else {
+}
+[e $U 491  ]
+[e :U 490 ]
+{
+"337
+[; ;main.c: 337:             mouse.curr_state = movimientos[i];
+[e = . _mouse 0 -> *U + _movimientos * -> _i `x -> -> # *U _movimientos `i `x `E3192 ]
+"338
+[; ;main.c: 338:         }
+}
+[e :U 491 ]
+[e :U 489 ]
+"340
+[; ;main.c: 340:         moverCarrito();
 [e ( _moverCarrito ..  ]
-"304
-[; ;main.c: 304:     }
+"341
+[; ;main.c: 341:     }
 }
 [e -- _i -> 1 `i ]
-[e $ >= _i -> 0 `i 481  ]
-[e :U 482 ]
+[e $ >= _i -> 0 `i 485  ]
+[e :U 486 ]
 }
-"305
-[; ;main.c: 305: }
-[e :UE 480 ]
+"342
+[; ;main.c: 342: }
+[e :UE 484 ]
 }
-"307
-[; ;main.c: 307: T_BOOL hayCruce(void) {
-[v _hayCruce `(uc ~T0 @X0 1 ef ]
+"344
+[; ;main.c: 344: T_BOOL hayCruce(T_UBYTE* caminosRecorrer) {
+[v _hayCruce `(uc ~T0 @X0 1 ef1`*uc ]
 {
 [e :U _hayCruce ]
+[v _caminosRecorrer `*uc ~T0 @X0 1 r1 ]
 [f ]
-"309
-[; ;main.c: 309:     T_UBYTE contCaminos = 0;
+"346
+[; ;main.c: 346:     T_UBYTE contCaminos = 0;
 [v _contCaminos `uc ~T0 @X0 1 a ]
 [e = _contCaminos -> -> 0 `i `uc ]
-"311
-[; ;main.c: 311:     if (dameDistancia(IZQUIERDA) > 3)
-[e $ ! > -> ( _dameDistancia (1 -> . `E3190 1 `uc `ui -> -> 3 `i `ui 489  ]
-"312
-[; ;main.c: 312:         contCaminos++;
+"347
+[; ;main.c: 347:     T_BOOL paredEnfrente = 0, paredDerecha = 0, paredIzquierda = 0;
+[v _paredEnfrente `uc ~T0 @X0 1 a ]
+[e = _paredEnfrente -> -> 0 `i `uc ]
+[v _paredDerecha `uc ~T0 @X0 1 a ]
+[e = _paredDerecha -> -> 0 `i `uc ]
+[v _paredIzquierda `uc ~T0 @X0 1 a ]
+[e = _paredIzquierda -> -> 0 `i `uc ]
+"349
+[; ;main.c: 349:     if (sensorEnfrente > 5) {
+[e $ ! > _sensorEnfrente -> -> 5 `i `f 493  ]
+{
+"350
+[; ;main.c: 350:         paredEnfrente = 1;
+[e = _paredEnfrente -> -> 1 `i `uc ]
+"351
+[; ;main.c: 351:         contCaminos++;
 [e ++ _contCaminos -> -> 1 `i `uc ]
-[e :U 489 ]
-"313
-[; ;main.c: 313:     if (dameDistancia(DERECHA) > 3)
-[e $ ! > -> ( _dameDistancia (1 -> . `E3190 2 `uc `ui -> -> 3 `i `ui 490  ]
-"314
-[; ;main.c: 314:         contCaminos++;
-[e ++ _contCaminos -> -> 1 `i `uc ]
-[e :U 490 ]
-"315
-[; ;main.c: 315:     if (dameDistancia(ENFRENTE) > 5)
-[e $ ! > -> ( _dameDistancia (1 -> . `E3190 0 `uc `ui -> -> 5 `i `ui 491  ]
-"316
-[; ;main.c: 316:         contCaminos++;
-[e ++ _contCaminos -> -> 1 `i `uc ]
-[e :U 491 ]
-"318
-[; ;main.c: 318:     if (contCaminos > 1)
-[e $ ! > -> _contCaminos `i -> 1 `i 492  ]
-"319
-[; ;main.c: 319:         return 1;
-[e ) -> -> 1 `i `uc ]
-[e $UE 488  ]
-[e $U 493  ]
-"321
-[; ;main.c: 321:     else
-[e :U 492 ]
-"322
-[; ;main.c: 322:         return 0;
-[e ) -> -> 0 `i `uc ]
-[e $UE 488  ]
-[e :U 493 ]
-"324
-[; ;main.c: 324: }
-[e :UE 488 ]
+"352
+[; ;main.c: 352:     }
 }
-"326
-[; ;main.c: 326: void limpiarMovimientos(T_UBYTE* movimientos, T_UBYTE* numMovimientos) {
+[e :U 493 ]
+"354
+[; ;main.c: 354:     if (sensorIzquierda > 3) {
+[e $ ! > _sensorIzquierda -> -> 3 `i `f 494  ]
+{
+"355
+[; ;main.c: 355:         paredIzquierda = 1;
+[e = _paredIzquierda -> -> 1 `i `uc ]
+"356
+[; ;main.c: 356:         contCaminos++;
+[e ++ _contCaminos -> -> 1 `i `uc ]
+"357
+[; ;main.c: 357:     }
+}
+[e :U 494 ]
+"359
+[; ;main.c: 359:     if (sensorDerecha > 3) {
+[e $ ! > _sensorDerecha -> -> 3 `i `f 495  ]
+{
+"360
+[; ;main.c: 360:         paredDerecha = 1;
+[e = _paredDerecha -> -> 1 `i `uc ]
+"361
+[; ;main.c: 361:         contCaminos++;
+[e ++ _contCaminos -> -> 1 `i `uc ]
+"362
+[; ;main.c: 362:     }
+}
+[e :U 495 ]
+"364
+[; ;main.c: 364:     if (IZQUIERDA == DERECHA) {
+[e $ ! == -> . `E3192 1 `i -> . `E3192 2 `i 496  ]
+{
+"366
+[; ;main.c: 366:         if (paredDerecha)
+[e $ ! != -> _paredDerecha `i -> 0 `i 497  ]
+"367
+[; ;main.c: 367:             caminosRecorrer[IZQUIERDA - 1] = 1;
+[e = *U + _caminosRecorrer * -> - -> . `E3192 1 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x -> -> 1 `i `uc ]
+[e $U 498  ]
+"368
+[; ;main.c: 368:         else
+[e :U 497 ]
+"369
+[; ;main.c: 369:             caminosRecorrer[IZQUIERDA - 1] = 0;
+[e = *U + _caminosRecorrer * -> - -> . `E3192 1 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x -> -> 0 `i `uc ]
+[e :U 498 ]
+"371
+[; ;main.c: 371:     } else if (ENFRENTE == DERECHA) {
+}
+[e $U 499  ]
+[e :U 496 ]
+[e $ ! == -> . `E3192 0 `i -> . `E3192 2 `i 500  ]
+{
+"373
+[; ;main.c: 373:         if (paredDerecha)
+[e $ ! != -> _paredDerecha `i -> 0 `i 501  ]
+"374
+[; ;main.c: 374:             caminosRecorrer[ENFRENTE - 1] = 1;
+[e = *U + _caminosRecorrer * -> - -> . `E3192 0 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x -> -> 1 `i `uc ]
+[e $U 502  ]
+"375
+[; ;main.c: 375:         else
+[e :U 501 ]
+"376
+[; ;main.c: 376:             caminosRecorrer[ENFRENTE - 1] = 0;
+[e = *U + _caminosRecorrer * -> - -> . `E3192 0 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x -> -> 0 `i `uc ]
+[e :U 502 ]
+"378
+[; ;main.c: 378:     } else {
+}
+[e $U 503  ]
+[e :U 500 ]
+{
+"380
+[; ;main.c: 380:         if (paredDerecha)
+[e $ ! != -> _paredDerecha `i -> 0 `i 504  ]
+"381
+[; ;main.c: 381:             caminosRecorrer[DERECHA - 1] = 1;
+[e = *U + _caminosRecorrer * -> - -> . `E3192 2 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x -> -> 1 `i `uc ]
+[e $U 505  ]
+"382
+[; ;main.c: 382:         else
+[e :U 504 ]
+"383
+[; ;main.c: 383:             caminosRecorrer[DERECHA - 1] = 0;
+[e = *U + _caminosRecorrer * -> - -> . `E3192 2 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x -> -> 0 `i `uc ]
+[e :U 505 ]
+"385
+[; ;main.c: 385:     }
+}
+[e :U 503 ]
+[e :U 499 ]
+"387
+[; ;main.c: 387:     if (DERECHA == IZQUIERDA) {
+[e $ ! == -> . `E3192 2 `i -> . `E3192 1 `i 506  ]
+{
+"389
+[; ;main.c: 389:         if (paredIzquierda)
+[e $ ! != -> _paredIzquierda `i -> 0 `i 507  ]
+"390
+[; ;main.c: 390:             caminosRecorrer[DERECHA - 1] = 1;
+[e = *U + _caminosRecorrer * -> - -> . `E3192 2 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x -> -> 1 `i `uc ]
+[e $U 508  ]
+"391
+[; ;main.c: 391:         else
+[e :U 507 ]
+"392
+[; ;main.c: 392:             caminosRecorrer[DERECHA - 1] = 0;
+[e = *U + _caminosRecorrer * -> - -> . `E3192 2 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x -> -> 0 `i `uc ]
+[e :U 508 ]
+"394
+[; ;main.c: 394:     } else if (ENFRENTE == IZQUIERDA) {
+}
+[e $U 509  ]
+[e :U 506 ]
+[e $ ! == -> . `E3192 0 `i -> . `E3192 1 `i 510  ]
+{
+"396
+[; ;main.c: 396:         if (paredIzquierda)
+[e $ ! != -> _paredIzquierda `i -> 0 `i 511  ]
+"397
+[; ;main.c: 397:             caminosRecorrer[ENFRENTE - 1] = 1;
+[e = *U + _caminosRecorrer * -> - -> . `E3192 0 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x -> -> 1 `i `uc ]
+[e $U 512  ]
+"398
+[; ;main.c: 398:         else
+[e :U 511 ]
+"399
+[; ;main.c: 399:             caminosRecorrer[ENFRENTE - 1] = 0;
+[e = *U + _caminosRecorrer * -> - -> . `E3192 0 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x -> -> 0 `i `uc ]
+[e :U 512 ]
+"401
+[; ;main.c: 401:     } else {
+}
+[e $U 513  ]
+[e :U 510 ]
+{
+"403
+[; ;main.c: 403:         if (paredIzquierda)
+[e $ ! != -> _paredIzquierda `i -> 0 `i 514  ]
+"404
+[; ;main.c: 404:             caminosRecorrer[IZQUIERDA - 1] = 1;
+[e = *U + _caminosRecorrer * -> - -> . `E3192 1 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x -> -> 1 `i `uc ]
+[e $U 515  ]
+"405
+[; ;main.c: 405:         else
+[e :U 514 ]
+"406
+[; ;main.c: 406:             caminosRecorrer[IZQUIERDA - 1] = 0;
+[e = *U + _caminosRecorrer * -> - -> . `E3192 1 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x -> -> 0 `i `uc ]
+[e :U 515 ]
+"408
+[; ;main.c: 408:     }
+}
+[e :U 513 ]
+[e :U 509 ]
+"410
+[; ;main.c: 410:     if (DERECHA == ENFRENTE) {
+[e $ ! == -> . `E3192 2 `i -> . `E3192 0 `i 516  ]
+{
+"412
+[; ;main.c: 412:         if (paredEnfrente)
+[e $ ! != -> _paredEnfrente `i -> 0 `i 517  ]
+"413
+[; ;main.c: 413:             caminosRecorrer[DERECHA - 1] = 1;
+[e = *U + _caminosRecorrer * -> - -> . `E3192 2 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x -> -> 1 `i `uc ]
+[e $U 518  ]
+"414
+[; ;main.c: 414:         else
+[e :U 517 ]
+"415
+[; ;main.c: 415:             caminosRecorrer[DERECHA - 1] = 0;
+[e = *U + _caminosRecorrer * -> - -> . `E3192 2 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x -> -> 0 `i `uc ]
+[e :U 518 ]
+"417
+[; ;main.c: 417:     } else if (IZQUIERDA == ENFRENTE) {
+}
+[e $U 519  ]
+[e :U 516 ]
+[e $ ! == -> . `E3192 1 `i -> . `E3192 0 `i 520  ]
+{
+"419
+[; ;main.c: 419:         if (paredEnfrente)
+[e $ ! != -> _paredEnfrente `i -> 0 `i 521  ]
+"420
+[; ;main.c: 420:             caminosRecorrer[IZQUIERDA - 1] = 1;
+[e = *U + _caminosRecorrer * -> - -> . `E3192 1 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x -> -> 1 `i `uc ]
+[e $U 522  ]
+"421
+[; ;main.c: 421:         else
+[e :U 521 ]
+"422
+[; ;main.c: 422:             caminosRecorrer[IZQUIERDA - 1] = 0;
+[e = *U + _caminosRecorrer * -> - -> . `E3192 1 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x -> -> 0 `i `uc ]
+[e :U 522 ]
+"424
+[; ;main.c: 424:     } else {
+}
+[e $U 523  ]
+[e :U 520 ]
+{
+"426
+[; ;main.c: 426:         if (paredEnfrente)
+[e $ ! != -> _paredEnfrente `i -> 0 `i 524  ]
+"427
+[; ;main.c: 427:             caminosRecorrer[ENFRENTE - 1] = 1;
+[e = *U + _caminosRecorrer * -> - -> . `E3192 0 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x -> -> 1 `i `uc ]
+[e $U 525  ]
+"428
+[; ;main.c: 428:         else
+[e :U 524 ]
+"429
+[; ;main.c: 429:             caminosRecorrer[ENFRENTE - 1] = 0;
+[e = *U + _caminosRecorrer * -> - -> . `E3192 0 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x -> -> 0 `i `uc ]
+[e :U 525 ]
+"431
+[; ;main.c: 431:     }
+}
+[e :U 523 ]
+[e :U 519 ]
+"434
+[; ;main.c: 434:     if (contCaminos > 1)
+[e $ ! > -> _contCaminos `i -> 1 `i 526  ]
+"435
+[; ;main.c: 435:         return 1;
+[e ) -> -> 1 `i `uc ]
+[e $UE 492  ]
+[e $U 527  ]
+"437
+[; ;main.c: 437:     else
+[e :U 526 ]
+"438
+[; ;main.c: 438:         return 0;
+[e ) -> -> 0 `i `uc ]
+[e $UE 492  ]
+[e :U 527 ]
+"440
+[; ;main.c: 440: }
+[e :UE 492 ]
+}
+"442
+[; ;main.c: 442: void limpiarMovimientos(T_UBYTE* movimientos, T_UBYTE* numMovimientos) {
 [v _limpiarMovimientos `(v ~T0 @X0 1 ef2`*uc`*uc ]
 {
 [e :U _limpiarMovimientos ]
 [v _movimientos `*uc ~T0 @X0 1 r1 ]
 [v _numMovimientos `*uc ~T0 @X0 1 r2 ]
 [f ]
-"327
-[; ;main.c: 327:     for (int i = 0; i < *numMovimientos; i++)
+"443
+[; ;main.c: 443:     for (int i = 0; i < *numMovimientos; i++)
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
-[e $U 498  ]
-[e :U 495 ]
-"328
-[; ;main.c: 328:         movimientos[i] = 0;
+[e $U 532  ]
+[e :U 529 ]
+"444
+[; ;main.c: 444:         movimientos[i] = 0;
 [e = *U + _movimientos * -> _i `x -> -> # *U _movimientos `i `x -> -> 0 `i `uc ]
 [e ++ _i -> 1 `i ]
-[e :U 498 ]
-[e $ < _i -> *U _numMovimientos `i 495  ]
-[e :U 496 ]
+[e :U 532 ]
+[e $ < _i -> *U _numMovimientos `i 529  ]
+[e :U 530 ]
 }
-"330
-[; ;main.c: 330:     *numMovimientos = 0;
+"446
+[; ;main.c: 446:     *numMovimientos = 0;
 [e = *U _numMovimientos -> -> 0 `i `uc ]
-"331
-[; ;main.c: 331: }
-[e :UE 494 ]
+"447
+[; ;main.c: 447: }
+[e :UE 528 ]
 }
-"333
-[; ;main.c: 333: T_UBYTE decidirDireccion(void) {
-[v _decidirDireccion `(uc ~T0 @X0 1 ef ]
+"449
+[; ;main.c: 449: T_BOOL seLlegoAlDestino(void) {
+[v _seLlegoAlDestino `(uc ~T0 @X0 1 ef ]
+{
+[e :U _seLlegoAlDestino ]
+[f ]
+"451
+[; ;main.c: 451:     T_BOOL llegoDestino = 0;
+[v _llegoDestino `uc ~T0 @X0 1 a ]
+[e = _llegoDestino -> -> 0 `i `uc ]
+"454
+[; ;main.c: 454:     if (dameLecturaAdc(0) < 100)
+[e $ ! < -> ( _dameLecturaAdc (1 -> -> 0 `i `uc `i -> 100 `i 534  ]
+"455
+[; ;main.c: 455:         llegoDestino = 1;
+[e = _llegoDestino -> -> 1 `i `uc ]
+[e :U 534 ]
+"457
+[; ;main.c: 457:     return llegoDestino;
+[e ) _llegoDestino ]
+[e $UE 533  ]
+"459
+[; ;main.c: 459: }
+[e :UE 533 ]
+}
+"461
+[; ;main.c: 461: T_UBYTE decidirDireccion(T_UBYTE* caminosRecorrer, T_UBYTE* investigandoCruce,
+[v _decidirDireccion `(uc ~T0 @X0 1 ef4`*uc`*uc`*uc`*uc ]
+"462
+[; ;main.c: 462:         T_UBYTE* posicionInvCruce, T_UBYTE* contCaminosRecorridos) {
 {
 [e :U _decidirDireccion ]
+"461
+[; ;main.c: 461: T_UBYTE decidirDireccion(T_UBYTE* caminosRecorrer, T_UBYTE* investigandoCruce,
+[v _caminosRecorrer `*uc ~T0 @X0 1 r1 ]
+[v _investigandoCruce `*uc ~T0 @X0 1 r2 ]
+"462
+[; ;main.c: 462:         T_UBYTE* posicionInvCruce, T_UBYTE* contCaminosRecorridos) {
+[v _posicionInvCruce `*uc ~T0 @X0 1 r3 ]
+[v _contCaminosRecorridos `*uc ~T0 @X0 1 r4 ]
 [f ]
-"335
-[; ;main.c: 335:     T_UBYTE mayorPrioridad = DERECHA;
-[v _mayorPrioridad `uc ~T0 @X0 1 a ]
-[e = _mayorPrioridad -> . `E3190 2 `uc ]
-"336
-[; ;main.c: 336:     T_UBYTE prioridadMedia = IZQUIERDA;
-[v _prioridadMedia `uc ~T0 @X0 1 a ]
-[e = _prioridadMedia -> . `E3190 1 `uc ]
-"337
-[; ;main.c: 337:     T_UBYTE prioridadBaja = ENFRENTE;
-[v _prioridadBaja `uc ~T0 @X0 1 a ]
-[e = _prioridadBaja -> . `E3190 0 `uc ]
-"339
-[; ;main.c: 339:     T_UBYTE direccionElegida;
+"464
+[; ;main.c: 464:     T_UBYTE direccionElegida;
 [v _direccionElegida `uc ~T0 @X0 1 a ]
-"341
-[; ;main.c: 341:     if (dameDistancia(mayorPrioridad) > 5)
-[e $ ! > -> ( _dameDistancia (1 _mayorPrioridad `ui -> -> 5 `i `ui 500  ]
-"342
-[; ;main.c: 342:         direccionElegida = mayorPrioridad;
-[e = _direccionElegida _mayorPrioridad ]
-[e $U 501  ]
-"343
-[; ;main.c: 343:     else if (dameDistancia(prioridadMedia) > 3)
-[e :U 500 ]
-[e $ ! > -> ( _dameDistancia (1 _prioridadMedia `ui -> -> 3 `i `ui 502  ]
-"344
-[; ;main.c: 344:         direccionElegida = prioridadMedia;
-[e = _direccionElegida _prioridadMedia ]
-[e $U 503  ]
-"345
-[; ;main.c: 345:     else if (dameDistancia(prioridadBaja) > 3)
-[e :U 502 ]
-[e $ ! > -> ( _dameDistancia (1 _prioridadBaja `ui -> -> 3 `i `ui 504  ]
-"346
-[; ;main.c: 346:         direccionElegida = prioridadBaja;
-[e = _direccionElegida _prioridadBaja ]
-[e $U 505  ]
-"347
-[; ;main.c: 347:     else
-[e :U 504 ]
-"348
-[; ;main.c: 348:         direccionElegida = 0;
+"465
+[; ;main.c: 465:     static T_BOOL cambioOrientacionCarro = 0;
+[v F4080 `uc ~T0 @X0 1 s cambioOrientacionCarro ]
+[i F4080
+-> -> 0 `i `uc
+]
+"468
+[; ;main.c: 468:     if (*posicionInvCruce && *investigandoCruce) {
+[e $ ! && != -> *U _posicionInvCruce `i -> 0 `i != -> *U _investigandoCruce `i -> 0 `i 536  ]
+{
+"470
+[; ;main.c: 470:         if (*posicionInvCruce)
+[e $ ! != -> *U _posicionInvCruce `i -> 0 `i 537  ]
+"471
+[; ;main.c: 471:             *posicionInvCruce = 0;
+[e = *U _posicionInvCruce -> -> 0 `i `uc ]
+[e :U 537 ]
+"473
+[; ;main.c: 473:         if (seLlegoAlDestino()) {
+[e $ ! != -> ( _seLlegoAlDestino ..  `i -> 0 `i 538  ]
+{
+"474
+[; ;main.c: 474:             direccionElegida = ALTO;
+[e = _direccionElegida -> . `E3192 3 `uc ]
+"476
+[; ;main.c: 476:         } else {
+}
+[e $U 539  ]
+[e :U 538 ]
+{
+"478
+[; ;main.c: 478:             switch (*contCaminosRecorridos) {
+[e $U 541  ]
+{
+"479
+[; ;main.c: 479:                 case 1:
+[e :U 542 ]
+"480
+[; ;main.c: 480:                     if (caminosRecorrer[DERECHA - 1 ] == 1)
+[e $ ! == -> *U + _caminosRecorrer * -> - -> . `E3192 2 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `i -> 1 `i 543  ]
+"481
+[; ;main.c: 481:                         caminosRecorrer[DERECHA - 1 ] = 'X';
+[e = *U + _caminosRecorrer * -> - -> . `E3192 2 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x -> -> 88 `ui `uc ]
+[e $U 544  ]
+"483
+[; ;main.c: 483:                     else {
+[e :U 543 ]
+{
+"484
+[; ;main.c: 484:                         if (caminosRecorrer[IZQUIERDA - 1 ] == 1)
+[e $ ! == -> *U + _caminosRecorrer * -> - -> . `E3192 1 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `i -> 1 `i 545  ]
+"485
+[; ;main.c: 485:                             caminosRecorrer[IZQUIERDA - 1 ] = 'X';
+[e = *U + _caminosRecorrer * -> - -> . `E3192 1 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x -> -> 88 `ui `uc ]
+[e :U 545 ]
+"486
+[; ;main.c: 486:                     }
+}
+[e :U 544 ]
+"487
+[; ;main.c: 487:                     break;
+[e $U 540  ]
+"489
+[; ;main.c: 489:                 case 2:
+[e :U 546 ]
+"490
+[; ;main.c: 490:                     if (caminosRecorrer[IZQUIERDA - 1 ] == 1)
+[e $ ! == -> *U + _caminosRecorrer * -> - -> . `E3192 1 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `i -> 1 `i 547  ]
+"491
+[; ;main.c: 491:                         caminosRecorrer[IZQUIERDA - 1 ] = 'X';
+[e = *U + _caminosRecorrer * -> - -> . `E3192 1 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x -> -> 88 `ui `uc ]
+[e $U 548  ]
+"492
+[; ;main.c: 492:                     else
+[e :U 547 ]
+"493
+[; ;main.c: 493:                         caminosRecorrer[ENFRENTE - 1 ] = 'X';
+[e = *U + _caminosRecorrer * -> - -> . `E3192 0 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x -> -> 88 `ui `uc ]
+[e :U 548 ]
+"496
+[; ;main.c: 496:                     break;
+[e $U 540  ]
+"498
+[; ;main.c: 498:                 case 3:
+[e :U 549 ]
+"499
+[; ;main.c: 499:                     if (caminosRecorrer[ENFRENTE - 1 ] == 1)
+[e $ ! == -> *U + _caminosRecorrer * -> - -> . `E3192 0 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `i -> 1 `i 550  ]
+"500
+[; ;main.c: 500:                         caminosRecorrer[ENFRENTE - 1 ] = 'X';
+[e = *U + _caminosRecorrer * -> - -> . `E3192 0 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x -> -> 88 `ui `uc ]
+[e :U 550 ]
+"503
+[; ;main.c: 503:                     break;
+[e $U 540  ]
+"505
+[; ;main.c: 505:             }
+}
+[e $U 540  ]
+[e :U 541 ]
+[e [\ -> *U _contCaminosRecorridos `i , $ -> 1 `i 542
+ , $ -> 2 `i 546
+ , $ -> 3 `i 549
+ 540 ]
+[e :U 540 ]
+"507
+[; ;main.c: 507:         }
+}
+[e :U 539 ]
+"509
+[; ;main.c: 509:         if (!cambioOrientacionCarro) {
+[e $ ! ! != -> F4080 `i -> 0 `i 551  ]
+{
+"511
+[; ;main.c: 511:             if (caminosRecorrer[DERECHA - 1 ] == 1)
+[e $ ! == -> *U + _caminosRecorrer * -> - -> . `E3192 2 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `i -> 1 `i 552  ]
+"512
+[; ;main.c: 512:                 direccionElegida = DERECHA;
+[e = _direccionElegida -> . `E3192 2 `uc ]
+[e $U 553  ]
+"513
+[; ;main.c: 513:             else if (caminosRecorrer[IZQUIERDA - 1] == 1)
+[e :U 552 ]
+[e $ ! == -> *U + _caminosRecorrer * -> - -> . `E3192 1 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `i -> 1 `i 554  ]
+"514
+[; ;main.c: 514:                 direccionElegida = IZQUIERDA;
+[e = _direccionElegida -> . `E3192 1 `uc ]
+[e $U 555  ]
+"515
+[; ;main.c: 515:             else if (caminosRecorrer[ENFRENTE - 1] == 1)
+[e :U 554 ]
+[e $ ! == -> *U + _caminosRecorrer * -> - -> . `E3192 0 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `i -> 1 `i 556  ]
+"516
+[; ;main.c: 516:                 direccionElegida = ENFRENTE;
+[e = _direccionElegida -> . `E3192 0 `uc ]
+[e :U 556 ]
+[e :U 555 ]
+[e :U 553 ]
+"519
+[; ;main.c: 519:             cambioOrientacionCarro = 1;
+[e = F4080 -> -> 1 `i `uc ]
+"521
+[; ;main.c: 521:         } else {
+}
+[e $U 557  ]
+[e :U 551 ]
+{
+"523
+[; ;main.c: 523:             switch (*contCaminosRecorridos) {
+[e $U 559  ]
+{
+"524
+[; ;main.c: 524:                 case 1:
+[e :U 560 ]
+"525
+[; ;main.c: 525:                     if (DERECHA == DERECHA) {
+[e $ ! == -> . `E3192 2 `i -> . `E3192 2 `i 561  ]
+{
+"527
+[; ;main.c: 527:                         if (caminosRecorrer[DERECHA - 1 ] == 'X') {
+[e $ ! == -> *U + _caminosRecorrer * -> - -> . `E3192 2 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `ui -> 88 `ui 562  ]
+{
+"529
+[; ;main.c: 529:                             if (IZQUIERDA == IZQUIERDA &&
+[e $ ! && == -> . `E3192 1 `i -> . `E3192 1 `i == -> *U + _caminosRecorrer * -> - -> . `E3192 1 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `i -> 1 `i 563  ]
+"530
+[; ;main.c: 530:                                     caminosRecorrer[IZQUIERDA - 1] == 1) {
+{
+"531
+[; ;main.c: 531:                                 direccionElegida = ENFRENTE;
+[e = _direccionElegida -> . `E3192 0 `uc ]
+"532
+[; ;main.c: 532:                             } else if (IZQUIERDA == ENFRENTE &&
+}
+[e $U 564  ]
+[e :U 563 ]
+[e $ ! && == -> . `E3192 1 `i -> . `E3192 0 `i == -> *U + _caminosRecorrer * -> - -> . `E3192 1 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `i -> 1 `i 565  ]
+"533
+[; ;main.c: 533:                                     caminosRecorrer[IZQUIERDA - 1] == 1) {
+{
+"534
+[; ;main.c: 534:                                 direccionElegida = DERECHA;
+[e = _direccionElegida -> . `E3192 2 `uc ]
+"535
+[; ;main.c: 535:                             }
+}
+[e :U 565 ]
+[e :U 564 ]
+"537
+[; ;main.c: 537:                         }
+}
+[e :U 562 ]
+"539
+[; ;main.c: 539:                     } else if (IZQUIERDA == DERECHA) {
+}
+[e $U 566  ]
+[e :U 561 ]
+[e $ ! == -> . `E3192 1 `i -> . `E3192 2 `i 567  ]
+{
+"541
+[; ;main.c: 541:                         if (caminosRecorrer[DERECHA - 1 ] == 'X') {
+[e $ ! == -> *U + _caminosRecorrer * -> - -> . `E3192 2 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `ui -> 88 `ui 568  ]
+{
+"543
+[; ;main.c: 543:                             if (IZQUIERDA == DERECHA &&
+[e $ ! && == -> . `E3192 1 `i -> . `E3192 2 `i == -> *U + _caminosRecorrer * -> - -> . `E3192 1 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `i -> 1 `i 569  ]
+"544
+[; ;main.c: 544:                                     caminosRecorrer[IZQUIERDA - 1] == 1) {
+{
+"545
+[; ;main.c: 545:                                 direccionElegida = ENFRENTE;
+[e = _direccionElegida -> . `E3192 0 `uc ]
+"546
+[; ;main.c: 546:                             } else if (IZQUIERDA == ENFRENTE &&
+}
+[e $U 570  ]
+[e :U 569 ]
+[e $ ! && == -> . `E3192 1 `i -> . `E3192 0 `i == -> *U + _caminosRecorrer * -> - -> . `E3192 1 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `i -> 1 `i 571  ]
+"547
+[; ;main.c: 547:                                     caminosRecorrer[IZQUIERDA - 1] == 1) {
+{
+"548
+[; ;main.c: 548:                                 direccionElegida = IZQUIERDA;
+[e = _direccionElegida -> . `E3192 1 `uc ]
+"549
+[; ;main.c: 549:                             }
+}
+[e :U 571 ]
+[e :U 570 ]
+"551
+[; ;main.c: 551:                         }
+}
+[e :U 568 ]
+"553
+[; ;main.c: 553:                     } else if (ENFRENTE == DERECHA) {
+}
+[e $U 572  ]
+[e :U 567 ]
+[e $ ! == -> . `E3192 0 `i -> . `E3192 2 `i 573  ]
+{
+"555
+[; ;main.c: 555:                         if (caminosRecorrer[DERECHA - 1 ] == 'X') {
+[e $ ! == -> *U + _caminosRecorrer * -> - -> . `E3192 2 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `ui -> 88 `ui 574  ]
+{
+"557
+[; ;main.c: 557:                             if (IZQUIERDA == IZQUIERDA &&
+[e $ ! && == -> . `E3192 1 `i -> . `E3192 1 `i == -> *U + _caminosRecorrer * -> - -> . `E3192 1 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `i -> 1 `i 575  ]
+"558
+[; ;main.c: 558:                                     caminosRecorrer[IZQUIERDA - 1] == 1) {
+{
+"559
+[; ;main.c: 559:                                 direccionElegida = DERECHA;
+[e = _direccionElegida -> . `E3192 2 `uc ]
+"560
+[; ;main.c: 560:                             } else if (IZQUIERDA == DERECHA &&
+}
+[e $U 576  ]
+[e :U 575 ]
+[e $ ! && == -> . `E3192 1 `i -> . `E3192 2 `i == -> *U + _caminosRecorrer * -> - -> . `E3192 1 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `i -> 1 `i 577  ]
+"561
+[; ;main.c: 561:                                     caminosRecorrer[IZQUIERDA - 1] == 1) {
+{
+"562
+[; ;main.c: 562:                                 direccionElegida = IZQUIERDA;
+[e = _direccionElegida -> . `E3192 1 `uc ]
+"563
+[; ;main.c: 563:                             }
+}
+[e :U 577 ]
+[e :U 576 ]
+"565
+[; ;main.c: 565:                         }
+}
+[e :U 574 ]
+"567
+[; ;main.c: 567:                     }
+}
+[e :U 573 ]
+[e :U 572 ]
+[e :U 566 ]
+"569
+[; ;main.c: 569:                     if (DERECHA == IZQUIERDA) {
+[e $ ! == -> . `E3192 2 `i -> . `E3192 1 `i 578  ]
+{
+"571
+[; ;main.c: 571:                         if (caminosRecorrer[IZQUIERDA - 1 ] == 'X') {
+[e $ ! == -> *U + _caminosRecorrer * -> - -> . `E3192 1 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `ui -> 88 `ui 579  ]
+{
+"573
+[; ;main.c: 573:                             if (ENFRENTE == IZQUIERDA &&
+[e $ ! && == -> . `E3192 0 `i -> . `E3192 1 `i == -> *U + _caminosRecorrer * -> - -> . `E3192 0 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `i -> 1 `i 580  ]
+"574
+[; ;main.c: 574:                                     caminosRecorrer[ENFRENTE - 1] == 1) {
+{
+"575
+[; ;main.c: 575:                                 direccionElegida = ENFRENTE;
+[e = _direccionElegida -> . `E3192 0 `uc ]
+"576
+[; ;main.c: 576:                             } else if (ENFRENTE == ENFRENTE &&
+}
+[e $U 581  ]
+[e :U 580 ]
+[e $ ! && == -> . `E3192 0 `i -> . `E3192 0 `i == -> *U + _caminosRecorrer * -> - -> . `E3192 0 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `i -> 1 `i 582  ]
+"577
+[; ;main.c: 577:                                     caminosRecorrer[ENFRENTE - 1] == 1) {
+{
+"578
+[; ;main.c: 578:                                 direccionElegida = DERECHA;
+[e = _direccionElegida -> . `E3192 2 `uc ]
+"579
+[; ;main.c: 579:                             }
+}
+[e :U 582 ]
+[e :U 581 ]
+"581
+[; ;main.c: 581:                         }
+}
+[e :U 579 ]
+"583
+[; ;main.c: 583:                     } else if (IZQUIERDA == IZQUIERDA) {
+}
+[e $U 583  ]
+[e :U 578 ]
+[e $ ! == -> . `E3192 1 `i -> . `E3192 1 `i 584  ]
+{
+"585
+[; ;main.c: 585:                         if (caminosRecorrer[IZQUIERDA - 1 ] == 'X') {
+[e $ ! == -> *U + _caminosRecorrer * -> - -> . `E3192 1 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `ui -> 88 `ui 585  ]
+{
+"587
+[; ;main.c: 587:                             if (ENFRENTE == DERECHA &&
+[e $ ! && == -> . `E3192 0 `i -> . `E3192 2 `i == -> *U + _caminosRecorrer * -> - -> . `E3192 0 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `i -> 1 `i 586  ]
+"588
+[; ;main.c: 588:                                     caminosRecorrer[ENFRENTE - 1] == 1) {
+{
+"589
+[; ;main.c: 589:                                 direccionElegida = ENFRENTE;
+[e = _direccionElegida -> . `E3192 0 `uc ]
+"590
+[; ;main.c: 590:                             } else if (ENFRENTE == ENFRENTE &&
+}
+[e $U 587  ]
+[e :U 586 ]
+[e $ ! && == -> . `E3192 0 `i -> . `E3192 0 `i == -> *U + _caminosRecorrer * -> - -> . `E3192 0 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `i -> 1 `i 588  ]
+"591
+[; ;main.c: 591:                                     caminosRecorrer[ENFRENTE - 1] == 1) {
+{
+"592
+[; ;main.c: 592:                                 direccionElegida = IZQUIERDA;
+[e = _direccionElegida -> . `E3192 1 `uc ]
+"593
+[; ;main.c: 593:                             }
+}
+[e :U 588 ]
+[e :U 587 ]
+"595
+[; ;main.c: 595:                         }
+}
+[e :U 585 ]
+"597
+[; ;main.c: 597:                     } else if (ENFRENTE == IZQUIERDA) {
+}
+[e $U 589  ]
+[e :U 584 ]
+[e $ ! == -> . `E3192 0 `i -> . `E3192 1 `i 590  ]
+{
+"599
+[; ;main.c: 599:                         if (caminosRecorrer[IZQUIERDA - 1 ] == 'X') {
+[e $ ! == -> *U + _caminosRecorrer * -> - -> . `E3192 1 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `ui -> 88 `ui 591  ]
+{
+"601
+[; ;main.c: 601:                             if (ENFRENTE == DERECHA &&
+[e $ ! && == -> . `E3192 0 `i -> . `E3192 2 `i == -> *U + _caminosRecorrer * -> - -> . `E3192 0 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `i -> 1 `i 592  ]
+"602
+[; ;main.c: 602:                                     caminosRecorrer[ENFRENTE - 1] == 1) {
+{
+"603
+[; ;main.c: 603:                                 direccionElegida = IZQUIERDA;
+[e = _direccionElegida -> . `E3192 1 `uc ]
+"604
+[; ;main.c: 604:                             } else if (ENFRENTE == IZQUIERDA &&
+}
+[e $U 593  ]
+[e :U 592 ]
+[e $ ! && == -> . `E3192 0 `i -> . `E3192 1 `i == -> *U + _caminosRecorrer * -> - -> . `E3192 0 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `i -> 1 `i 594  ]
+"605
+[; ;main.c: 605:                                     caminosRecorrer[ENFRENTE - 1] == 1) {
+{
+"606
+[; ;main.c: 606:                                 direccionElegida = DERECHA;
+[e = _direccionElegida -> . `E3192 2 `uc ]
+"607
+[; ;main.c: 607:                             }
+}
+[e :U 594 ]
+[e :U 593 ]
+"609
+[; ;main.c: 609:                         }
+}
+[e :U 591 ]
+"611
+[; ;main.c: 611:                     }
+}
+[e :U 590 ]
+[e :U 589 ]
+[e :U 583 ]
+"613
+[; ;main.c: 613:                     break;
+[e $U 558  ]
+"615
+[; ;main.c: 615:                 case 2:
+[e :U 595 ]
+"617
+[; ;main.c: 617:                     if (DERECHA == IZQUIERDA) {
+[e $ ! == -> . `E3192 2 `i -> . `E3192 1 `i 596  ]
+{
+"619
+[; ;main.c: 619:                         if (caminosRecorrer[IZQUIERDA - 1 ] == 'X') {
+[e $ ! == -> *U + _caminosRecorrer * -> - -> . `E3192 1 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `ui -> 88 `ui 597  ]
+{
+"621
+[; ;main.c: 621:                             if (ENFRENTE == IZQUIERDA &&
+[e $ ! && == -> . `E3192 0 `i -> . `E3192 1 `i == -> *U + _caminosRecorrer * -> - -> . `E3192 0 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `i -> 1 `i 598  ]
+"622
+[; ;main.c: 622:                                     caminosRecorrer[ENFRENTE - 1] == 1) {
+{
+"623
+[; ;main.c: 623:                                 direccionElegida = ENFRENTE;
+[e = _direccionElegida -> . `E3192 0 `uc ]
+"624
+[; ;main.c: 624:                             } else if (ENFRENTE == ENFRENTE &&
+}
+[e $U 599  ]
+[e :U 598 ]
+[e $ ! && == -> . `E3192 0 `i -> . `E3192 0 `i == -> *U + _caminosRecorrer * -> - -> . `E3192 0 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `i -> 1 `i 600  ]
+"625
+[; ;main.c: 625:                                     caminosRecorrer[ENFRENTE - 1] == 1) {
+{
+"626
+[; ;main.c: 626:                                 direccionElegida = DERECHA;
+[e = _direccionElegida -> . `E3192 2 `uc ]
+"627
+[; ;main.c: 627:                             } else
+}
+[e $U 601  ]
+[e :U 600 ]
+"628
+[; ;main.c: 628:                                 *contCaminosRecorridos = 3;
+[e = *U _contCaminosRecorridos -> -> 3 `i `uc ]
+[e :U 601 ]
+[e :U 599 ]
+"630
+[; ;main.c: 630:                         }
+}
+[e :U 597 ]
+"632
+[; ;main.c: 632:                     } else if (IZQUIERDA == IZQUIERDA) {
+}
+[e $U 602  ]
+[e :U 596 ]
+[e $ ! == -> . `E3192 1 `i -> . `E3192 1 `i 603  ]
+{
+"634
+[; ;main.c: 634:                         if (caminosRecorrer[IZQUIERDA - 1 ] == 'X') {
+[e $ ! == -> *U + _caminosRecorrer * -> - -> . `E3192 1 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `ui -> 88 `ui 604  ]
+{
+"636
+[; ;main.c: 636:                             if (ENFRENTE == DERECHA &&
+[e $ ! && == -> . `E3192 0 `i -> . `E3192 2 `i == -> *U + _caminosRecorrer * -> - -> . `E3192 0 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `i -> 1 `i 605  ]
+"637
+[; ;main.c: 637:                                     caminosRecorrer[ENFRENTE - 1] == 1) {
+{
+"638
+[; ;main.c: 638:                                 direccionElegida = ENFRENTE;
+[e = _direccionElegida -> . `E3192 0 `uc ]
+"639
+[; ;main.c: 639:                             } else if (ENFRENTE == ENFRENTE &&
+}
+[e $U 606  ]
+[e :U 605 ]
+[e $ ! && == -> . `E3192 0 `i -> . `E3192 0 `i == -> *U + _caminosRecorrer * -> - -> . `E3192 0 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `i -> 1 `i 607  ]
+"640
+[; ;main.c: 640:                                     caminosRecorrer[ENFRENTE - 1] == 1) {
+{
+"641
+[; ;main.c: 641:                                 direccionElegida = IZQUIERDA;
+[e = _direccionElegida -> . `E3192 1 `uc ]
+"642
+[; ;main.c: 642:                             } else
+}
+[e $U 608  ]
+[e :U 607 ]
+"643
+[; ;main.c: 643:                                 *contCaminosRecorridos = 3;
+[e = *U _contCaminosRecorridos -> -> 3 `i `uc ]
+[e :U 608 ]
+[e :U 606 ]
+"645
+[; ;main.c: 645:                         }
+}
+[e :U 604 ]
+"647
+[; ;main.c: 647:                     } else if (ENFRENTE == IZQUIERDA) {
+}
+[e $U 609  ]
+[e :U 603 ]
+[e $ ! == -> . `E3192 0 `i -> . `E3192 1 `i 610  ]
+{
+"649
+[; ;main.c: 649:                         if (caminosRecorrer[IZQUIERDA - 1 ] == 'X') {
+[e $ ! == -> *U + _caminosRecorrer * -> - -> . `E3192 1 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `ui -> 88 `ui 611  ]
+{
+"651
+[; ;main.c: 651:                             if (ENFRENTE == DERECHA &&
+[e $ ! && == -> . `E3192 0 `i -> . `E3192 2 `i == -> *U + _caminosRecorrer * -> - -> . `E3192 0 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `i -> 1 `i 612  ]
+"652
+[; ;main.c: 652:                                     caminosRecorrer[ENFRENTE - 1] == 1) {
+{
+"653
+[; ;main.c: 653:                                 direccionElegida = IZQUIERDA;
+[e = _direccionElegida -> . `E3192 1 `uc ]
+"654
+[; ;main.c: 654:                             } else if (ENFRENTE == IZQUIERDA &&
+}
+[e $U 613  ]
+[e :U 612 ]
+[e $ ! && == -> . `E3192 0 `i -> . `E3192 1 `i == -> *U + _caminosRecorrer * -> - -> . `E3192 0 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `i -> 1 `i 614  ]
+"655
+[; ;main.c: 655:                                     caminosRecorrer[ENFRENTE - 1] == 1) {
+{
+"656
+[; ;main.c: 656:                                 direccionElegida = DERECHA;
+[e = _direccionElegida -> . `E3192 2 `uc ]
+"657
+[; ;main.c: 657:                             } else
+}
+[e $U 615  ]
+[e :U 614 ]
+"658
+[; ;main.c: 658:                                 *contCaminosRecorridos = 3;
+[e = *U _contCaminosRecorridos -> -> 3 `i `uc ]
+[e :U 615 ]
+[e :U 613 ]
+"660
+[; ;main.c: 660:                         }
+}
+[e :U 611 ]
+"662
+[; ;main.c: 662:                     }
+}
+[e :U 610 ]
+[e :U 609 ]
+[e :U 602 ]
+"664
+[; ;main.c: 664:                     break;
+[e $U 558  ]
+"666
+[; ;main.c: 666:                 case 3:
+[e :U 616 ]
+"667
+[; ;main.c: 667:                     cambioOrientacionCarro = 0;
+[e = F4080 -> -> 0 `i `uc ]
+"668
+[; ;main.c: 668:                     *contCaminosRecorridos = 0;
+[e = *U _contCaminosRecorridos -> -> 0 `i `uc ]
+"669
+[; ;main.c: 669:                     *investigandoCruce = 0;
+[e = *U _investigandoCruce -> -> 0 `i `uc ]
+"670
+[; ;main.c: 670:                     direccionElegida = ALTO;
+[e = _direccionElegida -> . `E3192 3 `uc ]
+"672
+[; ;main.c: 672:                     break;
+[e $U 558  ]
+"673
+[; ;main.c: 673:             }
+}
+[e $U 558  ]
+[e :U 559 ]
+[e [\ -> *U _contCaminosRecorridos `i , $ -> 1 `i 560
+ , $ -> 2 `i 595
+ , $ -> 3 `i 616
+ 558 ]
+[e :U 558 ]
+"674
+[; ;main.c: 674:         }
+}
+[e :U 557 ]
+"676
+[; ;main.c: 676:     } else {
+}
+[e $U 617  ]
+[e :U 536 ]
+{
+"678
+[; ;main.c: 678:         if (seLlegoAlDestino()) {
+[e $ ! != -> ( _seLlegoAlDestino ..  `i -> 0 `i 618  ]
+{
+"680
+[; ;main.c: 680:             direccionElegida = ALTO;
+[e = _direccionElegida -> . `E3192 3 `uc ]
+"682
+[; ;main.c: 682:         } else {
+}
+[e $U 619  ]
+[e :U 618 ]
+{
+"685
+[; ;main.c: 685:             if (DISTANCIA_PRIORIDAD_ALTA > 5)
+[e $ ! > _DISTANCIA_PRIORIDAD_ALTA -> -> 5 `i `f 620  ]
+"686
+[; ;main.c: 686:                 direccionElegida = DERECHA;
+[e = _direccionElegida -> . `E3192 2 `uc ]
+[e $U 621  ]
+"687
+[; ;main.c: 687:             else if (DISTANCIA_PRIORIDAD_MEDIA > 3)
+[e :U 620 ]
+[e $ ! > _DISTANCIA_PRIORIDAD_MEDIA -> -> 3 `i `f 622  ]
+"688
+[; ;main.c: 688:                 direccionElegida = IZQUIERDA;
+[e = _direccionElegida -> . `E3192 1 `uc ]
+[e $U 623  ]
+"689
+[; ;main.c: 689:             else if (DISTANCIA_PRIORIDAD_BAJA > 3)
+[e :U 622 ]
+[e $ ! > _DISTANCIA_PRIORIDAD_BAJA -> -> 3 `i `f 624  ]
+"690
+[; ;main.c: 690:                 direccionElegida = ENFRENTE;
+[e = _direccionElegida -> . `E3192 0 `uc ]
+[e $U 625  ]
+"691
+[; ;main.c: 691:             else
+[e :U 624 ]
+"692
+[; ;main.c: 692:                 direccionElegida = 0;
 [e = _direccionElegida -> -> 0 `i `uc ]
-[e :U 505 ]
-[e :U 503 ]
-[e :U 501 ]
-"350
-[; ;main.c: 350:     return direccionElegida;
+[e :U 625 ]
+[e :U 623 ]
+[e :U 621 ]
+"694
+[; ;main.c: 694:         }
+}
+[e :U 619 ]
+"696
+[; ;main.c: 696:     }
+}
+[e :U 617 ]
+"698
+[; ;main.c: 698:     return direccionElegida;
 [e ) _direccionElegida ]
-[e $UE 499  ]
-"351
-[; ;main.c: 351: }
-[e :UE 499 ]
+[e $UE 535  ]
+"699
+[; ;main.c: 699: }
+[e :UE 535 ]
+}
+"701
+[; ;main.c: 701: void leerSensores(void) {
+[v _leerSensores `(v ~T0 @X0 1 ef ]
+{
+[e :U _leerSensores ]
+[f ]
+"703
+[; ;main.c: 703:     sensorDerecha = (dameDistancia(DERECHA) + oldSensorDerecha) / 2;
+[e = _sensorDerecha / + ( _dameDistancia (1 -> . `E3192 2 `uc _oldSensorDerecha -> -> 2 `i `f ]
+"704
+[; ;main.c: 704:     sensorIzquierda = (dameDistancia(IZQUIERDA) + oldSensorIzquierda) / 2;
+[e = _sensorIzquierda / + ( _dameDistancia (1 -> . `E3192 1 `uc _oldSensorIzquierda -> -> 2 `i `f ]
+"705
+[; ;main.c: 705:     sensorEnfrente = (dameDistancia(ENFRENTE) + oldSensorEnfrente) / 2;
+[e = _sensorEnfrente / + ( _dameDistancia (1 -> . `E3192 0 `uc _oldSensorEnfrente -> -> 2 `i `f ]
+"707
+[; ;main.c: 707:     oldSensorDerecha = sensorDerecha;
+[e = _oldSensorDerecha _sensorDerecha ]
+"708
+[; ;main.c: 708:     oldSensorIzquierda = sensorIzquierda;
+[e = _oldSensorIzquierda _sensorIzquierda ]
+"709
+[; ;main.c: 709:     oldSensorEnfrente = sensorEnfrente;
+[e = _oldSensorEnfrente _sensorEnfrente ]
+"711
+[; ;main.c: 711:     if (IZQUIERDA == DERECHA)
+[e $ ! == -> . `E3192 1 `i -> . `E3192 2 `i 627  ]
+"712
+[; ;main.c: 712:         DISTANCIA_PRIORIDAD_MEDIA = sensorDerecha;
+[e = _DISTANCIA_PRIORIDAD_MEDIA _sensorDerecha ]
+[e $U 628  ]
+"713
+[; ;main.c: 713:     else if (ENFRENTE == DERECHA)
+[e :U 627 ]
+[e $ ! == -> . `E3192 0 `i -> . `E3192 2 `i 629  ]
+"714
+[; ;main.c: 714:         DISTANCIA_PRIORIDAD_BAJA = sensorDerecha;
+[e = _DISTANCIA_PRIORIDAD_BAJA _sensorDerecha ]
+[e $U 630  ]
+"715
+[; ;main.c: 715:     else
+[e :U 629 ]
+"716
+[; ;main.c: 716:         DISTANCIA_PRIORIDAD_ALTA = sensorDerecha;
+[e = _DISTANCIA_PRIORIDAD_ALTA _sensorDerecha ]
+[e :U 630 ]
+[e :U 628 ]
+"718
+[; ;main.c: 718:     if (DERECHA == IZQUIERDA)
+[e $ ! == -> . `E3192 2 `i -> . `E3192 1 `i 631  ]
+"719
+[; ;main.c: 719:         DISTANCIA_PRIORIDAD_ALTA = sensorIzquierda;
+[e = _DISTANCIA_PRIORIDAD_ALTA _sensorIzquierda ]
+[e $U 632  ]
+"720
+[; ;main.c: 720:     else if (ENFRENTE == IZQUIERDA)
+[e :U 631 ]
+[e $ ! == -> . `E3192 0 `i -> . `E3192 1 `i 633  ]
+"721
+[; ;main.c: 721:         DISTANCIA_PRIORIDAD_BAJA = sensorIzquierda;
+[e = _DISTANCIA_PRIORIDAD_BAJA _sensorIzquierda ]
+[e $U 634  ]
+"722
+[; ;main.c: 722:     else
+[e :U 633 ]
+"723
+[; ;main.c: 723:         DISTANCIA_PRIORIDAD_MEDIA = sensorIzquierda;
+[e = _DISTANCIA_PRIORIDAD_MEDIA _sensorIzquierda ]
+[e :U 634 ]
+[e :U 632 ]
+"725
+[; ;main.c: 725:     if (DERECHA == ENFRENTE)
+[e $ ! == -> . `E3192 2 `i -> . `E3192 0 `i 635  ]
+"726
+[; ;main.c: 726:         DISTANCIA_PRIORIDAD_ALTA = sensorEnfrente;
+[e = _DISTANCIA_PRIORIDAD_ALTA _sensorEnfrente ]
+[e $U 636  ]
+"727
+[; ;main.c: 727:     else if (IZQUIERDA == ENFRENTE)
+[e :U 635 ]
+[e $ ! == -> . `E3192 1 `i -> . `E3192 0 `i 637  ]
+"728
+[; ;main.c: 728:         DISTANCIA_PRIORIDAD_MEDIA = sensorEnfrente;
+[e = _DISTANCIA_PRIORIDAD_MEDIA _sensorEnfrente ]
+[e $U 638  ]
+"729
+[; ;main.c: 729:     else
+[e :U 637 ]
+"730
+[; ;main.c: 730:         DISTANCIA_PRIORIDAD_BAJA = sensorEnfrente;
+[e = _DISTANCIA_PRIORIDAD_BAJA _sensorEnfrente ]
+[e :U 638 ]
+[e :U 636 ]
+"731
+[; ;main.c: 731: }
+[e :UE 626 ]
+}
+"733
+[; ;main.c: 733: void PID(void) {
+[v _PID `(v ~T0 @X0 1 ef ]
+{
+[e :U _PID ]
+[f ]
+"735
+[; ;main.c: 735:     T_BYTE dif = 0;
+[v _dif `uc ~T0 @X0 1 a ]
+[e = _dif -> -> 0 `i `uc ]
+"736
+[; ;main.c: 736:     T_INT error;
+[v _error `i ~T0 @X0 1 a ]
+"737
+[; ;main.c: 737:     static T_INT difAnt = 0;
+[v F4085 `i ~T0 @X0 1 s difAnt ]
+[i F4085
+-> 0 `i
+]
+"738
+[; ;main.c: 738:     T_FLOAT Kp = 1.1;
+[v _Kp `f ~T0 @X0 1 a ]
+[e = _Kp -> .1.1 `f ]
+"739
+[; ;main.c: 739:     T_FLOAT Kd = 1.3;
+[v _Kd `f ~T0 @X0 1 a ]
+[e = _Kd -> .1.3 `f ]
+"742
+[; ;main.c: 742:     dif = sensorIzquierda - sensorDerecha;
+[e = _dif -> - _sensorIzquierda _sensorDerecha `uc ]
+"744
+[; ;main.c: 744:     error = roundf(Kp * (dif) + Kd * (difAnt - dif));
+[e = _error -> ( _roundf (1 + * _Kp -> -> _dif `i `f * _Kd -> - F4085 -> _dif `i `f `i ]
+"746
+[; ;main.c: 746:     difAnt = dif;
+[e = F4085 -> _dif `i ]
+"748
+[; ;main.c: 748:     T_BYTE velocidadIzquierda = ((100 - error)<(0)?(0):((100 - error)>(100)?(100):(100 - error)));
+[v _velocidadIzquierda `uc ~T0 @X0 1 a ]
+[e = _velocidadIzquierda -> ? < - -> 100 `i _error -> 0 `i : -> 0 `i ? > - -> 100 `i _error -> 100 `i : -> 100 `i - -> 100 `i _error `uc ]
+"749
+[; ;main.c: 749:     T_BYTE velocidadDerecha = ((100 + error)<(0)?(0):((100 + error)>(100)?(100):(100 + error)));
+[v _velocidadDerecha `uc ~T0 @X0 1 a ]
+[e = _velocidadDerecha -> ? < + -> 100 `i _error -> 0 `i : -> 0 `i ? > + -> 100 `i _error -> 100 `i : -> 100 `i + -> 100 `i _error `uc ]
+"751
+[; ;main.c: 751:     pwmDuty(velocidadIzquierda, 1);
+[e ( _pwmDuty (2 , -> _velocidadIzquierda `ui -> -> 1 `i `uc ]
+"752
+[; ;main.c: 752:     pwmDuty(velocidadDerecha, 2);
+[e ( _pwmDuty (2 , -> _velocidadDerecha `ui -> -> 2 `i `uc ]
+"753
+[; ;main.c: 753: }
+[e :UE 639 ]
+}
+"755
+[; ;main.c: 755: void velocidadEstandar(void) {
+[v _velocidadEstandar `(v ~T0 @X0 1 ef ]
+{
+[e :U _velocidadEstandar ]
+[f ]
+"756
+[; ;main.c: 756:     pwmDuty(70, 1);
+[e ( _pwmDuty (2 , -> -> 70 `i `ui -> -> 1 `i `uc ]
+"757
+[; ;main.c: 757:     pwmDuty(70, 2);
+[e ( _pwmDuty (2 , -> -> 70 `i `ui -> -> 2 `i `uc ]
+"759
+[; ;main.c: 759: }
+[e :UE 640 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"353
-[; ;main.c: 353: void main(void) {
+"761
+[; ;main.c: 761: void main(void) {
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"356
-[; ;main.c: 356:     INTCONbits.GIE = 1;
+"764
+[; ;main.c: 764:     INTCONbits.GIE = 1;
 [e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
-"357
-[; ;main.c: 357:     INTCONbits.INT0IE = 1;
+"765
+[; ;main.c: 765:     INTCONbits.INT0IE = 1;
 [e = . . _INTCONbits 0 4 -> -> 1 `i `uc ]
-"358
-[; ;main.c: 358:     INTCON2bits.INTEDG0 = 1;
+"766
+[; ;main.c: 766:     INTCON2bits.INTEDG0 = 1;
 [e = . . _INTCON2bits 1 6 -> -> 1 `i `uc ]
-"360
-[; ;main.c: 360:     TRISD3 = 0;
+"768
+[; ;main.c: 768:     TRISD3 = 0;
 [e = _TRISD3 -> -> 0 `i `b ]
-"361
-[; ;main.c: 361:     TRISB1 = 1;
+"769
+[; ;main.c: 769:     TRISB1 = 1;
 [e = _TRISB1 -> -> 1 `i `b ]
-"362
-[; ;main.c: 362:     TRISB2 = 1;
+"770
+[; ;main.c: 770:     TRISB2 = 1;
 [e = _TRISB2 -> -> 1 `i `b ]
-"363
-[; ;main.c: 363:     TRISB3 = 1;
+"771
+[; ;main.c: 771:     TRISB3 = 1;
 [e = _TRISB3 -> -> 1 `i `b ]
-"365
-[; ;main.c: 365:     TRISB4 = 0;
+"773
+[; ;main.c: 773:     TRISB4 = 0;
 [e = _TRISB4 -> -> 0 `i `b ]
-"366
-[; ;main.c: 366:     TRISB5 = 0;
+"774
+[; ;main.c: 774:     TRISB5 = 0;
 [e = _TRISB5 -> -> 0 `i `b ]
-"367
-[; ;main.c: 367:     TRISB6 = 0;
+"775
+[; ;main.c: 775:     TRISB6 = 0;
 [e = _TRISB6 -> -> 0 `i `b ]
-"368
-[; ;main.c: 368:     TRISB7 = 0;
+"776
+[; ;main.c: 776:     TRISB7 = 0;
 [e = _TRISB7 -> -> 0 `i `b ]
-"370
-[; ;main.c: 370:     TRISDbits.RD2 = 0;
+"778
+[; ;main.c: 778:     TRISDbits.RD2 = 0;
 [e = . . _TRISDbits 1 2 -> -> 0 `i `uc ]
-"371
-[; ;main.c: 371:     TRISB0 = 1;
+"779
+[; ;main.c: 779:     TRISB0 = 1;
 [e = _TRISB0 -> -> 1 `i `b ]
-"373
-[; ;main.c: 373:     LATD3 = 0;
+"781
+[; ;main.c: 781:     LATD3 = 0;
 [e = _LATD3 -> -> 0 `i `b ]
-"374
-[; ;main.c: 374:     LATB4 = 0;
+"782
+[; ;main.c: 782:     LATB4 = 0;
 [e = _LATB4 -> -> 0 `i `b ]
-"375
-[; ;main.c: 375:     LATB5 = 0;
+"783
+[; ;main.c: 783:     LATB5 = 0;
 [e = _LATB5 -> -> 0 `i `b ]
-"376
-[; ;main.c: 376:     LATB6 = 0;
+"784
+[; ;main.c: 784:     LATB6 = 0;
 [e = _LATB6 -> -> 0 `i `b ]
-"377
-[; ;main.c: 377:     LATB7 = 0;
+"785
+[; ;main.c: 785:     LATB7 = 0;
 [e = _LATB7 -> -> 0 `i `b ]
-"378
-[; ;main.c: 378:     LATD2 = 0;
+"786
+[; ;main.c: 786:     LATD2 = 0;
 [e = _LATD2 -> -> 0 `i `b ]
-"381
-[; ;main.c: 381:     T1CON = 0b00000000;
+"789
+[; ;main.c: 789:     T1CON = 0b00000000;
 [e = _T1CON -> -> 0 `i `uc ]
-"383
-[; ;main.c: 383:     configPwm(1);
+"791
+[; ;main.c: 791:     configPwm(1);
 [e ( _configPwm (1 -> -> 1 `i `uc ]
-"384
-[; ;main.c: 384:     configPwm(2);
+"792
+[; ;main.c: 792:     configPwm(2);
 [e ( _configPwm (1 -> -> 2 `i `uc ]
-"386
-[; ;main.c: 386:     UART_init(9600);
+"793
+[; ;main.c: 793:     configurarAdc();
+[e ( _configurarAdc ..  ]
+"795
+[; ;main.c: 795:     UART_init(9600);
 [e ( _UART_init (1 -> -> 9600 `i `l ]
-"388
-[; ;main.c: 388:     inicializarComportamientoBasico();
-[e ( _inicializarComportamientoBasico ..  ]
-"390
-[; ;main.c: 390:     while (1) {
-[e :U 508 ]
+"797
+[; ;main.c: 797:     while (1) {
+[e :U 643 ]
 {
-"392
-[; ;main.c: 392:         if (!pausa) {
-[e $ ! ! != -> _pausa `i -> 0 `i 510  ]
+"799
+[; ;main.c: 799:         if (!pausa) {
+[e $ ! ! != -> _pausa `i -> 0 `i 645  ]
 {
-"394
-[; ;main.c: 394:             probarSensores();
+"801
+[; ;main.c: 801:             probarSensores();
 [e ( _probarSensores ..  ]
-"397
-[; ;main.c: 397:         } else {
+"802
+[; ;main.c: 802:             inicializarComportamientoBasico();
+[e ( _inicializarComportamientoBasico ..  ]
+"805
+[; ;main.c: 805:         } else {
 }
-[e $U 511  ]
-[e :U 510 ]
+[e $U 646  ]
+[e :U 645 ]
 {
-"399
-[; ;main.c: 399:         }
+"807
+[; ;main.c: 807:         }
 }
-[e :U 511 ]
-"402
-[; ;main.c: 402:     }
+[e :U 646 ]
+"810
+[; ;main.c: 810:     }
 }
-[e :U 507 ]
-[e $U 508  ]
-[e :U 509 ]
-"403
-[; ;main.c: 403:     return;
-[e $UE 506  ]
-"404
-[; ;main.c: 404: }
-[e :UE 506 ]
+[e :U 642 ]
+[e $U 643  ]
+[e :U 644 ]
+"811
+[; ;main.c: 811:     return;
+[e $UE 641  ]
+"812
+[; ;main.c: 812: }
+[e :UE 641 ]
 }
-[p f _sprintf 8388736 ]
+[p f _sprintf 8462336 ]
 [a 1C 13 69 110 102 114 101 110 116 101 58 32 13 10 0 ]
 [a 3C 13 68 101 114 101 99 104 97 58 32 13 10 0 ]
 [a 2C 13 73 122 113 117 105 101 114 100 97 58 32 13 10 0 ]
-[a 4C 13 68 105 115 116 97 110 99 105 97 58 32 37 100 32 99 109 13 10 10 0 ]
+[a 4C 13 68 105 115 116 97 110 99 105 97 58 32 37 46 50 102 32 99 109 13 10 10 0 ]

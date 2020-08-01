@@ -18,12 +18,15 @@ typedef enum {
     ALTO
 } Direccion;
 
-T_UWORD dameDistancia(T_UBYTE numeroSensor);
+T_FLOAT sensorDerecha, sensorIzquierda, sensorEnfrente;
+T_FLOAT oldSensorDerecha = 0, oldSensorIzquierda = 0, oldSensorEnfrente = 0;
 
-T_UWORD dameDistancia(T_UBYTE numeroSensor) {
+T_FLOAT dameDistancia(T_UBYTE numeroSensor);
+
+T_FLOAT dameDistancia(T_UBYTE numeroSensor) {
 
     T_UINT conteo; // Variable para poner el valor del Timer 1
-    T_UWORD distancia; // Variable donde se calcula la distancia recibida
+    T_FLOAT distancia; // Variable donde se calcula la distancia recibida
 
     TMR1H = 0x00; // Se carga La parte Alta del Timer 1;
     TMR1L = 0x00; // Se carga la Parte Baja del Timer 1
