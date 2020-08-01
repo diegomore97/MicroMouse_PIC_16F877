@@ -5684,9 +5684,8 @@ extern __attribute__((nonreentrant)) void _delaywdt(unsigned long);
 #pragma intrinsic(_delay3)
 extern __attribute__((nonreentrant)) void _delay3(unsigned char);
 # 32 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\xc.h" 2 3
-# 65 "./config.h" 2
-# 1 "main.c" 2
-
+# 66 "./config.h" 2
+# 2 "main.c" 2
 # 1 "./variables.h" 1
 
 
@@ -5698,8 +5697,7 @@ typedef long T_LONG;
 typedef unsigned int T_UINT;
 typedef unsigned char T_BOOL;
 typedef float T_FLOAT;
-# 2 "main.c" 2
-
+# 3 "main.c" 2
 # 1 "./pwm.h" 1
 # 12 "./pwm.h"
 void configPwm(T_UBYTE channel);
@@ -5773,8 +5771,7 @@ void configPwm(T_UBYTE channel) {
 
     TMR2ON = 1;
 }
-# 3 "main.c" 2
-
+# 4 "main.c" 2
 # 1 "./ultrasonico.h" 1
 # 14 "./ultrasonico.h"
 typedef enum {
@@ -5843,8 +5840,7 @@ T_UWORD dameDistancia(T_UBYTE numeroSensor) {
     return distancia;
 
 }
-# 4 "main.c" 2
-
+# 5 "main.c" 2
 # 1 "./UART.h" 1
 
 
@@ -5897,8 +5893,7 @@ void UART_printf(T_BYTE* cadena) {
         UART_write(*cadena++);
     }
 }
-# 5 "main.c" 2
-
+# 6 "main.c" 2
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdio.h" 1 3
 # 24 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdio.h" 3
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 1 3
@@ -6037,7 +6032,7 @@ char *ctermid(char *);
 
 
 char *tempnam(const char *, const char *);
-# 6 "main.c" 2
+# 7 "main.c" 2
 # 40 "main.c"
 typedef struct {
     Direccion curr_state;
@@ -6334,9 +6329,9 @@ void limpiarMovimientos(T_UBYTE* movimientos, T_UBYTE* numMovimientos) {
 
 T_UBYTE decidirDireccion(void) {
 
-    T_UBYTE mayorPrioridad = ENFRENTE;
+    T_UBYTE mayorPrioridad = DERECHA;
     T_UBYTE prioridadMedia = IZQUIERDA;
-    T_UBYTE prioridadBaja = DERECHA;
+    T_UBYTE prioridadBaja = ENFRENTE;
 
     T_UBYTE direccionElegida;
 

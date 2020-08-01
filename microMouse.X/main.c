@@ -332,9 +332,9 @@ void limpiarMovimientos(T_UBYTE* movimientos, T_UBYTE* numMovimientos) {
 
 T_UBYTE decidirDireccion(void) {
 
-    T_UBYTE mayorPrioridad = ENFRENTE;
+    T_UBYTE mayorPrioridad = DERECHA;
     T_UBYTE prioridadMedia = IZQUIERDA;
-    T_UBYTE prioridadBaja = DERECHA;
+    T_UBYTE prioridadBaja = ENFRENTE;
 
     T_UBYTE direccionElegida;
 

@@ -2081,17 +2081,17 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _decidirDireccion ]
 [f ]
 "335
-[; ;main.c: 335:     T_UBYTE mayorPrioridad = ENFRENTE;
+[; ;main.c: 335:     T_UBYTE mayorPrioridad = DERECHA;
 [v _mayorPrioridad `uc ~T0 @X0 1 a ]
-[e = _mayorPrioridad -> . `E3190 0 `uc ]
+[e = _mayorPrioridad -> . `E3190 2 `uc ]
 "336
 [; ;main.c: 336:     T_UBYTE prioridadMedia = IZQUIERDA;
 [v _prioridadMedia `uc ~T0 @X0 1 a ]
 [e = _prioridadMedia -> . `E3190 1 `uc ]
 "337
-[; ;main.c: 337:     T_UBYTE prioridadBaja = DERECHA;
+[; ;main.c: 337:     T_UBYTE prioridadBaja = ENFRENTE;
 [v _prioridadBaja `uc ~T0 @X0 1 a ]
-[e = _prioridadBaja -> . `E3190 2 `uc ]
+[e = _prioridadBaja -> . `E3190 0 `uc ]
 "339
 [; ;main.c: 339:     T_UBYTE direccionElegida;
 [v _direccionElegida `uc ~T0 @X0 1 a ]
