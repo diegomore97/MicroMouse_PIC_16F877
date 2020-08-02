@@ -745,8 +745,8 @@ void PID(void) {
     // para mantener en memoria la dif anterior
     difAnt = dif;
     //recalcula las velocidades de motores
-    T_BYTE velocidadIzquierda = constrain(100 - error, 0, 100); //velocidad izquierda
-    T_BYTE velocidadDerecha = constrain(100 + error, 0, 100); //velcidad derecha
+    T_BYTE velocidadIzquierda = constrain(VELOCIDAD_MOTORES - error, 0, VELOCIDAD_MOTORES); //velocidad izquierda
+    T_BYTE velocidadDerecha = constrain(VELOCIDAD_MOTORES + error, 0, VELOCIDAD_MOTORES); //velcidad derecha
 
     pwmDuty(velocidadIzquierda, ENA);
     pwmDuty(velocidadDerecha, ENB);
