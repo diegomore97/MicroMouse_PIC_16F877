@@ -232,6 +232,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "74
 [; ;main.c: 74: void leerSensores(void);
 [v _leerSensores `(v ~T0 @X0 0 ef ]
+"75
+[; ;main.c: 75: void PID(void);
+[v _PID `(v ~T0 @X0 0 ef ]
 "77
 [; ;main.c: 77: T_UBYTE decidirDireccion(T_UBYTE* caminosRecorrer, T_UBYTE* investigandoCruce,
 [v _decidirDireccion `(uc ~T0 @X0 0 ef4`*uc`*uc`*uc`*uc ]
@@ -1807,6 +1810,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "184
 [; ;main.c: 184:                 case ENFRENTE:
 [e :U 460 ]
+"185
+[; ;main.c: 185:                     PID();
+[e ( _PID ..  ]
 "186
 [; ;main.c: 186:                     mouse.Next_state = ENFRENTE;
 [e = . _mouse 1 . `E3192 0 ]
@@ -1816,6 +1822,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "189
 [; ;main.c: 189:                 case IZQUIERDA:
 [e :U 461 ]
+"190
+[; ;main.c: 190:                     velocidadEstandar();
+[e ( _velocidadEstandar ..  ]
 "191
 [; ;main.c: 191:                     mouse.Next_state = IZQUIERDA;
 [e = . _mouse 1 . `E3192 1 ]
@@ -1825,6 +1834,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "194
 [; ;main.c: 194:                 case DERECHA:
 [e :U 462 ]
+"195
+[; ;main.c: 195:                     velocidadEstandar();
+[e ( _velocidadEstandar ..  ]
 "196
 [; ;main.c: 196:                     mouse.Next_state = DERECHA;
 [e = . _mouse 1 . `E3192 2 ]
@@ -2146,6 +2158,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 329:         if (movimientos[i] == IZQUIERDA) {
 [e $ ! == -> *U + _movimientos * -> _i `x -> -> # *U _movimientos `i `x `i -> . `E3192 1 `i 488  ]
 {
+"330
+[; ;main.c: 330:             velocidadEstandar();
+[e ( _velocidadEstandar ..  ]
 "331
 [; ;main.c: 331:             mouse.curr_state = DERECHA;
 [e = . _mouse 0 . `E3192 2 ]
@@ -2156,6 +2171,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 488 ]
 [e $ ! == -> *U + _movimientos * -> _i `x -> -> # *U _movimientos `i `x `i -> . `E3192 2 `i 490  ]
 {
+"333
+[; ;main.c: 333:             velocidadEstandar();
+[e ( _velocidadEstandar ..  ]
 "334
 [; ;main.c: 334:             mouse.curr_state = IZQUIERDA;
 [e = . _mouse 0 . `E3192 1 ]
@@ -2165,6 +2183,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $U 491  ]
 [e :U 490 ]
 {
+"336
+[; ;main.c: 336:             PID();
+[e ( _PID ..  ]
 "337
 [; ;main.c: 337:             mouse.curr_state = movimientos[i];
 [e = . _mouse 0 -> *U + _movimientos * -> _i `x -> -> # *U _movimientos `i `x `E3192 ]

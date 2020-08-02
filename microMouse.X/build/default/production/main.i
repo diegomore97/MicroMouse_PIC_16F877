@@ -6672,17 +6672,17 @@ void comportamientoBasico(void) {
                     break;
 
                 case ENFRENTE:
-
+                    PID();
                     mouse.Next_state = ENFRENTE;
                     break;
 
                 case IZQUIERDA:
-
+                    velocidadEstandar();
                     mouse.Next_state = IZQUIERDA;
                     break;
 
                 case DERECHA:
-
+                    velocidadEstandar();
                     mouse.Next_state = DERECHA;
                     break;
 
@@ -6817,13 +6817,13 @@ void regresarCruceAnterior(T_UBYTE* movimientos, T_UBYTE numMovimientos) {
     for (int i = numMovimientos - 1; i >= 0; i--) {
 
         if (movimientos[i] == IZQUIERDA) {
-
+            velocidadEstandar();
             mouse.curr_state = DERECHA;
         } else if (movimientos[i] == DERECHA) {
-
+            velocidadEstandar();
             mouse.curr_state = IZQUIERDA;
         } else {
-
+            PID();
             mouse.curr_state = movimientos[i];
         }
 

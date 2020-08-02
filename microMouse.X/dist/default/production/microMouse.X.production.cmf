@@ -72,7 +72,7 @@ smallconst SMALLCONST 0 800 800 5A 1
 idataBANK0 CODE 0 3EA0 3EA0 1 1
 dataBANK0 BANK0 1 F9 F9 1 1
 bssCOMRAM COMRAM 1 55 55 5 1
-$C:\Users\DIEGOM~1\AppData\Local\Temp\s74.o
+$C:\Users\DIEGOM~1\AppData\Local\Temp\s7h4.o
 idloc IDLOC 0 200000 200000 8 1
 init CODE 0 E E 4 1
 reset_vec CODE 0 0 0 4 1
@@ -122,28 +122,28 @@ MEDIUMCONST 3EA1-7FFF 1
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\microMouse.X.production.o
-8 intcode CODE >13801:C:\Users\DIEGOM~1\AppData\Local\Temp\s74.s
-8 intcode CODE >80:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X\main.c
-3ADA text47 CODE >128:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X\main.c
-3ADC text47 CODE >130:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X\main.c
-3AE0 text47 CODE >132:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X\main.c
-3AEE text47 CODE >133:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X\main.c
-3AFC text47 CODE >134:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X\main.c
-3B0A text47 CODE >135:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X\main.c
-3B0E text47 CODE >140:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X\main.c
-3B30 text47 CODE >141:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X\main.c
-3B32 intcode_body CODE >80:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X\main.c
-3B34 intcode_body CODE >82:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X\main.c
-3B42 intcode_body CODE >84:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X\main.c
-3B48 intcode_body CODE >85:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X\main.c
-3B5A intcode_body CODE >86:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X\main.c
-3B5E intcode_body CODE >87:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X\main.c
-3B60 intcode_body CODE >88:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X\main.c
-3B76 intcode_body CODE >89:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X\main.c
-3B7A intcode_body CODE >90:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X\main.c
-3B7C intcode_body CODE >91:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X\main.c
-3B80 intcode_body CODE >94:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X\main.c
-3B82 intcode_body CODE >96:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X\main.c
+8 intcode CODE >13803:C:\Users\DIEGOM~1\AppData\Local\Temp\s7h4.s
+8 intcode CODE >80:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+3ADA text47 CODE >128:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+3ADC text47 CODE >130:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+3AE0 text47 CODE >132:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+3AEE text47 CODE >133:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+3AFC text47 CODE >134:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+3B0A text47 CODE >135:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+3B0E text47 CODE >140:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+3B30 text47 CODE >141:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+3B32 intcode_body CODE >80:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+3B34 intcode_body CODE >82:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+3B42 intcode_body CODE >84:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+3B48 intcode_body CODE >85:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+3B5A intcode_body CODE >86:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+3B5E intcode_body CODE >87:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+3B60 intcode_body CODE >88:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+3B76 intcode_body CODE >89:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+3B7A intcode_body CODE >90:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+3B7C intcode_body CODE >91:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+3B80 intcode_body CODE >94:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+3B82 intcode_body CODE >96:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
 2D70 text45 CODE >7:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
 2D70 text45 CODE >13:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
 2D74 text45 CODE >14:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
@@ -169,43 +169,43 @@ $dist/default/production\microMouse.X.production.o
 2E5A text45 CODE >39:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
 2E6A text45 CODE >40:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
 2E7A text45 CODE >41:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
-382A text44 CODE >13:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/UART.h
-382A text44 CODE >15:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/UART.h
-382A text44 CODE >16:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/UART.h
-382C text44 CODE >17:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/UART.h
-382E text44 CODE >20:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/UART.h
-388A text44 CODE >23:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/UART.h
-388C text44 CODE >24:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/UART.h
-388E text44 CODE >25:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/UART.h
-3890 text44 CODE >28:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/UART.h
-3892 text44 CODE >29:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/UART.h
-3894 text44 CODE >32:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/UART.h
-3896 text44 CODE >33:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/UART.h
-3898 text44 CODE >34:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/UART.h
-3BD8 text43 CODE >47:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/pwm.h
-3BDA text43 CODE >49:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/pwm.h
-3BDA text43 CODE >55:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/pwm.h
-3BDA text43 CODE >56:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/pwm.h
-3BDC text43 CODE >57:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/pwm.h
-3BDE text43 CODE >61:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/pwm.h
-3BE2 text43 CODE >63:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/pwm.h
-3BE6 text43 CODE >65:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/pwm.h
-3BE6 text43 CODE >66:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/pwm.h
-3BE8 text43 CODE >67:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/pwm.h
-3BEA text43 CODE >68:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/pwm.h
-3BEC text43 CODE >71:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/pwm.h
-3BF0 text43 CODE >73:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/pwm.h
-3BF0 text43 CODE >74:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/pwm.h
-3BF2 text43 CODE >75:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/pwm.h
-3BF4 text43 CODE >76:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/pwm.h
-3BF6 text43 CODE >77:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/pwm.h
-3BFA text43 CODE >79:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/pwm.h
-3C24 text43 CODE >81:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/pwm.h
-3C26 text43 CODE >82:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/pwm.h
-3E94 text42 CODE >7:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/adc.h
-3E94 text42 CODE >8:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/adc.h
-3E98 text42 CODE >9:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/adc.h
-3E9C text42 CODE >10:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/adc.h
+382A text44 CODE >13:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/UART.h
+382A text44 CODE >15:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/UART.h
+382A text44 CODE >16:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/UART.h
+382C text44 CODE >17:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/UART.h
+382E text44 CODE >20:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/UART.h
+388A text44 CODE >23:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/UART.h
+388C text44 CODE >24:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/UART.h
+388E text44 CODE >25:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/UART.h
+3890 text44 CODE >28:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/UART.h
+3892 text44 CODE >29:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/UART.h
+3894 text44 CODE >32:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/UART.h
+3896 text44 CODE >33:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/UART.h
+3898 text44 CODE >34:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/UART.h
+3BD8 text43 CODE >47:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/pwm.h
+3BDA text43 CODE >49:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/pwm.h
+3BDA text43 CODE >55:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/pwm.h
+3BDA text43 CODE >56:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/pwm.h
+3BDC text43 CODE >57:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/pwm.h
+3BDE text43 CODE >61:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/pwm.h
+3BE2 text43 CODE >63:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/pwm.h
+3BE6 text43 CODE >65:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/pwm.h
+3BE6 text43 CODE >66:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/pwm.h
+3BE8 text43 CODE >67:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/pwm.h
+3BEA text43 CODE >68:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/pwm.h
+3BEC text43 CODE >71:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/pwm.h
+3BF0 text43 CODE >73:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/pwm.h
+3BF0 text43 CODE >74:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/pwm.h
+3BF2 text43 CODE >75:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/pwm.h
+3BF4 text43 CODE >76:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/pwm.h
+3BF6 text43 CODE >77:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/pwm.h
+3BFA text43 CODE >79:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/pwm.h
+3C24 text43 CODE >81:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/pwm.h
+3C26 text43 CODE >82:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/pwm.h
+3E94 text42 CODE >7:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/adc.h
+3E94 text42 CODE >8:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/adc.h
+3E98 text42 CODE >9:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/adc.h
+3E9C text42 CODE >10:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/adc.h
 3746 text41 CODE >7:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwdiv.c
 3746 text41 CODE >13:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwdiv.c
 374E text41 CODE >14:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwdiv.c
@@ -252,35 +252,35 @@ $dist/default/production\microMouse.X.production.o
 2A6A text40 CODE >42:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
 2A6C text40 CODE >43:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
 2A7C text40 CODE >44:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
-2C0E text39 CODE >26:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/ultrasonico.h
-2C10 text39 CODE >31:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/ultrasonico.h
-2C14 text39 CODE >32:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/ultrasonico.h
-2C18 text39 CODE >33:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/ultrasonico.h
-2C20 text39 CODE >34:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/ultrasonico.h
-2C22 text39 CODE >35:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/ultrasonico.h
-2C28 text39 CODE >36:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/ultrasonico.h
-2C2A text39 CODE >38:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/ultrasonico.h
-2C2E text39 CODE >42:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/ultrasonico.h
-2C3C text39 CODE >43:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/ultrasonico.h
-2C3E text39 CODE >44:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/ultrasonico.h
-2C5E text39 CODE >50:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/ultrasonico.h
-2C6C text39 CODE >51:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/ultrasonico.h
-2C6E text39 CODE >52:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/ultrasonico.h
-2C8E text39 CODE >58:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/ultrasonico.h
-2C9C text39 CODE >59:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/ultrasonico.h
-2C9E text39 CODE >60:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/ultrasonico.h
-2CBE text39 CODE >64:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/ultrasonico.h
-2CF0 text39 CODE >66:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/ultrasonico.h
-2CF2 text39 CODE >68:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/ultrasonico.h
-2D00 text39 CODE >69:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/ultrasonico.h
-2D0E text39 CODE >70:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/ultrasonico.h
-2D12 text39 CODE >72:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/ultrasonico.h
-2D48 text39 CODE >73:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/ultrasonico.h
-2D4C text39 CODE >74:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/ultrasonico.h
-2D4C text39 CODE >75:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/ultrasonico.h
-2D4E text39 CODE >76:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/ultrasonico.h
-2D5E text39 CODE >80:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/ultrasonico.h
-2D6E text39 CODE >82:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/ultrasonico.h
+2C0E text39 CODE >26:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/ultrasonico.h
+2C10 text39 CODE >31:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/ultrasonico.h
+2C14 text39 CODE >32:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/ultrasonico.h
+2C18 text39 CODE >33:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/ultrasonico.h
+2C20 text39 CODE >34:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/ultrasonico.h
+2C22 text39 CODE >35:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/ultrasonico.h
+2C28 text39 CODE >36:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/ultrasonico.h
+2C2A text39 CODE >38:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/ultrasonico.h
+2C2E text39 CODE >42:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/ultrasonico.h
+2C3C text39 CODE >43:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/ultrasonico.h
+2C3E text39 CODE >44:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/ultrasonico.h
+2C5E text39 CODE >50:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/ultrasonico.h
+2C6C text39 CODE >51:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/ultrasonico.h
+2C6E text39 CODE >52:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/ultrasonico.h
+2C8E text39 CODE >58:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/ultrasonico.h
+2C9C text39 CODE >59:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/ultrasonico.h
+2C9E text39 CODE >60:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/ultrasonico.h
+2CBE text39 CODE >64:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/ultrasonico.h
+2CF0 text39 CODE >66:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/ultrasonico.h
+2CF2 text39 CODE >68:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/ultrasonico.h
+2D00 text39 CODE >69:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/ultrasonico.h
+2D0E text39 CODE >70:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/ultrasonico.h
+2D12 text39 CODE >72:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/ultrasonico.h
+2D48 text39 CODE >73:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/ultrasonico.h
+2D4C text39 CODE >74:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/ultrasonico.h
+2D4C text39 CODE >75:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/ultrasonico.h
+2D4E text39 CODE >76:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/ultrasonico.h
+2D5E text39 CODE >80:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/ultrasonico.h
+2D6E text39 CODE >82:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/ultrasonico.h
 2162 text38 CODE >11:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
 2162 text38 CODE >26:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
 2168 text38 CODE >27:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
@@ -481,44 +481,44 @@ $dist/default/production\microMouse.X.production.o
 38DC text35 CODE >125:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul32.c
 38F2 text35 CODE >128:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul32.c
 3902 text35 CODE >129:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul32.c
-36CC text34 CODE >16:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/pwm.h
-36CC text34 CODE >17:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/pwm.h
-3744 text34 CODE >18:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/pwm.h
-270E text33 CODE >20:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/pwm.h
-270E text33 CODE >22:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/pwm.h
-276E text33 CODE >24:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/pwm.h
-278E text33 CODE >26:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/pwm.h
-2810 text33 CODE >28:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/pwm.h
-2814 text33 CODE >31:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/pwm.h
-2848 text33 CODE >32:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/pwm.h
-284C text33 CODE >33:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/pwm.h
-2854 text33 CODE >34:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/pwm.h
-2858 text33 CODE >37:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/pwm.h
-288C text33 CODE >38:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/pwm.h
-2890 text33 CODE >39:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/pwm.h
-2898 text33 CODE >40:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/pwm.h
-289C text33 CODE >42:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/pwm.h
-28C8 text33 CODE >45:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/pwm.h
-3E44 text32 CODE >755:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X\main.c
-3E44 text32 CODE >756:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X\main.c
-3E56 text32 CODE >757:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X\main.c
-3E68 text32 CODE >759:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X\main.c
-3C28 text31 CODE >143:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X\main.c
-3C28 text31 CODE >145:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X\main.c
-3C2C text31 CODE >147:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X\main.c
-3C42 text31 CODE >148:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X\main.c
-3C58 text31 CODE >149:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X\main.c
-3C6E text31 CODE >151:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X\main.c
-3C72 text31 CODE >153:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X\main.c
-3E6A text30 CODE >42:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/UART.h
-3E6C text30 CODE >43:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/UART.h
-3E70 text30 CODE >44:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/UART.h
-3E7E text30 CODE >45:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/UART.h
-39C6 text29 CODE >47:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/UART.h
-39C6 text29 CODE >48:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/UART.h
-39CA text29 CODE >49:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/UART.h
-39F2 text29 CODE >48:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/UART.h
-3A22 text29 CODE >51:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X/UART.h
+36CC text34 CODE >16:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/pwm.h
+36CC text34 CODE >17:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/pwm.h
+3744 text34 CODE >18:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/pwm.h
+270E text33 CODE >20:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/pwm.h
+270E text33 CODE >22:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/pwm.h
+276E text33 CODE >24:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/pwm.h
+278E text33 CODE >26:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/pwm.h
+2810 text33 CODE >28:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/pwm.h
+2814 text33 CODE >31:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/pwm.h
+2848 text33 CODE >32:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/pwm.h
+284C text33 CODE >33:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/pwm.h
+2854 text33 CODE >34:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/pwm.h
+2858 text33 CODE >37:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/pwm.h
+288C text33 CODE >38:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/pwm.h
+2890 text33 CODE >39:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/pwm.h
+2898 text33 CODE >40:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/pwm.h
+289C text33 CODE >42:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/pwm.h
+28C8 text33 CODE >45:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/pwm.h
+3E44 text32 CODE >755:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+3E44 text32 CODE >756:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+3E56 text32 CODE >757:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+3E68 text32 CODE >759:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+3C28 text31 CODE >143:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+3C28 text31 CODE >145:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+3C2C text31 CODE >147:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+3C42 text31 CODE >148:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+3C58 text31 CODE >149:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+3C6E text31 CODE >151:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+3C72 text31 CODE >153:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+3E6A text30 CODE >42:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/UART.h
+3E6C text30 CODE >43:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/UART.h
+3E70 text30 CODE >44:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/UART.h
+3E7E text30 CODE >45:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/UART.h
+39C6 text29 CODE >47:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/UART.h
+39C6 text29 CODE >48:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/UART.h
+39CA text29 CODE >49:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/UART.h
+39F2 text29 CODE >48:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/UART.h
+3A22 text29 CODE >51:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/UART.h
 3E1E text28 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul16.c
 3E1E text28 CODE >37:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul16.c
 3E2A text28 CODE >38:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul16.c
@@ -999,88 +999,88 @@ FFA text7 CODE >447:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\c
 3AA2 text3 CODE >19:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\nf_sprintf.c
 3AC0 text3 CODE >20:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\nf_sprintf.c
 3AD8 text3 CODE >23:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\nf_sprintf.c
-34B2 text2 CODE >104:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X\main.c
-34B6 text2 CODE >106:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X\main.c
-34BA text2 CODE >109:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X\main.c
-34C6 text2 CODE >110:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X\main.c
-34CA text2 CODE >113:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X\main.c
-34D6 text2 CODE >114:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X\main.c
-34DA text2 CODE >117:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X\main.c
-34E6 text2 CODE >118:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X\main.c
-34EA text2 CODE >120:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X\main.c
-351E text2 CODE >122:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X\main.c
-354A text2 CODE >123:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X\main.c
-3556 text2 CODE >124:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X\main.c
-3570 text2 CODE >126:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X\main.c
-3E80 text1 CODE >98:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X\main.c
-3E80 text1 CODE >99:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X\main.c
-3E86 text1 CODE >100:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X\main.c
-3E8C text1 CODE >101:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X\main.c
-3E92 text1 CODE >102:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X\main.c
-37BA text0 CODE >761:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X\main.c
-37BA text0 CODE >764:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X\main.c
-37BC text0 CODE >765:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X\main.c
-37BE text0 CODE >766:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X\main.c
-37C0 text0 CODE >768:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X\main.c
-37C2 text0 CODE >769:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X\main.c
-37C4 text0 CODE >770:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X\main.c
-37C6 text0 CODE >771:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X\main.c
-37C8 text0 CODE >773:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X\main.c
-37CA text0 CODE >774:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X\main.c
-37CC text0 CODE >775:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X\main.c
-37CE text0 CODE >776:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X\main.c
-37D0 text0 CODE >778:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X\main.c
-37D2 text0 CODE >779:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X\main.c
-37D4 text0 CODE >781:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X\main.c
-37D6 text0 CODE >782:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X\main.c
-37D8 text0 CODE >783:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X\main.c
-37DA text0 CODE >784:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X\main.c
-37DC text0 CODE >785:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X\main.c
-37DE text0 CODE >786:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X\main.c
-37E0 text0 CODE >789:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X\main.c
-37E4 text0 CODE >791:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X\main.c
-37EA text0 CODE >792:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X\main.c
-37F0 text0 CODE >793:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X\main.c
-37F4 text0 CODE >795:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X\main.c
-3808 text0 CODE >799:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X\main.c
-381A text0 CODE >801:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X\main.c
-381E text0 CODE >802:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X\main.c
-3822 text0 CODE >805:C:\Users\Diego Moreno\Documents\MicroMouse recorriendo el cruce completo\microMouse.X\main.c
-3CFE cinit CODE >858:C:\Users\DIEGOM~1\AppData\Local\Temp\s74.s
-3CFE cinit CODE >860:C:\Users\DIEGOM~1\AppData\Local\Temp\s74.s
-3CFE cinit CODE >863:C:\Users\DIEGOM~1\AppData\Local\Temp\s74.s
-3CFE cinit CODE >962:C:\Users\DIEGOM~1\AppData\Local\Temp\s74.s
-3D00 cinit CODE >963:C:\Users\DIEGOM~1\AppData\Local\Temp\s74.s
-3D02 cinit CODE >964:C:\Users\DIEGOM~1\AppData\Local\Temp\s74.s
-3D04 cinit CODE >965:C:\Users\DIEGOM~1\AppData\Local\Temp\s74.s
-3D06 cinit CODE >966:C:\Users\DIEGOM~1\AppData\Local\Temp\s74.s
-3D08 cinit CODE >967:C:\Users\DIEGOM~1\AppData\Local\Temp\s74.s
-3D0A cinit CODE >968:C:\Users\DIEGOM~1\AppData\Local\Temp\s74.s
-3D0C cinit CODE >969:C:\Users\DIEGOM~1\AppData\Local\Temp\s74.s
-3D10 cinit CODE >973:C:\Users\DIEGOM~1\AppData\Local\Temp\s74.s
-3D14 cinit CODE >974:C:\Users\DIEGOM~1\AppData\Local\Temp\s74.s
-3D16 cinit CODE >975:C:\Users\DIEGOM~1\AppData\Local\Temp\s74.s
-3D16 cinit CODE >976:C:\Users\DIEGOM~1\AppData\Local\Temp\s74.s
-3D18 cinit CODE >977:C:\Users\DIEGOM~1\AppData\Local\Temp\s74.s
-3D1A cinit CODE >978:C:\Users\DIEGOM~1\AppData\Local\Temp\s74.s
-3D1C cinit CODE >981:C:\Users\DIEGOM~1\AppData\Local\Temp\s74.s
-3D20 cinit CODE >982:C:\Users\DIEGOM~1\AppData\Local\Temp\s74.s
-3D22 cinit CODE >983:C:\Users\DIEGOM~1\AppData\Local\Temp\s74.s
-3D22 cinit CODE >984:C:\Users\DIEGOM~1\AppData\Local\Temp\s74.s
-3D24 cinit CODE >985:C:\Users\DIEGOM~1\AppData\Local\Temp\s74.s
-3D26 cinit CODE >986:C:\Users\DIEGOM~1\AppData\Local\Temp\s74.s
-3D28 cinit CODE >989:C:\Users\DIEGOM~1\AppData\Local\Temp\s74.s
-3D2A cinit CODE >990:C:\Users\DIEGOM~1\AppData\Local\Temp\s74.s
-3D2C cinit CODE >991:C:\Users\DIEGOM~1\AppData\Local\Temp\s74.s
-3D2E cinit CODE >992:C:\Users\DIEGOM~1\AppData\Local\Temp\s74.s
-3D30 cinit CODE >993:C:\Users\DIEGOM~1\AppData\Local\Temp\s74.s
-3D32 cinit CODE >999:C:\Users\DIEGOM~1\AppData\Local\Temp\s74.s
-3D32 cinit CODE >1001:C:\Users\DIEGOM~1\AppData\Local\Temp\s74.s
-3D34 cinit CODE >1002:C:\Users\DIEGOM~1\AppData\Local\Temp\s74.s
-3D36 cinit CODE >1004:C:\Users\DIEGOM~1\AppData\Local\Temp\s74.s
-3D38 cinit CODE >1005:C:\Users\DIEGOM~1\AppData\Local\Temp\s74.s
-3D3A cinit CODE >1006:C:\Users\DIEGOM~1\AppData\Local\Temp\s74.s
-3D3C cinit CODE >1007:C:\Users\DIEGOM~1\AppData\Local\Temp\s74.s
+34B2 text2 CODE >104:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+34B6 text2 CODE >106:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+34BA text2 CODE >109:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+34C6 text2 CODE >110:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+34CA text2 CODE >113:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+34D6 text2 CODE >114:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+34DA text2 CODE >117:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+34E6 text2 CODE >118:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+34EA text2 CODE >120:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+351E text2 CODE >122:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+354A text2 CODE >123:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+3556 text2 CODE >124:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+3570 text2 CODE >126:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+3E80 text1 CODE >98:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+3E80 text1 CODE >99:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+3E86 text1 CODE >100:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+3E8C text1 CODE >101:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+3E92 text1 CODE >102:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+37BA text0 CODE >761:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+37BA text0 CODE >764:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+37BC text0 CODE >765:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+37BE text0 CODE >766:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+37C0 text0 CODE >768:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+37C2 text0 CODE >769:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+37C4 text0 CODE >770:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+37C6 text0 CODE >771:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+37C8 text0 CODE >773:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+37CA text0 CODE >774:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+37CC text0 CODE >775:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+37CE text0 CODE >776:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+37D0 text0 CODE >778:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+37D2 text0 CODE >779:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+37D4 text0 CODE >781:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+37D6 text0 CODE >782:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+37D8 text0 CODE >783:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+37DA text0 CODE >784:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+37DC text0 CODE >785:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+37DE text0 CODE >786:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+37E0 text0 CODE >789:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+37E4 text0 CODE >791:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+37EA text0 CODE >792:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+37F0 text0 CODE >793:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+37F4 text0 CODE >795:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+3808 text0 CODE >799:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+381A text0 CODE >801:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+381E text0 CODE >802:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+3822 text0 CODE >805:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+3CFE cinit CODE >858:C:\Users\DIEGOM~1\AppData\Local\Temp\s7h4.s
+3CFE cinit CODE >860:C:\Users\DIEGOM~1\AppData\Local\Temp\s7h4.s
+3CFE cinit CODE >863:C:\Users\DIEGOM~1\AppData\Local\Temp\s7h4.s
+3CFE cinit CODE >962:C:\Users\DIEGOM~1\AppData\Local\Temp\s7h4.s
+3D00 cinit CODE >963:C:\Users\DIEGOM~1\AppData\Local\Temp\s7h4.s
+3D02 cinit CODE >964:C:\Users\DIEGOM~1\AppData\Local\Temp\s7h4.s
+3D04 cinit CODE >965:C:\Users\DIEGOM~1\AppData\Local\Temp\s7h4.s
+3D06 cinit CODE >966:C:\Users\DIEGOM~1\AppData\Local\Temp\s7h4.s
+3D08 cinit CODE >967:C:\Users\DIEGOM~1\AppData\Local\Temp\s7h4.s
+3D0A cinit CODE >968:C:\Users\DIEGOM~1\AppData\Local\Temp\s7h4.s
+3D0C cinit CODE >969:C:\Users\DIEGOM~1\AppData\Local\Temp\s7h4.s
+3D10 cinit CODE >973:C:\Users\DIEGOM~1\AppData\Local\Temp\s7h4.s
+3D14 cinit CODE >974:C:\Users\DIEGOM~1\AppData\Local\Temp\s7h4.s
+3D16 cinit CODE >975:C:\Users\DIEGOM~1\AppData\Local\Temp\s7h4.s
+3D16 cinit CODE >976:C:\Users\DIEGOM~1\AppData\Local\Temp\s7h4.s
+3D18 cinit CODE >977:C:\Users\DIEGOM~1\AppData\Local\Temp\s7h4.s
+3D1A cinit CODE >978:C:\Users\DIEGOM~1\AppData\Local\Temp\s7h4.s
+3D1C cinit CODE >981:C:\Users\DIEGOM~1\AppData\Local\Temp\s7h4.s
+3D20 cinit CODE >982:C:\Users\DIEGOM~1\AppData\Local\Temp\s7h4.s
+3D22 cinit CODE >983:C:\Users\DIEGOM~1\AppData\Local\Temp\s7h4.s
+3D22 cinit CODE >984:C:\Users\DIEGOM~1\AppData\Local\Temp\s7h4.s
+3D24 cinit CODE >985:C:\Users\DIEGOM~1\AppData\Local\Temp\s7h4.s
+3D26 cinit CODE >986:C:\Users\DIEGOM~1\AppData\Local\Temp\s7h4.s
+3D28 cinit CODE >989:C:\Users\DIEGOM~1\AppData\Local\Temp\s7h4.s
+3D2A cinit CODE >990:C:\Users\DIEGOM~1\AppData\Local\Temp\s7h4.s
+3D2C cinit CODE >991:C:\Users\DIEGOM~1\AppData\Local\Temp\s7h4.s
+3D2E cinit CODE >992:C:\Users\DIEGOM~1\AppData\Local\Temp\s7h4.s
+3D30 cinit CODE >993:C:\Users\DIEGOM~1\AppData\Local\Temp\s7h4.s
+3D32 cinit CODE >999:C:\Users\DIEGOM~1\AppData\Local\Temp\s7h4.s
+3D32 cinit CODE >1001:C:\Users\DIEGOM~1\AppData\Local\Temp\s7h4.s
+3D34 cinit CODE >1002:C:\Users\DIEGOM~1\AppData\Local\Temp\s7h4.s
+3D36 cinit CODE >1004:C:\Users\DIEGOM~1\AppData\Local\Temp\s7h4.s
+3D38 cinit CODE >1005:C:\Users\DIEGOM~1\AppData\Local\Temp\s7h4.s
+3D3A cinit CODE >1006:C:\Users\DIEGOM~1\AppData\Local\Temp\s7h4.s
+3D3C cinit CODE >1007:C:\Users\DIEGOM~1\AppData\Local\Temp\s7h4.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -1109,7 +1109,7 @@ _inicializarComportamientoBasico 3C28 0 CODE 0 text31 dist/default/production\mi
 strncmp@_l 6 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
 strncmp@_r 8 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
 __Hibigdata 0 0 CODE 0 ibigdata dist/default/production\microMouse.X.production.o
-__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\DIEGOM~1\AppData\Local\Temp\s74.o
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\DIEGOM~1\AppData\Local\Temp\s7h4.o
 __Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\microMouse.X.production.o
 __CFG_MCLRE$ON 0 0 ABS 0 - dist/default/production\microMouse.X.production.o
 _velocidadEstandar 3E44 0 CODE 0 text32 dist/default/production\microMouse.X.production.o
@@ -1119,7 +1119,7 @@ comportamientoBasico@contRepeticiones 57 0 COMRAM 1 bssCOMRAM dist/default/produ
 ?_vfprintf BE 0 BANK0 1 cstackBANK0 dist/default/production\microMouse.X.production.o
 __Lsmallconst 800 0 SMALLCONST 0 smallconst dist/default/production\microMouse.X.production.o
 _RCIF 7CF5 0 ABS 0 - dist/default/production\microMouse.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\DIEGOM~1\AppData\Local\Temp\s74.o
+___sp 0 0 STACK 2 stack C:\Users\DIEGOM~1\AppData\Local\Temp\s7h4.o
 _atoi 2A7E 0 CODE 0 text25 dist/default/production\microMouse.X.production.o
 _dbuf 11C 0 BANK1 1 bssBANK1 dist/default/production\microMouse.X.production.o
 _main 37BA 0 CODE 0 text0 dist/default/production\microMouse.X.production.o
@@ -1130,7 +1130,7 @@ map@x 20 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production
 pad@i 1D 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
 pad@p 1A 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
 pad@w 1F 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
-start E 0 CODE 0 init C:\Users\DIEGOM~1\AppData\Local\Temp\s74.o
+start E 0 CODE 0 init C:\Users\DIEGOM~1\AppData\Local\Temp\s7h4.o
 ___flmul@aexp 41 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
 ___flmul@bexp 46 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
 ___flmul@prod 47 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
@@ -1168,11 +1168,11 @@ ttemp5 5B 0 COMRAM 1 temp dist/default/production\microMouse.X.production.o
 ttemp6 5E 0 COMRAM 1 temp dist/default/production\microMouse.X.production.o
 ttemp7 62 0 COMRAM 1 temp dist/default/production\microMouse.X.production.o
 __size_of_vfpfcnvrt 0 0 ABS 0 - dist/default/production\microMouse.X.production.o
-__accesstop 60 0 ABS 0 - C:\Users\DIEGOM~1\AppData\Local\Temp\s74.o
-intlevel0 0 0 CODE 0 text C:\Users\DIEGOM~1\AppData\Local\Temp\s74.o
-intlevel1 0 0 CODE 0 text C:\Users\DIEGOM~1\AppData\Local\Temp\s74.o
-intlevel2 0 0 CODE 0 text C:\Users\DIEGOM~1\AppData\Local\Temp\s74.o
-intlevel3 0 0 CODE 0 text C:\Users\DIEGOM~1\AppData\Local\Temp\s74.o
+__accesstop 60 0 ABS 0 - C:\Users\DIEGOM~1\AppData\Local\Temp\s7h4.o
+intlevel0 0 0 CODE 0 text C:\Users\DIEGOM~1\AppData\Local\Temp\s7h4.o
+intlevel1 0 0 CODE 0 text C:\Users\DIEGOM~1\AppData\Local\Temp\s7h4.o
+intlevel2 0 0 CODE 0 text C:\Users\DIEGOM~1\AppData\Local\Temp\s7h4.o
+intlevel3 0 0 CODE 0 text C:\Users\DIEGOM~1\AppData\Local\Temp\s7h4.o
 floorf@e 42 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
 floorf@m 3E 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
 floorf@u 44 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
@@ -1205,11 +1205,11 @@ _ADCON1 FC1 0 ABS 0 - dist/default/production\microMouse.X.production.o
 _ADCON2 FC0 0 ABS 0 - dist/default/production\microMouse.X.production.o
 _ADRESH FC4 0 ABS 0 - dist/default/production\microMouse.X.production.o
 _ADRESL FC3 0 ABS 0 - dist/default/production\microMouse.X.production.o
-_vfpfcnvrt$805 B2 0 BANK0 1 cstackBANK0 dist/default/production\microMouse.X.production.o
-_vfpfcnvrt$809 B4 0 BANK0 1 cstackBANK0 dist/default/production\microMouse.X.production.o
+_vfpfcnvrt$809 B2 0 BANK0 1 cstackBANK0 dist/default/production\microMouse.X.production.o
+_vfpfcnvrt$813 B4 0 BANK0 1 cstackBANK0 dist/default/production\microMouse.X.production.o
 ___awdiv@dividend 6 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
-___inthi_sp 0 0 STACK 2 stack C:\Users\DIEGOM~1\AppData\Local\Temp\s74.o
-___intlo_sp 0 0 STACK 2 stack C:\Users\DIEGOM~1\AppData\Local\Temp\s74.o
+___inthi_sp 0 0 STACK 2 stack C:\Users\DIEGOM~1\AppData\Local\Temp\s7h4.o
+___intlo_sp 0 0 STACK 2 stack C:\Users\DIEGOM~1\AppData\Local\Temp\s7h4.o
 comportamientoBasico@contCaminosRecorridos F6 0 BANK0 1 bssBANK0 dist/default/production\microMouse.X.production.o
 ?_dameDistancia 1B 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
 ?_tolower C 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
@@ -1236,9 +1236,9 @@ ___fldiv@aexp 33 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.pr
 ___fldiv@bexp 32 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
 ___fldiv@sign 2B 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
 __Hmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/production\microMouse.X.production.o
-_atoi$1280 15 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
-_atoi$1281 19 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
-_atoi$1282 17 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
+_atoi$1284 15 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
+_atoi$1285 19 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
+_atoi$1286 17 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
 __Hintcodelo E 0 CODE 0 intcodelo dist/default/production\microMouse.X.production.o
 __size_of_inicializarComportamientoBasico 0 0 ABS 0 - dist/default/production\microMouse.X.production.o
 ___awdiv@divisor 8 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
@@ -1301,7 +1301,7 @@ efgtoa@t 80 0 BANK0 1 cstackBANK0 dist/default/production\microMouse.X.productio
 efgtoa@u A4 0 BANK0 1 cstackBANK0 dist/default/production\microMouse.X.production.o
 efgtoa@w 8F 0 BANK0 1 cstackBANK0 dist/default/production\microMouse.X.production.o
 probarUltrasonico@numeroSensor D0 0 BANK0 1 cstackBANK0 dist/default/production\microMouse.X.production.o
-_tolower$1410 12 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
+_tolower$1414 12 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
 ___rparam_used 1 0 ABS 0 - dist/default/production\microMouse.X.production.o
 efgtoa@mode 91 0 BANK0 1 cstackBANK0 dist/default/production\microMouse.X.production.o
 efgtoa@sign 8A 0 BANK0 1 cstackBANK0 dist/default/production\microMouse.X.production.o
@@ -1325,12 +1325,12 @@ _TRISC2 7CA2 0 ABS 0 - dist/default/production\microMouse.X.production.o
 _TRISC6 7CA6 0 ABS 0 - dist/default/production\microMouse.X.production.o
 _TRISC7 7CA7 0 ABS 0 - dist/default/production\microMouse.X.production.o
 _TRISD3 7CAB 0 ABS 0 - dist/default/production\microMouse.X.production.o
-_efgtoa$779 74 0 BANK0 1 cstackBANK0 dist/default/production\microMouse.X.production.o
-_efgtoa$780 76 0 BANK0 1 cstackBANK0 dist/default/production\microMouse.X.production.o
-_efgtoa$785 78 0 BANK0 1 cstackBANK0 dist/default/production\microMouse.X.production.o
-_efgtoa$789 7A 0 BANK0 1 cstackBANK0 dist/default/production\microMouse.X.production.o
-_efgtoa$790 7C 0 BANK0 1 cstackBANK0 dist/default/production\microMouse.X.production.o
-_efgtoa$791 7E 0 BANK0 1 cstackBANK0 dist/default/production\microMouse.X.production.o
+_efgtoa$783 74 0 BANK0 1 cstackBANK0 dist/default/production\microMouse.X.production.o
+_efgtoa$784 76 0 BANK0 1 cstackBANK0 dist/default/production\microMouse.X.production.o
+_efgtoa$789 78 0 BANK0 1 cstackBANK0 dist/default/production\microMouse.X.production.o
+_efgtoa$793 7A 0 BANK0 1 cstackBANK0 dist/default/production\microMouse.X.production.o
+_efgtoa$794 7C 0 BANK0 1 cstackBANK0 dist/default/production\microMouse.X.production.o
+_efgtoa$795 7E 0 BANK0 1 cstackBANK0 dist/default/production\microMouse.X.production.o
 fputc@fp 8 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
 fputs@fp 11 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
 pwmDuty@duty 6A 0 BANK0 1 cstackBANK0 dist/default/production\microMouse.X.production.o
@@ -1370,7 +1370,7 @@ ___lwdiv@counter A 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.
 __size_of___xxtofl 0 0 ABS 0 - dist/default/production\microMouse.X.production.o
 __Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production\microMouse.X.production.o
 __Hbigram 0 0 ABS 0 bigram dist/default/production\microMouse.X.production.o
-__smallconst 800 0 SMALLCONST 0 smallconst C:\Users\DIEGOM~1\AppData\Local\Temp\s74.o
+__smallconst 800 0 SMALLCONST 0 smallconst C:\Users\DIEGOM~1\AppData\Local\Temp\s7h4.o
 ___xxtofl@arg 17 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
 ___xxtofl@exp 16 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
 ___xxtofl@val D 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
@@ -1613,8 +1613,8 @@ __end_of_UART_printf 3A24 0 CODE 0 text29 dist/default/production\microMouse.X.p
 __size_of_dameDistancia 0 0 ABS 0 - dist/default/production\microMouse.X.production.o
 __size_of_vfprintf 0 0 ABS 0 - dist/default/production\microMouse.X.production.o
 __CFG_CCP2MX$ON 0 0 ABS 0 - dist/default/production\microMouse.X.production.o
-stackhi 7FF 0 ABS 0 - C:\Users\DIEGOM~1\AppData\Local\Temp\s74.o
-stacklo 1DA 0 ABS 0 - C:\Users\DIEGOM~1\AppData\Local\Temp\s74.o
+stackhi 7FF 0 ABS 0 - C:\Users\DIEGOM~1\AppData\Local\Temp\s7h4.o
+stacklo 1DA 0 ABS 0 - C:\Users\DIEGOM~1\AppData\Local\Temp\s7h4.o
 __Lintcode 8 0 CODE 0 intcode dist/default/production\microMouse.X.production.o
 __Lintret 0 0 ABS 0 intret dist/default/production\microMouse.X.production.o
 tolower@c C 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
@@ -1735,7 +1735,7 @@ __Ltext43 0 0 ABS 0 text43 dist/default/production\microMouse.X.production.o
 __Ltext44 0 0 ABS 0 text44 dist/default/production\microMouse.X.production.o
 __Ltext45 0 0 ABS 0 text45 dist/default/production\microMouse.X.production.o
 __Ltext47 0 0 ABS 0 text47 dist/default/production\microMouse.X.production.o
-__ramtop 800 0 RAM 0 ramtop C:\Users\DIEGOM~1\AppData\Local\Temp\s74.o
+__ramtop 800 0 RAM 0 ramtop C:\Users\DIEGOM~1\AppData\Local\Temp\s7h4.o
 ___aldiv@dividend 12 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
 _sprintf 3A80 0 CODE 0 text3 dist/default/production\microMouse.X.production.o
 __end_of_probarUltrasonico 3572 0 CODE 0 text2 dist/default/production\microMouse.X.production.o
@@ -1778,14 +1778,14 @@ __CFG_WRTD$OFF 0 0 ABS 0 - dist/default/production\microMouse.X.production.o
 __pidataBANK0 3EA0 0 CODE 0 idataBANK0 dist/default/production\microMouse.X.production.o
 __end_of_velocidadEstandar 3E6A 0 CODE 0 text32 dist/default/production\microMouse.X.production.o
 __Lclrtext 0 0 ABS 0 clrtext dist/default/production\microMouse.X.production.o
-_isspace$1311 C 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
+_isspace$1315 C 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
 comportamientoBasico@espejearCarroY 58 0 COMRAM 1 bssCOMRAM dist/default/production\microMouse.X.production.o
 ___lmul@product E 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
 ___lmul@multiplicand A 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
 __CFG_PWRT$OFF 0 0 ABS 0 - dist/default/production\microMouse.X.production.o
 __pcstackCOMRAM 1 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
 _TXSTAbits FAC 0 ABS 0 - dist/default/production\microMouse.X.production.o
-_UART_init$1639 28 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
+_UART_init$1640 28 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
 _T2CKPS0 7E50 0 ABS 0 - dist/default/production\microMouse.X.production.o
 _T2CKPS1 7E51 0 ABS 0 - dist/default/production\microMouse.X.production.o
 ___fpclassifyf@F463 108 0 BANK1 1 bssBANK1 dist/default/production\microMouse.X.production.o
