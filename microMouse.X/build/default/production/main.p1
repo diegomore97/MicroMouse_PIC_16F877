@@ -2360,43 +2360,43 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $ ! && > -> _contCaminos `i -> 1 `i ! != -> _investigandoCruce `i -> 0 `i 500  ]
 {
 "407
-[; ;main.c: 407:         if (DERECHA == DERECHA) {
-[e $ ! == -> . `E3192 2 `i -> . `E3192 2 `i 501  ]
+[; ;main.c: 407:         if (IZQUIERDA == DERECHA) {
+[e $ ! == -> . `E3192 1 `i -> . `E3192 2 `i 501  ]
 {
 "409
 [; ;main.c: 409:             if (paredDerecha)
 [e $ ! != -> _paredDerecha `i -> 0 `i 502  ]
 "410
-[; ;main.c: 410:                 caminosRecorrer[DERECHA - 1] = 1;
-[e = *U + _caminosRecorrer * -> - -> . `E3192 2 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x -> -> 1 `i `uc ]
+[; ;main.c: 410:                 caminosRecorrer[IZQUIERDA - 1] = 1;
+[e = *U + _caminosRecorrer * -> - -> . `E3192 1 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x -> -> 1 `i `uc ]
 [e $U 503  ]
 "411
 [; ;main.c: 411:             else
 [e :U 502 ]
 "412
-[; ;main.c: 412:                 caminosRecorrer[DERECHA - 1] = 0;
-[e = *U + _caminosRecorrer * -> - -> . `E3192 2 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x -> -> 0 `i `uc ]
+[; ;main.c: 412:                 caminosRecorrer[IZQUIERDA - 1] = 0;
+[e = *U + _caminosRecorrer * -> - -> . `E3192 1 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x -> -> 0 `i `uc ]
 [e :U 503 ]
 "414
-[; ;main.c: 414:         } else if (IZQUIERDA == DERECHA) {
+[; ;main.c: 414:         } else if (DERECHA == DERECHA) {
 }
 [e $U 504  ]
 [e :U 501 ]
-[e $ ! == -> . `E3192 1 `i -> . `E3192 2 `i 505  ]
+[e $ ! == -> . `E3192 2 `i -> . `E3192 2 `i 505  ]
 {
 "416
 [; ;main.c: 416:             if (paredDerecha)
 [e $ ! != -> _paredDerecha `i -> 0 `i 506  ]
 "417
-[; ;main.c: 417:                 caminosRecorrer[IZQUIERDA - 1] = 1;
-[e = *U + _caminosRecorrer * -> - -> . `E3192 1 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x -> -> 1 `i `uc ]
+[; ;main.c: 417:                 caminosRecorrer[DERECHA - 1] = 1;
+[e = *U + _caminosRecorrer * -> - -> . `E3192 2 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x -> -> 1 `i `uc ]
 [e $U 507  ]
 "418
 [; ;main.c: 418:             else
 [e :U 506 ]
 "419
-[; ;main.c: 419:                 caminosRecorrer[IZQUIERDA - 1] = 0;
-[e = *U + _caminosRecorrer * -> - -> . `E3192 1 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x -> -> 0 `i `uc ]
+[; ;main.c: 419:                 caminosRecorrer[DERECHA - 1] = 0;
+[e = *U + _caminosRecorrer * -> - -> . `E3192 2 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x -> -> 0 `i `uc ]
 [e :U 507 ]
 "421
 [; ;main.c: 421:         } else {
@@ -2442,25 +2442,25 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = *U + _caminosRecorrer * -> - -> . `E3192 0 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x -> -> 0 `i `uc ]
 [e :U 513 ]
 "437
-[; ;main.c: 437:         } else if (IZQUIERDA == IZQUIERDA) {
+[; ;main.c: 437:         } else if (DERECHA == IZQUIERDA) {
 }
 [e $U 514  ]
 [e :U 511 ]
-[e $ ! == -> . `E3192 1 `i -> . `E3192 1 `i 515  ]
+[e $ ! == -> . `E3192 2 `i -> . `E3192 1 `i 515  ]
 {
 "439
 [; ;main.c: 439:             if (paredIzquierda)
 [e $ ! != -> _paredIzquierda `i -> 0 `i 516  ]
 "440
-[; ;main.c: 440:                 caminosRecorrer[IZQUIERDA - 1] = 1;
-[e = *U + _caminosRecorrer * -> - -> . `E3192 1 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x -> -> 1 `i `uc ]
+[; ;main.c: 440:                 caminosRecorrer[DERECHA - 1] = 1;
+[e = *U + _caminosRecorrer * -> - -> . `E3192 2 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x -> -> 1 `i `uc ]
 [e $U 517  ]
 "441
 [; ;main.c: 441:             else
 [e :U 516 ]
 "442
-[; ;main.c: 442:                 caminosRecorrer[IZQUIERDA - 1] = 0;
-[e = *U + _caminosRecorrer * -> - -> . `E3192 1 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x -> -> 0 `i `uc ]
+[; ;main.c: 442:                 caminosRecorrer[DERECHA - 1] = 0;
+[e = *U + _caminosRecorrer * -> - -> . `E3192 2 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x -> -> 0 `i `uc ]
 [e :U 517 ]
 "444
 [; ;main.c: 444:         } else {
@@ -2472,15 +2472,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 446:             if (paredIzquierda)
 [e $ ! != -> _paredIzquierda `i -> 0 `i 519  ]
 "447
-[; ;main.c: 447:                 caminosRecorrer[DERECHA - 1] = 1;
-[e = *U + _caminosRecorrer * -> - -> . `E3192 2 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x -> -> 1 `i `uc ]
+[; ;main.c: 447:                 caminosRecorrer[IZQUIERDA - 1] = 1;
+[e = *U + _caminosRecorrer * -> - -> . `E3192 1 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x -> -> 1 `i `uc ]
 [e $U 520  ]
 "448
 [; ;main.c: 448:             else
 [e :U 519 ]
 "449
-[; ;main.c: 449:                 caminosRecorrer[DERECHA - 1] = 0;
-[e = *U + _caminosRecorrer * -> - -> . `E3192 2 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x -> -> 0 `i `uc ]
+[; ;main.c: 449:                 caminosRecorrer[IZQUIERDA - 1] = 0;
+[e = *U + _caminosRecorrer * -> - -> . `E3192 1 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x -> -> 0 `i `uc ]
 [e :U 520 ]
 "451
 [; ;main.c: 451:         }
@@ -2506,25 +2506,25 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = *U + _caminosRecorrer * -> - -> . `E3192 0 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x -> -> 0 `i `uc ]
 [e :U 523 ]
 "460
-[; ;main.c: 460:         } else if (DERECHA == ENFRENTE) {
+[; ;main.c: 460:         } else if (IZQUIERDA == ENFRENTE) {
 }
 [e $U 524  ]
 [e :U 521 ]
-[e $ ! == -> . `E3192 2 `i -> . `E3192 0 `i 525  ]
+[e $ ! == -> . `E3192 1 `i -> . `E3192 0 `i 525  ]
 {
 "462
 [; ;main.c: 462:             if (paredEnfrente)
 [e $ ! != -> _paredEnfrente `i -> 0 `i 526  ]
 "463
-[; ;main.c: 463:                 caminosRecorrer[DERECHA - 1] = 1;
-[e = *U + _caminosRecorrer * -> - -> . `E3192 2 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x -> -> 1 `i `uc ]
+[; ;main.c: 463:                 caminosRecorrer[IZQUIERDA - 1] = 1;
+[e = *U + _caminosRecorrer * -> - -> . `E3192 1 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x -> -> 1 `i `uc ]
 [e $U 527  ]
 "464
 [; ;main.c: 464:             else
 [e :U 526 ]
 "465
-[; ;main.c: 465:                 caminosRecorrer[DERECHA - 1] = 0;
-[e = *U + _caminosRecorrer * -> - -> . `E3192 2 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x -> -> 0 `i `uc ]
+[; ;main.c: 465:                 caminosRecorrer[IZQUIERDA - 1] = 0;
+[e = *U + _caminosRecorrer * -> - -> . `E3192 1 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x -> -> 0 `i `uc ]
 [e :U 527 ]
 "467
 [; ;main.c: 467:         } else {
@@ -2536,15 +2536,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 469:             if (paredEnfrente)
 [e $ ! != -> _paredEnfrente `i -> 0 `i 529  ]
 "470
-[; ;main.c: 470:                 caminosRecorrer[IZQUIERDA - 1] = 1;
-[e = *U + _caminosRecorrer * -> - -> . `E3192 1 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x -> -> 1 `i `uc ]
+[; ;main.c: 470:                 caminosRecorrer[DERECHA - 1] = 1;
+[e = *U + _caminosRecorrer * -> - -> . `E3192 2 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x -> -> 1 `i `uc ]
 [e $U 530  ]
 "471
 [; ;main.c: 471:             else
 [e :U 529 ]
 "472
-[; ;main.c: 472:                 caminosRecorrer[IZQUIERDA - 1] = 0;
-[e = *U + _caminosRecorrer * -> - -> . `E3192 1 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x -> -> 0 `i `uc ]
+[; ;main.c: 472:                 caminosRecorrer[DERECHA - 1] = 0;
+[e = *U + _caminosRecorrer * -> - -> . `E3192 2 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x -> -> 0 `i `uc ]
 [e :U 530 ]
 "474
 [; ;main.c: 474:         }
@@ -2698,11 +2698,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 548 ]
 {
 "529
-[; ;main.c: 529:                         if (caminosRecorrer[DERECHA - 1 ] == 1)
-[e $ ! == -> *U + _caminosRecorrer * -> - -> . `E3192 2 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `i -> 1 `i 550  ]
+[; ;main.c: 529:                         if (caminosRecorrer[IZQUIERDA - 1 ] == 1)
+[e $ ! == -> *U + _caminosRecorrer * -> - -> . `E3192 1 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `i -> 1 `i 550  ]
 "530
-[; ;main.c: 530:                             caminosRecorrer[DERECHA - 1 ] = 'X';
-[e = *U + _caminosRecorrer * -> - -> . `E3192 2 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x -> -> 88 `ui `uc ]
+[; ;main.c: 530:                             caminosRecorrer[IZQUIERDA - 1 ] = 'X';
+[e = *U + _caminosRecorrer * -> - -> . `E3192 1 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x -> -> 88 `ui `uc ]
 [e :U 550 ]
 "531
 [; ;main.c: 531:                     }
@@ -2715,18 +2715,18 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 534:                 case 2:
 [e :U 551 ]
 "535
-[; ;main.c: 535:                     if (caminosRecorrer[DERECHA - 1 ] == 1)
-[e $ ! == -> *U + _caminosRecorrer * -> - -> . `E3192 2 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `i -> 1 `i 552  ]
+[; ;main.c: 535:                     if (caminosRecorrer[IZQUIERDA - 1 ] == 1)
+[e $ ! == -> *U + _caminosRecorrer * -> - -> . `E3192 1 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `i -> 1 `i 552  ]
 "536
-[; ;main.c: 536:                         caminosRecorrer[DERECHA - 1 ] = 'X';
-[e = *U + _caminosRecorrer * -> - -> . `E3192 2 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x -> -> 88 `ui `uc ]
+[; ;main.c: 536:                         caminosRecorrer[IZQUIERDA - 1 ] = 'X';
+[e = *U + _caminosRecorrer * -> - -> . `E3192 1 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x -> -> 88 `ui `uc ]
 [e $U 553  ]
 "537
 [; ;main.c: 537:                     else
 [e :U 552 ]
 "538
-[; ;main.c: 538:                         caminosRecorrer[IZQUIERDA - 1 ] = 'X';
-[e = *U + _caminosRecorrer * -> - -> . `E3192 1 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x -> -> 88 `ui `uc ]
+[; ;main.c: 538:                         caminosRecorrer[DERECHA - 1 ] = 'X';
+[e = *U + _caminosRecorrer * -> - -> . `E3192 2 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x -> -> 88 `ui `uc ]
 [e :U 553 ]
 "541
 [; ;main.c: 541:                     break;
@@ -2735,11 +2735,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 543:                 case 3:
 [e :U 554 ]
 "544
-[; ;main.c: 544:                     if (caminosRecorrer[IZQUIERDA - 1 ] == 1)
-[e $ ! == -> *U + _caminosRecorrer * -> - -> . `E3192 1 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `i -> 1 `i 555  ]
+[; ;main.c: 544:                     if (caminosRecorrer[DERECHA - 1 ] == 1)
+[e $ ! == -> *U + _caminosRecorrer * -> - -> . `E3192 2 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `i -> 1 `i 555  ]
 "545
-[; ;main.c: 545:                         caminosRecorrer[IZQUIERDA - 1 ] = 'X';
-[e = *U + _caminosRecorrer * -> - -> . `E3192 1 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x -> -> 88 `ui `uc ]
+[; ;main.c: 545:                         caminosRecorrer[DERECHA - 1 ] = 'X';
+[e = *U + _caminosRecorrer * -> - -> . `E3192 2 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x -> -> 88 `ui `uc ]
 [e :U 555 ]
 "548
 [; ;main.c: 548:                     break;
@@ -2770,20 +2770,20 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _direccionElegida -> . `E3192 0 `uc ]
 [e $U 558  ]
 "558
-[; ;main.c: 558:             else if (caminosRecorrer[DERECHA - 1] == 1)
+[; ;main.c: 558:             else if (caminosRecorrer[IZQUIERDA - 1] == 1)
 [e :U 557 ]
-[e $ ! == -> *U + _caminosRecorrer * -> - -> . `E3192 2 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `i -> 1 `i 559  ]
+[e $ ! == -> *U + _caminosRecorrer * -> - -> . `E3192 1 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `i -> 1 `i 559  ]
 "559
-[; ;main.c: 559:                 direccionElegida = DERECHA;
-[e = _direccionElegida -> . `E3192 2 `uc ]
+[; ;main.c: 559:                 direccionElegida = IZQUIERDA;
+[e = _direccionElegida -> . `E3192 1 `uc ]
 [e $U 560  ]
 "560
-[; ;main.c: 560:             else if (caminosRecorrer[IZQUIERDA - 1] == 1)
+[; ;main.c: 560:             else if (caminosRecorrer[DERECHA - 1] == 1)
 [e :U 559 ]
-[e $ ! == -> *U + _caminosRecorrer * -> - -> . `E3192 1 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `i -> 1 `i 561  ]
+[e $ ! == -> *U + _caminosRecorrer * -> - -> . `E3192 2 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `i -> 1 `i 561  ]
 "561
-[; ;main.c: 561:                 direccionElegida = IZQUIERDA;
-[e = _direccionElegida -> . `E3192 1 `uc ]
+[; ;main.c: 561:                 direccionElegida = DERECHA;
+[e = _direccionElegida -> . `E3192 2 `uc ]
 [e :U 561 ]
 [e :U 560 ]
 [e :U 558 ]
@@ -2812,46 +2812,46 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $ ! == -> *U + _caminosRecorrer * -> - -> . `E3192 0 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `ui -> 88 `ui 567  ]
 {
 "574
-[; ;main.c: 574:                             if (DERECHA == IZQUIERDA &&
-[e $ ! && == -> . `E3192 2 `i -> . `E3192 1 `i == -> *U + _caminosRecorrer * -> - -> . `E3192 2 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `i -> 1 `i 568  ]
+[; ;main.c: 574:                             if (IZQUIERDA == IZQUIERDA &&
+[e $ ! && == -> . `E3192 1 `i -> . `E3192 1 `i == -> *U + _caminosRecorrer * -> - -> . `E3192 1 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `i -> 1 `i 568  ]
 "575
-[; ;main.c: 575:                                     caminosRecorrer[DERECHA - 1] == 1) {
+[; ;main.c: 575:                                     caminosRecorrer[IZQUIERDA - 1] == 1) {
 {
 "576
 [; ;main.c: 576:                                 direccionElegida = ENFRENTE;
 [e = _direccionElegida -> . `E3192 0 `uc ]
 "577
-[; ;main.c: 577:                             } else if (DERECHA == ENFRENTE &&
+[; ;main.c: 577:                             } else if (IZQUIERDA == ENFRENTE &&
 }
 [e $U 569  ]
 [e :U 568 ]
-[e $ ! && == -> . `E3192 2 `i -> . `E3192 0 `i == -> *U + _caminosRecorrer * -> - -> . `E3192 2 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `i -> 1 `i 570  ]
+[e $ ! && == -> . `E3192 1 `i -> . `E3192 0 `i == -> *U + _caminosRecorrer * -> - -> . `E3192 1 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `i -> 1 `i 570  ]
 "578
-[; ;main.c: 578:                                     caminosRecorrer[DERECHA - 1] == 1) {
+[; ;main.c: 578:                                     caminosRecorrer[IZQUIERDA - 1] == 1) {
 {
 "579
 [; ;main.c: 579:                                 direccionElegida = DERECHA;
 [e = _direccionElegida -> . `E3192 2 `uc ]
 "580
-[; ;main.c: 580:                             } else if (IZQUIERDA == IZQUIERDA &&
+[; ;main.c: 580:                             } else if (DERECHA == IZQUIERDA &&
 }
 [e $U 571  ]
 [e :U 570 ]
-[e $ ! && == -> . `E3192 1 `i -> . `E3192 1 `i == -> *U + _caminosRecorrer * -> - -> . `E3192 1 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `i -> 1 `i 572  ]
+[e $ ! && == -> . `E3192 2 `i -> . `E3192 1 `i == -> *U + _caminosRecorrer * -> - -> . `E3192 2 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `i -> 1 `i 572  ]
 "581
-[; ;main.c: 581:                                     caminosRecorrer[IZQUIERDA - 1] == 1) {
+[; ;main.c: 581:                                     caminosRecorrer[DERECHA - 1] == 1) {
 {
 "582
 [; ;main.c: 582:                                 direccionElegida = ENFRENTE;
 [e = _direccionElegida -> . `E3192 0 `uc ]
 "583
-[; ;main.c: 583:                             } else if (IZQUIERDA == ENFRENTE &&
+[; ;main.c: 583:                             } else if (DERECHA == ENFRENTE &&
 }
 [e $U 573  ]
 [e :U 572 ]
-[e $ ! && == -> . `E3192 1 `i -> . `E3192 0 `i == -> *U + _caminosRecorrer * -> - -> . `E3192 1 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `i -> 1 `i 574  ]
+[e $ ! && == -> . `E3192 2 `i -> . `E3192 0 `i == -> *U + _caminosRecorrer * -> - -> . `E3192 2 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `i -> 1 `i 574  ]
 "584
-[; ;main.c: 584:                                     caminosRecorrer[IZQUIERDA - 1] == 1) {
+[; ;main.c: 584:                                     caminosRecorrer[DERECHA - 1] == 1) {
 {
 "585
 [; ;main.c: 585:                                 direccionElegida = DERECHA;
@@ -2879,46 +2879,46 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $ ! == -> *U + _caminosRecorrer * -> - -> . `E3192 0 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `ui -> 88 `ui 577  ]
 {
 "594
-[; ;main.c: 594:                             if (DERECHA == DERECHA &&
-[e $ ! && == -> . `E3192 2 `i -> . `E3192 2 `i == -> *U + _caminosRecorrer * -> - -> . `E3192 2 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `i -> 1 `i 578  ]
+[; ;main.c: 594:                             if (IZQUIERDA == DERECHA &&
+[e $ ! && == -> . `E3192 1 `i -> . `E3192 2 `i == -> *U + _caminosRecorrer * -> - -> . `E3192 1 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `i -> 1 `i 578  ]
 "595
-[; ;main.c: 595:                                     caminosRecorrer[DERECHA - 1] == 1) {
+[; ;main.c: 595:                                     caminosRecorrer[IZQUIERDA - 1] == 1) {
 {
 "596
 [; ;main.c: 596:                                 direccionElegida = ENFRENTE;
 [e = _direccionElegida -> . `E3192 0 `uc ]
 "597
-[; ;main.c: 597:                             } else if (DERECHA == ENFRENTE &&
+[; ;main.c: 597:                             } else if (IZQUIERDA == ENFRENTE &&
 }
 [e $U 579  ]
 [e :U 578 ]
-[e $ ! && == -> . `E3192 2 `i -> . `E3192 0 `i == -> *U + _caminosRecorrer * -> - -> . `E3192 2 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `i -> 1 `i 580  ]
+[e $ ! && == -> . `E3192 1 `i -> . `E3192 0 `i == -> *U + _caminosRecorrer * -> - -> . `E3192 1 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `i -> 1 `i 580  ]
 "598
-[; ;main.c: 598:                                     caminosRecorrer[DERECHA - 1] == 1) {
+[; ;main.c: 598:                                     caminosRecorrer[IZQUIERDA - 1] == 1) {
 {
 "599
 [; ;main.c: 599:                                 direccionElegida = IZQUIERDA;
 [e = _direccionElegida -> . `E3192 1 `uc ]
 "600
-[; ;main.c: 600:                             } else if (IZQUIERDA == DERECHA &&
+[; ;main.c: 600:                             } else if (DERECHA == DERECHA &&
 }
 [e $U 581  ]
 [e :U 580 ]
-[e $ ! && == -> . `E3192 1 `i -> . `E3192 2 `i == -> *U + _caminosRecorrer * -> - -> . `E3192 1 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `i -> 1 `i 582  ]
+[e $ ! && == -> . `E3192 2 `i -> . `E3192 2 `i == -> *U + _caminosRecorrer * -> - -> . `E3192 2 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `i -> 1 `i 582  ]
 "601
-[; ;main.c: 601:                                     caminosRecorrer[IZQUIERDA - 1] == 1) {
+[; ;main.c: 601:                                     caminosRecorrer[DERECHA - 1] == 1) {
 {
 "602
 [; ;main.c: 602:                                 direccionElegida = ENFRENTE;
 [e = _direccionElegida -> . `E3192 0 `uc ]
 "603
-[; ;main.c: 603:                             } else if (IZQUIERDA == ENFRENTE &&
+[; ;main.c: 603:                             } else if (DERECHA == ENFRENTE &&
 }
 [e $U 583  ]
 [e :U 582 ]
-[e $ ! && == -> . `E3192 1 `i -> . `E3192 0 `i == -> *U + _caminosRecorrer * -> - -> . `E3192 1 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `i -> 1 `i 584  ]
+[e $ ! && == -> . `E3192 2 `i -> . `E3192 0 `i == -> *U + _caminosRecorrer * -> - -> . `E3192 2 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `i -> 1 `i 584  ]
 "604
-[; ;main.c: 604:                                     caminosRecorrer[IZQUIERDA - 1] == 1) {
+[; ;main.c: 604:                                     caminosRecorrer[DERECHA - 1] == 1) {
 {
 "605
 [; ;main.c: 605:                                 direccionElegida = IZQUIERDA;
@@ -2946,46 +2946,46 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $ ! == -> *U + _caminosRecorrer * -> - -> . `E3192 0 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `ui -> 88 `ui 587  ]
 {
 "614
-[; ;main.c: 614:                             if (DERECHA == IZQUIERDA &&
-[e $ ! && == -> . `E3192 2 `i -> . `E3192 1 `i == -> *U + _caminosRecorrer * -> - -> . `E3192 2 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `i -> 1 `i 588  ]
+[; ;main.c: 614:                             if (IZQUIERDA == IZQUIERDA &&
+[e $ ! && == -> . `E3192 1 `i -> . `E3192 1 `i == -> *U + _caminosRecorrer * -> - -> . `E3192 1 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `i -> 1 `i 588  ]
 "615
-[; ;main.c: 615:                                     caminosRecorrer[DERECHA - 1] == 1) {
+[; ;main.c: 615:                                     caminosRecorrer[IZQUIERDA - 1] == 1) {
 {
 "616
 [; ;main.c: 616:                                 direccionElegida = DERECHA;
 [e = _direccionElegida -> . `E3192 2 `uc ]
 "617
-[; ;main.c: 617:                             } else if (DERECHA == DERECHA &&
+[; ;main.c: 617:                             } else if (IZQUIERDA == DERECHA &&
 }
 [e $U 589  ]
 [e :U 588 ]
-[e $ ! && == -> . `E3192 2 `i -> . `E3192 2 `i == -> *U + _caminosRecorrer * -> - -> . `E3192 2 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `i -> 1 `i 590  ]
+[e $ ! && == -> . `E3192 1 `i -> . `E3192 2 `i == -> *U + _caminosRecorrer * -> - -> . `E3192 1 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `i -> 1 `i 590  ]
 "618
-[; ;main.c: 618:                                     caminosRecorrer[DERECHA - 1] == 1) {
+[; ;main.c: 618:                                     caminosRecorrer[IZQUIERDA - 1] == 1) {
 {
 "619
 [; ;main.c: 619:                                 direccionElegida = IZQUIERDA;
 [e = _direccionElegida -> . `E3192 1 `uc ]
 "620
-[; ;main.c: 620:                             } else if (IZQUIERDA == IZQUIERDA &&
+[; ;main.c: 620:                             } else if (DERECHA == IZQUIERDA &&
 }
 [e $U 591  ]
 [e :U 590 ]
-[e $ ! && == -> . `E3192 1 `i -> . `E3192 1 `i == -> *U + _caminosRecorrer * -> - -> . `E3192 1 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `i -> 1 `i 592  ]
+[e $ ! && == -> . `E3192 2 `i -> . `E3192 1 `i == -> *U + _caminosRecorrer * -> - -> . `E3192 2 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `i -> 1 `i 592  ]
 "621
-[; ;main.c: 621:                                     caminosRecorrer[IZQUIERDA - 1] == 1) {
+[; ;main.c: 621:                                     caminosRecorrer[DERECHA - 1] == 1) {
 {
 "622
 [; ;main.c: 622:                                 direccionElegida = DERECHA;
 [e = _direccionElegida -> . `E3192 2 `uc ]
 "623
-[; ;main.c: 623:                             } else if (IZQUIERDA == DERECHA &&
+[; ;main.c: 623:                             } else if (DERECHA == DERECHA &&
 }
 [e $U 593  ]
 [e :U 592 ]
-[e $ ! && == -> . `E3192 1 `i -> . `E3192 2 `i == -> *U + _caminosRecorrer * -> - -> . `E3192 1 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `i -> 1 `i 594  ]
+[e $ ! && == -> . `E3192 2 `i -> . `E3192 2 `i == -> *U + _caminosRecorrer * -> - -> . `E3192 2 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `i -> 1 `i 594  ]
 "624
-[; ;main.c: 624:                                     caminosRecorrer[IZQUIERDA - 1] == 1) {
+[; ;main.c: 624:                                     caminosRecorrer[DERECHA - 1] == 1) {
 {
 "625
 [; ;main.c: 625:                                 direccionElegida = IZQUIERDA;
@@ -3008,30 +3008,30 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 585 ]
 [e :U 575 ]
 "632
-[; ;main.c: 632:                     if (DERECHA == DERECHA) {
-[e $ ! == -> . `E3192 2 `i -> . `E3192 2 `i 595  ]
+[; ;main.c: 632:                     if (DERECHA == IZQUIERDA) {
+[e $ ! == -> . `E3192 2 `i -> . `E3192 1 `i 595  ]
 {
 "634
-[; ;main.c: 634:                         if (caminosRecorrer[DERECHA - 1 ] == 'X') {
-[e $ ! == -> *U + _caminosRecorrer * -> - -> . `E3192 2 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `ui -> 88 `ui 596  ]
+[; ;main.c: 634:                         if (caminosRecorrer[IZQUIERDA - 1 ] == 'X') {
+[e $ ! == -> *U + _caminosRecorrer * -> - -> . `E3192 1 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `ui -> 88 `ui 596  ]
 {
 "636
-[; ;main.c: 636:                             if (IZQUIERDA == IZQUIERDA &&
-[e $ ! && == -> . `E3192 1 `i -> . `E3192 1 `i == -> *U + _caminosRecorrer * -> - -> . `E3192 1 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `i -> 1 `i 597  ]
+[; ;main.c: 636:                             if (DERECHA == IZQUIERDA &&
+[e $ ! && == -> . `E3192 2 `i -> . `E3192 1 `i == -> *U + _caminosRecorrer * -> - -> . `E3192 2 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `i -> 1 `i 597  ]
 "637
-[; ;main.c: 637:                                     caminosRecorrer[IZQUIERDA - 1] == 1) {
+[; ;main.c: 637:                                     caminosRecorrer[DERECHA - 1] == 1) {
 {
 "638
 [; ;main.c: 638:                                 direccionElegida = ENFRENTE;
 [e = _direccionElegida -> . `E3192 0 `uc ]
 "639
-[; ;main.c: 639:                             } else if (IZQUIERDA == ENFRENTE &&
+[; ;main.c: 639:                             } else if (DERECHA == ENFRENTE &&
 }
 [e $U 598  ]
 [e :U 597 ]
-[e $ ! && == -> . `E3192 1 `i -> . `E3192 0 `i == -> *U + _caminosRecorrer * -> - -> . `E3192 1 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `i -> 1 `i 599  ]
+[e $ ! && == -> . `E3192 2 `i -> . `E3192 0 `i == -> *U + _caminosRecorrer * -> - -> . `E3192 2 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `i -> 1 `i 599  ]
 "640
-[; ;main.c: 640:                                     caminosRecorrer[IZQUIERDA - 1] == 1) {
+[; ;main.c: 640:                                     caminosRecorrer[DERECHA - 1] == 1) {
 {
 "641
 [; ;main.c: 641:                                 direccionElegida = DERECHA;
@@ -3046,33 +3046,33 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e :U 596 ]
 "646
-[; ;main.c: 646:                     } else if (IZQUIERDA == DERECHA) {
+[; ;main.c: 646:                     } else if (IZQUIERDA == IZQUIERDA) {
 }
 [e $U 600  ]
 [e :U 595 ]
-[e $ ! == -> . `E3192 1 `i -> . `E3192 2 `i 601  ]
+[e $ ! == -> . `E3192 1 `i -> . `E3192 1 `i 601  ]
 {
 "648
-[; ;main.c: 648:                         if (caminosRecorrer[DERECHA - 1 ] == 'X') {
-[e $ ! == -> *U + _caminosRecorrer * -> - -> . `E3192 2 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `ui -> 88 `ui 602  ]
+[; ;main.c: 648:                         if (caminosRecorrer[IZQUIERDA - 1 ] == 'X') {
+[e $ ! == -> *U + _caminosRecorrer * -> - -> . `E3192 1 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `ui -> 88 `ui 602  ]
 {
 "650
-[; ;main.c: 650:                             if (IZQUIERDA == DERECHA &&
-[e $ ! && == -> . `E3192 1 `i -> . `E3192 2 `i == -> *U + _caminosRecorrer * -> - -> . `E3192 1 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `i -> 1 `i 603  ]
+[; ;main.c: 650:                             if (DERECHA == DERECHA &&
+[e $ ! && == -> . `E3192 2 `i -> . `E3192 2 `i == -> *U + _caminosRecorrer * -> - -> . `E3192 2 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `i -> 1 `i 603  ]
 "651
-[; ;main.c: 651:                                     caminosRecorrer[IZQUIERDA - 1] == 1) {
+[; ;main.c: 651:                                     caminosRecorrer[DERECHA - 1] == 1) {
 {
 "652
 [; ;main.c: 652:                                 direccionElegida = ENFRENTE;
 [e = _direccionElegida -> . `E3192 0 `uc ]
 "653
-[; ;main.c: 653:                             } else if (IZQUIERDA == ENFRENTE &&
+[; ;main.c: 653:                             } else if (DERECHA == ENFRENTE &&
 }
 [e $U 604  ]
 [e :U 603 ]
-[e $ ! && == -> . `E3192 1 `i -> . `E3192 0 `i == -> *U + _caminosRecorrer * -> - -> . `E3192 1 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `i -> 1 `i 605  ]
+[e $ ! && == -> . `E3192 2 `i -> . `E3192 0 `i == -> *U + _caminosRecorrer * -> - -> . `E3192 2 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `i -> 1 `i 605  ]
 "654
-[; ;main.c: 654:                                     caminosRecorrer[IZQUIERDA - 1] == 1) {
+[; ;main.c: 654:                                     caminosRecorrer[DERECHA - 1] == 1) {
 {
 "655
 [; ;main.c: 655:                                 direccionElegida = IZQUIERDA;
@@ -3087,33 +3087,33 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e :U 602 ]
 "660
-[; ;main.c: 660:                     } else if (ENFRENTE == DERECHA) {
+[; ;main.c: 660:                     } else if (ENFRENTE == IZQUIERDA) {
 }
 [e $U 606  ]
 [e :U 601 ]
-[e $ ! == -> . `E3192 0 `i -> . `E3192 2 `i 607  ]
+[e $ ! == -> . `E3192 0 `i -> . `E3192 1 `i 607  ]
 {
 "662
-[; ;main.c: 662:                         if (caminosRecorrer[DERECHA - 1 ] == 'X') {
-[e $ ! == -> *U + _caminosRecorrer * -> - -> . `E3192 2 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `ui -> 88 `ui 608  ]
+[; ;main.c: 662:                         if (caminosRecorrer[IZQUIERDA - 1 ] == 'X') {
+[e $ ! == -> *U + _caminosRecorrer * -> - -> . `E3192 1 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `ui -> 88 `ui 608  ]
 {
 "664
-[; ;main.c: 664:                             if (IZQUIERDA == DERECHA &&
-[e $ ! && == -> . `E3192 1 `i -> . `E3192 2 `i == -> *U + _caminosRecorrer * -> - -> . `E3192 1 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `i -> 1 `i 609  ]
+[; ;main.c: 664:                             if (DERECHA == DERECHA &&
+[e $ ! && == -> . `E3192 2 `i -> . `E3192 2 `i == -> *U + _caminosRecorrer * -> - -> . `E3192 2 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `i -> 1 `i 609  ]
 "665
-[; ;main.c: 665:                                     caminosRecorrer[IZQUIERDA - 1] == 1) {
+[; ;main.c: 665:                                     caminosRecorrer[DERECHA - 1] == 1) {
 {
 "666
 [; ;main.c: 666:                                 direccionElegida = IZQUIERDA;
 [e = _direccionElegida -> . `E3192 1 `uc ]
 "667
-[; ;main.c: 667:                             } else if (IZQUIERDA == IZQUIERDA &&
+[; ;main.c: 667:                             } else if (DERECHA == IZQUIERDA &&
 }
 [e $U 610  ]
 [e :U 609 ]
-[e $ ! && == -> . `E3192 1 `i -> . `E3192 1 `i == -> *U + _caminosRecorrer * -> - -> . `E3192 1 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `i -> 1 `i 611  ]
+[e $ ! && == -> . `E3192 2 `i -> . `E3192 1 `i == -> *U + _caminosRecorrer * -> - -> . `E3192 2 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `i -> 1 `i 611  ]
 "668
-[; ;main.c: 668:                                     caminosRecorrer[IZQUIERDA - 1] == 1) {
+[; ;main.c: 668:                                     caminosRecorrer[DERECHA - 1] == 1) {
 {
 "669
 [; ;main.c: 669:                                 direccionElegida = DERECHA;
@@ -3140,30 +3140,30 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 678:                 case 2:
 [e :U 612 ]
 "680
-[; ;main.c: 680:                     if (DERECHA == DERECHA) {
-[e $ ! == -> . `E3192 2 `i -> . `E3192 2 `i 613  ]
+[; ;main.c: 680:                     if (DERECHA == IZQUIERDA) {
+[e $ ! == -> . `E3192 2 `i -> . `E3192 1 `i 613  ]
 {
 "682
-[; ;main.c: 682:                         if (caminosRecorrer[DERECHA - 1 ] == 'X') {
-[e $ ! == -> *U + _caminosRecorrer * -> - -> . `E3192 2 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `ui -> 88 `ui 614  ]
+[; ;main.c: 682:                         if (caminosRecorrer[IZQUIERDA - 1 ] == 'X') {
+[e $ ! == -> *U + _caminosRecorrer * -> - -> . `E3192 1 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `ui -> 88 `ui 614  ]
 {
 "684
-[; ;main.c: 684:                             if (IZQUIERDA == IZQUIERDA &&
-[e $ ! && == -> . `E3192 1 `i -> . `E3192 1 `i == -> *U + _caminosRecorrer * -> - -> . `E3192 1 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `i -> 1 `i 615  ]
+[; ;main.c: 684:                             if (DERECHA == IZQUIERDA &&
+[e $ ! && == -> . `E3192 2 `i -> . `E3192 1 `i == -> *U + _caminosRecorrer * -> - -> . `E3192 2 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `i -> 1 `i 615  ]
 "685
-[; ;main.c: 685:                                     caminosRecorrer[IZQUIERDA - 1] == 1) {
+[; ;main.c: 685:                                     caminosRecorrer[DERECHA - 1] == 1) {
 {
 "686
 [; ;main.c: 686:                                 direccionElegida = ENFRENTE;
 [e = _direccionElegida -> . `E3192 0 `uc ]
 "687
-[; ;main.c: 687:                             } else if (IZQUIERDA == ENFRENTE &&
+[; ;main.c: 687:                             } else if (DERECHA == ENFRENTE &&
 }
 [e $U 616  ]
 [e :U 615 ]
-[e $ ! && == -> . `E3192 1 `i -> . `E3192 0 `i == -> *U + _caminosRecorrer * -> - -> . `E3192 1 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `i -> 1 `i 617  ]
+[e $ ! && == -> . `E3192 2 `i -> . `E3192 0 `i == -> *U + _caminosRecorrer * -> - -> . `E3192 2 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `i -> 1 `i 617  ]
 "688
-[; ;main.c: 688:                                     caminosRecorrer[IZQUIERDA - 1] == 1) {
+[; ;main.c: 688:                                     caminosRecorrer[DERECHA - 1] == 1) {
 {
 "689
 [; ;main.c: 689:                                 direccionElegida = DERECHA;
@@ -3183,33 +3183,33 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e :U 614 ]
 "695
-[; ;main.c: 695:                     } else if (IZQUIERDA == DERECHA) {
+[; ;main.c: 695:                     } else if (IZQUIERDA == IZQUIERDA) {
 }
 [e $U 619  ]
 [e :U 613 ]
-[e $ ! == -> . `E3192 1 `i -> . `E3192 2 `i 620  ]
+[e $ ! == -> . `E3192 1 `i -> . `E3192 1 `i 620  ]
 {
 "697
-[; ;main.c: 697:                         if (caminosRecorrer[DERECHA - 1 ] == 'X') {
-[e $ ! == -> *U + _caminosRecorrer * -> - -> . `E3192 2 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `ui -> 88 `ui 621  ]
+[; ;main.c: 697:                         if (caminosRecorrer[IZQUIERDA - 1 ] == 'X') {
+[e $ ! == -> *U + _caminosRecorrer * -> - -> . `E3192 1 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `ui -> 88 `ui 621  ]
 {
 "699
-[; ;main.c: 699:                             if (IZQUIERDA == DERECHA &&
-[e $ ! && == -> . `E3192 1 `i -> . `E3192 2 `i == -> *U + _caminosRecorrer * -> - -> . `E3192 1 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `i -> 1 `i 622  ]
+[; ;main.c: 699:                             if (DERECHA == DERECHA &&
+[e $ ! && == -> . `E3192 2 `i -> . `E3192 2 `i == -> *U + _caminosRecorrer * -> - -> . `E3192 2 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `i -> 1 `i 622  ]
 "700
-[; ;main.c: 700:                                     caminosRecorrer[IZQUIERDA - 1] == 1) {
+[; ;main.c: 700:                                     caminosRecorrer[DERECHA - 1] == 1) {
 {
 "701
 [; ;main.c: 701:                                 direccionElegida = ENFRENTE;
 [e = _direccionElegida -> . `E3192 0 `uc ]
 "702
-[; ;main.c: 702:                             } else if (IZQUIERDA == ENFRENTE &&
+[; ;main.c: 702:                             } else if (DERECHA == ENFRENTE &&
 }
 [e $U 623  ]
 [e :U 622 ]
-[e $ ! && == -> . `E3192 1 `i -> . `E3192 0 `i == -> *U + _caminosRecorrer * -> - -> . `E3192 1 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `i -> 1 `i 624  ]
+[e $ ! && == -> . `E3192 2 `i -> . `E3192 0 `i == -> *U + _caminosRecorrer * -> - -> . `E3192 2 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `i -> 1 `i 624  ]
 "703
-[; ;main.c: 703:                                     caminosRecorrer[IZQUIERDA - 1] == 1) {
+[; ;main.c: 703:                                     caminosRecorrer[DERECHA - 1] == 1) {
 {
 "704
 [; ;main.c: 704:                                 direccionElegida = IZQUIERDA;
@@ -3229,33 +3229,33 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e :U 621 ]
 "710
-[; ;main.c: 710:                     } else if (ENFRENTE == DERECHA) {
+[; ;main.c: 710:                     } else if (ENFRENTE == IZQUIERDA) {
 }
 [e $U 626  ]
 [e :U 620 ]
-[e $ ! == -> . `E3192 0 `i -> . `E3192 2 `i 627  ]
+[e $ ! == -> . `E3192 0 `i -> . `E3192 1 `i 627  ]
 {
 "712
-[; ;main.c: 712:                         if (caminosRecorrer[DERECHA - 1 ] == 'X') {
-[e $ ! == -> *U + _caminosRecorrer * -> - -> . `E3192 2 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `ui -> 88 `ui 628  ]
+[; ;main.c: 712:                         if (caminosRecorrer[IZQUIERDA - 1 ] == 'X') {
+[e $ ! == -> *U + _caminosRecorrer * -> - -> . `E3192 1 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `ui -> 88 `ui 628  ]
 {
 "714
-[; ;main.c: 714:                             if (IZQUIERDA == DERECHA &&
-[e $ ! && == -> . `E3192 1 `i -> . `E3192 2 `i == -> *U + _caminosRecorrer * -> - -> . `E3192 1 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `i -> 1 `i 629  ]
+[; ;main.c: 714:                             if (DERECHA == DERECHA &&
+[e $ ! && == -> . `E3192 2 `i -> . `E3192 2 `i == -> *U + _caminosRecorrer * -> - -> . `E3192 2 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `i -> 1 `i 629  ]
 "715
-[; ;main.c: 715:                                     caminosRecorrer[IZQUIERDA - 1] == 1) {
+[; ;main.c: 715:                                     caminosRecorrer[DERECHA - 1] == 1) {
 {
 "716
 [; ;main.c: 716:                                 direccionElegida = IZQUIERDA;
 [e = _direccionElegida -> . `E3192 1 `uc ]
 "717
-[; ;main.c: 717:                             } else if (IZQUIERDA == IZQUIERDA &&
+[; ;main.c: 717:                             } else if (DERECHA == IZQUIERDA &&
 }
 [e $U 630  ]
 [e :U 629 ]
-[e $ ! && == -> . `E3192 1 `i -> . `E3192 1 `i == -> *U + _caminosRecorrer * -> - -> . `E3192 1 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `i -> 1 `i 631  ]
+[e $ ! && == -> . `E3192 2 `i -> . `E3192 1 `i == -> *U + _caminosRecorrer * -> - -> . `E3192 2 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `i -> 1 `i 631  ]
 "718
-[; ;main.c: 718:                                     caminosRecorrer[IZQUIERDA - 1] == 1) {
+[; ;main.c: 718:                                     caminosRecorrer[DERECHA - 1] == 1) {
 {
 "719
 [; ;main.c: 719:                                 direccionElegida = DERECHA;
@@ -3275,43 +3275,43 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e :U 628 ]
 "725
-[; ;main.c: 725:                     } else if (DERECHA == IZQUIERDA) {
+[; ;main.c: 725:                     } else if (DERECHA == DERECHA) {
 }
 [e $U 633  ]
 [e :U 627 ]
-[e $ ! == -> . `E3192 2 `i -> . `E3192 1 `i 634  ]
+[e $ ! == -> . `E3192 2 `i -> . `E3192 2 `i 634  ]
 {
 "727
-[; ;main.c: 727:                         if (caminosRecorrer[IZQUIERDA - 1 ] == 'X')
-[e $ ! == -> *U + _caminosRecorrer * -> - -> . `E3192 1 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `ui -> 88 `ui 635  ]
+[; ;main.c: 727:                         if (caminosRecorrer[DERECHA - 1 ] == 'X')
+[e $ ! == -> *U + _caminosRecorrer * -> - -> . `E3192 2 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `ui -> 88 `ui 635  ]
 "728
 [; ;main.c: 728:                             *contCaminosRecorridos = 3;
 [e = *U _contCaminosRecorridos -> -> 3 `i `uc ]
 [e :U 635 ]
 "729
-[; ;main.c: 729:                     } else if (IZQUIERDA == IZQUIERDA) {
+[; ;main.c: 729:                     } else if (IZQUIERDA == DERECHA) {
 }
 [e $U 636  ]
 [e :U 634 ]
-[e $ ! == -> . `E3192 1 `i -> . `E3192 1 `i 637  ]
+[e $ ! == -> . `E3192 1 `i -> . `E3192 2 `i 637  ]
 {
 "731
-[; ;main.c: 731:                         if (caminosRecorrer[IZQUIERDA - 1 ] == 'X')
-[e $ ! == -> *U + _caminosRecorrer * -> - -> . `E3192 1 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `ui -> 88 `ui 638  ]
+[; ;main.c: 731:                         if (caminosRecorrer[DERECHA - 1 ] == 'X')
+[e $ ! == -> *U + _caminosRecorrer * -> - -> . `E3192 2 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `ui -> 88 `ui 638  ]
 "732
 [; ;main.c: 732:                             *contCaminosRecorridos = 3;
 [e = *U _contCaminosRecorridos -> -> 3 `i `uc ]
 [e :U 638 ]
 "733
-[; ;main.c: 733:                     } else if (ENFRENTE == IZQUIERDA) {
+[; ;main.c: 733:                     } else if (ENFRENTE == DERECHA) {
 }
 [e $U 639  ]
 [e :U 637 ]
-[e $ ! == -> . `E3192 0 `i -> . `E3192 1 `i 640  ]
+[e $ ! == -> . `E3192 0 `i -> . `E3192 2 `i 640  ]
 {
 "735
-[; ;main.c: 735:                         if (caminosRecorrer[IZQUIERDA - 1 ] == 'X')
-[e $ ! == -> *U + _caminosRecorrer * -> - -> . `E3192 1 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `ui -> 88 `ui 641  ]
+[; ;main.c: 735:                         if (caminosRecorrer[DERECHA - 1 ] == 'X')
+[e $ ! == -> *U + _caminosRecorrer * -> - -> . `E3192 2 `i -> 1 `i `x -> -> # *U _caminosRecorrer `i `x `ui -> 88 `ui 641  ]
 "736
 [; ;main.c: 736:                             *contCaminosRecorridos = 3;
 [e = *U _contCaminosRecorridos -> -> 3 `i `uc ]
@@ -3391,16 +3391,16 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 646 ]
 [e $ ! > _DISTANCIA_PRIORIDAD_MEDIA -> -> 3 `i `f 648  ]
 "764
-[; ;main.c: 764:                 direccionElegida = DERECHA;
-[e = _direccionElegida -> . `E3192 2 `uc ]
+[; ;main.c: 764:                 direccionElegida = IZQUIERDA;
+[e = _direccionElegida -> . `E3192 1 `uc ]
 [e $U 649  ]
 "765
 [; ;main.c: 765:             else if (DISTANCIA_PRIORIDAD_BAJA > 3)
 [e :U 648 ]
 [e $ ! > _DISTANCIA_PRIORIDAD_BAJA -> -> 3 `i `f 650  ]
 "766
-[; ;main.c: 766:                 direccionElegida = IZQUIERDA;
-[e = _direccionElegida -> . `E3192 1 `uc ]
+[; ;main.c: 766:                 direccionElegida = DERECHA;
+[e = _direccionElegida -> . `E3192 2 `uc ]
 [e $U 651  ]
 "767
 [; ;main.c: 767:             else
@@ -3452,16 +3452,16 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 785:     oldSensorEnfrente = sensorEnfrente;
 [e = _oldSensorEnfrente _sensorEnfrente ]
 "787
-[; ;main.c: 787:     if (DERECHA == DERECHA)
-[e $ ! == -> . `E3192 2 `i -> . `E3192 2 `i 653  ]
+[; ;main.c: 787:     if (IZQUIERDA == DERECHA)
+[e $ ! == -> . `E3192 1 `i -> . `E3192 2 `i 653  ]
 "788
 [; ;main.c: 788:         DISTANCIA_PRIORIDAD_MEDIA = sensorDerecha;
 [e = _DISTANCIA_PRIORIDAD_MEDIA _sensorDerecha ]
 [e $U 654  ]
 "789
-[; ;main.c: 789:     else if (IZQUIERDA == DERECHA)
+[; ;main.c: 789:     else if (DERECHA == DERECHA)
 [e :U 653 ]
-[e $ ! == -> . `E3192 1 `i -> . `E3192 2 `i 655  ]
+[e $ ! == -> . `E3192 2 `i -> . `E3192 2 `i 655  ]
 "790
 [; ;main.c: 790:         DISTANCIA_PRIORIDAD_BAJA = sensorDerecha;
 [e = _DISTANCIA_PRIORIDAD_BAJA _sensorDerecha ]
@@ -3482,9 +3482,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _DISTANCIA_PRIORIDAD_ALTA _sensorIzquierda ]
 [e $U 658  ]
 "796
-[; ;main.c: 796:     else if (IZQUIERDA == IZQUIERDA)
+[; ;main.c: 796:     else if (DERECHA == IZQUIERDA)
 [e :U 657 ]
-[e $ ! == -> . `E3192 1 `i -> . `E3192 1 `i 659  ]
+[e $ ! == -> . `E3192 2 `i -> . `E3192 1 `i 659  ]
 "797
 [; ;main.c: 797:         DISTANCIA_PRIORIDAD_BAJA = sensorIzquierda;
 [e = _DISTANCIA_PRIORIDAD_BAJA _sensorIzquierda ]
@@ -3505,9 +3505,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _DISTANCIA_PRIORIDAD_ALTA _sensorEnfrente ]
 [e $U 662  ]
 "803
-[; ;main.c: 803:     else if (DERECHA == ENFRENTE)
+[; ;main.c: 803:     else if (IZQUIERDA == ENFRENTE)
 [e :U 661 ]
-[e $ ! == -> . `E3192 2 `i -> . `E3192 0 `i 663  ]
+[e $ ! == -> . `E3192 1 `i -> . `E3192 0 `i 663  ]
 "804
 [; ;main.c: 804:         DISTANCIA_PRIORIDAD_MEDIA = sensorEnfrente;
 [e = _DISTANCIA_PRIORIDAD_MEDIA _sensorEnfrente ]
