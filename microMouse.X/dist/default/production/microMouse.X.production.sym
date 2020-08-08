@@ -89,6 +89,7 @@ _configurarAdc 3E94 0 CODE 0
 _sensorEnfrente D9 0 BANK0 1
 ?___awmod 6 0 COMRAM 1
 efgtoa@pp 82 0 BANK0 1
+_atoi$1291 15 0 COMRAM 1
 __end_of_configurarAdc 3E9E 0 CODE 0
 ?_dameDistancia 1B 0 COMRAM 1
 atoi@n 1A 0 COMRAM 1
@@ -103,6 +104,7 @@ strncmp@_l 6 0 COMRAM 1
 __Hram 0 0 ABS 0
 __end_of_map 3746 0 CODE 0
 __Lram 0 0 ABS 0
+_atoi$1292 19 0 COMRAM 1
 _pausa F9 0 BANK0 1
 __Hcomram 0 0 ABS 0
 _putch 3E9E 0 CODE 0
@@ -114,6 +116,7 @@ _mouse 55 0 COMRAM 1
 __Hsfr 0 0 ABS 0
 ___flge@ff1 4D 0 COMRAM 1
 __Lsfr 0 0 ABS 0
+_vfpfcnvrt$816 B2 0 BANK0 1
 _flags EB 0 BANK0 1
 __Hbss 0 0 RAM 1
 __Lbss 0 0 RAM 1
@@ -121,7 +124,7 @@ _boton 8 0 CODE 0
 ___param_bank 0 0 ABS 0
 __Hnvrram 0 0 COMRAM 1
 __Lnvrram 0 0 COMRAM 1
-_atoi$1293 15 0 COMRAM 1
+_atoi$1293 17 0 COMRAM 1
 efgtoa@ou 70 0 BANK0 1
 ?_sprintf C6 0 BANK0 1
 _vfprintf 3904 0 CODE 0
@@ -130,7 +133,6 @@ int$flags 5A 0 COMRAM 1
 ___xxtofl 28CA 0 CODE 0
 ___fleq@ff1 6 0 COMRAM 1
 _CCP1M2 7DEA 0 ABS 0
-_atoi$1294 19 0 COMRAM 1
 _CCP2M2 7DD2 0 ABS 0
 _CCP1M3 7DEB 0 ABS 0
 _CCP2M3 7DD3 0 ABS 0
@@ -150,7 +152,6 @@ _TRISB6 7C9E 0 ABS 0
 __end_of_vfpfcnvrt 1D38 0 CODE 0
 ___fpclassifyf@F463 108 0 BANK1 1
 _TRISC6 7CA6 0 ABS 0
-_atoi$1295 17 0 COMRAM 1
 ?___fltol 4D 0 COMRAM 1
 _TRISB7 7C9F 0 ABS 0
 _TRISC7 7CA7 0 ABS 0
@@ -192,6 +193,7 @@ __end_of_strlen 3E1E 0 CODE 0
 __Lmediumconst 0 0 MEDIUMCONST 0
 ?___lwdiv 6 0 COMRAM 1
 __Hfarbss 0 0 FARRAM 0
+_vfpfcnvrt$820 B4 0 BANK0 1
 __Lfarbss 0 0 FARRAM 0
 __Hintcode E 0 CODE 0
 __Lintcode 8 0 CODE 0
@@ -216,11 +218,13 @@ __size_of_fputc 0 0 ABS 0
 __end_of_probarSensores 3E94 0 CODE 0
 __HnvFARRAM 0 0 FARRAM 0
 __LnvFARRAM 0 0 FARRAM 0
+_efgtoa$800 7A 0 BANK0 1
 strcpy@src 8 0 COMRAM 1
 __CFG_EBTR1$OFF 0 0 ABS 0
 __CFG_PBADEN$OFF 0 0 ABS 0
 __end_of___fltol 2F84 0 CODE 0
 __size_of_probarSensores 0 0 ABS 0
+_efgtoa$801 7C 0 BANK0 1
 fputc@c 6 0 COMRAM 1
 __CFG_EBTR2$OFF 0 0 ABS 0
 __end_of___flsub 3CBA 0 CODE 0
@@ -230,7 +234,7 @@ __size_of___fldiv 0 0 ABS 0
 fputs@i 14 0 COMRAM 1
 __end_of___flge 308A 0 CODE 0
 __end_of___awmod 3622 0 CODE 0
-_efgtoa$802 7A 0 BANK0 1
+_efgtoa$802 7E 0 BANK0 1
 __end_of_UART_init 389A 0 CODE 0
 __Hdata 0 0 ABS 0
 __Ldata 0 0 ABS 0
@@ -249,7 +253,6 @@ __LcstackBANK0 0 0 ABS 0
 __size_of_map 0 0 ABS 0
 __CFG_CPUDIV$OSC1_PLL2 0 0 ABS 0
 _floorf 24FC 0 CODE 0
-_efgtoa$803 7C 0 BANK0 1
 __pcstackBANK0 60 0 BANK0 1
 ___fleq 3622 0 CODE 0
 _strlen 3DE8 0 CODE 0
@@ -280,10 +283,10 @@ _configPwm 3BD8 0 CODE 0
 _strcpy 3A24 0 CODE 0
 _sensorDerecha E1 0 BANK0 1
 ___lmul@multiplier 6 0 COMRAM 1
-_efgtoa$804 7E 0 BANK0 1
 ___wmul@multiplier 6 0 COMRAM 1
 __HdataBANK0 0 0 ABS 0
 __LdataBANK0 0 0 ABS 0
+_efgtoa$790 74 0 BANK0 1
 ?___xxtofl D 0 COMRAM 1
 ___flmul@sign 40 0 COMRAM 1
 __pdataBANK0 F9 0 BANK0 1
@@ -295,6 +298,7 @@ ___awdiv@sign B 0 COMRAM 1
 __CFG_USBDIV$1 0 0 ABS 0
 __end_of___flneg 3DB0 0 CODE 0
 ___lmul@multiplicand A 0 COMRAM 1
+_efgtoa$791 76 0 BANK0 1
 ___wmul@multiplicand 8 0 COMRAM 1
 __CFG_VREGEN$OFF 0 0 ABS 0
 _T2CKPS0 7E50 0 ABS 0
@@ -304,7 +308,6 @@ __CFG_PLLDIV$1 0 0 ABS 0
 __end_of_fputs 3CFE 0 CODE 0
 __size_of_putch 0 0 ABS 0
 floorf@F524 104 0 BANK1 1
-_efgtoa$792 74 0 BANK0 1
 efgtoa@mode 91 0 BANK0 1
 _UART_init 382A 0 CODE 0
 map@in_max 28 0 COMRAM 1
@@ -315,7 +318,6 @@ _TRISDbits F95 0 ABS 0
 _PORTBbits F81 0 ABS 0
 _TXSTAbits FAC 0 ABS 0
 roundf@F525 100 0 BANK1 1
-_efgtoa$793 76 0 BANK0 1
 comportamientoBasico@investigandoCruce 58 0 COMRAM 1
 ___fladd@grs 15 0 COMRAM 1
 __Hibigdata 0 0 CODE 0
@@ -366,8 +368,10 @@ __Ltext3 0 0 ABS 0
 __ptext2 34B2 0 CODE 0
 ___fldiv@grs 2E 0 COMRAM 1
 UART_printf@cadena 7 0 COMRAM 1
+_UART_init$1649 28 0 COMRAM 1
 __Htext4 0 0 ABS 0
 __Ltext4 0 0 ABS 0
+_efgtoa$796 78 0 BANK0 1
 __ptext3 3A80 0 CODE 0
 __Htext5 0 0 ABS 0
 __Ltext5 0 0 ABS 0
@@ -397,8 +401,6 @@ _vfpfcnvrt 18CA 0 CODE 0
 __Hclrtext 0 0 ABS 0
 __Lclrtext 0 0 ABS 0
 __end_of_isspace 3BD8 0 CODE 0
-_efgtoa$798 78 0 BANK0 1
-_vfpfcnvrt$818 B2 0 BANK0 1
 efgtoa@c 6A 0 BANK0 1
 strlen@a 8 0 COMRAM 1
 ___fpclassifyf@e E 0 COMRAM 1
@@ -429,7 +431,6 @@ ___fladd 140A 0 CODE 0
 efgtoa@u A4 0 BANK0 1
 strlen@s 6 0 COMRAM 1
 _antiRebote 3ADA 0 CODE 0
-_vfpfcnvrt$822 B4 0 BANK0 1
 atoi@neg 13 0 COMRAM 1
 floorf@u 44 0 COMRAM 1
 _isspace 3B86 0 CODE 0
@@ -676,6 +677,7 @@ __smallconst 800 0 SMALLCONST 0
 efgtoa@nmode 8E 0 BANK0 1
 __CFG_CP1$OFF 0 0 ABS 0
 __size_of___wmul 0 0 ABS 0
+_tolower$1421 12 0 COMRAM 1
 comportamientoBasico@numMovimientos 59 0 COMRAM 1
 __Hreset_vec 4 0 CODE 0
 __Lreset_vec 0 0 CODE 0
@@ -683,6 +685,7 @@ __CFG_CP2$OFF 0 0 ABS 0
 __CFG_CP3$OFF 0 0 ABS 0
 __end_of_inicializarComportamientoBasico 3C74 0 CODE 0
 ___xxtofl@exp 16 0 COMRAM 1
+_isspace$1322 C 0 COMRAM 1
 __size_of_atoi 0 0 ABS 0
 vfpfcnvrt@ap AC 0 BANK0 1
 __accesstop 60 0 ABS 0
@@ -703,7 +706,6 @@ intlevel3 0 0 CODE 0
 __size_of___lmul 0 0 ABS 0
 __CFG_WRTC$OFF 0 0 ABS 0
 __end_of_vfprintf 3966 0 CODE 0
-_UART_init$1651 28 0 COMRAM 1
 __CFG_WRTD$OFF 0 0 ABS 0
 _velocidadEstandar 3E44 0 CODE 0
 __size_of___fltol 0 0 ABS 0
@@ -746,7 +748,6 @@ ___flsub@b 4D 0 COMRAM 1
 __CFG_LPT1OSC$OFF 0 0 ABS 0
 ___awmod@dividend 6 0 COMRAM 1
 __CFG_ICPRT$OFF 0 0 ABS 0
-_tolower$1423 12 0 COMRAM 1
 __CFG_BOR$OFF 0 0 ABS 0
 __activetblptr 2 0 ABS 0
 ___lmul@product E 0 COMRAM 1
@@ -759,7 +760,6 @@ ___flmul@a 38 0 COMRAM 1
 __CFG_WDT$OFF 0 0 ABS 0
 ?___fpclassifyf 6 0 COMRAM 1
 ___fldiv@a 1F 0 COMRAM 1
-_isspace$1324 C 0 COMRAM 1
 ___flmul@b 34 0 COMRAM 1
 __size_of_vfpfcnvrt 0 0 ABS 0
 ___fpclassifyf 308A 0 CODE 0
@@ -784,7 +784,7 @@ text7 85A 3EA0 CODE 85A 0
 %locals
 dist/default/production\microMouse.X.production.o
 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h
-C:\Users\DIEGOM~1\AppData\Local\Temp\sbhs.s
+C:\Users\DIEGOM~1\AppData\Local\Temp\saes.s
 858 3CFE 0 CODE 0
 860 3CFE 0 CODE 0
 863 3CFE 0 CODE 0
@@ -821,55 +821,55 @@ C:\Users\DIEGOM~1\AppData\Local\Temp\sbhs.s
 1006 3D3A 0 CODE 0
 1007 3D3C 0 CODE 0
 main.c
-837 37BA 0 CODE 0
-840 37BA 0 CODE 0
-841 37BC 0 CODE 0
-842 37BE 0 CODE 0
-844 37C0 0 CODE 0
-845 37C2 0 CODE 0
-846 37C4 0 CODE 0
-847 37C6 0 CODE 0
-849 37C8 0 CODE 0
-850 37CA 0 CODE 0
-851 37CC 0 CODE 0
-852 37CE 0 CODE 0
-854 37D0 0 CODE 0
-855 37D2 0 CODE 0
-857 37D4 0 CODE 0
-858 37D6 0 CODE 0
-859 37D8 0 CODE 0
-860 37DA 0 CODE 0
-861 37DC 0 CODE 0
-862 37DE 0 CODE 0
-865 37E0 0 CODE 0
-867 37E4 0 CODE 0
-868 37EA 0 CODE 0
-869 37F0 0 CODE 0
-871 37F4 0 CODE 0
-875 3808 0 CODE 0
-877 381A 0 CODE 0
-878 381E 0 CODE 0
-881 3822 0 CODE 0
+838 37BA 0 CODE 0
+841 37BA 0 CODE 0
+842 37BC 0 CODE 0
+843 37BE 0 CODE 0
+845 37C0 0 CODE 0
+846 37C2 0 CODE 0
+847 37C4 0 CODE 0
+848 37C6 0 CODE 0
+850 37C8 0 CODE 0
+851 37CA 0 CODE 0
+852 37CC 0 CODE 0
+853 37CE 0 CODE 0
+855 37D0 0 CODE 0
+856 37D2 0 CODE 0
+858 37D4 0 CODE 0
+859 37D6 0 CODE 0
+860 37D8 0 CODE 0
+861 37DA 0 CODE 0
+862 37DC 0 CODE 0
+863 37DE 0 CODE 0
+866 37E0 0 CODE 0
+868 37E4 0 CODE 0
+869 37EA 0 CODE 0
+870 37F0 0 CODE 0
+872 37F4 0 CODE 0
+876 3808 0 CODE 0
+878 381A 0 CODE 0
+879 381E 0 CODE 0
+882 3822 0 CODE 0
 main.c
-99 3E80 0 CODE 0
-100 3E80 0 CODE 0
-101 3E86 0 CODE 0
-102 3E8C 0 CODE 0
-103 3E92 0 CODE 0
+102 3E80 0 CODE 0
+103 3E80 0 CODE 0
+104 3E86 0 CODE 0
+105 3E8C 0 CODE 0
+106 3E92 0 CODE 0
 main.c
-105 34B2 0 CODE 0
-107 34B6 0 CODE 0
-110 34BA 0 CODE 0
-111 34C6 0 CODE 0
-114 34CA 0 CODE 0
-115 34D6 0 CODE 0
-118 34DA 0 CODE 0
-119 34E6 0 CODE 0
-121 34EA 0 CODE 0
-123 351E 0 CODE 0
-124 354A 0 CODE 0
-125 3556 0 CODE 0
-127 3570 0 CODE 0
+108 34B2 0 CODE 0
+110 34B6 0 CODE 0
+113 34BA 0 CODE 0
+114 34C6 0 CODE 0
+117 34CA 0 CODE 0
+118 34D6 0 CODE 0
+121 34DA 0 CODE 0
+122 34E6 0 CODE 0
+124 34EA 0 CODE 0
+126 351E 0 CODE 0
+127 354A 0 CODE 0
+128 3556 0 CODE 0
+130 3570 0 CODE 0
 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\nf_sprintf.c
 9 3A80 0 CODE 0
 15 3A80 0 CODE 0
@@ -1388,18 +1388,18 @@ C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul16.c
 44 3E70 0 CODE 0
 45 3E7E 0 CODE 0
 main.c
-144 3C28 0 CODE 0
-146 3C28 0 CODE 0
-148 3C2C 0 CODE 0
-149 3C42 0 CODE 0
-150 3C58 0 CODE 0
-152 3C6E 0 CODE 0
-154 3C72 0 CODE 0
+147 3C28 0 CODE 0
+149 3C28 0 CODE 0
+151 3C2C 0 CODE 0
+152 3C42 0 CODE 0
+153 3C58 0 CODE 0
+155 3C6E 0 CODE 0
+157 3C72 0 CODE 0
 main.c
-831 3E44 0 CODE 0
 832 3E44 0 CODE 0
-833 3E56 0 CODE 0
-835 3E68 0 CODE 0
+833 3E44 0 CODE 0
+834 3E56 0 CODE 0
+836 3E68 0 CODE 0
 ./pwm.h
 20 270E 0 CODE 0
 22 270E 0 CODE 0
@@ -1768,29 +1768,29 @@ C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
 39 2E5A 0 CODE 0
 40 2E6A 0 CODE 0
 41 2E7A 0 CODE 0
-C:\Users\DIEGOM~1\AppData\Local\Temp\sbhs.s
+C:\Users\DIEGOM~1\AppData\Local\Temp\saes.s
 13803 8 0 CODE 0
 main.c
-81 8 0 CODE 0
+84 8 0 CODE 0
 main.c
-81 3B32 0 CODE 0
-83 3B34 0 CODE 0
-85 3B42 0 CODE 0
-86 3B48 0 CODE 0
-87 3B5A 0 CODE 0
-88 3B5E 0 CODE 0
-89 3B60 0 CODE 0
-90 3B76 0 CODE 0
-91 3B7A 0 CODE 0
-92 3B7C 0 CODE 0
-95 3B80 0 CODE 0
-97 3B82 0 CODE 0
+84 3B32 0 CODE 0
+86 3B34 0 CODE 0
+88 3B42 0 CODE 0
+89 3B48 0 CODE 0
+90 3B5A 0 CODE 0
+91 3B5E 0 CODE 0
+92 3B60 0 CODE 0
+93 3B76 0 CODE 0
+94 3B7A 0 CODE 0
+95 3B7C 0 CODE 0
+98 3B80 0 CODE 0
+100 3B82 0 CODE 0
 main.c
-129 3ADA 0 CODE 0
-131 3ADC 0 CODE 0
-133 3AE0 0 CODE 0
-134 3AEE 0 CODE 0
-135 3AFC 0 CODE 0
-136 3B0A 0 CODE 0
-141 3B0E 0 CODE 0
-142 3B30 0 CODE 0
+132 3ADA 0 CODE 0
+134 3ADC 0 CODE 0
+136 3AE0 0 CODE 0
+137 3AEE 0 CODE 0
+138 3AFC 0 CODE 0
+139 3B0A 0 CODE 0
+144 3B0E 0 CODE 0
+145 3B30 0 CODE 0

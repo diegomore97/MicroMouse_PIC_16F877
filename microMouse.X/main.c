@@ -15,10 +15,13 @@
 #define TIEMPO_AVANCE 150 //Tiempo en milisegundos que avanzara el carro en cada direccion
 #define MAX_MOVIMIENTOS_GUARDADOS 50 //Para mapear y regresar a algun lugarsi llegamos a un callejon
 
+#define KP 1.1 //Ajustar estas variables de control para evitar chocar con las paredes laterales
+#define KD 1.3
+
 T_FLOAT DISTANCIA_PRIORIDAD_ALTA;
 T_FLOAT DISTANCIA_PRIORIDAD_MEDIA;
 T_FLOAT DISTANCIA_PRIORIDAD_BAJA;
-//LAS 3 PRIORIDADES DE ARRIBA DEBEN COINCIDIR CON LAS DE ABAJO
+
 #define SENSOR_PRIORIDAD_ALTA  ENFRENTE
 #define SENSOR_PRIORIDAD_MEDIA IZQUIERDA
 #define SENSOR_PRIORIDAD_BAJA  DERECHA
@@ -811,13 +814,11 @@ void PID(void) {
     T_BYTE dif = 0;
     T_INT error;
     static T_INT difAnt = 0;
-    T_FLOAT Kp = 1.1;
-    T_FLOAT Kd = 1.3;
 
     //calcula la diferencia
     dif = sensorIzquierda - sensorDerecha;
     // calculo del error (se redondea)
-    error = round(Kp * (dif) + Kd * (difAnt - dif));
+    error = round(KP * (dif) + KD * (difAnt - dif));
     // para mantener en memoria la dif anterior
     difAnt = dif;
     //recalcula las velocidades de motores

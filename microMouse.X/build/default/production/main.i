@@ -6536,11 +6536,11 @@ double y0(double);
 double y1(double);
 double yn(int, double);
 # 8 "main.c" 2
-# 18 "main.c"
+# 21 "main.c"
 T_FLOAT DISTANCIA_PRIORIDAD_ALTA;
 T_FLOAT DISTANCIA_PRIORIDAD_MEDIA;
 T_FLOAT DISTANCIA_PRIORIDAD_BAJA;
-# 54 "main.c"
+# 57 "main.c"
 typedef struct {
     Direccion curr_state;
     Direccion Next_state;
@@ -7301,13 +7301,11 @@ void PID(void) {
     T_BYTE dif = 0;
     T_INT error;
     static T_INT difAnt = 0;
-    T_FLOAT Kp = 1.1;
-    T_FLOAT Kd = 1.3;
 
 
     dif = sensorIzquierda - sensorDerecha;
 
-    error = roundf(Kp * (dif) + Kd * (difAnt - dif));
+    error = roundf(1.1 * (dif) + 1.3 * (difAnt - dif));
 
     difAnt = dif;
 
