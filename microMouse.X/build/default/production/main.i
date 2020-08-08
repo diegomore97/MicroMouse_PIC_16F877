@@ -6536,11 +6536,7 @@ double y0(double);
 double y1(double);
 double yn(int, double);
 # 8 "main.c" 2
-# 21 "main.c"
-T_FLOAT DISTANCIA_PRIORIDAD_ALTA;
-T_FLOAT DISTANCIA_PRIORIDAD_MEDIA;
-T_FLOAT DISTANCIA_PRIORIDAD_BAJA;
-# 57 "main.c"
+# 53 "main.c"
 typedef struct {
     Direccion curr_state;
     Direccion Next_state;
@@ -6550,6 +6546,10 @@ typedef struct {
 ComportamientoBasico mouse;
 T_UBYTE pausa = 1;
 T_BYTE buffer[50];
+
+T_FLOAT DISTANCIA_PRIORIDAD_ALTA;
+T_FLOAT DISTANCIA_PRIORIDAD_MEDIA;
+T_FLOAT DISTANCIA_PRIORIDAD_BAJA;
 
 void moverCarrito(T_UBYTE espejearCarroY, T_UBYTE* carroEspejeado);
 void mover(void);

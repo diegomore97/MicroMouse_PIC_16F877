@@ -12,18 +12,14 @@
 #define UMBRAL_OBSTACULO_ENFRENTE 5 //expresado en cm | sensibilidad antes de que choque con un objeto
 #define UMBRAL_SENSOR_OPTICO_REFLEXIVO 100 //Unidad que representa el minimo de luz percibida para detectar negro
 #define VELOCIDAD_MOTORES 70 //Porcentaje de ciclo de trabajo a la que trabajaran los motores
-#define TIEMPO_AVANCE 150 //Tiempo en milisegundos que avanzara el carro en cada direccion
-#define MAX_MOVIMIENTOS_GUARDADOS 50 //Para mapear y regresar a algun lugarsi llegamos a un callejon
+#define TIEMPO_AVANCE 150 //Tiempo en milisegundos que avanzara el carro al girar
+#define MAX_MOVIMIENTOS_GUARDADOS 50 //Para mapear y regresar a algun lugar si llegamos a un callejon
 
 #define KP 1.1 //Ajustar estas variables de control para evitar chocar con las paredes laterales
 #define KD 1.3
 
-T_FLOAT DISTANCIA_PRIORIDAD_ALTA;
-T_FLOAT DISTANCIA_PRIORIDAD_MEDIA;
-T_FLOAT DISTANCIA_PRIORIDAD_BAJA;
-
-#define SENSOR_PRIORIDAD_ALTA  ENFRENTE
-#define SENSOR_PRIORIDAD_MEDIA IZQUIERDA
+#define SENSOR_PRIORIDAD_ALTA  ENFRENTE //Constantes que indican a que direccion deber girar el auto
+#define SENSOR_PRIORIDAD_MEDIA IZQUIERDA //si tenemos varios caminos disponibles
 #define SENSOR_PRIORIDAD_BAJA  DERECHA
 //*****************************************************************************************************
 
@@ -63,6 +59,10 @@ typedef struct {
 ComportamientoBasico mouse;
 T_UBYTE pausa = 1; //Bit que indica estado del sistema
 T_BYTE buffer[TAMANO_CADENA]; //Variable para Debug
+
+T_FLOAT DISTANCIA_PRIORIDAD_ALTA;
+T_FLOAT DISTANCIA_PRIORIDAD_MEDIA;
+T_FLOAT DISTANCIA_PRIORIDAD_BAJA;
 
 void moverCarrito(T_UBYTE espejearCarroY, T_UBYTE* carroEspejeado);
 void mover(void);

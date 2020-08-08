@@ -206,8 +206,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "6792
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 6792: extern volatile unsigned char ADRESL __attribute__((address(0xFC3)));
 [v _ADRESL `Vuc ~T0 @X0 0 e@4035 ]
-"57 main.c
-[; ;main.c: 57: typedef struct {
+"53 main.c
+[; ;main.c: 53: typedef struct {
 [s S429 `E3192 1 `E3192 1 ]
 [n S429 . curr_state Next_state ]
 [t ~ __interrupt . k ]
@@ -1476,27 +1476,27 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./adc.h: 27: }
 [e :UE 423 ]
 }
-"21 main.c
-[; ;main.c: 21: T_FLOAT DISTANCIA_PRIORIDAD_ALTA;
-[v _DISTANCIA_PRIORIDAD_ALTA `f ~T0 @X0 1 e ]
-"22
-[; ;main.c: 22: T_FLOAT DISTANCIA_PRIORIDAD_MEDIA;
-[v _DISTANCIA_PRIORIDAD_MEDIA `f ~T0 @X0 1 e ]
-"23
-[; ;main.c: 23: T_FLOAT DISTANCIA_PRIORIDAD_BAJA;
-[v _DISTANCIA_PRIORIDAD_BAJA `f ~T0 @X0 1 e ]
-"63
-[; ;main.c: 63: ComportamientoBasico mouse;
+"59 main.c
+[; ;main.c: 59: ComportamientoBasico mouse;
 [v _mouse `S429 ~T0 @X0 1 e ]
-"64
-[; ;main.c: 64: T_UBYTE pausa = 1;
+"60
+[; ;main.c: 60: T_UBYTE pausa = 1;
 [v _pausa `uc ~T0 @X0 1 e ]
 [i _pausa
 -> -> 1 `i `uc
 ]
-"65
-[; ;main.c: 65: T_BYTE buffer[50];
+"61
+[; ;main.c: 61: T_BYTE buffer[50];
 [v _buffer `uc ~T0 @X0 -> 50 `i e ]
+"63
+[; ;main.c: 63: T_FLOAT DISTANCIA_PRIORIDAD_ALTA;
+[v _DISTANCIA_PRIORIDAD_ALTA `f ~T0 @X0 1 e ]
+"64
+[; ;main.c: 64: T_FLOAT DISTANCIA_PRIORIDAD_MEDIA;
+[v _DISTANCIA_PRIORIDAD_MEDIA `f ~T0 @X0 1 e ]
+"65
+[; ;main.c: 65: T_FLOAT DISTANCIA_PRIORIDAD_BAJA;
+[v _DISTANCIA_PRIORIDAD_BAJA `f ~T0 @X0 1 e ]
 [v $root$_boton `(v ~T0 @X0 0 e ]
 "84
 [; ;main.c: 84: void __attribute__((picinterrupt(("")))) boton(void) {

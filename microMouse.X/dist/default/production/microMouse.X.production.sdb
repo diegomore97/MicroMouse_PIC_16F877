@@ -419,19 +419,19 @@ ALTO 4
 [v _dbuf dbuf `[80]uc  1 s 80 dbuf ]
 "69
 [v _nout nout `i  1 s 2 nout ]
-"21 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
-[v _DISTANCIA_PRIORIDAD_ALTA DISTANCIA_PRIORIDAD_ALTA `f  1 e 4 0 ]
-"22
-[v _DISTANCIA_PRIORIDAD_MEDIA DISTANCIA_PRIORIDAD_MEDIA `f  1 e 4 0 ]
-"23
-[v _DISTANCIA_PRIORIDAD_BAJA DISTANCIA_PRIORIDAD_BAJA `f  1 e 4 0 ]
 [s S283 . 2 `E3192 1 curr_state 1 0 `E3192 1 Next_state 1 1 ]
-"63
+"59 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
 [v _mouse mouse `S283  1 e 2 0 ]
-"64
+"60
 [v _pausa pausa `uc  1 e 1 0 ]
-"65
+"61
 [v _buffer buffer `[50]uc  1 e 50 0 ]
+"63
+[v _DISTANCIA_PRIORIDAD_ALTA DISTANCIA_PRIORIDAD_ALTA `f  1 e 4 0 ]
+"64
+[v _DISTANCIA_PRIORIDAD_MEDIA DISTANCIA_PRIORIDAD_MEDIA `f  1 e 4 0 ]
+"65
+[v _DISTANCIA_PRIORIDAD_BAJA DISTANCIA_PRIORIDAD_BAJA `f  1 e 4 0 ]
 "838
 [v _main main `(v  1 e 1 0 ]
 {

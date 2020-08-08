@@ -72,7 +72,7 @@ smallconst SMALLCONST 0 800 800 5A 1
 idataBANK0 CODE 0 3EA0 3EA0 1 1
 dataBANK0 BANK0 1 F9 F9 1 1
 bssCOMRAM COMRAM 1 55 55 5 1
-$C:\Users\DIEGOM~1\AppData\Local\Temp\saes.o
+$C:\Users\DIEGOM~1\AppData\Local\Temp\s4cc.o
 idloc IDLOC 0 200000 200000 8 1
 init CODE 0 E E 4 1
 reset_vec CODE 0 0 0 4 1
@@ -122,7 +122,7 @@ MEDIUMCONST 3EA1-7FFF 1
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\microMouse.X.production.o
-8 intcode CODE >13803:C:\Users\DIEGOM~1\AppData\Local\Temp\saes.s
+8 intcode CODE >13803:C:\Users\DIEGOM~1\AppData\Local\Temp\s4cc.s
 8 intcode CODE >84:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
 3ADA text47 CODE >132:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
 3ADC text47 CODE >134:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
@@ -1046,41 +1046,41 @@ FFA text7 CODE >447:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\c
 381A text0 CODE >878:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
 381E text0 CODE >879:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
 3822 text0 CODE >882:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
-3CFE cinit CODE >858:C:\Users\DIEGOM~1\AppData\Local\Temp\saes.s
-3CFE cinit CODE >860:C:\Users\DIEGOM~1\AppData\Local\Temp\saes.s
-3CFE cinit CODE >863:C:\Users\DIEGOM~1\AppData\Local\Temp\saes.s
-3CFE cinit CODE >962:C:\Users\DIEGOM~1\AppData\Local\Temp\saes.s
-3D00 cinit CODE >963:C:\Users\DIEGOM~1\AppData\Local\Temp\saes.s
-3D02 cinit CODE >964:C:\Users\DIEGOM~1\AppData\Local\Temp\saes.s
-3D04 cinit CODE >965:C:\Users\DIEGOM~1\AppData\Local\Temp\saes.s
-3D06 cinit CODE >966:C:\Users\DIEGOM~1\AppData\Local\Temp\saes.s
-3D08 cinit CODE >967:C:\Users\DIEGOM~1\AppData\Local\Temp\saes.s
-3D0A cinit CODE >968:C:\Users\DIEGOM~1\AppData\Local\Temp\saes.s
-3D0C cinit CODE >969:C:\Users\DIEGOM~1\AppData\Local\Temp\saes.s
-3D10 cinit CODE >973:C:\Users\DIEGOM~1\AppData\Local\Temp\saes.s
-3D14 cinit CODE >974:C:\Users\DIEGOM~1\AppData\Local\Temp\saes.s
-3D16 cinit CODE >975:C:\Users\DIEGOM~1\AppData\Local\Temp\saes.s
-3D16 cinit CODE >976:C:\Users\DIEGOM~1\AppData\Local\Temp\saes.s
-3D18 cinit CODE >977:C:\Users\DIEGOM~1\AppData\Local\Temp\saes.s
-3D1A cinit CODE >978:C:\Users\DIEGOM~1\AppData\Local\Temp\saes.s
-3D1C cinit CODE >981:C:\Users\DIEGOM~1\AppData\Local\Temp\saes.s
-3D20 cinit CODE >982:C:\Users\DIEGOM~1\AppData\Local\Temp\saes.s
-3D22 cinit CODE >983:C:\Users\DIEGOM~1\AppData\Local\Temp\saes.s
-3D22 cinit CODE >984:C:\Users\DIEGOM~1\AppData\Local\Temp\saes.s
-3D24 cinit CODE >985:C:\Users\DIEGOM~1\AppData\Local\Temp\saes.s
-3D26 cinit CODE >986:C:\Users\DIEGOM~1\AppData\Local\Temp\saes.s
-3D28 cinit CODE >989:C:\Users\DIEGOM~1\AppData\Local\Temp\saes.s
-3D2A cinit CODE >990:C:\Users\DIEGOM~1\AppData\Local\Temp\saes.s
-3D2C cinit CODE >991:C:\Users\DIEGOM~1\AppData\Local\Temp\saes.s
-3D2E cinit CODE >992:C:\Users\DIEGOM~1\AppData\Local\Temp\saes.s
-3D30 cinit CODE >993:C:\Users\DIEGOM~1\AppData\Local\Temp\saes.s
-3D32 cinit CODE >999:C:\Users\DIEGOM~1\AppData\Local\Temp\saes.s
-3D32 cinit CODE >1001:C:\Users\DIEGOM~1\AppData\Local\Temp\saes.s
-3D34 cinit CODE >1002:C:\Users\DIEGOM~1\AppData\Local\Temp\saes.s
-3D36 cinit CODE >1004:C:\Users\DIEGOM~1\AppData\Local\Temp\saes.s
-3D38 cinit CODE >1005:C:\Users\DIEGOM~1\AppData\Local\Temp\saes.s
-3D3A cinit CODE >1006:C:\Users\DIEGOM~1\AppData\Local\Temp\saes.s
-3D3C cinit CODE >1007:C:\Users\DIEGOM~1\AppData\Local\Temp\saes.s
+3CFE cinit CODE >858:C:\Users\DIEGOM~1\AppData\Local\Temp\s4cc.s
+3CFE cinit CODE >860:C:\Users\DIEGOM~1\AppData\Local\Temp\s4cc.s
+3CFE cinit CODE >863:C:\Users\DIEGOM~1\AppData\Local\Temp\s4cc.s
+3CFE cinit CODE >962:C:\Users\DIEGOM~1\AppData\Local\Temp\s4cc.s
+3D00 cinit CODE >963:C:\Users\DIEGOM~1\AppData\Local\Temp\s4cc.s
+3D02 cinit CODE >964:C:\Users\DIEGOM~1\AppData\Local\Temp\s4cc.s
+3D04 cinit CODE >965:C:\Users\DIEGOM~1\AppData\Local\Temp\s4cc.s
+3D06 cinit CODE >966:C:\Users\DIEGOM~1\AppData\Local\Temp\s4cc.s
+3D08 cinit CODE >967:C:\Users\DIEGOM~1\AppData\Local\Temp\s4cc.s
+3D0A cinit CODE >968:C:\Users\DIEGOM~1\AppData\Local\Temp\s4cc.s
+3D0C cinit CODE >969:C:\Users\DIEGOM~1\AppData\Local\Temp\s4cc.s
+3D10 cinit CODE >973:C:\Users\DIEGOM~1\AppData\Local\Temp\s4cc.s
+3D14 cinit CODE >974:C:\Users\DIEGOM~1\AppData\Local\Temp\s4cc.s
+3D16 cinit CODE >975:C:\Users\DIEGOM~1\AppData\Local\Temp\s4cc.s
+3D16 cinit CODE >976:C:\Users\DIEGOM~1\AppData\Local\Temp\s4cc.s
+3D18 cinit CODE >977:C:\Users\DIEGOM~1\AppData\Local\Temp\s4cc.s
+3D1A cinit CODE >978:C:\Users\DIEGOM~1\AppData\Local\Temp\s4cc.s
+3D1C cinit CODE >981:C:\Users\DIEGOM~1\AppData\Local\Temp\s4cc.s
+3D20 cinit CODE >982:C:\Users\DIEGOM~1\AppData\Local\Temp\s4cc.s
+3D22 cinit CODE >983:C:\Users\DIEGOM~1\AppData\Local\Temp\s4cc.s
+3D22 cinit CODE >984:C:\Users\DIEGOM~1\AppData\Local\Temp\s4cc.s
+3D24 cinit CODE >985:C:\Users\DIEGOM~1\AppData\Local\Temp\s4cc.s
+3D26 cinit CODE >986:C:\Users\DIEGOM~1\AppData\Local\Temp\s4cc.s
+3D28 cinit CODE >989:C:\Users\DIEGOM~1\AppData\Local\Temp\s4cc.s
+3D2A cinit CODE >990:C:\Users\DIEGOM~1\AppData\Local\Temp\s4cc.s
+3D2C cinit CODE >991:C:\Users\DIEGOM~1\AppData\Local\Temp\s4cc.s
+3D2E cinit CODE >992:C:\Users\DIEGOM~1\AppData\Local\Temp\s4cc.s
+3D30 cinit CODE >993:C:\Users\DIEGOM~1\AppData\Local\Temp\s4cc.s
+3D32 cinit CODE >999:C:\Users\DIEGOM~1\AppData\Local\Temp\s4cc.s
+3D32 cinit CODE >1001:C:\Users\DIEGOM~1\AppData\Local\Temp\s4cc.s
+3D34 cinit CODE >1002:C:\Users\DIEGOM~1\AppData\Local\Temp\s4cc.s
+3D36 cinit CODE >1004:C:\Users\DIEGOM~1\AppData\Local\Temp\s4cc.s
+3D38 cinit CODE >1005:C:\Users\DIEGOM~1\AppData\Local\Temp\s4cc.s
+3D3A cinit CODE >1006:C:\Users\DIEGOM~1\AppData\Local\Temp\s4cc.s
+3D3C cinit CODE >1007:C:\Users\DIEGOM~1\AppData\Local\Temp\s4cc.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -1109,7 +1109,7 @@ _inicializarComportamientoBasico 3C28 0 CODE 0 text31 dist/default/production\mi
 strncmp@_l 6 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
 strncmp@_r 8 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
 __Hibigdata 0 0 CODE 0 ibigdata dist/default/production\microMouse.X.production.o
-__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\DIEGOM~1\AppData\Local\Temp\saes.o
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\DIEGOM~1\AppData\Local\Temp\s4cc.o
 __Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\microMouse.X.production.o
 __CFG_MCLRE$ON 0 0 ABS 0 - dist/default/production\microMouse.X.production.o
 _velocidadEstandar 3E44 0 CODE 0 text32 dist/default/production\microMouse.X.production.o
@@ -1118,7 +1118,7 @@ _velocidadEstandar 3E44 0 CODE 0 text32 dist/default/production\microMouse.X.pro
 ?_vfprintf BE 0 BANK0 1 cstackBANK0 dist/default/production\microMouse.X.production.o
 __Lsmallconst 800 0 SMALLCONST 0 smallconst dist/default/production\microMouse.X.production.o
 _RCIF 7CF5 0 ABS 0 - dist/default/production\microMouse.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\DIEGOM~1\AppData\Local\Temp\saes.o
+___sp 0 0 STACK 2 stack C:\Users\DIEGOM~1\AppData\Local\Temp\s4cc.o
 _atoi 2A7E 0 CODE 0 text25 dist/default/production\microMouse.X.production.o
 _dbuf 11C 0 BANK1 1 bssBANK1 dist/default/production\microMouse.X.production.o
 _main 37BA 0 CODE 0 text0 dist/default/production\microMouse.X.production.o
@@ -1129,7 +1129,7 @@ map@x 20 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production
 pad@i 1D 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
 pad@p 1A 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
 pad@w 1F 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
-start E 0 CODE 0 init C:\Users\DIEGOM~1\AppData\Local\Temp\saes.o
+start E 0 CODE 0 init C:\Users\DIEGOM~1\AppData\Local\Temp\s4cc.o
 ___flmul@aexp 41 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
 ___flmul@bexp 46 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
 ___flmul@prod 47 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
@@ -1167,11 +1167,11 @@ ttemp5 5B 0 COMRAM 1 temp dist/default/production\microMouse.X.production.o
 ttemp6 5E 0 COMRAM 1 temp dist/default/production\microMouse.X.production.o
 ttemp7 62 0 COMRAM 1 temp dist/default/production\microMouse.X.production.o
 __size_of_vfpfcnvrt 0 0 ABS 0 - dist/default/production\microMouse.X.production.o
-__accesstop 60 0 ABS 0 - C:\Users\DIEGOM~1\AppData\Local\Temp\saes.o
-intlevel0 0 0 CODE 0 text C:\Users\DIEGOM~1\AppData\Local\Temp\saes.o
-intlevel1 0 0 CODE 0 text C:\Users\DIEGOM~1\AppData\Local\Temp\saes.o
-intlevel2 0 0 CODE 0 text C:\Users\DIEGOM~1\AppData\Local\Temp\saes.o
-intlevel3 0 0 CODE 0 text C:\Users\DIEGOM~1\AppData\Local\Temp\saes.o
+__accesstop 60 0 ABS 0 - C:\Users\DIEGOM~1\AppData\Local\Temp\s4cc.o
+intlevel0 0 0 CODE 0 text C:\Users\DIEGOM~1\AppData\Local\Temp\s4cc.o
+intlevel1 0 0 CODE 0 text C:\Users\DIEGOM~1\AppData\Local\Temp\s4cc.o
+intlevel2 0 0 CODE 0 text C:\Users\DIEGOM~1\AppData\Local\Temp\s4cc.o
+intlevel3 0 0 CODE 0 text C:\Users\DIEGOM~1\AppData\Local\Temp\s4cc.o
 floorf@e 42 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
 floorf@m 3E 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
 floorf@u 44 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
@@ -1207,8 +1207,8 @@ _ADRESL FC3 0 ABS 0 - dist/default/production\microMouse.X.production.o
 _vfpfcnvrt$816 B2 0 BANK0 1 cstackBANK0 dist/default/production\microMouse.X.production.o
 _vfpfcnvrt$820 B4 0 BANK0 1 cstackBANK0 dist/default/production\microMouse.X.production.o
 ___awdiv@dividend 6 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
-___inthi_sp 0 0 STACK 2 stack C:\Users\DIEGOM~1\AppData\Local\Temp\saes.o
-___intlo_sp 0 0 STACK 2 stack C:\Users\DIEGOM~1\AppData\Local\Temp\saes.o
+___inthi_sp 0 0 STACK 2 stack C:\Users\DIEGOM~1\AppData\Local\Temp\s4cc.o
+___intlo_sp 0 0 STACK 2 stack C:\Users\DIEGOM~1\AppData\Local\Temp\s4cc.o
 comportamientoBasico@contCaminosRecorridos F6 0 BANK0 1 bssBANK0 dist/default/production\microMouse.X.production.o
 ?_dameDistancia 1B 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
 ?_tolower C 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
@@ -1369,7 +1369,7 @@ ___lwdiv@counter A 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.
 __size_of___xxtofl 0 0 ABS 0 - dist/default/production\microMouse.X.production.o
 __Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production\microMouse.X.production.o
 __Hbigram 0 0 ABS 0 bigram dist/default/production\microMouse.X.production.o
-__smallconst 800 0 SMALLCONST 0 smallconst C:\Users\DIEGOM~1\AppData\Local\Temp\saes.o
+__smallconst 800 0 SMALLCONST 0 smallconst C:\Users\DIEGOM~1\AppData\Local\Temp\s4cc.o
 ___xxtofl@arg 17 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
 ___xxtofl@exp 16 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
 ___xxtofl@val D 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
@@ -1612,8 +1612,8 @@ __end_of_UART_printf 3A24 0 CODE 0 text29 dist/default/production\microMouse.X.p
 __size_of_dameDistancia 0 0 ABS 0 - dist/default/production\microMouse.X.production.o
 __size_of_vfprintf 0 0 ABS 0 - dist/default/production\microMouse.X.production.o
 __CFG_CCP2MX$ON 0 0 ABS 0 - dist/default/production\microMouse.X.production.o
-stackhi 7FF 0 ABS 0 - C:\Users\DIEGOM~1\AppData\Local\Temp\saes.o
-stacklo 1DA 0 ABS 0 - C:\Users\DIEGOM~1\AppData\Local\Temp\saes.o
+stackhi 7FF 0 ABS 0 - C:\Users\DIEGOM~1\AppData\Local\Temp\s4cc.o
+stacklo 1DA 0 ABS 0 - C:\Users\DIEGOM~1\AppData\Local\Temp\s4cc.o
 __Lintcode 8 0 CODE 0 intcode dist/default/production\microMouse.X.production.o
 __Lintret 0 0 ABS 0 intret dist/default/production\microMouse.X.production.o
 tolower@c C 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
@@ -1734,7 +1734,7 @@ __Ltext43 0 0 ABS 0 text43 dist/default/production\microMouse.X.production.o
 __Ltext44 0 0 ABS 0 text44 dist/default/production\microMouse.X.production.o
 __Ltext45 0 0 ABS 0 text45 dist/default/production\microMouse.X.production.o
 __Ltext47 0 0 ABS 0 text47 dist/default/production\microMouse.X.production.o
-__ramtop 800 0 RAM 0 ramtop C:\Users\DIEGOM~1\AppData\Local\Temp\saes.o
+__ramtop 800 0 RAM 0 ramtop C:\Users\DIEGOM~1\AppData\Local\Temp\s4cc.o
 ___aldiv@dividend 12 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
 _sprintf 3A80 0 CODE 0 text3 dist/default/production\microMouse.X.production.o
 __end_of_probarUltrasonico 3572 0 CODE 0 text2 dist/default/production\microMouse.X.production.o
