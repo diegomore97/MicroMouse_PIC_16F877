@@ -78,6 +78,7 @@ T_BOOL seLlegoAlDestino(void);
 void leerSensores(void);
 void PID(void);
 void velocidadEstandar(void);
+void probarGirosAuto(void);
 T_UBYTE decidirDireccion(T_UBYTE* caminosRecorrer, T_UBYTE* investigandoCruce,
         T_UBYTE* posicionInvCruce, T_UBYTE* contCaminosRecorridos);
 
@@ -100,9 +101,22 @@ void __interrupt() boton(void) {
 }
 
 void probarSensores(void) {
+
+    leerSensores();
+
     probarUltrasonico(ENFRENTE);
     probarUltrasonico(IZQUIERDA);
     probarUltrasonico(DERECHA);
+    T_WORD lecturaSensorOptico = dameLecturaAdc(SENSOR_OPTICO_REFLEXIVO);
+
+    if (lecturaSensorOptico < UMBRAL_SENSOR_OPTICO_REFLEXIVO)
+        UART_printf("\rSe llego al destino \r\n");
+    else
+        UART_printf("\rDestino no detectado \r\n");
+
+    sprintf(buffer, "\rLectura de sensor Optico = %d\r\n\n", lecturaSensorOptico);
+    UART_printf(buffer);
+
 }
 
 void probarUltrasonico(T_UBYTE numeroSensor) {
@@ -110,23 +124,50 @@ void probarUltrasonico(T_UBYTE numeroSensor) {
     switch (numeroSensor) {
 
         case ENFRENTE:
-            UART_printf("\rEnfrente: \r\n");
+            sprintf(buffer, "\rEnfrente: %.2f\r\n", sensorEnfrente);
             break;
 
         case IZQUIERDA:
-            UART_printf("\rIzquierda: \r\n");
+            sprintf(buffer, "\rIzquierda: %.2f\r\n", sensorIzquierda);
             break;
 
         case DERECHA:
-            UART_printf("\rDerecha: \r\n");
+            sprintf(buffer, "\rDerecha: %.2f\r\n", sensorDerecha);
             break;
 
     }
 
-    sprintf(buffer, "\rDistancia: %.2f cm\r\n\n", dameDistancia(numeroSensor));
+
     UART_printf(buffer);
     __delay_ms(1000);
 
+}
+
+void probarGirosAuto(void) {
+
+    for (int i = 0; i < 4; i++) //Al finalizar la secuencia el auto debio girar sobre 
+    { //su propopio eje
+        mouse.curr_state = DERECHA;
+        mover();
+
+        mouse.curr_state = ALTO;
+        mover();
+        __delay_ms(1000);
+    }
+
+    __delay_ms(3000);
+
+    for (int i = 0; i < 4; i++) //Al finalizar la secuencia el auto debio girar sobre 
+    { //su propopio eje
+        mouse.curr_state = IZQUIERDA;
+        mover();
+
+        mouse.curr_state = ALTO;
+        mover();
+        __delay_ms(1000);
+    }
+
+    __delay_ms(3000);
 }
 
 void antiRebote(T_UBYTE pin) {
@@ -837,6 +878,8 @@ void velocidadEstandar(void) {
 
 void main(void) {
 
+    T_BOOL iniciado = 0;
+
     //Configuración de INT0
     INTCONbits.GIE = 1; //Habilitando interrupciones
     INTCONbits.INT0IE = 1; //Habilitar INT0
@@ -871,15 +914,23 @@ void main(void) {
 
     UART_init(9600); //9600 Baudios
 
+
     while (1) {
 
         if (!pausa) {
 
+            if (!iniciado) {
+                iniciado = 1;
+                inicializarComportamientoBasico();
+            }
+
             probarSensores();
-            inicializarComportamientoBasico();
+            //probarGirosAuto();
             //comportamientoBasico();
 
         } else {
+            
+            iniciado = 0;
 
         }
 

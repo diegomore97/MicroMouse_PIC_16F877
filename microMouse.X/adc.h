@@ -1,7 +1,7 @@
 #ifndef ADC_H
 #define	ADC_H
 
-short dameLecturaAdc(char canalLeer);
+T_WORD dameLecturaAdc(T_BYTE canalLeer);
 void configurarAdc(void);
 
 void configurarAdc(void) {
@@ -9,7 +9,7 @@ void configurarAdc(void) {
     ADCON2 = 0b10100101; //TIEMPO DE ADQUISICION 8 TAD, JUSTIFICADO A LA DERECHA, FOSC/16
 }
 
-short dameLecturaAdc(char canalLeer) {
+T_WORD dameLecturaAdc(T_BYTE canalLeer) {
 
     __delay_us(20);
 

@@ -5908,7 +5908,7 @@ void UART_printf(T_BYTE* cadena) {
 
 
 
-short dameLecturaAdc(char canalLeer);
+T_WORD dameLecturaAdc(T_BYTE canalLeer);
 void configurarAdc(void);
 
 void configurarAdc(void) {
@@ -5916,7 +5916,7 @@ void configurarAdc(void) {
     ADCON2 = 0b10100101;
 }
 
-short dameLecturaAdc(char canalLeer) {
+T_WORD dameLecturaAdc(T_BYTE canalLeer) {
 
     _delay((unsigned long)((20)*(4000000/4000000.0)));
 
@@ -6565,6 +6565,7 @@ T_BOOL seLlegoAlDestino(void);
 void leerSensores(void);
 void PID(void);
 void velocidadEstandar(void);
+void probarGirosAuto(void);
 T_UBYTE decidirDireccion(T_UBYTE* caminosRecorrer, T_UBYTE* investigandoCruce,
         T_UBYTE* posicionInvCruce, T_UBYTE* contCaminosRecorridos);
 
@@ -6587,9 +6588,22 @@ void __attribute__((picinterrupt(("")))) boton(void) {
 }
 
 void probarSensores(void) {
+
+    leerSensores();
+
     probarUltrasonico(ENFRENTE);
     probarUltrasonico(IZQUIERDA);
     probarUltrasonico(DERECHA);
+    T_WORD lecturaSensorOptico = dameLecturaAdc(0);
+
+    if (lecturaSensorOptico < 100)
+        UART_printf("\rSe llego al destino \r\n");
+    else
+        UART_printf("\rDestino no detectado \r\n");
+
+    sprintf(buffer, "\rLectura de sensor Optico = %d\r\n\n", lecturaSensorOptico);
+    UART_printf(buffer);
+
 }
 
 void probarUltrasonico(T_UBYTE numeroSensor) {
@@ -6597,23 +6611,50 @@ void probarUltrasonico(T_UBYTE numeroSensor) {
     switch (numeroSensor) {
 
         case ENFRENTE:
-            UART_printf("\rEnfrente: \r\n");
+            sprintf(buffer, "\rEnfrente: %.2f\r\n", sensorEnfrente);
             break;
 
         case IZQUIERDA:
-            UART_printf("\rIzquierda: \r\n");
+            sprintf(buffer, "\rIzquierda: %.2f\r\n", sensorIzquierda);
             break;
 
         case DERECHA:
-            UART_printf("\rDerecha: \r\n");
+            sprintf(buffer, "\rDerecha: %.2f\r\n", sensorDerecha);
             break;
 
     }
 
-    sprintf(buffer, "\rDistancia: %.2f cm\r\n\n", dameDistancia(numeroSensor));
+
     UART_printf(buffer);
     _delay((unsigned long)((1000)*(4000000/4000.0)));
 
+}
+
+void probarGirosAuto(void) {
+
+    for (int i = 0; i < 4; i++)
+    {
+        mouse.curr_state = DERECHA;
+        mover();
+
+        mouse.curr_state = ALTO;
+        mover();
+        _delay((unsigned long)((1000)*(4000000/4000.0)));
+    }
+
+    _delay((unsigned long)((3000)*(4000000/4000.0)));
+
+    for (int i = 0; i < 4; i++)
+    {
+        mouse.curr_state = IZQUIERDA;
+        mover();
+
+        mouse.curr_state = ALTO;
+        mover();
+        _delay((unsigned long)((1000)*(4000000/4000.0)));
+    }
+
+    _delay((unsigned long)((3000)*(4000000/4000.0)));
 }
 
 void antiRebote(T_UBYTE pin) {
@@ -7324,6 +7365,8 @@ void velocidadEstandar(void) {
 
 void main(void) {
 
+    T_BOOL iniciado = 0;
+
 
     INTCONbits.GIE = 1;
     INTCONbits.INT0IE = 1;
@@ -7358,15 +7401,23 @@ void main(void) {
 
     UART_init(9600);
 
+
     while (1) {
 
         if (!pausa) {
 
+            if (!iniciado) {
+                iniciado = 1;
+                inicializarComportamientoBasico();
+            }
+
             probarSensores();
-            inicializarComportamientoBasico();
+
 
 
         } else {
+
+            iniciado = 0;
 
         }
 
