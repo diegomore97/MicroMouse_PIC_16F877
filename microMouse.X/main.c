@@ -79,6 +79,7 @@ void leerSensores(void);
 void PID(void);
 void velocidadEstandar(void);
 void probarGirosAuto(void);
+void visualizarPasosRealizados(T_INT numMovimientos);
 T_UBYTE decidirDireccion(T_UBYTE* caminosRecorrer, T_UBYTE* investigandoCruce,
         T_UBYTE* posicionInvCruce, T_UBYTE* contCaminosRecorridos);
 
@@ -168,6 +169,30 @@ void probarGirosAuto(void) {
     }
 
     __delay_ms(3000);
+}
+
+void visualizarPasosRealizados(T_INT numMovimientos) {
+
+    switch (mouse.curr_state) {
+        case ENFRENTE:
+            UART_printf("Enfrente\n");
+            break;
+
+        case IZQUIERDA:
+            UART_printf("Izquierda\n");
+            break;
+
+        case DERECHA:
+            UART_printf("Derecha\n");
+            break;
+
+        case ALTO:
+            UART_printf("Alto\n");
+            break;
+    }
+
+    sprintf(buffer, "\rMovimientos Realizados = %d\r\n\n", numMovimientos);
+    UART_printf(buffer);
 }
 
 void antiRebote(T_UBYTE pin) {
@@ -879,6 +904,7 @@ void velocidadEstandar(void) {
 void main(void) {
 
     T_BOOL iniciado = 0;
+    T_INT numMovimientosTotales = 0;
 
     //Configuración de INT0
     INTCONbits.GIE = 1; //Habilitando interrupciones
@@ -926,10 +952,11 @@ void main(void) {
 
             probarSensores();
             //probarGirosAuto();
+            //visualizarPasosRealizados(numMovimientosTotales++); //Para visualizarlo por Bluetooth
             //comportamientoBasico();
 
         } else {
-            
+
             iniciado = 0;
 
         }
