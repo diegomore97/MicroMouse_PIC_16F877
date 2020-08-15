@@ -855,7 +855,7 @@ text7 8E6 488C CODE 8E6 0
 %locals
 dist/default/production\microMouse.X.production.o
 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h
-C:\Users\DIEGOM~1\AppData\Local\Temp\sc50.s
+C:\Users\DIEGOM~1\AppData\Local\Temp\s5no.s
 1027 46BE 0 CODE 0
 1029 46BE 0 CODE 0
 1032 46BE 0 CODE 0
@@ -1956,7 +1956,7 @@ C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
 39 370A 0 CODE 0
 40 371A 0 CODE 0
 41 372A 0 CODE 0
-C:\Users\DIEGOM~1\AppData\Local\Temp\sc50.s
+C:\Users\DIEGOM~1\AppData\Local\Temp\s5no.s
 16285 8 0 CODE 0
 main.c
 103 8 0 CODE 0

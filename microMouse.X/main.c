@@ -170,10 +170,10 @@ void probarGirosAuto(void) {
 
         mouse.curr_state = ALTO;
         mover();
-        __delay_ms(1000);
+        __delay_ms(1000); //Tiempo de espera entre cada giro de 45 grados
     }
 
-    __delay_ms(3000);
+    __delay_ms(3000); //Esperar para el cambio de giro en sentido opuesto
 
     for (T_INT i = 0; i < 4; i++) //Al finalizar la secuencia el auto debio girar sobre 
     { //su propopio eje
@@ -182,10 +182,10 @@ void probarGirosAuto(void) {
 
         mouse.curr_state = ALTO;
         mover();
-        __delay_ms(1000);
+        __delay_ms(1000); //Tiempo de espera entre cada giro de 45 grados
     }
 
-    __delay_ms(3000);
+    __delay_ms(3000); //Esperar para el cambio de giro en sentido opuesto
 }
 
 void visualizarPasosRealizados(T_INT numMovimientos) {
