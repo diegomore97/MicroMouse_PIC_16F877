@@ -116,51 +116,51 @@ ALTO 4
 [v ___omul __omul `(uo  1 e 8 0 ]
 "10 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
 [v ___xxtofl __xxtofl `(d  1 e 4 0 ]
-"103 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+"102 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
 [v _boton boton `IIH(v  1 e 1 0 ]
-"121
+"120
 [v _probarSensores probarSensores `(v  1 e 1 0 ]
-"140
+"139
 [v _probarUltrasonico probarUltrasonico `(v  1 e 1 0 ]
-"215
+"214
 [v _antiRebote antiRebote `(v  1 e 1 0 ]
-"230
+"229
 [v _inicializarComportamientoBasico inicializarComportamientoBasico `(v  1 e 1 0 ]
-"242
+"241
 [v _caminoCorrecto caminoCorrecto `(v  1 e 1 0 ]
-"404
+"397
 [v _finalizarRecorrido finalizarRecorrido `(v  1 e 1 0 ]
-"411
+"404
 [v _forzarParoAuto forzarParoAuto `(v  1 e 1 0 ]
-"419
+"412
 [v _forzarEspejeoAuto forzarEspejeoAuto `(v  1 e 1 0 ]
-"430
+"421
 [v _moverCarrito moverCarrito `(v  1 e 1 0 ]
-"482
+"473
 [v _mover mover `(v  1 e 1 0 ]
-"530
+"521
 [v _regresarPuntoPartida regresarPuntoPartida `(v  1 e 1 0 ]
-"549
+"540
 [v _regresarAlCruce regresarAlCruce `(v  1 e 1 0 ]
-"570
+"561
 [v _recorrerCaminoEncontrado recorrerCaminoEncontrado `(v  1 e 1 0 ]
-"584
+"575
 [v _hayCruce hayCruce `(uc  1 e 1 0 ]
-"686
+"677
 [v _limpiarMovimientos limpiarMovimientos `(v  1 e 1 0 ]
-"693
+"684
 [v _seLlegoAlDestino seLlegoAlDestino `(uc  1 e 1 0 ]
-"705
+"696
 [v _decidirDireccion decidirDireccion `(uc  1 e 1 0 ]
-"1004
+"995
 [v _leerSensores leerSensores `(v  1 e 1 0 ]
-"1036
+"1027
 [v _PID PID `(v  1 e 1 0 ]
-"1071
+"1047
 [v _velocidadEstandar velocidadEstandar `(v  1 e 1 0 ]
-"1077
+"1053
 [v _combinarArreglos combinarArreglos `(v  1 e 1 0 ]
-"1085
+"1061
 [v _main main `(v  1 e 1 0 ]
 "21 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/ultrasonico.h
 [v _sensorDerecha sensorDerecha `f  1 e 4 0 ]
@@ -456,34 +456,34 @@ ALTO 4
 [v _DISTANCIA_PRIORIDAD_MEDIA DISTANCIA_PRIORIDAD_MEDIA `f  1 e 4 0 ]
 "69
 [v _DISTANCIA_PRIORIDAD_BAJA DISTANCIA_PRIORIDAD_BAJA `f  1 e 4 0 ]
-"1085
+"1061
 [v _main main `(v  1 e 1 0 ]
 {
-"1087
+"1063
 [v main@iniciado iniciado `uc  1 a 1 2 ]
-"1149
+"1124
 } 0
-"121
+"120
 [v _probarSensores probarSensores `(v  1 e 1 0 ]
 {
-"128
+"127
 [v probarSensores@lecturaSensorOptico lecturaSensorOptico `s  1 a 2 0 ]
-"138
+"137
 } 0
-"140
+"139
 [v _probarUltrasonico probarUltrasonico `(v  1 e 1 0 ]
 {
 [v probarUltrasonico@numeroSensor numeroSensor `uc  1 a 1 wreg ]
 [v probarUltrasonico@numeroSensor numeroSensor `uc  1 a 1 wreg ]
 [v probarUltrasonico@numeroSensor numeroSensor `uc  1 a 1 159 ]
-"162
+"161
 } 0
 "9 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\nf_sprintf.c
 [v _sprintf sprintf `(i  1 e 2 0 ]
 {
-[s S1433 _IO_FILE 6 `*.39uc 1 buffer 2 0 `i 1 count 2 2 `i 1 limit 2 4 ]
+[s S1432 _IO_FILE 6 `*.39uc 1 buffer 2 0 `i 1 count 2 2 `i 1 limit 2 4 ]
 "13
-[v sprintf@f f `S1433  1 a 6 151 ]
+[v sprintf@f f `S1432  1 a 6 151 ]
 "12
 [v sprintf@ap ap `[1]*.39v  1 a 2 149 ]
 "9
@@ -496,9 +496,9 @@ ALTO 4
 {
 "1371
 [v vfprintf@cfmt cfmt `*.25uc  1 a 2 137 ]
-[s S772 _IO_FILE 0 ]
+[s S771 _IO_FILE 0 ]
 "1368
-[v vfprintf@fp fp `*.39S772  1 p 2 131 ]
+[v vfprintf@fp fp `*.39S771  1 p 2 131 ]
 [v vfprintf@fmt fmt `*.25Cuc  1 p 2 133 ]
 [v vfprintf@ap ap `*.39*.39v  1 p 2 135 ]
 "1382
@@ -513,9 +513,9 @@ ALTO 4
 "672
 [v vfpfcnvrt@ct ct `[3]uc  1 a 3 127 ]
 [v vfpfcnvrt@c c `uc  1 a 1 130 ]
-[s S772 _IO_FILE 0 ]
+[s S771 _IO_FILE 0 ]
 "670
-[v vfpfcnvrt@fp fp `*.39S772  1 p 2 101 ]
+[v vfpfcnvrt@fp fp `*.39S771  1 p 2 101 ]
 [v vfpfcnvrt@fmt fmt `*.39*.25uc  1 p 2 103 ]
 [v vfpfcnvrt@ap ap `*.39*.39v  1 p 2 105 ]
 "1365
@@ -556,9 +556,9 @@ ALTO 4
 "321
 [v efgtoa@mode mode `uc  1 a 1 78 ]
 [v efgtoa@nmode nmode `uc  1 a 1 75 ]
-[s S772 _IO_FILE 0 ]
+[s S771 _IO_FILE 0 ]
 "319
-[v efgtoa@fp fp `*.39S772  1 p 2 33 ]
+[v efgtoa@fp fp `*.39S771  1 p 2 33 ]
 [v efgtoa@f f `d  1 p 4 35 ]
 [v efgtoa@c c `uc  1 p 1 39 ]
 "503
@@ -590,9 +590,9 @@ ALTO 4
 "3 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\floorf.c
 [v _floorf floorf `(f  1 e 4 0 ]
 {
-[u S1365 . 4 `f 1 f 4 0 `ul 1 i 4 0 ]
+[u S1364 . 4 `f 1 f 4 0 `ul 1 i 4 0 ]
 "5
-[v floorf@u u `S1365  1 a 4 12 ]
+[v floorf@u u `S1364  1 a 4 12 ]
 "7
 [v floorf@m m `ul  1 a 4 6 ]
 "6
@@ -600,21 +600,21 @@ ALTO 4
 "3
 [v floorf@x x `f  1 p 4 80 ]
 "4
-[v floorf@F524 F524 `S1365  1 s 4 F524 ]
+[v floorf@F524 F524 `S1364  1 s 4 F524 ]
 "27
 } 0
 "4 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\__fpclassifyf.c
 [v ___fpclassifyf __fpclassifyf `(i  1 e 2 0 ]
 {
-[u S1365 . 4 `f 1 f 4 0 `ul 1 i 4 0 ]
+[u S1364 . 4 `f 1 f 4 0 `ul 1 i 4 0 ]
 "6
-[v ___fpclassifyf@u u `S1365  1 a 4 15 ]
+[v ___fpclassifyf@u u `S1364  1 a 4 15 ]
 "7
 [v ___fpclassifyf@e e `i  1 a 2 13 ]
 "4
 [v ___fpclassifyf@x x `f  1 p 4 5 ]
 "5
-[v ___fpclassifyf@F463 F463 `S1365  1 s 4 F463 ]
+[v ___fpclassifyf@F463 F463 `S1364  1 s 4 F463 ]
 "11
 } 0
 "245 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
@@ -678,9 +678,9 @@ ALTO 4
 [v dtoa@s s `i  1 a 2 56 ]
 [v dtoa@w w `i  1 a 2 54 ]
 [v dtoa@p p `i  1 a 2 52 ]
-[s S772 _IO_FILE 0 ]
+[s S771 _IO_FILE 0 ]
 "274
-[v dtoa@fp fp `*.39S772  1 p 2 32 ]
+[v dtoa@fp fp `*.39S771  1 p 2 32 ]
 [v dtoa@d d `o  1 p 8 34 ]
 "315
 } 0
@@ -690,9 +690,9 @@ ALTO 4
 "74
 [v pad@w w `i  1 a 2 30 ]
 [v pad@i i `i  1 a 2 28 ]
-[s S772 _IO_FILE 0 ]
+[s S771 _IO_FILE 0 ]
 "72
-[v pad@fp fp `*.39S772  1 p 2 21 ]
+[v pad@fp fp `*.39S771  1 p 2 21 ]
 [v pad@buf buf `*.39uc  1 p 2 23 ]
 [v pad@p p `i  1 p 2 25 ]
 "95
@@ -715,16 +715,16 @@ ALTO 4
 [v fputs@c c `uc  1 a 1 18 ]
 "8
 [v fputs@s s `*.39Cuc  1 p 2 14 ]
-[s S1433 _IO_FILE 6 `*.39uc 1 buffer 2 0 `i 1 count 2 2 `i 1 limit 2 4 ]
-[v fputs@fp fp `*.39S1433  1 p 2 16 ]
+[s S1432 _IO_FILE 6 `*.39uc 1 buffer 2 0 `i 1 count 2 2 `i 1 limit 2 4 ]
+[v fputs@fp fp `*.39S1432  1 p 2 16 ]
 "19
 } 0
 "8 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\nf_fputc.c
 [v _fputc fputc `(i  1 e 2 0 ]
 {
 [v fputc@c c `i  1 p 2 5 ]
-[s S1433 _IO_FILE 6 `*.39uc 1 buffer 2 0 `i 1 count 2 2 `i 1 limit 2 4 ]
-[v fputc@fp fp `*.39S1433  1 p 2 7 ]
+[s S1432 _IO_FILE 6 `*.39uc 1 buffer 2 0 `i 1 count 2 2 `i 1 limit 2 4 ]
+[v fputc@fp fp `*.39S1432  1 p 2 7 ]
 "21
 } 0
 "7 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\putch.c
@@ -808,10 +808,10 @@ ALTO 4
 [v UART_write@dato dato `uc  1 a 1 5 ]
 "45
 } 0
-"1004 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+"995 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
 [v _leerSensores leerSensores `(v  1 e 1 0 ]
 {
-"1034
+"1025
 } 0
 "10 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
 [v ___fladd __fladd `(d  1 e 4 0 ]
@@ -838,15 +838,15 @@ ALTO 4
 [v dameLecturaAdc@canalLeer canalLeer `uc  1 a 1 9 ]
 "27
 } 0
-"230 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+"229 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
 [v _inicializarComportamientoBasico inicializarComportamientoBasico `(v  1 e 1 0 ]
 {
-"240
+"239
 } 0
-"1071
+"1047
 [v _velocidadEstandar velocidadEstandar `(v  1 e 1 0 ]
 {
-"1075
+"1051
 } 0
 "20 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/pwm.h
 [v _pwmDuty pwmDuty `(v  1 e 1 0 ]
@@ -891,17 +891,17 @@ ALTO 4
 "8 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
 [v ___flmul __flmul `(d  1 e 4 0 ]
 {
-[s S1230 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+[s S1229 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
 "13
-[s S1235 . 4 `s 1 wordA 2 0 `s 1 wordB 2 2 ]
-[u S1238 . 4 `l 1 i 4 0 `d 1 f 4 0 `S1230 1 fAsBytes 4 0 `S1235 1 fAsWords 4 0 ]
-[v ___flmul@prod prod `S1238  1 a 4 15 ]
+[s S1234 . 4 `s 1 wordA 2 0 `s 1 wordB 2 2 ]
+[u S1237 . 4 `l 1 i 4 0 `d 1 f 4 0 `S1229 1 fAsBytes 4 0 `S1234 1 fAsWords 4 0 ]
+[v ___flmul@prod prod `S1237  1 a 4 15 ]
 "12
 [v ___flmul@grs grs `ul  1 a 4 10 ]
-[s S1306 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+[s S1305 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
 "14
-[u S1309 . 2 `s 1 i 2 0 `us 1 n 2 0 `S1306 1 nAsBytes 2 0 ]
-[v ___flmul@temp temp `S1309  1 a 2 19 ]
+[u S1308 . 2 `s 1 i 2 0 `us 1 n 2 0 `S1305 1 nAsBytes 2 0 ]
+[v ___flmul@temp temp `S1308  1 a 2 19 ]
 "10
 [v ___flmul@bexp bexp `uc  1 a 1 14 ]
 "11
@@ -1006,16 +1006,16 @@ ALTO 4
 [v ___aldiv@divisor divisor `l  1 p 4 21 ]
 "41
 } 0
-"103 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+"102 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
 [v _boton boton `IIH(v  1 e 1 0 ]
 {
-"119
+"118
 } 0
-"215
+"214
 [v _antiRebote antiRebote `(v  1 e 1 0 ]
 {
 [v antiRebote@pin pin `uc  1 a 1 wreg ]
 [v antiRebote@pin pin `uc  1 a 1 wreg ]
 [v antiRebote@pin pin `uc  1 a 1 2 ]
-"228
+"227
 } 0

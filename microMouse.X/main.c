@@ -89,6 +89,7 @@ void recorrerCaminoEncontrado(T_UBYTE* movimientos, T_UBYTE numMovimientos);
 void forzarParoAuto(void);
 void forzarEspejeoAuto(void);
 void finalizarRecorrido(void);
+void probarPID(void);
 
 void caminoCorrecto(T_UBYTE* movimientos, T_UBYTE* caminoFinal, T_UBYTE numMovimientos,
         T_UBYTE* numMovimientosFinal, T_UBYTE caminoActual);
@@ -162,7 +163,7 @@ void probarUltrasonico(T_UBYTE numeroSensor) {
 
 void probarGirosAuto(void) {
 
-    for (int i = 0; i < 4; i++) //Al finalizar la secuencia el auto debio girar sobre 
+    for (T_INT i = 0; i < 4; i++) //Al finalizar la secuencia el auto debio girar sobre 
     { //su propopio eje
         mouse.curr_state = DERECHA;
         mover();
@@ -174,7 +175,7 @@ void probarGirosAuto(void) {
 
     __delay_ms(3000);
 
-    for (int i = 0; i < 4; i++) //Al finalizar la secuencia el auto debio girar sobre 
+    for (T_INT i = 0; i < 4; i++) //Al finalizar la secuencia el auto debio girar sobre 
     { //su propopio eje
         mouse.curr_state = IZQUIERDA;
         mover();
@@ -301,6 +302,7 @@ void comportamientoBasico(void) {
                 switch (direccionElegida) {
 
                     case CALLEJON:
+                        velocidadEstandar();
                         mapear = 0;
                         espejearCarroY = 1;
                         mouse.Next_state = IZQUIERDA;
@@ -374,8 +376,13 @@ void comportamientoBasico(void) {
 
                     espejearCarroY = 1;
                     __delay_ms(3000); //Esperar 3 segundos en la meta
+                    velocidadEstandar();
                     mouse.Next_state = IZQUIERDA;
                 } else {
+
+                    if (direccionElegida == IZQUIERDA || direccionElegida == DERECHA)
+                        velocidadEstandar();
+
                     mouse.Next_state = direccionElegida;
                 }
                 break;
@@ -411,6 +418,8 @@ void forzarParoAuto(void) {
 
 void forzarEspejeoAuto(void) {
 
+    velocidadEstandar();
+
     IN1 = 1;
     IN2 = 0;
     IN3 = 0;
@@ -439,10 +448,10 @@ void moverCarrito(T_UBYTE espejearCarroY, T_UBYTE* carroEspejeado) {
             IN4 = 0;
 
             if (espejearCarroY) {
-                __delay_ms(TIEMPO_AVANCE * DOBLE);
+                __delay_ms(TIEMPO_AVANCE * DOBLE); //Giro 90 grados
                 *carroEspejeado = 1;
             } else
-                __delay_ms(TIEMPO_AVANCE);
+                __delay_ms(TIEMPO_AVANCE); //Giro 45 grados
 
             break;
 
@@ -453,7 +462,7 @@ void moverCarrito(T_UBYTE espejearCarroY, T_UBYTE* carroEspejeado) {
             IN3 = 1;
             IN4 = 0;
 
-            __delay_ms(TIEMPO_AVANCE);
+            __delay_ms(TIEMPO_AVANCE); //Giro 45 grados
 
             break;
 
@@ -490,7 +499,7 @@ void mover(void) {
             IN3 = 0;
             IN4 = 0;
 
-            __delay_ms(TIEMPO_AVANCE);
+            __delay_ms(TIEMPO_AVANCE); //Giro 45 grados
 
             break;
 
@@ -501,7 +510,7 @@ void mover(void) {
             IN3 = 1;
             IN4 = 0;
 
-            __delay_ms(TIEMPO_AVANCE);
+            __delay_ms(TIEMPO_AVANCE); //Giro 45 grados
 
             break;
 
@@ -520,7 +529,7 @@ void mover(void) {
 
 void regresarPuntoPartida(T_UBYTE* movimientos, T_UBYTE numMovimientos) {
 
-    for (int i = numMovimientos - 1; i >= 0; i--) { //Del final al Principio
+    for (T_INT i = numMovimientos - 1; i >= 0; i--) { //Del final al Principio
 
         if (movimientos[i] == IZQUIERDA) {
             velocidadEstandar();
@@ -539,7 +548,9 @@ void regresarPuntoPartida(T_UBYTE* movimientos, T_UBYTE numMovimientos) {
 
 void regresarAlCruce(T_UBYTE* movimientos, T_UBYTE numMovimientos) {
 
-    for (int i = numMovimientos - 1; i > 0; i--) { //Del final al Principio
+    for (T_INT i = numMovimientos - 1; i > 0; i--) { //Del final al Principio
+        //En este caso no realizara el primer movimientos porque en ese elegimos la direccion
+        //del camino del cruce que estamos explorando.
 
         if (movimientos[i] == IZQUIERDA) {
             velocidadEstandar();
@@ -558,7 +569,7 @@ void regresarAlCruce(T_UBYTE* movimientos, T_UBYTE numMovimientos) {
 
 void recorrerCaminoEncontrado(T_UBYTE* movimientos, T_UBYTE numMovimientos) {
 
-    for (int i = 0; i < numMovimientos; i++) { //Del final al Principio
+    for (T_INT i = 0; i < numMovimientos; i++) { //Del Principio al Final
 
         if (movimientos[i] == IZQUIERDA || movimientos[i] == DERECHA)
             velocidadEstandar();
@@ -664,7 +675,7 @@ T_BOOL hayCruce(T_UBYTE* caminosRecorrer, T_UBYTE investigandoCruce) {
     }
 
 
-    if (contCaminos > 1)
+    if (contCaminos > 1) //Si hay mas de un camino disponible 
         return 1;
 
     else
@@ -673,7 +684,7 @@ T_BOOL hayCruce(T_UBYTE* caminosRecorrer, T_UBYTE investigandoCruce) {
 }
 
 void limpiarMovimientos(T_UBYTE* movimientos, T_UBYTE* numMovimientos) {
-    for (int i = 0; i < *numMovimientos; i++)
+    for (T_INT i = 0; i < *numMovimientos; i++)
         movimientos[i] = 0;
 
     *numMovimientos = 0;
@@ -1042,6 +1053,21 @@ void PID(void) {
     pwmDuty(velocidadDerecha, ENB);
 }
 
+void probarPID(void) {
+
+    leerSensores();
+
+    while (sensorEnfrente > UMBRAL_OBSTACULO_ENFRENTE) { //Hay espacio hacia enfrente?
+        mouse.curr_state = ENFRENTE;
+        mover();
+        PID();
+        leerSensores();
+    }
+
+    finalizarRecorrido();
+
+}
+
 void velocidadEstandar(void) {
     pwmDuty(VELOCIDAD_MOTORES, ENA);
     pwmDuty(VELOCIDAD_MOTORES, ENB);
@@ -1050,7 +1076,7 @@ void velocidadEstandar(void) {
 
 void combinarArreglos(T_UBYTE* movimientos, T_UBYTE* caminoFinal, T_UBYTE numMovimientos,
         T_UBYTE* numMovimientosFinal) {
-    for (int i = 0; i < numMovimientos; i++) {
+    for (T_INT i = 0; i < numMovimientos; i++) {
         caminoFinal[*numMovimientosFinal] = movimientos[i];
         *numMovimientosFinal += 1;
     }
@@ -1107,6 +1133,7 @@ void main(void) {
 
             probarSensores();
             //probarGirosAuto();
+            //probarPID();
             //visualizarPasosRealizados(numMovimientosTotales++); //Para visualizarlo por Bluetooth
             //comportamientoBasico();
 

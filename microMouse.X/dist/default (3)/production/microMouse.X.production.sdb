@@ -128,39 +128,39 @@ ALTO 4
 [v _inicializarComportamientoBasico inicializarComportamientoBasico `(v  1 e 1 0 ]
 "242
 [v _caminoCorrecto caminoCorrecto `(v  1 e 1 0 ]
-"404
+"398
 [v _finalizarRecorrido finalizarRecorrido `(v  1 e 1 0 ]
-"411
+"405
 [v _forzarParoAuto forzarParoAuto `(v  1 e 1 0 ]
-"419
+"413
 [v _forzarEspejeoAuto forzarEspejeoAuto `(v  1 e 1 0 ]
-"430
+"422
 [v _moverCarrito moverCarrito `(v  1 e 1 0 ]
-"482
+"474
 [v _mover mover `(v  1 e 1 0 ]
-"530
+"522
 [v _regresarPuntoPartida regresarPuntoPartida `(v  1 e 1 0 ]
-"549
+"541
 [v _regresarAlCruce regresarAlCruce `(v  1 e 1 0 ]
-"570
+"562
 [v _recorrerCaminoEncontrado recorrerCaminoEncontrado `(v  1 e 1 0 ]
-"584
+"576
 [v _hayCruce hayCruce `(uc  1 e 1 0 ]
-"686
+"678
 [v _limpiarMovimientos limpiarMovimientos `(v  1 e 1 0 ]
-"693
+"685
 [v _seLlegoAlDestino seLlegoAlDestino `(uc  1 e 1 0 ]
-"705
+"697
 [v _decidirDireccion decidirDireccion `(uc  1 e 1 0 ]
-"1004
+"996
 [v _leerSensores leerSensores `(v  1 e 1 0 ]
-"1036
+"1028
 [v _PID PID `(v  1 e 1 0 ]
-"1071
+"1061
 [v _velocidadEstandar velocidadEstandar `(v  1 e 1 0 ]
-"1077
+"1067
 [v _combinarArreglos combinarArreglos `(v  1 e 1 0 ]
-"1085
+"1075
 [v _main main `(v  1 e 1 0 ]
 "21 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/ultrasonico.h
 [v _sensorDerecha sensorDerecha `f  1 e 4 0 ]
@@ -456,12 +456,12 @@ ALTO 4
 [v _DISTANCIA_PRIORIDAD_MEDIA DISTANCIA_PRIORIDAD_MEDIA `f  1 e 4 0 ]
 "69
 [v _DISTANCIA_PRIORIDAD_BAJA DISTANCIA_PRIORIDAD_BAJA `f  1 e 4 0 ]
-"1085
+"1075
 [v _main main `(v  1 e 1 0 ]
 {
-"1087
+"1077
 [v main@iniciado iniciado `uc  1 a 1 2 ]
-"1149
+"1139
 } 0
 "121
 [v _probarSensores probarSensores `(v  1 e 1 0 ]
@@ -808,10 +808,10 @@ ALTO 4
 [v UART_write@dato dato `uc  1 a 1 5 ]
 "45
 } 0
-"1004 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+"996 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
 [v _leerSensores leerSensores `(v  1 e 1 0 ]
 {
-"1034
+"1026
 } 0
 "10 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
 [v ___fladd __fladd `(d  1 e 4 0 ]
@@ -843,10 +843,10 @@ ALTO 4
 {
 "240
 } 0
-"1071
+"1061
 [v _velocidadEstandar velocidadEstandar `(v  1 e 1 0 ]
 {
-"1075
+"1065
 } 0
 "20 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/pwm.h
 [v _pwmDuty pwmDuty `(v  1 e 1 0 ]

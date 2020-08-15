@@ -79,7 +79,7 @@ smallconst SMALLCONST 0 800 800 E6 1
 idataBANK1 CODE 0 488C 488C 1 1
 dataBANK1 BANK1 1 1FD 1FD 1 1
 bssCOMRAM COMRAM 1 55 55 5 1
-$C:\Users\DIEGOM~1\AppData\Local\Temp\sc50.o
+$C:\Users\DIEGOM~1\AppData\Local\Temp\s5n4.o
 idloc IDLOC 0 200000 200000 8 1
 init CODE 0 E E 4 1
 reset_vec CODE 0 0 0 4 1
@@ -128,7 +128,7 @@ MEDIUMCONST 488D-7FFF 1
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\microMouse.X.production.o
-8 intcode CODE >16285:C:\Users\DIEGOM~1\AppData\Local\Temp\sc50.s
+8 intcode CODE >16284:C:\Users\DIEGOM~1\AppData\Local\Temp\s5n4.s
 8 intcode CODE >103:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
 4400 text53 CODE >215:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
 4402 text53 CODE >217:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
@@ -505,10 +505,10 @@ $dist/default/production\microMouse.X.production.o
 2CE0 text39 CODE >40:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/pwm.h
 2CE4 text39 CODE >42:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/pwm.h
 2D10 text39 CODE >45:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/pwm.h
-4844 text38 CODE >1071:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
-4844 text38 CODE >1072:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
-4856 text38 CODE >1073:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
-4868 text38 CODE >1075:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+4844 text38 CODE >1061:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+4844 text38 CODE >1062:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+4856 text38 CODE >1063:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+4868 text38 CODE >1065:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
 45A0 text37 CODE >230:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
 45A0 text37 CODE >232:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
 45A4 text37 CODE >234:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
@@ -647,19 +647,19 @@ $dist/default/production\microMouse.X.production.o
 1E88 text35 CODE >234:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
 1E8A text35 CODE >236:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
 1E9A text35 CODE >237:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-31DE text34 CODE >1004:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
-31DE text34 CODE >1006:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
-323C text34 CODE >1007:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
-329A text34 CODE >1008:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
-32F8 text34 CODE >1010:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
-3308 text34 CODE >1011:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
-3318 text34 CODE >1012:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
-3328 text34 CODE >1016:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
-3328 text34 CODE >1017:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
-3338 text34 CODE >1025:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
-3338 text34 CODE >1026:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
-3348 text34 CODE >1029:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
-3358 text34 CODE >1034:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+31DE text34 CODE >996:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+31DE text34 CODE >998:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+323C text34 CODE >999:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+329A text34 CODE >1000:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+32F8 text34 CODE >1002:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+3308 text34 CODE >1003:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+3318 text34 CODE >1004:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+3328 text34 CODE >1008:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+3328 text34 CODE >1009:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+3338 text34 CODE >1017:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+3338 text34 CODE >1018:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+3348 text34 CODE >1021:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+3358 text34 CODE >1026:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
 486A text33 CODE >42:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/UART.h
 486C text33 CODE >43:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/UART.h
 4870 text33 CODE >44:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/UART.h
@@ -1130,74 +1130,74 @@ FFC text7 CODE >433:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\c
 4088 text1 CODE >135:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
 40A6 text1 CODE >136:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
 40B2 text1 CODE >138:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
-3F94 text0 CODE >1085:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
-3F94 text0 CODE >1087:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
-3F9A text0 CODE >1091:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
-3F9C text0 CODE >1092:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
-3F9E text0 CODE >1093:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
-3FA0 text0 CODE >1095:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
-3FA2 text0 CODE >1096:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
-3FA4 text0 CODE >1097:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
-3FA6 text0 CODE >1098:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
-3FA8 text0 CODE >1100:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
-3FAA text0 CODE >1101:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
-3FAC text0 CODE >1102:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
-3FAE text0 CODE >1103:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
-3FB0 text0 CODE >1105:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
-3FB2 text0 CODE >1106:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
-3FB4 text0 CODE >1108:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
-3FB6 text0 CODE >1109:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
-3FB8 text0 CODE >1110:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
-3FBA text0 CODE >1111:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
-3FBC text0 CODE >1112:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
-3FBE text0 CODE >1113:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
-3FC0 text0 CODE >1116:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
-3FC4 text0 CODE >1118:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
-3FCA text0 CODE >1119:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
-3FD0 text0 CODE >1120:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
-3FD4 text0 CODE >1122:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
-3FE8 text0 CODE >1127:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
-3FFA text0 CODE >1129:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
-400C text0 CODE >1130:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
-4010 text0 CODE >1131:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
-4014 text0 CODE >1134:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
-4018 text0 CODE >1140:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
-401C text0 CODE >1142:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
-46BE cinit CODE >1027:C:\Users\DIEGOM~1\AppData\Local\Temp\sc50.s
-46BE cinit CODE >1029:C:\Users\DIEGOM~1\AppData\Local\Temp\sc50.s
-46BE cinit CODE >1032:C:\Users\DIEGOM~1\AppData\Local\Temp\sc50.s
-46BE cinit CODE >1140:C:\Users\DIEGOM~1\AppData\Local\Temp\sc50.s
-46C0 cinit CODE >1141:C:\Users\DIEGOM~1\AppData\Local\Temp\sc50.s
-46C2 cinit CODE >1142:C:\Users\DIEGOM~1\AppData\Local\Temp\sc50.s
-46C4 cinit CODE >1143:C:\Users\DIEGOM~1\AppData\Local\Temp\sc50.s
-46C6 cinit CODE >1144:C:\Users\DIEGOM~1\AppData\Local\Temp\sc50.s
-46C8 cinit CODE >1145:C:\Users\DIEGOM~1\AppData\Local\Temp\sc50.s
-46CA cinit CODE >1146:C:\Users\DIEGOM~1\AppData\Local\Temp\sc50.s
-46CC cinit CODE >1147:C:\Users\DIEGOM~1\AppData\Local\Temp\sc50.s
-46D0 cinit CODE >1151:C:\Users\DIEGOM~1\AppData\Local\Temp\sc50.s
-46D4 cinit CODE >1152:C:\Users\DIEGOM~1\AppData\Local\Temp\sc50.s
-46D6 cinit CODE >1153:C:\Users\DIEGOM~1\AppData\Local\Temp\sc50.s
-46D6 cinit CODE >1154:C:\Users\DIEGOM~1\AppData\Local\Temp\sc50.s
-46D8 cinit CODE >1155:C:\Users\DIEGOM~1\AppData\Local\Temp\sc50.s
-46DA cinit CODE >1156:C:\Users\DIEGOM~1\AppData\Local\Temp\sc50.s
-46DC cinit CODE >1159:C:\Users\DIEGOM~1\AppData\Local\Temp\sc50.s
-46E0 cinit CODE >1160:C:\Users\DIEGOM~1\AppData\Local\Temp\sc50.s
-46E2 cinit CODE >1161:C:\Users\DIEGOM~1\AppData\Local\Temp\sc50.s
-46E2 cinit CODE >1162:C:\Users\DIEGOM~1\AppData\Local\Temp\sc50.s
-46E4 cinit CODE >1163:C:\Users\DIEGOM~1\AppData\Local\Temp\sc50.s
-46E6 cinit CODE >1164:C:\Users\DIEGOM~1\AppData\Local\Temp\sc50.s
-46E8 cinit CODE >1167:C:\Users\DIEGOM~1\AppData\Local\Temp\sc50.s
-46EA cinit CODE >1168:C:\Users\DIEGOM~1\AppData\Local\Temp\sc50.s
-46EC cinit CODE >1169:C:\Users\DIEGOM~1\AppData\Local\Temp\sc50.s
-46EE cinit CODE >1170:C:\Users\DIEGOM~1\AppData\Local\Temp\sc50.s
-46F0 cinit CODE >1171:C:\Users\DIEGOM~1\AppData\Local\Temp\sc50.s
-46F2 cinit CODE >1177:C:\Users\DIEGOM~1\AppData\Local\Temp\sc50.s
-46F2 cinit CODE >1179:C:\Users\DIEGOM~1\AppData\Local\Temp\sc50.s
-46F4 cinit CODE >1180:C:\Users\DIEGOM~1\AppData\Local\Temp\sc50.s
-46F6 cinit CODE >1182:C:\Users\DIEGOM~1\AppData\Local\Temp\sc50.s
-46F8 cinit CODE >1183:C:\Users\DIEGOM~1\AppData\Local\Temp\sc50.s
-46FA cinit CODE >1184:C:\Users\DIEGOM~1\AppData\Local\Temp\sc50.s
-46FC cinit CODE >1185:C:\Users\DIEGOM~1\AppData\Local\Temp\sc50.s
+3F94 text0 CODE >1075:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+3F94 text0 CODE >1077:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+3F9A text0 CODE >1081:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+3F9C text0 CODE >1082:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+3F9E text0 CODE >1083:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+3FA0 text0 CODE >1085:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+3FA2 text0 CODE >1086:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+3FA4 text0 CODE >1087:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+3FA6 text0 CODE >1088:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+3FA8 text0 CODE >1090:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+3FAA text0 CODE >1091:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+3FAC text0 CODE >1092:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+3FAE text0 CODE >1093:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+3FB0 text0 CODE >1095:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+3FB2 text0 CODE >1096:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+3FB4 text0 CODE >1098:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+3FB6 text0 CODE >1099:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+3FB8 text0 CODE >1100:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+3FBA text0 CODE >1101:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+3FBC text0 CODE >1102:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+3FBE text0 CODE >1103:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+3FC0 text0 CODE >1106:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+3FC4 text0 CODE >1108:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+3FCA text0 CODE >1109:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+3FD0 text0 CODE >1110:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+3FD4 text0 CODE >1112:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+3FE8 text0 CODE >1117:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+3FFA text0 CODE >1119:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+400C text0 CODE >1120:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+4010 text0 CODE >1121:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+4014 text0 CODE >1124:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+4018 text0 CODE >1130:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+401C text0 CODE >1132:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+46BE cinit CODE >1027:C:\Users\DIEGOM~1\AppData\Local\Temp\s5n4.s
+46BE cinit CODE >1029:C:\Users\DIEGOM~1\AppData\Local\Temp\s5n4.s
+46BE cinit CODE >1032:C:\Users\DIEGOM~1\AppData\Local\Temp\s5n4.s
+46BE cinit CODE >1140:C:\Users\DIEGOM~1\AppData\Local\Temp\s5n4.s
+46C0 cinit CODE >1141:C:\Users\DIEGOM~1\AppData\Local\Temp\s5n4.s
+46C2 cinit CODE >1142:C:\Users\DIEGOM~1\AppData\Local\Temp\s5n4.s
+46C4 cinit CODE >1143:C:\Users\DIEGOM~1\AppData\Local\Temp\s5n4.s
+46C6 cinit CODE >1144:C:\Users\DIEGOM~1\AppData\Local\Temp\s5n4.s
+46C8 cinit CODE >1145:C:\Users\DIEGOM~1\AppData\Local\Temp\s5n4.s
+46CA cinit CODE >1146:C:\Users\DIEGOM~1\AppData\Local\Temp\s5n4.s
+46CC cinit CODE >1147:C:\Users\DIEGOM~1\AppData\Local\Temp\s5n4.s
+46D0 cinit CODE >1151:C:\Users\DIEGOM~1\AppData\Local\Temp\s5n4.s
+46D4 cinit CODE >1152:C:\Users\DIEGOM~1\AppData\Local\Temp\s5n4.s
+46D6 cinit CODE >1153:C:\Users\DIEGOM~1\AppData\Local\Temp\s5n4.s
+46D6 cinit CODE >1154:C:\Users\DIEGOM~1\AppData\Local\Temp\s5n4.s
+46D8 cinit CODE >1155:C:\Users\DIEGOM~1\AppData\Local\Temp\s5n4.s
+46DA cinit CODE >1156:C:\Users\DIEGOM~1\AppData\Local\Temp\s5n4.s
+46DC cinit CODE >1159:C:\Users\DIEGOM~1\AppData\Local\Temp\s5n4.s
+46E0 cinit CODE >1160:C:\Users\DIEGOM~1\AppData\Local\Temp\s5n4.s
+46E2 cinit CODE >1161:C:\Users\DIEGOM~1\AppData\Local\Temp\s5n4.s
+46E2 cinit CODE >1162:C:\Users\DIEGOM~1\AppData\Local\Temp\s5n4.s
+46E4 cinit CODE >1163:C:\Users\DIEGOM~1\AppData\Local\Temp\s5n4.s
+46E6 cinit CODE >1164:C:\Users\DIEGOM~1\AppData\Local\Temp\s5n4.s
+46E8 cinit CODE >1167:C:\Users\DIEGOM~1\AppData\Local\Temp\s5n4.s
+46EA cinit CODE >1168:C:\Users\DIEGOM~1\AppData\Local\Temp\s5n4.s
+46EC cinit CODE >1169:C:\Users\DIEGOM~1\AppData\Local\Temp\s5n4.s
+46EE cinit CODE >1170:C:\Users\DIEGOM~1\AppData\Local\Temp\s5n4.s
+46F0 cinit CODE >1171:C:\Users\DIEGOM~1\AppData\Local\Temp\s5n4.s
+46F2 cinit CODE >1177:C:\Users\DIEGOM~1\AppData\Local\Temp\s5n4.s
+46F2 cinit CODE >1179:C:\Users\DIEGOM~1\AppData\Local\Temp\s5n4.s
+46F4 cinit CODE >1180:C:\Users\DIEGOM~1\AppData\Local\Temp\s5n4.s
+46F6 cinit CODE >1182:C:\Users\DIEGOM~1\AppData\Local\Temp\s5n4.s
+46F8 cinit CODE >1183:C:\Users\DIEGOM~1\AppData\Local\Temp\s5n4.s
+46FA cinit CODE >1184:C:\Users\DIEGOM~1\AppData\Local\Temp\s5n4.s
+46FC cinit CODE >1185:C:\Users\DIEGOM~1\AppData\Local\Temp\s5n4.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -1226,7 +1226,7 @@ _inicializarComportamientoBasico 45A0 0 CODE 0 text37 dist/default/production\mi
 strncmp@_l 6 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
 strncmp@_r 8 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
 __Hibigdata 0 0 CODE 0 ibigdata dist/default/production\microMouse.X.production.o
-__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\DIEGOM~1\AppData\Local\Temp\sc50.o
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\DIEGOM~1\AppData\Local\Temp\s5n4.o
 __Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\microMouse.X.production.o
 __CFG_MCLRE$ON 0 0 ABS 0 - dist/default/production\microMouse.X.production.o
 _velocidadEstandar 4844 0 CODE 0 text38 dist/default/production\microMouse.X.production.o
@@ -1236,7 +1236,7 @@ _velocidadEstandar 4844 0 CODE 0 text38 dist/default/production\microMouse.X.pro
 ?_vfprintf E3 0 BANK0 1 cstackBANK0 dist/default/production\microMouse.X.production.o
 __Lsmallconst 800 0 SMALLCONST 0 smallconst dist/default/production\microMouse.X.production.o
 _RCIF 7CF5 0 ABS 0 - dist/default/production\microMouse.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\DIEGOM~1\AppData\Local\Temp\sc50.o
+___sp 0 0 STACK 2 stack C:\Users\DIEGOM~1\AppData\Local\Temp\s5n4.o
 _atoi 2EC6 0 CODE 0 text28 dist/default/production\microMouse.X.production.o
 _dbuf 13D 0 BANK1 1 bssBANK1 dist/default/production\microMouse.X.production.o
 _dtoa 2662 0 CODE 0 text19 dist/default/production\microMouse.X.production.o
@@ -1249,7 +1249,7 @@ map@x 20 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production
 pad@i 1D 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
 pad@p 1A 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
 pad@w 1F 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
-start E 0 CODE 0 init C:\Users\DIEGOM~1\AppData\Local\Temp\sc50.o
+start E 0 CODE 0 init C:\Users\DIEGOM~1\AppData\Local\Temp\s5n4.o
 ___aomod@counter 16 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
 ___flmul@aexp 69 0 BANK0 1 cstackBANK0 dist/default/production\microMouse.X.production.o
 ___flmul@bexp 6E 0 BANK0 1 cstackBANK0 dist/default/production\microMouse.X.production.o
@@ -1294,11 +1294,11 @@ ttemp6 5E 0 COMRAM 1 temp dist/default/production\microMouse.X.production.o
 ttemp7 62 0 COMRAM 1 temp dist/default/production\microMouse.X.production.o
 __size_of_vfpfcnvrt 0 0 ABS 0 - dist/default/production\microMouse.X.production.o
 probarSensores@lecturaSensorOptico 1FB 0 BANK1 1 cstackBANK1 dist/default/production\microMouse.X.production.o
-__accesstop 60 0 ABS 0 - C:\Users\DIEGOM~1\AppData\Local\Temp\sc50.o
-intlevel0 0 0 CODE 0 text C:\Users\DIEGOM~1\AppData\Local\Temp\sc50.o
-intlevel1 0 0 CODE 0 text C:\Users\DIEGOM~1\AppData\Local\Temp\sc50.o
-intlevel2 0 0 CODE 0 text C:\Users\DIEGOM~1\AppData\Local\Temp\sc50.o
-intlevel3 0 0 CODE 0 text C:\Users\DIEGOM~1\AppData\Local\Temp\sc50.o
+__accesstop 60 0 ABS 0 - C:\Users\DIEGOM~1\AppData\Local\Temp\s5n4.o
+intlevel0 0 0 CODE 0 text C:\Users\DIEGOM~1\AppData\Local\Temp\s5n4.o
+intlevel1 0 0 CODE 0 text C:\Users\DIEGOM~1\AppData\Local\Temp\s5n4.o
+intlevel2 0 0 CODE 0 text C:\Users\DIEGOM~1\AppData\Local\Temp\s5n4.o
+intlevel3 0 0 CODE 0 text C:\Users\DIEGOM~1\AppData\Local\Temp\s5n4.o
 floorf@e 6A 0 BANK0 1 cstackBANK0 dist/default/production\microMouse.X.production.o
 floorf@m 66 0 BANK0 1 cstackBANK0 dist/default/production\microMouse.X.production.o
 floorf@u 6C 0 BANK0 1 cstackBANK0 dist/default/production\microMouse.X.production.o
@@ -1335,8 +1335,8 @@ _ADRESL FC3 0 ABS 0 - dist/default/production\microMouse.X.production.o
 _vfpfcnvrt$911 D7 0 BANK0 1 cstackBANK0 dist/default/production\microMouse.X.production.o
 _vfpfcnvrt$916 D9 0 BANK0 1 cstackBANK0 dist/default/production\microMouse.X.production.o
 ___awdiv@dividend 6 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
-___inthi_sp 0 0 STACK 2 stack C:\Users\DIEGOM~1\AppData\Local\Temp\sc50.o
-___intlo_sp 0 0 STACK 2 stack C:\Users\DIEGOM~1\AppData\Local\Temp\sc50.o
+___inthi_sp 0 0 STACK 2 stack C:\Users\DIEGOM~1\AppData\Local\Temp\s5n4.o
+___intlo_sp 0 0 STACK 2 stack C:\Users\DIEGOM~1\AppData\Local\Temp\s5n4.o
 comportamientoBasico@contCaminosRecorridos 1F5 0 BANK1 1 bssBANK1 dist/default/production\microMouse.X.production.o
 ?_dameDistancia 1B 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
 ?_tolower C 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
@@ -1507,7 +1507,7 @@ ___lwdiv@counter A 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.
 __size_of___xxtofl 0 0 ABS 0 - dist/default/production\microMouse.X.production.o
 __Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production\microMouse.X.production.o
 __Hbigram 0 0 ABS 0 bigram dist/default/production\microMouse.X.production.o
-__smallconst 800 0 SMALLCONST 0 smallconst C:\Users\DIEGOM~1\AppData\Local\Temp\sc50.o
+__smallconst 800 0 SMALLCONST 0 smallconst C:\Users\DIEGOM~1\AppData\Local\Temp\s5n4.o
 ___xxtofl@arg 17 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
 ___xxtofl@exp 16 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
 ___xxtofl@val D 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
@@ -1774,8 +1774,8 @@ __end_of_UART_printf 43A4 0 CODE 0 text32 dist/default/production\microMouse.X.p
 __size_of_dameDistancia 0 0 ABS 0 - dist/default/production\microMouse.X.production.o
 __size_of_vfprintf 0 0 ABS 0 - dist/default/production\microMouse.X.production.o
 __CFG_CCP2MX$ON 0 0 ABS 0 - dist/default/production\microMouse.X.production.o
-stackhi 7FF 0 ABS 0 - C:\Users\DIEGOM~1\AppData\Local\Temp\sc50.o
-stacklo 267 0 ABS 0 - C:\Users\DIEGOM~1\AppData\Local\Temp\sc50.o
+stackhi 7FF 0 ABS 0 - C:\Users\DIEGOM~1\AppData\Local\Temp\s5n4.o
+stacklo 267 0 ABS 0 - C:\Users\DIEGOM~1\AppData\Local\Temp\s5n4.o
 comportamientoBasico@caminoEncontrado 139 0 BANK1 1 bssBANK1 dist/default/production\microMouse.X.production.o
 __Lintcode 8 0 CODE 0 intcode dist/default/production\microMouse.X.production.o
 __Lintret 0 0 ABS 0 intret dist/default/production\microMouse.X.production.o
@@ -1911,7 +1911,7 @@ __Ltext49 0 0 ABS 0 text49 dist/default/production\microMouse.X.production.o
 __Ltext50 0 0 ABS 0 text50 dist/default/production\microMouse.X.production.o
 __Ltext51 0 0 ABS 0 text51 dist/default/production\microMouse.X.production.o
 __Ltext53 0 0 ABS 0 text53 dist/default/production\microMouse.X.production.o
-__ramtop 800 0 RAM 0 ramtop C:\Users\DIEGOM~1\AppData\Local\Temp\sc50.o
+__ramtop 800 0 RAM 0 ramtop C:\Users\DIEGOM~1\AppData\Local\Temp\s5n4.o
 ___aldiv@dividend 12 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
 _sprintf 44AC 0 CODE 0 text3 dist/default/production\microMouse.X.production.o
 __end_of_probarUltrasonico 3B14 0 CODE 0 text2 dist/default/production\microMouse.X.production.o

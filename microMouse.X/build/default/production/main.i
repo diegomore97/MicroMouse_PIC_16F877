@@ -6573,6 +6573,7 @@ void recorrerCaminoEncontrado(T_UBYTE* movimientos, T_UBYTE numMovimientos);
 void forzarParoAuto(void);
 void forzarEspejeoAuto(void);
 void finalizarRecorrido(void);
+void probarPID(void);
 
 void caminoCorrecto(T_UBYTE* movimientos, T_UBYTE* caminoFinal, T_UBYTE numMovimientos,
         T_UBYTE* numMovimientosFinal, T_UBYTE caminoActual);
@@ -6646,7 +6647,7 @@ void probarUltrasonico(T_UBYTE numeroSensor) {
 
 void probarGirosAuto(void) {
 
-    for (int i = 0; i < 4; i++)
+    for (T_INT i = 0; i < 4; i++)
     {
         mouse.curr_state = DERECHA;
         mover();
@@ -6658,7 +6659,7 @@ void probarGirosAuto(void) {
 
     _delay((unsigned long)((3000)*(4000000/4000.0)));
 
-    for (int i = 0; i < 4; i++)
+    for (T_INT i = 0; i < 4; i++)
     {
         mouse.curr_state = IZQUIERDA;
         mover();
@@ -6785,6 +6786,7 @@ void comportamientoBasico(void) {
                 switch (direccionElegida) {
 
                     case 0:
+                        velocidadEstandar();
                         mapear = 0;
                         espejearCarroY = 1;
                         mouse.Next_state = IZQUIERDA;
@@ -6858,8 +6860,13 @@ void comportamientoBasico(void) {
 
                     espejearCarroY = 1;
                     _delay((unsigned long)((3000)*(4000000/4000.0)));
+                    velocidadEstandar();
                     mouse.Next_state = IZQUIERDA;
                 } else {
+
+                    if (direccionElegida == IZQUIERDA || direccionElegida == DERECHA)
+                        velocidadEstandar();
+
                     mouse.Next_state = direccionElegida;
                 }
                 break;
@@ -6894,6 +6901,8 @@ void forzarParoAuto(void) {
 }
 
 void forzarEspejeoAuto(void) {
+
+    velocidadEstandar();
 
     LATB4 = 1;
     LATB5 = 0;
@@ -7004,7 +7013,7 @@ void mover(void) {
 
 void regresarPuntoPartida(T_UBYTE* movimientos, T_UBYTE numMovimientos) {
 
-    for (int i = numMovimientos - 1; i >= 0; i--) {
+    for (T_INT i = numMovimientos - 1; i >= 0; i--) {
 
         if (movimientos[i] == IZQUIERDA) {
             velocidadEstandar();
@@ -7023,7 +7032,9 @@ void regresarPuntoPartida(T_UBYTE* movimientos, T_UBYTE numMovimientos) {
 
 void regresarAlCruce(T_UBYTE* movimientos, T_UBYTE numMovimientos) {
 
-    for (int i = numMovimientos - 1; i > 0; i--) {
+    for (T_INT i = numMovimientos - 1; i > 0; i--) {
+
+
 
         if (movimientos[i] == IZQUIERDA) {
             velocidadEstandar();
@@ -7042,7 +7053,7 @@ void regresarAlCruce(T_UBYTE* movimientos, T_UBYTE numMovimientos) {
 
 void recorrerCaminoEncontrado(T_UBYTE* movimientos, T_UBYTE numMovimientos) {
 
-    for (int i = 0; i < numMovimientos; i++) {
+    for (T_INT i = 0; i < numMovimientos; i++) {
 
         if (movimientos[i] == IZQUIERDA || movimientos[i] == DERECHA)
             velocidadEstandar();
@@ -7157,7 +7168,7 @@ T_BOOL hayCruce(T_UBYTE* caminosRecorrer, T_UBYTE investigandoCruce) {
 }
 
 void limpiarMovimientos(T_UBYTE* movimientos, T_UBYTE* numMovimientos) {
-    for (int i = 0; i < *numMovimientos; i++)
+    for (T_INT i = 0; i < *numMovimientos; i++)
         movimientos[i] = 0;
 
     *numMovimientos = 0;
@@ -7526,6 +7537,21 @@ void PID(void) {
     pwmDuty(velocidadDerecha, 2);
 }
 
+void probarPID(void) {
+
+    leerSensores();
+
+    while (sensorEnfrente > 5) {
+        mouse.curr_state = ENFRENTE;
+        mover();
+        PID();
+        leerSensores();
+    }
+
+    finalizarRecorrido();
+
+}
+
 void velocidadEstandar(void) {
     pwmDuty(70, 1);
     pwmDuty(70, 2);
@@ -7534,7 +7560,7 @@ void velocidadEstandar(void) {
 
 void combinarArreglos(T_UBYTE* movimientos, T_UBYTE* caminoFinal, T_UBYTE numMovimientos,
         T_UBYTE* numMovimientosFinal) {
-    for (int i = 0; i < numMovimientos; i++) {
+    for (T_INT i = 0; i < numMovimientos; i++) {
         caminoFinal[*numMovimientosFinal] = movimientos[i];
         *numMovimientosFinal += 1;
     }
@@ -7590,6 +7616,7 @@ void main(void) {
             }
 
             probarSensores();
+
 
 
 
