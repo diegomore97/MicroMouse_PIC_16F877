@@ -3,30 +3,30 @@
 [d edition pro ]
 [d chip 18F4550 ]
 [d frameptr 4065 ]
-"64 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/ultrasonico.h
+"64 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/ultrasonico.h
 [e E3192 . `uc
 ENFRENTE 1
 IZQUIERDA 2
 DERECHA 3
 ALTO 4
 ]
-"7 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/adc.h
+"7 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/adc.h
 [v _configurarAdc configurarAdc `(v  1 e 1 0 ]
 "12
 [v _dameLecturaAdc dameLecturaAdc `(s  1 e 2 0 ]
-"16 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/pwm.h
+"16 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
 [v _map map `(l  1 e 4 0 ]
 "20
 [v _pwmDuty pwmDuty `(v  1 e 1 0 ]
 "47
 [v _configPwm configPwm `(v  1 e 1 0 ]
-"13 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/UART.h
+"13 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/UART.h
 [v _UART_init UART_init `(v  1 e 1 0 ]
 "42
 [v _UART_write UART_write `(v  1 e 1 0 ]
 "47
 [v _UART_printf UART_printf `(v  1 e 1 0 ]
-"26 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/ultrasonico.h
+"26 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/ultrasonico.h
 [v _dameDistancia dameDistancia `(f  1 e 4 0 ]
 "4 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\__fpclassifyf.c
 [v ___fpclassifyf __fpclassifyf `(i  1 e 2 0 ]
@@ -116,53 +116,53 @@ ALTO 4
 [v ___omul __omul `(uo  1 e 8 0 ]
 "10 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
 [v ___xxtofl __xxtofl `(d  1 e 4 0 ]
-"103 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+"105 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
 [v _boton boton `IIH(v  1 e 1 0 ]
-"121
+"123
 [v _probarSensores probarSensores `(v  1 e 1 0 ]
-"140
+"142
 [v _probarUltrasonico probarUltrasonico `(v  1 e 1 0 ]
-"215
+"217
 [v _antiRebote antiRebote `(v  1 e 1 0 ]
-"230
+"232
 [v _inicializarComportamientoBasico inicializarComportamientoBasico `(v  1 e 1 0 ]
-"242
+"244
 [v _caminoCorrecto caminoCorrecto `(v  1 e 1 0 ]
-"404
+"406
 [v _finalizarRecorrido finalizarRecorrido `(v  1 e 1 0 ]
-"411
+"413
 [v _forzarParoAuto forzarParoAuto `(v  1 e 1 0 ]
-"419
+"421
 [v _forzarEspejeoAuto forzarEspejeoAuto `(v  1 e 1 0 ]
-"430
+"432
 [v _moverCarrito moverCarrito `(v  1 e 1 0 ]
-"482
+"484
 [v _mover mover `(v  1 e 1 0 ]
-"530
+"532
 [v _regresarPuntoPartida regresarPuntoPartida `(v  1 e 1 0 ]
-"549
+"551
 [v _regresarAlCruce regresarAlCruce `(v  1 e 1 0 ]
-"570
+"572
 [v _recorrerCaminoEncontrado recorrerCaminoEncontrado `(v  1 e 1 0 ]
-"584
+"586
 [v _hayCruce hayCruce `(uc  1 e 1 0 ]
-"686
+"688
 [v _limpiarMovimientos limpiarMovimientos `(v  1 e 1 0 ]
-"693
+"695
 [v _seLlegoAlDestino seLlegoAlDestino `(uc  1 e 1 0 ]
-"705
+"707
 [v _decidirDireccion decidirDireccion `(uc  1 e 1 0 ]
-"1004
+"1006
 [v _leerSensores leerSensores `(v  1 e 1 0 ]
-"1036
+"1038
 [v _PID PID `(v  1 e 1 0 ]
-"1071
+"1073
 [v _velocidadEstandar velocidadEstandar `(v  1 e 1 0 ]
-"1077
+"1079
 [v _combinarArreglos combinarArreglos `(v  1 e 1 0 ]
-"1085
+"1087
 [v _main main `(v  1 e 1 0 ]
-"21 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/ultrasonico.h
+"21 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/ultrasonico.h
 [v _sensorDerecha sensorDerecha `f  1 e 4 0 ]
 [v _sensorIzquierda sensorIzquierda `f  1 e 4 0 ]
 [v _sensorEnfrente sensorEnfrente `f  1 e 4 0 ]
@@ -442,41 +442,41 @@ ALTO 4
 "69
 [v _nout nout `i  1 s 2 nout ]
 [s S283 . 2 `E3192 1 curr_state 1 0 `E3192 1 Next_state 1 1 ]
-"62 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+"64 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
 [v _mouse mouse `S283  1 e 2 0 ]
-"63
-[v _pausa pausa `uc  1 e 1 0 ]
-"64
-[v _buffer buffer `[50]uc  1 e 50 0 ]
 "65
-[v _llegoDestino llegoDestino `uc  1 e 1 0 ]
+[v _pausa pausa `uc  1 e 1 0 ]
+"66
+[v _buffer buffer `[50]uc  1 e 50 0 ]
 "67
-[v _DISTANCIA_PRIORIDAD_ALTA DISTANCIA_PRIORIDAD_ALTA `f  1 e 4 0 ]
-"68
-[v _DISTANCIA_PRIORIDAD_MEDIA DISTANCIA_PRIORIDAD_MEDIA `f  1 e 4 0 ]
+[v _llegoDestino llegoDestino `uc  1 e 1 0 ]
 "69
+[v _DISTANCIA_PRIORIDAD_ALTA DISTANCIA_PRIORIDAD_ALTA `f  1 e 4 0 ]
+"70
+[v _DISTANCIA_PRIORIDAD_MEDIA DISTANCIA_PRIORIDAD_MEDIA `f  1 e 4 0 ]
+"71
 [v _DISTANCIA_PRIORIDAD_BAJA DISTANCIA_PRIORIDAD_BAJA `f  1 e 4 0 ]
-"1085
+"1087
 [v _main main `(v  1 e 1 0 ]
 {
-"1087
+"1089
 [v main@iniciado iniciado `uc  1 a 1 2 ]
-"1149
+"1151
 } 0
-"121
+"123
 [v _probarSensores probarSensores `(v  1 e 1 0 ]
 {
-"128
+"130
 [v probarSensores@lecturaSensorOptico lecturaSensorOptico `s  1 a 2 0 ]
-"138
-} 0
 "140
+} 0
+"142
 [v _probarUltrasonico probarUltrasonico `(v  1 e 1 0 ]
 {
 [v probarUltrasonico@numeroSensor numeroSensor `uc  1 a 1 wreg ]
 [v probarUltrasonico@numeroSensor numeroSensor `uc  1 a 1 wreg ]
 [v probarUltrasonico@numeroSensor numeroSensor `uc  1 a 1 159 ]
-"162
+"164
 } 0
 "9 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\nf_sprintf.c
 [v _sprintf sprintf `(i  1 e 2 0 ]
@@ -794,7 +794,7 @@ ALTO 4
 [v ___wmul@multiplicand multiplicand `ui  1 p 2 7 ]
 "53
 } 0
-"47 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/UART.h
+"47 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/UART.h
 [v _UART_printf UART_printf `(v  1 e 1 0 ]
 {
 [v UART_printf@cadena cadena `*.35uc  1 p 2 6 ]
@@ -808,10 +808,10 @@ ALTO 4
 [v UART_write@dato dato `uc  1 a 1 5 ]
 "45
 } 0
-"1004 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+"1006 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
 [v _leerSensores leerSensores `(v  1 e 1 0 ]
 {
-"1034
+"1036
 } 0
 "10 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
 [v ___fladd __fladd `(d  1 e 4 0 ]
@@ -829,7 +829,7 @@ ALTO 4
 [v ___fladd@a a `d  1 p 4 43 ]
 "237
 } 0
-"12 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/adc.h
+"12 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/adc.h
 [v _dameLecturaAdc dameLecturaAdc `(s  1 e 2 0 ]
 {
 [v dameLecturaAdc@canalLeer canalLeer `uc  1 a 1 wreg ]
@@ -838,17 +838,17 @@ ALTO 4
 [v dameLecturaAdc@canalLeer canalLeer `uc  1 a 1 9 ]
 "27
 } 0
-"230 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+"232 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
 [v _inicializarComportamientoBasico inicializarComportamientoBasico `(v  1 e 1 0 ]
 {
-"240
+"242
 } 0
-"1071
+"1073
 [v _velocidadEstandar velocidadEstandar `(v  1 e 1 0 ]
 {
-"1075
+"1077
 } 0
-"20 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/pwm.h
+"20 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
 [v _pwmDuty pwmDuty `(v  1 e 1 0 ]
 {
 "22
@@ -933,7 +933,7 @@ ALTO 4
 [v ___fldiv@a a `d  1 p 4 59 ]
 "185
 } 0
-"26 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/ultrasonico.h
+"26 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/ultrasonico.h
 [v _dameDistancia dameDistancia `(f  1 e 4 0 ]
 {
 [v dameDistancia@numeroSensor numeroSensor `uc  1 a 1 wreg ]
@@ -974,12 +974,12 @@ ALTO 4
 [v ___lwdiv@divisor divisor `ui  1 p 2 7 ]
 "30
 } 0
-"7 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/adc.h
+"7 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/adc.h
 [v _configurarAdc configurarAdc `(v  1 e 1 0 ]
 {
 "10
 } 0
-"47 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/pwm.h
+"47 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
 [v _configPwm configPwm `(v  1 e 1 0 ]
 {
 [v configPwm@channel channel `uc  1 a 1 wreg ]
@@ -987,7 +987,7 @@ ALTO 4
 [v configPwm@channel channel `uc  1 a 1 7 ]
 "82
 } 0
-"13 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X/UART.h
+"13 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/UART.h
 [v _UART_init UART_init `(v  1 e 1 0 ]
 {
 [v UART_init@BAUD BAUD `l  1 p 4 31 ]
@@ -1006,16 +1006,16 @@ ALTO 4
 [v ___aldiv@divisor divisor `l  1 p 4 21 ]
 "41
 } 0
-"103 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\MicroMouse\microMouse.X\main.c
+"105 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
 [v _boton boton `IIH(v  1 e 1 0 ]
 {
-"119
+"121
 } 0
-"215
+"217
 [v _antiRebote antiRebote `(v  1 e 1 0 ]
 {
 [v antiRebote@pin pin `uc  1 a 1 wreg ]
 [v antiRebote@pin pin `uc  1 a 1 wreg ]
 [v antiRebote@pin pin `uc  1 a 1 2 ]
-"228
+"230
 } 0

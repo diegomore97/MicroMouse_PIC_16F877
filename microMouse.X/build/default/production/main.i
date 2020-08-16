@@ -7,6 +7,8 @@
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
 # 1 "main.c" 2
+
+
 # 1 "./config.h" 1
 #pragma config PLLDIV = 1
 #pragma config CPUDIV = OSC1_PLL2
@@ -5685,7 +5687,7 @@ extern __attribute__((nonreentrant)) void _delaywdt(unsigned long);
 extern __attribute__((nonreentrant)) void _delay3(unsigned char);
 # 32 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\xc.h" 2 3
 # 65 "./config.h" 2
-# 1 "main.c" 2
+# 3 "main.c" 2
 
 # 1 "./variables.h" 1
 
@@ -5700,7 +5702,7 @@ typedef unsigned int T_UINT;
 typedef int T_INT;
 typedef unsigned char T_BOOL;
 typedef float T_FLOAT;
-# 2 "main.c" 2
+# 4 "main.c" 2
 
 # 1 "./pwm.h" 1
 # 12 "./pwm.h"
@@ -5775,7 +5777,7 @@ void configPwm(T_UBYTE channel) {
 
     TMR2ON = 1;
 }
-# 3 "main.c" 2
+# 5 "main.c" 2
 
 # 1 "./ultrasonico.h" 1
 # 14 "./ultrasonico.h"
@@ -5848,7 +5850,7 @@ T_FLOAT dameDistancia(T_UBYTE numeroSensor) {
     return distancia;
 
 }
-# 4 "main.c" 2
+# 6 "main.c" 2
 
 # 1 "./UART.h" 1
 
@@ -5902,7 +5904,7 @@ void UART_printf(T_BYTE* cadena) {
         UART_write(*cadena++);
     }
 }
-# 5 "main.c" 2
+# 7 "main.c" 2
 
 # 1 "./adc.h" 1
 
@@ -5932,7 +5934,7 @@ T_WORD dameLecturaAdc(T_BYTE canalLeer) {
     return (ADRESH << 8) +ADRESL;
 
 }
-# 6 "main.c" 2
+# 8 "main.c" 2
 
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdio.h" 1 3
 # 24 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdio.h" 3
@@ -6072,7 +6074,7 @@ char *ctermid(char *);
 
 
 char *tempnam(const char *, const char *);
-# 7 "main.c" 2
+# 9 "main.c" 2
 
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\math.h" 1 3
 # 10 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\math.h" 3
@@ -6535,8 +6537,8 @@ double jn(int, double);
 double y0(double);
 double y1(double);
 double yn(int, double);
-# 8 "main.c" 2
-# 56 "main.c"
+# 10 "main.c" 2
+# 58 "main.c"
 typedef struct {
     Direccion curr_state;
     Direccion Next_state;
