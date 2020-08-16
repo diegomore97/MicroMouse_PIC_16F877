@@ -7617,8 +7617,8 @@ void main(void) {
                 inicializarComportamientoBasico();
             }
 
-            probarSensores();
 
+            probarGirosAuto();
 
 
 

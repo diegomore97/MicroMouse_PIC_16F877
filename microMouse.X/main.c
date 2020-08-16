@@ -1133,8 +1133,8 @@ void main(void) {
                 inicializarComportamientoBasico();
             }
 
-            probarSensores();
-            //probarGirosAuto();
+            //probarSensores();
+            probarGirosAuto();
             //probarPID();
             //visualizarPasosRealizados(numMovimientosTotales++); //Para visualizarlo por Bluetooth
             //comportamientoBasico();
