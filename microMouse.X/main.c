@@ -1059,14 +1059,13 @@ void probarPID(void) {
 
     leerSensores();
 
-    while (sensorEnfrente > UMBRAL_OBSTACULO_ENFRENTE) { //Hay espacio hacia enfrente?
+    if (sensorEnfrente > UMBRAL_OBSTACULO_ENFRENTE) { //Hay espacio hacia enfrente?
         mouse.curr_state = ENFRENTE;
         mover();
         PID();
         leerSensores();
-    }
-
-    finalizarRecorrido();
+    } else
+        finalizarRecorrido();
 
 }
 

@@ -108,11 +108,11 @@ ALTO 4
 [v _leerSensores leerSensores `(v  1 e 1 0 ]
 "1038
 [v _PID PID `(v  1 e 1 0 ]
-"1073
+"1072
 [v _velocidadEstandar velocidadEstandar `(v  1 e 1 0 ]
-"1079
+"1078
 [v _combinarArreglos combinarArreglos `(v  1 e 1 0 ]
-"1087
+"1086
 [v _main main `(v  1 e 1 0 ]
 "21 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/ultrasonico.h
 [v _sensorDerecha sensorDerecha `f  1 e 4 0 ]
@@ -400,12 +400,12 @@ ALTO 4
 [v _DISTANCIA_PRIORIDAD_MEDIA DISTANCIA_PRIORIDAD_MEDIA `f  1 e 4 0 ]
 "71
 [v _DISTANCIA_PRIORIDAD_BAJA DISTANCIA_PRIORIDAD_BAJA `f  1 e 4 0 ]
-"1087
+"1086
 [v _main main `(v  1 e 1 0 ]
 {
-"1089
+"1088
 [v main@iniciado iniciado `uc  1 a 1 16 ]
-"1151
+"1150
 } 0
 "166
 [v _probarGirosAuto probarGirosAuto `(v  1 e 1 0 ]
@@ -426,10 +426,10 @@ ALTO 4
 {
 "242
 } 0
-"1073
+"1072
 [v _velocidadEstandar velocidadEstandar `(v  1 e 1 0 ]
 {
-"1077
+"1076
 } 0
 "20 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
 [v _pwmDuty pwmDuty `(v  1 e 1 0 ]

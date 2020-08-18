@@ -7543,14 +7543,13 @@ void probarPID(void) {
 
     leerSensores();
 
-    while (sensorEnfrente > 5) {
+    if (sensorEnfrente > 5) {
         mouse.curr_state = ENFRENTE;
         mover();
         PID();
         leerSensores();
-    }
-
-    finalizarRecorrido();
+    } else
+        finalizarRecorrido();
 
 }
 
