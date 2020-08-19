@@ -480,7 +480,7 @@ bssBANK1 100 195 BANK1 100 1
 %locals
 dist/default/production\microMouse.X.production.o
 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h
-C:\Users\DIEGOM~1\AppData\Local\Temp\sbeg.s
+C:\Users\DIEGOM~1\AppData\Local\Temp\s680.s
 1056 13A8 0 CODE 0
 1058 13A8 0 CODE 0
 1061 13A8 0 CODE 0
@@ -979,7 +979,7 @@ C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
 39 D92 0 CODE 0
 40 DA2 0 CODE 0
 41 DB2 0 CODE 0
-C:\Users\DIEGOM~1\AppData\Local\Temp\sbeg.s
+C:\Users\DIEGOM~1\AppData\Local\Temp\s680.s
 6288 8 0 CODE 0
 main.c
 105 8 0 CODE 0

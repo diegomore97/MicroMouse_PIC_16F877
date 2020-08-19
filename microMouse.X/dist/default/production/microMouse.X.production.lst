@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.10 build 88905656 
-                                                                                               Wed Aug 19 14:32:51 2020
+                                                                                               Wed Aug 19 14:42:37 2020
 
 Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1 
      1                           	processor	18F4550
@@ -1573,21 +1573,21 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1558  0013EA                     _velocidadEstandar:
   1559                           	opt callstack 24
   1560  0013EA                     
-  1561                           ;main.c: 1087:     pwmDuty(70, 1);
+  1561                           ;main.c: 1087:     pwmDuty(100, 1);
   1562  0013EA  0E00               	movlw	0
   1563  0013EC  0100               	movlb	0	; () banked
   1564  0013EE  6FCC               	movwf	(pwmDuty@cicloTrabajo+1)& (0+255),b
-  1565  0013F0  0E46               	movlw	70
+  1565  0013F0  0E64               	movlw	100
   1566  0013F2  6FCB               	movwf	pwmDuty@cicloTrabajo& (0+255),b
   1567  0013F4  0E01               	movlw	1
   1568  0013F6  6FCD               	movwf	pwmDuty@channel& (0+255),b
   1569  0013F8  ECEB  F003         	call	_pwmDuty	;wreg free
   1570                           
-  1571                           ;main.c: 1088:     pwmDuty(70, 2);
+  1571                           ;main.c: 1088:     pwmDuty(100, 2);
   1572  0013FC  0E00               	movlw	0
   1573  0013FE  0100               	movlb	0	; () banked
   1574  001400  6FCC               	movwf	(pwmDuty@cicloTrabajo+1)& (0+255),b
-  1575  001402  0E46               	movlw	70
+  1575  001402  0E64               	movlw	100
   1576  001404  6FCB               	movwf	pwmDuty@cicloTrabajo& (0+255),b
   1577  001406  0E02               	movlw	2
   1578  001408  6FCD               	movwf	pwmDuty@channel& (0+255),b
@@ -4856,7 +4856,7 @@ CODE                 0      0       0       0        0.0%
 
 
 Microchip Technology PIC18 Macro Assembler V2.10 build 88905656 
-Symbol Table                                                                                   Wed Aug 19 14:32:51 2020
+Symbol Table                                                                                   Wed Aug 19 14:42:37 2020
 
                              ___fldiv@aexp 0033                               ___fldiv@bexp 0032  
                              ___fldiv@sign 002B                             ?_configurarAdc 0001  

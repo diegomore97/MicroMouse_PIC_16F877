@@ -13,7 +13,7 @@
 #define UMBRAL_OBSTACULO_LATERAL 3 //expresado en cm | sensibilidad antes de que choque con un objeto
 #define UMBRAL_OBSTACULO_ENFRENTE 5 //expresado en cm | sensibilidad antes de que choque con un objeto
 #define UMBRAL_SENSOR_OPTICO_REFLEXIVO 100 //Unidad que representa el minimo de luz percibida para detectar negro
-#define VELOCIDAD_MOTORES 70 //Porcentaje de ciclo de trabajo a la que trabajaran los motores
+#define VELOCIDAD_MOTORES 100 //Porcentaje de ciclo de trabajo a la que trabajaran los motores
 #define TIEMPO_AVANCE 150 //Tiempo en milisegundos que avanzara el carro al girar
 #define MAX_MOVIMIENTOS_GUARDADOS 50 //Para mapear y regresar a algun lugar si llegamos a un callejon
 #define MAX_MOVIMIENTOS_CAMINO_FINAL 100 //El maximo de movimientos a realizar para llegar al destino

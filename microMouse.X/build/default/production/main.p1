@@ -4235,13 +4235,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 1063:     difAnt = dif;
 [e = F4147 -> _dif `i ]
 "1065
-[; ;main.c: 1065:     T_BYTE velocidadIzquierda = ((70 - error)<(0)?(0):((70 - error)>(70)?(70):(70 - error)));
+[; ;main.c: 1065:     T_BYTE velocidadIzquierda = ((100 - error)<(0)?(0):((100 - error)>(100)?(100):(100 - error)));
 [v _velocidadIzquierda `uc ~T0 @X0 1 a ]
-[e = _velocidadIzquierda -> ? < - -> 70 `i _error -> 0 `i : -> 0 `i ? > - -> 70 `i _error -> 70 `i : -> 70 `i - -> 70 `i _error `uc ]
+[e = _velocidadIzquierda -> ? < - -> 100 `i _error -> 0 `i : -> 0 `i ? > - -> 100 `i _error -> 100 `i : -> 100 `i - -> 100 `i _error `uc ]
 "1066
-[; ;main.c: 1066:     T_BYTE velocidadDerecha = ((70 + error)<(0)?(0):((70 + error)>(70)?(70):(70 + error)));
+[; ;main.c: 1066:     T_BYTE velocidadDerecha = ((100 + error)<(0)?(0):((100 + error)>(100)?(100):(100 + error)));
 [v _velocidadDerecha `uc ~T0 @X0 1 a ]
-[e = _velocidadDerecha -> ? < + -> 70 `i _error -> 0 `i : -> 0 `i ? > + -> 70 `i _error -> 70 `i : -> 70 `i + -> 70 `i _error `uc ]
+[e = _velocidadDerecha -> ? < + -> 100 `i _error -> 0 `i : -> 0 `i ? > + -> 100 `i _error -> 100 `i : -> 100 `i + -> 100 `i _error `uc ]
 "1068
 [; ;main.c: 1068:     pwmDuty(velocidadIzquierda, 1);
 [e ( _pwmDuty (2 , -> _velocidadIzquierda `ui -> -> 1 `i `uc ]
@@ -4297,11 +4297,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _velocidadEstandar ]
 [f ]
 "1087
-[; ;main.c: 1087:     pwmDuty(70, 1);
-[e ( _pwmDuty (2 , -> -> 70 `i `ui -> -> 1 `i `uc ]
+[; ;main.c: 1087:     pwmDuty(100, 1);
+[e ( _pwmDuty (2 , -> -> 100 `i `ui -> -> 1 `i `uc ]
 "1088
-[; ;main.c: 1088:     pwmDuty(70, 2);
-[e ( _pwmDuty (2 , -> -> 70 `i `ui -> -> 2 `i `uc ]
+[; ;main.c: 1088:     pwmDuty(100, 2);
+[e ( _pwmDuty (2 , -> -> 100 `i `ui -> -> 2 `i `uc ]
 "1090
 [; ;main.c: 1090: }
 [e :UE 720 ]
