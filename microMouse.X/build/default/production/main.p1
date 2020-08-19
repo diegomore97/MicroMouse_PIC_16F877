@@ -2458,14 +2458,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 437:     velocidadEstandar();
 [e ( _velocidadEstandar ..  ]
 "439
-[; ;main.c: 439:     LATB4 = 1;
-[e = _LATB4 -> -> 1 `i `b ]
+[; ;main.c: 439:     LATB4 = 0;
+[e = _LATB4 -> -> 0 `i `b ]
 "440
 [; ;main.c: 440:     LATB5 = 0;
 [e = _LATB5 -> -> 0 `i `b ]
 "441
-[; ;main.c: 441:     LATB6 = 0;
-[e = _LATB6 -> -> 0 `i `b ]
+[; ;main.c: 441:     LATB6 = 1;
+[e = _LATB6 -> -> 1 `i `b ]
 "442
 [; ;main.c: 442:     LATB7 = 0;
 [e = _LATB7 -> -> 0 `i `b ]
@@ -2510,14 +2510,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 459:         case IZQUIERDA:
 [e :U 512 ]
 "461
-[; ;main.c: 461:             LATB4 = 1;
-[e = _LATB4 -> -> 1 `i `b ]
+[; ;main.c: 461:             LATB4 = 0;
+[e = _LATB4 -> -> 0 `i `b ]
 "462
 [; ;main.c: 462:             LATB5 = 0;
 [e = _LATB5 -> -> 0 `i `b ]
 "463
-[; ;main.c: 463:             LATB6 = 0;
-[e = _LATB6 -> -> 0 `i `b ]
+[; ;main.c: 463:             LATB6 = 1;
+[e = _LATB6 -> -> 1 `i `b ]
 "464
 [; ;main.c: 464:             LATB7 = 0;
 [e = _LATB7 -> -> 0 `i `b ]
@@ -2547,14 +2547,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 474:         case DERECHA:
 [e :U 515 ]
 "476
-[; ;main.c: 476:             LATB4 = 0;
-[e = _LATB4 -> -> 0 `i `b ]
+[; ;main.c: 476:             LATB4 = 1;
+[e = _LATB4 -> -> 1 `i `b ]
 "477
 [; ;main.c: 477:             LATB5 = 0;
 [e = _LATB5 -> -> 0 `i `b ]
 "478
-[; ;main.c: 478:             LATB6 = 1;
-[e = _LATB6 -> -> 1 `i `b ]
+[; ;main.c: 478:             LATB6 = 0;
+[e = _LATB6 -> -> 0 `i `b ]
 "479
 [; ;main.c: 479:             LATB7 = 0;
 [e = _LATB7 -> -> 0 `i `b ]
@@ -2629,14 +2629,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 511:         case IZQUIERDA:
 [e :U 521 ]
 "513
-[; ;main.c: 513:             LATB4 = 1;
-[e = _LATB4 -> -> 1 `i `b ]
+[; ;main.c: 513:             LATB4 = 0;
+[e = _LATB4 -> -> 0 `i `b ]
 "514
 [; ;main.c: 514:             LATB5 = 0;
 [e = _LATB5 -> -> 0 `i `b ]
 "515
-[; ;main.c: 515:             LATB6 = 0;
-[e = _LATB6 -> -> 0 `i `b ]
+[; ;main.c: 515:             LATB6 = 1;
+[e = _LATB6 -> -> 1 `i `b ]
 "516
 [; ;main.c: 516:             LATB7 = 0;
 [e = _LATB7 -> -> 0 `i `b ]
@@ -2650,14 +2650,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 522:         case DERECHA:
 [e :U 522 ]
 "524
-[; ;main.c: 524:             LATB4 = 0;
-[e = _LATB4 -> -> 0 `i `b ]
+[; ;main.c: 524:             LATB4 = 1;
+[e = _LATB4 -> -> 1 `i `b ]
 "525
 [; ;main.c: 525:             LATB5 = 0;
 [e = _LATB5 -> -> 0 `i `b ]
 "526
-[; ;main.c: 526:             LATB6 = 1;
-[e = _LATB6 -> -> 1 `i `b ]
+[; ;main.c: 526:             LATB6 = 0;
+[e = _LATB6 -> -> 0 `i `b ]
 "527
 [; ;main.c: 527:             LATB7 = 0;
 [e = _LATB7 -> -> 0 `i `b ]

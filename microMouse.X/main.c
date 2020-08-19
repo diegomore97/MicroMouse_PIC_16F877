@@ -436,9 +436,9 @@ void forzarEspejeoAuto(void) {
 
     velocidadEstandar();
 
-    IN1 = 1;
+    IN1 = 0;
     IN2 = 0;
-    IN3 = 0;
+    IN3 = 1;
     IN4 = 0;
     __delay_ms(TIEMPO_AVANCE * DOBLE);
 }
@@ -458,9 +458,9 @@ void moverCarrito(T_UBYTE espejearCarroY, T_UBYTE* carroEspejeado) {
 
         case IZQUIERDA:
 
-            IN1 = 1;
+            IN1 = 0;
             IN2 = 0;
-            IN3 = 0;
+            IN3 = 1;
             IN4 = 0;
 
             if (espejearCarroY) {
@@ -473,9 +473,9 @@ void moverCarrito(T_UBYTE espejearCarroY, T_UBYTE* carroEspejeado) {
 
         case DERECHA:
 
-            IN1 = 0;
+            IN1 = 1;
             IN2 = 0;
-            IN3 = 1;
+            IN3 = 0;
             IN4 = 0;
 
             __delay_ms(TIEMPO_AVANCE); //Giro 45 grados
@@ -510,9 +510,9 @@ void mover(void) {
 
         case IZQUIERDA:
 
-            IN1 = 1;
+            IN1 = 0;
             IN2 = 0;
-            IN3 = 0;
+            IN3 = 1;
             IN4 = 0;
 
             __delay_ms(TIEMPO_AVANCE); //Giro 45 grados
@@ -521,9 +521,9 @@ void mover(void) {
 
         case DERECHA:
 
-            IN1 = 0;
+            IN1 = 1;
             IN2 = 0;
-            IN3 = 1;
+            IN3 = 0;
             IN4 = 0;
 
             __delay_ms(TIEMPO_AVANCE); //Giro 45 grados

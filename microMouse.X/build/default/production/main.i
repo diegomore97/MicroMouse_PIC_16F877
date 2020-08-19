@@ -6920,9 +6920,9 @@ void forzarEspejeoAuto(void) {
 
     velocidadEstandar();
 
-    LATB4 = 1;
+    LATB4 = 0;
     LATB5 = 0;
-    LATB6 = 0;
+    LATB6 = 1;
     LATB7 = 0;
     _delay((unsigned long)((150 * 2)*(4000000/4000.0)));
 }
@@ -6942,9 +6942,9 @@ void moverCarrito(T_UBYTE espejearCarroY, T_UBYTE* carroEspejeado) {
 
         case IZQUIERDA:
 
-            LATB4 = 1;
+            LATB4 = 0;
             LATB5 = 0;
-            LATB6 = 0;
+            LATB6 = 1;
             LATB7 = 0;
 
             if (espejearCarroY) {
@@ -6957,9 +6957,9 @@ void moverCarrito(T_UBYTE espejearCarroY, T_UBYTE* carroEspejeado) {
 
         case DERECHA:
 
-            LATB4 = 0;
+            LATB4 = 1;
             LATB5 = 0;
-            LATB6 = 1;
+            LATB6 = 0;
             LATB7 = 0;
 
             _delay((unsigned long)((150)*(4000000/4000.0)));
@@ -6994,9 +6994,9 @@ void mover(void) {
 
         case IZQUIERDA:
 
-            LATB4 = 1;
+            LATB4 = 0;
             LATB5 = 0;
-            LATB6 = 0;
+            LATB6 = 1;
             LATB7 = 0;
 
             _delay((unsigned long)((150)*(4000000/4000.0)));
@@ -7005,9 +7005,9 @@ void mover(void) {
 
         case DERECHA:
 
-            LATB4 = 0;
+            LATB4 = 1;
             LATB5 = 0;
-            LATB6 = 1;
+            LATB6 = 0;
             LATB7 = 0;
 
             _delay((unsigned long)((150)*(4000000/4000.0)));

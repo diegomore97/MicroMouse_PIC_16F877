@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.10 build 88905656 
-                                                                                               Wed Aug 19 12:41:53 2020
+                                                                                               Wed Aug 19 14:32:51 2020
 
 Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1 
      1                           	processor	18F4550
@@ -1360,14 +1360,14 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1346  001024  EF4B  F008         	goto	l408
   1347  001028                     l405:
   1348                           
-  1349                           ;main.c: 513:             LATB4 = 1;
-  1350  001028  888A               	bsf	3978,4,c	;volatile
+  1349                           ;main.c: 513:             LATB4 = 0;
+  1350  001028  988A               	bcf	3978,4,c	;volatile
   1351                           
   1352                           ;main.c: 514:             LATB5 = 0;
   1353  00102A  9A8A               	bcf	3978,5,c	;volatile
   1354                           
-  1355                           ;main.c: 515:             LATB6 = 0;
-  1356  00102C  9C8A               	bcf	3978,6,c	;volatile
+  1355                           ;main.c: 515:             LATB6 = 1;
+  1356  00102C  8C8A               	bsf	3978,6,c	;volatile
   1357                           
   1358                           ;main.c: 516:             LATB7 = 0;
   1359  00102E  9E8A               	bcf	3978,7,c	;volatile
@@ -1388,14 +1388,14 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1374  001040  EF4B  F008         	goto	l408
   1375  001044                     l406:
   1376                           
-  1377                           ;main.c: 524:             LATB4 = 0;
-  1378  001044  988A               	bcf	3978,4,c	;volatile
+  1377                           ;main.c: 524:             LATB4 = 1;
+  1378  001044  888A               	bsf	3978,4,c	;volatile
   1379                           
   1380                           ;main.c: 525:             LATB5 = 0;
   1381  001046  9A8A               	bcf	3978,5,c	;volatile
   1382                           
-  1383                           ;main.c: 526:             LATB6 = 1;
-  1384  001048  8C8A               	bsf	3978,6,c	;volatile
+  1383                           ;main.c: 526:             LATB6 = 0;
+  1384  001048  9C8A               	bcf	3978,6,c	;volatile
   1385                           
   1386                           ;main.c: 527:             LATB7 = 0;
   1387  00104A  9E8A               	bcf	3978,7,c	;volatile
@@ -4856,7 +4856,7 @@ CODE                 0      0       0       0        0.0%
 
 
 Microchip Technology PIC18 Macro Assembler V2.10 build 88905656 
-Symbol Table                                                                                   Wed Aug 19 12:41:53 2020
+Symbol Table                                                                                   Wed Aug 19 14:32:51 2020
 
                              ___fldiv@aexp 0033                               ___fldiv@bexp 0032  
                              ___fldiv@sign 002B                             ?_configurarAdc 0001  
