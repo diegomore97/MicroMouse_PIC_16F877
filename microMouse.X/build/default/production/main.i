@@ -6757,10 +6757,24 @@ void comportamientoBasico(void) {
         if (!llegoDestino) {
 
             if (mapear)
-                movimientosRealizados[numMovimientos++] = mouse.curr_state;
-            else {
-                if (!investigandoCruce)
-                    caminoFinal[numMovimientosTotales++] = mouse.curr_state;
+            {
+                if (numMovimientos < 50)
+                    movimientosRealizados[numMovimientos++] = mouse.curr_state;
+                else {
+                    UART_printf("\n\nOVERFLOW en el mapeo de pasos Realizados para cruce\n\n");
+                    forzarParoAuto();
+                    pausa = 1;
+                }
+            } else {
+                if (!investigandoCruce) {
+                    if (numMovimientosTotales < 100)
+                        caminoFinal[numMovimientosTotales++] = mouse.curr_state;
+                    else {
+                        UART_printf("\n\nOVERFLOW en el mapeo de pasos Realizados para camino Total\n\n");
+                        forzarParoAuto();
+                        pausa = 1;
+                    }
+                }
             }
 
         }

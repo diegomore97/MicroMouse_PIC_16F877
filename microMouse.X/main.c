@@ -273,10 +273,24 @@ void comportamientoBasico(void) {
         if (!llegoDestino) {
 
             if (mapear) //Mapeo de cruces
-                movimientosRealizados[numMovimientos++] = mouse.curr_state;
-            else { //Mapeo General
-                if (!investigandoCruce)
-                    caminoFinal[numMovimientosTotales++] = mouse.curr_state;
+            {
+                if (numMovimientos < MAX_MOVIMIENTOS_GUARDADOS)
+                    movimientosRealizados[numMovimientos++] = mouse.curr_state;
+                else {
+                    UART_printf("\n\nOVERFLOW en el mapeo de pasos Realizados para cruce\n\n");
+                    forzarParoAuto();
+                    pausa = 1;
+                }
+            } else { //Mapeo General
+                if (!investigandoCruce) {
+                    if (numMovimientosTotales < MAX_MOVIMIENTOS_CAMINO_FINAL)
+                        caminoFinal[numMovimientosTotales++] = mouse.curr_state;
+                    else {
+                        UART_printf("\n\nOVERFLOW en el mapeo de pasos Realizados para camino Total\n\n");
+                        forzarParoAuto();
+                        pausa = 1;
+                    }
+                }
             }
 
         }
@@ -371,7 +385,7 @@ void comportamientoBasico(void) {
                     llegoDestino = 0;
                     caminoEncontrado = 1;
                     finalizarRecorrido();
-                } else if (llegoDestino && !carroEspejeado) {
+                } else if (llegoDestino && !carroEspejeado) { //El auto esta parado en el destino
 
                     caminoCorrecto(movimientosRealizados, caminoFinal, numMovimientos,
                             &numMovimientosTotales, caminoActual);

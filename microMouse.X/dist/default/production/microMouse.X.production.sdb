@@ -80,39 +80,39 @@ ALTO 4
 [v _inicializarComportamientoBasico inicializarComportamientoBasico `(v  1 e 1 0 ]
 "244
 [v _caminoCorrecto caminoCorrecto `(v  1 e 1 0 ]
-"406
+"420
 [v _finalizarRecorrido finalizarRecorrido `(v  1 e 1 0 ]
-"413
+"427
 [v _forzarParoAuto forzarParoAuto `(v  1 e 1 0 ]
-"421
+"435
 [v _forzarEspejeoAuto forzarEspejeoAuto `(v  1 e 1 0 ]
-"432
+"446
 [v _moverCarrito moverCarrito `(v  1 e 1 0 ]
-"484
+"498
 [v _mover mover `(v  1 e 1 0 ]
-"532
+"546
 [v _regresarPuntoPartida regresarPuntoPartida `(v  1 e 1 0 ]
-"551
+"565
 [v _regresarAlCruce regresarAlCruce `(v  1 e 1 0 ]
-"572
-[v _recorrerCaminoEncontrado recorrerCaminoEncontrado `(v  1 e 1 0 ]
 "586
+[v _recorrerCaminoEncontrado recorrerCaminoEncontrado `(v  1 e 1 0 ]
+"600
 [v _hayCruce hayCruce `(uc  1 e 1 0 ]
-"688
+"702
 [v _limpiarMovimientos limpiarMovimientos `(v  1 e 1 0 ]
-"695
+"709
 [v _seLlegoAlDestino seLlegoAlDestino `(uc  1 e 1 0 ]
-"707
+"721
 [v _decidirDireccion decidirDireccion `(uc  1 e 1 0 ]
-"1006
+"1020
 [v _leerSensores leerSensores `(v  1 e 1 0 ]
-"1038
+"1052
 [v _PID PID `(v  1 e 1 0 ]
-"1072
-[v _velocidadEstandar velocidadEstandar `(v  1 e 1 0 ]
-"1078
-[v _combinarArreglos combinarArreglos `(v  1 e 1 0 ]
 "1086
+[v _velocidadEstandar velocidadEstandar `(v  1 e 1 0 ]
+"1092
+[v _combinarArreglos combinarArreglos `(v  1 e 1 0 ]
+"1100
 [v _main main `(v  1 e 1 0 ]
 "21 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/ultrasonico.h
 [v _sensorDerecha sensorDerecha `f  1 e 4 0 ]
@@ -400,12 +400,12 @@ ALTO 4
 [v _DISTANCIA_PRIORIDAD_MEDIA DISTANCIA_PRIORIDAD_MEDIA `f  1 e 4 0 ]
 "71
 [v _DISTANCIA_PRIORIDAD_BAJA DISTANCIA_PRIORIDAD_BAJA `f  1 e 4 0 ]
-"1086
+"1100
 [v _main main `(v  1 e 1 0 ]
 {
-"1088
+"1102
 [v main@iniciado iniciado `uc  1 a 1 16 ]
-"1150
+"1164
 } 0
 "166
 [v _probarGirosAuto probarGirosAuto `(v  1 e 1 0 ]
@@ -416,20 +416,20 @@ ALTO 4
 [v probarGirosAuto@i i `i  1 a 2 9 ]
 "191
 } 0
-"484
+"498
 [v _mover mover `(v  1 e 1 0 ]
 {
-"530
+"544
 } 0
 "232
 [v _inicializarComportamientoBasico inicializarComportamientoBasico `(v  1 e 1 0 ]
 {
 "242
 } 0
-"1072
+"1086
 [v _velocidadEstandar velocidadEstandar `(v  1 e 1 0 ]
 {
-"1076
+"1090
 } 0
 "20 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
 [v _pwmDuty pwmDuty `(v  1 e 1 0 ]
@@ -474,17 +474,17 @@ ALTO 4
 "8 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
 [v ___flmul __flmul `(d  1 e 4 0 ]
 {
-[s S1074 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+[s S1076 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
 "13
-[s S1079 . 4 `s 1 wordA 2 0 `s 1 wordB 2 2 ]
-[u S1082 . 4 `l 1 i 4 0 `d 1 f 4 0 `S1074 1 fAsBytes 4 0 `S1079 1 fAsWords 4 0 ]
-[v ___flmul@prod prod `S1082  1 a 4 70 ]
+[s S1081 . 4 `s 1 wordA 2 0 `s 1 wordB 2 2 ]
+[u S1084 . 4 `l 1 i 4 0 `d 1 f 4 0 `S1076 1 fAsBytes 4 0 `S1081 1 fAsWords 4 0 ]
+[v ___flmul@prod prod `S1084  1 a 4 70 ]
 "12
 [v ___flmul@grs grs `ul  1 a 4 64 ]
-[s S1150 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+[s S1152 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
 "14
-[u S1153 . 2 `s 1 i 2 0 `us 1 n 2 0 `S1150 1 nAsBytes 2 0 ]
-[v ___flmul@temp temp `S1153  1 a 2 74 ]
+[u S1155 . 2 `s 1 i 2 0 `us 1 n 2 0 `S1152 1 nAsBytes 2 0 ]
+[v ___flmul@temp temp `S1155  1 a 2 74 ]
 "10
 [v ___flmul@bexp bexp `uc  1 a 1 69 ]
 "11
