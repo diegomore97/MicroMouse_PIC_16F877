@@ -2470,8 +2470,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 443:     LATB7 = 0;
 [e = _LATB7 -> -> 0 `i `b ]
 "444
-[; ;main.c: 444:     _delay((unsigned long)((700 * 2)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> * -> 700 `i -> 2 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;main.c: 444:     _delay((unsigned long)((500 * 2)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> * -> 500 `i -> 2 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
 "445
 [; ;main.c: 445: }
 [e :UE 507 ]
@@ -2526,8 +2526,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $ ! != -> _espejearCarroY `i -> 0 `i 513  ]
 {
 "468
-[; ;main.c: 468:                 _delay((unsigned long)((700 * 2)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> * -> 700 `i -> 2 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;main.c: 468:                 _delay((unsigned long)((500 * 2)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> * -> 500 `i -> 2 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
 "469
 [; ;main.c: 469:                 *carroEspejeado = 1;
 [e = *U _carroEspejeado -> -> 1 `i `uc ]
@@ -2537,8 +2537,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $U 514  ]
 [e :U 513 ]
 "471
-[; ;main.c: 471:                 _delay((unsigned long)((700)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 700 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;main.c: 471:                 _delay((unsigned long)((500)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
 [e :U 514 ]
 "473
 [; ;main.c: 473:             break;
@@ -2559,8 +2559,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 480:             LATB7 = 0;
 [e = _LATB7 -> -> 0 `i `b ]
 "482
-[; ;main.c: 482:             _delay((unsigned long)((730)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 730 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;main.c: 482:             _delay((unsigned long)((530)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 530 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
 "484
 [; ;main.c: 484:             break;
 [e $U 509  ]
@@ -2641,8 +2641,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 517:             LATB7 = 0;
 [e = _LATB7 -> -> 0 `i `b ]
 "519
-[; ;main.c: 519:             _delay((unsigned long)((700)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 700 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;main.c: 519:             _delay((unsigned long)((500)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
 "521
 [; ;main.c: 521:             break;
 [e $U 518  ]
@@ -2662,8 +2662,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 528:             LATB7 = 0;
 [e = _LATB7 -> -> 0 `i `b ]
 "530
-[; ;main.c: 530:             _delay((unsigned long)((730)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 730 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;main.c: 530:             _delay((unsigned long)((530)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 530 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
 "532
 [; ;main.c: 532:             break;
 [e $U 518  ]
@@ -4235,13 +4235,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 1064:     difAnt = dif;
 [e = F4147 -> _dif `i ]
 "1066
-[; ;main.c: 1066:     T_BYTE velocidadIzquierda = ((70 - error)<(0)?(0):((70 - error)>(70)?(70):(70 - error)));
+[; ;main.c: 1066:     T_BYTE velocidadIzquierda = ((100 - error)<(0)?(0):((100 - error)>(100)?(100):(100 - error)));
 [v _velocidadIzquierda `uc ~T0 @X0 1 a ]
-[e = _velocidadIzquierda -> ? < - -> 70 `i _error -> 0 `i : -> 0 `i ? > - -> 70 `i _error -> 70 `i : -> 70 `i - -> 70 `i _error `uc ]
+[e = _velocidadIzquierda -> ? < - -> 100 `i _error -> 0 `i : -> 0 `i ? > - -> 100 `i _error -> 100 `i : -> 100 `i - -> 100 `i _error `uc ]
 "1067
-[; ;main.c: 1067:     T_BYTE velocidadDerecha = ((70 + error)<(0)?(0):((70 + error)>(70)?(70):(70 + error)));
+[; ;main.c: 1067:     T_BYTE velocidadDerecha = ((100 + error)<(0)?(0):((100 + error)>(100)?(100):(100 + error)));
 [v _velocidadDerecha `uc ~T0 @X0 1 a ]
-[e = _velocidadDerecha -> ? < + -> 70 `i _error -> 0 `i : -> 0 `i ? > + -> 70 `i _error -> 70 `i : -> 70 `i + -> 70 `i _error `uc ]
+[e = _velocidadDerecha -> ? < + -> 100 `i _error -> 0 `i : -> 0 `i ? > + -> 100 `i _error -> 100 `i : -> 100 `i + -> 100 `i _error `uc ]
 "1069
 [; ;main.c: 1069:     pwmDuty(velocidadIzquierda, 1);
 [e ( _pwmDuty (2 , -> _velocidadIzquierda `ui -> -> 1 `i `uc ]
@@ -4297,11 +4297,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _velocidadEstandar ]
 [f ]
 "1088
-[; ;main.c: 1088:     pwmDuty(70, 1);
-[e ( _pwmDuty (2 , -> -> 70 `i `ui -> -> 1 `i `uc ]
+[; ;main.c: 1088:     pwmDuty(100, 1);
+[e ( _pwmDuty (2 , -> -> 100 `i `ui -> -> 1 `i `uc ]
 "1089
-[; ;main.c: 1089:     pwmDuty(70, 2);
-[e ( _pwmDuty (2 , -> -> 70 `i `ui -> -> 2 `i `uc ]
+[; ;main.c: 1089:     pwmDuty(100, 2);
+[e ( _pwmDuty (2 , -> -> 100 `i `ui -> -> 2 `i `uc ]
 "1091
 [; ;main.c: 1091: }
 [e :UE 720 ]

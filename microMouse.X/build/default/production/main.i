@@ -6924,7 +6924,7 @@ void forzarEspejeoAuto(void) {
     LATB5 = 0;
     LATB6 = 1;
     LATB7 = 0;
-    _delay((unsigned long)((700 * 2)*(4000000/4000.0)));
+    _delay((unsigned long)((500 * 2)*(4000000/4000.0)));
 }
 
 void moverCarrito(T_UBYTE espejearCarroY, T_UBYTE* carroEspejeado) {
@@ -6948,10 +6948,10 @@ void moverCarrito(T_UBYTE espejearCarroY, T_UBYTE* carroEspejeado) {
             LATB7 = 0;
 
             if (espejearCarroY) {
-                _delay((unsigned long)((700 * 2)*(4000000/4000.0)));
+                _delay((unsigned long)((500 * 2)*(4000000/4000.0)));
                 *carroEspejeado = 1;
             } else
-                _delay((unsigned long)((700)*(4000000/4000.0)));
+                _delay((unsigned long)((500)*(4000000/4000.0)));
 
             break;
 
@@ -6962,7 +6962,7 @@ void moverCarrito(T_UBYTE espejearCarroY, T_UBYTE* carroEspejeado) {
             LATB6 = 0;
             LATB7 = 0;
 
-            _delay((unsigned long)((730)*(4000000/4000.0)));
+            _delay((unsigned long)((530)*(4000000/4000.0)));
 
             break;
 
@@ -6999,7 +6999,7 @@ void mover(void) {
             LATB6 = 1;
             LATB7 = 0;
 
-            _delay((unsigned long)((700)*(4000000/4000.0)));
+            _delay((unsigned long)((500)*(4000000/4000.0)));
 
             break;
 
@@ -7010,7 +7010,7 @@ void mover(void) {
             LATB6 = 0;
             LATB7 = 0;
 
-            _delay((unsigned long)((730)*(4000000/4000.0)));
+            _delay((unsigned long)((530)*(4000000/4000.0)));
 
             break;
 
@@ -7546,8 +7546,8 @@ void PID(void) {
 
     difAnt = dif;
 
-    T_BYTE velocidadIzquierda = ((70 - error)<(0)?(0):((70 - error)>(70)?(70):(70 - error)));
-    T_BYTE velocidadDerecha = ((70 + error)<(0)?(0):((70 + error)>(70)?(70):(70 + error)));
+    T_BYTE velocidadIzquierda = ((100 - error)<(0)?(0):((100 - error)>(100)?(100):(100 - error)));
+    T_BYTE velocidadDerecha = ((100 + error)<(0)?(0):((100 + error)>(100)?(100):(100 + error)));
 
     pwmDuty(velocidadIzquierda, 1);
     pwmDuty(velocidadDerecha, 2);
@@ -7568,8 +7568,8 @@ void probarPID(void) {
 }
 
 void velocidadEstandar(void) {
-    pwmDuty(70, 1);
-    pwmDuty(70, 2);
+    pwmDuty(100, 1);
+    pwmDuty(100, 2);
 
 }
 
