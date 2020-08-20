@@ -6538,7 +6538,7 @@ double y0(double);
 double y1(double);
 double yn(int, double);
 # 10 "main.c" 2
-# 58 "main.c"
+# 59 "main.c"
 typedef struct {
     Direccion curr_state;
     Direccion Next_state;
@@ -6924,7 +6924,7 @@ void forzarEspejeoAuto(void) {
     LATB5 = 0;
     LATB6 = 1;
     LATB7 = 0;
-    _delay((unsigned long)((150 * 2)*(4000000/4000.0)));
+    _delay((unsigned long)((700 * 2)*(4000000/4000.0)));
 }
 
 void moverCarrito(T_UBYTE espejearCarroY, T_UBYTE* carroEspejeado) {
@@ -6948,10 +6948,10 @@ void moverCarrito(T_UBYTE espejearCarroY, T_UBYTE* carroEspejeado) {
             LATB7 = 0;
 
             if (espejearCarroY) {
-                _delay((unsigned long)((150 * 2)*(4000000/4000.0)));
+                _delay((unsigned long)((700 * 2)*(4000000/4000.0)));
                 *carroEspejeado = 1;
             } else
-                _delay((unsigned long)((150)*(4000000/4000.0)));
+                _delay((unsigned long)((700)*(4000000/4000.0)));
 
             break;
 
@@ -6962,7 +6962,7 @@ void moverCarrito(T_UBYTE espejearCarroY, T_UBYTE* carroEspejeado) {
             LATB6 = 0;
             LATB7 = 0;
 
-            _delay((unsigned long)((150)*(4000000/4000.0)));
+            _delay((unsigned long)((730)*(4000000/4000.0)));
 
             break;
 
@@ -6999,7 +6999,7 @@ void mover(void) {
             LATB6 = 1;
             LATB7 = 0;
 
-            _delay((unsigned long)((150)*(4000000/4000.0)));
+            _delay((unsigned long)((700)*(4000000/4000.0)));
 
             break;
 
@@ -7010,7 +7010,7 @@ void mover(void) {
             LATB6 = 0;
             LATB7 = 0;
 
-            _delay((unsigned long)((150)*(4000000/4000.0)));
+            _delay((unsigned long)((730)*(4000000/4000.0)));
 
             break;
 

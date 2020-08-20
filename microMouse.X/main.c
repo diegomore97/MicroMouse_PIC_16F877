@@ -14,7 +14,8 @@
 #define UMBRAL_OBSTACULO_ENFRENTE 5 //expresado en cm | sensibilidad antes de que choque con un objeto
 #define UMBRAL_SENSOR_OPTICO_REFLEXIVO 100 //Unidad que representa el minimo de luz percibida para detectar negro
 #define VELOCIDAD_MOTORES 70 //Porcentaje de ciclo de trabajo a la que trabajaran los motores
-#define TIEMPO_AVANCE 150 //Tiempo en milisegundos que avanzara el carro al girar
+#define TIEMPO_AVANCE_IZQUIERDA 700 //Tiempo en milisegundos que avanzara el carro al girar
+#define TIEMPO_AVANCE_DERECHA 730 //Tiempo en milisegundos que avanzara el carro al girar
 #define MAX_MOVIMIENTOS_GUARDADOS 50 //Para mapear y regresar a algun lugar si llegamos a un callejon
 #define MAX_MOVIMIENTOS_CAMINO_FINAL 100 //El maximo de movimientos a realizar para llegar al destino
 
@@ -172,7 +173,7 @@ void probarGirosAuto(void) {
 
         mouse.curr_state = ALTO;
         mover();
-        __delay_ms(1000); //Tiempo de espera entre cada giro de 45 grados
+        __delay_ms(1000); //Tiempo de espera entre cada giro de 90 grados
     }
 
     __delay_ms(3000); //Esperar para el cambio de giro en sentido opuesto
@@ -184,7 +185,7 @@ void probarGirosAuto(void) {
 
         mouse.curr_state = ALTO;
         mover();
-        __delay_ms(1000); //Tiempo de espera entre cada giro de 45 grados
+        __delay_ms(1000); //Tiempo de espera entre cada giro de 90 grados
     }
 
     __delay_ms(3000); //Esperar para el cambio de giro en sentido opuesto
@@ -440,7 +441,7 @@ void forzarEspejeoAuto(void) {
     IN2 = 0;
     IN3 = 1;
     IN4 = 0;
-    __delay_ms(TIEMPO_AVANCE * DOBLE);
+    __delay_ms(TIEMPO_AVANCE_IZQUIERDA * DOBLE);
 }
 
 void moverCarrito(T_UBYTE espejearCarroY, T_UBYTE* carroEspejeado) {
@@ -464,10 +465,10 @@ void moverCarrito(T_UBYTE espejearCarroY, T_UBYTE* carroEspejeado) {
             IN4 = 0;
 
             if (espejearCarroY) {
-                __delay_ms(TIEMPO_AVANCE * DOBLE); //Giro 90 grados
+                __delay_ms(TIEMPO_AVANCE_IZQUIERDA * DOBLE); //Giro 180 grados
                 *carroEspejeado = 1;
             } else
-                __delay_ms(TIEMPO_AVANCE); //Giro 45 grados
+                __delay_ms(TIEMPO_AVANCE_IZQUIERDA); //Giro 90 grados
 
             break;
 
@@ -478,7 +479,7 @@ void moverCarrito(T_UBYTE espejearCarroY, T_UBYTE* carroEspejeado) {
             IN3 = 0;
             IN4 = 0;
 
-            __delay_ms(TIEMPO_AVANCE); //Giro 45 grados
+            __delay_ms(TIEMPO_AVANCE_DERECHA); //Giro 90 grados
 
             break;
 
@@ -515,7 +516,7 @@ void mover(void) {
             IN3 = 1;
             IN4 = 0;
 
-            __delay_ms(TIEMPO_AVANCE); //Giro 45 grados
+            __delay_ms(TIEMPO_AVANCE_IZQUIERDA); //Giro 90 grados
 
             break;
 
@@ -526,7 +527,7 @@ void mover(void) {
             IN3 = 0;
             IN4 = 0;
 
-            __delay_ms(TIEMPO_AVANCE); //Giro 45 grados
+            __delay_ms(TIEMPO_AVANCE_DERECHA); //Giro 90 grados
 
             break;
 
