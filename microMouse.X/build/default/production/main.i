@@ -6538,7 +6538,11 @@ double y0(double);
 double y1(double);
 double yn(int, double);
 # 10 "main.c" 2
-# 59 "main.c"
+# 27 "main.c"
+T_UBYTE SENSOR_PRIORIDAD_ALTA = ENFRENTE;
+T_UBYTE SENSOR_PRIORIDAD_MEDIA = IZQUIERDA;
+T_UBYTE SENSOR_PRIORIDAD_BAJA = DERECHA;
+# 60 "main.c"
 typedef struct {
     Direccion curr_state;
     Direccion Next_state;
@@ -6554,6 +6558,9 @@ T_FLOAT DISTANCIA_PRIORIDAD_ALTA;
 T_FLOAT DISTANCIA_PRIORIDAD_MEDIA;
 T_FLOAT DISTANCIA_PRIORIDAD_BAJA;
 
+T_UBYTE posicionCarroX, posicionCarroY;
+T_UBYTE posicionDestinoX, posicionDestinoY;
+
 void moverCarrito(T_UBYTE espejearCarroY, T_UBYTE* carroEspejeado);
 void mover(void);
 void inicializarComportamientoBasico(void);
@@ -6561,30 +6568,36 @@ void comportamientoBasico(void);
 void antiRebote(T_UBYTE pin);
 void probarUltrasonico(T_UBYTE numeroSensor);
 void probarSensores(void);
-void regresarPuntoPartida(T_UBYTE* movimientos, T_UBYTE numMovimientos);
-void regresarAlCruce(T_UBYTE* movimientos, T_UBYTE numMovimientos);
+void regresarPuntoPartida(T_UBYTE* movimientos, T_UINT numMovimientos);
+void regresarAlCruce(T_UBYTE* movimientos, T_UINT numMovimientos);
 T_BOOL hayCruce(T_UBYTE* caminosRecorrer, T_UBYTE investigandoCruce);
-void limpiarMovimientos(T_UBYTE* movimientos, T_UBYTE* numMovimientos);
+void limpiarMovimientos(T_UBYTE* movimientos, T_UINT* numMovimientos);
 T_BOOL seLlegoAlDestino(void);
 void leerSensores(void);
 void PID(void);
 void velocidadEstandar(void);
 void probarGirosAuto(void);
-void visualizarPasosRealizados(T_INT numMovimientos);
-void recorrerCaminoEncontrado(T_UBYTE* movimientos, T_UBYTE numMovimientos);
+void visualizarPasosRealizados(T_UINT numMovimientos);
+void recorrerCaminoEncontrado(T_UBYTE* movimientos, T_UINT numMovimientos);
 void forzarParoAuto(void);
 void forzarEspejeoAuto(void);
 void finalizarRecorrido(void);
 void probarPID(void);
+void forzarReversa(void);
 
-void caminoCorrecto(T_UBYTE* movimientos, T_UBYTE* caminoFinal, T_UBYTE numMovimientos,
-        T_UBYTE* numMovimientosFinal, T_UBYTE caminoActual);
 
-void combinarArreglos(T_UBYTE* movimientos, T_UBYTE* caminoFinal, T_UBYTE numMovimientos,
-        T_UBYTE* numMovimientosFinal);
+void registraPosicionActual(void);
+void decidirDireccionPosicion(T_UBYTE* caminosRecorrer);
+T_BOOL caminoElegidoCorrecto(T_UBYTE investigandoCruce);
 
-T_UBYTE decidirDireccion(T_UBYTE* caminosRecorrer, T_UBYTE* investigandoCruce,
-        T_UBYTE* posicionInvCruce, T_UBYTE* contCaminosRecorridos, T_UBYTE* caminoActual);
+void caminoCorrecto(T_UBYTE* movimientos, T_UBYTE* caminoFinal, T_UINT numMovimientos,
+        T_UINT* numMovimientosFinal, T_UBYTE caminoActual);
+
+void combinarArreglos(T_UBYTE* movimientos, T_UBYTE* caminoFinal, T_UINT numMovimientos,
+        T_UINT* numMovimientosFinal);
+
+T_UBYTE decidirDireccion(T_UBYTE* caminosRecorrer, T_UBYTE* investigandoCruce, T_UBYTE* posicionInvCruce,
+        T_UBYTE* contCaminosRecorridos, T_UBYTE* caminoActual, T_BOOL* cambioOrientacionCarro);
 
 void __attribute__((picinterrupt(("")))) boton(void) {
 
@@ -6674,7 +6687,7 @@ void probarGirosAuto(void) {
     _delay((unsigned long)((3000)*(4000000/4000.0)));
 }
 
-void visualizarPasosRealizados(T_INT numMovimientos) {
+void visualizarPasosRealizados(T_UINT numMovimientos) {
 
     switch (mouse.curr_state) {
         case ENFRENTE:
@@ -6725,21 +6738,22 @@ void inicializarComportamientoBasico(void) {
 
 }
 
-void caminoCorrecto(T_UBYTE* movimientos, T_UBYTE* caminoFinal, T_UBYTE numMovimientos,
-        T_UBYTE* numMovimientosFinal, T_UBYTE caminoActual) {
+void caminoCorrecto(T_UBYTE* movimientos, T_UBYTE* caminoFinal, T_UINT numMovimientos,
+        T_UINT* numMovimientosFinal, T_UBYTE caminoActual) {
 
     movimientos[0] = caminoActual;
     combinarArreglos(movimientos, caminoFinal, numMovimientos, numMovimientosFinal);
+    limpiarMovimientos(movimientos, &numMovimientos);
 }
 
 void comportamientoBasico(void) {
 
     static T_UBYTE espejearCarroY = 0;
     static T_UBYTE carroEspejeado = 0;
-    static T_UBYTE movimientosRealizados[50];
-    static T_UBYTE caminoFinal[100];
-    static T_UBYTE numMovimientos = 0;
-    static T_UBYTE numMovimientosTotales = 0;
+    static T_UBYTE movimientosRealizados[200];
+    static T_UBYTE caminoFinal[1000];
+    static T_UINT numMovimientos = 0;
+    static T_UINT numMovimientosTotales = 0;
     static T_UBYTE mapear = 0;
     static T_UBYTE cruceDetectado = 0;
     static T_UBYTE caminosRecorrer[3];
@@ -6748,26 +6762,29 @@ void comportamientoBasico(void) {
     static T_UBYTE contCaminosRecorridos = 0;
     static T_BOOL caminoEncontrado = 0;
     static T_UBYTE caminoActual = 0;
+    static T_BOOL cambioOrientacionCarro = 0;
     T_UBYTE direccionElegida = 0;
 
     if (!caminoEncontrado) {
 
         moverCarrito(espejearCarroY, &carroEspejeado);
 
+
         if (!llegoDestino) {
 
             if (mapear)
             {
-                if (numMovimientos < 50)
+                if (numMovimientos < 200)
                     movimientosRealizados[numMovimientos++] = mouse.curr_state;
                 else {
                     UART_printf("\n\nOVERFLOW en el mapeo de pasos Realizados para cruce\n\n");
                     forzarParoAuto();
                     pausa = 1;
                 }
+# 316 "main.c"
             } else {
                 if (!investigandoCruce) {
-                    if (numMovimientosTotales < 100)
+                    if (numMovimientosTotales < 1000)
                         caminoFinal[numMovimientosTotales++] = mouse.curr_state;
                     else {
                         UART_printf("\n\nOVERFLOW en el mapeo de pasos Realizados para camino Total\n\n");
@@ -6792,7 +6809,7 @@ void comportamientoBasico(void) {
         }
 
         direccionElegida = decidirDireccion(caminosRecorrer, &investigandoCruce,
-                &posicionInvCruce, &contCaminosRecorridos, &caminoActual);
+                &posicionInvCruce, &contCaminosRecorridos, &caminoActual, &cambioOrientacionCarro);
 
 
         switch (mouse.curr_state) {
@@ -6805,6 +6822,7 @@ void comportamientoBasico(void) {
                         velocidadEstandar();
                         mapear = 0;
                         espejearCarroY = 1;
+                        forzarReversa();
                         mouse.Next_state = IZQUIERDA;
                         break;
 
@@ -6877,6 +6895,7 @@ void comportamientoBasico(void) {
                     espejearCarroY = 1;
                     _delay((unsigned long)((3000)*(4000000/4000.0)));
                     velocidadEstandar();
+                    forzarReversa();
                     mouse.Next_state = IZQUIERDA;
                 } else {
 
@@ -6894,6 +6913,8 @@ void comportamientoBasico(void) {
     } else {
         recorrerCaminoEncontrado(caminoFinal, numMovimientosTotales);
         _delay((unsigned long)((3000)*(4000000/4000.0)));
+        velocidadEstandar();
+        forzarReversa();
         forzarEspejeoAuto();
         regresarPuntoPartida(caminoFinal, numMovimientosTotales);
         finalizarRecorrido();
@@ -6902,6 +6923,8 @@ void comportamientoBasico(void) {
 }
 
 void finalizarRecorrido(void) {
+    velocidadEstandar();
+    forzarReversa();
     forzarEspejeoAuto();
     forzarParoAuto();
     pausa = 1;
@@ -6916,6 +6939,16 @@ void forzarParoAuto(void) {
     LATB7 = 0;
 }
 
+void forzarReversa(void) {
+    LATB4 = 0;
+    LATB5 = 1;
+    LATB6 = 0;
+    LATB7 = 1;
+
+    _delay((unsigned long)((600)*(4000000/4000.0)));
+
+}
+
 void forzarEspejeoAuto(void) {
 
     velocidadEstandar();
@@ -6924,7 +6957,7 @@ void forzarEspejeoAuto(void) {
     LATB5 = 0;
     LATB6 = 1;
     LATB7 = 0;
-    _delay((unsigned long)((500 * 2)*(4000000/4000.0)));
+    _delay((unsigned long)((410 * 2)*(4000000/4000.0)));
 }
 
 void moverCarrito(T_UBYTE espejearCarroY, T_UBYTE* carroEspejeado) {
@@ -6948,10 +6981,10 @@ void moverCarrito(T_UBYTE espejearCarroY, T_UBYTE* carroEspejeado) {
             LATB7 = 0;
 
             if (espejearCarroY) {
-                _delay((unsigned long)((500 * 2)*(4000000/4000.0)));
+                _delay((unsigned long)((410 * 2)*(4000000/4000.0)));
                 *carroEspejeado = 1;
             } else
-                _delay((unsigned long)((500)*(4000000/4000.0)));
+                _delay((unsigned long)((410)*(4000000/4000.0)));
 
             break;
 
@@ -6962,7 +6995,7 @@ void moverCarrito(T_UBYTE espejearCarroY, T_UBYTE* carroEspejeado) {
             LATB6 = 0;
             LATB7 = 0;
 
-            _delay((unsigned long)((530)*(4000000/4000.0)));
+            _delay((unsigned long)((410)*(4000000/4000.0)));
 
             break;
 
@@ -6999,7 +7032,7 @@ void mover(void) {
             LATB6 = 1;
             LATB7 = 0;
 
-            _delay((unsigned long)((500)*(4000000/4000.0)));
+            _delay((unsigned long)((410)*(4000000/4000.0)));
 
             break;
 
@@ -7010,7 +7043,7 @@ void mover(void) {
             LATB6 = 0;
             LATB7 = 0;
 
-            _delay((unsigned long)((530)*(4000000/4000.0)));
+            _delay((unsigned long)((410)*(4000000/4000.0)));
 
             break;
 
@@ -7027,7 +7060,7 @@ void mover(void) {
 
 }
 
-void regresarPuntoPartida(T_UBYTE* movimientos, T_UBYTE numMovimientos) {
+void regresarPuntoPartida(T_UBYTE* movimientos, T_UINT numMovimientos) {
 
     for (T_INT i = numMovimientos - 1; i >= 0; i--) {
 
@@ -7038,6 +7071,7 @@ void regresarPuntoPartida(T_UBYTE* movimientos, T_UBYTE numMovimientos) {
             velocidadEstandar();
             mouse.curr_state = IZQUIERDA;
         } else {
+
             PID();
             mouse.curr_state = movimientos[i];
         }
@@ -7046,7 +7080,7 @@ void regresarPuntoPartida(T_UBYTE* movimientos, T_UBYTE numMovimientos) {
     }
 }
 
-void regresarAlCruce(T_UBYTE* movimientos, T_UBYTE numMovimientos) {
+void regresarAlCruce(T_UBYTE* movimientos, T_UINT numMovimientos) {
 
     for (T_INT i = numMovimientos - 1; i > 0; i--) {
 
@@ -7059,6 +7093,7 @@ void regresarAlCruce(T_UBYTE* movimientos, T_UBYTE numMovimientos) {
             velocidadEstandar();
             mouse.curr_state = IZQUIERDA;
         } else {
+
             PID();
             mouse.curr_state = movimientos[i];
         }
@@ -7067,12 +7102,13 @@ void regresarAlCruce(T_UBYTE* movimientos, T_UBYTE numMovimientos) {
     }
 }
 
-void recorrerCaminoEncontrado(T_UBYTE* movimientos, T_UBYTE numMovimientos) {
+void recorrerCaminoEncontrado(T_UBYTE* movimientos, T_UINT numMovimientos) {
 
     for (T_INT i = 0; i < numMovimientos; i++) {
 
         if (movimientos[i] == IZQUIERDA || movimientos[i] == DERECHA)
             velocidadEstandar();
+
         else
             PID();
 
@@ -7091,86 +7127,88 @@ T_BOOL hayCruce(T_UBYTE* caminosRecorrer, T_UBYTE investigandoCruce) {
         contCaminos++;
     }
 
-    if (sensorIzquierda > 3) {
+    if (sensorIzquierda > 5) {
         paredIzquierda = 1;
         contCaminos++;
     }
 
-    if (sensorDerecha > 3) {
+    if (sensorDerecha > 5) {
         paredDerecha = 1;
         contCaminos++;
     }
 
     if (contCaminos > 1 && !investigandoCruce) {
 
-        if (IZQUIERDA == DERECHA) {
+        if (SENSOR_PRIORIDAD_MEDIA == DERECHA) {
 
             if (paredDerecha)
-                caminosRecorrer[IZQUIERDA - 1] = 1;
+                caminosRecorrer[SENSOR_PRIORIDAD_MEDIA - 1] = 1;
             else
-                caminosRecorrer[IZQUIERDA - 1] = 0;
+                caminosRecorrer[SENSOR_PRIORIDAD_MEDIA - 1] = 0;
 
-        } else if (DERECHA == DERECHA) {
+        } else if (SENSOR_PRIORIDAD_BAJA == DERECHA) {
 
             if (paredDerecha)
-                caminosRecorrer[DERECHA - 1] = 1;
+                caminosRecorrer[SENSOR_PRIORIDAD_BAJA - 1] = 1;
             else
-                caminosRecorrer[DERECHA - 1] = 0;
+                caminosRecorrer[SENSOR_PRIORIDAD_BAJA - 1] = 0;
 
         } else {
 
             if (paredDerecha)
-                caminosRecorrer[ENFRENTE - 1] = 1;
+                caminosRecorrer[SENSOR_PRIORIDAD_ALTA - 1] = 1;
             else
-                caminosRecorrer[ENFRENTE - 1] = 0;
+                caminosRecorrer[SENSOR_PRIORIDAD_ALTA - 1] = 0;
 
         }
 
-        if (ENFRENTE == IZQUIERDA) {
+        if (SENSOR_PRIORIDAD_ALTA == IZQUIERDA) {
 
             if (paredIzquierda)
-                caminosRecorrer[ENFRENTE - 1] = 1;
+                caminosRecorrer[SENSOR_PRIORIDAD_ALTA - 1] = 1;
             else
-                caminosRecorrer[ENFRENTE - 1] = 0;
+                caminosRecorrer[SENSOR_PRIORIDAD_ALTA - 1] = 0;
 
-        } else if (DERECHA == IZQUIERDA) {
+        } else if (SENSOR_PRIORIDAD_BAJA == IZQUIERDA) {
 
             if (paredIzquierda)
-                caminosRecorrer[DERECHA - 1] = 1;
+                caminosRecorrer[SENSOR_PRIORIDAD_BAJA - 1] = 1;
             else
-                caminosRecorrer[DERECHA - 1] = 0;
+                caminosRecorrer[SENSOR_PRIORIDAD_BAJA - 1] = 0;
 
         } else {
 
             if (paredIzquierda)
-                caminosRecorrer[IZQUIERDA - 1] = 1;
+                caminosRecorrer[SENSOR_PRIORIDAD_MEDIA - 1] = 1;
             else
-                caminosRecorrer[IZQUIERDA - 1] = 0;
+                caminosRecorrer[SENSOR_PRIORIDAD_MEDIA - 1] = 0;
 
         }
 
-        if (ENFRENTE == ENFRENTE) {
+        if (SENSOR_PRIORIDAD_ALTA == ENFRENTE) {
 
             if (paredEnfrente)
-                caminosRecorrer[ENFRENTE - 1] = 1;
+                caminosRecorrer[SENSOR_PRIORIDAD_ALTA - 1] = 1;
             else
-                caminosRecorrer[ENFRENTE - 1] = 0;
+                caminosRecorrer[SENSOR_PRIORIDAD_ALTA - 1] = 0;
 
-        } else if (IZQUIERDA == ENFRENTE) {
+        } else if (SENSOR_PRIORIDAD_MEDIA == ENFRENTE) {
 
             if (paredEnfrente)
-                caminosRecorrer[IZQUIERDA - 1] = 1;
+                caminosRecorrer[SENSOR_PRIORIDAD_MEDIA - 1] = 1;
             else
-                caminosRecorrer[IZQUIERDA - 1] = 0;
+                caminosRecorrer[SENSOR_PRIORIDAD_MEDIA - 1] = 0;
 
         } else {
 
             if (paredEnfrente)
-                caminosRecorrer[DERECHA - 1] = 1;
+                caminosRecorrer[SENSOR_PRIORIDAD_BAJA - 1] = 1;
             else
-                caminosRecorrer[DERECHA - 1] = 0;
+                caminosRecorrer[SENSOR_PRIORIDAD_BAJA - 1] = 0;
 
         }
+
+
 
     }
 
@@ -7183,7 +7221,24 @@ T_BOOL hayCruce(T_UBYTE* caminosRecorrer, T_UBYTE investigandoCruce) {
 
 }
 
-void limpiarMovimientos(T_UBYTE* movimientos, T_UBYTE* numMovimientos) {
+void decidirDireccionPosicion(T_UBYTE* caminosRecorrer) {
+
+}
+
+T_BOOL caminoElegidoCorrecto(T_UBYTE investigandoCruce) {
+
+    T_BOOL caminoCorrecto = 0;
+
+    return caminoCorrecto;
+
+}
+
+void registraPosicionActual(void) {
+
+}
+
+void limpiarMovimientos(T_UBYTE* movimientos, T_UINT* numMovimientos) {
+
     for (T_INT i = 0; i < *numMovimientos; i++)
         movimientos[i] = 0;
 
@@ -7202,11 +7257,10 @@ T_BOOL seLlegoAlDestino(void) {
 
 }
 
-T_UBYTE decidirDireccion(T_UBYTE* caminosRecorrer, T_UBYTE* investigandoCruce,
-        T_UBYTE* posicionInvCruce, T_UBYTE* contCaminosRecorridos, T_UBYTE* caminoActual) {
+T_UBYTE decidirDireccion(T_UBYTE* caminosRecorrer, T_UBYTE* investigandoCruce, T_UBYTE* posicionInvCruce,
+        T_UBYTE* contCaminosRecorridos, T_UBYTE* caminoActual, T_BOOL* cambioOrientacionCarro) {
 
     T_UBYTE direccionElegida;
-    static T_BOOL cambioOrientacionCarro = 0;
     llegoDestino = seLlegoAlDestino();
 
 
@@ -7216,34 +7270,33 @@ T_UBYTE decidirDireccion(T_UBYTE* caminosRecorrer, T_UBYTE* investigandoCruce,
             *posicionInvCruce = 0;
 
         if (llegoDestino) {
-            *investigandoCruce = 0;
             direccionElegida = ALTO;
 
         } else {
 
             switch (*contCaminosRecorridos) {
                 case 1:
-                    if (caminosRecorrer[ENFRENTE - 1 ] == 1)
-                        caminosRecorrer[ENFRENTE - 1 ] = 'X';
+                    if (caminosRecorrer[SENSOR_PRIORIDAD_ALTA - 1 ] == 1)
+                        caminosRecorrer[SENSOR_PRIORIDAD_ALTA - 1 ] = 'X';
 
                     else {
-                        if (caminosRecorrer[IZQUIERDA - 1 ] == 1)
-                            caminosRecorrer[IZQUIERDA - 1 ] = 'X';
+                        if (caminosRecorrer[SENSOR_PRIORIDAD_MEDIA - 1 ] == 1)
+                            caminosRecorrer[SENSOR_PRIORIDAD_MEDIA - 1 ] = 'X';
                     }
                     break;
 
                 case 2:
-                    if (caminosRecorrer[IZQUIERDA - 1 ] == 1)
-                        caminosRecorrer[IZQUIERDA - 1 ] = 'X';
+                    if (caminosRecorrer[SENSOR_PRIORIDAD_MEDIA - 1 ] == 1)
+                        caminosRecorrer[SENSOR_PRIORIDAD_MEDIA - 1 ] = 'X';
                     else
-                        caminosRecorrer[DERECHA - 1 ] = 'X';
+                        caminosRecorrer[SENSOR_PRIORIDAD_BAJA - 1 ] = 'X';
 
 
                     break;
 
                 case 3:
-                    if (caminosRecorrer[DERECHA - 1 ] == 1)
-                        caminosRecorrer[DERECHA - 1 ] = 'X';
+                    if (caminosRecorrer[SENSOR_PRIORIDAD_BAJA - 1 ] == 1)
+                        caminosRecorrer[SENSOR_PRIORIDAD_BAJA - 1 ] = 'X';
 
 
                     break;
@@ -7252,89 +7305,89 @@ T_UBYTE decidirDireccion(T_UBYTE* caminosRecorrer, T_UBYTE* investigandoCruce,
 
         }
 
-        if (!cambioOrientacionCarro) {
+        if (!(*cambioOrientacionCarro)) {
 
-            if (caminosRecorrer[ENFRENTE - 1 ] == 1)
-                direccionElegida = ENFRENTE;
-            else if (caminosRecorrer[IZQUIERDA - 1] == 1)
-                direccionElegida = IZQUIERDA;
-            else if (caminosRecorrer[DERECHA - 1] == 1)
-                direccionElegida = DERECHA;
+            if (caminosRecorrer[SENSOR_PRIORIDAD_ALTA - 1 ] == 1)
+                direccionElegida = SENSOR_PRIORIDAD_ALTA;
+            else if (caminosRecorrer[SENSOR_PRIORIDAD_MEDIA - 1] == 1)
+                direccionElegida = SENSOR_PRIORIDAD_MEDIA;
+            else if (caminosRecorrer[SENSOR_PRIORIDAD_BAJA - 1] == 1)
+                direccionElegida = SENSOR_PRIORIDAD_BAJA;
 
 
             *caminoActual = direccionElegida;
-            cambioOrientacionCarro = 1;
+            *cambioOrientacionCarro = 1;
 
         } else {
 
             switch (*contCaminosRecorridos) {
                 case 1:
-                    if (DERECHA == ENFRENTE) {
+                    if (DERECHA == SENSOR_PRIORIDAD_ALTA) {
 
-                        if (caminosRecorrer[ENFRENTE - 1 ] == 'X') {
+                        if (caminosRecorrer[SENSOR_PRIORIDAD_ALTA - 1 ] == 'X') {
 
-                            if (IZQUIERDA == IZQUIERDA &&
-                                    caminosRecorrer[IZQUIERDA - 1] == 1) {
+                            if (SENSOR_PRIORIDAD_MEDIA == IZQUIERDA &&
+                                    caminosRecorrer[SENSOR_PRIORIDAD_MEDIA - 1] == 1) {
                                 *caminoActual = IZQUIERDA;
                                 direccionElegida = ENFRENTE;
-                            } else if (IZQUIERDA == ENFRENTE &&
-                                    caminosRecorrer[IZQUIERDA - 1] == 1) {
+                            } else if (SENSOR_PRIORIDAD_MEDIA == ENFRENTE &&
+                                    caminosRecorrer[SENSOR_PRIORIDAD_MEDIA - 1] == 1) {
                                 *caminoActual = ENFRENTE;
                                 direccionElegida = DERECHA;
-                            } else if (DERECHA == IZQUIERDA &&
-                                    caminosRecorrer[DERECHA - 1] == 1) {
+                            } else if (SENSOR_PRIORIDAD_BAJA == IZQUIERDA &&
+                                    caminosRecorrer[SENSOR_PRIORIDAD_BAJA - 1] == 1) {
                                 *caminoActual = IZQUIERDA;
                                 direccionElegida = ENFRENTE;
-                            } else if (DERECHA == ENFRENTE &&
-                                    caminosRecorrer[DERECHA - 1] == 1) {
+                            } else if (SENSOR_PRIORIDAD_BAJA == ENFRENTE &&
+                                    caminosRecorrer[SENSOR_PRIORIDAD_BAJA - 1] == 1) {
                                 *caminoActual = ENFRENTE;
                                 direccionElegida = DERECHA;
                             }
 
                         }
 
-                    } else if (IZQUIERDA == ENFRENTE) {
+                    } else if (IZQUIERDA == SENSOR_PRIORIDAD_ALTA) {
 
-                        if (caminosRecorrer[ENFRENTE - 1 ] == 'X') {
+                        if (caminosRecorrer[SENSOR_PRIORIDAD_ALTA - 1 ] == 'X') {
 
-                            if (IZQUIERDA == DERECHA &&
-                                    caminosRecorrer[IZQUIERDA - 1] == 1) {
+                            if (SENSOR_PRIORIDAD_MEDIA == DERECHA &&
+                                    caminosRecorrer[SENSOR_PRIORIDAD_MEDIA - 1] == 1) {
                                 *caminoActual = DERECHA;
                                 direccionElegida = ENFRENTE;
-                            } else if (IZQUIERDA == ENFRENTE &&
-                                    caminosRecorrer[IZQUIERDA - 1] == 1) {
+                            } else if (SENSOR_PRIORIDAD_MEDIA == ENFRENTE &&
+                                    caminosRecorrer[SENSOR_PRIORIDAD_MEDIA - 1] == 1) {
                                 *caminoActual = ENFRENTE;
                                 direccionElegida = IZQUIERDA;
-                            } else if (DERECHA == DERECHA &&
-                                    caminosRecorrer[DERECHA - 1] == 1) {
+                            } else if (SENSOR_PRIORIDAD_BAJA == DERECHA &&
+                                    caminosRecorrer[SENSOR_PRIORIDAD_BAJA - 1] == 1) {
                                 *caminoActual = DERECHA;
                                 direccionElegida = ENFRENTE;
-                            } else if (DERECHA == ENFRENTE &&
-                                    caminosRecorrer[DERECHA - 1] == 1) {
+                            } else if (SENSOR_PRIORIDAD_BAJA == ENFRENTE &&
+                                    caminosRecorrer[SENSOR_PRIORIDAD_BAJA - 1] == 1) {
                                 *caminoActual = ENFRENTE;
                                 direccionElegida = IZQUIERDA;
                             }
 
                         }
 
-                    } else if (ENFRENTE == ENFRENTE) {
+                    } else if (ENFRENTE == SENSOR_PRIORIDAD_ALTA) {
 
-                        if (caminosRecorrer[ENFRENTE - 1 ] == 'X') {
+                        if (caminosRecorrer[SENSOR_PRIORIDAD_ALTA - 1 ] == 'X') {
 
-                            if (IZQUIERDA == IZQUIERDA &&
-                                    caminosRecorrer[IZQUIERDA - 1] == 1) {
+                            if (SENSOR_PRIORIDAD_MEDIA == IZQUIERDA &&
+                                    caminosRecorrer[SENSOR_PRIORIDAD_MEDIA - 1] == 1) {
                                 *caminoActual = IZQUIERDA;
                                 direccionElegida = DERECHA;
-                            } else if (IZQUIERDA == DERECHA &&
-                                    caminosRecorrer[IZQUIERDA - 1] == 1) {
+                            } else if (SENSOR_PRIORIDAD_MEDIA == DERECHA &&
+                                    caminosRecorrer[SENSOR_PRIORIDAD_MEDIA - 1] == 1) {
                                 *caminoActual = DERECHA;
                                 direccionElegida = IZQUIERDA;
-                            } else if (DERECHA == IZQUIERDA &&
-                                    caminosRecorrer[DERECHA - 1] == 1) {
+                            } else if (SENSOR_PRIORIDAD_BAJA == IZQUIERDA &&
+                                    caminosRecorrer[SENSOR_PRIORIDAD_BAJA - 1] == 1) {
                                 *caminoActual = IZQUIERDA;
                                 direccionElegida = DERECHA;
-                            } else if (DERECHA == DERECHA &&
-                                    caminosRecorrer[DERECHA - 1] == 1) {
+                            } else if (SENSOR_PRIORIDAD_BAJA == DERECHA &&
+                                    caminosRecorrer[SENSOR_PRIORIDAD_BAJA - 1] == 1) {
                                 *caminoActual = DERECHA;
                                 direccionElegida = IZQUIERDA;
                             }
@@ -7343,48 +7396,48 @@ T_UBYTE decidirDireccion(T_UBYTE* caminosRecorrer, T_UBYTE* investigandoCruce,
 
                     }
 
-                    if (DERECHA == IZQUIERDA) {
+                    if (DERECHA == SENSOR_PRIORIDAD_MEDIA) {
 
-                        if (caminosRecorrer[IZQUIERDA - 1 ] == 'X') {
+                        if (caminosRecorrer[SENSOR_PRIORIDAD_MEDIA - 1 ] == 'X') {
 
-                            if (DERECHA == IZQUIERDA &&
-                                    caminosRecorrer[DERECHA - 1] == 1) {
+                            if (SENSOR_PRIORIDAD_BAJA == IZQUIERDA &&
+                                    caminosRecorrer[SENSOR_PRIORIDAD_BAJA - 1] == 1) {
                                 *caminoActual = IZQUIERDA;
                                 direccionElegida = ENFRENTE;
-                            } else if (DERECHA == ENFRENTE &&
-                                    caminosRecorrer[DERECHA - 1] == 1) {
+                            } else if (SENSOR_PRIORIDAD_BAJA == ENFRENTE &&
+                                    caminosRecorrer[SENSOR_PRIORIDAD_BAJA - 1] == 1) {
                                 *caminoActual = ENFRENTE;
                                 direccionElegida = DERECHA;
                             }
 
                         }
 
-                    } else if (IZQUIERDA == IZQUIERDA) {
+                    } else if (IZQUIERDA == SENSOR_PRIORIDAD_MEDIA) {
 
-                        if (caminosRecorrer[IZQUIERDA - 1 ] == 'X') {
+                        if (caminosRecorrer[SENSOR_PRIORIDAD_MEDIA - 1 ] == 'X') {
 
-                            if (DERECHA == DERECHA &&
-                                    caminosRecorrer[DERECHA - 1] == 1) {
+                            if (SENSOR_PRIORIDAD_BAJA == DERECHA &&
+                                    caminosRecorrer[SENSOR_PRIORIDAD_BAJA - 1] == 1) {
                                 *caminoActual = DERECHA;
                                 direccionElegida = ENFRENTE;
-                            } else if (DERECHA == ENFRENTE &&
-                                    caminosRecorrer[DERECHA - 1] == 1) {
+                            } else if (SENSOR_PRIORIDAD_BAJA == ENFRENTE &&
+                                    caminosRecorrer[SENSOR_PRIORIDAD_BAJA - 1] == 1) {
                                 *caminoActual = ENFRENTE;
                                 direccionElegida = IZQUIERDA;
                             }
 
                         }
 
-                    } else if (ENFRENTE == IZQUIERDA) {
+                    } else if (ENFRENTE == SENSOR_PRIORIDAD_MEDIA) {
 
-                        if (caminosRecorrer[IZQUIERDA - 1 ] == 'X') {
+                        if (caminosRecorrer[SENSOR_PRIORIDAD_MEDIA - 1 ] == 'X') {
 
-                            if (DERECHA == DERECHA &&
-                                    caminosRecorrer[DERECHA - 1] == 1) {
+                            if (SENSOR_PRIORIDAD_BAJA == DERECHA &&
+                                    caminosRecorrer[SENSOR_PRIORIDAD_BAJA - 1] == 1) {
                                 *caminoActual = DERECHA;
                                 direccionElegida = IZQUIERDA;
-                            } else if (DERECHA == IZQUIERDA &&
-                                    caminosRecorrer[DERECHA - 1] == 1) {
+                            } else if (SENSOR_PRIORIDAD_BAJA == IZQUIERDA &&
+                                    caminosRecorrer[SENSOR_PRIORIDAD_BAJA - 1] == 1) {
                                 *caminoActual = IZQUIERDA;
                                 direccionElegida = DERECHA;
                             }
@@ -7397,16 +7450,16 @@ T_UBYTE decidirDireccion(T_UBYTE* caminosRecorrer, T_UBYTE* investigandoCruce,
 
                 case 2:
 
-                    if (DERECHA == IZQUIERDA) {
+                    if (DERECHA == SENSOR_PRIORIDAD_MEDIA) {
 
-                        if (caminosRecorrer[IZQUIERDA - 1 ] == 'X') {
+                        if (caminosRecorrer[SENSOR_PRIORIDAD_MEDIA - 1 ] == 'X') {
 
-                            if (DERECHA == IZQUIERDA &&
-                                    caminosRecorrer[DERECHA - 1] == 1) {
+                            if (SENSOR_PRIORIDAD_BAJA == IZQUIERDA &&
+                                    caminosRecorrer[SENSOR_PRIORIDAD_BAJA - 1] == 1) {
                                 *caminoActual = IZQUIERDA;
                                 direccionElegida = ENFRENTE;
-                            } else if (DERECHA == ENFRENTE &&
-                                    caminosRecorrer[DERECHA - 1] == 1) {
+                            } else if (SENSOR_PRIORIDAD_BAJA == ENFRENTE &&
+                                    caminosRecorrer[SENSOR_PRIORIDAD_BAJA - 1] == 1) {
                                 *caminoActual = ENFRENTE;
                                 direccionElegida = DERECHA;
                             } else
@@ -7414,16 +7467,16 @@ T_UBYTE decidirDireccion(T_UBYTE* caminosRecorrer, T_UBYTE* investigandoCruce,
 
                         }
 
-                    } else if (IZQUIERDA == IZQUIERDA) {
+                    } else if (IZQUIERDA == SENSOR_PRIORIDAD_MEDIA) {
 
-                        if (caminosRecorrer[IZQUIERDA - 1 ] == 'X') {
+                        if (caminosRecorrer[SENSOR_PRIORIDAD_MEDIA - 1 ] == 'X') {
 
-                            if (DERECHA == DERECHA &&
-                                    caminosRecorrer[DERECHA - 1] == 1) {
+                            if (SENSOR_PRIORIDAD_BAJA == DERECHA &&
+                                    caminosRecorrer[SENSOR_PRIORIDAD_BAJA - 1] == 1) {
                                 *caminoActual = DERECHA;
                                 direccionElegida = ENFRENTE;
-                            } else if (DERECHA == ENFRENTE &&
-                                    caminosRecorrer[DERECHA - 1] == 1) {
+                            } else if (SENSOR_PRIORIDAD_BAJA == ENFRENTE &&
+                                    caminosRecorrer[SENSOR_PRIORIDAD_BAJA - 1] == 1) {
                                 *caminoActual = ENFRENTE;
                                 direccionElegida = IZQUIERDA;
                             } else
@@ -7431,16 +7484,16 @@ T_UBYTE decidirDireccion(T_UBYTE* caminosRecorrer, T_UBYTE* investigandoCruce,
 
                         }
 
-                    } else if (ENFRENTE == IZQUIERDA) {
+                    } else if (ENFRENTE == SENSOR_PRIORIDAD_MEDIA) {
 
-                        if (caminosRecorrer[IZQUIERDA - 1 ] == 'X') {
+                        if (caminosRecorrer[SENSOR_PRIORIDAD_MEDIA - 1 ] == 'X') {
 
-                            if (DERECHA == DERECHA &&
-                                    caminosRecorrer[DERECHA - 1] == 1) {
+                            if (SENSOR_PRIORIDAD_BAJA == DERECHA &&
+                                    caminosRecorrer[SENSOR_PRIORIDAD_BAJA - 1] == 1) {
                                 *caminoActual = DERECHA;
                                 direccionElegida = IZQUIERDA;
-                            } else if (DERECHA == IZQUIERDA &&
-                                    caminosRecorrer[DERECHA - 1] == 1) {
+                            } else if (SENSOR_PRIORIDAD_BAJA == IZQUIERDA &&
+                                    caminosRecorrer[SENSOR_PRIORIDAD_BAJA - 1] == 1) {
                                 *caminoActual = IZQUIERDA;
                                 direccionElegida = DERECHA;
                             } else
@@ -7448,17 +7501,17 @@ T_UBYTE decidirDireccion(T_UBYTE* caminosRecorrer, T_UBYTE* investigandoCruce,
 
                         }
 
-                    } else if (DERECHA == DERECHA) {
+                    } else if (DERECHA == SENSOR_PRIORIDAD_BAJA) {
 
-                        if (caminosRecorrer[DERECHA - 1 ] == 'X')
+                        if (caminosRecorrer[SENSOR_PRIORIDAD_BAJA - 1 ] == 'X')
                             *contCaminosRecorridos = 3;
-                    } else if (IZQUIERDA == DERECHA) {
+                    } else if (IZQUIERDA == SENSOR_PRIORIDAD_BAJA) {
 
-                        if (caminosRecorrer[DERECHA - 1 ] == 'X')
+                        if (caminosRecorrer[SENSOR_PRIORIDAD_BAJA - 1 ] == 'X')
                             *contCaminosRecorridos = 3;
-                    } else if (ENFRENTE == DERECHA) {
+                    } else if (ENFRENTE == SENSOR_PRIORIDAD_BAJA) {
 
-                        if (caminosRecorrer[DERECHA - 1 ] == 'X')
+                        if (caminosRecorrer[SENSOR_PRIORIDAD_BAJA - 1 ] == 'X')
                             *contCaminosRecorridos = 3;
 
                     }
@@ -7466,7 +7519,7 @@ T_UBYTE decidirDireccion(T_UBYTE* caminosRecorrer, T_UBYTE* investigandoCruce,
                     break;
 
                 case 3:
-                    cambioOrientacionCarro = 0;
+                    *cambioOrientacionCarro = 0;
                     *contCaminosRecorridos = 0;
                     *investigandoCruce = 0;
                     direccionElegida = ALTO;
@@ -7478,19 +7531,18 @@ T_UBYTE decidirDireccion(T_UBYTE* caminosRecorrer, T_UBYTE* investigandoCruce,
     } else {
 
         if (llegoDestino) {
-
-            *investigandoCruce = 0;
             direccionElegida = ALTO;
 
         } else {
 
 
             if (DISTANCIA_PRIORIDAD_ALTA > 5)
-                direccionElegida = ENFRENTE;
-            else if (DISTANCIA_PRIORIDAD_MEDIA > 3)
-                direccionElegida = IZQUIERDA;
-            else if (DISTANCIA_PRIORIDAD_BAJA > 3)
-                direccionElegida = DERECHA;
+                direccionElegida = SENSOR_PRIORIDAD_ALTA;
+            else if (DISTANCIA_PRIORIDAD_MEDIA > 5)
+                direccionElegida = SENSOR_PRIORIDAD_MEDIA;
+            else if (DISTANCIA_PRIORIDAD_BAJA > 5)
+                direccionElegida = SENSOR_PRIORIDAD_BAJA;
+
             else
                 direccionElegida = 0;
 
@@ -7511,43 +7563,44 @@ void leerSensores(void) {
     oldSensorIzquierda = sensorIzquierda;
     oldSensorEnfrente = sensorEnfrente;
 
-    if (IZQUIERDA == DERECHA)
+    if (SENSOR_PRIORIDAD_MEDIA == DERECHA)
         DISTANCIA_PRIORIDAD_MEDIA = sensorDerecha;
-    else if (DERECHA == DERECHA)
+    else if (SENSOR_PRIORIDAD_BAJA == DERECHA)
         DISTANCIA_PRIORIDAD_BAJA = sensorDerecha;
     else
         DISTANCIA_PRIORIDAD_ALTA = sensorDerecha;
 
-    if (ENFRENTE == IZQUIERDA)
+    if (SENSOR_PRIORIDAD_ALTA == IZQUIERDA)
         DISTANCIA_PRIORIDAD_ALTA = sensorIzquierda;
-    else if (DERECHA == IZQUIERDA)
+    else if (SENSOR_PRIORIDAD_BAJA == IZQUIERDA)
         DISTANCIA_PRIORIDAD_BAJA = sensorIzquierda;
     else
         DISTANCIA_PRIORIDAD_MEDIA = sensorIzquierda;
 
-    if (ENFRENTE == ENFRENTE)
+    if (SENSOR_PRIORIDAD_ALTA == ENFRENTE)
         DISTANCIA_PRIORIDAD_ALTA = sensorEnfrente;
-    else if (IZQUIERDA == ENFRENTE)
+    else if (SENSOR_PRIORIDAD_MEDIA == ENFRENTE)
         DISTANCIA_PRIORIDAD_MEDIA = sensorEnfrente;
+
     else
         DISTANCIA_PRIORIDAD_BAJA = sensorEnfrente;
 }
 
 void PID(void) {
 
-    T_BYTE dif = 0;
-    T_INT error;
+    T_INT dif = 0;
+    T_INT error = 0;
     static T_INT difAnt = 0;
 
 
     dif = sensorIzquierda - sensorDerecha;
 
-    error = roundf(1.1 * (dif) + 1.3 * (difAnt - dif));
+    error = roundf(0.9 * (dif) + 0 * (difAnt - dif));
 
     difAnt = dif;
 
-    T_BYTE velocidadIzquierda = ((100 - error)<(0)?(0):((100 - error)>(100)?(100):(100 - error)));
-    T_BYTE velocidadDerecha = ((100 + error)<(0)?(0):((100 + error)>(100)?(100):(100 + error)));
+    T_INT velocidadIzquierda = ((100 - error)<(0)?(0):((100 - error)>(100)?(100):(100 - error)));
+    T_INT velocidadDerecha = ((100 + error)<(0)?(0):((100 + error)>(100)?(100):(100 + error)));
 
     pwmDuty(velocidadIzquierda, 1);
     pwmDuty(velocidadDerecha, 2);
@@ -7558,24 +7611,25 @@ void probarPID(void) {
     leerSensores();
 
     if (sensorEnfrente > 5) {
+        PID();
         mouse.curr_state = ENFRENTE;
         mover();
-        PID();
-        leerSensores();
     } else
         finalizarRecorrido();
 
 }
 
 void velocidadEstandar(void) {
+
     pwmDuty(100, 1);
     pwmDuty(100, 2);
 
 }
 
-void combinarArreglos(T_UBYTE* movimientos, T_UBYTE* caminoFinal, T_UBYTE numMovimientos,
-        T_UBYTE* numMovimientosFinal) {
+void combinarArreglos(T_UBYTE* movimientos, T_UBYTE* caminoFinal, T_UINT numMovimientos,
+        T_UINT* numMovimientosFinal) {
     for (T_INT i = 0; i < numMovimientos; i++) {
+
         caminoFinal[*numMovimientosFinal] = movimientos[i];
         *numMovimientosFinal += 1;
     }
@@ -7631,9 +7685,9 @@ void main(void) {
             }
 
 
-            probarGirosAuto();
 
-
+            probarPID();
+            visualizarPasosRealizados(numMovimientosTotales++);
 
 
         } else {
