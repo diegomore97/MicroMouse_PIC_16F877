@@ -1220,6 +1220,7 @@ void main(void) {
             probarPID();
             visualizarPasosRealizados(numMovimientosTotales++); //Para visualizarlo por Bluetooth
             //comportamientoBasico();
+            forzarParoAuto();
 
         } else {
 

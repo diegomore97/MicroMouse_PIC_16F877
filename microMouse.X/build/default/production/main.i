@@ -7689,6 +7689,7 @@ void main(void) {
             probarPID();
             visualizarPasosRealizados(numMovimientosTotales++);
 
+            forzarParoAuto();
 
         } else {
 

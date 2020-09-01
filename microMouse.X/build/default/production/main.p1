@@ -4571,30 +4571,33 @@ Version 4.0 HI-TECH Software Intermediate Code
 "1221
 [; ;main.c: 1221:             visualizarPasosRealizados(numMovimientosTotales++);
 [e ( _visualizarPasosRealizados (1 -> ++ _numMovimientosTotales -> 1 `i `ui ]
-"1224
-[; ;main.c: 1224:         } else {
+"1223
+[; ;main.c: 1223:             forzarParoAuto();
+[e ( _forzarParoAuto ..  ]
+"1225
+[; ;main.c: 1225:         } else {
 }
 [e $U 736  ]
 [e :U 734 ]
 {
-"1226
-[; ;main.c: 1226:             iniciado = 0;
+"1227
+[; ;main.c: 1227:             iniciado = 0;
 [e = _iniciado -> -> 0 `i `uc ]
-"1228
-[; ;main.c: 1228:         }
+"1229
+[; ;main.c: 1229:         }
 }
 [e :U 736 ]
-"1231
-[; ;main.c: 1231:     }
+"1232
+[; ;main.c: 1232:     }
 }
 [e :U 731 ]
 [e $U 732  ]
 [e :U 733 ]
-"1232
-[; ;main.c: 1232:     return;
-[e $UE 730  ]
 "1233
-[; ;main.c: 1233: }
+[; ;main.c: 1233:     return;
+[e $UE 730  ]
+"1234
+[; ;main.c: 1234: }
 [e :UE 730 ]
 }
 [p f _sprintf 8462464 ]
