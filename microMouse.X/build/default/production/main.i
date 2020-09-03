@@ -6538,11 +6538,11 @@ double y0(double);
 double y1(double);
 double yn(int, double);
 # 10 "main.c" 2
-# 27 "main.c"
+# 28 "main.c"
 T_UBYTE SENSOR_PRIORIDAD_ALTA = ENFRENTE;
 T_UBYTE SENSOR_PRIORIDAD_MEDIA = IZQUIERDA;
 T_UBYTE SENSOR_PRIORIDAD_BAJA = DERECHA;
-# 60 "main.c"
+# 61 "main.c"
 typedef struct {
     Direccion curr_state;
     Direccion Next_state;
@@ -6781,7 +6781,7 @@ void comportamientoBasico(void) {
                     forzarParoAuto();
                     pausa = 1;
                 }
-# 316 "main.c"
+# 317 "main.c"
             } else {
                 if (!investigandoCruce) {
                     if (numMovimientosTotales < 1000)
@@ -7122,17 +7122,17 @@ T_BOOL hayCruce(T_UBYTE* caminosRecorrer, T_UBYTE investigandoCruce) {
     T_UBYTE contCaminos = 0;
     T_BOOL paredEnfrente = 0, paredDerecha = 0, paredIzquierda = 0;
 
-    if (sensorEnfrente > 5) {
+    if (sensorEnfrente > 7) {
         paredEnfrente = 1;
         contCaminos++;
     }
 
-    if (sensorIzquierda > 5) {
+    if (sensorIzquierda > 25) {
         paredIzquierda = 1;
         contCaminos++;
     }
 
-    if (sensorDerecha > 5) {
+    if (sensorDerecha > 25) {
         paredDerecha = 1;
         contCaminos++;
     }
@@ -7536,11 +7536,11 @@ T_UBYTE decidirDireccion(T_UBYTE* caminosRecorrer, T_UBYTE* investigandoCruce, T
         } else {
 
 
-            if (DISTANCIA_PRIORIDAD_ALTA > 5)
+            if (DISTANCIA_PRIORIDAD_ALTA > 7)
                 direccionElegida = SENSOR_PRIORIDAD_ALTA;
-            else if (DISTANCIA_PRIORIDAD_MEDIA > 5)
+            else if (DISTANCIA_PRIORIDAD_MEDIA > 25)
                 direccionElegida = SENSOR_PRIORIDAD_MEDIA;
-            else if (DISTANCIA_PRIORIDAD_BAJA > 5)
+            else if (DISTANCIA_PRIORIDAD_BAJA > 25)
                 direccionElegida = SENSOR_PRIORIDAD_BAJA;
 
             else
@@ -7610,12 +7610,15 @@ void probarPID(void) {
 
     leerSensores();
 
-    if (sensorEnfrente > 5) {
+    if (sensorEnfrente > 7) {
         PID();
         mouse.curr_state = ENFRENTE;
         mover();
     } else
         finalizarRecorrido();
+
+    _delay((unsigned long)((55)*(4000000/4000.0)));
+
 
 }
 
@@ -7687,7 +7690,7 @@ void main(void) {
 
 
             probarPID();
-            visualizarPasosRealizados(numMovimientosTotales++);
+
 
             forzarParoAuto();
 

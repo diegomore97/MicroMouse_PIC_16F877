@@ -10,8 +10,8 @@
 #include <math.h>
 
 //**************MODIFICAR ESTAS CONSTANTES SEGUN LA CONVENIENCIA DEL PLANO****************************
-#define UMBRAL_OBSTACULO_LATERAL 5 //expresado en cm | sensibilidad antes de que choque con un objeto
-#define UMBRAL_OBSTACULO_ENFRENTE 5 //expresado en cm | sensibilidad antes de que choque con un objeto
+#define UMBRAL_OBSTACULO_LATERAL 25 //expresado en cm | sensibilidad antes de que choque con un objeto
+#define UMBRAL_OBSTACULO_ENFRENTE 7 //expresado en cm | sensibilidad antes de que choque con un objeto
 #define UMBRAL_SENSOR_OPTICO_REFLEXIVO 100 //Unidad que representa el minimo de luz percibida para detectar negro
 #define VELOCIDAD_MOTORES 100 //Porcentaje de ciclo de trabajo a la que trabajaran los motores
 #define TIEMPO_REVERSA 600 //Tiempo en milisegundos que avanzara el carro en reversa
@@ -20,8 +20,9 @@
 #define MAX_MOVIMIENTOS_GUARDADOS 200 //Para mapear y regresar a algun lugar si llegamos a un callejon
 #define MAX_MOVIMIENTOS_CAMINO_FINAL 1000 //El maximo de movimientos a realizar para llegar al destino
 
-#define KP 0.9 //Ajustar estas variables de control para evitar chocar con las paredes laterales
-#define KD 0
+//Ajustar estas variables de control para evitar chocar con las paredes laterales
+#define KP 0.9 //Entre mas se aumente esta variable mas brusco sera el cambio para centrar
+#define KD 0 //Entre mas aumente esta variabe mas oscilara tratando de centrarse
 
 //Constantes que indican a que direccion deber girar el auto
 T_UBYTE SENSOR_PRIORIDAD_ALTA = ENFRENTE; //La mayor prioridad siempre debe ser enfrente (NO MODIFICAR)
@@ -1147,6 +1148,9 @@ void probarPID(void) {
         mover();
     } else
         finalizarRecorrido();
+    
+    __delay_ms(55); //Tiempo que el carro avanzara, si estas imprimiendo via UART
+                   //al mismo tiempo, comenta este delay
 
 }
 
@@ -1218,7 +1222,7 @@ void main(void) {
             //probarSensores();
             //probarGirosAuto();
             probarPID();
-            visualizarPasosRealizados(numMovimientosTotales++); //Para visualizarlo por Bluetooth
+            //visualizarPasosRealizados(numMovimientosTotales++); //Para visualizarlo por Bluetooth
             //comportamientoBasico();
             forzarParoAuto();
 
