@@ -14,7 +14,7 @@
 #define UMBRAL_OBSTACULO_ENFRENTE 7 //expresado en cm | sensibilidad antes de que choque con un objeto
 #define UMBRAL_SENSOR_OPTICO_REFLEXIVO 100 //Unidad que representa el minimo de luz percibida para detectar negro
 #define VELOCIDAD_MOTORES 100 //Porcentaje de ciclo de trabajo a la que trabajaran los motores
-#define TIEMPO_REVERSA 600 //Tiempo en milisegundos que avanzara el carro en reversa
+#define TIEMPO_REVERSA 400 //Tiempo en milisegundos que avanzara el carro en reversa
 #define TIEMPO_AVANCE_IZQUIERDA 410 //Tiempo en milisegundos que avanzara el carro al girar
 #define TIEMPO_AVANCE_DERECHA 410 //Tiempo en milisegundos que avanzara el carro al girar
 #define MAX_MOVIMIENTOS_GUARDADOS 200 //Para mapear y regresar a algun lugar si llegamos a un callejon
@@ -52,7 +52,7 @@ T_UBYTE SENSOR_PRIORIDAD_BAJA = DERECHA;
 #define RETARDO_ANTIREBOTE 100
 #define TAMANO_CADENA 50 //Tamaño de la cadena de la variable para debug
 
-#define DOBLE 2 //Propocional a la contante de REPETICIONES_VUELTA para que el auto gire 180 grados
+#define RETARDO_PID 55
 #define CALLEJON 0
 #define PRIMER_DIRECCION 0
 #define MAX_CAMINOS 3 //Hasta 3 caminos puede tener para elegir el carrito
@@ -99,6 +99,7 @@ void forzarEspejeoAuto(void);
 void finalizarRecorrido(void);
 void probarPID(void);
 void forzarReversa(void);
+void forzarGiroIzquierda(void);
 
 //Vladi
 void registraPosicionActual(void); //Posicion Actual del auto
@@ -351,10 +352,8 @@ void comportamientoBasico(void) {
                 switch (direccionElegida) {
 
                     case CALLEJON:
-                        velocidadEstandar();
                         mapear = 0;
                         espejearCarroY = 1;
-                        forzarReversa();
                         mouse.Next_state = IZQUIERDA;
                         break;
 
@@ -426,8 +425,6 @@ void comportamientoBasico(void) {
 
                     espejearCarroY = 1;
                     __delay_ms(3000); //Esperar 3 segundos en la meta
-                    velocidadEstandar();
-                    forzarReversa();
                     mouse.Next_state = IZQUIERDA;
                 } else {
 
@@ -445,8 +442,6 @@ void comportamientoBasico(void) {
     } else { //Ya Tenemos un camino mapeado para resolver el laberinto
         recorrerCaminoEncontrado(caminoFinal, numMovimientosTotales);
         __delay_ms(3000); //Esperar 3 segundos en la meta
-        velocidadEstandar();
-        forzarReversa();
         forzarEspejeoAuto(); //Cuando se llega a la meta nos regresamos
         regresarPuntoPartida(caminoFinal, numMovimientosTotales); //Regresar al punto de partida
         finalizarRecorrido();
@@ -455,8 +450,6 @@ void comportamientoBasico(void) {
 }
 
 void finalizarRecorrido(void) {
-    velocidadEstandar();
-    forzarReversa();
     forzarEspejeoAuto();
     forzarParoAuto();
     pausa = 1;
@@ -481,15 +474,23 @@ void forzarReversa(void) {
 
 }
 
-void forzarEspejeoAuto(void) {
-
-    velocidadEstandar();
-
+void forzarGiroIzquierda(void) {
     IN1 = 0;
     IN2 = 0;
     IN3 = 1;
     IN4 = 0;
-    __delay_ms(TIEMPO_AVANCE_IZQUIERDA * DOBLE);
+    __delay_ms(TIEMPO_AVANCE_IZQUIERDA);
+
+}
+
+void forzarEspejeoAuto(void) {
+
+    forzarParoAuto();
+    velocidadEstandar();
+    forzarReversa();
+    forzarGiroIzquierda();
+    forzarReversa();
+    forzarGiroIzquierda();
 }
 
 void moverCarrito(T_UBYTE espejearCarroY, T_UBYTE* carroEspejeado) {
@@ -507,16 +508,17 @@ void moverCarrito(T_UBYTE espejearCarroY, T_UBYTE* carroEspejeado) {
 
         case IZQUIERDA:
 
-            IN1 = 0;
-            IN2 = 0;
-            IN3 = 1;
-            IN4 = 0;
-
             if (espejearCarroY) {
-                __delay_ms(TIEMPO_AVANCE_IZQUIERDA * DOBLE); //Giro 180 grados
+                forzarEspejeoAuto(); //Giro 180 grados
                 *carroEspejeado = 1;
-            } else
+            } else {
+                IN1 = 0;
+                IN2 = 0;
+                IN3 = 1;
+                IN4 = 0;
                 __delay_ms(TIEMPO_AVANCE_IZQUIERDA); //Giro 90 grados
+
+            }
 
             break;
 
@@ -1148,9 +1150,9 @@ void probarPID(void) {
         mover();
     } else
         finalizarRecorrido();
-    
-    __delay_ms(55); //Tiempo que el carro avanzara, si estas imprimiendo via UART
-                   //al mismo tiempo, comenta este delay
+
+    __delay_ms(RETARDO_PID); //Tiempo que el carro avanzara, si estas imprimiendo via UART
+    //al mismo tiempo, comenta este delay
 
 }
 
