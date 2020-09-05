@@ -18,46 +18,49 @@ text0 CODE 0 1BE2 1BE2 96 1
 text1 CODE 0 1F2A 1F2A 5C 1
 text2 CODE 0 1C78 1C78 86 1
 text3 CODE 0 15EC 15EC 17C 1
-text4 CODE 0 21F4 21F4 10 1
-text5 CODE 0 21DA 21DA 1A 1
-text6 CODE 0 2198 2198 22 1
-text7 CODE 0 2204 2204 A 1
-text8 CODE 0 21BA 21BA 20 1
-text9 CODE 0 104A 104A 232 1
-text10 CODE 0 8FC 8FC 3B2 1
-text11 CODE 0 20CE 20CE 46 1
-text12 CODE 0 12 12 4C0 1
-text13 CODE 0 2114 2114 38 1
-text14 CODE 0 1ADE 1ADE 104 1
-text15 CODE 0 214C 214C 26 1
-text16 CODE 0 2082 2082 4C 1
-text17 CODE 0 2172 2172 26 1
-text18 CODE 0 127C 127C 1BC 1
-text19 CODE 0 1CFE 1CFE 7A 1
-text20 CODE 0 1E5C 1E5C 6A 1
-text21 CODE 0 19D6 19D6 108 1
-text22 CODE 0 4D2 4D2 42A 1
-text23 CODE 0 CAE CAE 39C 1
-text24 CODE 0 1768 1768 162 1
-text25 CODE 0 1438 1438 1B4 1
-text26 CODE 0 1D78 1D78 74 1
-text27 CODE 0 220E 220E A 1
-text28 CODE 0 2032 2032 50 1
-text29 CODE 0 1DEC 1DEC 70 1
-text30 CODE 0 18CA 18CA 10C 1
-text32 CODE 0 1F86 1F86 58 1
+text4 CODE 0 226E 226E 10 1
+text5 CODE 0 2114 2114 40 1
+text6 CODE 0 223A 223A 1A 1
+text7 CODE 0 21FA 21FA 20 1
+text8 CODE 0 2254 2254 1A 1
+text9 CODE 0 21D8 21D8 22 1
+text10 CODE 0 227E 227E A 1
+text11 CODE 0 221A 221A 20 1
+text12 CODE 0 104A 104A 232 1
+text13 CODE 0 8FC 8FC 3B2 1
+text14 CODE 0 20CE 20CE 46 1
+text15 CODE 0 12 12 4C0 1
+text16 CODE 0 2154 2154 38 1
+text17 CODE 0 1ADE 1ADE 104 1
+text18 CODE 0 218C 218C 26 1
+text19 CODE 0 2082 2082 4C 1
+text20 CODE 0 21B2 21B2 26 1
+text21 CODE 0 127C 127C 1BC 1
+text22 CODE 0 1CFE 1CFE 7A 1
+text23 CODE 0 1E5C 1E5C 6A 1
+text24 CODE 0 19D6 19D6 108 1
+text25 CODE 0 4D2 4D2 42A 1
+text26 CODE 0 CAE CAE 39C 1
+text27 CODE 0 1768 1768 162 1
+text28 CODE 0 1438 1438 1B4 1
+text29 CODE 0 1D78 1D78 74 1
+text30 CODE 0 2288 2288 A 1
+text31 CODE 0 2032 2032 50 1
+text32 CODE 0 1DEC 1DEC 70 1
+text33 CODE 0 18CA 18CA 10C 1
+text35 CODE 0 1F86 1F86 58 1
 cstackCOMRAM COMRAM 1 1 1 54 1
 cstackBANK0 BANK0 1 9D 9D 3D 1
 temp COMRAM 1 5A 5A 1 1
 bssBANK0 BANK0 1 60 60 3D 1
 bssBANK1 BANK1 1 100 100 FA 1
 intcode CODE 0 8 8 6 1
-idataBANK0 CODE 0 2218 2218 4 1
+idataBANK0 CODE 0 2292 2292 4 1
 dataBANK0 BANK0 1 DA DA 4 1
 bssBIGRAM BIGRAM 1 1FA 1FA 3E8 1
 bssCOMRAM COMRAM 1 55 55 5 1
 mediumconst MEDIUMCONST 0 7EB6 7EB6 14A 1
-$C:\Users\DIEGOM~1\AppData\Local\Temp\s1fo.o
+$C:\Users\DIEGOM~1\AppData\Local\Temp\s9t8.o
 idloc IDLOC 0 200000 200000 8 1
 init CODE 0 E E 4 1
 reset_vec CODE 0 0 0 4 1
@@ -76,17 +79,17 @@ BANK5 5E2-5FF 1
 BANK6 600-6FF 1
 BANK7 700-7FF 1
 CONST 4-7 1
-CONST 221C-7EB5 1
+CONST 2296-7EB5 1
 STACK 5E2-7FF 1
-SMALLCONST 221C-7EB5 1
+SMALLCONST 2296-7EB5 1
 CODE 4-7 1
-CODE 221C-7EB5 1
+CODE 2296-7EB5 1
 BIGRAM 5B-5F 1
 BIGRAM DE-FF 1
 BIGRAM 5E2-7FF 1
 COMRAM 5B-5F 1
 EEDATA F00000-F000FF 1
-MEDIUMCONST 221C-7EB5 1
+MEDIUMCONST 2296-7EB5 1
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -101,742 +104,762 @@ MEDIUMCONST 221C-7EB5 1
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\microMouse.X.production.o
-8 intcode CODE >9997:C:\Users\DIEGOM~1\AppData\Local\Temp\s1fo.s
-8 intcode CODE >118:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1F86 text32 CODE >230:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1F88 text32 CODE >232:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1F8C text32 CODE >234:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1F9A text32 CODE >235:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1FA8 text32 CODE >236:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1FB6 text32 CODE >237:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1FBA text32 CODE >242:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1FDC text32 CODE >243:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1FDE intcode_body CODE >118:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1FE0 intcode_body CODE >120:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1FEE intcode_body CODE >122:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1FF4 intcode_body CODE >123:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-2006 intcode_body CODE >124:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-200A intcode_body CODE >125:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-200C intcode_body CODE >126:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-2022 intcode_body CODE >127:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-2026 intcode_body CODE >128:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-2028 intcode_body CODE >129:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-202C intcode_body CODE >132:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-202E intcode_body CODE >134:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-18CA text30 CODE >7:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
-18CA text30 CODE >13:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
-18CE text30 CODE >14:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
-18DC text30 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
-18EC text30 CODE >16:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
-18F0 text30 CODE >18:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
-18FE text30 CODE >19:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
-190E text30 CODE >20:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
-1912 text30 CODE >22:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
-1922 text30 CODE >23:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
-1938 text30 CODE >24:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
-193C text30 CODE >25:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
-1940 text30 CODE >26:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
-194A text30 CODE >27:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
-194C text30 CODE >25:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
-195A text30 CODE >30:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
-1964 text30 CODE >31:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
-1982 text30 CODE >32:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
-1992 text30 CODE >33:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
-1994 text30 CODE >35:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
-199E text30 CODE >36:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
-19A4 text30 CODE >38:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
-19B4 text30 CODE >39:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
-19C4 text30 CODE >40:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
-19D4 text30 CODE >41:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
-1DEC text29 CODE >13:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/UART.h
-1DEC text29 CODE >15:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/UART.h
-1DEC text29 CODE >16:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/UART.h
-1DEE text29 CODE >17:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/UART.h
-1DF0 text29 CODE >20:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/UART.h
-1E4C text29 CODE >23:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/UART.h
-1E4E text29 CODE >24:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/UART.h
-1E50 text29 CODE >25:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/UART.h
-1E52 text29 CODE >28:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/UART.h
-1E54 text29 CODE >29:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/UART.h
-1E56 text29 CODE >32:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/UART.h
-1E58 text29 CODE >33:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/UART.h
-1E5A text29 CODE >34:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/UART.h
-2032 text28 CODE >47:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
-2034 text28 CODE >49:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
-2034 text28 CODE >55:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
-2034 text28 CODE >56:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
-2036 text28 CODE >57:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
-2038 text28 CODE >61:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
-203C text28 CODE >63:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
-2040 text28 CODE >65:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
-2040 text28 CODE >66:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
-2042 text28 CODE >67:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
-2044 text28 CODE >68:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
-2046 text28 CODE >71:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
-204A text28 CODE >73:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
-204A text28 CODE >74:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
-204C text28 CODE >75:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
-204E text28 CODE >76:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
-2050 text28 CODE >77:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
-2054 text28 CODE >79:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
-207E text28 CODE >81:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
-2080 text28 CODE >82:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
-220E text27 CODE >7:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/adc.h
-220E text27 CODE >8:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/adc.h
-2212 text27 CODE >9:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/adc.h
-2216 text27 CODE >10:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/adc.h
-1D78 text26 CODE >7:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwdiv.c
-1D78 text26 CODE >13:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwdiv.c
-1D80 text26 CODE >14:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwdiv.c
-1D92 text26 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwdiv.c
-1D96 text26 CODE >16:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwdiv.c
-1D9A text26 CODE >17:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwdiv.c
-1DA0 text26 CODE >18:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwdiv.c
-1DA2 text26 CODE >16:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwdiv.c
-1DB0 text26 CODE >21:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwdiv.c
-1DB6 text26 CODE >22:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwdiv.c
-1DCC text26 CODE >23:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwdiv.c
-1DD4 text26 CODE >24:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwdiv.c
-1DD6 text26 CODE >26:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwdiv.c
-1DDC text26 CODE >27:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwdiv.c
-1DE2 text26 CODE >28:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwdiv.c
-1DE2 text26 CODE >29:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwdiv.c
-1DEA text26 CODE >30:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwdiv.c
-1438 text25 CODE >10:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
-143A text25 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
-1458 text25 CODE >16:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
-148A text25 CODE >17:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
-148E text25 CODE >18:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
-148E text25 CODE >19:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
-149E text25 CODE >21:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
-14B4 text25 CODE >22:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
-14C8 text25 CODE >23:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
-14CC text25 CODE >24:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
-14D0 text25 CODE >25:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
-14D2 text25 CODE >26:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
-14DC text25 CODE >24:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
-150E text25 CODE >29:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
-1510 text25 CODE >30:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
-151C text25 CODE >31:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
-1526 text25 CODE >28:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
-1526 text25 CODE >32:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
-1558 text25 CODE >34:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
-155A text25 CODE >35:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
-1564 text25 CODE >33:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
-1582 text25 CODE >37:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
-1590 text25 CODE >38:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
-1592 text25 CODE >39:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
-1596 text25 CODE >40:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
-15BA text25 CODE >41:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
-15D8 text25 CODE >42:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
-15DA text25 CODE >43:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
-15EA text25 CODE >44:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
-1768 text24 CODE >26:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/ultrasonico.h
-176A text24 CODE >31:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/ultrasonico.h
-176E text24 CODE >32:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/ultrasonico.h
-1772 text24 CODE >33:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/ultrasonico.h
-177A text24 CODE >34:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/ultrasonico.h
-177C text24 CODE >35:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/ultrasonico.h
-1782 text24 CODE >36:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/ultrasonico.h
-1784 text24 CODE >38:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/ultrasonico.h
-1788 text24 CODE >42:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/ultrasonico.h
-1796 text24 CODE >43:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/ultrasonico.h
-1798 text24 CODE >44:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/ultrasonico.h
-17B8 text24 CODE >50:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/ultrasonico.h
-17C6 text24 CODE >51:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/ultrasonico.h
-17C8 text24 CODE >52:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/ultrasonico.h
-17E8 text24 CODE >58:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/ultrasonico.h
-17F6 text24 CODE >59:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/ultrasonico.h
-17F8 text24 CODE >60:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/ultrasonico.h
-1818 text24 CODE >64:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/ultrasonico.h
-184A text24 CODE >66:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/ultrasonico.h
-184C text24 CODE >68:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/ultrasonico.h
-185A text24 CODE >69:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/ultrasonico.h
-1868 text24 CODE >70:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/ultrasonico.h
-186C text24 CODE >72:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/ultrasonico.h
-18A2 text24 CODE >73:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/ultrasonico.h
-18A6 text24 CODE >74:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/ultrasonico.h
-18A6 text24 CODE >75:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/ultrasonico.h
-18A8 text24 CODE >76:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/ultrasonico.h
-18B8 text24 CODE >80:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/ultrasonico.h
-18C8 text24 CODE >82:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/ultrasonico.h
-CAE text23 CODE >11:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-CAE text23 CODE >26:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-CB6 text23 CODE >27:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-CBC text23 CODE >28:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-CCA text23 CODE >29:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-CCC text23 CODE >33:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-CDC text23 CODE >35:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-CEC text23 CODE >37:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-CFC text23 CODE >40:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-CFE text23 CODE >42:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-D02 text23 CODE >43:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-D06 text23 CODE >46:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-D16 text23 CODE >49:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-D1C text23 CODE >50:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-D22 text23 CODE >51:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-D30 text23 CODE >52:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-D32 text23 CODE >56:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-D42 text23 CODE >58:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-D52 text23 CODE >60:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-D62 text23 CODE >63:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-D64 text23 CODE >65:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-D68 text23 CODE >66:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-D6C text23 CODE >69:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-D7C text23 CODE >75:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-D92 text23 CODE >76:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-DA2 text23 CODE >77:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-DAA text23 CODE >78:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-DAE text23 CODE >79:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-DC2 text23 CODE >83:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-DD2 text23 CODE >84:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-DD2 text23 CODE >85:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-DE6 text23 CODE >89:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-E00 text23 CODE >92:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-E10 text23 CODE >93:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-E20 text23 CODE >94:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-E30 text23 CODE >96:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-E34 text23 CODE >97:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-E38 text23 CODE >100:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-E48 text23 CODE >101:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-E52 text23 CODE >102:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-E5C text23 CODE >103:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-E6A text23 CODE >104:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-E6C text23 CODE >105:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-E6C text23 CODE >106:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-E76 text23 CODE >112:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-E94 text23 CODE >115:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-E96 text23 CODE >116:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-EA6 text23 CODE >118:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-EA8 text23 CODE >97:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-EA8 text23 CODE >119:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-EB8 text23 CODE >122:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-ECE text23 CODE >123:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-ED4 text23 CODE >128:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-EDE text23 CODE >129:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-EEC text23 CODE >130:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-EEE text23 CODE >131:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-EEE text23 CODE >132:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-EF8 text23 CODE >133:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-EFE text23 CODE >127:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-F0C text23 CODE >139:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-F10 text23 CODE >140:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-F1E text23 CODE >141:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-F4C text23 CODE >142:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-F50 text23 CODE >143:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-F54 text23 CODE >144:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-F54 text23 CODE >145:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-F66 text23 CODE >149:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-F66 text23 CODE >150:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-F76 text23 CODE >151:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-F82 text23 CODE >152:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-F90 text23 CODE >153:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-FBA text23 CODE >154:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-FBE text23 CODE >159:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-FD8 text23 CODE >160:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-FDE text23 CODE >161:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-FEE text23 CODE >165:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-1008 text23 CODE >166:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-1010 text23 CODE >167:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-1020 text23 CODE >169:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-1024 text23 CODE >173:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-1028 text23 CODE >175:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-1036 text23 CODE >176:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-1038 text23 CODE >177:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-103C text23 CODE >180:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-103E text23 CODE >182:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-1048 text23 CODE >185:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-4D2 text22 CODE >8:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-4D2 text22 CODE >17:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-4D8 text22 CODE >18:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-4DE text22 CODE >19:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-4EC text22 CODE >20:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-4EE text22 CODE >24:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-4FE text22 CODE >26:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-50E text22 CODE >28:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-51E text22 CODE >31:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-520 text22 CODE >33:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-524 text22 CODE >36:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-534 text22 CODE >39:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-53A text22 CODE >40:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-540 text22 CODE >41:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-54E text22 CODE >42:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-550 text22 CODE >45:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-560 text22 CODE >48:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-570 text22 CODE >50:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-580 text22 CODE >53:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-582 text22 CODE >54:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-586 text22 CODE >57:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-596 text22 CODE >58:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-596 text22 CODE >65:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-5B6 text22 CODE >66:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-5CA text22 CODE >95:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-5D6 text22 CODE >96:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-5E0 text22 CODE >97:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-5EA text22 CODE >98:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-5F6 text22 CODE >99:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-602 text22 CODE >100:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-60E text22 CODE >101:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-61A text22 CODE >102:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-626 text22 CODE >103:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-632 text22 CODE >104:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-640 text22 CODE >105:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-64C text22 CODE >106:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-65C text22 CODE >107:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-668 text22 CODE >108:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-678 text22 CODE >109:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-686 text22 CODE >110:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-692 text22 CODE >111:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-6A2 text22 CODE >112:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-6AE text22 CODE >113:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-6BE text22 CODE >114:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-6CA text22 CODE >115:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-6DA text22 CODE >116:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-6E6 text22 CODE >117:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-710 text22 CODE >145:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-746 text22 CODE >146:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-754 text22 CODE >149:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-76E text22 CODE >152:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-772 text22 CODE >153:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-77C text22 CODE >154:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-78A text22 CODE >155:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-78C text22 CODE >156:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-78C text22 CODE >157:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-796 text22 CODE >158:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-79C text22 CODE >152:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-7AA text22 CODE >163:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-7AE text22 CODE >164:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-7BC text22 CODE >165:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-7EA text22 CODE >166:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-7EE text22 CODE >167:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-7F2 text22 CODE >168:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-7F2 text22 CODE >169:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-804 text22 CODE >173:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-804 text22 CODE >174:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-814 text22 CODE >175:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-820 text22 CODE >176:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-82E text22 CODE >177:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-858 text22 CODE >178:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-85C text22 CODE >183:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-876 text22 CODE >184:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-886 text22 CODE >185:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-88A text22 CODE >187:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-8A4 text22 CODE >188:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-8B4 text22 CODE >190:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-8B8 text22 CODE >191:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-8BC text22 CODE >192:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-8BC text22 CODE >194:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-8C0 text22 CODE >195:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-8D0 text22 CODE >196:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-8DE text22 CODE >197:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-8E0 text22 CODE >199:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-8E6 text22 CODE >201:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-8EA text22 CODE >203:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-8FA text22 CODE >205:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-19D6 text21 CODE >43:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\fltol.c
-19D6 text21 CODE >47:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\fltol.c
-19EE text21 CODE >48:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\fltol.c
-1A02 text21 CODE >49:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\fltol.c
-1A2C text21 CODE >50:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\fltol.c
-1A2E text21 CODE >51:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\fltol.c
-1A3E text21 CODE >52:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\fltol.c
-1A42 text21 CODE >53:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\fltol.c
-1A50 text21 CODE >54:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\fltol.c
-1A68 text21 CODE >57:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\fltol.c
-1A7C text21 CODE >60:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\fltol.c
-1A90 text21 CODE >63:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\fltol.c
-1A9A text21 CODE >64:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\fltol.c
-1A9C text21 CODE >62:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\fltol.c
-1AAC text21 CODE >67:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\fltol.c
-1ABC text21 CODE >68:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\fltol.c
-1ACC text21 CODE >69:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\fltol.c
-1ADC text21 CODE >70:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\fltol.c
-1E5C text20 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul32.c
-1E5C text20 CODE >119:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul32.c
-1E6C text20 CODE >121:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul32.c
-1E7A text20 CODE >122:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul32.c
-1E8A text20 CODE >123:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul32.c
-1E94 text20 CODE >124:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul32.c
-1E9E text20 CODE >125:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul32.c
-1EB4 text20 CODE >128:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul32.c
-1EC4 text20 CODE >129:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul32.c
-1CFE text19 CODE >16:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
-1CFE text19 CODE >17:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
-1D76 text19 CODE >18:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
-127C text18 CODE >20:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
-127C text18 CODE >22:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
-12DC text18 CODE >24:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
-12FC text18 CODE >26:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
-137E text18 CODE >28:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
-1382 text18 CODE >31:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
-13B6 text18 CODE >32:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
-13BA text18 CODE >33:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
-13C2 text18 CODE >34:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
-13C6 text18 CODE >37:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
-13FA text18 CODE >38:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
-13FE text18 CODE >39:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
-1406 text18 CODE >40:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
-140A text18 CODE >42:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
-1436 text18 CODE >45:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
-2172 text17 CODE >1159:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-2172 text17 CODE >1161:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-2184 text17 CODE >1162:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-2196 text17 CODE >1164:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-2082 text16 CODE >245:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-2082 text16 CODE >247:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-2086 text16 CODE >249:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-209C text16 CODE >250:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-20B2 text16 CODE >251:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-20C8 text16 CODE >253:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-20CC text16 CODE >255:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-214C text15 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul16.c
-214C text15 CODE >37:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul16.c
-2158 text15 CODE >38:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul16.c
-2160 text15 CODE >39:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul16.c
-2168 text15 CODE >52:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul16.c
-2170 text15 CODE >53:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul16.c
-1ADE text14 CODE >4:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\flge.c
-1ADE text14 CODE >7:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\flge.c
-1B0C text14 CODE >8:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\flge.c
-1B1C text14 CODE >9:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\flge.c
-1B4A text14 CODE >10:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\flge.c
-1B5A text14 CODE >12:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\flge.c
-1B68 text14 CODE >13:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\flge.c
-1B7A text14 CODE >14:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\flge.c
-1B88 text14 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\flge.c
-1B9A text14 CODE >16:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\flge.c
-1BAA text14 CODE >17:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\flge.c
-1BBA text14 CODE >18:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\flge.c
-1BE0 text14 CODE >19:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\flge.c
-2114 text13 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\flneg.c
-2114 text13 CODE >17:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\flneg.c
-212A text13 CODE >18:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\flneg.c
-213A text13 CODE >19:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\flneg.c
-214A text13 CODE >20:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\flneg.c
-12 text12 CODE >10:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-12 text12 CODE >21:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-18 text12 CODE >22:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-1E text12 CODE >23:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-2C text12 CODE >24:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-2E text12 CODE >28:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-3E text12 CODE >30:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-4E text12 CODE >32:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-5E text12 CODE >35:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-60 text12 CODE >37:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-64 text12 CODE >38:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-68 text12 CODE >41:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-78 text12 CODE >44:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-7E text12 CODE >46:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-90 text12 CODE >47:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-92 text12 CODE >49:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-98 text12 CODE >50:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-A6 text12 CODE >51:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-A8 text12 CODE >55:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-B8 text12 CODE >57:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-C8 text12 CODE >59:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-D8 text12 CODE >62:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-DA text12 CODE >64:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-DE text12 CODE >65:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-E2 text12 CODE >68:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-F2 text12 CODE >75:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-104 text12 CODE >77:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-112 text12 CODE >78:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-116 text12 CODE >81:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-11A text12 CODE >82:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-11E text12 CODE >83:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-122 text12 CODE >84:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-126 text12 CODE >85:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-12A text12 CODE >86:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-12E text12 CODE >87:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-132 text12 CODE >88:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-136 text12 CODE >89:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-13A text12 CODE >90:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-13E text12 CODE >91:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-142 text12 CODE >92:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-146 text12 CODE >93:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-14A text12 CODE >94:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-14E text12 CODE >95:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-152 text12 CODE >98:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-156 text12 CODE >100:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-180 text12 CODE >101:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-19C text12 CODE >102:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-1AC text12 CODE >103:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-1B0 text12 CODE >104:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-1B4 text12 CODE >106:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-1B4 text12 CODE >109:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-1C2 text12 CODE >110:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-1CA text12 CODE >111:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-1CE text12 CODE >113:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-1D2 text12 CODE >115:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-1E0 text12 CODE >116:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-1E2 text12 CODE >118:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-1EC text12 CODE >119:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-1EE text12 CODE >106:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-1EE text12 CODE >120:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-200 text12 CODE >121:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-200 text12 CODE >124:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-20E text12 CODE >127:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-21E text12 CODE >128:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-232 text12 CODE >132:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-242 text12 CODE >134:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-250 text12 CODE >135:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-25E text12 CODE >136:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-266 text12 CODE >137:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-26A text12 CODE >139:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-26E text12 CODE >141:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-27C text12 CODE >142:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-27E text12 CODE >144:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-288 text12 CODE >145:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-28E text12 CODE >153:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-2B4 text12 CODE >154:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-2E4 text12 CODE >155:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-2E8 text12 CODE >156:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-2EA text12 CODE >157:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-2FA text12 CODE >158:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-30A text12 CODE >162:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-31A text12 CODE >163:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-31A text12 CODE >166:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-340 text12 CODE >167:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-354 text12 CODE >172:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-35E text12 CODE >173:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-36C text12 CODE >174:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-36E text12 CODE >176:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-37C text12 CODE >177:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-380 text12 CODE >178:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-384 text12 CODE >180:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-388 text12 CODE >182:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-398 text12 CODE >183:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-39A text12 CODE >171:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-3A8 text12 CODE >192:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-3AC text12 CODE >193:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-3BA text12 CODE >194:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-3D0 text12 CODE >195:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-3D4 text12 CODE >196:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-3D8 text12 CODE >197:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-3D8 text12 CODE >198:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-3EA text12 CODE >202:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-3EA text12 CODE >203:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-3FA text12 CODE >204:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-406 text12 CODE >205:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-414 text12 CODE >206:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-43E text12 CODE >207:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-44E text12 CODE >208:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-450 text12 CODE >215:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-470 text12 CODE >216:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-480 text12 CODE >218:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-490 text12 CODE >219:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-494 text12 CODE >225:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-4A2 text12 CODE >226:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-4A4 text12 CODE >227:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-4A8 text12 CODE >230:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-4AA text12 CODE >232:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-4B0 text12 CODE >233:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-4BE text12 CODE >234:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-4C0 text12 CODE >236:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-4D0 text12 CODE >237:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-20CE text11 CODE >245:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-20CE text11 CODE >248:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-20DE text11 CODE >249:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-2112 text11 CODE >250:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-8FC text10 CODE >12:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\roundf.c
-8FC text10 CODE >14:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\roundf.c
-91C text10 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\roundf.c
-94A text10 CODE >18:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\roundf.c
-966 text10 CODE >19:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\roundf.c
-97A text10 CODE >20:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\roundf.c
-9B6 text10 CODE >21:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\roundf.c
-9DA text10 CODE >22:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\roundf.c
-9F8 text10 CODE >24:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\roundf.c
-A30 text10 CODE >10:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\roundf.c
-A98 text10 CODE >26:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\roundf.c
-ACC text10 CODE >27:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\roundf.c
-AFE text10 CODE >28:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\roundf.c
-B6A text10 CODE >29:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\roundf.c
-B9C text10 CODE >30:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\roundf.c
-C08 text10 CODE >32:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\roundf.c
-C3C text10 CODE >33:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\roundf.c
-C78 text10 CODE >34:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\roundf.c
-C9C text10 CODE >35:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\roundf.c
-CAC text10 CODE >36:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\roundf.c
-104A text9 CODE >1123:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-104A text9 CODE >1125:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-104A text9 CODE >1126:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1054 text9 CODE >1130:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1094 text9 CODE >1132:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1166 text9 CODE >1134:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-116E text9 CODE >1136:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-11EC text9 CODE >1137:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1258 text9 CODE >1139:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1268 text9 CODE >1140:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-127A text9 CODE >1141:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-21BA text8 CODE >477:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-21BA text8 CODE >478:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-21BC text8 CODE >479:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-21BE text8 CODE >480:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-21C0 text8 CODE >481:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-21C2 text8 CODE >482:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-21D8 text8 CODE >484:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-2204 text7 CODE >459:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-2204 text7 CODE >461:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-2206 text7 CODE >462:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-2208 text7 CODE >463:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-220A text7 CODE >464:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-220C text7 CODE >465:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-2198 text6 CODE >467:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-2198 text6 CODE >468:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-219A text6 CODE >469:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-219C text6 CODE >470:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-219E text6 CODE >471:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-21A0 text6 CODE >473:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-21B8 text6 CODE >475:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-21DA text5 CODE >486:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-21DA text5 CODE >488:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-21DE text5 CODE >489:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-21E2 text5 CODE >490:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-21E6 text5 CODE >491:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-21EA text5 CODE >492:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-21EE text5 CODE >493:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-21F2 text5 CODE >494:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-21F4 text4 CODE >452:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-21F4 text4 CODE >453:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-21F8 text4 CODE >454:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-21FC text4 CODE >455:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-2202 text4 CODE >457:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-15EC text3 CODE >1090:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-15EC text3 CODE >1092:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-164A text3 CODE >1093:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-16A8 text3 CODE >1094:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1706 text3 CODE >1096:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1716 text3 CODE >1097:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1726 text3 CODE >1098:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1736 text3 CODE >1102:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1736 text3 CODE >1103:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1746 text3 CODE >1111:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1746 text3 CODE >1112:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1756 text3 CODE >1115:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1766 text3 CODE >1121:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1C78 text2 CODE >549:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1C78 text2 CODE >551:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1C7C text2 CODE >553:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1C7C text2 CODE >555:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1C7E text2 CODE >556:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1C80 text2 CODE >557:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1C82 text2 CODE >558:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1C84 text2 CODE >560:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1C88 text2 CODE >562:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1C88 text2 CODE >564:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1C8A text2 CODE >565:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1C8C text2 CODE >566:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1C8E text2 CODE >567:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1C90 text2 CODE >569:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1CA6 text2 CODE >571:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1CAA text2 CODE >573:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1CAA text2 CODE >575:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1CAC text2 CODE >576:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1CAE text2 CODE >577:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1CB0 text2 CODE >578:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1CB6 text2 CODE >584:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1CB6 text2 CODE >586:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1CB8 text2 CODE >587:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1CBA text2 CODE >588:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1CBC text2 CODE >589:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1CBE text2 CODE >591:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1CC2 text2 CODE >593:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1CFC text2 CODE >595:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1F2A text1 CODE >1143:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1F2A text1 CODE >1145:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1F2E text1 CODE >1147:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1F60 text1 CODE >1148:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1F64 text1 CODE >1149:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1F68 text1 CODE >1150:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1F6C text1 CODE >1151:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1F70 text1 CODE >1152:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1F74 text1 CODE >1154:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1F84 text1 CODE >1157:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1BE2 text0 CODE >1175:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1BE2 text0 CODE >1177:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1BE8 text0 CODE >1181:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1BEA text0 CODE >1182:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1BEC text0 CODE >1183:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1BEE text0 CODE >1185:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1BF0 text0 CODE >1186:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1BF2 text0 CODE >1187:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1BF4 text0 CODE >1188:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1BF6 text0 CODE >1190:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1BF8 text0 CODE >1191:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1BFA text0 CODE >1192:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1BFC text0 CODE >1193:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1BFE text0 CODE >1195:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1C00 text0 CODE >1196:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1C02 text0 CODE >1198:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1C04 text0 CODE >1199:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1C06 text0 CODE >1200:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1C08 text0 CODE >1201:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1C0A text0 CODE >1202:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1C0C text0 CODE >1203:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1C0E text0 CODE >1206:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1C12 text0 CODE >1208:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1C18 text0 CODE >1209:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1C1E text0 CODE >1210:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1C22 text0 CODE >1212:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1C36 text0 CODE >1217:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1C48 text0 CODE >1219:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1C58 text0 CODE >1220:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1C5C text0 CODE >1221:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1C60 text0 CODE >1226:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1C64 text0 CODE >1229:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1C68 text0 CODE >1231:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1C6C text0 CODE >1233:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1EC6 cinit CODE >1096:C:\Users\DIEGOM~1\AppData\Local\Temp\s1fo.s
-1EC6 cinit CODE >1098:C:\Users\DIEGOM~1\AppData\Local\Temp\s1fo.s
-1EC6 cinit CODE >1101:C:\Users\DIEGOM~1\AppData\Local\Temp\s1fo.s
-1EC6 cinit CODE >1232:C:\Users\DIEGOM~1\AppData\Local\Temp\s1fo.s
-1EC8 cinit CODE >1233:C:\Users\DIEGOM~1\AppData\Local\Temp\s1fo.s
-1ECA cinit CODE >1234:C:\Users\DIEGOM~1\AppData\Local\Temp\s1fo.s
-1ECC cinit CODE >1235:C:\Users\DIEGOM~1\AppData\Local\Temp\s1fo.s
-1ECE cinit CODE >1236:C:\Users\DIEGOM~1\AppData\Local\Temp\s1fo.s
-1ED0 cinit CODE >1237:C:\Users\DIEGOM~1\AppData\Local\Temp\s1fo.s
-1ED2 cinit CODE >1238:C:\Users\DIEGOM~1\AppData\Local\Temp\s1fo.s
-1ED6 cinit CODE >1239:C:\Users\DIEGOM~1\AppData\Local\Temp\s1fo.s
-1EDA cinit CODE >1240:C:\Users\DIEGOM~1\AppData\Local\Temp\s1fo.s
-1EDA cinit CODE >1241:C:\Users\DIEGOM~1\AppData\Local\Temp\s1fo.s
-1EDC cinit CODE >1242:C:\Users\DIEGOM~1\AppData\Local\Temp\s1fo.s
-1EE0 cinit CODE >1243:C:\Users\DIEGOM~1\AppData\Local\Temp\s1fo.s
-1EE2 cinit CODE >1244:C:\Users\DIEGOM~1\AppData\Local\Temp\s1fo.s
-1EE4 cinit CODE >1245:C:\Users\DIEGOM~1\AppData\Local\Temp\s1fo.s
-1EE6 cinit CODE >1249:C:\Users\DIEGOM~1\AppData\Local\Temp\s1fo.s
-1EEA cinit CODE >1250:C:\Users\DIEGOM~1\AppData\Local\Temp\s1fo.s
-1EEE cinit CODE >1251:C:\Users\DIEGOM~1\AppData\Local\Temp\s1fo.s
-1EEE cinit CODE >1252:C:\Users\DIEGOM~1\AppData\Local\Temp\s1fo.s
-1EF0 cinit CODE >1253:C:\Users\DIEGOM~1\AppData\Local\Temp\s1fo.s
-1EF2 cinit CODE >1254:C:\Users\DIEGOM~1\AppData\Local\Temp\s1fo.s
-1EF4 cinit CODE >1255:C:\Users\DIEGOM~1\AppData\Local\Temp\s1fo.s
-1EF6 cinit CODE >1256:C:\Users\DIEGOM~1\AppData\Local\Temp\s1fo.s
-1EF8 cinit CODE >1257:C:\Users\DIEGOM~1\AppData\Local\Temp\s1fo.s
-1EFA cinit CODE >1260:C:\Users\DIEGOM~1\AppData\Local\Temp\s1fo.s
-1EFE cinit CODE >1261:C:\Users\DIEGOM~1\AppData\Local\Temp\s1fo.s
-1F00 cinit CODE >1262:C:\Users\DIEGOM~1\AppData\Local\Temp\s1fo.s
-1F00 cinit CODE >1263:C:\Users\DIEGOM~1\AppData\Local\Temp\s1fo.s
-1F02 cinit CODE >1264:C:\Users\DIEGOM~1\AppData\Local\Temp\s1fo.s
-1F04 cinit CODE >1265:C:\Users\DIEGOM~1\AppData\Local\Temp\s1fo.s
-1F06 cinit CODE >1268:C:\Users\DIEGOM~1\AppData\Local\Temp\s1fo.s
-1F0A cinit CODE >1269:C:\Users\DIEGOM~1\AppData\Local\Temp\s1fo.s
-1F0C cinit CODE >1270:C:\Users\DIEGOM~1\AppData\Local\Temp\s1fo.s
-1F0C cinit CODE >1271:C:\Users\DIEGOM~1\AppData\Local\Temp\s1fo.s
-1F0E cinit CODE >1272:C:\Users\DIEGOM~1\AppData\Local\Temp\s1fo.s
-1F10 cinit CODE >1273:C:\Users\DIEGOM~1\AppData\Local\Temp\s1fo.s
-1F12 cinit CODE >1276:C:\Users\DIEGOM~1\AppData\Local\Temp\s1fo.s
-1F14 cinit CODE >1277:C:\Users\DIEGOM~1\AppData\Local\Temp\s1fo.s
-1F16 cinit CODE >1278:C:\Users\DIEGOM~1\AppData\Local\Temp\s1fo.s
-1F18 cinit CODE >1279:C:\Users\DIEGOM~1\AppData\Local\Temp\s1fo.s
-1F1A cinit CODE >1280:C:\Users\DIEGOM~1\AppData\Local\Temp\s1fo.s
-1F1C cinit CODE >1286:C:\Users\DIEGOM~1\AppData\Local\Temp\s1fo.s
-1F1C cinit CODE >1288:C:\Users\DIEGOM~1\AppData\Local\Temp\s1fo.s
-1F1E cinit CODE >1289:C:\Users\DIEGOM~1\AppData\Local\Temp\s1fo.s
-1F20 cinit CODE >1291:C:\Users\DIEGOM~1\AppData\Local\Temp\s1fo.s
-1F22 cinit CODE >1292:C:\Users\DIEGOM~1\AppData\Local\Temp\s1fo.s
-1F24 cinit CODE >1293:C:\Users\DIEGOM~1\AppData\Local\Temp\s1fo.s
-1F26 cinit CODE >1294:C:\Users\DIEGOM~1\AppData\Local\Temp\s1fo.s
+8 intcode CODE >10434:C:\Users\DIEGOM~1\AppData\Local\Temp\s9t8.s
+8 intcode CODE >120:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1F86 text35 CODE >232:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1F88 text35 CODE >234:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1F8C text35 CODE >236:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1F9A text35 CODE >237:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1FA8 text35 CODE >238:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1FB6 text35 CODE >239:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1FBA text35 CODE >244:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1FDC text35 CODE >245:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1FDE intcode_body CODE >120:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1FE0 intcode_body CODE >122:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1FEE intcode_body CODE >124:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1FF4 intcode_body CODE >125:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+2006 intcode_body CODE >126:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+200A intcode_body CODE >127:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+200C intcode_body CODE >128:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+2022 intcode_body CODE >129:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+2026 intcode_body CODE >130:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+2028 intcode_body CODE >131:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+202C intcode_body CODE >134:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+202E intcode_body CODE >136:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+18CA text33 CODE >7:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
+18CA text33 CODE >13:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
+18CE text33 CODE >14:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
+18DC text33 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
+18EC text33 CODE >16:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
+18F0 text33 CODE >18:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
+18FE text33 CODE >19:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
+190E text33 CODE >20:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
+1912 text33 CODE >22:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
+1922 text33 CODE >23:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
+1938 text33 CODE >24:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
+193C text33 CODE >25:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
+1940 text33 CODE >26:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
+194A text33 CODE >27:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
+194C text33 CODE >25:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
+195A text33 CODE >30:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
+1964 text33 CODE >31:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
+1982 text33 CODE >32:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
+1992 text33 CODE >33:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
+1994 text33 CODE >35:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
+199E text33 CODE >36:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
+19A4 text33 CODE >38:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
+19B4 text33 CODE >39:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
+19C4 text33 CODE >40:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
+19D4 text33 CODE >41:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
+1DEC text32 CODE >13:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/UART.h
+1DEC text32 CODE >15:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/UART.h
+1DEC text32 CODE >16:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/UART.h
+1DEE text32 CODE >17:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/UART.h
+1DF0 text32 CODE >20:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/UART.h
+1E4C text32 CODE >23:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/UART.h
+1E4E text32 CODE >24:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/UART.h
+1E50 text32 CODE >25:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/UART.h
+1E52 text32 CODE >28:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/UART.h
+1E54 text32 CODE >29:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/UART.h
+1E56 text32 CODE >32:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/UART.h
+1E58 text32 CODE >33:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/UART.h
+1E5A text32 CODE >34:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/UART.h
+2032 text31 CODE >47:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
+2034 text31 CODE >49:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
+2034 text31 CODE >55:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
+2034 text31 CODE >56:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
+2036 text31 CODE >57:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
+2038 text31 CODE >61:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
+203C text31 CODE >63:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
+2040 text31 CODE >65:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
+2040 text31 CODE >66:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
+2042 text31 CODE >67:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
+2044 text31 CODE >68:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
+2046 text31 CODE >71:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
+204A text31 CODE >73:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
+204A text31 CODE >74:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
+204C text31 CODE >75:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
+204E text31 CODE >76:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
+2050 text31 CODE >77:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
+2054 text31 CODE >79:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
+207E text31 CODE >81:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
+2080 text31 CODE >82:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
+2288 text30 CODE >7:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/adc.h
+2288 text30 CODE >8:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/adc.h
+228C text30 CODE >9:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/adc.h
+2290 text30 CODE >10:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/adc.h
+1D78 text29 CODE >7:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwdiv.c
+1D78 text29 CODE >13:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwdiv.c
+1D80 text29 CODE >14:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwdiv.c
+1D92 text29 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwdiv.c
+1D96 text29 CODE >16:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwdiv.c
+1D9A text29 CODE >17:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwdiv.c
+1DA0 text29 CODE >18:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwdiv.c
+1DA2 text29 CODE >16:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwdiv.c
+1DB0 text29 CODE >21:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwdiv.c
+1DB6 text29 CODE >22:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwdiv.c
+1DCC text29 CODE >23:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwdiv.c
+1DD4 text29 CODE >24:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwdiv.c
+1DD6 text29 CODE >26:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwdiv.c
+1DDC text29 CODE >27:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwdiv.c
+1DE2 text29 CODE >28:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwdiv.c
+1DE2 text29 CODE >29:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwdiv.c
+1DEA text29 CODE >30:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwdiv.c
+1438 text28 CODE >10:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
+143A text28 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
+1458 text28 CODE >16:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
+148A text28 CODE >17:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
+148E text28 CODE >18:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
+148E text28 CODE >19:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
+149E text28 CODE >21:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
+14B4 text28 CODE >22:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
+14C8 text28 CODE >23:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
+14CC text28 CODE >24:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
+14D0 text28 CODE >25:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
+14D2 text28 CODE >26:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
+14DC text28 CODE >24:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
+150E text28 CODE >29:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
+1510 text28 CODE >30:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
+151C text28 CODE >31:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
+1526 text28 CODE >28:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
+1526 text28 CODE >32:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
+1558 text28 CODE >34:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
+155A text28 CODE >35:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
+1564 text28 CODE >33:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
+1582 text28 CODE >37:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
+1590 text28 CODE >38:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
+1592 text28 CODE >39:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
+1596 text28 CODE >40:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
+15BA text28 CODE >41:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
+15D8 text28 CODE >42:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
+15DA text28 CODE >43:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
+15EA text28 CODE >44:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
+1768 text27 CODE >26:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/ultrasonico.h
+176A text27 CODE >31:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/ultrasonico.h
+176E text27 CODE >32:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/ultrasonico.h
+1772 text27 CODE >33:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/ultrasonico.h
+177A text27 CODE >34:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/ultrasonico.h
+177C text27 CODE >35:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/ultrasonico.h
+1782 text27 CODE >36:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/ultrasonico.h
+1784 text27 CODE >38:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/ultrasonico.h
+1788 text27 CODE >42:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/ultrasonico.h
+1796 text27 CODE >43:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/ultrasonico.h
+1798 text27 CODE >44:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/ultrasonico.h
+17B8 text27 CODE >50:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/ultrasonico.h
+17C6 text27 CODE >51:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/ultrasonico.h
+17C8 text27 CODE >52:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/ultrasonico.h
+17E8 text27 CODE >58:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/ultrasonico.h
+17F6 text27 CODE >59:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/ultrasonico.h
+17F8 text27 CODE >60:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/ultrasonico.h
+1818 text27 CODE >64:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/ultrasonico.h
+184A text27 CODE >66:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/ultrasonico.h
+184C text27 CODE >68:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/ultrasonico.h
+185A text27 CODE >69:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/ultrasonico.h
+1868 text27 CODE >70:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/ultrasonico.h
+186C text27 CODE >72:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/ultrasonico.h
+18A2 text27 CODE >73:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/ultrasonico.h
+18A6 text27 CODE >74:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/ultrasonico.h
+18A6 text27 CODE >75:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/ultrasonico.h
+18A8 text27 CODE >76:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/ultrasonico.h
+18B8 text27 CODE >80:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/ultrasonico.h
+18C8 text27 CODE >82:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/ultrasonico.h
+CAE text26 CODE >11:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+CAE text26 CODE >26:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+CB6 text26 CODE >27:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+CBC text26 CODE >28:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+CCA text26 CODE >29:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+CCC text26 CODE >33:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+CDC text26 CODE >35:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+CEC text26 CODE >37:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+CFC text26 CODE >40:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+CFE text26 CODE >42:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+D02 text26 CODE >43:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+D06 text26 CODE >46:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+D16 text26 CODE >49:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+D1C text26 CODE >50:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+D22 text26 CODE >51:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+D30 text26 CODE >52:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+D32 text26 CODE >56:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+D42 text26 CODE >58:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+D52 text26 CODE >60:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+D62 text26 CODE >63:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+D64 text26 CODE >65:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+D68 text26 CODE >66:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+D6C text26 CODE >69:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+D7C text26 CODE >75:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+D92 text26 CODE >76:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+DA2 text26 CODE >77:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+DAA text26 CODE >78:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+DAE text26 CODE >79:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+DC2 text26 CODE >83:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+DD2 text26 CODE >84:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+DD2 text26 CODE >85:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+DE6 text26 CODE >89:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+E00 text26 CODE >92:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+E10 text26 CODE >93:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+E20 text26 CODE >94:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+E30 text26 CODE >96:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+E34 text26 CODE >97:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+E38 text26 CODE >100:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+E48 text26 CODE >101:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+E52 text26 CODE >102:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+E5C text26 CODE >103:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+E6A text26 CODE >104:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+E6C text26 CODE >105:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+E6C text26 CODE >106:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+E76 text26 CODE >112:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+E94 text26 CODE >115:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+E96 text26 CODE >116:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+EA6 text26 CODE >118:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+EA8 text26 CODE >97:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+EA8 text26 CODE >119:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+EB8 text26 CODE >122:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+ECE text26 CODE >123:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+ED4 text26 CODE >128:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+EDE text26 CODE >129:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+EEC text26 CODE >130:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+EEE text26 CODE >131:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+EEE text26 CODE >132:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+EF8 text26 CODE >133:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+EFE text26 CODE >127:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+F0C text26 CODE >139:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+F10 text26 CODE >140:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+F1E text26 CODE >141:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+F4C text26 CODE >142:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+F50 text26 CODE >143:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+F54 text26 CODE >144:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+F54 text26 CODE >145:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+F66 text26 CODE >149:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+F66 text26 CODE >150:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+F76 text26 CODE >151:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+F82 text26 CODE >152:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+F90 text26 CODE >153:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+FBA text26 CODE >154:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+FBE text26 CODE >159:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+FD8 text26 CODE >160:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+FDE text26 CODE >161:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+FEE text26 CODE >165:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+1008 text26 CODE >166:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+1010 text26 CODE >167:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+1020 text26 CODE >169:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+1024 text26 CODE >173:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+1028 text26 CODE >175:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+1036 text26 CODE >176:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+1038 text26 CODE >177:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+103C text26 CODE >180:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+103E text26 CODE >182:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+1048 text26 CODE >185:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
+4D2 text25 CODE >8:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+4D2 text25 CODE >17:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+4D8 text25 CODE >18:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+4DE text25 CODE >19:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+4EC text25 CODE >20:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+4EE text25 CODE >24:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+4FE text25 CODE >26:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+50E text25 CODE >28:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+51E text25 CODE >31:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+520 text25 CODE >33:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+524 text25 CODE >36:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+534 text25 CODE >39:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+53A text25 CODE >40:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+540 text25 CODE >41:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+54E text25 CODE >42:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+550 text25 CODE >45:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+560 text25 CODE >48:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+570 text25 CODE >50:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+580 text25 CODE >53:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+582 text25 CODE >54:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+586 text25 CODE >57:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+596 text25 CODE >58:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+596 text25 CODE >65:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+5B6 text25 CODE >66:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+5CA text25 CODE >95:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+5D6 text25 CODE >96:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+5E0 text25 CODE >97:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+5EA text25 CODE >98:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+5F6 text25 CODE >99:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+602 text25 CODE >100:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+60E text25 CODE >101:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+61A text25 CODE >102:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+626 text25 CODE >103:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+632 text25 CODE >104:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+640 text25 CODE >105:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+64C text25 CODE >106:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+65C text25 CODE >107:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+668 text25 CODE >108:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+678 text25 CODE >109:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+686 text25 CODE >110:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+692 text25 CODE >111:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+6A2 text25 CODE >112:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+6AE text25 CODE >113:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+6BE text25 CODE >114:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+6CA text25 CODE >115:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+6DA text25 CODE >116:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+6E6 text25 CODE >117:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+710 text25 CODE >145:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+746 text25 CODE >146:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+754 text25 CODE >149:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+76E text25 CODE >152:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+772 text25 CODE >153:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+77C text25 CODE >154:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+78A text25 CODE >155:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+78C text25 CODE >156:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+78C text25 CODE >157:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+796 text25 CODE >158:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+79C text25 CODE >152:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+7AA text25 CODE >163:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+7AE text25 CODE >164:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+7BC text25 CODE >165:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+7EA text25 CODE >166:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+7EE text25 CODE >167:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+7F2 text25 CODE >168:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+7F2 text25 CODE >169:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+804 text25 CODE >173:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+804 text25 CODE >174:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+814 text25 CODE >175:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+820 text25 CODE >176:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+82E text25 CODE >177:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+858 text25 CODE >178:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+85C text25 CODE >183:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+876 text25 CODE >184:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+886 text25 CODE >185:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+88A text25 CODE >187:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+8A4 text25 CODE >188:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+8B4 text25 CODE >190:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+8B8 text25 CODE >191:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+8BC text25 CODE >192:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+8BC text25 CODE >194:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+8C0 text25 CODE >195:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+8D0 text25 CODE >196:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+8DE text25 CODE >197:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+8E0 text25 CODE >199:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+8E6 text25 CODE >201:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+8EA text25 CODE >203:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+8FA text25 CODE >205:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
+19D6 text24 CODE >43:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\fltol.c
+19D6 text24 CODE >47:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\fltol.c
+19EE text24 CODE >48:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\fltol.c
+1A02 text24 CODE >49:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\fltol.c
+1A2C text24 CODE >50:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\fltol.c
+1A2E text24 CODE >51:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\fltol.c
+1A3E text24 CODE >52:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\fltol.c
+1A42 text24 CODE >53:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\fltol.c
+1A50 text24 CODE >54:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\fltol.c
+1A68 text24 CODE >57:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\fltol.c
+1A7C text24 CODE >60:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\fltol.c
+1A90 text24 CODE >63:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\fltol.c
+1A9A text24 CODE >64:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\fltol.c
+1A9C text24 CODE >62:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\fltol.c
+1AAC text24 CODE >67:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\fltol.c
+1ABC text24 CODE >68:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\fltol.c
+1ACC text24 CODE >69:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\fltol.c
+1ADC text24 CODE >70:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\fltol.c
+1E5C text23 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul32.c
+1E5C text23 CODE >119:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul32.c
+1E6C text23 CODE >121:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul32.c
+1E7A text23 CODE >122:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul32.c
+1E8A text23 CODE >123:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul32.c
+1E94 text23 CODE >124:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul32.c
+1E9E text23 CODE >125:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul32.c
+1EB4 text23 CODE >128:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul32.c
+1EC4 text23 CODE >129:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul32.c
+1CFE text22 CODE >16:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
+1CFE text22 CODE >17:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
+1D76 text22 CODE >18:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
+127C text21 CODE >20:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
+127C text21 CODE >22:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
+12DC text21 CODE >24:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
+12FC text21 CODE >26:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
+137E text21 CODE >28:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
+1382 text21 CODE >31:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
+13B6 text21 CODE >32:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
+13BA text21 CODE >33:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
+13C2 text21 CODE >34:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
+13C6 text21 CODE >37:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
+13FA text21 CODE >38:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
+13FE text21 CODE >39:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
+1406 text21 CODE >40:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
+140A text21 CODE >42:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
+1436 text21 CODE >45:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
+21B2 text20 CODE >1188:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+21B2 text20 CODE >1190:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+21C4 text20 CODE >1191:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+21D6 text20 CODE >1193:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+2082 text19 CODE >247:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+2082 text19 CODE >249:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+2086 text19 CODE >251:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+209C text19 CODE >252:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+20B2 text19 CODE >253:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+20C8 text19 CODE >255:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+20CC text19 CODE >257:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+218C text18 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul16.c
+218C text18 CODE >37:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul16.c
+2198 text18 CODE >38:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul16.c
+21A0 text18 CODE >39:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul16.c
+21A8 text18 CODE >52:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul16.c
+21B0 text18 CODE >53:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul16.c
+1ADE text17 CODE >4:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\flge.c
+1ADE text17 CODE >7:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\flge.c
+1B0C text17 CODE >8:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\flge.c
+1B1C text17 CODE >9:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\flge.c
+1B4A text17 CODE >10:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\flge.c
+1B5A text17 CODE >12:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\flge.c
+1B68 text17 CODE >13:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\flge.c
+1B7A text17 CODE >14:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\flge.c
+1B88 text17 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\flge.c
+1B9A text17 CODE >16:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\flge.c
+1BAA text17 CODE >17:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\flge.c
+1BBA text17 CODE >18:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\flge.c
+1BE0 text17 CODE >19:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\flge.c
+2154 text16 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\flneg.c
+2154 text16 CODE >17:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\flneg.c
+216A text16 CODE >18:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\flneg.c
+217A text16 CODE >19:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\flneg.c
+218A text16 CODE >20:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\flneg.c
+12 text15 CODE >10:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+12 text15 CODE >21:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+18 text15 CODE >22:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+1E text15 CODE >23:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+2C text15 CODE >24:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+2E text15 CODE >28:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+3E text15 CODE >30:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+4E text15 CODE >32:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+5E text15 CODE >35:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+60 text15 CODE >37:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+64 text15 CODE >38:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+68 text15 CODE >41:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+78 text15 CODE >44:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+7E text15 CODE >46:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+90 text15 CODE >47:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+92 text15 CODE >49:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+98 text15 CODE >50:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+A6 text15 CODE >51:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+A8 text15 CODE >55:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+B8 text15 CODE >57:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+C8 text15 CODE >59:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+D8 text15 CODE >62:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+DA text15 CODE >64:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+DE text15 CODE >65:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+E2 text15 CODE >68:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+F2 text15 CODE >75:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+104 text15 CODE >77:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+112 text15 CODE >78:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+116 text15 CODE >81:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+11A text15 CODE >82:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+11E text15 CODE >83:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+122 text15 CODE >84:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+126 text15 CODE >85:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+12A text15 CODE >86:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+12E text15 CODE >87:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+132 text15 CODE >88:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+136 text15 CODE >89:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+13A text15 CODE >90:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+13E text15 CODE >91:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+142 text15 CODE >92:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+146 text15 CODE >93:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+14A text15 CODE >94:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+14E text15 CODE >95:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+152 text15 CODE >98:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+156 text15 CODE >100:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+180 text15 CODE >101:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+19C text15 CODE >102:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+1AC text15 CODE >103:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+1B0 text15 CODE >104:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+1B4 text15 CODE >106:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+1B4 text15 CODE >109:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+1C2 text15 CODE >110:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+1CA text15 CODE >111:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+1CE text15 CODE >113:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+1D2 text15 CODE >115:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+1E0 text15 CODE >116:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+1E2 text15 CODE >118:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+1EC text15 CODE >119:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+1EE text15 CODE >106:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+1EE text15 CODE >120:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+200 text15 CODE >121:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+200 text15 CODE >124:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+20E text15 CODE >127:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+21E text15 CODE >128:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+232 text15 CODE >132:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+242 text15 CODE >134:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+250 text15 CODE >135:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+25E text15 CODE >136:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+266 text15 CODE >137:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+26A text15 CODE >139:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+26E text15 CODE >141:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+27C text15 CODE >142:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+27E text15 CODE >144:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+288 text15 CODE >145:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+28E text15 CODE >153:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+2B4 text15 CODE >154:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+2E4 text15 CODE >155:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+2E8 text15 CODE >156:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+2EA text15 CODE >157:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+2FA text15 CODE >158:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+30A text15 CODE >162:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+31A text15 CODE >163:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+31A text15 CODE >166:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+340 text15 CODE >167:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+354 text15 CODE >172:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+35E text15 CODE >173:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+36C text15 CODE >174:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+36E text15 CODE >176:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+37C text15 CODE >177:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+380 text15 CODE >178:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+384 text15 CODE >180:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+388 text15 CODE >182:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+398 text15 CODE >183:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+39A text15 CODE >171:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+3A8 text15 CODE >192:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+3AC text15 CODE >193:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+3BA text15 CODE >194:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+3D0 text15 CODE >195:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+3D4 text15 CODE >196:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+3D8 text15 CODE >197:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+3D8 text15 CODE >198:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+3EA text15 CODE >202:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+3EA text15 CODE >203:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+3FA text15 CODE >204:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+406 text15 CODE >205:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+414 text15 CODE >206:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+43E text15 CODE >207:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+44E text15 CODE >208:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+450 text15 CODE >215:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+470 text15 CODE >216:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+480 text15 CODE >218:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+490 text15 CODE >219:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+494 text15 CODE >225:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+4A2 text15 CODE >226:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+4A4 text15 CODE >227:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+4A8 text15 CODE >230:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+4AA text15 CODE >232:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+4B0 text15 CODE >233:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+4BE text15 CODE >234:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+4C0 text15 CODE >236:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+4D0 text15 CODE >237:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+20CE text14 CODE >245:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+20CE text14 CODE >248:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+20DE text14 CODE >249:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+2112 text14 CODE >250:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+8FC text13 CODE >12:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\roundf.c
+8FC text13 CODE >14:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\roundf.c
+91C text13 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\roundf.c
+94A text13 CODE >18:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\roundf.c
+966 text13 CODE >19:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\roundf.c
+97A text13 CODE >20:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\roundf.c
+9B6 text13 CODE >21:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\roundf.c
+9DA text13 CODE >22:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\roundf.c
+9F8 text13 CODE >24:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\roundf.c
+A30 text13 CODE >10:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\roundf.c
+A98 text13 CODE >26:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\roundf.c
+ACC text13 CODE >27:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\roundf.c
+AFE text13 CODE >28:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\roundf.c
+B6A text13 CODE >29:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\roundf.c
+B9C text13 CODE >30:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\roundf.c
+C08 text13 CODE >32:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\roundf.c
+C3C text13 CODE >33:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\roundf.c
+C78 text13 CODE >34:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\roundf.c
+C9C text13 CODE >35:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\roundf.c
+CAC text13 CODE >36:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\roundf.c
+104A text12 CODE >1152:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+104A text12 CODE >1154:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+104A text12 CODE >1155:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1054 text12 CODE >1159:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1094 text12 CODE >1161:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1166 text12 CODE >1163:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+116E text12 CODE >1165:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+11EC text12 CODE >1166:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1258 text12 CODE >1168:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1268 text12 CODE >1169:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+127A text12 CODE >1170:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+221A text11 CODE >488:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+221A text11 CODE >489:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+221C text11 CODE >490:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+221E text11 CODE >491:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+2220 text11 CODE >492:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+2222 text11 CODE >493:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+2238 text11 CODE >495:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+227E text10 CODE >461:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+227E text10 CODE >463:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+2280 text10 CODE >464:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+2282 text10 CODE >465:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+2284 text10 CODE >466:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+2286 text10 CODE >467:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+21D8 text9 CODE >469:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+21D8 text9 CODE >470:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+21DA text9 CODE >471:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+21DC text9 CODE >472:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+21DE text9 CODE >473:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+21E0 text9 CODE >475:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+21F8 text9 CODE >477:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+2254 text8 CODE >507:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+2254 text8 CODE >509:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+2258 text8 CODE >510:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+225C text8 CODE >511:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+2260 text8 CODE >512:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+2264 text8 CODE >513:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+2268 text8 CODE >514:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+226C text8 CODE >515:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+21FA text7 CODE >479:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+21FA text7 CODE >480:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+21FC text7 CODE >481:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+21FE text7 CODE >482:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+2200 text7 CODE >483:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+2202 text7 CODE >484:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+2218 text7 CODE >486:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+223A text6 CODE >497:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+223A text6 CODE >499:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+223E text6 CODE >500:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+2242 text6 CODE >501:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+2246 text6 CODE >502:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+224A text6 CODE >503:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+224E text6 CODE >504:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+2252 text6 CODE >505:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+2114 text5 CODE >517:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+2114 text5 CODE >519:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+2146 text5 CODE >520:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+214E text5 CODE >522:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+2152 text5 CODE >523:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+226E text4 CODE >454:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+226E text4 CODE >455:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+2272 text4 CODE >456:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+2276 text4 CODE >457:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+227C text4 CODE >459:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+15EC text3 CODE >1119:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+15EC text3 CODE >1121:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+164A text3 CODE >1122:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+16A8 text3 CODE >1123:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1706 text3 CODE >1125:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1716 text3 CODE >1126:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1726 text3 CODE >1127:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1736 text3 CODE >1131:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1736 text3 CODE >1132:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1746 text3 CODE >1140:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1746 text3 CODE >1141:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1756 text3 CODE >1144:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1766 text3 CODE >1150:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1C78 text2 CODE >578:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1C78 text2 CODE >580:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1C7C text2 CODE >582:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1C7C text2 CODE >584:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1C7E text2 CODE >585:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1C80 text2 CODE >586:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1C82 text2 CODE >587:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1C84 text2 CODE >589:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1C88 text2 CODE >591:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1C88 text2 CODE >593:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1C8A text2 CODE >594:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1C8C text2 CODE >595:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1C8E text2 CODE >596:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1C90 text2 CODE >598:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1CA6 text2 CODE >600:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1CAA text2 CODE >602:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1CAA text2 CODE >604:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1CAC text2 CODE >605:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1CAE text2 CODE >606:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1CB0 text2 CODE >607:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1CB6 text2 CODE >613:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1CB6 text2 CODE >615:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1CB8 text2 CODE >616:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1CBA text2 CODE >617:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1CBC text2 CODE >618:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1CBE text2 CODE >620:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1CC2 text2 CODE >622:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1CFC text2 CODE >624:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1F2A text1 CODE >1172:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1F2A text1 CODE >1174:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1F2E text1 CODE >1176:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1F60 text1 CODE >1177:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1F64 text1 CODE >1178:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1F68 text1 CODE >1179:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1F6C text1 CODE >1180:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1F70 text1 CODE >1181:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1F74 text1 CODE >1183:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1F84 text1 CODE >1186:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1BE2 text0 CODE >1204:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1BE2 text0 CODE >1206:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1BE8 text0 CODE >1210:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1BEA text0 CODE >1211:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1BEC text0 CODE >1212:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1BEE text0 CODE >1214:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1BF0 text0 CODE >1215:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1BF2 text0 CODE >1216:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1BF4 text0 CODE >1217:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1BF6 text0 CODE >1219:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1BF8 text0 CODE >1220:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1BFA text0 CODE >1221:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1BFC text0 CODE >1222:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1BFE text0 CODE >1224:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1C00 text0 CODE >1225:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1C02 text0 CODE >1227:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1C04 text0 CODE >1228:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1C06 text0 CODE >1229:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1C08 text0 CODE >1230:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1C0A text0 CODE >1231:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1C0C text0 CODE >1232:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1C0E text0 CODE >1235:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1C12 text0 CODE >1237:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1C18 text0 CODE >1238:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1C1E text0 CODE >1239:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1C22 text0 CODE >1241:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1C36 text0 CODE >1246:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1C48 text0 CODE >1248:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1C58 text0 CODE >1249:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1C5C text0 CODE >1250:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1C60 text0 CODE >1255:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1C64 text0 CODE >1258:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1C68 text0 CODE >1260:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1C6C text0 CODE >1262:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1EC6 cinit CODE >1103:C:\Users\DIEGOM~1\AppData\Local\Temp\s9t8.s
+1EC6 cinit CODE >1105:C:\Users\DIEGOM~1\AppData\Local\Temp\s9t8.s
+1EC6 cinit CODE >1108:C:\Users\DIEGOM~1\AppData\Local\Temp\s9t8.s
+1EC6 cinit CODE >1239:C:\Users\DIEGOM~1\AppData\Local\Temp\s9t8.s
+1EC8 cinit CODE >1240:C:\Users\DIEGOM~1\AppData\Local\Temp\s9t8.s
+1ECA cinit CODE >1241:C:\Users\DIEGOM~1\AppData\Local\Temp\s9t8.s
+1ECC cinit CODE >1242:C:\Users\DIEGOM~1\AppData\Local\Temp\s9t8.s
+1ECE cinit CODE >1243:C:\Users\DIEGOM~1\AppData\Local\Temp\s9t8.s
+1ED0 cinit CODE >1244:C:\Users\DIEGOM~1\AppData\Local\Temp\s9t8.s
+1ED2 cinit CODE >1245:C:\Users\DIEGOM~1\AppData\Local\Temp\s9t8.s
+1ED6 cinit CODE >1246:C:\Users\DIEGOM~1\AppData\Local\Temp\s9t8.s
+1EDA cinit CODE >1247:C:\Users\DIEGOM~1\AppData\Local\Temp\s9t8.s
+1EDA cinit CODE >1248:C:\Users\DIEGOM~1\AppData\Local\Temp\s9t8.s
+1EDC cinit CODE >1249:C:\Users\DIEGOM~1\AppData\Local\Temp\s9t8.s
+1EE0 cinit CODE >1250:C:\Users\DIEGOM~1\AppData\Local\Temp\s9t8.s
+1EE2 cinit CODE >1251:C:\Users\DIEGOM~1\AppData\Local\Temp\s9t8.s
+1EE4 cinit CODE >1252:C:\Users\DIEGOM~1\AppData\Local\Temp\s9t8.s
+1EE6 cinit CODE >1256:C:\Users\DIEGOM~1\AppData\Local\Temp\s9t8.s
+1EEA cinit CODE >1257:C:\Users\DIEGOM~1\AppData\Local\Temp\s9t8.s
+1EEE cinit CODE >1258:C:\Users\DIEGOM~1\AppData\Local\Temp\s9t8.s
+1EEE cinit CODE >1259:C:\Users\DIEGOM~1\AppData\Local\Temp\s9t8.s
+1EF0 cinit CODE >1260:C:\Users\DIEGOM~1\AppData\Local\Temp\s9t8.s
+1EF2 cinit CODE >1261:C:\Users\DIEGOM~1\AppData\Local\Temp\s9t8.s
+1EF4 cinit CODE >1262:C:\Users\DIEGOM~1\AppData\Local\Temp\s9t8.s
+1EF6 cinit CODE >1263:C:\Users\DIEGOM~1\AppData\Local\Temp\s9t8.s
+1EF8 cinit CODE >1264:C:\Users\DIEGOM~1\AppData\Local\Temp\s9t8.s
+1EFA cinit CODE >1267:C:\Users\DIEGOM~1\AppData\Local\Temp\s9t8.s
+1EFE cinit CODE >1268:C:\Users\DIEGOM~1\AppData\Local\Temp\s9t8.s
+1F00 cinit CODE >1269:C:\Users\DIEGOM~1\AppData\Local\Temp\s9t8.s
+1F00 cinit CODE >1270:C:\Users\DIEGOM~1\AppData\Local\Temp\s9t8.s
+1F02 cinit CODE >1271:C:\Users\DIEGOM~1\AppData\Local\Temp\s9t8.s
+1F04 cinit CODE >1272:C:\Users\DIEGOM~1\AppData\Local\Temp\s9t8.s
+1F06 cinit CODE >1275:C:\Users\DIEGOM~1\AppData\Local\Temp\s9t8.s
+1F0A cinit CODE >1276:C:\Users\DIEGOM~1\AppData\Local\Temp\s9t8.s
+1F0C cinit CODE >1277:C:\Users\DIEGOM~1\AppData\Local\Temp\s9t8.s
+1F0C cinit CODE >1278:C:\Users\DIEGOM~1\AppData\Local\Temp\s9t8.s
+1F0E cinit CODE >1279:C:\Users\DIEGOM~1\AppData\Local\Temp\s9t8.s
+1F10 cinit CODE >1280:C:\Users\DIEGOM~1\AppData\Local\Temp\s9t8.s
+1F12 cinit CODE >1283:C:\Users\DIEGOM~1\AppData\Local\Temp\s9t8.s
+1F14 cinit CODE >1284:C:\Users\DIEGOM~1\AppData\Local\Temp\s9t8.s
+1F16 cinit CODE >1285:C:\Users\DIEGOM~1\AppData\Local\Temp\s9t8.s
+1F18 cinit CODE >1286:C:\Users\DIEGOM~1\AppData\Local\Temp\s9t8.s
+1F1A cinit CODE >1287:C:\Users\DIEGOM~1\AppData\Local\Temp\s9t8.s
+1F1C cinit CODE >1293:C:\Users\DIEGOM~1\AppData\Local\Temp\s9t8.s
+1F1C cinit CODE >1295:C:\Users\DIEGOM~1\AppData\Local\Temp\s9t8.s
+1F1E cinit CODE >1296:C:\Users\DIEGOM~1\AppData\Local\Temp\s9t8.s
+1F20 cinit CODE >1298:C:\Users\DIEGOM~1\AppData\Local\Temp\s9t8.s
+1F22 cinit CODE >1299:C:\Users\DIEGOM~1\AppData\Local\Temp\s9t8.s
+1F24 cinit CODE >1300:C:\Users\DIEGOM~1\AppData\Local\Temp\s9t8.s
+1F26 cinit CODE >1301:C:\Users\DIEGOM~1\AppData\Local\Temp\s9t8.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -857,22 +880,22 @@ __Hspace_2 0 0 ABS 0 - dist/default/production\microMouse.X.production.o
 __CFG_IESO$OFF 0 0 ABS 0 - dist/default/production\microMouse.X.production.o
 __HidataBANK0 0 0 ABS 0 idataBANK0 dist/default/production\microMouse.X.production.o
 pwmDuty@channel BB 0 BANK0 1 cstackBANK0 dist/default/production\microMouse.X.production.o
-_inicializarComportamientoBasico 2082 0 CODE 0 text16 dist/default/production\microMouse.X.production.o
+_inicializarComportamientoBasico 2082 0 CODE 0 text19 dist/default/production\microMouse.X.production.o
 __Hibigdata 0 0 CODE 0 ibigdata dist/default/production\microMouse.X.production.o
-__mediumconst 7EB6 0 MEDIUMCONST 0 mediumconst C:\Users\DIEGOM~1\AppData\Local\Temp\s1fo.o
+__mediumconst 7EB6 0 MEDIUMCONST 0 mediumconst C:\Users\DIEGOM~1\AppData\Local\Temp\s9t8.o
 __Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\microMouse.X.production.o
-_forzarParoAuto 2204 0 CODE 0 text7 dist/default/production\microMouse.X.production.o
+_forzarParoAuto 227E 0 CODE 0 text10 dist/default/production\microMouse.X.production.o
 __CFG_MCLRE$ON 0 0 ABS 0 - dist/default/production\microMouse.X.production.o
-_velocidadEstandar 2172 0 CODE 0 text17 dist/default/production\microMouse.X.production.o
+_velocidadEstandar 21B2 0 CODE 0 text20 dist/default/production\microMouse.X.production.o
 ?_map 20 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
 __Lsmallconst 0 0 SMALLCONST 0 smallconst dist/default/production\microMouse.X.production.o
 _RCIF 7CF5 0 ABS 0 - dist/default/production\microMouse.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\DIEGOM~1\AppData\Local\Temp\s1fo.o
+___sp 0 0 STACK 2 stack C:\Users\DIEGOM~1\AppData\Local\Temp\s9t8.o
 _main 1BE2 0 CODE 0 text0 dist/default/production\microMouse.X.production.o
 btemp 5A 0 COMRAM 1 temp dist/default/production\microMouse.X.production.o
 map@x 20 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
 __HbssBIGRAM 0 0 ABS 0 bssBIGRAM dist/default/production\microMouse.X.production.o
-start E 0 CODE 0 init C:\Users\DIEGOM~1\AppData\Local\Temp\s1fo.o
+start E 0 CODE 0 init C:\Users\DIEGOM~1\AppData\Local\Temp\s9t8.o
 ___flmul@aexp 2C 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
 ___flmul@bexp 2D 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
 ___flmul@prod 2E 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
@@ -894,7 +917,6 @@ __HbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\microMouse.X.production
 ?___wmul 6 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
 _llegoDestino 57 0 COMRAM 1 bssCOMRAM dist/default/production\microMouse.X.production.o
 __LidataBANK0 0 0 ABS 0 idataBANK0 dist/default/production\microMouse.X.production.o
-_forzarEspejeoAuto 21DA 0 CODE 0 text5 dist/default/production\microMouse.X.production.o
 __Hpowerup E 0 CODE 0 powerup dist/default/production\microMouse.X.production.o
 comportamientoBasico@caminosRecorrer 92 0 BANK0 1 bssBANK0 dist/default/production\microMouse.X.production.o
 ttemp5 5B 0 COMRAM 1 temp dist/default/production\microMouse.X.production.o
@@ -903,13 +925,14 @@ ttemp7 62 0 COMRAM 1 temp dist/default/production\microMouse.X.production.o
 __end_of_probarPID 1F86 0 CODE 0 text1 dist/default/production\microMouse.X.production.o
 __LbssBIGRAM 0 0 ABS 0 bssBIGRAM dist/default/production\microMouse.X.production.o
 __size_of_probarPID 0 0 ABS 0 - dist/default/production\microMouse.X.production.o
-__accesstop 60 0 ABS 0 - C:\Users\DIEGOM~1\AppData\Local\Temp\s1fo.o
-intlevel0 0 0 CODE 0 text C:\Users\DIEGOM~1\AppData\Local\Temp\s1fo.o
-intlevel1 0 0 CODE 0 text C:\Users\DIEGOM~1\AppData\Local\Temp\s1fo.o
-intlevel2 0 0 CODE 0 text C:\Users\DIEGOM~1\AppData\Local\Temp\s1fo.o
-intlevel3 0 0 CODE 0 text C:\Users\DIEGOM~1\AppData\Local\Temp\s1fo.o
+__accesstop 60 0 ABS 0 - C:\Users\DIEGOM~1\AppData\Local\Temp\s9t8.o
+intlevel0 0 0 CODE 0 text C:\Users\DIEGOM~1\AppData\Local\Temp\s9t8.o
+intlevel1 0 0 CODE 0 text C:\Users\DIEGOM~1\AppData\Local\Temp\s9t8.o
+intlevel2 0 0 CODE 0 text C:\Users\DIEGOM~1\AppData\Local\Temp\s9t8.o
+intlevel3 0 0 CODE 0 text C:\Users\DIEGOM~1\AppData\Local\Temp\s9t8.o
 _oldSensorEnfrente 70 0 BANK0 1 bssBANK0 dist/default/production\microMouse.X.production.o
 __LbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\microMouse.X.production.o
+__size_of_forzarEspejeoIzquierda 0 0 ABS 0 - dist/default/production\microMouse.X.production.o
 __CFG_USBDIV$1 0 0 ABS 0 - dist/default/production\microMouse.X.production.o
 ___aldiv@divisor 16 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
 __LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\microMouse.X.production.o
@@ -920,8 +943,8 @@ __CFG_EBTR2$OFF 0 0 ABS 0 - dist/default/production\microMouse.X.production.o
 __CFG_EBTR3$OFF 0 0 ABS 0 - dist/default/production\microMouse.X.production.o
 __size_of_configurarAdc 0 0 ABS 0 - dist/default/production\microMouse.X.production.o
 __CFG_EBTRB$OFF 0 0 ABS 0 - dist/default/production\microMouse.X.production.o
-_forzarReversa 2198 0 CODE 0 text6 dist/default/production\microMouse.X.production.o
-__end_of_forzarParoAuto 220E 0 CODE 0 text7 dist/default/production\microMouse.X.production.o
+_forzarReversa 21D8 0 CODE 0 text9 dist/default/production\microMouse.X.production.o
+__end_of_forzarParoAuto 2288 0 CODE 0 text10 dist/default/production\microMouse.X.production.o
 __Hifardata 0 0 CODE 0 ifardata dist/default/production\microMouse.X.production.o
 ___aldiv@sign 1B 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
 roundf@e A1 0 BANK0 1 cstackBANK0 dist/default/production\microMouse.X.production.o
@@ -929,7 +952,7 @@ roundf@u A7 0 BANK0 1 cstackBANK0 dist/default/production\microMouse.X.productio
 roundf@x 4C 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
 roundf@y AB 0 BANK0 1 cstackBANK0 dist/default/production\microMouse.X.production.o
 __Hclrtext 0 0 ABS 0 clrtext dist/default/production\microMouse.X.production.o
-__end_of_configPwm 2082 0 CODE 0 text28 dist/default/production\microMouse.X.production.o
+__end_of_configPwm 2082 0 CODE 0 text31 dist/default/production\microMouse.X.production.o
 _probarPID 1F2A 0 CODE 0 text1 dist/default/production\microMouse.X.production.o
 __size_of_configPwm 0 0 ABS 0 - dist/default/production\microMouse.X.production.o
 ___wmul@multiplicand 8 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
@@ -937,8 +960,8 @@ _ADCON1 FC1 0 ABS 0 - dist/default/production\microMouse.X.production.o
 _ADCON2 FC0 0 ABS 0 - dist/default/production\microMouse.X.production.o
 _ADRESH FC4 0 ABS 0 - dist/default/production\microMouse.X.production.o
 _ADRESL FC3 0 ABS 0 - dist/default/production\microMouse.X.production.o
-___inthi_sp 0 0 STACK 2 stack C:\Users\DIEGOM~1\AppData\Local\Temp\s1fo.o
-___intlo_sp 0 0 STACK 2 stack C:\Users\DIEGOM~1\AppData\Local\Temp\s1fo.o
+___inthi_sp 0 0 STACK 2 stack C:\Users\DIEGOM~1\AppData\Local\Temp\s9t8.o
+___intlo_sp 0 0 STACK 2 stack C:\Users\DIEGOM~1\AppData\Local\Temp\s9t8.o
 comportamientoBasico@contCaminosRecorridos 9B 0 BANK0 1 bssBANK0 dist/default/production\microMouse.X.production.o
 ?_dameDistancia 1B 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
 _CCP1M2 7DEA 0 ABS 0 - dist/default/production\microMouse.X.production.o
@@ -949,13 +972,13 @@ _CCPR1L FBE 0 ABS 0 - dist/default/production\microMouse.X.production.o
 _CCPR2L FBB 0 ABS 0 - dist/default/production\microMouse.X.production.o
 comportamientoBasico@mapear 8C 0 BANK0 1 bssBANK0 dist/default/production\microMouse.X.production.o
 __Hintcode_body 0 0 ABS 0 intcode_body dist/default/production\microMouse.X.production.o
-__end_of___flge 1BE2 0 CODE 0 text14 dist/default/production\microMouse.X.production.o
-__end_of___lmul 1EC6 0 CODE 0 text20 dist/default/production\microMouse.X.production.o
-__end_of___wmul 2172 0 CODE 0 text15 dist/default/production\microMouse.X.production.o
-__end_of_configurarAdc 2218 0 CODE 0 text27 dist/default/production\microMouse.X.production.o
+__end_of___flge 1BE2 0 CODE 0 text17 dist/default/production\microMouse.X.production.o
+__end_of___lmul 1EC6 0 CODE 0 text23 dist/default/production\microMouse.X.production.o
+__end_of___wmul 21B2 0 CODE 0 text18 dist/default/production\microMouse.X.production.o
+__end_of_configurarAdc 2292 0 CODE 0 text30 dist/default/production\microMouse.X.production.o
 comportamientoBasico@movimientosRealizados 100 0 BANK1 1 bssBANK1 dist/default/production\microMouse.X.production.o
 __Lintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production\microMouse.X.production.o
-_configPwm 2032 0 CODE 0 text28 dist/default/production\microMouse.X.production.o
+_configPwm 2032 0 CODE 0 text31 dist/default/production\microMouse.X.production.o
 _sensorDerecha 84 0 BANK0 1 bssBANK0 dist/default/production\microMouse.X.production.o
 ___fldiv@aexp A9 0 BANK0 1 cstackBANK0 dist/default/production\microMouse.X.production.o
 ___fldiv@bexp A8 0 BANK0 1 cstackBANK0 dist/default/production\microMouse.X.production.o
@@ -963,17 +986,18 @@ ___fldiv@sign A1 0 BANK0 1 cstackBANK0 dist/default/production\microMouse.X.prod
 __Hmediumconst 8000 0 MEDIUMCONST 0 mediumconst dist/default/production\microMouse.X.production.o
 __Hintcodelo E 0 CODE 0 intcodelo dist/default/production\microMouse.X.production.o
 __size_of_inicializarComportamientoBasico 0 0 ABS 0 - dist/default/production\microMouse.X.production.o
-__end_of___aldiv 19D6 0 CODE 0 text30 dist/default/production\microMouse.X.production.o
-__end_of___fladd 4D2 0 CODE 0 text12 dist/default/production\microMouse.X.production.o
-__end_of___fldiv 104A 0 CODE 0 text23 dist/default/production\microMouse.X.production.o
-__end_of___flmul 8FC 0 CODE 0 text22 dist/default/production\microMouse.X.production.o
-__end_of___flneg 214C 0 CODE 0 text13 dist/default/production\microMouse.X.production.o
-__end_of___flsub 2114 0 CODE 0 text11 dist/default/production\microMouse.X.production.o
-__end_of___fltol 1ADE 0 CODE 0 text21 dist/default/production\microMouse.X.production.o
-__end_of___lwdiv 1DEC 0 CODE 0 text26 dist/default/production\microMouse.X.production.o
+__end_of___aldiv 19D6 0 CODE 0 text33 dist/default/production\microMouse.X.production.o
+__end_of___fladd 4D2 0 CODE 0 text15 dist/default/production\microMouse.X.production.o
+__end_of___fldiv 104A 0 CODE 0 text26 dist/default/production\microMouse.X.production.o
+__end_of___flmul 8FC 0 CODE 0 text25 dist/default/production\microMouse.X.production.o
+__end_of___flneg 218C 0 CODE 0 text16 dist/default/production\microMouse.X.production.o
+__end_of___flsub 2114 0 CODE 0 text14 dist/default/production\microMouse.X.production.o
+__end_of___fltol 1ADE 0 CODE 0 text24 dist/default/production\microMouse.X.production.o
+__end_of___lwdiv 1DEC 0 CODE 0 text29 dist/default/production\microMouse.X.production.o
 ?_roundf 4C 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
 _INT0IF 7F91 0 ABS 0 - dist/default/production\microMouse.X.production.o
 main@iniciado D9 0 BANK0 1 cstackBANK0 dist/default/production\microMouse.X.production.o
+__size_of_forzarGiroDerecha 0 0 ABS 0 - dist/default/production\microMouse.X.production.o
 __CFG_FOSC$XT_XT 0 0 ABS 0 - dist/default/production\microMouse.X.production.o
 ___lwdiv@quotient A 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
 __size_of_boton 0 0 ABS 0 - dist/default/production\microMouse.X.production.o
@@ -1016,9 +1040,10 @@ _TRISC2 7CA2 0 ABS 0 - dist/default/production\microMouse.X.production.o
 _TRISC6 7CA6 0 ABS 0 - dist/default/production\microMouse.X.production.o
 _TRISC7 7CA7 0 ABS 0 - dist/default/production\microMouse.X.production.o
 _TRISD3 7CAB 0 ABS 0 - dist/default/production\microMouse.X.production.o
+_forzarEspejeo 2114 0 CODE 0 text5 dist/default/production\microMouse.X.production.o
 pwmDuty@duty C1 0 BANK0 1 cstackBANK0 dist/default/production\microMouse.X.production.o
-_antiRebote 1F86 0 CODE 0 text32 dist/default/production\microMouse.X.production.o
-__end_of_roundf CAE 0 CODE 0 text10 dist/default/production\microMouse.X.production.o
+_antiRebote 1F86 0 CODE 0 text35 dist/default/production\microMouse.X.production.o
+__end_of_roundf CAE 0 CODE 0 text13 dist/default/production\microMouse.X.production.o
 dameDistancia@conteo 26 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
 __size_of_pwmDuty 0 0 ABS 0 - dist/default/production\microMouse.X.production.o
 _sensorEnfrente 7C 0 BANK0 1 bssBANK0 dist/default/production\microMouse.X.production.o
@@ -1049,18 +1074,18 @@ __Htext7 0 0 ABS 0 text7 dist/default/production\microMouse.X.production.o
 __Htext8 0 0 ABS 0 text8 dist/default/production\microMouse.X.production.o
 __Htext9 0 0 ABS 0 text9 dist/default/production\microMouse.X.production.o
 ___lwdiv@counter C 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
-_roundf$1496 A3 0 BANK0 1 cstackBANK0 dist/default/production\microMouse.X.production.o
-_roundf$1497 9D 0 BANK0 1 cstackBANK0 dist/default/production\microMouse.X.production.o
+_roundf$1508 A3 0 BANK0 1 cstackBANK0 dist/default/production\microMouse.X.production.o
+_roundf$1509 9D 0 BANK0 1 cstackBANK0 dist/default/production\microMouse.X.production.o
 __size_of___xxtofl 0 0 ABS 0 - dist/default/production\microMouse.X.production.o
 __Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production\microMouse.X.production.o
 __Hbigram 0 0 ABS 0 bigram dist/default/production\microMouse.X.production.o
-__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\DIEGOM~1\AppData\Local\Temp\s1fo.o
+__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\DIEGOM~1\AppData\Local\Temp\s9t8.o
 ___xxtofl@arg 17 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
 ___xxtofl@exp 16 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
 ___xxtofl@val D 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
 __Hcomram 0 0 ABS 0 comram dist/default/production\microMouse.X.production.o
 __Hconfig 30000E 0 CONFIG 0 config dist/default/production\microMouse.X.production.o
-__end_of_forzarReversa 21BA 0 CODE 0 text6 dist/default/production\microMouse.X.production.o
+__end_of_forzarReversa 21FA 0 CODE 0 text9 dist/default/production\microMouse.X.production.o
 __CFG_LPT1OSC$OFF 0 0 ABS 0 - dist/default/production\microMouse.X.production.o
 __Lbank0 0 0 ABS 0 bank0 dist/default/production\microMouse.X.production.o
 __Lbank1 0 0 ABS 0 bank1 dist/default/production\microMouse.X.production.o
@@ -1108,35 +1133,39 @@ __Lrbss 0 0 COMRAM 1 rbss dist/default/production\microMouse.X.production.o
 __Ltemp 5A 0 COMRAM 1 temp dist/default/production\microMouse.X.production.o
 __Ltext 0 0 ABS 0 text dist/default/production\microMouse.X.production.o
 __CFG_XINST$OFF 0 0 ABS 0 - dist/default/production\microMouse.X.production.o
-___flge 1ADE 0 CODE 0 text14 dist/default/production\microMouse.X.production.o
-___lmul 1E5C 0 CODE 0 text20 dist/default/production\microMouse.X.production.o
-___wmul 214C 0 CODE 0 text15 dist/default/production\microMouse.X.production.o
-_dameDistancia 1768 0 CODE 0 text24 dist/default/production\microMouse.X.production.o
+__size_of_forzarEspejeoDerecha 0 0 ABS 0 - dist/default/production\microMouse.X.production.o
+___flge 1ADE 0 CODE 0 text17 dist/default/production\microMouse.X.production.o
+___lmul 1E5C 0 CODE 0 text23 dist/default/production\microMouse.X.production.o
+___wmul 218C 0 CODE 0 text18 dist/default/production\microMouse.X.production.o
+_dameDistancia 1768 0 CODE 0 text27 dist/default/production\microMouse.X.production.o
 __LcstackBANK0 0 0 ABS 0 cstackBANK0 dist/default/production\microMouse.X.production.o
 int$flags 5A 0 COMRAM 1 temp dist/default/production\microMouse.X.production.o
 __HcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production\microMouse.X.production.o
 __Hintret 0 0 ABS 0 intret dist/default/production\microMouse.X.production.o
 __Hirdata 0 0 CODE 0 irdata dist/default/production\microMouse.X.production.o
-_PID 104A 0 CODE 0 text9 dist/default/production\microMouse.X.production.o
+_PID 104A 0 CODE 0 text12 dist/default/production\microMouse.X.production.o
 _PR2 FCB 0 ABS 0 - dist/default/production\microMouse.X.production.o
 __S0 30000E 0 ABS 0 - dist/default/production\microMouse.X.production.o
 __S1 5E2 0 ABS 0 - dist/default/production\microMouse.X.production.o
 __S2 0 0 ABS 0 - dist/default/production\microMouse.X.production.o
-_map 1CFE 0 CODE 0 text19 dist/default/production\microMouse.X.production.o
+_map 1CFE 0 CODE 0 text22 dist/default/production\microMouse.X.production.o
 __CFG_VREGEN$OFF 0 0 ABS 0 - dist/default/production\microMouse.X.production.o
-__end_of_finalizarRecorrido 2204 0 CODE 0 text4 dist/default/production\microMouse.X.production.o
+__end_of_finalizarRecorrido 227E 0 CODE 0 text4 dist/default/production\microMouse.X.production.o
 _buffer 1C8 0 BANK1 1 bssBANK1 dist/default/production\microMouse.X.production.o
 __CFG_PLLDIV$1 0 0 ABS 0 - dist/default/production\microMouse.X.production.o
 comportamientoBasico@cruceDetectado 8B 0 BANK0 1 bssBANK0 dist/default/production\microMouse.X.production.o
+_forzarEspejeoIzquierda 223A 0 CODE 0 text6 dist/default/production\microMouse.X.production.o
+__end_of_forzarEspejeoDerecha 226E 0 CODE 0 text8 dist/default/production\microMouse.X.production.o
+__end_of_forzarGiroDerecha 223A 0 CODE 0 text11 dist/default/production\microMouse.X.production.o
 __CFG_PBADEN$OFF 0 0 ABS 0 - dist/default/production\microMouse.X.production.o
 configPwm@channel 8 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
-__end_of_antiRebote 1FDE 0 CODE 0 text32 dist/default/production\microMouse.X.production.o
+__end_of_antiRebote 1FDE 0 CODE 0 text35 dist/default/production\microMouse.X.production.o
 __Lbigdata 0 0 BIGRAM 1 bigdata dist/default/production\microMouse.X.production.o
 __Hnvrram 0 0 COMRAM 1 nvrram dist/default/production\microMouse.X.production.o
 comportamientoBasico@numMovimientos 97 0 BANK0 1 bssBANK0 dist/default/production\microMouse.X.production.o
-___xxtofl 1438 0 CODE 0 text25 dist/default/production\microMouse.X.production.o
-__end_of_PID 127C 0 CODE 0 text9 dist/default/production\microMouse.X.production.o
-__end_of_map 1D78 0 CODE 0 text19 dist/default/production\microMouse.X.production.o
+___xxtofl 1438 0 CODE 0 text28 dist/default/production\microMouse.X.production.o
+__end_of_PID 127C 0 CODE 0 text12 dist/default/production\microMouse.X.production.o
+__end_of_map 1D78 0 CODE 0 text22 dist/default/production\microMouse.X.production.o
 int_func 1FDE 0 CODE 0 intcode_body dist/default/production\microMouse.X.production.o
 comportamientoBasico@investigandoCruce 58 0 COMRAM 1 bssCOMRAM dist/default/production\microMouse.X.production.o
 __Lintentry 0 0 ABS 0 intentry dist/default/production\microMouse.X.production.o
@@ -1145,7 +1174,8 @@ _oldSensorDerecha 78 0 BANK0 1 bssBANK0 dist/default/production\microMouse.X.pro
 _DISTANCIA_PRIORIDAD_ALTA 6C 0 BANK0 1 bssBANK0 dist/default/production\microMouse.X.production.o
 _DISTANCIA_PRIORIDAD_BAJA 64 0 BANK0 1 bssBANK0 dist/default/production\microMouse.X.production.o
 __Hrparam 0 0 COMRAM 1 rparam dist/default/production\microMouse.X.production.o
-__end_of___xxtofl 15EC 0 CODE 0 text25 dist/default/production\microMouse.X.production.o
+__end_of___xxtofl 15EC 0 CODE 0 text28 dist/default/production\microMouse.X.production.o
+__size_of_forzarEspejeo 0 0 ABS 0 - dist/default/production\microMouse.X.production.o
 __pdataBANK0 DA 0 BANK0 1 dataBANK0 dist/default/production\microMouse.X.production.o
 _SENSOR_PRIORIDAD_ALTA DD 0 BANK0 1 dataBANK0 dist/default/production\microMouse.X.production.o
 _SENSOR_PRIORIDAD_BAJA DB 0 BANK0 1 dataBANK0 dist/default/production\microMouse.X.production.o
@@ -1178,46 +1208,52 @@ __Htext27 0 0 ABS 0 text27 dist/default/production\microMouse.X.production.o
 __Htext28 0 0 ABS 0 text28 dist/default/production\microMouse.X.production.o
 __Htext29 0 0 ABS 0 text29 dist/default/production\microMouse.X.production.o
 __Htext30 0 0 ABS 0 text30 dist/default/production\microMouse.X.production.o
+__Htext31 0 0 ABS 0 text31 dist/default/production\microMouse.X.production.o
 __Htext32 0 0 ABS 0 text32 dist/default/production\microMouse.X.production.o
-_finalizarRecorrido 21F4 0 CODE 0 text4 dist/default/production\microMouse.X.production.o
-_PID$1495 C7 0 BANK0 1 cstackBANK0 dist/default/production\microMouse.X.production.o
-__end_of_pwmDuty 1438 0 CODE 0 text18 dist/default/production\microMouse.X.production.o
+__Htext33 0 0 ABS 0 text33 dist/default/production\microMouse.X.production.o
+__Htext35 0 0 ABS 0 text35 dist/default/production\microMouse.X.production.o
+_finalizarRecorrido 226E 0 CODE 0 text4 dist/default/production\microMouse.X.production.o
+_PID$1507 C7 0 BANK0 1 cstackBANK0 dist/default/production\microMouse.X.production.o
+__end_of_pwmDuty 1438 0 CODE 0 text21 dist/default/production\microMouse.X.production.o
 __size_of_forzarParoAuto 0 0 ABS 0 - dist/default/production\microMouse.X.production.o
 _RCSTAbits FAB 0 ABS 0 - dist/default/production\microMouse.X.production.o
 _sensorIzquierda 80 0 BANK0 1 bssBANK0 dist/default/production\microMouse.X.production.o
 ___fladd@signs 40 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
-__ptext10 8FC 0 CODE 0 text10 dist/default/production\microMouse.X.production.o
-__ptext11 20CE 0 CODE 0 text11 dist/default/production\microMouse.X.production.o
-__ptext12 12 0 CODE 0 text12 dist/default/production\microMouse.X.production.o
-__ptext13 2114 0 CODE 0 text13 dist/default/production\microMouse.X.production.o
-__ptext14 1ADE 0 CODE 0 text14 dist/default/production\microMouse.X.production.o
-__ptext15 214C 0 CODE 0 text15 dist/default/production\microMouse.X.production.o
-__ptext16 2082 0 CODE 0 text16 dist/default/production\microMouse.X.production.o
-__ptext17 2172 0 CODE 0 text17 dist/default/production\microMouse.X.production.o
-__ptext18 127C 0 CODE 0 text18 dist/default/production\microMouse.X.production.o
-__ptext19 1CFE 0 CODE 0 text19 dist/default/production\microMouse.X.production.o
-__ptext20 1E5C 0 CODE 0 text20 dist/default/production\microMouse.X.production.o
-__ptext21 19D6 0 CODE 0 text21 dist/default/production\microMouse.X.production.o
-__ptext22 4D2 0 CODE 0 text22 dist/default/production\microMouse.X.production.o
-__ptext23 CAE 0 CODE 0 text23 dist/default/production\microMouse.X.production.o
-__ptext24 1768 0 CODE 0 text24 dist/default/production\microMouse.X.production.o
-__ptext25 1438 0 CODE 0 text25 dist/default/production\microMouse.X.production.o
-__ptext26 1D78 0 CODE 0 text26 dist/default/production\microMouse.X.production.o
-__ptext27 220E 0 CODE 0 text27 dist/default/production\microMouse.X.production.o
-__ptext28 2032 0 CODE 0 text28 dist/default/production\microMouse.X.production.o
-__ptext29 1DEC 0 CODE 0 text29 dist/default/production\microMouse.X.production.o
-__ptext30 18CA 0 CODE 0 text30 dist/default/production\microMouse.X.production.o
-__ptext32 1F86 0 CODE 0 text32 dist/default/production\microMouse.X.production.o
-___aldiv 18CA 0 CODE 0 text30 dist/default/production\microMouse.X.production.o
-___fladd 12 0 CODE 0 text12 dist/default/production\microMouse.X.production.o
-___fldiv CAE 0 CODE 0 text23 dist/default/production\microMouse.X.production.o
-___flmul 4D2 0 CODE 0 text22 dist/default/production\microMouse.X.production.o
-___flneg 2114 0 CODE 0 text13 dist/default/production\microMouse.X.production.o
-___flsub 20CE 0 CODE 0 text11 dist/default/production\microMouse.X.production.o
-___fltol 19D6 0 CODE 0 text21 dist/default/production\microMouse.X.production.o
+__ptext10 227E 0 CODE 0 text10 dist/default/production\microMouse.X.production.o
+__ptext11 221A 0 CODE 0 text11 dist/default/production\microMouse.X.production.o
+__ptext12 104A 0 CODE 0 text12 dist/default/production\microMouse.X.production.o
+__ptext13 8FC 0 CODE 0 text13 dist/default/production\microMouse.X.production.o
+__ptext14 20CE 0 CODE 0 text14 dist/default/production\microMouse.X.production.o
+__ptext15 12 0 CODE 0 text15 dist/default/production\microMouse.X.production.o
+__ptext16 2154 0 CODE 0 text16 dist/default/production\microMouse.X.production.o
+__ptext17 1ADE 0 CODE 0 text17 dist/default/production\microMouse.X.production.o
+__ptext18 218C 0 CODE 0 text18 dist/default/production\microMouse.X.production.o
+__ptext19 2082 0 CODE 0 text19 dist/default/production\microMouse.X.production.o
+__ptext20 21B2 0 CODE 0 text20 dist/default/production\microMouse.X.production.o
+__ptext21 127C 0 CODE 0 text21 dist/default/production\microMouse.X.production.o
+__ptext22 1CFE 0 CODE 0 text22 dist/default/production\microMouse.X.production.o
+__ptext23 1E5C 0 CODE 0 text23 dist/default/production\microMouse.X.production.o
+__ptext24 19D6 0 CODE 0 text24 dist/default/production\microMouse.X.production.o
+__ptext25 4D2 0 CODE 0 text25 dist/default/production\microMouse.X.production.o
+__ptext26 CAE 0 CODE 0 text26 dist/default/production\microMouse.X.production.o
+__ptext27 1768 0 CODE 0 text27 dist/default/production\microMouse.X.production.o
+__ptext28 1438 0 CODE 0 text28 dist/default/production\microMouse.X.production.o
+__ptext29 1D78 0 CODE 0 text29 dist/default/production\microMouse.X.production.o
+__ptext30 2288 0 CODE 0 text30 dist/default/production\microMouse.X.production.o
+__ptext31 2032 0 CODE 0 text31 dist/default/production\microMouse.X.production.o
+__ptext32 1DEC 0 CODE 0 text32 dist/default/production\microMouse.X.production.o
+__ptext33 18CA 0 CODE 0 text33 dist/default/production\microMouse.X.production.o
+__ptext35 1F86 0 CODE 0 text35 dist/default/production\microMouse.X.production.o
+___aldiv 18CA 0 CODE 0 text33 dist/default/production\microMouse.X.production.o
+___fladd 12 0 CODE 0 text15 dist/default/production\microMouse.X.production.o
+___fldiv CAE 0 CODE 0 text26 dist/default/production\microMouse.X.production.o
+___flmul 4D2 0 CODE 0 text25 dist/default/production\microMouse.X.production.o
+___flneg 2154 0 CODE 0 text16 dist/default/production\microMouse.X.production.o
+___flsub 20CE 0 CODE 0 text14 dist/default/production\microMouse.X.production.o
+___fltol 19D6 0 CODE 0 text24 dist/default/production\microMouse.X.production.o
 _leerSensores 15EC 0 CODE 0 text3 dist/default/production\microMouse.X.production.o
 __pintcode_body 1FDE 0 CODE 0 intcode_body dist/default/production\microMouse.X.production.o
-___lwdiv 1D78 0 CODE 0 text26 dist/default/production\microMouse.X.production.o
+___lwdiv 1D78 0 CODE 0 text29 dist/default/production\microMouse.X.production.o
 __Lbigbss 0 0 BIGRAM 1 bigbss dist/default/production\microMouse.X.production.o
 __Lbigram 0 0 ABS 0 bigram dist/default/production\microMouse.X.production.o
 __CFG_BOR$OFF 0 0 ABS 0 - dist/default/production\microMouse.X.production.o
@@ -1229,10 +1265,11 @@ __Lcomram 0 0 ABS 0 comram dist/default/production\microMouse.X.production.o
 __Lconfig 300000 0 CONFIG 0 config dist/default/production\microMouse.X.production.o
 ___wmul@multiplier 6 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
 antiRebote@pin 3 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
-__end_of_inicializarComportamientoBasico 20CE 0 CODE 0 text16 dist/default/production\microMouse.X.production.o
+__end_of_inicializarComportamientoBasico 20CE 0 CODE 0 text19 dist/default/production\microMouse.X.production.o
 ___fldiv@grs A4 0 BANK0 1 cstackBANK0 dist/default/production\microMouse.X.production.o
 ___fldiv@rem 9D 0 BANK0 1 cstackBANK0 dist/default/production\microMouse.X.production.o
-_roundf 8FC 0 CODE 0 text10 dist/default/production\microMouse.X.production.o
+__end_of_forzarEspejeo 2154 0 CODE 0 text5 dist/default/production\microMouse.X.production.o
+_roundf 8FC 0 CODE 0 text13 dist/default/production\microMouse.X.production.o
 __Lfarbss 0 0 FARRAM 0 farbss dist/default/production\microMouse.X.production.o
 ___lwdiv@divisor 8 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
 __Lfardata 0 0 FARRAM 0 fardata dist/default/production\microMouse.X.production.o
@@ -1241,20 +1278,20 @@ map@in_min 24 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.produ
 ___fldiv@new_exp A2 0 BANK0 1 cstackBANK0 dist/default/production\microMouse.X.production.o
 __size_of_dameDistancia 0 0 ABS 0 - dist/default/production\microMouse.X.production.o
 __CFG_CCP2MX$ON 0 0 ABS 0 - dist/default/production\microMouse.X.production.o
-stackhi 7FF 0 ABS 0 - C:\Users\DIEGOM~1\AppData\Local\Temp\s1fo.o
-stacklo 5E2 0 ABS 0 - C:\Users\DIEGOM~1\AppData\Local\Temp\s1fo.o
+stackhi 7FF 0 ABS 0 - C:\Users\DIEGOM~1\AppData\Local\Temp\s9t8.o
+stacklo 5E2 0 ABS 0 - C:\Users\DIEGOM~1\AppData\Local\Temp\s9t8.o
 comportamientoBasico@caminoEncontrado 8A 0 BANK0 1 bssBANK0 dist/default/production\microMouse.X.production.o
-_forzarGiroIzquierda 21BA 0 CODE 0 text8 dist/default/production\microMouse.X.production.o
+_forzarGiroIzquierda 21FA 0 CODE 0 text7 dist/default/production\microMouse.X.production.o
 __Lintcode 8 0 CODE 0 intcode dist/default/production\microMouse.X.production.o
 __Lintret 0 0 ABS 0 intret dist/default/production\microMouse.X.production.o
 __Lirdata 0 0 CODE 0 irdata dist/default/production\microMouse.X.production.o
 _ADCON0bits FC2 0 ABS 0 - dist/default/production\microMouse.X.production.o
 ___fladd@grs 43 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
-__size_of_forzarEspejeoAuto 0 0 ABS 0 - dist/default/production\microMouse.X.production.o
 __CFG_LVP$OFF 0 0 ABS 0 - dist/default/production\microMouse.X.production.o
 __pbssBIGRAM 1FA 0 BIGRAM 1 bssBIGRAM dist/default/production\microMouse.X.production.o
 __CFG_ICPRT$OFF 0 0 ABS 0 - dist/default/production\microMouse.X.production.o
 _oldSensorIzquierda 74 0 BANK0 1 bssBANK0 dist/default/production\microMouse.X.production.o
+_forzarGiroDerecha 221A 0 CODE 0 text11 dist/default/production\microMouse.X.production.o
 __Lspace_0 0 0 ABS 0 - dist/default/production\microMouse.X.production.o
 __Lspace_1 0 0 ABS 0 - dist/default/production\microMouse.X.production.o
 __Lspace_2 0 0 ABS 0 - dist/default/production\microMouse.X.production.o
@@ -1285,7 +1322,7 @@ ___lwdiv@dividend 6 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X
 ?___flsub 44 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
 ?___fltol AF 0 BANK0 1 cstackBANK0 dist/default/production\microMouse.X.production.o
 ?___lwdiv 6 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
-__end_of_dameDistancia 18CA 0 CODE 0 text24 dist/default/production\microMouse.X.production.o
+__end_of_dameDistancia 18CA 0 CODE 0 text27 dist/default/production\microMouse.X.production.o
 __Hreset_vec 4 0 CODE 0 reset_vec dist/default/production\microMouse.X.production.o
 PID@dif D3 0 BANK0 1 cstackBANK0 dist/default/production\microMouse.X.production.o
 UART_init@BAUD 20 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
@@ -1293,7 +1330,7 @@ __size_of_roundf 0 0 ABS 0 - dist/default/production\microMouse.X.production.o
 __HbssBANK0 0 0 ABS 0 bssBANK0 dist/default/production\microMouse.X.production.o
 __HbssBANK1 0 0 ABS 0 bssBANK1 dist/default/production\microMouse.X.production.o
 __Lramtop 800 0 RAM 0 ramtop dist/default/production\microMouse.X.production.o
-__end_of_UART_init 1E5C 0 CODE 0 text29 dist/default/production\microMouse.X.production.o
+__end_of_UART_init 1E5C 0 CODE 0 text32 dist/default/production\microMouse.X.production.o
 comportamientoBasico@numMovimientosTotales 95 0 BANK0 1 bssBANK0 dist/default/production\microMouse.X.production.o
 __Lrparam 0 0 COMRAM 1 rparam dist/default/production\microMouse.X.production.o
 __pcinit 1EC6 0 CODE 0 cinit dist/default/production\microMouse.X.production.o
@@ -1303,12 +1340,12 @@ __ptext0 1BE2 0 CODE 0 text0 dist/default/production\microMouse.X.production.o
 __ptext1 1F2A 0 CODE 0 text1 dist/default/production\microMouse.X.production.o
 __ptext2 1C78 0 CODE 0 text2 dist/default/production\microMouse.X.production.o
 __ptext3 15EC 0 CODE 0 text3 dist/default/production\microMouse.X.production.o
-__ptext4 21F4 0 CODE 0 text4 dist/default/production\microMouse.X.production.o
-__ptext5 21DA 0 CODE 0 text5 dist/default/production\microMouse.X.production.o
-__ptext6 2198 0 CODE 0 text6 dist/default/production\microMouse.X.production.o
-__ptext7 2204 0 CODE 0 text7 dist/default/production\microMouse.X.production.o
-__ptext8 21BA 0 CODE 0 text8 dist/default/production\microMouse.X.production.o
-__ptext9 104A 0 CODE 0 text9 dist/default/production\microMouse.X.production.o
+__ptext4 226E 0 CODE 0 text4 dist/default/production\microMouse.X.production.o
+__ptext5 2114 0 CODE 0 text5 dist/default/production\microMouse.X.production.o
+__ptext6 223A 0 CODE 0 text6 dist/default/production\microMouse.X.production.o
+__ptext7 21FA 0 CODE 0 text7 dist/default/production\microMouse.X.production.o
+__ptext8 2254 0 CODE 0 text8 dist/default/production\microMouse.X.production.o
+__ptext9 21D8 0 CODE 0 text9 dist/default/production\microMouse.X.production.o
 PID@error D5 0 BANK0 1 cstackBANK0 dist/default/production\microMouse.X.production.o
 __end_of_leerSensores 1768 0 CODE 0 text3 dist/default/production\microMouse.X.production.o
 __Lstruct 0 0 COMRAM 1 struct dist/default/production\microMouse.X.production.o
@@ -1333,8 +1370,11 @@ __Ltext27 0 0 ABS 0 text27 dist/default/production\microMouse.X.production.o
 __Ltext28 0 0 ABS 0 text28 dist/default/production\microMouse.X.production.o
 __Ltext29 0 0 ABS 0 text29 dist/default/production\microMouse.X.production.o
 __Ltext30 0 0 ABS 0 text30 dist/default/production\microMouse.X.production.o
+__Ltext31 0 0 ABS 0 text31 dist/default/production\microMouse.X.production.o
 __Ltext32 0 0 ABS 0 text32 dist/default/production\microMouse.X.production.o
-__ramtop 800 0 RAM 0 ramtop C:\Users\DIEGOM~1\AppData\Local\Temp\s1fo.o
+__Ltext33 0 0 ABS 0 text33 dist/default/production\microMouse.X.production.o
+__Ltext35 0 0 ABS 0 text35 dist/default/production\microMouse.X.production.o
+__ramtop 800 0 RAM 0 ramtop C:\Users\DIEGOM~1\AppData\Local\Temp\s9t8.o
 ___aldiv@dividend 12 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
 __Lpowerup E 0 CODE 0 powerup dist/default/production\microMouse.X.production.o
 ?___xxtofl D 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
@@ -1345,7 +1385,8 @@ ___fltol@sign1 B7 0 BANK0 1 cstackBANK0 dist/default/production\microMouse.X.pro
 comportamientoBasico@posicionInvCruce 9C 0 BANK0 1 bssBANK0 dist/default/production\microMouse.X.production.o
 __Lreset_vec 0 0 CODE 0 reset_vec dist/default/production\microMouse.X.production.o
 comportamientoBasico@carroEspejeado 59 0 COMRAM 1 bssCOMRAM dist/default/production\microMouse.X.production.o
-_UART_init 1DEC 0 CODE 0 text29 dist/default/production\microMouse.X.production.o
+__end_of_forzarEspejeoIzquierda 2254 0 CODE 0 text6 dist/default/production\microMouse.X.production.o
+_UART_init 1DEC 0 CODE 0 text32 dist/default/production\microMouse.X.production.o
 roundf@F525 60 0 BANK0 1 bssBANK0 dist/default/production\microMouse.X.production.o
 ___fltol@f1 AF 0 BANK0 1 cstackBANK0 dist/default/production\microMouse.X.production.o
 ___param_bank 0 0 ABS 0 - dist/default/production\microMouse.X.production.o
@@ -1361,22 +1402,22 @@ __CFG_WRTB$OFF 0 0 ABS 0 - dist/default/production\microMouse.X.production.o
 __Libigdata 0 0 CODE 0 ibigdata dist/default/production\microMouse.X.production.o
 __CFG_WRTC$OFF 0 0 ABS 0 - dist/default/production\microMouse.X.production.o
 __CFG_WRTD$OFF 0 0 ABS 0 - dist/default/production\microMouse.X.production.o
-__pidataBANK0 2218 0 CODE 0 idataBANK0 dist/default/production\microMouse.X.production.o
-__end_of_velocidadEstandar 2198 0 CODE 0 text17 dist/default/production\microMouse.X.production.o
+__pidataBANK0 2292 0 CODE 0 idataBANK0 dist/default/production\microMouse.X.production.o
+__end_of_velocidadEstandar 21D8 0 CODE 0 text20 dist/default/production\microMouse.X.production.o
 __Lclrtext 0 0 ABS 0 clrtext dist/default/production\microMouse.X.production.o
 comportamientoBasico@espejearCarroY 8D 0 BANK0 1 bssBANK0 dist/default/production\microMouse.X.production.o
 ___lmul@product E 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
 ___lmul@multiplicand A 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
 __CFG_PWRT$OFF 0 0 ABS 0 - dist/default/production\microMouse.X.production.o
 __pcstackCOMRAM 1 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
-__end_of_forzarGiroIzquierda 21DA 0 CODE 0 text8 dist/default/production\microMouse.X.production.o
+__end_of_forzarGiroIzquierda 221A 0 CODE 0 text7 dist/default/production\microMouse.X.production.o
 _TXSTAbits FAC 0 ABS 0 - dist/default/production\microMouse.X.production.o
-_UART_init$1494 28 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
+_UART_init$1506 28 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
 _T2CKPS0 7E50 0 ABS 0 - dist/default/production\microMouse.X.production.o
 _T2CKPS1 7E51 0 ABS 0 - dist/default/production\microMouse.X.production.o
 __pmediumconst 7EB6 0 MEDIUMCONST 0 mediumconst dist/default/production\microMouse.X.production.o
-_PID$735 CD 0 BANK0 1 cstackBANK0 dist/default/production\microMouse.X.production.o
-_PID$737 D1 0 BANK0 1 cstackBANK0 dist/default/production\microMouse.X.production.o
+_PID$741 CD 0 BANK0 1 cstackBANK0 dist/default/production\microMouse.X.production.o
+_PID$743 D1 0 BANK0 1 cstackBANK0 dist/default/production\microMouse.X.production.o
 ___aldiv@counter 1A 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
 dameDistancia@numeroSensor 21 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
 __end_of_main 1C78 0 CODE 0 text0 dist/default/production\microMouse.X.production.o
@@ -1398,7 +1439,6 @@ _T1CON FCD 0 ABS 0 - dist/default/production\microMouse.X.production.o
 _TMR1H FCF 0 ABS 0 - dist/default/production\microMouse.X.production.o
 _TMR1L FCE 0 ABS 0 - dist/default/production\microMouse.X.production.o
 _TXREG FAD 0 ABS 0 - dist/default/production\microMouse.X.production.o
-__end_of_forzarEspejeoAuto 21F4 0 CODE 0 text5 dist/default/production\microMouse.X.production.o
 __end_of_toint 7EBB 0 MEDIUMCONST 0 mediumconst dist/default/production\microMouse.X.production.o
 __CFG_CP0$OFF 0 0 ABS 0 - dist/default/production\microMouse.X.production.o
 __CFG_CP1$OFF 0 0 ABS 0 - dist/default/production\microMouse.X.production.o
@@ -1423,9 +1463,10 @@ _CCP2CON FBA 0 ABS 0 - dist/default/production\microMouse.X.production.o
 __size_of_PID 0 0 ABS 0 - dist/default/production\microMouse.X.production.o
 __size_of_map 0 0 ABS 0 - dist/default/production\microMouse.X.production.o
 __HdataBANK0 0 0 ABS 0 dataBANK0 dist/default/production\microMouse.X.production.o
+_forzarEspejeoDerecha 2254 0 CODE 0 text8 dist/default/production\microMouse.X.production.o
 __size_of_finalizarRecorrido 0 0 ABS 0 - dist/default/production\microMouse.X.production.o
-_pwmDuty 127C 0 CODE 0 text18 dist/default/production\microMouse.X.production.o
-_configurarAdc 220E 0 CODE 0 text27 dist/default/production\microMouse.X.production.o
+_pwmDuty 127C 0 CODE 0 text21 dist/default/production\microMouse.X.production.o
+_configurarAdc 2288 0 CODE 0 text30 dist/default/production\microMouse.X.production.o
 __initialization 1EC6 0 CODE 0 cinit dist/default/production\microMouse.X.production.o
 ___xxtofl@sign 15 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
 __pbssBANK0 60 0 BANK0 1 bssBANK0 dist/default/production\microMouse.X.production.o
@@ -1466,7 +1507,7 @@ cstackCOMRAM 1 1 1 5A 1
 reset_vec 0 0 0 4 1
 bssBANK0 1 60 60 7E 1
 bssBANK1 1 100 100 FA 1
-intcode 0 8 8 2214 1
+intcode 0 8 8 228E 1
 bssBIGRAM 1 1FA 1FA 3E8 1
 mediumconst 0 7EB6 7EB6 14A 1
 config 0 300000 300000 E 1

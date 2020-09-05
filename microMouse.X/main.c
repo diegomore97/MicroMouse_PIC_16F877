@@ -15,8 +15,7 @@
 #define UMBRAL_SENSOR_OPTICO_REFLEXIVO 100 //Unidad que representa el minimo de luz percibida para detectar negro
 #define VELOCIDAD_MOTORES 100 //Porcentaje de ciclo de trabajo a la que trabajaran los motores
 #define TIEMPO_REVERSA 400 //Tiempo en milisegundos que avanzara el carro en reversa
-#define TIEMPO_AVANCE_IZQUIERDA 410 //Tiempo en milisegundos que avanzara el carro al girar
-#define TIEMPO_AVANCE_DERECHA 410 //Tiempo en milisegundos que avanzara el carro al girar
+#define TIEMPO_AVANCE_LATERAL 410 //Tiempo en milisegundos que avanzara el carro al girar
 #define MAX_MOVIMIENTOS_GUARDADOS 200 //Para mapear y regresar a algun lugar si llegamos a un callejon
 #define MAX_MOVIMIENTOS_CAMINO_FINAL 1000 //El maximo de movimientos a realizar para llegar al destino
 
@@ -95,11 +94,14 @@ void probarGirosAuto(void);
 void visualizarPasosRealizados(T_UINT numMovimientos);
 void recorrerCaminoEncontrado(T_UBYTE* movimientos, T_UINT numMovimientos);
 void forzarParoAuto(void);
-void forzarEspejeoAuto(void);
+void forzarEspejeo(void);
+void forzarEspejeoIzquierda(void);
+void forzarEspejeoDerecha(void);
 void finalizarRecorrido(void);
 void probarPID(void);
 void forzarReversa(void);
 void forzarGiroIzquierda(void);
+void forzarGiroDerecha(void);
 
 //Vladi
 void registraPosicionActual(void); //Posicion Actual del auto
@@ -442,7 +444,7 @@ void comportamientoBasico(void) {
     } else { //Ya Tenemos un camino mapeado para resolver el laberinto
         recorrerCaminoEncontrado(caminoFinal, numMovimientosTotales);
         __delay_ms(3000); //Esperar 3 segundos en la meta
-        forzarEspejeoAuto(); //Cuando se llega a la meta nos regresamos
+        forzarEspejeo(); //Cuando se llega a la meta nos regresamos
         regresarPuntoPartida(caminoFinal, numMovimientosTotales); //Regresar al punto de partida
         finalizarRecorrido();
     }
@@ -450,7 +452,7 @@ void comportamientoBasico(void) {
 }
 
 void finalizarRecorrido(void) {
-    forzarEspejeoAuto();
+    forzarEspejeo();
     forzarParoAuto();
     pausa = 1;
 
@@ -479,11 +481,20 @@ void forzarGiroIzquierda(void) {
     IN2 = 0;
     IN3 = 1;
     IN4 = 0;
-    __delay_ms(TIEMPO_AVANCE_IZQUIERDA);
+    __delay_ms(TIEMPO_AVANCE_LATERAL);
 
 }
 
-void forzarEspejeoAuto(void) {
+void forzarGiroDerecha(void) {
+    IN1 = 1;
+    IN2 = 0;
+    IN3 = 0;
+    IN4 = 0;
+    __delay_ms(TIEMPO_AVANCE_LATERAL);
+
+}
+
+void forzarEspejeoIzquierda(void) {
 
     forzarParoAuto();
     velocidadEstandar();
@@ -491,6 +502,24 @@ void forzarEspejeoAuto(void) {
     forzarGiroIzquierda();
     forzarReversa();
     forzarGiroIzquierda();
+}
+
+void forzarEspejeoDerecha(void) {
+
+    forzarParoAuto();
+    velocidadEstandar();
+    forzarReversa();
+    forzarGiroDerecha();
+    forzarReversa();
+    forzarGiroDerecha();
+}
+
+void forzarEspejeo(void) {
+
+    if (sensorIzquierda > sensorDerecha)
+        forzarEspejeoIzquierda();
+    else
+        forzarEspejeoDerecha();
 }
 
 void moverCarrito(T_UBYTE espejearCarroY, T_UBYTE* carroEspejeado) {
@@ -509,14 +538,14 @@ void moverCarrito(T_UBYTE espejearCarroY, T_UBYTE* carroEspejeado) {
         case IZQUIERDA:
 
             if (espejearCarroY) {
-                forzarEspejeoAuto(); //Giro 180 grados
+                forzarEspejeo(); //Giro 180 grados
                 *carroEspejeado = 1;
             } else {
                 IN1 = 0;
                 IN2 = 0;
                 IN3 = 1;
                 IN4 = 0;
-                __delay_ms(TIEMPO_AVANCE_IZQUIERDA); //Giro 90 grados
+                __delay_ms(TIEMPO_AVANCE_LATERAL); //Giro 90 grados
 
             }
 
@@ -529,7 +558,7 @@ void moverCarrito(T_UBYTE espejearCarroY, T_UBYTE* carroEspejeado) {
             IN3 = 0;
             IN4 = 0;
 
-            __delay_ms(TIEMPO_AVANCE_DERECHA); //Giro 90 grados
+            __delay_ms(TIEMPO_AVANCE_LATERAL); //Giro 90 grados
 
             break;
 
@@ -566,7 +595,7 @@ void mover(void) {
             IN3 = 1;
             IN4 = 0;
 
-            __delay_ms(TIEMPO_AVANCE_IZQUIERDA); //Giro 90 grados
+            __delay_ms(TIEMPO_AVANCE_LATERAL); //Giro 90 grados
 
             break;
 
@@ -577,7 +606,7 @@ void mover(void) {
             IN3 = 0;
             IN4 = 0;
 
-            __delay_ms(TIEMPO_AVANCE_DERECHA); //Giro 90 grados
+            __delay_ms(TIEMPO_AVANCE_LATERAL); //Giro 90 grados
 
             break;
 

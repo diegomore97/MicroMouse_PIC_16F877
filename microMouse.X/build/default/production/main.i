@@ -6538,11 +6538,11 @@ double y0(double);
 double y1(double);
 double yn(int, double);
 # 10 "main.c" 2
-# 28 "main.c"
+# 27 "main.c"
 T_UBYTE SENSOR_PRIORIDAD_ALTA = ENFRENTE;
 T_UBYTE SENSOR_PRIORIDAD_MEDIA = IZQUIERDA;
 T_UBYTE SENSOR_PRIORIDAD_BAJA = DERECHA;
-# 61 "main.c"
+# 60 "main.c"
 typedef struct {
     Direccion curr_state;
     Direccion Next_state;
@@ -6580,11 +6580,14 @@ void probarGirosAuto(void);
 void visualizarPasosRealizados(T_UINT numMovimientos);
 void recorrerCaminoEncontrado(T_UBYTE* movimientos, T_UINT numMovimientos);
 void forzarParoAuto(void);
-void forzarEspejeoAuto(void);
+void forzarEspejeo(void);
+void forzarEspejeoIzquierda(void);
+void forzarEspejeoDerecha(void);
 void finalizarRecorrido(void);
 void probarPID(void);
 void forzarReversa(void);
 void forzarGiroIzquierda(void);
+void forzarGiroDerecha(void);
 
 
 void registraPosicionActual(void);
@@ -6782,7 +6785,7 @@ void comportamientoBasico(void) {
                     forzarParoAuto();
                     pausa = 1;
                 }
-# 318 "main.c"
+# 320 "main.c"
             } else {
                 if (!investigandoCruce) {
                     if (numMovimientosTotales < 1000)
@@ -6910,7 +6913,7 @@ void comportamientoBasico(void) {
     } else {
         recorrerCaminoEncontrado(caminoFinal, numMovimientosTotales);
         _delay((unsigned long)((3000)*(4000000/4000.0)));
-        forzarEspejeoAuto();
+        forzarEspejeo();
         regresarPuntoPartida(caminoFinal, numMovimientosTotales);
         finalizarRecorrido();
     }
@@ -6918,7 +6921,7 @@ void comportamientoBasico(void) {
 }
 
 void finalizarRecorrido(void) {
-    forzarEspejeoAuto();
+    forzarEspejeo();
     forzarParoAuto();
     pausa = 1;
 
@@ -6951,7 +6954,16 @@ void forzarGiroIzquierda(void) {
 
 }
 
-void forzarEspejeoAuto(void) {
+void forzarGiroDerecha(void) {
+    LATB4 = 1;
+    LATB5 = 0;
+    LATB6 = 0;
+    LATB7 = 0;
+    _delay((unsigned long)((410)*(4000000/4000.0)));
+
+}
+
+void forzarEspejeoIzquierda(void) {
 
     forzarParoAuto();
     velocidadEstandar();
@@ -6959,6 +6971,24 @@ void forzarEspejeoAuto(void) {
     forzarGiroIzquierda();
     forzarReversa();
     forzarGiroIzquierda();
+}
+
+void forzarEspejeoDerecha(void) {
+
+    forzarParoAuto();
+    velocidadEstandar();
+    forzarReversa();
+    forzarGiroDerecha();
+    forzarReversa();
+    forzarGiroDerecha();
+}
+
+void forzarEspejeo(void) {
+
+    if (sensorIzquierda > sensorDerecha)
+        forzarEspejeoIzquierda();
+    else
+        forzarEspejeoDerecha();
 }
 
 void moverCarrito(T_UBYTE espejearCarroY, T_UBYTE* carroEspejeado) {
@@ -6977,7 +7007,7 @@ void moverCarrito(T_UBYTE espejearCarroY, T_UBYTE* carroEspejeado) {
         case IZQUIERDA:
 
             if (espejearCarroY) {
-                forzarEspejeoAuto();
+                forzarEspejeo();
                 *carroEspejeado = 1;
             } else {
                 LATB4 = 0;
