@@ -11,17 +11,18 @@
 
 //**************MODIFICAR ESTAS CONSTANTES SEGUN LA CONVENIENCIA DEL PLANO****************************
 #define UMBRAL_OBSTACULO_LATERAL 25 //expresado en cm | sensibilidad antes de que choque con un objeto
-#define UMBRAL_OBSTACULO_ENFRENTE 7 //expresado en cm | sensibilidad antes de que choque con un objeto
+#define UMBRAL_OBSTACULO_ENFRENTE 12 //expresado en cm | sensibilidad antes de que choque con un objeto
 #define UMBRAL_SENSOR_OPTICO_REFLEXIVO 100 //Unidad que representa el minimo de luz percibida para detectar negro
 #define VELOCIDAD_MOTORES 100 //Porcentaje de ciclo de trabajo a la que trabajaran los motores
 #define TIEMPO_REVERSA 400 //Tiempo en milisegundos que avanzara el carro en reversa
 #define TIEMPO_AVANCE_LATERAL 410 //Tiempo en milisegundos que avanzara el carro al girar
+#define TIEMPO_AVANCE_RECTO 150 //Tiempo en milisegundos que avanzara el carro en linea recta
 #define MAX_MOVIMIENTOS_GUARDADOS 200 //Para mapear y regresar a algun lugar si llegamos a un callejon
 #define MAX_MOVIMIENTOS_CAMINO_FINAL 1000 //El maximo de movimientos a realizar para llegar al destino
 
 //Ajustar estas variables de control para evitar chocar con las paredes laterales
 #define KP 0.9 //Entre mas se aumente esta variable mas brusco sera el cambio para centrar
-#define KD 0 //Entre mas aumente esta variabe mas oscilara tratando de centrarse
+#define KD 0.1 //Entre mas aumente esta variabe mas oscilara tratando de centrarse
 
 //Constantes que indican a que direccion deber girar el auto
 T_UBYTE SENSOR_PRIORIDAD_ALTA = ENFRENTE; //La mayor prioridad siempre debe ser enfrente (NO MODIFICAR)
@@ -99,7 +100,9 @@ void forzarEspejeoIzquierda(void);
 void forzarEspejeoDerecha(void);
 void finalizarRecorrido(void);
 void probarPID(void);
+void probarCruceT(void);
 void forzarReversa(void);
+void forzarAvanceRecto(void);
 void forzarGiroIzquierda(void);
 void forzarGiroDerecha(void);
 
@@ -476,6 +479,17 @@ void forzarReversa(void) {
 
 }
 
+void forzarAvanceRecto(void)
+{
+    IN1 = 1;
+    IN2 = 0;
+    IN3 = 1;
+    IN4 = 0;
+
+    __delay_ms(TIEMPO_AVANCE_RECTO);
+    
+}
+
 void forzarGiroIzquierda(void) {
     IN1 = 0;
     IN2 = 0;
@@ -546,6 +560,7 @@ void moverCarrito(T_UBYTE espejearCarroY, T_UBYTE* carroEspejeado) {
                 IN3 = 1;
                 IN4 = 0;
                 __delay_ms(TIEMPO_AVANCE_LATERAL); //Giro 90 grados
+                forzarAvanceRecto();
 
             }
 
@@ -559,6 +574,7 @@ void moverCarrito(T_UBYTE espejearCarroY, T_UBYTE* carroEspejeado) {
             IN4 = 0;
 
             __delay_ms(TIEMPO_AVANCE_LATERAL); //Giro 90 grados
+            forzarAvanceRecto();
 
             break;
 
@@ -596,6 +612,8 @@ void mover(void) {
             IN4 = 0;
 
             __delay_ms(TIEMPO_AVANCE_LATERAL); //Giro 90 grados
+            
+            forzarAvanceRecto();
 
             break;
 
@@ -607,6 +625,8 @@ void mover(void) {
             IN4 = 0;
 
             __delay_ms(TIEMPO_AVANCE_LATERAL); //Giro 90 grados
+            
+            forzarAvanceRecto();
 
             break;
 
@@ -1185,6 +1205,34 @@ void probarPID(void) {
 
 }
 
+void probarCruceT(void) {
+
+    leerSensores();
+
+    if (sensorEnfrente > UMBRAL_OBSTACULO_ENFRENTE) { //Hay espacio hacia enfrente?
+        PID();
+        mouse.curr_state = ENFRENTE;
+        mover();
+        __delay_ms(RETARDO_PID); //Tiempo que el carro avanzara, si estas imprimiendo via UART
+        //al mismo tiempo, comenta este delay
+
+    }
+    else {
+
+        if (sensorIzquierda > UMBRAL_OBSTACULO_LATERAL) {
+            velocidadEstandar();
+            mouse.curr_state = IZQUIERDA;
+            mover();
+        } else if (sensorDerecha > UMBRAL_OBSTACULO_LATERAL) {
+            velocidadEstandar();
+            mouse.curr_state = DERECHA;
+            mover();
+        } else
+            finalizarRecorrido();
+    }
+
+}
+
 void velocidadEstandar(void) {
 
     pwmDuty(VELOCIDAD_MOTORES, ENA);
@@ -1252,7 +1300,8 @@ void main(void) {
 
             //probarSensores();
             //probarGirosAuto();
-            probarPID();
+            //probarPID();
+            probarCruceT();
             //visualizarPasosRealizados(numMovimientosTotales++); //Para visualizarlo por Bluetooth
             //comportamientoBasico();
             forzarParoAuto();

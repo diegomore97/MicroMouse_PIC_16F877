@@ -6538,11 +6538,11 @@ double y0(double);
 double y1(double);
 double yn(int, double);
 # 10 "main.c" 2
-# 27 "main.c"
+# 28 "main.c"
 T_UBYTE SENSOR_PRIORIDAD_ALTA = ENFRENTE;
 T_UBYTE SENSOR_PRIORIDAD_MEDIA = IZQUIERDA;
 T_UBYTE SENSOR_PRIORIDAD_BAJA = DERECHA;
-# 60 "main.c"
+# 61 "main.c"
 typedef struct {
     Direccion curr_state;
     Direccion Next_state;
@@ -6585,7 +6585,9 @@ void forzarEspejeoIzquierda(void);
 void forzarEspejeoDerecha(void);
 void finalizarRecorrido(void);
 void probarPID(void);
+void probarCruceT(void);
 void forzarReversa(void);
+void forzarAvanceRecto(void);
 void forzarGiroIzquierda(void);
 void forzarGiroDerecha(void);
 
@@ -6785,7 +6787,7 @@ void comportamientoBasico(void) {
                     forzarParoAuto();
                     pausa = 1;
                 }
-# 320 "main.c"
+# 323 "main.c"
             } else {
                 if (!investigandoCruce) {
                     if (numMovimientosTotales < 1000)
@@ -6945,6 +6947,17 @@ void forzarReversa(void) {
 
 }
 
+void forzarAvanceRecto(void)
+{
+    LATB4 = 1;
+    LATB5 = 0;
+    LATB6 = 1;
+    LATB7 = 0;
+
+    _delay((unsigned long)((150)*(4000000/4000.0)));
+
+}
+
 void forzarGiroIzquierda(void) {
     LATB4 = 0;
     LATB5 = 0;
@@ -7015,6 +7028,7 @@ void moverCarrito(T_UBYTE espejearCarroY, T_UBYTE* carroEspejeado) {
                 LATB6 = 1;
                 LATB7 = 0;
                 _delay((unsigned long)((410)*(4000000/4000.0)));
+                forzarAvanceRecto();
 
             }
 
@@ -7028,6 +7042,7 @@ void moverCarrito(T_UBYTE espejearCarroY, T_UBYTE* carroEspejeado) {
             LATB7 = 0;
 
             _delay((unsigned long)((410)*(4000000/4000.0)));
+            forzarAvanceRecto();
 
             break;
 
@@ -7066,6 +7081,8 @@ void mover(void) {
 
             _delay((unsigned long)((410)*(4000000/4000.0)));
 
+            forzarAvanceRecto();
+
             break;
 
         case DERECHA:
@@ -7076,6 +7093,8 @@ void mover(void) {
             LATB7 = 0;
 
             _delay((unsigned long)((410)*(4000000/4000.0)));
+
+            forzarAvanceRecto();
 
             break;
 
@@ -7154,7 +7173,7 @@ T_BOOL hayCruce(T_UBYTE* caminosRecorrer, T_UBYTE investigandoCruce) {
     T_UBYTE contCaminos = 0;
     T_BOOL paredEnfrente = 0, paredDerecha = 0, paredIzquierda = 0;
 
-    if (sensorEnfrente > 7) {
+    if (sensorEnfrente > 12) {
         paredEnfrente = 1;
         contCaminos++;
     }
@@ -7568,7 +7587,7 @@ T_UBYTE decidirDireccion(T_UBYTE* caminosRecorrer, T_UBYTE* investigandoCruce, T
         } else {
 
 
-            if (DISTANCIA_PRIORIDAD_ALTA > 7)
+            if (DISTANCIA_PRIORIDAD_ALTA > 12)
                 direccionElegida = SENSOR_PRIORIDAD_ALTA;
             else if (DISTANCIA_PRIORIDAD_MEDIA > 25)
                 direccionElegida = SENSOR_PRIORIDAD_MEDIA;
@@ -7627,7 +7646,7 @@ void PID(void) {
 
     dif = sensorIzquierda - sensorDerecha;
 
-    error = roundf(0.9 * (dif) + 0 * (difAnt - dif));
+    error = roundf(0.9 * (dif) + 0.1 * (difAnt - dif));
 
     difAnt = dif;
 
@@ -7642,7 +7661,7 @@ void probarPID(void) {
 
     leerSensores();
 
-    if (sensorEnfrente > 7) {
+    if (sensorEnfrente > 12) {
         PID();
         mouse.curr_state = ENFRENTE;
         mover();
@@ -7651,6 +7670,34 @@ void probarPID(void) {
 
     _delay((unsigned long)((55)*(4000000/4000.0)));
 
+
+}
+
+void probarCruceT(void) {
+
+    leerSensores();
+
+    if (sensorEnfrente > 12) {
+        PID();
+        mouse.curr_state = ENFRENTE;
+        mover();
+        _delay((unsigned long)((55)*(4000000/4000.0)));
+
+
+    }
+    else {
+
+        if (sensorIzquierda > 25) {
+            velocidadEstandar();
+            mouse.curr_state = IZQUIERDA;
+            mover();
+        } else if (sensorDerecha > 25) {
+            velocidadEstandar();
+            mouse.curr_state = DERECHA;
+            mover();
+        } else
+            finalizarRecorrido();
+    }
 
 }
 
@@ -7721,7 +7768,8 @@ void main(void) {
 
 
 
-            probarPID();
+
+            probarCruceT();
 
 
             forzarParoAuto();
