@@ -6538,11 +6538,11 @@ double y0(double);
 double y1(double);
 double yn(int, double);
 # 10 "main.c" 2
-# 28 "main.c"
+# 29 "main.c"
 T_UBYTE SENSOR_PRIORIDAD_ALTA = ENFRENTE;
 T_UBYTE SENSOR_PRIORIDAD_MEDIA = IZQUIERDA;
 T_UBYTE SENSOR_PRIORIDAD_BAJA = DERECHA;
-# 61 "main.c"
+# 62 "main.c"
 typedef struct {
     Direccion curr_state;
     Direccion Next_state;
@@ -6576,6 +6576,7 @@ T_BOOL seLlegoAlDestino(void);
 void leerSensores(void);
 void PID(void);
 void velocidadEstandar(void);
+void velocidadBaja(void);
 void probarGirosAuto(void);
 void visualizarPasosRealizados(T_UINT numMovimientos);
 void recorrerCaminoEncontrado(T_UBYTE* movimientos, T_UINT numMovimientos);
@@ -6787,7 +6788,7 @@ void comportamientoBasico(void) {
                     forzarParoAuto();
                     pausa = 1;
                 }
-# 323 "main.c"
+# 325 "main.c"
             } else {
                 if (!investigandoCruce) {
                     if (numMovimientosTotales < 1000)
@@ -6812,6 +6813,7 @@ void comportamientoBasico(void) {
             mapear = 1;
             cruceDetectado = 1;
             investigandoCruce = 1;
+            velocidadBaja();
         }
 
         direccionElegida = decidirDireccion(caminosRecorrer, &investigandoCruce,
@@ -6947,14 +6949,13 @@ void forzarReversa(void) {
 
 }
 
-void forzarAvanceRecto(void)
-{
+void forzarAvanceRecto(void) {
     LATB4 = 1;
     LATB5 = 0;
     LATB6 = 1;
     LATB7 = 0;
 
-    _delay((unsigned long)((150)*(4000000/4000.0)));
+    _delay((unsigned long)((500)*(4000000/4000.0)));
 
 }
 
@@ -7015,6 +7016,8 @@ void moverCarrito(T_UBYTE espejearCarroY, T_UBYTE* carroEspejeado) {
             LATB6 = 1;
             LATB7 = 0;
 
+            _delay((unsigned long)((55)*(4000000/4000.0)));
+
             break;
 
         case IZQUIERDA:
@@ -7069,6 +7072,7 @@ void mover(void) {
             LATB5 = 0;
             LATB6 = 1;
             LATB7 = 0;
+            _delay((unsigned long)((55)*(4000000/4000.0)));
 
             break;
 
@@ -7173,7 +7177,7 @@ T_BOOL hayCruce(T_UBYTE* caminosRecorrer, T_UBYTE investigandoCruce) {
     T_UBYTE contCaminos = 0;
     T_BOOL paredEnfrente = 0, paredDerecha = 0, paredIzquierda = 0;
 
-    if (sensorEnfrente > 12) {
+    if (sensorEnfrente > 14) {
         paredEnfrente = 1;
         contCaminos++;
     }
@@ -7587,7 +7591,7 @@ T_UBYTE decidirDireccion(T_UBYTE* caminosRecorrer, T_UBYTE* investigandoCruce, T
         } else {
 
 
-            if (DISTANCIA_PRIORIDAD_ALTA > 12)
+            if (DISTANCIA_PRIORIDAD_ALTA > 14)
                 direccionElegida = SENSOR_PRIORIDAD_ALTA;
             else if (DISTANCIA_PRIORIDAD_MEDIA > 25)
                 direccionElegida = SENSOR_PRIORIDAD_MEDIA;
@@ -7655,48 +7659,64 @@ void PID(void) {
 
     pwmDuty(velocidadIzquierda, 1);
     pwmDuty(velocidadDerecha, 2);
+
 }
 
 void probarPID(void) {
 
     leerSensores();
 
-    if (sensorEnfrente > 12) {
+    if (sensorEnfrente > 14) {
         PID();
         mouse.curr_state = ENFRENTE;
         mover();
     } else
         finalizarRecorrido();
 
-    _delay((unsigned long)((55)*(4000000/4000.0)));
-
-
 }
 
 void probarCruceT(void) {
 
+    T_UBYTE contCaminos = 0;
+
     leerSensores();
 
-    if (sensorEnfrente > 12) {
-        PID();
+    if (sensorEnfrente > 14)
+        contCaminos++;
+    if (sensorIzquierda > 25)
+        contCaminos++;
+    if (sensorDerecha > 25)
+        contCaminos++;
+
+
+    if (contCaminos > 1 && sensorEnfrente > 14) {
+
+        velocidadBaja();
         mouse.curr_state = ENFRENTE;
         mover();
-        _delay((unsigned long)((55)*(4000000/4000.0)));
 
 
-    }
-    else {
+    } else {
 
-        if (sensorIzquierda > 25) {
-            velocidadEstandar();
-            mouse.curr_state = IZQUIERDA;
+        if (sensorEnfrente > 14) {
+            PID();
+            mouse.curr_state = ENFRENTE;
             mover();
-        } else if (sensorDerecha > 25) {
-            velocidadEstandar();
-            mouse.curr_state = DERECHA;
-            mover();
-        } else
-            finalizarRecorrido();
+
+        } else {
+
+            if (sensorIzquierda > 25) {
+                velocidadEstandar();
+                mouse.curr_state = IZQUIERDA;
+                mover();
+            } else if (sensorDerecha > 25) {
+                velocidadEstandar();
+                mouse.curr_state = DERECHA;
+                mover();
+            } else
+                finalizarRecorrido();
+        }
+
     }
 
 }
@@ -7705,6 +7725,13 @@ void velocidadEstandar(void) {
 
     pwmDuty(100, 1);
     pwmDuty(100, 2);
+
+}
+
+void velocidadBaja(void) {
+
+    pwmDuty(70, 1);
+    pwmDuty(70, 2);
 
 }
 

@@ -11,12 +11,13 @@
 
 //**************MODIFICAR ESTAS CONSTANTES SEGUN LA CONVENIENCIA DEL PLANO****************************
 #define UMBRAL_OBSTACULO_LATERAL 25 //expresado en cm | sensibilidad antes de que choque con un objeto
-#define UMBRAL_OBSTACULO_ENFRENTE 12 //expresado en cm | sensibilidad antes de que choque con un objeto
+#define UMBRAL_OBSTACULO_ENFRENTE 14//expresado en cm | sensibilidad antes de que choque con un objeto
 #define UMBRAL_SENSOR_OPTICO_REFLEXIVO 100 //Unidad que representa el minimo de luz percibida para detectar negro
 #define VELOCIDAD_MOTORES 100 //Porcentaje de ciclo de trabajo a la que trabajaran los motores
+#define VELOCIDAD_MOTORES_BAJA 70 //Porcentaje de ciclo de trabajo a la que trabajaran los motores
 #define TIEMPO_REVERSA 400 //Tiempo en milisegundos que avanzara el carro en reversa
 #define TIEMPO_AVANCE_LATERAL 410 //Tiempo en milisegundos que avanzara el carro al girar
-#define TIEMPO_AVANCE_RECTO 150 //Tiempo en milisegundos que avanzara el carro en linea recta
+#define TIEMPO_AVANCE_RECTO 500 //Tiempo en milisegundos que avanzara el carro en linea recta
 #define MAX_MOVIMIENTOS_GUARDADOS 200 //Para mapear y regresar a algun lugar si llegamos a un callejon
 #define MAX_MOVIMIENTOS_CAMINO_FINAL 1000 //El maximo de movimientos a realizar para llegar al destino
 
@@ -91,6 +92,7 @@ T_BOOL seLlegoAlDestino(void);
 void leerSensores(void);
 void PID(void);
 void velocidadEstandar(void);
+void velocidadBaja(void);
 void probarGirosAuto(void);
 void visualizarPasosRealizados(T_UINT numMovimientos);
 void recorrerCaminoEncontrado(T_UBYTE* movimientos, T_UINT numMovimientos);
@@ -344,6 +346,7 @@ void comportamientoBasico(void) {
             mapear = 1;
             cruceDetectado = 1;
             investigandoCruce = 1;
+            velocidadBaja();
         }
 
         direccionElegida = decidirDireccion(caminosRecorrer, &investigandoCruce,
@@ -479,15 +482,14 @@ void forzarReversa(void) {
 
 }
 
-void forzarAvanceRecto(void)
-{
+void forzarAvanceRecto(void) {
     IN1 = 1;
     IN2 = 0;
     IN3 = 1;
     IN4 = 0;
 
     __delay_ms(TIEMPO_AVANCE_RECTO);
-    
+
 }
 
 void forzarGiroIzquierda(void) {
@@ -546,6 +548,8 @@ void moverCarrito(T_UBYTE espejearCarroY, T_UBYTE* carroEspejeado) {
             IN2 = 0;
             IN3 = 1;
             IN4 = 0;
+            
+            __delay_ms(RETARDO_PID);
 
             break;
 
@@ -601,6 +605,7 @@ void mover(void) {
             IN2 = 0;
             IN3 = 1;
             IN4 = 0;
+            __delay_ms(RETARDO_PID);
 
             break;
 
@@ -612,7 +617,7 @@ void mover(void) {
             IN4 = 0;
 
             __delay_ms(TIEMPO_AVANCE_LATERAL); //Giro 90 grados
-            
+
             forzarAvanceRecto();
 
             break;
@@ -625,7 +630,7 @@ void mover(void) {
             IN4 = 0;
 
             __delay_ms(TIEMPO_AVANCE_LATERAL); //Giro 90 grados
-            
+
             forzarAvanceRecto();
 
             break;
@@ -1187,6 +1192,7 @@ void PID(void) {
 
     pwmDuty(velocidadIzquierda, ENA);
     pwmDuty(velocidadDerecha, ENB);
+    
 }
 
 void probarPID(void) {
@@ -1200,35 +1206,50 @@ void probarPID(void) {
     } else
         finalizarRecorrido();
 
-    __delay_ms(RETARDO_PID); //Tiempo que el carro avanzara, si estas imprimiendo via UART
-    //al mismo tiempo, comenta este delay
-
 }
 
 void probarCruceT(void) {
 
+    T_UBYTE contCaminos = 0;
+
     leerSensores();
 
-    if (sensorEnfrente > UMBRAL_OBSTACULO_ENFRENTE) { //Hay espacio hacia enfrente?
-        PID();
+    if (sensorEnfrente > UMBRAL_OBSTACULO_ENFRENTE)
+        contCaminos++;
+    if (sensorIzquierda > UMBRAL_OBSTACULO_LATERAL)
+        contCaminos++;
+    if (sensorDerecha > UMBRAL_OBSTACULO_LATERAL)
+        contCaminos++;
+
+
+    if (contCaminos > 1 && sensorEnfrente > UMBRAL_OBSTACULO_ENFRENTE) {
+
+        velocidadBaja();
         mouse.curr_state = ENFRENTE;
         mover();
-        __delay_ms(RETARDO_PID); //Tiempo que el carro avanzara, si estas imprimiendo via UART
-        //al mismo tiempo, comenta este delay
 
-    }
-    else {
 
-        if (sensorIzquierda > UMBRAL_OBSTACULO_LATERAL) {
-            velocidadEstandar();
-            mouse.curr_state = IZQUIERDA;
-            mover();
-        } else if (sensorDerecha > UMBRAL_OBSTACULO_LATERAL) {
-            velocidadEstandar();
-            mouse.curr_state = DERECHA;
-            mover();
-        } else
-            finalizarRecorrido();
+    } else {
+
+        if (sensorEnfrente > UMBRAL_OBSTACULO_ENFRENTE) { //Hay espacio hacia enfrente?
+            PID();
+            mouse.curr_state = ENFRENTE;
+            mover(); 
+
+        } else {
+
+            if (sensorIzquierda > UMBRAL_OBSTACULO_LATERAL) {
+                velocidadEstandar();
+                mouse.curr_state = IZQUIERDA;
+                mover();
+            } else if (sensorDerecha > UMBRAL_OBSTACULO_LATERAL) {
+                velocidadEstandar();
+                mouse.curr_state = DERECHA;
+                mover();
+            } else
+                finalizarRecorrido();
+        }
+
     }
 
 }
@@ -1237,6 +1258,13 @@ void velocidadEstandar(void) {
 
     pwmDuty(VELOCIDAD_MOTORES, ENA);
     pwmDuty(VELOCIDAD_MOTORES, ENB);
+
+}
+
+void velocidadBaja(void) {
+
+    pwmDuty(VELOCIDAD_MOTORES_BAJA, ENA);
+    pwmDuty(VELOCIDAD_MOTORES_BAJA, ENB);
 
 }
 
