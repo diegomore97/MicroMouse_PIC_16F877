@@ -6538,11 +6538,11 @@ double y0(double);
 double y1(double);
 double yn(int, double);
 # 10 "main.c" 2
-# 29 "main.c"
+# 30 "main.c"
 T_UBYTE SENSOR_PRIORIDAD_ALTA = ENFRENTE;
 T_UBYTE SENSOR_PRIORIDAD_MEDIA = IZQUIERDA;
 T_UBYTE SENSOR_PRIORIDAD_BAJA = DERECHA;
-# 62 "main.c"
+# 63 "main.c"
 typedef struct {
     Direccion curr_state;
     Direccion Next_state;
@@ -6633,7 +6633,7 @@ void probarSensores(void) {
     probarUltrasonico(DERECHA);
     T_WORD lecturaSensorOptico = dameLecturaAdc(0);
 
-    if (lecturaSensorOptico < 100)
+    if (lecturaSensorOptico < 70)
         UART_printf("\rSe llego al destino \r\n");
     else
         UART_printf("\rDestino no detectado \r\n");
@@ -6788,7 +6788,7 @@ void comportamientoBasico(void) {
                     forzarParoAuto();
                     pausa = 1;
                 }
-# 325 "main.c"
+# 326 "main.c"
             } else {
                 if (!investigandoCruce) {
                     if (numMovimientosTotales < 1000)
@@ -6955,7 +6955,7 @@ void forzarAvanceRecto(void) {
     LATB6 = 1;
     LATB7 = 0;
 
-    _delay((unsigned long)((500)*(4000000/4000.0)));
+    _delay((unsigned long)((550)*(4000000/4000.0)));
 
 }
 
@@ -7016,7 +7016,8 @@ void moverCarrito(T_UBYTE espejearCarroY, T_UBYTE* carroEspejeado) {
             LATB6 = 1;
             LATB7 = 0;
 
-            _delay((unsigned long)((55)*(4000000/4000.0)));
+            if (!0)
+                _delay((unsigned long)((55)*(4000000/4000.0)));
 
             break;
 
@@ -7072,7 +7073,9 @@ void mover(void) {
             LATB5 = 0;
             LATB6 = 1;
             LATB7 = 0;
-            _delay((unsigned long)((55)*(4000000/4000.0)));
+
+            if (!0)
+                _delay((unsigned long)((55)*(4000000/4000.0)));
 
             break;
 
@@ -7305,7 +7308,7 @@ T_BOOL seLlegoAlDestino(void) {
     T_BOOL llegoDestino = 0;
 
 
-    if (dameLecturaAdc(0) < 100)
+    if (dameLecturaAdc(0) < 70)
         llegoDestino = 1;
 
     return llegoDestino;
@@ -7797,6 +7800,9 @@ void main(void) {
 
 
             probarCruceT();
+
+            if (0)
+                visualizarPasosRealizados(numMovimientosTotales++);
 
 
             forzarParoAuto();

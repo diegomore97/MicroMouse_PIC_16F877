@@ -10,14 +10,15 @@
 #include <math.h>
 
 //**************MODIFICAR ESTAS CONSTANTES SEGUN LA CONVENIENCIA DEL PLANO****************************
+#define MOSTRAR_INFORMACION_UART 0 //Habilita y deshabilita la comunicacion via UART
 #define UMBRAL_OBSTACULO_LATERAL 25 //expresado en cm | sensibilidad antes de que choque con un objeto
 #define UMBRAL_OBSTACULO_ENFRENTE 14//expresado en cm | sensibilidad antes de que choque con un objeto
-#define UMBRAL_SENSOR_OPTICO_REFLEXIVO 100 //Unidad que representa el minimo de luz percibida para detectar negro
+#define UMBRAL_SENSOR_OPTICO_REFLEXIVO 70 //Unidad que representa el minimo de luz percibida para detectar negro
 #define VELOCIDAD_MOTORES 100 //Porcentaje de ciclo de trabajo a la que trabajaran los motores
 #define VELOCIDAD_MOTORES_BAJA 70 //Porcentaje de ciclo de trabajo a la que trabajaran los motores
 #define TIEMPO_REVERSA 400 //Tiempo en milisegundos que avanzara el carro en reversa
 #define TIEMPO_AVANCE_LATERAL 410 //Tiempo en milisegundos que avanzara el carro al girar
-#define TIEMPO_AVANCE_RECTO 500 //Tiempo en milisegundos que avanzara el carro en linea recta
+#define TIEMPO_AVANCE_RECTO 550 //Tiempo en milisegundos que avanzara el carro en linea recta
 #define MAX_MOVIMIENTOS_GUARDADOS 200 //Para mapear y regresar a algun lugar si llegamos a un callejon
 #define MAX_MOVIMIENTOS_CAMINO_FINAL 1000 //El maximo de movimientos a realizar para llegar al destino
 
@@ -548,8 +549,9 @@ void moverCarrito(T_UBYTE espejearCarroY, T_UBYTE* carroEspejeado) {
             IN2 = 0;
             IN3 = 1;
             IN4 = 0;
-            
-            __delay_ms(RETARDO_PID);
+
+            if (!MOSTRAR_INFORMACION_UART)
+                __delay_ms(RETARDO_PID);
 
             break;
 
@@ -605,7 +607,9 @@ void mover(void) {
             IN2 = 0;
             IN3 = 1;
             IN4 = 0;
-            __delay_ms(RETARDO_PID);
+
+            if (!MOSTRAR_INFORMACION_UART)
+                __delay_ms(RETARDO_PID);
 
             break;
 
@@ -1192,7 +1196,7 @@ void PID(void) {
 
     pwmDuty(velocidadIzquierda, ENA);
     pwmDuty(velocidadDerecha, ENB);
-    
+
 }
 
 void probarPID(void) {
@@ -1234,7 +1238,7 @@ void probarCruceT(void) {
         if (sensorEnfrente > UMBRAL_OBSTACULO_ENFRENTE) { //Hay espacio hacia enfrente?
             PID();
             mouse.curr_state = ENFRENTE;
-            mover(); 
+            mover();
 
         } else {
 
@@ -1330,7 +1334,10 @@ void main(void) {
             //probarGirosAuto();
             //probarPID();
             probarCruceT();
-            //visualizarPasosRealizados(numMovimientosTotales++); //Para visualizarlo por Bluetooth
+
+            if (MOSTRAR_INFORMACION_UART)
+                visualizarPasosRealizados(numMovimientosTotales++); //Para visualizarlo por Bluetooth
+
             //comportamientoBasico();
             forzarParoAuto();
 
