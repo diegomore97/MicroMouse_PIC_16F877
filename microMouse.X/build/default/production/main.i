@@ -6538,7 +6538,7 @@ double y0(double);
 double y1(double);
 double yn(int, double);
 # 10 "main.c" 2
-# 30 "main.c"
+# 31 "main.c"
 T_UBYTE SENSOR_PRIORIDAD_ALTA = ENFRENTE;
 T_UBYTE SENSOR_PRIORIDAD_MEDIA = IZQUIERDA;
 T_UBYTE SENSOR_PRIORIDAD_BAJA = DERECHA;
@@ -7799,12 +7799,12 @@ void main(void) {
 
 
 
-            probarCruceT();
+
 
             if (0)
                 visualizarPasosRealizados(numMovimientosTotales++);
 
-
+            comportamientoBasico();
             forzarParoAuto();
 
         } else {

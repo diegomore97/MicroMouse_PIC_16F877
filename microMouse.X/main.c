@@ -14,6 +14,7 @@
 #define UMBRAL_OBSTACULO_LATERAL 25 //expresado en cm | sensibilidad antes de que choque con un objeto
 #define UMBRAL_OBSTACULO_ENFRENTE 14//expresado en cm | sensibilidad antes de que choque con un objeto
 #define UMBRAL_SENSOR_OPTICO_REFLEXIVO 70 //Unidad que representa el minimo de luz percibida para detectar negro
+#define RETARDO_PID 55 //Tiempo que avanzara el carrito en linea recta cuando esta por control PID
 #define VELOCIDAD_MOTORES 100 //Porcentaje de ciclo de trabajo a la que trabajaran los motores
 #define VELOCIDAD_MOTORES_BAJA 70 //Porcentaje de ciclo de trabajo a la que trabajaran los motores
 #define TIEMPO_REVERSA 400 //Tiempo en milisegundos que avanzara el carro en reversa
@@ -54,7 +55,6 @@ T_UBYTE SENSOR_PRIORIDAD_BAJA = DERECHA;
 #define RETARDO_ANTIREBOTE 100
 #define TAMANO_CADENA 50 //Tamaño de la cadena de la variable para debug
 
-#define RETARDO_PID 55
 #define CALLEJON 0
 #define PRIMER_DIRECCION 0
 #define MAX_CAMINOS 3 //Hasta 3 caminos puede tener para elegir el carrito
@@ -1333,12 +1333,12 @@ void main(void) {
             //probarSensores();
             //probarGirosAuto();
             //probarPID();
-            probarCruceT();
+            //probarCruceT();
 
             if (MOSTRAR_INFORMACION_UART)
                 visualizarPasosRealizados(numMovimientosTotales++); //Para visualizarlo por Bluetooth
 
-            //comportamientoBasico();
+            comportamientoBasico();
             forzarParoAuto();
 
         } else {

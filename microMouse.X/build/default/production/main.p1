@@ -1500,20 +1500,20 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./adc.h: 27: }
 [e :UE 423 ]
 }
-"30 main.c
-[; ;main.c: 30: T_UBYTE SENSOR_PRIORIDAD_ALTA = ENFRENTE;
+"31 main.c
+[; ;main.c: 31: T_UBYTE SENSOR_PRIORIDAD_ALTA = ENFRENTE;
 [v _SENSOR_PRIORIDAD_ALTA `uc ~T0 @X0 1 e ]
 [i _SENSOR_PRIORIDAD_ALTA
 -> . `E3192 0 `uc
 ]
-"31
-[; ;main.c: 31: T_UBYTE SENSOR_PRIORIDAD_MEDIA = IZQUIERDA;
+"32
+[; ;main.c: 32: T_UBYTE SENSOR_PRIORIDAD_MEDIA = IZQUIERDA;
 [v _SENSOR_PRIORIDAD_MEDIA `uc ~T0 @X0 1 e ]
 [i _SENSOR_PRIORIDAD_MEDIA
 -> . `E3192 1 `uc
 ]
-"32
-[; ;main.c: 32: T_UBYTE SENSOR_PRIORIDAD_BAJA = DERECHA;
+"33
+[; ;main.c: 33: T_UBYTE SENSOR_PRIORIDAD_BAJA = DERECHA;
 [v _SENSOR_PRIORIDAD_BAJA `uc ~T0 @X0 1 e ]
 [i _SENSOR_PRIORIDAD_BAJA
 -> . `E3192 2 `uc
@@ -4840,9 +4840,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 1331:             }
 }
 [e :U 757 ]
-"1336
-[; ;main.c: 1336:             probarCruceT();
-[e ( _probarCruceT ..  ]
 "1338
 [; ;main.c: 1338:             if (0)
 [e $ ! != -> 0 `i -> 0 `i 758  ]
@@ -4850,6 +4847,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 1339:                 visualizarPasosRealizados(numMovimientosTotales++);
 [e ( _visualizarPasosRealizados (1 -> ++ _numMovimientosTotales -> 1 `i `ui ]
 [e :U 758 ]
+"1341
+[; ;main.c: 1341:             comportamientoBasico();
+[e ( _comportamientoBasico ..  ]
 "1342
 [; ;main.c: 1342:             forzarParoAuto();
 [e ( _forzarParoAuto ..  ]

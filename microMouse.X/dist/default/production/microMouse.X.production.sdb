@@ -128,6 +128,8 @@ ALTO 4
 [v _inicializarComportamientoBasico inicializarComportamientoBasico `(v  1 e 1 0 ]
 "265
 [v _caminoCorrecto caminoCorrecto `(v  1 e 1 0 ]
+"273
+[v _comportamientoBasico comportamientoBasico `(v  1 e 1 0 ]
 "461
 [v _finalizarRecorrido finalizarRecorrido `(v  1 e 1 0 ]
 "468
@@ -168,8 +170,6 @@ ALTO 4
 [v _leerSensores leerSensores `(v  1 e 1 0 ]
 "1181
 [v _PID PID `(v  1 e 1 0 ]
-"1215
-[v _probarCruceT probarCruceT `(v  1 e 1 0 ]
 "1261
 [v _velocidadEstandar velocidadEstandar `(v  1 e 1 0 ]
 "1268
@@ -781,86 +781,100 @@ ALTO 4
 [v ___wmul@multiplicand multiplicand `ui  1 p 2 7 ]
 "53
 } 0
-"47 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/UART.h
-[v _UART_printf UART_printf `(v  1 e 1 0 ]
+"253 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+[v _inicializarComportamientoBasico inicializarComportamientoBasico `(v  1 e 1 0 ]
 {
-[v UART_printf@cadena cadena `*.35uc  1 p 2 6 ]
-"51
+"263
 } 0
-"42
-[v _UART_write UART_write `(v  1 e 1 0 ]
+"7 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/adc.h
+[v _configurarAdc configurarAdc `(v  1 e 1 0 ]
 {
-[v UART_write@dato dato `uc  1 a 1 wreg ]
-[v UART_write@dato dato `uc  1 a 1 wreg ]
-[v UART_write@dato dato `uc  1 a 1 5 ]
-"45
+"10
 } 0
-"1215 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-[v _probarCruceT probarCruceT `(v  1 e 1 0 ]
+"47 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
+[v _configPwm configPwm `(v  1 e 1 0 ]
 {
-"1217
-[v probarCruceT@contCaminos contCaminos `uc  1 a 1 83 ]
-"1259
+[v configPwm@channel channel `uc  1 a 1 wreg ]
+[v configPwm@channel channel `uc  1 a 1 wreg ]
+[v configPwm@channel channel `uc  1 a 1 7 ]
+"82
+} 0
+"273 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+[v _comportamientoBasico comportamientoBasico `(v  1 e 1 0 ]
+{
+"290
+[v comportamientoBasico@direccionElegida direccionElegida `uc  1 a 1 66 ]
+"275
+[v comportamientoBasico@espejearCarroY espejearCarroY `uc  1 s 1 espejearCarroY ]
+"276
+[v comportamientoBasico@carroEspejeado carroEspejeado `uc  1 s 1 carroEspejeado ]
+"277
+[v comportamientoBasico@movimientosRealizados movimientosRealizados `[200]uc  1 s 200 movimientosRealizados ]
+"278
+[v comportamientoBasico@caminoFinal caminoFinal `[1000]uc  1 s 1000 caminoFinal ]
+"279
+[v comportamientoBasico@numMovimientos numMovimientos `ui  1 s 2 numMovimientos ]
+"280
+[v comportamientoBasico@numMovimientosTotales numMovimientosTotales `ui  1 s 2 numMovimientosTotales ]
+"281
+[v comportamientoBasico@mapear mapear `uc  1 s 1 mapear ]
+"282
+[v comportamientoBasico@cruceDetectado cruceDetectado `uc  1 s 1 cruceDetectado ]
+"283
+[v comportamientoBasico@caminosRecorrer caminosRecorrer `[3]uc  1 s 3 caminosRecorrer ]
+"284
+[v comportamientoBasico@investigandoCruce investigandoCruce `uc  1 s 1 investigandoCruce ]
+"285
+[v comportamientoBasico@posicionInvCruce posicionInvCruce `uc  1 s 1 posicionInvCruce ]
+"286
+[v comportamientoBasico@contCaminosRecorridos contCaminosRecorridos `uc  1 s 1 contCaminosRecorridos ]
+"287
+[v comportamientoBasico@caminoEncontrado caminoEncontrado `uc  1 s 1 caminoEncontrado ]
+"288
+[v comportamientoBasico@caminoActual caminoActual `uc  1 s 1 caminoActual ]
+"289
+[v comportamientoBasico@cambioOrientacionCarro cambioOrientacionCarro `uc  1 s 1 cambioOrientacionCarro ]
+"459
 } 0
 "1268
 [v _velocidadBaja velocidadBaja `(v  1 e 1 0 ]
 {
 "1273
 } 0
+"655
+[v _regresarPuntoPartida regresarPuntoPartida `(v  1 e 1 0 ]
+{
+"657
+[v regresarPuntoPartida@i i `i  1 a 2 62 ]
+"655
+[v regresarPuntoPartida@movimientos movimientos `*.39uc  1 p 2 58 ]
+[v regresarPuntoPartida@numMovimientos numMovimientos `ui  1 p 2 60 ]
+"673
+} 0
+"675
+[v _regresarAlCruce regresarAlCruce `(v  1 e 1 0 ]
+{
+"677
+[v regresarAlCruce@i i `i  1 a 2 62 ]
+"675
+[v regresarAlCruce@movimientos movimientos `*.39uc  1 p 2 58 ]
+[v regresarAlCruce@numMovimientos numMovimientos `ui  1 p 2 60 ]
+"695
+} 0
+"697
+[v _recorrerCaminoEncontrado recorrerCaminoEncontrado `(v  1 e 1 0 ]
+{
+"699
+[v recorrerCaminoEncontrado@i i `i  1 a 2 62 ]
+"697
+[v recorrerCaminoEncontrado@movimientos movimientos `*.39uc  1 p 2 58 ]
+[v recorrerCaminoEncontrado@numMovimientos numMovimientos `ui  1 p 2 60 ]
+"710
+} 0
 "600
 [v _mover mover `(v  1 e 1 0 ]
 {
 "653
-} 0
-"486
-[v _forzarAvanceRecto forzarAvanceRecto `(v  1 e 1 0 ]
-{
-"494
-} 0
-"1148
-[v _leerSensores leerSensores `(v  1 e 1 0 ]
-{
-"1179
-} 0
-"461
-[v _finalizarRecorrido finalizarRecorrido `(v  1 e 1 0 ]
-{
-"466
-} 0
-"534
-[v _forzarEspejeo forzarEspejeo `(v  1 e 1 0 ]
-{
-"540
-} 0
-"514
-[v _forzarEspejeoIzquierda forzarEspejeoIzquierda `(v  1 e 1 0 ]
-{
-"522
-} 0
-"496
-[v _forzarGiroIzquierda forzarGiroIzquierda `(v  1 e 1 0 ]
-{
-"503
-} 0
-"524
-[v _forzarEspejeoDerecha forzarEspejeoDerecha `(v  1 e 1 0 ]
-{
-"532
-} 0
-"476
-[v _forzarReversa forzarReversa `(v  1 e 1 0 ]
-{
-"484
-} 0
-"468
-[v _forzarParoAuto forzarParoAuto `(v  1 e 1 0 ]
-{
-"474
-} 0
-"505
-[v _forzarGiroDerecha forzarGiroDerecha `(v  1 e 1 0 ]
-{
-"512
 } 0
 "1181
 [v _PID PID `(v  1 e 1 0 ]
@@ -900,7 +914,58 @@ ALTO 4
 [v ___flsub@a a `d  1 p 4 71 ]
 "250
 } 0
+"15 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\flneg.c
+[v ___flneg __flneg `(d  1 e 4 0 ]
+{
+[v ___flneg@f1 f1 `d  1 p 4 5 ]
+"20
+} 0
+"542 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+[v _moverCarrito moverCarrito `(v  1 e 1 0 ]
+{
+[v moverCarrito@espejearCarroY espejearCarroY `uc  1 a 1 wreg ]
+[v moverCarrito@espejearCarroY espejearCarroY `uc  1 a 1 wreg ]
+[v moverCarrito@carroEspejeado carroEspejeado `*.39uc  1 p 2 40 ]
+[v moverCarrito@espejearCarroY espejearCarroY `uc  1 a 1 83 ]
+"598
+} 0
+"486
+[v _forzarAvanceRecto forzarAvanceRecto `(v  1 e 1 0 ]
+{
+"494
+} 0
+"1148
+[v _leerSensores leerSensores `(v  1 e 1 0 ]
+{
+"1179
+} 0
+"26 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/ultrasonico.h
+[v _dameDistancia dameDistancia `(f  1 e 4 0 ]
+{
+[v dameDistancia@numeroSensor numeroSensor `uc  1 a 1 wreg ]
+"29
+[v dameDistancia@distancia distancia `f  1 a 4 33 ]
+"28
+[v dameDistancia@conteo conteo `ui  1 a 2 37 ]
+"26
+[v dameDistancia@numeroSensor numeroSensor `uc  1 a 1 wreg ]
+"31
+[v dameDistancia@numeroSensor numeroSensor `uc  1 a 1 32 ]
+"82
+} 0
+"7 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+{
 "10
+[v ___lwdiv@quotient quotient `ui  1 a 2 10 ]
+"11
+[v ___lwdiv@counter counter `uc  1 a 1 9 ]
+"7
+[v ___lwdiv@dividend dividend `ui  1 p 2 5 ]
+[v ___lwdiv@divisor divisor `ui  1 p 2 7 ]
+"30
+} 0
+"10 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
 [v ___fladd __fladd `(d  1 e 4 0 ]
 {
 "17
@@ -916,23 +981,44 @@ ALTO 4
 [v ___fladd@a a `d  1 p 4 55 ]
 "237
 } 0
-"15 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\flneg.c
-[v ___flneg __flneg `(d  1 e 4 0 ]
+"712 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+[v _hayCruce hayCruce `(uc  1 e 1 0 ]
 {
-[v ___flneg@f1 f1 `d  1 p 4 5 ]
-"20
+"715
+[v hayCruce@paredIzquierda paredIzquierda `uc  1 a 1 69 ]
+[v hayCruce@paredDerecha paredDerecha `uc  1 a 1 68 ]
+[v hayCruce@paredEnfrente paredEnfrente `uc  1 a 1 67 ]
+"714
+[v hayCruce@contCaminos contCaminos `uc  1 a 1 66 ]
+"712
+[v hayCruce@caminosRecorrer caminosRecorrer `*.39uc  1 p 2 63 ]
+[v hayCruce@investigandoCruce investigandoCruce `uc  1 p 1 65 ]
+"814
 } 0
-"4 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\flge.c
-[v ___flge __flge `(b  1 e 0 0 ]
+"461
+[v _finalizarRecorrido finalizarRecorrido `(v  1 e 1 0 ]
 {
-[v ___flge@ff1 ff1 `d  1 p 4 51 ]
-[v ___flge@ff2 ff2 `d  1 p 4 55 ]
-"19
+"466
 } 0
-"253 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-[v _inicializarComportamientoBasico inicializarComportamientoBasico `(v  1 e 1 0 ]
+"534
+[v _forzarEspejeo forzarEspejeo `(v  1 e 1 0 ]
 {
-"263
+"540
+} 0
+"514
+[v _forzarEspejeoIzquierda forzarEspejeoIzquierda `(v  1 e 1 0 ]
+{
+"522
+} 0
+"496
+[v _forzarGiroIzquierda forzarGiroIzquierda `(v  1 e 1 0 ]
+{
+"503
+} 0
+"524
+[v _forzarEspejeoDerecha forzarEspejeoDerecha `(v  1 e 1 0 ]
+{
+"532
 } 0
 "1261
 [v _velocidadEstandar velocidadEstandar `(v  1 e 1 0 ]
@@ -968,6 +1054,21 @@ ALTO 4
 [v ___lmul@multiplier multiplier `ul  1 p 4 5 ]
 [v ___lmul@multiplicand multiplicand `ul  1 p 4 9 ]
 "129
+} 0
+"10 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
+[v ___xxtofl __xxtofl `(d  1 e 4 0 ]
+{
+[v ___xxtofl@sign sign `uc  1 a 1 wreg ]
+"13
+[v ___xxtofl@arg arg `ul  1 a 4 22 ]
+"12
+[v ___xxtofl@exp exp `uc  1 a 1 21 ]
+"10
+[v ___xxtofl@sign sign `uc  1 a 1 wreg ]
+[v ___xxtofl@val val `l  1 p 4 12 ]
+"15
+[v ___xxtofl@sign sign `uc  1 a 1 20 ]
+"44
 } 0
 "43 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\fltol.c
 [v ___fltol __fltol `(l  1 e 4 0 ]
@@ -1024,61 +1125,108 @@ ALTO 4
 [v ___fldiv@a a `d  1 p 4 71 ]
 "185
 } 0
-"26 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/ultrasonico.h
-[v _dameDistancia dameDistancia `(f  1 e 4 0 ]
+"476 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+[v _forzarReversa forzarReversa `(v  1 e 1 0 ]
 {
-[v dameDistancia@numeroSensor numeroSensor `uc  1 a 1 wreg ]
-"29
-[v dameDistancia@distancia distancia `f  1 a 4 33 ]
-"28
-[v dameDistancia@conteo conteo `ui  1 a 2 37 ]
-"26
-[v dameDistancia@numeroSensor numeroSensor `uc  1 a 1 wreg ]
-"31
-[v dameDistancia@numeroSensor numeroSensor `uc  1 a 1 32 ]
-"82
+"484
 } 0
-"10 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
-[v ___xxtofl __xxtofl `(d  1 e 4 0 ]
+"468
+[v _forzarParoAuto forzarParoAuto `(v  1 e 1 0 ]
 {
-[v ___xxtofl@sign sign `uc  1 a 1 wreg ]
+"474
+} 0
+"505
+[v _forzarGiroDerecha forzarGiroDerecha `(v  1 e 1 0 ]
+{
+"512
+} 0
+"852
+[v _decidirDireccion decidirDireccion `(uc  1 e 1 0 ]
+{
+"855
+[v decidirDireccion@direccionElegida direccionElegida `uc  1 a 1 77 ]
+"852
+[v decidirDireccion@caminosRecorrer caminosRecorrer `*.39uc  1 p 2 63 ]
+[v decidirDireccion@investigandoCruce investigandoCruce `*.39uc  1 p 2 65 ]
+[v decidirDireccion@posicionInvCruce posicionInvCruce `*.39uc  1 p 2 67 ]
+"853
+[v decidirDireccion@contCaminosRecorridos contCaminosRecorridos `*.39uc  1 p 2 69 ]
+[v decidirDireccion@caminoActual caminoActual `*.39uc  1 p 2 71 ]
+[v decidirDireccion@cambioOrientacionCarro cambioOrientacionCarro `*.39uc  1 p 2 73 ]
+"1146
+} 0
+"840
+[v _seLlegoAlDestino seLlegoAlDestino `(uc  1 e 1 0 ]
+{
+"842
+[v seLlegoAlDestino@llegoDestino llegoDestino `uc  1 a 1 10 ]
+"850
+} 0
+"12 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/adc.h
+[v _dameLecturaAdc dameLecturaAdc `(s  1 e 2 0 ]
+{
+[v dameLecturaAdc@canalLeer canalLeer `uc  1 a 1 wreg ]
+[v dameLecturaAdc@canalLeer canalLeer `uc  1 a 1 wreg ]
+"14
+[v dameLecturaAdc@canalLeer canalLeer `uc  1 a 1 9 ]
+"27
+} 0
+"4 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\flge.c
+[v ___flge __flge `(b  1 e 0 0 ]
+{
+[v ___flge@ff1 ff1 `d  1 p 4 51 ]
+[v ___flge@ff2 ff2 `d  1 p 4 55 ]
+"19
+} 0
+"265 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+[v _caminoCorrecto caminoCorrecto `(v  1 e 1 0 ]
+{
+[v caminoCorrecto@movimientos movimientos `*.39uc  1 p 2 17 ]
+[v caminoCorrecto@caminoFinal caminoFinal `*.39uc  1 p 2 19 ]
+[v caminoCorrecto@numMovimientos numMovimientos `ui  1 p 2 21 ]
+"266
+[v caminoCorrecto@numMovimientosFinal numMovimientosFinal `*.39ui  1 p 2 23 ]
+[v caminoCorrecto@caminoActual caminoActual `uc  1 p 1 25 ]
+"271
+} 0
+"832
+[v _limpiarMovimientos limpiarMovimientos `(v  1 e 1 0 ]
+{
+"834
+[v limpiarMovimientos@i i `i  1 a 2 11 ]
+"832
+[v limpiarMovimientos@movimientos movimientos `*.39uc  1 p 2 5 ]
+[v limpiarMovimientos@numMovimientos numMovimientos `*.39ui  1 p 2 7 ]
+"838
+} 0
+"1275
+[v _combinarArreglos combinarArreglos `(v  1 e 1 0 ]
+{
+"1277
+[v combinarArreglos@i i `i  1 a 2 15 ]
+"1275
+[v combinarArreglos@movimientos movimientos `*.39uc  1 p 2 5 ]
+[v combinarArreglos@caminoFinal caminoFinal `*.39uc  1 p 2 7 ]
+[v combinarArreglos@numMovimientos numMovimientos `ui  1 p 2 9 ]
+"1276
+[v combinarArreglos@numMovimientosFinal numMovimientosFinal `*.39ui  1 p 2 11 ]
+"1282
+} 0
+"47 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/UART.h
+[v _UART_printf UART_printf `(v  1 e 1 0 ]
+{
+[v UART_printf@cadena cadena `*.35uc  1 p 2 6 ]
+"51
+} 0
+"42
+[v _UART_write UART_write `(v  1 e 1 0 ]
+{
+[v UART_write@dato dato `uc  1 a 1 wreg ]
+[v UART_write@dato dato `uc  1 a 1 wreg ]
+[v UART_write@dato dato `uc  1 a 1 5 ]
+"45
+} 0
 "13
-[v ___xxtofl@arg arg `ul  1 a 4 22 ]
-"12
-[v ___xxtofl@exp exp `uc  1 a 1 21 ]
-"10
-[v ___xxtofl@sign sign `uc  1 a 1 wreg ]
-[v ___xxtofl@val val `l  1 p 4 12 ]
-"15
-[v ___xxtofl@sign sign `uc  1 a 1 20 ]
-"44
-} 0
-"7 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwdiv.c
-[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
-{
-"10
-[v ___lwdiv@quotient quotient `ui  1 a 2 10 ]
-"11
-[v ___lwdiv@counter counter `uc  1 a 1 9 ]
-"7
-[v ___lwdiv@dividend dividend `ui  1 p 2 5 ]
-[v ___lwdiv@divisor divisor `ui  1 p 2 7 ]
-"30
-} 0
-"7 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/adc.h
-[v _configurarAdc configurarAdc `(v  1 e 1 0 ]
-{
-"10
-} 0
-"47 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
-[v _configPwm configPwm `(v  1 e 1 0 ]
-{
-[v configPwm@channel channel `uc  1 a 1 wreg ]
-[v configPwm@channel channel `uc  1 a 1 wreg ]
-[v configPwm@channel channel `uc  1 a 1 7 ]
-"82
-} 0
-"13 C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/UART.h
 [v _UART_init UART_init `(v  1 e 1 0 ]
 {
 [v UART_init@BAUD BAUD `l  1 p 4 31 ]
