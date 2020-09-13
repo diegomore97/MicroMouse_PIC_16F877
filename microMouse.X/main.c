@@ -10,11 +10,14 @@
 #include <math.h>
 
 //**************MODIFICAR ESTAS CONSTANTES SEGUN LA CONVENIENCIA DEL PLANO****************************
+#define ETAPA_PRUEBAS 0 //Habilitar cuando se ejecute una funcion de pruebas
 #define MOSTRAR_INFORMACION_UART 0 //Habilita y deshabilita la comunicacion via UART
 #define UMBRAL_OBSTACULO_LATERAL 25 //expresado en cm | sensibilidad antes de que choque con un objeto
-#define UMBRAL_OBSTACULO_ENFRENTE 14//expresado en cm | sensibilidad antes de que choque con un objeto
-#define UMBRAL_SENSOR_OPTICO_REFLEXIVO 70 //Unidad que representa el minimo de luz percibida para detectar negro
-#define RETARDO_PID 55 //Tiempo que avanzara el carrito en linea recta cuando esta por control PID
+#define UMBRAL_OBSTACULO_ENFRENTE_CRUCE 30//expresado en cm | sensibilidad antes de que choque con un objeto
+#define UMBRAL_OBSTACULO_ENFRENTE_PID 14//expresado en cm | sensibilidad antes de que choque con un objeto
+#define UMBRAL_SENSOR_OPTICO_REFLEXIVO 20 //Unidad que representa el minimo de luz percibida para detectar negro
+#define RETARDO_PARO_AUTO 35 //Tiempo que se quedara parado el auto
+#define RETARDO_PID 55 //Tiempo que avanzara el carrito en linea recta cuando esta por control PID 
 #define VELOCIDAD_MOTORES 100 //Porcentaje de ciclo de trabajo a la que trabajaran los motores
 #define VELOCIDAD_MOTORES_BAJA 70 //Porcentaje de ciclo de trabajo a la que trabajaran los motores
 #define TIEMPO_REVERSA 400 //Tiempo en milisegundos que avanzara el carro en reversa
@@ -77,6 +80,8 @@ T_FLOAT DISTANCIA_PRIORIDAD_BAJA;
 
 T_UBYTE posicionCarroX, posicionCarroY;
 T_UBYTE posicionDestinoX, posicionDestinoY;
+
+T_BOOL paredEnfrente, paredDerecha, paredIzquierda;
 
 void moverCarrito(T_UBYTE espejearCarroY, T_UBYTE* carroEspejeado);
 void mover(void);
@@ -339,16 +344,6 @@ void comportamientoBasico(void) {
 
         leerSensores();
 
-        if (hayCruce(caminosRecorrer, investigandoCruce) && !cruceDetectado) {
-
-            if (!investigandoCruce)
-                posicionInvCruce = 1;
-
-            mapear = 1;
-            cruceDetectado = 1;
-            investigandoCruce = 1;
-            velocidadBaja();
-        }
 
         direccionElegida = decidirDireccion(caminosRecorrer, &investigandoCruce,
                 &posicionInvCruce, &contCaminosRecorridos, &caminoActual, &cambioOrientacionCarro);
@@ -367,7 +362,25 @@ void comportamientoBasico(void) {
                         break;
 
                     case ENFRENTE:
-                        PID();
+                        if (hayCruce(caminosRecorrer, investigandoCruce)) {
+
+                            velocidadBaja();
+
+                            if (!cruceDetectado) {
+
+                                if (!investigandoCruce)
+                                    posicionInvCruce = 1;
+
+                                mapear = 1;
+                                cruceDetectado = 1;
+                                investigandoCruce = 1;
+
+                            }
+                        } else if (!paredEnfrente)
+                            velocidadBaja();
+                        else
+                            PID();
+
                         mouse.Next_state = ENFRENTE;
                         break;
 
@@ -433,6 +446,7 @@ void comportamientoBasico(void) {
                             &numMovimientosTotales, caminoActual);
 
                     espejearCarroY = 1;
+                    UART_printf("\rSe llego Al destino\r\n"); //OJO AQUI
                     __delay_ms(3000); //Esperar 3 segundos en la meta
                     mouse.Next_state = IZQUIERDA;
                 } else {
@@ -471,6 +485,9 @@ void forzarParoAuto(void) {
     IN2 = 0;
     IN3 = 0;
     IN4 = 0;
+
+    if (!ETAPA_PRUEBAS)
+        __delay_ms(RETARDO_PARO_AUTO);
 }
 
 void forzarReversa(void) {
@@ -712,12 +729,11 @@ void recorrerCaminoEncontrado(T_UBYTE* movimientos, T_UINT numMovimientos) {
 T_BOOL hayCruce(T_UBYTE* caminosRecorrer, T_UBYTE investigandoCruce) {
 
     T_UBYTE contCaminos = 0;
-    T_BOOL paredEnfrente = 0, paredDerecha = 0, paredIzquierda = 0;
 
-    if (sensorEnfrente > UMBRAL_OBSTACULO_ENFRENTE) {
-        paredEnfrente = 1;
-        contCaminos++;
-    }
+    paredEnfrente = 0;
+    paredDerecha = 0;
+    paredIzquierda = 0;
+
 
     if (sensorIzquierda > UMBRAL_OBSTACULO_LATERAL) {
         paredIzquierda = 1;
@@ -726,6 +742,11 @@ T_BOOL hayCruce(T_UBYTE* caminosRecorrer, T_UBYTE investigandoCruce) {
 
     if (sensorDerecha > UMBRAL_OBSTACULO_LATERAL) {
         paredDerecha = 1;
+        contCaminos++;
+    }
+
+    if (sensorEnfrente > UMBRAL_OBSTACULO_ENFRENTE_CRUCE) {
+        paredEnfrente = 1;
         contCaminos++;
     }
 
@@ -1128,15 +1149,15 @@ T_UBYTE decidirDireccion(T_UBYTE* caminosRecorrer, T_UBYTE* investigandoCruce, T
         } else { //Elegir el camino cuando no se esta investigando un cruce
 
 
-            if (DISTANCIA_PRIORIDAD_ALTA > UMBRAL_OBSTACULO_ENFRENTE) //No hay obstaculo             
+            if (DISTANCIA_PRIORIDAD_ALTA > UMBRAL_OBSTACULO_ENFRENTE_PID) //No hay obstaculo             
                 direccionElegida = SENSOR_PRIORIDAD_ALTA;
             else if (DISTANCIA_PRIORIDAD_MEDIA > UMBRAL_OBSTACULO_LATERAL)
                 direccionElegida = SENSOR_PRIORIDAD_MEDIA;
             else if (DISTANCIA_PRIORIDAD_BAJA > UMBRAL_OBSTACULO_LATERAL)
                 direccionElegida = SENSOR_PRIORIDAD_BAJA;
-
             else
-                direccionElegida = CALLEJON;
+                direccionElegida = CALLEJON; //OJO AQUI
+
 
         }
 
@@ -1203,7 +1224,7 @@ void probarPID(void) {
 
     leerSensores();
 
-    if (sensorEnfrente > UMBRAL_OBSTACULO_ENFRENTE) { //Hay espacio hacia enfrente?
+    if (sensorEnfrente > UMBRAL_OBSTACULO_ENFRENTE_PID) { //Hay espacio hacia enfrente?
         PID();
         mouse.curr_state = ENFRENTE;
         mover();
@@ -1218,7 +1239,7 @@ void probarCruceT(void) {
 
     leerSensores();
 
-    if (sensorEnfrente > UMBRAL_OBSTACULO_ENFRENTE)
+    if (sensorEnfrente > UMBRAL_OBSTACULO_ENFRENTE_PID)
         contCaminos++;
     if (sensorIzquierda > UMBRAL_OBSTACULO_LATERAL)
         contCaminos++;
@@ -1226,7 +1247,7 @@ void probarCruceT(void) {
         contCaminos++;
 
 
-    if (contCaminos > 1 && sensorEnfrente > UMBRAL_OBSTACULO_ENFRENTE) {
+    if (contCaminos > 1 && sensorEnfrente > UMBRAL_OBSTACULO_ENFRENTE_PID) {
 
         velocidadBaja();
         mouse.curr_state = ENFRENTE;
@@ -1235,7 +1256,7 @@ void probarCruceT(void) {
 
     } else {
 
-        if (sensorEnfrente > UMBRAL_OBSTACULO_ENFRENTE) { //Hay espacio hacia enfrente?
+        if (sensorEnfrente > UMBRAL_OBSTACULO_ENFRENTE_PID) { //Hay espacio hacia enfrente?
             PID();
             mouse.curr_state = ENFRENTE;
             mover();

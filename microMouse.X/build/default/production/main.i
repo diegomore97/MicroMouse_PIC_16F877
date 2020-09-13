@@ -6538,11 +6538,11 @@ double y0(double);
 double y1(double);
 double yn(int, double);
 # 10 "main.c" 2
-# 31 "main.c"
+# 34 "main.c"
 T_UBYTE SENSOR_PRIORIDAD_ALTA = ENFRENTE;
 T_UBYTE SENSOR_PRIORIDAD_MEDIA = IZQUIERDA;
 T_UBYTE SENSOR_PRIORIDAD_BAJA = DERECHA;
-# 63 "main.c"
+# 66 "main.c"
 typedef struct {
     Direccion curr_state;
     Direccion Next_state;
@@ -6560,6 +6560,8 @@ T_FLOAT DISTANCIA_PRIORIDAD_BAJA;
 
 T_UBYTE posicionCarroX, posicionCarroY;
 T_UBYTE posicionDestinoX, posicionDestinoY;
+
+T_BOOL paredEnfrente, paredDerecha, paredIzquierda;
 
 void moverCarrito(T_UBYTE espejearCarroY, T_UBYTE* carroEspejeado);
 void mover(void);
@@ -6633,7 +6635,7 @@ void probarSensores(void) {
     probarUltrasonico(DERECHA);
     T_WORD lecturaSensorOptico = dameLecturaAdc(0);
 
-    if (lecturaSensorOptico < 70)
+    if (lecturaSensorOptico < 20)
         UART_printf("\rSe llego al destino \r\n");
     else
         UART_printf("\rDestino no detectado \r\n");
@@ -6788,7 +6790,7 @@ void comportamientoBasico(void) {
                     forzarParoAuto();
                     pausa = 1;
                 }
-# 326 "main.c"
+# 331 "main.c"
             } else {
                 if (!investigandoCruce) {
                     if (numMovimientosTotales < 1000)
@@ -6805,16 +6807,6 @@ void comportamientoBasico(void) {
 
         leerSensores();
 
-        if (hayCruce(caminosRecorrer, investigandoCruce) && !cruceDetectado) {
-
-            if (!investigandoCruce)
-                posicionInvCruce = 1;
-
-            mapear = 1;
-            cruceDetectado = 1;
-            investigandoCruce = 1;
-            velocidadBaja();
-        }
 
         direccionElegida = decidirDireccion(caminosRecorrer, &investigandoCruce,
                 &posicionInvCruce, &contCaminosRecorridos, &caminoActual, &cambioOrientacionCarro);
@@ -6833,7 +6825,25 @@ void comportamientoBasico(void) {
                         break;
 
                     case ENFRENTE:
-                        PID();
+                        if (hayCruce(caminosRecorrer, investigandoCruce)) {
+
+                            velocidadBaja();
+
+                            if (!cruceDetectado) {
+
+                                if (!investigandoCruce)
+                                    posicionInvCruce = 1;
+
+                                mapear = 1;
+                                cruceDetectado = 1;
+                                investigandoCruce = 1;
+
+                            }
+                        } else if (!paredEnfrente)
+                            velocidadBaja();
+                        else
+                            PID();
+
                         mouse.Next_state = ENFRENTE;
                         break;
 
@@ -6899,6 +6909,7 @@ void comportamientoBasico(void) {
                             &numMovimientosTotales, caminoActual);
 
                     espejearCarroY = 1;
+                    UART_printf("\rSe llego Al destino\r\n");
                     _delay((unsigned long)((3000)*(4000000/4000.0)));
                     mouse.Next_state = IZQUIERDA;
                 } else {
@@ -6937,6 +6948,9 @@ void forzarParoAuto(void) {
     LATB5 = 0;
     LATB6 = 0;
     LATB7 = 0;
+
+    if (!0)
+        _delay((unsigned long)((35)*(4000000/4000.0)));
 }
 
 void forzarReversa(void) {
@@ -7178,12 +7192,11 @@ void recorrerCaminoEncontrado(T_UBYTE* movimientos, T_UINT numMovimientos) {
 T_BOOL hayCruce(T_UBYTE* caminosRecorrer, T_UBYTE investigandoCruce) {
 
     T_UBYTE contCaminos = 0;
-    T_BOOL paredEnfrente = 0, paredDerecha = 0, paredIzquierda = 0;
 
-    if (sensorEnfrente > 14) {
-        paredEnfrente = 1;
-        contCaminos++;
-    }
+    paredEnfrente = 0;
+    paredDerecha = 0;
+    paredIzquierda = 0;
+
 
     if (sensorIzquierda > 25) {
         paredIzquierda = 1;
@@ -7192,6 +7205,11 @@ T_BOOL hayCruce(T_UBYTE* caminosRecorrer, T_UBYTE investigandoCruce) {
 
     if (sensorDerecha > 25) {
         paredDerecha = 1;
+        contCaminos++;
+    }
+
+    if (sensorEnfrente > 30) {
+        paredEnfrente = 1;
         contCaminos++;
     }
 
@@ -7308,7 +7326,7 @@ T_BOOL seLlegoAlDestino(void) {
     T_BOOL llegoDestino = 0;
 
 
-    if (dameLecturaAdc(0) < 70)
+    if (dameLecturaAdc(0) < 20)
         llegoDestino = 1;
 
     return llegoDestino;
@@ -7600,9 +7618,9 @@ T_UBYTE decidirDireccion(T_UBYTE* caminosRecorrer, T_UBYTE* investigandoCruce, T
                 direccionElegida = SENSOR_PRIORIDAD_MEDIA;
             else if (DISTANCIA_PRIORIDAD_BAJA > 25)
                 direccionElegida = SENSOR_PRIORIDAD_BAJA;
-
             else
                 direccionElegida = 0;
+
 
         }
 
