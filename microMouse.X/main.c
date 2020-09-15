@@ -374,6 +374,9 @@ void comportamientoBasico(void) {
                                 mapear = 1;
                                 cruceDetectado = 1;
                                 investigandoCruce = 1;
+                                sprintf(buffer, "Investigando Cruce: %c | %c | %c\n",
+                                        caminosRecorrer[0], caminosRecorrer[1], caminosRecorrer[2]);
+                                UART_printf(buffer);
 
                             }
                         } else if (!paredEnfrente)
@@ -734,94 +737,98 @@ T_BOOL hayCruce(T_UBYTE* caminosRecorrer, T_UBYTE investigandoCruce) {
     paredDerecha = 0;
     paredIzquierda = 0;
 
+    if (!investigandoCruce) {
 
-    if (sensorIzquierda > UMBRAL_OBSTACULO_LATERAL) {
-        paredIzquierda = 1;
-        contCaminos++;
-    }
-
-    if (sensorDerecha > UMBRAL_OBSTACULO_LATERAL) {
-        paredDerecha = 1;
-        contCaminos++;
-    }
-
-    if (sensorEnfrente > UMBRAL_OBSTACULO_ENFRENTE_CRUCE) {
-        paredEnfrente = 1;
-        contCaminos++;
-    }
-
-    if (contCaminos > 1 && !investigandoCruce) {
-
-        if (SENSOR_PRIORIDAD_MEDIA == DERECHA) {
-
-            if (paredDerecha)
-                caminosRecorrer[SENSOR_PRIORIDAD_MEDIA - 1] = 1;
-            else
-                caminosRecorrer[SENSOR_PRIORIDAD_MEDIA - 1] = 0;
-
-        } else if (SENSOR_PRIORIDAD_BAJA == DERECHA) {
-
-            if (paredDerecha)
-                caminosRecorrer[SENSOR_PRIORIDAD_BAJA - 1] = 1;
-            else
-                caminosRecorrer[SENSOR_PRIORIDAD_BAJA - 1] = 0;
-
-        } else {
-
-            if (paredDerecha)
-                caminosRecorrer[SENSOR_PRIORIDAD_ALTA - 1] = 1;
-            else
-                caminosRecorrer[SENSOR_PRIORIDAD_ALTA - 1] = 0;
-
+        if (sensorEnfrente > UMBRAL_OBSTACULO_ENFRENTE_CRUCE) {
+            paredEnfrente = 1;
+            contCaminos++;
         }
 
-        if (SENSOR_PRIORIDAD_ALTA == IZQUIERDA) {
-
-            if (paredIzquierda)
-                caminosRecorrer[SENSOR_PRIORIDAD_ALTA - 1] = 1;
-            else
-                caminosRecorrer[SENSOR_PRIORIDAD_ALTA - 1] = 0;
-
-        } else if (SENSOR_PRIORIDAD_BAJA == IZQUIERDA) {
-
-            if (paredIzquierda)
-                caminosRecorrer[SENSOR_PRIORIDAD_BAJA - 1] = 1;
-            else
-                caminosRecorrer[SENSOR_PRIORIDAD_BAJA - 1] = 0;
-
-        } else {
-
-            if (paredIzquierda)
-                caminosRecorrer[SENSOR_PRIORIDAD_MEDIA - 1] = 1;
-            else
-                caminosRecorrer[SENSOR_PRIORIDAD_MEDIA - 1] = 0;
-
+        if (sensorIzquierda > UMBRAL_OBSTACULO_LATERAL) {
+            paredIzquierda = 1;
+            contCaminos++;
         }
 
-        if (SENSOR_PRIORIDAD_ALTA == ENFRENTE) {
-
-            if (paredEnfrente)
-                caminosRecorrer[SENSOR_PRIORIDAD_ALTA - 1] = 1;
-            else
-                caminosRecorrer[SENSOR_PRIORIDAD_ALTA - 1] = 0;
-
-        } else if (SENSOR_PRIORIDAD_MEDIA == ENFRENTE) {
-
-            if (paredEnfrente)
-                caminosRecorrer[SENSOR_PRIORIDAD_MEDIA - 1] = 1;
-            else
-                caminosRecorrer[SENSOR_PRIORIDAD_MEDIA - 1] = 0;
-
-        } else {
-
-            if (paredEnfrente)
-                caminosRecorrer[SENSOR_PRIORIDAD_BAJA - 1] = 1;
-            else
-                caminosRecorrer[SENSOR_PRIORIDAD_BAJA - 1] = 0;
-
+        if (sensorDerecha > UMBRAL_OBSTACULO_LATERAL) {
+            paredDerecha = 1;
+            contCaminos++;
         }
 
-        //decidirDireccionPosicion(caminosRecorrer);
+
+        if (contCaminos > 1) {
+
+            if (SENSOR_PRIORIDAD_MEDIA == DERECHA) {
+
+                if (paredDerecha)
+                    caminosRecorrer[SENSOR_PRIORIDAD_MEDIA - 1] = '1';
+                else
+                    caminosRecorrer[SENSOR_PRIORIDAD_MEDIA - 1] = '0';
+
+            } else if (SENSOR_PRIORIDAD_BAJA == DERECHA) {
+
+                if (paredDerecha)
+                    caminosRecorrer[SENSOR_PRIORIDAD_BAJA - 1] = '1';
+                else
+                    caminosRecorrer[SENSOR_PRIORIDAD_BAJA - 1] = '0';
+
+            } else {
+
+                if (paredDerecha)
+                    caminosRecorrer[SENSOR_PRIORIDAD_ALTA - 1] = '1';
+                else
+                    caminosRecorrer[SENSOR_PRIORIDAD_ALTA - 1] = '0';
+
+            }
+
+            if (SENSOR_PRIORIDAD_ALTA == IZQUIERDA) {
+
+                if (paredIzquierda)
+                    caminosRecorrer[SENSOR_PRIORIDAD_ALTA - 1] = '1';
+                else
+                    caminosRecorrer[SENSOR_PRIORIDAD_ALTA - 1] = '0';
+
+            } else if (SENSOR_PRIORIDAD_BAJA == IZQUIERDA) {
+
+                if (paredIzquierda)
+                    caminosRecorrer[SENSOR_PRIORIDAD_BAJA - 1] = '1';
+                else
+                    caminosRecorrer[SENSOR_PRIORIDAD_BAJA - 1] = '0';
+
+            } else {
+
+                if (paredIzquierda)
+                    caminosRecorrer[SENSOR_PRIORIDAD_MEDIA - 1] = '1';
+                else
+                    caminosRecorrer[SENSOR_PRIORIDAD_MEDIA - 1] = '0';
+
+            }
+
+            if (SENSOR_PRIORIDAD_ALTA == ENFRENTE) {
+
+                if (paredEnfrente)
+                    caminosRecorrer[SENSOR_PRIORIDAD_ALTA - 1] = '1';
+                else
+                    caminosRecorrer[SENSOR_PRIORIDAD_ALTA - 1] = '0';
+
+            } else if (SENSOR_PRIORIDAD_MEDIA == ENFRENTE) {
+
+                if (paredEnfrente)
+                    caminosRecorrer[SENSOR_PRIORIDAD_MEDIA - 1] = '1';
+                else
+                    caminosRecorrer[SENSOR_PRIORIDAD_MEDIA - 1] = '0';
+
+            } else {
+
+                if (paredEnfrente)
+                    caminosRecorrer[SENSOR_PRIORIDAD_BAJA - 1] = '1';
+                else
+                    caminosRecorrer[SENSOR_PRIORIDAD_BAJA - 1] = '0';
+
+            }
+
+            //decidirDireccionPosicion(caminosRecorrer);
+
+        }
 
     }
 
@@ -889,17 +896,17 @@ T_UBYTE decidirDireccion(T_UBYTE* caminosRecorrer, T_UBYTE* investigandoCruce, T
 
             switch (*contCaminosRecorridos) { //Eliminar caminos sin salida
                 case 1:
-                    if (caminosRecorrer[SENSOR_PRIORIDAD_ALTA - 1 ] == 1)
+                    if (caminosRecorrer[SENSOR_PRIORIDAD_ALTA - 1 ] == '1')
                         caminosRecorrer[SENSOR_PRIORIDAD_ALTA - 1 ] = 'X'; //Este camino no es el correcto
 
                     else {
-                        if (caminosRecorrer[SENSOR_PRIORIDAD_MEDIA - 1 ] == 1)
+                        if (caminosRecorrer[SENSOR_PRIORIDAD_MEDIA - 1 ] == '1')
                             caminosRecorrer[SENSOR_PRIORIDAD_MEDIA - 1 ] = 'X'; //Este camino no es el correcto  
                     }
                     break;
 
                 case 2:
-                    if (caminosRecorrer[SENSOR_PRIORIDAD_MEDIA - 1 ] == 1)
+                    if (caminosRecorrer[SENSOR_PRIORIDAD_MEDIA - 1 ] == '1')
                         caminosRecorrer[SENSOR_PRIORIDAD_MEDIA - 1 ] = 'X'; //Este camino no es el correcto
                     else
                         caminosRecorrer[SENSOR_PRIORIDAD_BAJA - 1 ] = 'X'; //Este camino no es el correcto
@@ -908,7 +915,7 @@ T_UBYTE decidirDireccion(T_UBYTE* caminosRecorrer, T_UBYTE* investigandoCruce, T
                     break;
 
                 case 3:
-                    if (caminosRecorrer[SENSOR_PRIORIDAD_BAJA - 1 ] == 1)
+                    if (caminosRecorrer[SENSOR_PRIORIDAD_BAJA - 1 ] == '1')
                         caminosRecorrer[SENSOR_PRIORIDAD_BAJA - 1 ] = 'X'; //Este camino no es el correcto
 
 
@@ -920,11 +927,11 @@ T_UBYTE decidirDireccion(T_UBYTE* caminosRecorrer, T_UBYTE* investigandoCruce, T
 
         if (!(*cambioOrientacionCarro)) { //Elegir primer Camino en un cruce
 
-            if (caminosRecorrer[SENSOR_PRIORIDAD_ALTA - 1 ] == 1)
+            if (caminosRecorrer[SENSOR_PRIORIDAD_ALTA - 1 ] == '1')
                 direccionElegida = SENSOR_PRIORIDAD_ALTA;
-            else if (caminosRecorrer[SENSOR_PRIORIDAD_MEDIA - 1] == 1)
+            else if (caminosRecorrer[SENSOR_PRIORIDAD_MEDIA - 1] == '1')
                 direccionElegida = SENSOR_PRIORIDAD_MEDIA;
-            else if (caminosRecorrer[SENSOR_PRIORIDAD_BAJA - 1] == 1)
+            else if (caminosRecorrer[SENSOR_PRIORIDAD_BAJA - 1] == '1')
                 direccionElegida = SENSOR_PRIORIDAD_BAJA;
 
 
@@ -940,19 +947,19 @@ T_UBYTE decidirDireccion(T_UBYTE* caminosRecorrer, T_UBYTE* investigandoCruce, T
                         if (caminosRecorrer[SENSOR_PRIORIDAD_ALTA - 1 ] == 'X') {
 
                             if (SENSOR_PRIORIDAD_MEDIA == IZQUIERDA &&
-                                    caminosRecorrer[SENSOR_PRIORIDAD_MEDIA - 1] == 1) {
+                                    caminosRecorrer[SENSOR_PRIORIDAD_MEDIA - 1] == '1') {
                                 *caminoActual = IZQUIERDA;
                                 direccionElegida = ENFRENTE;
                             } else if (SENSOR_PRIORIDAD_MEDIA == ENFRENTE &&
-                                    caminosRecorrer[SENSOR_PRIORIDAD_MEDIA - 1] == 1) {
+                                    caminosRecorrer[SENSOR_PRIORIDAD_MEDIA - 1] == '1') {
                                 *caminoActual = ENFRENTE;
                                 direccionElegida = DERECHA;
                             } else if (SENSOR_PRIORIDAD_BAJA == IZQUIERDA &&
-                                    caminosRecorrer[SENSOR_PRIORIDAD_BAJA - 1] == 1) {
+                                    caminosRecorrer[SENSOR_PRIORIDAD_BAJA - 1] == '1') {
                                 *caminoActual = IZQUIERDA;
                                 direccionElegida = ENFRENTE;
                             } else if (SENSOR_PRIORIDAD_BAJA == ENFRENTE &&
-                                    caminosRecorrer[SENSOR_PRIORIDAD_BAJA - 1] == 1) {
+                                    caminosRecorrer[SENSOR_PRIORIDAD_BAJA - 1] == '1') {
                                 *caminoActual = ENFRENTE;
                                 direccionElegida = DERECHA;
                             }
@@ -964,19 +971,19 @@ T_UBYTE decidirDireccion(T_UBYTE* caminosRecorrer, T_UBYTE* investigandoCruce, T
                         if (caminosRecorrer[SENSOR_PRIORIDAD_ALTA - 1 ] == 'X') {
 
                             if (SENSOR_PRIORIDAD_MEDIA == DERECHA &&
-                                    caminosRecorrer[SENSOR_PRIORIDAD_MEDIA - 1] == 1) {
+                                    caminosRecorrer[SENSOR_PRIORIDAD_MEDIA - 1] == '1') {
                                 *caminoActual = DERECHA;
                                 direccionElegida = ENFRENTE;
                             } else if (SENSOR_PRIORIDAD_MEDIA == ENFRENTE &&
-                                    caminosRecorrer[SENSOR_PRIORIDAD_MEDIA - 1] == 1) {
+                                    caminosRecorrer[SENSOR_PRIORIDAD_MEDIA - 1] == '1') {
                                 *caminoActual = ENFRENTE;
                                 direccionElegida = IZQUIERDA;
                             } else if (SENSOR_PRIORIDAD_BAJA == DERECHA &&
-                                    caminosRecorrer[SENSOR_PRIORIDAD_BAJA - 1] == 1) {
+                                    caminosRecorrer[SENSOR_PRIORIDAD_BAJA - 1] == '1') {
                                 *caminoActual = DERECHA;
                                 direccionElegida = ENFRENTE;
                             } else if (SENSOR_PRIORIDAD_BAJA == ENFRENTE &&
-                                    caminosRecorrer[SENSOR_PRIORIDAD_BAJA - 1] == 1) {
+                                    caminosRecorrer[SENSOR_PRIORIDAD_BAJA - 1] == '1') {
                                 *caminoActual = ENFRENTE;
                                 direccionElegida = IZQUIERDA;
                             }
@@ -988,19 +995,19 @@ T_UBYTE decidirDireccion(T_UBYTE* caminosRecorrer, T_UBYTE* investigandoCruce, T
                         if (caminosRecorrer[SENSOR_PRIORIDAD_ALTA - 1 ] == 'X') {
 
                             if (SENSOR_PRIORIDAD_MEDIA == IZQUIERDA &&
-                                    caminosRecorrer[SENSOR_PRIORIDAD_MEDIA - 1] == 1) {
+                                    caminosRecorrer[SENSOR_PRIORIDAD_MEDIA - 1] == '1') {
                                 *caminoActual = IZQUIERDA;
                                 direccionElegida = DERECHA;
                             } else if (SENSOR_PRIORIDAD_MEDIA == DERECHA &&
-                                    caminosRecorrer[SENSOR_PRIORIDAD_MEDIA - 1] == 1) {
+                                    caminosRecorrer[SENSOR_PRIORIDAD_MEDIA - 1] == '1') {
                                 *caminoActual = DERECHA;
                                 direccionElegida = IZQUIERDA;
                             } else if (SENSOR_PRIORIDAD_BAJA == IZQUIERDA &&
-                                    caminosRecorrer[SENSOR_PRIORIDAD_BAJA - 1] == 1) {
+                                    caminosRecorrer[SENSOR_PRIORIDAD_BAJA - 1] == '1') {
                                 *caminoActual = IZQUIERDA;
                                 direccionElegida = DERECHA;
                             } else if (SENSOR_PRIORIDAD_BAJA == DERECHA &&
-                                    caminosRecorrer[SENSOR_PRIORIDAD_BAJA - 1] == 1) {
+                                    caminosRecorrer[SENSOR_PRIORIDAD_BAJA - 1] == '1') {
                                 *caminoActual = DERECHA;
                                 direccionElegida = IZQUIERDA;
                             }
@@ -1014,11 +1021,11 @@ T_UBYTE decidirDireccion(T_UBYTE* caminosRecorrer, T_UBYTE* investigandoCruce, T
                         if (caminosRecorrer[SENSOR_PRIORIDAD_MEDIA - 1 ] == 'X') {
 
                             if (SENSOR_PRIORIDAD_BAJA == IZQUIERDA &&
-                                    caminosRecorrer[SENSOR_PRIORIDAD_BAJA - 1] == 1) {
+                                    caminosRecorrer[SENSOR_PRIORIDAD_BAJA - 1] == '1') {
                                 *caminoActual = IZQUIERDA;
                                 direccionElegida = ENFRENTE;
                             } else if (SENSOR_PRIORIDAD_BAJA == ENFRENTE &&
-                                    caminosRecorrer[SENSOR_PRIORIDAD_BAJA - 1] == 1) {
+                                    caminosRecorrer[SENSOR_PRIORIDAD_BAJA - 1] == '1') {
                                 *caminoActual = ENFRENTE;
                                 direccionElegida = DERECHA;
                             }
@@ -1030,11 +1037,11 @@ T_UBYTE decidirDireccion(T_UBYTE* caminosRecorrer, T_UBYTE* investigandoCruce, T
                         if (caminosRecorrer[SENSOR_PRIORIDAD_MEDIA - 1 ] == 'X') {
 
                             if (SENSOR_PRIORIDAD_BAJA == DERECHA &&
-                                    caminosRecorrer[SENSOR_PRIORIDAD_BAJA - 1] == 1) {
+                                    caminosRecorrer[SENSOR_PRIORIDAD_BAJA - 1] == '1') {
                                 *caminoActual = DERECHA;
                                 direccionElegida = ENFRENTE;
                             } else if (SENSOR_PRIORIDAD_BAJA == ENFRENTE &&
-                                    caminosRecorrer[SENSOR_PRIORIDAD_BAJA - 1] == 1) {
+                                    caminosRecorrer[SENSOR_PRIORIDAD_BAJA - 1] == '1') {
                                 *caminoActual = ENFRENTE;
                                 direccionElegida = IZQUIERDA;
                             }
@@ -1046,11 +1053,11 @@ T_UBYTE decidirDireccion(T_UBYTE* caminosRecorrer, T_UBYTE* investigandoCruce, T
                         if (caminosRecorrer[SENSOR_PRIORIDAD_MEDIA - 1 ] == 'X') {
 
                             if (SENSOR_PRIORIDAD_BAJA == DERECHA &&
-                                    caminosRecorrer[SENSOR_PRIORIDAD_BAJA - 1] == 1) {
+                                    caminosRecorrer[SENSOR_PRIORIDAD_BAJA - 1] == '1') {
                                 *caminoActual = DERECHA;
                                 direccionElegida = IZQUIERDA;
                             } else if (SENSOR_PRIORIDAD_BAJA == IZQUIERDA &&
-                                    caminosRecorrer[SENSOR_PRIORIDAD_BAJA - 1] == 1) {
+                                    caminosRecorrer[SENSOR_PRIORIDAD_BAJA - 1] == '1') {
                                 *caminoActual = IZQUIERDA;
                                 direccionElegida = DERECHA;
                             }
@@ -1068,11 +1075,11 @@ T_UBYTE decidirDireccion(T_UBYTE* caminosRecorrer, T_UBYTE* investigandoCruce, T
                         if (caminosRecorrer[SENSOR_PRIORIDAD_MEDIA - 1 ] == 'X') {
 
                             if (SENSOR_PRIORIDAD_BAJA == IZQUIERDA &&
-                                    caminosRecorrer[SENSOR_PRIORIDAD_BAJA - 1] == 1) {
+                                    caminosRecorrer[SENSOR_PRIORIDAD_BAJA - 1] == '1') {
                                 *caminoActual = IZQUIERDA;
                                 direccionElegida = ENFRENTE;
                             } else if (SENSOR_PRIORIDAD_BAJA == ENFRENTE &&
-                                    caminosRecorrer[SENSOR_PRIORIDAD_BAJA - 1] == 1) {
+                                    caminosRecorrer[SENSOR_PRIORIDAD_BAJA - 1] == '1') {
                                 *caminoActual = ENFRENTE;
                                 direccionElegida = DERECHA;
                             } else
@@ -1085,11 +1092,11 @@ T_UBYTE decidirDireccion(T_UBYTE* caminosRecorrer, T_UBYTE* investigandoCruce, T
                         if (caminosRecorrer[SENSOR_PRIORIDAD_MEDIA - 1 ] == 'X') {
 
                             if (SENSOR_PRIORIDAD_BAJA == DERECHA &&
-                                    caminosRecorrer[SENSOR_PRIORIDAD_BAJA - 1] == 1) {
+                                    caminosRecorrer[SENSOR_PRIORIDAD_BAJA - 1] == '1') {
                                 *caminoActual = DERECHA;
                                 direccionElegida = ENFRENTE;
                             } else if (SENSOR_PRIORIDAD_BAJA == ENFRENTE &&
-                                    caminosRecorrer[SENSOR_PRIORIDAD_BAJA - 1] == 1) {
+                                    caminosRecorrer[SENSOR_PRIORIDAD_BAJA - 1] == '1') {
                                 *caminoActual = ENFRENTE;
                                 direccionElegida = IZQUIERDA;
                             } else
@@ -1102,11 +1109,11 @@ T_UBYTE decidirDireccion(T_UBYTE* caminosRecorrer, T_UBYTE* investigandoCruce, T
                         if (caminosRecorrer[SENSOR_PRIORIDAD_MEDIA - 1 ] == 'X') {
 
                             if (SENSOR_PRIORIDAD_BAJA == DERECHA &&
-                                    caminosRecorrer[SENSOR_PRIORIDAD_BAJA - 1] == 1) {
+                                    caminosRecorrer[SENSOR_PRIORIDAD_BAJA - 1] == '1') {
                                 *caminoActual = DERECHA;
                                 direccionElegida = IZQUIERDA;
                             } else if (SENSOR_PRIORIDAD_BAJA == IZQUIERDA &&
-                                    caminosRecorrer[SENSOR_PRIORIDAD_BAJA - 1] == 1) {
+                                    caminosRecorrer[SENSOR_PRIORIDAD_BAJA - 1] == '1') {
                                 *caminoActual = IZQUIERDA;
                                 direccionElegida = DERECHA;
                             } else
