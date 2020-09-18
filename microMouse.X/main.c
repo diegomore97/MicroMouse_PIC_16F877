@@ -12,8 +12,8 @@
 //**************MODIFICAR ESTAS CONSTANTES SEGUN LA CONVENIENCIA DEL PLANO****************************
 #define ETAPA_PRUEBAS 0 //Habilitar cuando se ejecute una funcion de pruebas
 #define MOSTRAR_INFORMACION_UART 0 //Habilita y deshabilita la comunicacion via UART
-#define UMBRAL_OBSTACULO_LATERAL 25 //expresado en cm | sensibilidad antes de que choque con un objeto
-#define UMBRAL_OBSTACULO_ENFRENTE_CRUCE 30//expresado en cm | sensibilidad antes de que choque con un objeto
+#define UMBRAL_OBSTACULO_LATERAL 30 //expresado en cm | sensibilidad antes de que choque con un objeto
+#define UMBRAL_OBSTACULO_ENFRENTE_CRUCE 35//expresado en cm | sensibilidad antes de que choque con un objeto
 #define UMBRAL_OBSTACULO_ENFRENTE_PID 14//expresado en cm | sensibilidad antes de que choque con un objeto
 #define UMBRAL_SENSOR_OPTICO_REFLEXIVO 20 //Unidad que representa el minimo de luz percibida para detectar negro
 #define RETARDO_PARO_AUTO 35 //Tiempo que se quedara parado el auto
@@ -58,6 +58,7 @@ T_UBYTE SENSOR_PRIORIDAD_BAJA = DERECHA;
 #define RETARDO_ANTIREBOTE 100
 #define TAMANO_CADENA 50 //Tamaño de la cadena de la variable para debug
 
+#define DOBLE 2
 #define CALLEJON 0
 #define PRIMER_DIRECCION 0
 #define MAX_CAMINOS 3 //Hasta 3 caminos puede tener para elegir el carrito
@@ -83,7 +84,7 @@ T_UBYTE posicionDestinoX, posicionDestinoY;
 
 T_BOOL paredEnfrente, paredDerecha, paredIzquierda;
 
-void moverCarrito(T_UBYTE espejearCarroY, T_UBYTE* carroEspejeado);
+void moverCarrito(T_UBYTE espejearCarroY, T_UBYTE* carroEspejeado, T_BOOL* avanceRectoLargo);
 void mover(void);
 void inicializarComportamientoBasico(void);
 void comportamientoBasico(void);
@@ -113,6 +114,7 @@ void forzarReversa(void);
 void forzarAvanceRecto(void);
 void forzarGiroIzquierda(void);
 void forzarGiroDerecha(void);
+void mostrarDireccionElegida(T_UBYTE direccionElegida);
 
 //Vladi
 void registraPosicionActual(void); //Posicion Actual del auto
@@ -126,7 +128,8 @@ void combinarArreglos(T_UBYTE* movimientos, T_UBYTE* caminoFinal, T_UINT numMovi
         T_UINT* numMovimientosFinal);
 
 T_UBYTE decidirDireccion(T_UBYTE* caminosRecorrer, T_UBYTE* investigandoCruce, T_UBYTE* posicionInvCruce,
-        T_UBYTE* contCaminosRecorridos, T_UBYTE* caminoActual, T_BOOL* cambioOrientacionCarro);
+        T_UBYTE* contCaminosRecorridos, T_UBYTE* caminoActual, T_BOOL* cambioOrientacionCarro,
+        T_UBYTE* mapear, T_UBYTE* cruceDetectado, T_BOOL* avanceRectoLargo);
 
 void __interrupt() boton(void) {
 
@@ -292,11 +295,12 @@ void comportamientoBasico(void) {
     static T_BOOL caminoEncontrado = 0;
     static T_UBYTE caminoActual = 0;
     static T_BOOL cambioOrientacionCarro = 0;
+    static T_BOOL avanceRectoLargo = 0;
     T_UBYTE direccionElegida = 0;
 
     if (!caminoEncontrado) { //Si aun no se ha encontrado el camino
 
-        moverCarrito(espejearCarroY, &carroEspejeado); //Mandar señales al Puente H
+        moverCarrito(espejearCarroY, &carroEspejeado, &avanceRectoLargo); //Mandar señales al Puente H
         //registraPosicionActual();
 
         if (!llegoDestino) {
@@ -346,7 +350,8 @@ void comportamientoBasico(void) {
 
 
         direccionElegida = decidirDireccion(caminosRecorrer, &investigandoCruce,
-                &posicionInvCruce, &contCaminosRecorridos, &caminoActual, &cambioOrientacionCarro);
+                &posicionInvCruce, &contCaminosRecorridos, &caminoActual,
+                &cambioOrientacionCarro, &mapear, &cruceDetectado, &avanceRectoLargo);
 
 
         switch (mouse.curr_state) {
@@ -362,24 +367,8 @@ void comportamientoBasico(void) {
                         break;
 
                     case ENFRENTE:
-                        if (hayCruce(caminosRecorrer, investigandoCruce)) {
 
-                            velocidadBaja();
-
-                            if (!cruceDetectado) {
-
-                                if (!investigandoCruce)
-                                    posicionInvCruce = 1;
-
-                                mapear = 1;
-                                cruceDetectado = 1;
-                                investigandoCruce = 1;
-                                sprintf(buffer, "Investigando Cruce: %c | %c | %c\n",
-                                        caminosRecorrer[0], caminosRecorrer[1], caminosRecorrer[2]);
-                                UART_printf(buffer);
-
-                            }
-                        } else if (!paredEnfrente)
+                        if (!paredEnfrente)
                             velocidadBaja();
                         else
                             PID();
@@ -559,7 +548,7 @@ void forzarEspejeo(void) {
         forzarEspejeoDerecha();
 }
 
-void moverCarrito(T_UBYTE espejearCarroY, T_UBYTE* carroEspejeado) {
+void moverCarrito(T_UBYTE espejearCarroY, T_UBYTE* carroEspejeado, T_BOOL* avanceRectoLargo) {
 
     switch (mouse.curr_state) {
 
@@ -569,6 +558,11 @@ void moverCarrito(T_UBYTE espejearCarroY, T_UBYTE* carroEspejeado) {
             IN2 = 0;
             IN3 = 1;
             IN4 = 0;
+
+            if (*avanceRectoLargo) {
+                *avanceRectoLargo = 0;
+                __delay_ms(TIEMPO_AVANCE_LATERAL * DOBLE);
+            }
 
             if (!MOSTRAR_INFORMACION_UART)
                 __delay_ms(RETARDO_PID);
@@ -694,7 +688,7 @@ void regresarPuntoPartida(T_UBYTE* movimientos, T_UINT numMovimientos) {
 
 void regresarAlCruce(T_UBYTE* movimientos, T_UINT numMovimientos) {
 
-    for (T_INT i = numMovimientos - 1; i > 0; i--) { //Del final al Principio
+    for (T_INT i = numMovimientos - 1; i > 1; i--) { //Del final al Principio
         //En este caso no realizara el primer movimientos porque en ese elegimos la direccion
         //del camino del cruce que estamos explorando.
 
@@ -877,8 +871,34 @@ T_BOOL seLlegoAlDestino(void) {
 
 }
 
+void mostrarDireccionElegida(T_UBYTE direccionElegida) {
+
+    switch (direccionElegida) {
+        case ENFRENTE:
+            UART_printf("\rDireccion Elegida: ENFRENTE\n\n\r");
+            break;
+
+        case IZQUIERDA:
+            UART_printf("\rDireccion Elegida: IZQUIERDA\n\n\r");
+            break;
+
+        case DERECHA:
+            UART_printf("\rDireccion Elegida: DERECHA\n\n\r");
+            break;
+
+        case CALLEJON:
+            UART_printf("\rDireccion Elegida: CALLEJON\n\n\r");
+            break;
+
+        default:
+            break;
+
+    }
+}
+
 T_UBYTE decidirDireccion(T_UBYTE* caminosRecorrer, T_UBYTE* investigandoCruce, T_UBYTE* posicionInvCruce,
-        T_UBYTE* contCaminosRecorridos, T_UBYTE* caminoActual, T_BOOL* cambioOrientacionCarro) {
+        T_UBYTE* contCaminosRecorridos, T_UBYTE* caminoActual, T_BOOL* cambioOrientacionCarro,
+        T_UBYTE* mapear, T_UBYTE* cruceDetectado, T_BOOL* avanceRectoLargo) {
 
     T_UBYTE direccionElegida;
     llegoDestino = seLlegoAlDestino();
@@ -1148,6 +1168,11 @@ T_UBYTE decidirDireccion(T_UBYTE* caminosRecorrer, T_UBYTE* investigandoCruce, T
             }
         }
 
+        if (direccionElegida == ENFRENTE)
+            *avanceRectoLargo = 1;
+
+        mostrarDireccionElegida(direccionElegida); //Para efectos de Debug
+
     } else { //Ya no estamos en el cruce que se esta investigando
 
         if (llegoDestino) {
@@ -1155,15 +1180,38 @@ T_UBYTE decidirDireccion(T_UBYTE* caminosRecorrer, T_UBYTE* investigandoCruce, T
 
         } else { //Elegir el camino cuando no se esta investigando un cruce
 
+            if (hayCruce(caminosRecorrer, *investigandoCruce)) {
 
-            if (DISTANCIA_PRIORIDAD_ALTA > UMBRAL_OBSTACULO_ENFRENTE_PID) //No hay obstaculo             
-                direccionElegida = SENSOR_PRIORIDAD_ALTA;
-            else if (DISTANCIA_PRIORIDAD_MEDIA > UMBRAL_OBSTACULO_LATERAL)
-                direccionElegida = SENSOR_PRIORIDAD_MEDIA;
-            else if (DISTANCIA_PRIORIDAD_BAJA > UMBRAL_OBSTACULO_LATERAL)
-                direccionElegida = SENSOR_PRIORIDAD_BAJA;
-            else
-                direccionElegida = CALLEJON; //OJO AQUI
+                velocidadBaja();
+
+                if (!(*cruceDetectado)) {
+
+                    if (!(*investigandoCruce))
+                        *posicionInvCruce = 1;
+
+                    *mapear = 1;
+                    *cruceDetectado = 1;
+                    *investigandoCruce = 1;
+                    direccionElegida = ALTO;
+
+                    sprintf(buffer, "Investigando Cruce: %c | %c | %c\n",
+                            caminosRecorrer[0], caminosRecorrer[1], caminosRecorrer[2]);
+                    UART_printf(buffer);
+
+                }
+            } else {
+
+
+                if (DISTANCIA_PRIORIDAD_ALTA > UMBRAL_OBSTACULO_ENFRENTE_PID) //No hay obstaculo             
+                    direccionElegida = SENSOR_PRIORIDAD_ALTA;
+                else if (DISTANCIA_PRIORIDAD_MEDIA > UMBRAL_OBSTACULO_LATERAL)
+                    direccionElegida = SENSOR_PRIORIDAD_MEDIA;
+                else if (DISTANCIA_PRIORIDAD_BAJA > UMBRAL_OBSTACULO_LATERAL)
+                    direccionElegida = SENSOR_PRIORIDAD_BAJA;
+                else
+                    direccionElegida = CALLEJON;
+
+            }
 
 
         }
