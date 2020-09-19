@@ -318,14 +318,14 @@ void comportamientoBasico(void) {
                 }
             }
 
+            leerSensores();
+
+
+            direccionElegida = decidirDireccion(caminosRecorrer, &investigandoCruce,
+                    &posicionInvCruce, &contCaminosRecorridos, &caminoActual,
+                    &cambioOrientacionCarro, &mapear, &cruceDetectado, &avanceRectoLargo);
+
         }
-
-        leerSensores();
-
-
-        direccionElegida = decidirDireccion(caminosRecorrer, &investigandoCruce,
-                &posicionInvCruce, &contCaminosRecorridos, &caminoActual,
-                &cambioOrientacionCarro, &mapear, &cruceDetectado, &avanceRectoLargo);
 
 
         switch (mouse.curr_state) {
@@ -371,7 +371,7 @@ void comportamientoBasico(void) {
 
             case IZQUIERDA:
 
-                if (carroEspejeado && espejearCarroY) {
+                if (carroEspejeado && espejearCarroY && !llegoDestino) {
 
                     espejearCarroY = 0;
                     carroEspejeado = 0;
@@ -406,6 +406,7 @@ void comportamientoBasico(void) {
                     llegoDestino = 0;
                     caminoEncontrado = 1;
                     finalizarRecorrido();
+                    UART_printf("\rSe regreso al punto de partida\r\n"); //OJO AQUI
                 } else if (llegoDestino && !carroEspejeado) { //El auto esta parado en el destino
 
                     caminoCorrecto(movimientosRealizados, caminoFinal, numMovimientos,
