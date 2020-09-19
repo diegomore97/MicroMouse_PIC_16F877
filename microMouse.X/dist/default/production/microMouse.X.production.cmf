@@ -105,7 +105,7 @@ dataBANK1 BANK1 1 1E9 1E9 4 1
 bssBIGRAM BIGRAM 1 2C8 2C8 3E8 1
 bssCOMRAM COMRAM 1 55 55 5 1
 mediumconst MEDIUMCONST 0 7DEA 7DEA 216 1
-$C:\Users\DIEGOM~1\AppData\Local\Temp\sa9s.o
+$C:\Users\DIEGOM~1\AppData\Local\Temp\s7t0.o
 idloc IDLOC 0 200000 200000 8 1
 init CODE 0 E E 4 1
 reset_vec CODE 0 0 0 4 1
@@ -148,28 +148,28 @@ MEDIUMCONST 5792-7DE9 1
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\microMouse.X.production.o
-8 intcode CODE >25365:C:\Users\DIEGOM~1\AppData\Local\Temp\sa9s.s
-8 intcode CODE >134:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-513A text78 CODE >246:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-513C text78 CODE >248:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-5140 text78 CODE >250:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-514E text78 CODE >251:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-515C text78 CODE >252:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-516A text78 CODE >253:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-516E text78 CODE >258:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-5190 text78 CODE >259:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-5192 intcode_body CODE >134:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-5194 intcode_body CODE >136:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-51A2 intcode_body CODE >138:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-51A8 intcode_body CODE >139:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-51BA intcode_body CODE >140:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-51BE intcode_body CODE >141:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-51C0 intcode_body CODE >142:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-51D6 intcode_body CODE >143:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-51DA intcode_body CODE >144:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-51DC intcode_body CODE >145:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-51E0 intcode_body CODE >148:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-51E2 intcode_body CODE >150:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+8 intcode CODE >25348:C:\Users\DIEGOM~1\AppData\Local\Temp\s7t0.s
+8 intcode CODE >108:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+513A text78 CODE >220:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+513C text78 CODE >222:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+5140 text78 CODE >224:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+514E text78 CODE >225:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+515C text78 CODE >226:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+516A text78 CODE >227:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+516E text78 CODE >232:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+5190 text78 CODE >233:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+5192 intcode_body CODE >108:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+5194 intcode_body CODE >110:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+51A2 intcode_body CODE >112:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+51A8 intcode_body CODE >113:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+51BA intcode_body CODE >114:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+51BE intcode_body CODE >115:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+51C0 intcode_body CODE >116:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+51D6 intcode_body CODE >117:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+51DA intcode_body CODE >118:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+51DC intcode_body CODE >119:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+51E0 intcode_body CODE >122:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+51E2 intcode_body CODE >124:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
 3EDE text76 CODE >7:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
 3EDE text76 CODE >13:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
 3EE2 text76 CODE >14:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
@@ -208,22 +208,22 @@ $dist/default/production\microMouse.X.production.o
 4E22 text75 CODE >32:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/UART.h
 4E24 text75 CODE >33:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/UART.h
 4E26 text75 CODE >34:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/UART.h
-4F64 text74 CODE >1351:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4F64 text74 CODE >1353:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4F70 text74 CODE >1355:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4F9C text74 CODE >1356:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4FAA text74 CODE >1357:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4FC4 text74 CODE >1358:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-52DA text73 CODE >854:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-52DA text73 CODE >856:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-52E6 text73 CODE >857:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-5318 text73 CODE >859:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-5328 text73 CODE >860:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-5402 text72 CODE >273:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-5402 text72 CODE >276:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-540E text72 CODE >277:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-5432 text72 CODE >278:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-5446 text72 CODE >279:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4F64 text74 CODE >1325:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4F64 text74 CODE >1327:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4F70 text74 CODE >1329:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4F9C text74 CODE >1330:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4FAA text74 CODE >1331:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4FC4 text74 CODE >1332:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+52DA text73 CODE >828:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+52DA text73 CODE >830:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+52E6 text73 CODE >831:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+5318 text73 CODE >833:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+5328 text73 CODE >834:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+5402 text72 CODE >247:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+5402 text72 CODE >250:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+540E text72 CODE >251:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+5432 text72 CODE >252:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+5446 text72 CODE >253:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
 41F8 text71 CODE >4:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\flge.c
 41F8 text71 CODE >7:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\flge.c
 4226 text71 CODE >8:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\flge.c
@@ -237,35 +237,35 @@ $dist/default/production\microMouse.X.production.o
 42C4 text71 CODE >17:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\flge.c
 42D4 text71 CODE >18:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\flge.c
 42FA text71 CODE >19:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\flge.c
-3784 text70 CODE >726:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-3784 text70 CODE >728:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-3788 text70 CODE >730:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-378E text70 CODE >731:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-3792 text70 CODE >732:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-3796 text70 CODE >734:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-37A6 text70 CODE >736:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-37D8 text70 CODE >737:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-37DE text70 CODE >738:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-37E0 text70 CODE >741:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-3812 text70 CODE >742:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-3818 text70 CODE >743:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-381A text70 CODE >746:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-384C text70 CODE >747:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-3852 text70 CODE >748:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-3854 text70 CODE >752:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-3864 text70 CODE >763:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-3876 text70 CODE >764:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-388A text70 CODE >766:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-389A text70 CODE >793:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-38AA text70 CODE >794:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-38BE text70 CODE >796:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-38CE text70 CODE >802:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-38DE text70 CODE >803:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-38EE text70 CODE >805:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-38FA text70 CODE >830:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-390A text70 CODE >831:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-3910 text70 CODE >834:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-3912 text70 CODE >836:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+3784 text70 CODE >700:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+3784 text70 CODE >702:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+3788 text70 CODE >704:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+378E text70 CODE >705:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+3792 text70 CODE >706:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+3796 text70 CODE >708:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+37A6 text70 CODE >710:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+37D8 text70 CODE >711:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+37DE text70 CODE >712:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+37E0 text70 CODE >715:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+3812 text70 CODE >716:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+3818 text70 CODE >717:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+381A text70 CODE >720:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+384C text70 CODE >721:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+3852 text70 CODE >722:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+3854 text70 CODE >726:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+3864 text70 CODE >737:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+3876 text70 CODE >738:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+388A text70 CODE >740:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+389A text70 CODE >767:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+38AA text70 CODE >768:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+38BE text70 CODE >770:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+38CE text70 CODE >776:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+38DE text70 CODE >777:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+38EE text70 CODE >779:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+38FA text70 CODE >804:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+390A text70 CODE >805:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+3910 text70 CODE >808:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+3912 text70 CODE >810:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
 575C text69 CODE >42:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/UART.h
 575E text69 CODE >43:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/UART.h
 5762 text69 CODE >44:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/UART.h
@@ -275,18 +275,18 @@ $dist/default/production\microMouse.X.production.o
 502A text68 CODE >49:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/UART.h
 5052 text68 CODE >48:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/UART.h
 5082 text68 CODE >51:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/UART.h
-4C48 text67 CODE >874:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4C4A text67 CODE >876:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4C4E text67 CODE >878:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4C5A text67 CODE >879:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4C5E text67 CODE >882:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4C6A text67 CODE >883:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4C6E text67 CODE >886:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4C7A text67 CODE >887:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4C7E text67 CODE >890:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4C8A text67 CODE >891:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4C8E text67 CODE >896:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4CC8 text67 CODE >897:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4C48 text67 CODE >848:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4C4A text67 CODE >850:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4C4E text67 CODE >852:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4C5A text67 CODE >853:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4C5E text67 CODE >856:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4C6A text67 CODE >857:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4C6E text67 CODE >860:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4C7A text67 CODE >861:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4C7E text67 CODE >864:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4C8A text67 CODE >865:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4C8E text67 CODE >870:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4CC8 text67 CODE >871:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
 53BC text66 CODE >12:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/adc.h
 53BE text66 CODE >14:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/adc.h
 53C6 text66 CODE >16:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/adc.h
@@ -297,12 +297,12 @@ $dist/default/production\microMouse.X.production.o
 53EC text66 CODE >23:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/adc.h
 53EE text66 CODE >25:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/adc.h
 5400 text66 CODE >27:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/adc.h
-55EA text65 CODE >862:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-55EA text65 CODE >864:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-55EE text65 CODE >867:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-5610 text65 CODE >868:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-5614 text65 CODE >870:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-5616 text65 CODE >872:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+55EA text65 CODE >836:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+55EA text65 CODE >838:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+55EE text65 CODE >841:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+5610 text65 CODE >842:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+5614 text65 CODE >844:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+5616 text65 CODE >846:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
 5664 text64 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul16.c
 5664 text64 CODE >37:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul16.c
 5670 text64 CODE >38:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul16.c
@@ -1105,146 +1105,146 @@ FFC text34 CODE >931:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\
 340E text28 CODE >40:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
 3412 text28 CODE >42:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
 343E text28 CODE >45:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
-563E text27 CODE >1344:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-563E text27 CODE >1346:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-5650 text27 CODE >1347:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-5662 text27 CODE >1349:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1174 text26 CODE >899:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1174 text26 CODE >904:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-117C text26 CODE >907:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-11AC text26 CODE >909:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-11C4 text26 CODE >910:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-11D0 text26 CODE >912:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-11E0 text26 CODE >913:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-11E4 text26 CODE >915:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-11E8 text26 CODE >919:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1202 text26 CODE >920:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1212 text26 CODE >923:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1232 text26 CODE >924:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1246 text26 CODE >929:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-126A text26 CODE >932:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-127E text26 CODE >938:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-12A2 text26 CODE >944:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-12DC text26 CODE >948:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-12F4 text26 CODE >950:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-130E text26 CODE >951:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1316 text26 CODE >952:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1336 text26 CODE >953:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-133E text26 CODE >954:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-135C text26 CODE >955:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1360 text26 CODE >958:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-136C text26 CODE >959:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1378 text26 CODE >961:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-137C text26 CODE >1009:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1380 text26 CODE >1015:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-139A text26 CODE >1017:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-13BA text26 CODE >1019:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-13C6 text26 CODE >1020:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-13CA text26 CODE >1021:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-13CE text26 CODE >1029:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-13EC text26 CODE >1031:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-13F8 text26 CODE >1032:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1400 text26 CODE >1051:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1404 text26 CODE >1057:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1424 text26 CODE >1059:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1442 text26 CODE >1061:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-144E text26 CODE >1062:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1452 text26 CODE >1063:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1456 text26 CODE >1112:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1476 text26 CODE >1114:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1498 text26 CODE >1123:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-14A8 text26 CODE >1162:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-14B4 text26 CODE >1163:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-14C0 text26 CODE >1164:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-14CC text26 CODE >1165:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-14D0 text26 CODE >1167:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-14D4 text26 CODE >1168:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1510 text26 CODE >1171:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1520 text26 CODE >1172:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-152C text26 CODE >1174:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1532 text26 CODE >1176:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1536 text26 CODE >1178:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1546 text26 CODE >1179:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-154A text26 CODE >1181:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-154E text26 CODE >1183:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1576 text26 CODE >1185:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-157A text26 CODE >1187:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1592 text26 CODE >1189:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-15AA text26 CODE >1190:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-15B6 text26 CODE >1192:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-15C2 text26 CODE >1193:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-15CE text26 CODE >1194:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-15DA text26 CODE >1195:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-15DE text26 CODE >1197:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-163A text26 CODE >1199:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-164A text26 CODE >1205:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-167C text26 CODE >1206:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1684 text26 CODE >1207:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-16B6 text26 CODE >1208:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-16BE text26 CODE >1209:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-16F0 text26 CODE >1210:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-16F8 text26 CODE >1212:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-16FC text26 CODE >1219:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-16FC text26 CODE >1221:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-16FE text26 CODE >1222:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-56EE text25 CODE >514:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-56EE text25 CODE >515:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-56F0 text25 CODE >516:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-56F2 text25 CODE >517:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-56F4 text25 CODE >518:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-56F6 text25 CODE >519:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-570C text25 CODE >521:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-5742 text24 CODE >474:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-5742 text24 CODE >476:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-5744 text24 CODE >477:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-5746 text24 CODE >478:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-5748 text24 CODE >479:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-574A text24 CODE >482:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-575A text24 CODE >483:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-56AC text23 CODE >485:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-56AC text23 CODE >486:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-56AE text23 CODE >487:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-56B0 text23 CODE >488:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-56B2 text23 CODE >489:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-56B4 text23 CODE >491:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-56CC text23 CODE >493:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-5618 text22 CODE >1337:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-5618 text22 CODE >1339:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-562A text22 CODE >1340:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-563C text22 CODE >1342:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-5728 text21 CODE >533:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-5728 text21 CODE >535:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-572C text21 CODE >536:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-5730 text21 CODE >537:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-5734 text21 CODE >538:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-5738 text21 CODE >539:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-573C text21 CODE >540:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-5740 text21 CODE >541:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-56CE text20 CODE >505:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-56CE text20 CODE >506:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-56D0 text20 CODE >507:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-56D2 text20 CODE >508:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-56D4 text20 CODE >509:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-56D6 text20 CODE >510:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-56EC text20 CODE >512:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-570E text19 CODE >523:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-570E text19 CODE >525:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-5712 text19 CODE >526:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-5716 text19 CODE >527:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-571A text19 CODE >528:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-571E text19 CODE >529:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-5722 text19 CODE >530:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-5726 text19 CODE >531:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-548C text18 CODE >543:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-548C text18 CODE >545:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-54BE text18 CODE >546:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-54C6 text18 CODE >548:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-54CA text18 CODE >549:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-5772 text17 CODE >467:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-5772 text17 CODE >468:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-5776 text17 CODE >469:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-577A text17 CODE >470:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-5780 text17 CODE >472:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+563E text27 CODE >1318:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+563E text27 CODE >1320:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+5650 text27 CODE >1321:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+5662 text27 CODE >1323:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1174 text26 CODE >873:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1174 text26 CODE >878:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+117C text26 CODE >881:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+11AC text26 CODE >883:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+11C4 text26 CODE >884:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+11D0 text26 CODE >886:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+11E0 text26 CODE >887:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+11E4 text26 CODE >889:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+11E8 text26 CODE >893:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1202 text26 CODE >894:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1212 text26 CODE >897:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1232 text26 CODE >898:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1246 text26 CODE >903:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+126A text26 CODE >906:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+127E text26 CODE >912:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+12A2 text26 CODE >918:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+12DC text26 CODE >922:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+12F4 text26 CODE >924:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+130E text26 CODE >925:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1316 text26 CODE >926:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1336 text26 CODE >927:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+133E text26 CODE >928:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+135C text26 CODE >929:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1360 text26 CODE >932:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+136C text26 CODE >933:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1378 text26 CODE >935:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+137C text26 CODE >983:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1380 text26 CODE >989:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+139A text26 CODE >991:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+13BA text26 CODE >993:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+13C6 text26 CODE >994:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+13CA text26 CODE >995:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+13CE text26 CODE >1003:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+13EC text26 CODE >1005:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+13F8 text26 CODE >1006:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1400 text26 CODE >1025:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1404 text26 CODE >1031:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1424 text26 CODE >1033:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1442 text26 CODE >1035:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+144E text26 CODE >1036:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1452 text26 CODE >1037:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1456 text26 CODE >1086:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1476 text26 CODE >1088:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1498 text26 CODE >1097:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+14A8 text26 CODE >1136:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+14B4 text26 CODE >1137:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+14C0 text26 CODE >1138:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+14CC text26 CODE >1139:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+14D0 text26 CODE >1141:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+14D4 text26 CODE >1142:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1510 text26 CODE >1145:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1520 text26 CODE >1146:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+152C text26 CODE >1148:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1532 text26 CODE >1150:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1536 text26 CODE >1152:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1546 text26 CODE >1153:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+154A text26 CODE >1155:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+154E text26 CODE >1157:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1576 text26 CODE >1159:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+157A text26 CODE >1161:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1592 text26 CODE >1163:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+15AA text26 CODE >1164:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+15B6 text26 CODE >1166:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+15C2 text26 CODE >1167:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+15CE text26 CODE >1168:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+15DA text26 CODE >1169:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+15DE text26 CODE >1171:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+163A text26 CODE >1173:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+164A text26 CODE >1179:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+167C text26 CODE >1180:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1684 text26 CODE >1181:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+16B6 text26 CODE >1182:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+16BE text26 CODE >1183:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+16F0 text26 CODE >1184:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+16F8 text26 CODE >1186:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+16FC text26 CODE >1193:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+16FC text26 CODE >1195:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+16FE text26 CODE >1196:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+56EE text25 CODE >488:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+56EE text25 CODE >489:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+56F0 text25 CODE >490:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+56F2 text25 CODE >491:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+56F4 text25 CODE >492:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+56F6 text25 CODE >493:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+570C text25 CODE >495:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+5742 text24 CODE >448:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+5742 text24 CODE >450:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+5744 text24 CODE >451:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+5746 text24 CODE >452:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+5748 text24 CODE >453:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+574A text24 CODE >456:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+575A text24 CODE >457:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+56AC text23 CODE >459:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+56AC text23 CODE >460:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+56AE text23 CODE >461:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+56B0 text23 CODE >462:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+56B2 text23 CODE >463:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+56B4 text23 CODE >465:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+56CC text23 CODE >467:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+5618 text22 CODE >1311:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+5618 text22 CODE >1313:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+562A text22 CODE >1314:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+563C text22 CODE >1316:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+5728 text21 CODE >507:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+5728 text21 CODE >509:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+572C text21 CODE >510:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+5730 text21 CODE >511:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+5734 text21 CODE >512:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+5738 text21 CODE >513:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+573C text21 CODE >514:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+5740 text21 CODE >515:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+56CE text20 CODE >479:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+56CE text20 CODE >480:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+56D0 text20 CODE >481:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+56D2 text20 CODE >482:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+56D4 text20 CODE >483:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+56D6 text20 CODE >484:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+56EC text20 CODE >486:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+570E text19 CODE >497:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+570E text19 CODE >499:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+5712 text19 CODE >500:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+5716 text19 CODE >501:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+571A text19 CODE >502:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+571E text19 CODE >503:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+5722 text19 CODE >504:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+5726 text19 CODE >505:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+548C text18 CODE >517:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+548C text18 CODE >519:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+54BE text18 CODE >520:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+54C6 text18 CODE >522:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+54CA text18 CODE >523:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+5772 text17 CODE >441:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+5772 text17 CODE >442:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+5776 text17 CODE >443:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+577A text17 CODE >444:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+5780 text17 CODE >446:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
 4D44 text16 CODE >7:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwdiv.c
 4D44 text16 CODE >13:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwdiv.c
 4D4C text16 CODE >14:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwdiv.c
@@ -1291,60 +1291,60 @@ FFC text34 CODE >931:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\
 3EBC text15 CODE >76:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/ultrasonico.h
 3ECC text15 CODE >80:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/ultrasonico.h
 3EDC text15 CODE >82:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/ultrasonico.h
-3A9C text14 CODE >1224:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-3A9C text14 CODE >1226:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-3AFA text14 CODE >1227:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-3B58 text14 CODE >1228:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-3BB6 text14 CODE >1230:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-3BC6 text14 CODE >1231:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-3BD6 text14 CODE >1232:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-3BE6 text14 CODE >1236:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-3BE6 text14 CODE >1237:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-3BF6 text14 CODE >1245:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-3BF6 text14 CODE >1246:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-3C06 text14 CODE >1249:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-3C16 text14 CODE >1255:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-568A text13 CODE >495:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-568A text13 CODE >496:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-568C text13 CODE >497:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-568E text13 CODE >498:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-5690 text13 CODE >499:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-5692 text13 CODE >501:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-56AA text13 CODE >503:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-40F2 text12 CODE >551:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-40F4 text12 CODE >553:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-40F8 text12 CODE >555:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-40F8 text12 CODE >557:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-40FA text12 CODE >558:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-40FC text12 CODE >559:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-40FE text12 CODE >560:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4100 text12 CODE >562:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4118 text12 CODE >563:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4124 text12 CODE >564:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-413E text12 CODE >568:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4154 text12 CODE >574:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4164 text12 CODE >575:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4168 text12 CODE >576:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4174 text12 CODE >577:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4178 text12 CODE >578:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-417A text12 CODE >579:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-417C text12 CODE >580:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-417E text12 CODE >581:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4180 text12 CODE >582:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-419A text12 CODE >583:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-41A2 text12 CODE >589:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-41A2 text12 CODE >591:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-41A4 text12 CODE >592:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-41A6 text12 CODE >593:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-41A8 text12 CODE >594:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-41AE text12 CODE >601:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-41AE text12 CODE >603:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-41B0 text12 CODE >604:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-41B2 text12 CODE >605:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-41B4 text12 CODE >606:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-41B6 text12 CODE >608:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-41BA text12 CODE >610:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-41F6 text12 CODE >612:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+3A9C text14 CODE >1198:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+3A9C text14 CODE >1200:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+3AFA text14 CODE >1201:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+3B58 text14 CODE >1202:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+3BB6 text14 CODE >1204:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+3BC6 text14 CODE >1205:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+3BD6 text14 CODE >1206:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+3BE6 text14 CODE >1210:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+3BE6 text14 CODE >1211:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+3BF6 text14 CODE >1219:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+3BF6 text14 CODE >1220:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+3C06 text14 CODE >1223:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+3C16 text14 CODE >1229:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+568A text13 CODE >469:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+568A text13 CODE >470:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+568C text13 CODE >471:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+568E text13 CODE >472:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+5690 text13 CODE >473:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+5692 text13 CODE >475:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+56AA text13 CODE >477:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+40F2 text12 CODE >525:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+40F4 text12 CODE >527:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+40F8 text12 CODE >529:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+40F8 text12 CODE >531:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+40FA text12 CODE >532:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+40FC text12 CODE >533:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+40FE text12 CODE >534:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4100 text12 CODE >536:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4118 text12 CODE >537:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4124 text12 CODE >538:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+413E text12 CODE >542:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4154 text12 CODE >548:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4164 text12 CODE >549:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4168 text12 CODE >550:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4174 text12 CODE >551:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4178 text12 CODE >552:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+417A text12 CODE >553:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+417C text12 CODE >554:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+417E text12 CODE >555:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4180 text12 CODE >556:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+419A text12 CODE >557:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+41A2 text12 CODE >563:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+41A2 text12 CODE >565:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+41A4 text12 CODE >566:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+41A6 text12 CODE >567:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+41A8 text12 CODE >568:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+41AE text12 CODE >575:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+41AE text12 CODE >577:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+41B0 text12 CODE >578:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+41B2 text12 CODE >579:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+41B4 text12 CODE >580:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+41B6 text12 CODE >582:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+41BA text12 CODE >584:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+41F6 text12 CODE >586:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
 23F0 text11 CODE >12:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\roundf.c
 23F0 text11 CODE >14:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\roundf.c
 2410 text11 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\roundf.c
@@ -1365,154 +1365,154 @@ FFC text34 CODE >931:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\
 276C text11 CODE >34:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\roundf.c
 2790 text11 CODE >35:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\roundf.c
 27A0 text11 CODE >36:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\roundf.c
-2E1C text10 CODE >1257:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-2E1C text10 CODE >1259:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-2E1C text10 CODE >1260:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-2E26 text10 CODE >1264:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-2E66 text10 CODE >1266:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-2F58 text10 CODE >1268:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-2F60 text10 CODE >1270:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-2FDE text10 CODE >1271:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-304A text10 CODE >1273:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-305A text10 CODE >1274:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-306C text10 CODE >1276:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4A8E text9 CODE >614:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4A8E text9 CODE >616:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4A92 text9 CODE >618:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4A92 text9 CODE >620:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4A94 text9 CODE >621:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4A96 text9 CODE >622:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4A98 text9 CODE >623:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4A9A text9 CODE >626:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4AAE text9 CODE >630:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4AAE text9 CODE >632:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4AB0 text9 CODE >633:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4AB2 text9 CODE >634:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4AB4 text9 CODE >635:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4AB6 text9 CODE >637:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4ACC text9 CODE >639:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4AD0 text9 CODE >641:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4AD4 text9 CODE >643:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4AD4 text9 CODE >645:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4AD6 text9 CODE >646:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4AD8 text9 CODE >647:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4ADA text9 CODE >648:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4AE0 text9 CODE >656:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4AE0 text9 CODE >658:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4AE2 text9 CODE >659:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4AE4 text9 CODE >660:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4AE6 text9 CODE >661:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4AE8 text9 CODE >663:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4AEC text9 CODE >665:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4B26 text9 CODE >667:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4BBE text8 CODE >711:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4BBE text8 CODE >713:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4BCC text8 CODE >715:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4C08 text8 CODE >716:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4C10 text8 CODE >719:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4C14 text8 CODE >721:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4C26 text8 CODE >722:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4C2A text8 CODE >723:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4C46 text8 CODE >724:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-465E text7 CODE >689:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-465E text7 CODE >691:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-468C text7 CODE >695:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-46AA text7 CODE >696:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-46AE text7 CODE >697:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-46B2 text7 CODE >698:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-46D4 text7 CODE >699:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-46D8 text7 CODE >700:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-46DC text7 CODE >701:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-46E0 text7 CODE >703:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-46E4 text7 CODE >704:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-46F6 text7 CODE >707:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-46FA text7 CODE >708:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-471E text7 CODE >709:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-49E8 text6 CODE >669:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-49E8 text6 CODE >671:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4A08 text6 CODE >673:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4A26 text6 CODE >674:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4A2A text6 CODE >675:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4A2E text6 CODE >676:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4A50 text6 CODE >677:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4A54 text6 CODE >678:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4A58 text6 CODE >679:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4A5C text6 CODE >681:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4A60 text6 CODE >682:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4A72 text6 CODE >685:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4A76 text6 CODE >686:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4A8C text6 CODE >687:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1FEA text5 CODE >281:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1FEA text5 CODE >299:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1FEA text5 CODE >301:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-1FFC text5 CODE >303:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-2016 text5 CODE >306:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-2028 text5 CODE >308:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-203A text5 CODE >310:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-2050 text5 CODE >311:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-2068 text5 CODE >313:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-2074 text5 CODE >314:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-2078 text5 CODE >315:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-2082 text5 CODE >336:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-2092 text5 CODE >337:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-20A8 text5 CODE >338:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-20C0 text5 CODE >340:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-20D0 text5 CODE >349:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-20D4 text5 CODE >352:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-2126 text5 CODE >357:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-212A text5 CODE >364:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-212E text5 CODE >365:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-2132 text5 CODE >366:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-2136 text5 CODE >367:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-213A text5 CODE >371:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-214A text5 CODE >372:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-2152 text5 CODE >374:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-2156 text5 CODE >376:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-215A text5 CODE >377:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-215E text5 CODE >380:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-2162 text5 CODE >381:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-2166 text5 CODE >382:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-216A text5 CODE >385:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-216E text5 CODE >386:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-2172 text5 CODE >387:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-2176 text5 CODE >391:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-217A text5 CODE >392:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-217E text5 CODE >394:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-21C4 text5 CODE >400:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-21E4 text5 CODE >402:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-21E8 text5 CODE >403:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-21EC text5 CODE >405:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-2202 text5 CODE >406:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-2216 text5 CODE >408:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-221C text5 CODE >409:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-2220 text5 CODE >410:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-2226 text5 CODE >412:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-2258 text5 CODE >413:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-225E text5 CODE >414:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-2262 text5 CODE >416:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-2266 text5 CODE >428:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-2288 text5 CODE >430:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-228C text5 CODE >431:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-22A0 text5 CODE >432:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-22A6 text5 CODE >433:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-22AC text5 CODE >434:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-22B0 text5 CODE >435:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-22D4 text5 CODE >437:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-22FC text5 CODE >440:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-2302 text5 CODE >441:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-230E text5 CODE >442:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-232C text5 CODE >446:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-2350 text5 CODE >447:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-2354 text5 CODE >449:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-235C text5 CODE >453:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-2398 text5 CODE >455:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-239C text5 CODE >457:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-23A0 text5 CODE >458:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-23B6 text5 CODE >459:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-23D0 text5 CODE >460:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-23D4 text5 CODE >461:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-23EA text5 CODE >462:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-23EE text5 CODE >465:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+2E1C text10 CODE >1231:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+2E1C text10 CODE >1233:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+2E1C text10 CODE >1234:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+2E26 text10 CODE >1238:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+2E66 text10 CODE >1240:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+2F58 text10 CODE >1242:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+2F60 text10 CODE >1244:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+2FDE text10 CODE >1245:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+304A text10 CODE >1247:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+305A text10 CODE >1248:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+306C text10 CODE >1250:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4A8E text9 CODE >588:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4A8E text9 CODE >590:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4A92 text9 CODE >592:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4A92 text9 CODE >594:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4A94 text9 CODE >595:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4A96 text9 CODE >596:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4A98 text9 CODE >597:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4A9A text9 CODE >600:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4AAE text9 CODE >604:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4AAE text9 CODE >606:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4AB0 text9 CODE >607:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4AB2 text9 CODE >608:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4AB4 text9 CODE >609:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4AB6 text9 CODE >611:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4ACC text9 CODE >613:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4AD0 text9 CODE >615:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4AD4 text9 CODE >617:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4AD4 text9 CODE >619:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4AD6 text9 CODE >620:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4AD8 text9 CODE >621:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4ADA text9 CODE >622:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4AE0 text9 CODE >630:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4AE0 text9 CODE >632:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4AE2 text9 CODE >633:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4AE4 text9 CODE >634:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4AE6 text9 CODE >635:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4AE8 text9 CODE >637:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4AEC text9 CODE >639:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4B26 text9 CODE >641:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4BBE text8 CODE >685:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4BBE text8 CODE >687:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4BCC text8 CODE >689:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4C08 text8 CODE >690:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4C10 text8 CODE >693:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4C14 text8 CODE >695:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4C26 text8 CODE >696:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4C2A text8 CODE >697:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4C46 text8 CODE >698:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+465E text7 CODE >663:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+465E text7 CODE >665:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+468C text7 CODE >669:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+46AA text7 CODE >670:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+46AE text7 CODE >671:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+46B2 text7 CODE >672:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+46D4 text7 CODE >673:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+46D8 text7 CODE >674:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+46DC text7 CODE >675:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+46E0 text7 CODE >677:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+46E4 text7 CODE >678:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+46F6 text7 CODE >681:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+46FA text7 CODE >682:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+471E text7 CODE >683:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+49E8 text6 CODE >643:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+49E8 text6 CODE >645:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4A08 text6 CODE >647:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4A26 text6 CODE >648:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4A2A text6 CODE >649:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4A2E text6 CODE >650:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4A50 text6 CODE >651:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4A54 text6 CODE >652:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4A58 text6 CODE >653:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4A5C text6 CODE >655:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4A60 text6 CODE >656:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4A72 text6 CODE >659:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4A76 text6 CODE >660:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4A8C text6 CODE >661:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1FEA text5 CODE >255:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1FEA text5 CODE >273:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1FEA text5 CODE >275:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+1FFC text5 CODE >277:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+2016 text5 CODE >280:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+2028 text5 CODE >282:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+203A text5 CODE >284:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+2050 text5 CODE >285:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+2068 text5 CODE >287:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+2074 text5 CODE >288:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+2078 text5 CODE >289:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+2082 text5 CODE >310:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+2092 text5 CODE >311:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+20A8 text5 CODE >312:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+20C0 text5 CODE >314:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+20D0 text5 CODE >323:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+20D4 text5 CODE >326:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+2126 text5 CODE >331:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+212A text5 CODE >338:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+212E text5 CODE >339:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+2132 text5 CODE >340:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+2136 text5 CODE >341:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+213A text5 CODE >345:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+214A text5 CODE >346:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+2152 text5 CODE >348:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+2156 text5 CODE >350:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+215A text5 CODE >351:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+215E text5 CODE >354:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+2162 text5 CODE >355:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+2166 text5 CODE >356:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+216A text5 CODE >359:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+216E text5 CODE >360:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+2172 text5 CODE >361:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+2176 text5 CODE >365:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+217A text5 CODE >366:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+217E text5 CODE >368:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+21C4 text5 CODE >374:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+21E4 text5 CODE >376:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+21E8 text5 CODE >377:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+21EC text5 CODE >379:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+2202 text5 CODE >380:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+2216 text5 CODE >382:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+221C text5 CODE >383:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+2220 text5 CODE >384:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+2226 text5 CODE >386:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+2258 text5 CODE >387:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+225E text5 CODE >388:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+2262 text5 CODE >390:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+2266 text5 CODE >402:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+2288 text5 CODE >404:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+228C text5 CODE >405:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+22A0 text5 CODE >406:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+22A6 text5 CODE >407:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+22AC text5 CODE >408:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+22B0 text5 CODE >409:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+22D4 text5 CODE >411:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+22FC text5 CODE >414:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+2302 text5 CODE >415:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+230E text5 CODE >416:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+232C text5 CODE >420:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+2350 text5 CODE >421:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+2354 text5 CODE >423:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+235C text5 CODE >427:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+2398 text5 CODE >429:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+239C text5 CODE >431:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+23A0 text5 CODE >432:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+23B6 text5 CODE >433:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+23D0 text5 CODE >434:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+23D4 text5 CODE >435:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+23EA text5 CODE >436:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+23EE text5 CODE >439:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
 528A text4 CODE >47:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
 528C text4 CODE >49:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
 528C text4 CODE >55:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/pwm.h
@@ -1537,113 +1537,113 @@ FFC text34 CODE >931:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\
 5782 text3 CODE >8:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/adc.h
 5786 text3 CODE >9:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/adc.h
 578A text3 CODE >10:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X/adc.h
-532A text2 CODE >261:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-532A text2 CODE >263:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-532E text2 CODE >265:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-5344 text2 CODE >266:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-535A text2 CODE >267:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-5370 text2 CODE >269:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-5374 text2 CODE >271:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4892 text1 CODE >222:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4892 text1 CODE >224:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4896 text1 CODE >226:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-48A2 text1 CODE >227:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-48A6 text1 CODE >230:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-48B2 text1 CODE >231:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-48B6 text1 CODE >234:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-48C2 text1 CODE >235:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-48C6 text1 CODE >238:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-48D2 text1 CODE >239:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-48D6 text1 CODE >240:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4912 text1 CODE >242:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4930 text1 CODE >243:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-493C text1 CODE >244:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4B28 text0 CODE >1360:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4B28 text0 CODE >1362:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4B2E text0 CODE >1366:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4B30 text0 CODE >1367:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4B32 text0 CODE >1368:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4B34 text0 CODE >1370:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4B36 text0 CODE >1371:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4B38 text0 CODE >1372:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4B3A text0 CODE >1373:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4B3C text0 CODE >1375:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4B3E text0 CODE >1376:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4B40 text0 CODE >1377:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4B42 text0 CODE >1378:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4B44 text0 CODE >1380:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4B46 text0 CODE >1381:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4B48 text0 CODE >1383:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4B4A text0 CODE >1384:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4B4C text0 CODE >1385:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4B4E text0 CODE >1386:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4B50 text0 CODE >1387:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4B52 text0 CODE >1388:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4B54 text0 CODE >1391:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4B58 text0 CODE >1393:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4B5E text0 CODE >1394:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4B64 text0 CODE >1395:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4B68 text0 CODE >1397:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4B7C text0 CODE >1402:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4B8E text0 CODE >1404:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4B9E text0 CODE >1405:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4BA2 text0 CODE >1406:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4BA6 text0 CODE >1417:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4BAA text0 CODE >1418:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4BAE text0 CODE >1420:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4BB2 text0 CODE >1422:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
-4EFC cinit CODE >1427:C:\Users\DIEGOM~1\AppData\Local\Temp\sa9s.s
-4EFC cinit CODE >1429:C:\Users\DIEGOM~1\AppData\Local\Temp\sa9s.s
-4EFC cinit CODE >1432:C:\Users\DIEGOM~1\AppData\Local\Temp\sa9s.s
-4EFC cinit CODE >1591:C:\Users\DIEGOM~1\AppData\Local\Temp\sa9s.s
-4EFE cinit CODE >1592:C:\Users\DIEGOM~1\AppData\Local\Temp\sa9s.s
-4F00 cinit CODE >1593:C:\Users\DIEGOM~1\AppData\Local\Temp\sa9s.s
-4F02 cinit CODE >1594:C:\Users\DIEGOM~1\AppData\Local\Temp\sa9s.s
-4F04 cinit CODE >1595:C:\Users\DIEGOM~1\AppData\Local\Temp\sa9s.s
-4F06 cinit CODE >1596:C:\Users\DIEGOM~1\AppData\Local\Temp\sa9s.s
-4F08 cinit CODE >1597:C:\Users\DIEGOM~1\AppData\Local\Temp\sa9s.s
-4F0C cinit CODE >1598:C:\Users\DIEGOM~1\AppData\Local\Temp\sa9s.s
-4F10 cinit CODE >1599:C:\Users\DIEGOM~1\AppData\Local\Temp\sa9s.s
-4F10 cinit CODE >1600:C:\Users\DIEGOM~1\AppData\Local\Temp\sa9s.s
-4F12 cinit CODE >1601:C:\Users\DIEGOM~1\AppData\Local\Temp\sa9s.s
-4F16 cinit CODE >1602:C:\Users\DIEGOM~1\AppData\Local\Temp\sa9s.s
-4F18 cinit CODE >1603:C:\Users\DIEGOM~1\AppData\Local\Temp\sa9s.s
-4F1A cinit CODE >1604:C:\Users\DIEGOM~1\AppData\Local\Temp\sa9s.s
-4F1C cinit CODE >1608:C:\Users\DIEGOM~1\AppData\Local\Temp\sa9s.s
-4F20 cinit CODE >1609:C:\Users\DIEGOM~1\AppData\Local\Temp\sa9s.s
-4F24 cinit CODE >1610:C:\Users\DIEGOM~1\AppData\Local\Temp\sa9s.s
-4F24 cinit CODE >1611:C:\Users\DIEGOM~1\AppData\Local\Temp\sa9s.s
-4F26 cinit CODE >1612:C:\Users\DIEGOM~1\AppData\Local\Temp\sa9s.s
-4F28 cinit CODE >1613:C:\Users\DIEGOM~1\AppData\Local\Temp\sa9s.s
-4F2A cinit CODE >1614:C:\Users\DIEGOM~1\AppData\Local\Temp\sa9s.s
-4F2C cinit CODE >1615:C:\Users\DIEGOM~1\AppData\Local\Temp\sa9s.s
-4F2E cinit CODE >1616:C:\Users\DIEGOM~1\AppData\Local\Temp\sa9s.s
-4F30 cinit CODE >1619:C:\Users\DIEGOM~1\AppData\Local\Temp\sa9s.s
-4F34 cinit CODE >1620:C:\Users\DIEGOM~1\AppData\Local\Temp\sa9s.s
-4F36 cinit CODE >1621:C:\Users\DIEGOM~1\AppData\Local\Temp\sa9s.s
-4F36 cinit CODE >1622:C:\Users\DIEGOM~1\AppData\Local\Temp\sa9s.s
-4F38 cinit CODE >1623:C:\Users\DIEGOM~1\AppData\Local\Temp\sa9s.s
-4F3A cinit CODE >1624:C:\Users\DIEGOM~1\AppData\Local\Temp\sa9s.s
-4F3C cinit CODE >1627:C:\Users\DIEGOM~1\AppData\Local\Temp\sa9s.s
-4F40 cinit CODE >1628:C:\Users\DIEGOM~1\AppData\Local\Temp\sa9s.s
-4F42 cinit CODE >1629:C:\Users\DIEGOM~1\AppData\Local\Temp\sa9s.s
-4F42 cinit CODE >1630:C:\Users\DIEGOM~1\AppData\Local\Temp\sa9s.s
-4F44 cinit CODE >1631:C:\Users\DIEGOM~1\AppData\Local\Temp\sa9s.s
-4F46 cinit CODE >1632:C:\Users\DIEGOM~1\AppData\Local\Temp\sa9s.s
-4F48 cinit CODE >1635:C:\Users\DIEGOM~1\AppData\Local\Temp\sa9s.s
-4F4A cinit CODE >1636:C:\Users\DIEGOM~1\AppData\Local\Temp\sa9s.s
-4F4C cinit CODE >1639:C:\Users\DIEGOM~1\AppData\Local\Temp\sa9s.s
-4F4E cinit CODE >1640:C:\Users\DIEGOM~1\AppData\Local\Temp\sa9s.s
-4F50 cinit CODE >1641:C:\Users\DIEGOM~1\AppData\Local\Temp\sa9s.s
-4F52 cinit CODE >1642:C:\Users\DIEGOM~1\AppData\Local\Temp\sa9s.s
-4F54 cinit CODE >1643:C:\Users\DIEGOM~1\AppData\Local\Temp\sa9s.s
-4F56 cinit CODE >1649:C:\Users\DIEGOM~1\AppData\Local\Temp\sa9s.s
-4F56 cinit CODE >1651:C:\Users\DIEGOM~1\AppData\Local\Temp\sa9s.s
-4F58 cinit CODE >1652:C:\Users\DIEGOM~1\AppData\Local\Temp\sa9s.s
-4F5A cinit CODE >1654:C:\Users\DIEGOM~1\AppData\Local\Temp\sa9s.s
-4F5C cinit CODE >1655:C:\Users\DIEGOM~1\AppData\Local\Temp\sa9s.s
-4F5E cinit CODE >1656:C:\Users\DIEGOM~1\AppData\Local\Temp\sa9s.s
-4F60 cinit CODE >1657:C:\Users\DIEGOM~1\AppData\Local\Temp\sa9s.s
+532A text2 CODE >235:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+532A text2 CODE >237:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+532E text2 CODE >239:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+5344 text2 CODE >240:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+535A text2 CODE >241:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+5370 text2 CODE >243:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+5374 text2 CODE >245:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4892 text1 CODE >196:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4892 text1 CODE >198:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4896 text1 CODE >200:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+48A2 text1 CODE >201:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+48A6 text1 CODE >204:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+48B2 text1 CODE >205:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+48B6 text1 CODE >208:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+48C2 text1 CODE >209:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+48C6 text1 CODE >212:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+48D2 text1 CODE >213:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+48D6 text1 CODE >214:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4912 text1 CODE >216:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4930 text1 CODE >217:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+493C text1 CODE >218:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4B28 text0 CODE >1334:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4B28 text0 CODE >1336:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4B2E text0 CODE >1340:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4B30 text0 CODE >1341:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4B32 text0 CODE >1342:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4B34 text0 CODE >1344:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4B36 text0 CODE >1345:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4B38 text0 CODE >1346:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4B3A text0 CODE >1347:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4B3C text0 CODE >1349:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4B3E text0 CODE >1350:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4B40 text0 CODE >1351:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4B42 text0 CODE >1352:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4B44 text0 CODE >1354:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4B46 text0 CODE >1355:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4B48 text0 CODE >1357:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4B4A text0 CODE >1358:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4B4C text0 CODE >1359:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4B4E text0 CODE >1360:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4B50 text0 CODE >1361:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4B52 text0 CODE >1362:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4B54 text0 CODE >1365:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4B58 text0 CODE >1367:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4B5E text0 CODE >1368:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4B64 text0 CODE >1369:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4B68 text0 CODE >1371:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4B7C text0 CODE >1376:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4B8E text0 CODE >1378:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4B9E text0 CODE >1379:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4BA2 text0 CODE >1380:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4BA6 text0 CODE >1391:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4BAA text0 CODE >1392:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4BAE text0 CODE >1394:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4BB2 text0 CODE >1396:C:\Users\Diego Moreno\Documents\Mis Proyectos con Pic\microMouse\microMouse.X\main.c
+4EFC cinit CODE >1428:C:\Users\DIEGOM~1\AppData\Local\Temp\s7t0.s
+4EFC cinit CODE >1430:C:\Users\DIEGOM~1\AppData\Local\Temp\s7t0.s
+4EFC cinit CODE >1433:C:\Users\DIEGOM~1\AppData\Local\Temp\s7t0.s
+4EFC cinit CODE >1592:C:\Users\DIEGOM~1\AppData\Local\Temp\s7t0.s
+4EFE cinit CODE >1593:C:\Users\DIEGOM~1\AppData\Local\Temp\s7t0.s
+4F00 cinit CODE >1594:C:\Users\DIEGOM~1\AppData\Local\Temp\s7t0.s
+4F02 cinit CODE >1595:C:\Users\DIEGOM~1\AppData\Local\Temp\s7t0.s
+4F04 cinit CODE >1596:C:\Users\DIEGOM~1\AppData\Local\Temp\s7t0.s
+4F06 cinit CODE >1597:C:\Users\DIEGOM~1\AppData\Local\Temp\s7t0.s
+4F08 cinit CODE >1598:C:\Users\DIEGOM~1\AppData\Local\Temp\s7t0.s
+4F0C cinit CODE >1599:C:\Users\DIEGOM~1\AppData\Local\Temp\s7t0.s
+4F10 cinit CODE >1600:C:\Users\DIEGOM~1\AppData\Local\Temp\s7t0.s
+4F10 cinit CODE >1601:C:\Users\DIEGOM~1\AppData\Local\Temp\s7t0.s
+4F12 cinit CODE >1602:C:\Users\DIEGOM~1\AppData\Local\Temp\s7t0.s
+4F16 cinit CODE >1603:C:\Users\DIEGOM~1\AppData\Local\Temp\s7t0.s
+4F18 cinit CODE >1604:C:\Users\DIEGOM~1\AppData\Local\Temp\s7t0.s
+4F1A cinit CODE >1605:C:\Users\DIEGOM~1\AppData\Local\Temp\s7t0.s
+4F1C cinit CODE >1609:C:\Users\DIEGOM~1\AppData\Local\Temp\s7t0.s
+4F20 cinit CODE >1610:C:\Users\DIEGOM~1\AppData\Local\Temp\s7t0.s
+4F24 cinit CODE >1611:C:\Users\DIEGOM~1\AppData\Local\Temp\s7t0.s
+4F24 cinit CODE >1612:C:\Users\DIEGOM~1\AppData\Local\Temp\s7t0.s
+4F26 cinit CODE >1613:C:\Users\DIEGOM~1\AppData\Local\Temp\s7t0.s
+4F28 cinit CODE >1614:C:\Users\DIEGOM~1\AppData\Local\Temp\s7t0.s
+4F2A cinit CODE >1615:C:\Users\DIEGOM~1\AppData\Local\Temp\s7t0.s
+4F2C cinit CODE >1616:C:\Users\DIEGOM~1\AppData\Local\Temp\s7t0.s
+4F2E cinit CODE >1617:C:\Users\DIEGOM~1\AppData\Local\Temp\s7t0.s
+4F30 cinit CODE >1620:C:\Users\DIEGOM~1\AppData\Local\Temp\s7t0.s
+4F34 cinit CODE >1621:C:\Users\DIEGOM~1\AppData\Local\Temp\s7t0.s
+4F36 cinit CODE >1622:C:\Users\DIEGOM~1\AppData\Local\Temp\s7t0.s
+4F36 cinit CODE >1623:C:\Users\DIEGOM~1\AppData\Local\Temp\s7t0.s
+4F38 cinit CODE >1624:C:\Users\DIEGOM~1\AppData\Local\Temp\s7t0.s
+4F3A cinit CODE >1625:C:\Users\DIEGOM~1\AppData\Local\Temp\s7t0.s
+4F3C cinit CODE >1628:C:\Users\DIEGOM~1\AppData\Local\Temp\s7t0.s
+4F40 cinit CODE >1629:C:\Users\DIEGOM~1\AppData\Local\Temp\s7t0.s
+4F42 cinit CODE >1630:C:\Users\DIEGOM~1\AppData\Local\Temp\s7t0.s
+4F42 cinit CODE >1631:C:\Users\DIEGOM~1\AppData\Local\Temp\s7t0.s
+4F44 cinit CODE >1632:C:\Users\DIEGOM~1\AppData\Local\Temp\s7t0.s
+4F46 cinit CODE >1633:C:\Users\DIEGOM~1\AppData\Local\Temp\s7t0.s
+4F48 cinit CODE >1636:C:\Users\DIEGOM~1\AppData\Local\Temp\s7t0.s
+4F4A cinit CODE >1637:C:\Users\DIEGOM~1\AppData\Local\Temp\s7t0.s
+4F4C cinit CODE >1640:C:\Users\DIEGOM~1\AppData\Local\Temp\s7t0.s
+4F4E cinit CODE >1641:C:\Users\DIEGOM~1\AppData\Local\Temp\s7t0.s
+4F50 cinit CODE >1642:C:\Users\DIEGOM~1\AppData\Local\Temp\s7t0.s
+4F52 cinit CODE >1643:C:\Users\DIEGOM~1\AppData\Local\Temp\s7t0.s
+4F54 cinit CODE >1644:C:\Users\DIEGOM~1\AppData\Local\Temp\s7t0.s
+4F56 cinit CODE >1650:C:\Users\DIEGOM~1\AppData\Local\Temp\s7t0.s
+4F56 cinit CODE >1652:C:\Users\DIEGOM~1\AppData\Local\Temp\s7t0.s
+4F58 cinit CODE >1653:C:\Users\DIEGOM~1\AppData\Local\Temp\s7t0.s
+4F5A cinit CODE >1655:C:\Users\DIEGOM~1\AppData\Local\Temp\s7t0.s
+4F5C cinit CODE >1656:C:\Users\DIEGOM~1\AppData\Local\Temp\s7t0.s
+4F5E cinit CODE >1657:C:\Users\DIEGOM~1\AppData\Local\Temp\s7t0.s
+4F60 cinit CODE >1658:C:\Users\DIEGOM~1\AppData\Local\Temp\s7t0.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -1675,7 +1675,7 @@ __size_of_forzarAvanceRecto 0 0 ABS 0 - dist/default/production\microMouse.X.pro
 strncmp@_l 6 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
 strncmp@_r 8 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
 __Hibigdata 0 0 CODE 0 ibigdata dist/default/production\microMouse.X.production.o
-__mediumconst 7DEA 0 MEDIUMCONST 0 mediumconst C:\Users\DIEGOM~1\AppData\Local\Temp\sa9s.o
+__mediumconst 7DEA 0 MEDIUMCONST 0 mediumconst C:\Users\DIEGOM~1\AppData\Local\Temp\s7t0.o
 __Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\microMouse.X.production.o
 __end_of_regresarPuntoPartida 4A8E 0 CODE 0 text6 dist/default/production\microMouse.X.production.o
 _forzarParoAuto 5742 0 CODE 0 text24 dist/default/production\microMouse.X.production.o
@@ -1688,7 +1688,7 @@ comportamientoBasico@avanceRectoLargo 1CA 0 BANK1 1 bssBANK1 dist/default/produc
 ?_vfprintf DF 0 BANK0 1 cstackBANK0 dist/default/production\microMouse.X.production.o
 __Lsmallconst 0 0 SMALLCONST 0 smallconst dist/default/production\microMouse.X.production.o
 _RCIF 7CF5 0 ABS 0 - dist/default/production\microMouse.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\DIEGOM~1\AppData\Local\Temp\sa9s.o
+___sp 0 0 STACK 2 stack C:\Users\DIEGOM~1\AppData\Local\Temp\s7t0.o
 _atoi 35F4 0 CODE 0 text61 dist/default/production\microMouse.X.production.o
 _ctoa 50E0 0 CODE 0 text55 dist/default/production\microMouse.X.production.o
 _dbuf 141 0 BANK1 1 bssBANK1 dist/default/production\microMouse.X.production.o
@@ -1704,7 +1704,7 @@ pad@i 1D 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production
 pad@p 1A 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
 pad@w 1F 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
 __HbssBIGRAM 0 0 ABS 0 bssBIGRAM dist/default/production\microMouse.X.production.o
-start E 0 CODE 0 init C:\Users\DIEGOM~1\AppData\Local\Temp\sa9s.o
+start E 0 CODE 0 init C:\Users\DIEGOM~1\AppData\Local\Temp\s7t0.o
 ___aomod@counter 16 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
 ___flmul@aexp 28 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
 ___flmul@bexp 2D 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
@@ -1754,11 +1754,11 @@ ttemp6 5E 0 COMRAM 1 temp dist/default/production\microMouse.X.production.o
 ttemp7 62 0 COMRAM 1 temp dist/default/production\microMouse.X.production.o
 __size_of_vfpfcnvrt 0 0 ABS 0 - dist/default/production\microMouse.X.production.o
 __LbssBIGRAM 0 0 ABS 0 bssBIGRAM dist/default/production\microMouse.X.production.o
-__accesstop 60 0 ABS 0 - C:\Users\DIEGOM~1\AppData\Local\Temp\sa9s.o
-intlevel0 0 0 CODE 0 text C:\Users\DIEGOM~1\AppData\Local\Temp\sa9s.o
-intlevel1 0 0 CODE 0 text C:\Users\DIEGOM~1\AppData\Local\Temp\sa9s.o
-intlevel2 0 0 CODE 0 text C:\Users\DIEGOM~1\AppData\Local\Temp\sa9s.o
-intlevel3 0 0 CODE 0 text C:\Users\DIEGOM~1\AppData\Local\Temp\sa9s.o
+__accesstop 60 0 ABS 0 - C:\Users\DIEGOM~1\AppData\Local\Temp\s7t0.o
+intlevel0 0 0 CODE 0 text C:\Users\DIEGOM~1\AppData\Local\Temp\s7t0.o
+intlevel1 0 0 CODE 0 text C:\Users\DIEGOM~1\AppData\Local\Temp\s7t0.o
+intlevel2 0 0 CODE 0 text C:\Users\DIEGOM~1\AppData\Local\Temp\s7t0.o
+intlevel3 0 0 CODE 0 text C:\Users\DIEGOM~1\AppData\Local\Temp\s7t0.o
 floorf@e 77 0 BANK0 1 cstackBANK0 dist/default/production\microMouse.X.production.o
 floorf@m 73 0 BANK0 1 cstackBANK0 dist/default/production\microMouse.X.production.o
 floorf@u 79 0 BANK0 1 cstackBANK0 dist/default/production\microMouse.X.production.o
@@ -1803,8 +1803,8 @@ _ADRESL FC3 0 ABS 0 - dist/default/production\microMouse.X.production.o
 _vfpfcnvrt$964 D3 0 BANK0 1 cstackBANK0 dist/default/production\microMouse.X.production.o
 _vfpfcnvrt$970 D5 0 BANK0 1 cstackBANK0 dist/default/production\microMouse.X.production.o
 ___awdiv@dividend 6 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
-___inthi_sp 0 0 STACK 2 stack C:\Users\DIEGOM~1\AppData\Local\Temp\sa9s.o
-___intlo_sp 0 0 STACK 2 stack C:\Users\DIEGOM~1\AppData\Local\Temp\sa9s.o
+___inthi_sp 0 0 STACK 2 stack C:\Users\DIEGOM~1\AppData\Local\Temp\s7t0.o
+___intlo_sp 0 0 STACK 2 stack C:\Users\DIEGOM~1\AppData\Local\Temp\s7t0.o
 combinarArreglos@numMovimientos A 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
 comportamientoBasico@contCaminosRecorridos 1CD 0 BANK1 1 bssBANK1 dist/default/production\microMouse.X.production.o
 limpiarMovimientos@movimientos 6 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
@@ -2009,7 +2009,7 @@ _regresarAlCruce 465E 0 CODE 0 text7 dist/default/production\microMouse.X.produc
 __size_of___xxtofl 0 0 ABS 0 - dist/default/production\microMouse.X.production.o
 __Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production\microMouse.X.production.o
 __Hbigram 0 0 ABS 0 bigram dist/default/production\microMouse.X.production.o
-__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\DIEGOM~1\AppData\Local\Temp\sa9s.o
+__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\DIEGOM~1\AppData\Local\Temp\s7t0.o
 ___xxtofl@arg 17 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
 ___xxtofl@exp 16 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
 ___xxtofl@val D 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
@@ -2371,8 +2371,8 @@ __end_of_UART_printf 5084 0 CODE 0 text68 dist/default/production\microMouse.X.p
 __size_of_dameDistancia 0 0 ABS 0 - dist/default/production\microMouse.X.production.o
 __size_of_vfprintf 0 0 ABS 0 - dist/default/production\microMouse.X.production.o
 __CFG_CCP2MX$ON 0 0 ABS 0 - dist/default/production\microMouse.X.production.o
-stackhi 7FF 0 ABS 0 - C:\Users\DIEGOM~1\AppData\Local\Temp\sa9s.o
-stacklo 6B0 0 ABS 0 - C:\Users\DIEGOM~1\AppData\Local\Temp\sa9s.o
+stackhi 7FF 0 ABS 0 - C:\Users\DIEGOM~1\AppData\Local\Temp\s7t0.o
+stacklo 6B0 0 ABS 0 - C:\Users\DIEGOM~1\AppData\Local\Temp\s7t0.o
 comportamientoBasico@caminoEncontrado 138 0 BANK1 1 bssBANK1 dist/default/production\microMouse.X.production.o
 _forzarGiroIzquierda 56CE 0 CODE 0 text20 dist/default/production\microMouse.X.production.o
 __Lintcode 8 0 CODE 0 intcode dist/default/production\microMouse.X.production.o
@@ -2548,7 +2548,7 @@ __Ltext74 0 0 ABS 0 text74 dist/default/production\microMouse.X.production.o
 __Ltext75 0 0 ABS 0 text75 dist/default/production\microMouse.X.production.o
 __Ltext76 0 0 ABS 0 text76 dist/default/production\microMouse.X.production.o
 __Ltext78 0 0 ABS 0 text78 dist/default/production\microMouse.X.production.o
-__ramtop 800 0 RAM 0 ramtop C:\Users\DIEGOM~1\AppData\Local\Temp\sa9s.o
+__ramtop 800 0 RAM 0 ramtop C:\Users\DIEGOM~1\AppData\Local\Temp\s7t0.o
 ___aldiv@dividend 12 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o
 _sprintf 51E6 0 CODE 0 text32 dist/default/production\microMouse.X.production.o
 caminoCorrecto@caminoActual 1A 0 COMRAM 1 cstackCOMRAM dist/default/production\microMouse.X.production.o

@@ -10,6 +10,7 @@
       <itemPath>UART.h</itemPath>
       <itemPath>variables.h</itemPath>
       <itemPath>adc.h</itemPath>
+      <itemPath>constantesimportantes.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"

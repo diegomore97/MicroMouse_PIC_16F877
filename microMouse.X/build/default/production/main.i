@@ -5936,6 +5936,13 @@ T_WORD dameLecturaAdc(T_BYTE canalLeer) {
 }
 # 8 "main.c" 2
 
+# 1 "./constantesimportantes.h" 1
+# 28 "./constantesimportantes.h"
+T_UBYTE SENSOR_PRIORIDAD_ALTA = ENFRENTE;
+T_UBYTE SENSOR_PRIORIDAD_MEDIA = IZQUIERDA;
+T_UBYTE SENSOR_PRIORIDAD_BAJA = DERECHA;
+# 9 "main.c" 2
+
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdio.h" 1 3
 # 24 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdio.h" 3
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 1 3
@@ -6074,7 +6081,7 @@ char *ctermid(char *);
 
 
 char *tempnam(const char *, const char *);
-# 9 "main.c" 2
+# 10 "main.c" 2
 
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\math.h" 1 3
 # 10 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\math.h" 3
@@ -6537,12 +6544,8 @@ double jn(int, double);
 double y0(double);
 double y1(double);
 double yn(int, double);
-# 10 "main.c" 2
-# 34 "main.c"
-T_UBYTE SENSOR_PRIORIDAD_ALTA = ENFRENTE;
-T_UBYTE SENSOR_PRIORIDAD_MEDIA = IZQUIERDA;
-T_UBYTE SENSOR_PRIORIDAD_BAJA = DERECHA;
-# 67 "main.c"
+# 11 "main.c" 2
+# 41 "main.c"
 typedef struct {
     Direccion curr_state;
     Direccion Next_state;
@@ -6793,7 +6796,7 @@ void comportamientoBasico(void) {
                     forzarParoAuto();
                     pausa = 1;
                 }
-# 335 "main.c"
+# 309 "main.c"
             } else {
                 if (!investigandoCruce) {
                     if (numMovimientosTotales < 1000)
