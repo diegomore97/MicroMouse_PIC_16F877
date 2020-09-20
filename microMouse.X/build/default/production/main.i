@@ -6545,7 +6545,7 @@ double y0(double);
 double y1(double);
 double yn(int, double);
 # 11 "main.c" 2
-# 41 "main.c"
+# 42 "main.c"
 typedef struct {
     Direccion curr_state;
     Direccion Next_state;
@@ -6796,7 +6796,7 @@ void comportamientoBasico(void) {
                     forzarParoAuto();
                     pausa = 1;
                 }
-# 309 "main.c"
+# 310 "main.c"
             } else {
                 if (!investigandoCruce) {
                     if (numMovimientosTotales < 1000)
@@ -6945,7 +6945,7 @@ void forzarParoAuto(void) {
     LATB7 = 0;
 
     if (!0)
-        _delay((unsigned long)((35)*(4000000/4000.0)));
+        _delay((unsigned long)((30)*(4000000/4000.0)));
 }
 
 void forzarReversa(void) {
@@ -6990,9 +6990,13 @@ void forzarEspejeoIzquierda(void) {
 
     forzarParoAuto();
     velocidadEstandar();
-    forzarReversa();
+    _delay((unsigned long)((100)*(4000000/4000.0)));
     forzarGiroIzquierda();
+    forzarParoAuto();
+    _delay((unsigned long)((100)*(4000000/4000.0)));
     forzarReversa();
+    forzarParoAuto();
+    _delay((unsigned long)((100)*(4000000/4000.0)));
     forzarGiroIzquierda();
 }
 
@@ -7000,9 +7004,13 @@ void forzarEspejeoDerecha(void) {
 
     forzarParoAuto();
     velocidadEstandar();
-    forzarReversa();
+    _delay((unsigned long)((100)*(4000000/4000.0)));
     forzarGiroDerecha();
+    forzarParoAuto();
+    _delay((unsigned long)((100)*(4000000/4000.0)));
     forzarReversa();
+    forzarParoAuto();
+    _delay((unsigned long)((100)*(4000000/4000.0)));
     forzarGiroDerecha();
 }
 
@@ -7154,7 +7162,9 @@ void regresarPuntoPartida(T_UBYTE* movimientos, T_UINT numMovimientos) {
 
 void regresarAlCruce(T_UBYTE* movimientos, T_UINT numMovimientos) {
 
-    for (T_INT i = numMovimientos - 1; i > 1; i--) {
+    movimientos[1] = ENFRENTE;
+
+    for (T_INT i = numMovimientos - 1; i >= 0; i--) {
 
 
 

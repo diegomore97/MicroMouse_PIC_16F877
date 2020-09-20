@@ -32,6 +32,7 @@
 #define RETARDO_ANTIREBOTE 100
 #define TAMANO_CADENA 50 //Tamaño de la cadena de la variable para debug
 
+#define RETARDO_MOV_ESPEJEO 100
 #define DOBLE 2
 #define CALLEJON 0
 #define PRIMER_DIRECCION 0
@@ -499,9 +500,13 @@ void forzarEspejeoIzquierda(void) {
 
     forzarParoAuto();
     velocidadEstandar();
-    forzarReversa();
+    __delay_ms(RETARDO_MOV_ESPEJEO);
     forzarGiroIzquierda();
+    forzarParoAuto();
+    __delay_ms(RETARDO_MOV_ESPEJEO);
     forzarReversa();
+    forzarParoAuto();
+    __delay_ms(RETARDO_MOV_ESPEJEO);
     forzarGiroIzquierda();
 }
 
@@ -509,9 +514,13 @@ void forzarEspejeoDerecha(void) {
 
     forzarParoAuto();
     velocidadEstandar();
-    forzarReversa();
+    __delay_ms(RETARDO_MOV_ESPEJEO);
     forzarGiroDerecha();
+    forzarParoAuto();
+    __delay_ms(RETARDO_MOV_ESPEJEO);
     forzarReversa();
+    forzarParoAuto();
+    __delay_ms(RETARDO_MOV_ESPEJEO);
     forzarGiroDerecha();
 }
 
@@ -663,7 +672,9 @@ void regresarPuntoPartida(T_UBYTE* movimientos, T_UINT numMovimientos) {
 
 void regresarAlCruce(T_UBYTE* movimientos, T_UINT numMovimientos) {
 
-    for (T_INT i = numMovimientos - 1; i > 1; i--) { //Del final al Principio
+    movimientos[1] = ENFRENTE; //Omitiendo direccion elegida anterior
+
+    for (T_INT i = numMovimientos - 1; i >= 0; i--) { //Del final al Principio
         //En este caso no realizara el primer movimientos porque en ese elegimos la direccion
         //del camino del cruce que estamos explorando.
 

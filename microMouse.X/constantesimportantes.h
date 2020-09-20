@@ -10,7 +10,7 @@
 #define UMBRAL_OBSTACULO_ENFRENTE_CRUCE 35//expresado en cm | sensibilidad antes de que choque con un objeto
 #define UMBRAL_OBSTACULO_ENFRENTE_PID 14//expresado en cm | sensibilidad antes de que choque con un objeto
 #define UMBRAL_SENSOR_OPTICO_REFLEXIVO 20 //Unidad que representa el minimo de luz percibida para detectar negro
-#define RETARDO_PARO_AUTO 35 //Tiempo que se quedara parado el auto
+#define RETARDO_PARO_AUTO 30 //Tiempo que se quedara parado el auto
 #define RETARDO_PID 55 //Tiempo que avanzara el carrito en linea recta cuando esta por control PID 
 #define VELOCIDAD_MOTORES 100 //Porcentaje de ciclo de trabajo a la que trabajaran los motores
 #define VELOCIDAD_MOTORES_BAJA 70 //Porcentaje de ciclo de trabajo a la que trabajaran los motores
