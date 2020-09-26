@@ -17,8 +17,9 @@
 #define TIEMPO_REVERSA 400 //Tiempo en milisegundos que avanzara el carro en reversa
 #define TIEMPO_AVANCE_LATERAL 410 //Tiempo en milisegundos que avanzara el carro al girar
 #define TIEMPO_AVANCE_RECTO 550 //Tiempo en milisegundos que avanzara el carro en linea recta
+#define RETARDO_MOV_ESPEJEO 100
 #define MAX_MOVIMIENTOS_GUARDADOS 200 //Para mapear y regresar a algun lugar si llegamos a un callejon
-#define MAX_MOVIMIENTOS_CAMINO_FINAL 1000 //El maximo de movimientos a realizar para llegar al destino
+#define MAX_MOVIMIENTOS_CAMINO_FINAL 20 //El maximo de movimientos a realizar para llegar al destino
 
 //Ajustar estas variables de control para evitar chocar con las paredes laterales
 #define KP 0.9 //Entre mas se aumente esta variable mas brusco sera el cambio para centrar
