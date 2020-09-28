@@ -327,7 +327,7 @@ void comportamientoBasico(void) {
 
                 case ENFRENTE:
 
-                    if (!paredEnfrente)
+                    if (!paredEnfrente && !investigandoCruce)
                         velocidadBaja();
                     else
                         PID();
@@ -1108,8 +1108,10 @@ T_UBYTE decidirDireccion(T_UBYTE* caminosRecorrer, T_UBYTE* investigandoCruce, T
             }
         }
 
-        if (direccionElegida == ENFRENTE)
+        if (direccionElegida == ENFRENTE) {
             *avanceRectoLargo = 1;
+            velocidadBaja();
+        }
 
         mostrarDireccionElegida(direccionElegida); //Para efectos de Debug
 
@@ -1132,8 +1134,10 @@ T_UBYTE decidirDireccion(T_UBYTE* caminosRecorrer, T_UBYTE* investigandoCruce, T
 
             crucesRecorridos--;
 
-            if (direccionElegida == ENFRENTE)
+            if (direccionElegida == ENFRENTE) {
                 *avanceRectoLargo = 1;
+                velocidadBaja();
+            }
         }
 
         mostrarDireccionElegida(direccionElegida); //Para efectos de Debug

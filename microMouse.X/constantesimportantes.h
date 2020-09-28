@@ -22,7 +22,7 @@
 #define MAX_MOVIMIENTOS_CAMINO_FINAL 20 //El maximo de movimientos a realizar para llegar al destino
 
 //Ajustar estas variables de control para evitar chocar con las paredes laterales
-#define KP 0.9 //Entre mas se aumente esta variable mas brusco sera el cambio para centrar
+#define KP 1.5 //Entre mas se aumente esta variable mas brusco sera el cambio para centrar
 #define KD 0.1 //Entre mas aumente esta variabe mas oscilara tratando de centrarse
 
 //Constantes que indican a que direccion deber girar el auto

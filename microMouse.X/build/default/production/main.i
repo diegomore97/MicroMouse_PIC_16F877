@@ -6813,7 +6813,7 @@ void comportamientoBasico(void) {
 
                 case ENFRENTE:
 
-                    if (!paredEnfrente)
+                    if (!paredEnfrente && !investigandoCruce)
                         velocidadBaja();
                     else
                         PID();
@@ -7594,8 +7594,10 @@ T_UBYTE decidirDireccion(T_UBYTE* caminosRecorrer, T_UBYTE* investigandoCruce, T
             }
         }
 
-        if (direccionElegida == ENFRENTE)
+        if (direccionElegida == ENFRENTE) {
             *avanceRectoLargo = 1;
+            velocidadBaja();
+        }
 
         mostrarDireccionElegida(direccionElegida);
 
@@ -7618,8 +7620,10 @@ T_UBYTE decidirDireccion(T_UBYTE* caminosRecorrer, T_UBYTE* investigandoCruce, T
 
             crucesRecorridos--;
 
-            if (direccionElegida == ENFRENTE)
+            if (direccionElegida == ENFRENTE) {
                 *avanceRectoLargo = 1;
+                velocidadBaja();
+            }
         }
 
         mostrarDireccionElegida(direccionElegida);
@@ -7721,7 +7725,7 @@ void PID(void) {
 
     dif = sensorIzquierda - sensorDerecha;
 
-    error = roundf(0.9 * (dif) + 0.1 * (difAnt - dif));
+    error = roundf(1.5 * (dif) + 0.1 * (difAnt - dif));
 
     difAnt = dif;
 
