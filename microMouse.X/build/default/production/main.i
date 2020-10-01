@@ -5937,7 +5937,7 @@ T_WORD dameLecturaAdc(T_BYTE canalLeer) {
 # 8 "main.c" 2
 
 # 1 "./constantesimportantes.h" 1
-# 29 "./constantesimportantes.h"
+# 30 "./constantesimportantes.h"
 T_UBYTE SENSOR_PRIORIDAD_ALTA = ENFRENTE;
 T_UBYTE SENSOR_PRIORIDAD_MEDIA = IZQUIERDA;
 T_UBYTE SENSOR_PRIORIDAD_BAJA = DERECHA;
@@ -6597,6 +6597,7 @@ void forzarReversa(void);
 void forzarAvanceRecto(void);
 void forzarGiroIzquierda(void);
 void forzarGiroDerecha(void);
+void alinearDespuesCallejon(void);
 void mostrarDireccionElegida(T_UBYTE direccionElegida);
 void probarMapeoDireccionCruces(T_UBYTE* caminoFinal, T_UBYTE caminoActual, T_UBYTE* investigandoCruce,
         T_UBYTE* posicionInvCruce, T_UBYTE* mapear, T_UBYTE* cruceDetectado, T_UBYTE* contCaminosRecorridos,
@@ -6787,7 +6788,7 @@ void comportamientoBasico(void) {
                     pausa = 1;
                 }
             }
-# 305 "main.c"
+# 306 "main.c"
         }
 
         leerSensores();
@@ -6847,6 +6848,7 @@ void comportamientoBasico(void) {
                 espejearCarroY = 0;
                 carroEspejeado = 0;
 
+                alinearDespuesCallejon();
                 regresarAlCruce(movimientosRealizados, numMovimientos);
                 limpiarMovimientos(movimientosRealizados, &numMovimientos);
 
@@ -6855,6 +6857,7 @@ void comportamientoBasico(void) {
                 contCaminosRecorridos++;
                 mouse.Next_state = ALTO;
             } else if (espejearCarroY && carroEspejeado && llegoDestino) {
+                alinearDespuesCallejon();
                 espejearCarroY = 0;
                 mouse.Next_state = ALTO;
 
@@ -7005,6 +7008,40 @@ void forzarEspejeo(void) {
         forzarEspejeoIzquierda();
     else
         forzarEspejeoDerecha();
+
+    alinearDespuesCallejon();
+}
+
+void alinearDespuesCallejon(void) {
+
+    forzarParoAuto();
+    velocidadEstandar();
+    leerSensores();
+
+    if (sensorIzquierda > sensorDerecha) {
+        while (sensorEnfrente < 35) {
+            LATB4 = 0;
+            LATB5 = 0;
+            LATB6 = 1;
+            LATB7 = 0;
+            _delay((unsigned long)((15)*(4000000/4000.0)));
+            leerSensores();
+        }
+
+    } else {
+
+        while (sensorEnfrente < 35) {
+            LATB4 = 1;
+            LATB5 = 0;
+            LATB6 = 0;
+            LATB7 = 0;
+            _delay((unsigned long)((15)*(4000000/4000.0)));
+            leerSensores();
+
+        }
+    }
+
+    forzarParoAuto();
 }
 
 void moverCarrito(T_UBYTE espejearCarroY, T_UBYTE* carroEspejeado, T_BOOL* avanceRectoLargo) {

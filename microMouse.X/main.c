@@ -89,6 +89,7 @@ void forzarReversa(void);
 void forzarAvanceRecto(void);
 void forzarGiroIzquierda(void);
 void forzarGiroDerecha(void);
+void alinearDespuesCallejon(void);
 void mostrarDireccionElegida(T_UBYTE direccionElegida);
 void probarMapeoDireccionCruces(T_UBYTE* caminoFinal, T_UBYTE caminoActual, T_UBYTE* investigandoCruce,
         T_UBYTE* posicionInvCruce, T_UBYTE* mapear, T_UBYTE* cruceDetectado, T_UBYTE* contCaminosRecorridos,
@@ -361,6 +362,7 @@ void comportamientoBasico(void) {
                 espejearCarroY = 0;
                 carroEspejeado = 0;
 
+                alinearDespuesCallejon();
                 regresarAlCruce(movimientosRealizados, numMovimientos);
                 limpiarMovimientos(movimientosRealizados, &numMovimientos);
 
@@ -369,6 +371,7 @@ void comportamientoBasico(void) {
                 contCaminosRecorridos++;
                 mouse.Next_state = ALTO;
             } else if (espejearCarroY && carroEspejeado && llegoDestino) {
+                alinearDespuesCallejon();
                 espejearCarroY = 0;
                 mouse.Next_state = ALTO;
 
@@ -519,6 +522,40 @@ void forzarEspejeo(void) {
         forzarEspejeoIzquierda();
     else
         forzarEspejeoDerecha();
+
+    alinearDespuesCallejon();
+}
+
+void alinearDespuesCallejon(void) {
+    
+    forzarParoAuto();
+    velocidadEstandar();
+    leerSensores();
+
+    if (sensorIzquierda > sensorDerecha) {
+        while (sensorEnfrente < UMBRAL_OBSTACULO_ENFRENTE_CRUCE) {
+            IN1 = 0;
+            IN2 = 0;
+            IN3 = 1;
+            IN4 = 0;
+            __delay_ms(TIEMPO_AVANCE_LATERAL_MINIMO);
+            leerSensores();
+        }
+
+    } else {
+
+        while (sensorEnfrente < UMBRAL_OBSTACULO_ENFRENTE_CRUCE) {
+            IN1 = 1;
+            IN2 = 0;
+            IN3 = 0;
+            IN4 = 0;
+            __delay_ms(TIEMPO_AVANCE_LATERAL_MINIMO);
+            leerSensores();
+
+        }
+    }
+    
+    forzarParoAuto();
 }
 
 void moverCarrito(T_UBYTE espejearCarroY, T_UBYTE* carroEspejeado, T_BOOL* avanceRectoLargo) {

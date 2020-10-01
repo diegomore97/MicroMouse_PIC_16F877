@@ -16,6 +16,7 @@
 #define VELOCIDAD_MOTORES_BAJA 70 //Porcentaje de ciclo de trabajo a la que trabajaran los motores
 #define TIEMPO_REVERSA 400 //Tiempo en milisegundos que avanzara el carro en reversa
 #define TIEMPO_AVANCE_LATERAL 410 //Tiempo en milisegundos que avanzara el carro al girar
+#define TIEMPO_AVANCE_LATERAL_MINIMO 15 //Para cuando queramos alinear despues de llegar a un cruce
 #define TIEMPO_AVANCE_RECTO 550 //Tiempo en milisegundos que avanzara el carro en linea recta
 #define RETARDO_MOV_ESPEJEO 100
 #define MAX_MOVIMIENTOS_GUARDADOS 200 //Para mapear y regresar a algun lugar si llegamos a un callejon
