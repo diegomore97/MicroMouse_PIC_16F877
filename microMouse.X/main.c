@@ -7,8 +7,8 @@
 #include "UART.h"
 #include "adc.h"
 #include "constantesimportantes.h"
+#include "control.h"
 #include <stdio.h>
-#include <math.h>
 
 #define PIN_IN1  TRISB4
 #define PIN_IN2  TRISB5
@@ -26,9 +26,6 @@
 #define INDICADOR_ESTADO LATD2
 #define SENSOR_OPTICO_REFLEXIVO 0 //Ubicado en RA0 | canal Analogo 0
 
-#define ENA 1
-#define ENB 2
-
 #define RETARDO_ANTIREBOTE 100
 #define TAMANO_CADENA 50 //Tamaño de la cadena de la variable para debug
 
@@ -36,7 +33,6 @@
 #define CALLEJON 0
 #define PRIMER_DIRECCION 0
 #define MAX_CAMINOS 3 //Hasta 3 caminos puede tener para elegir el carrito
-#define constrain(amt,low,high) ((amt)<(low)?(low):((amt)>(high)?(high):(amt)))
 
 typedef struct {
     Direccion curr_state;
@@ -73,7 +69,7 @@ T_BOOL hayCruce(T_UBYTE* caminosRecorrer, T_UBYTE investigandoCruce);
 void limpiarMovimientos(T_UBYTE* movimientos, T_UINT* numMovimientos);
 T_BOOL seLlegoAlDestino(void);
 void leerSensores(void);
-void PID(void);
+void probarPID(void);
 void velocidadEstandar(void);
 void velocidadBaja(void);
 void probarGirosAuto(void);
@@ -83,13 +79,11 @@ void forzarEspejeo(void);
 void forzarEspejeoIzquierda(void);
 void forzarEspejeoDerecha(void);
 void finalizarRecorrido(void);
-void probarPID(void);
 void probarCruceT(void);
 void forzarReversa(void);
 void forzarAvanceRecto(void);
 void forzarGiroIzquierda(void);
 void forzarGiroDerecha(void);
-void alinearDespuesCallejon(void);
 void mostrarDireccionElegida(T_UBYTE direccionElegida);
 void probarMapeoDireccionCruces(T_UBYTE* caminoFinal, T_UBYTE caminoActual, T_UBYTE* investigandoCruce,
         T_UBYTE* posicionInvCruce, T_UBYTE* mapear, T_UBYTE* cruceDetectado, T_UBYTE* contCaminosRecorridos,
@@ -239,6 +233,10 @@ void inicializarComportamientoBasico(void) {
     oldSensorIzquierda = dameDistancia(IZQUIERDA);
     oldSensorEnfrente = dameDistancia(ENFRENTE);
 
+    oldSensorDerecha -= DIFERENCIA_SENSOR_LLANTAS;
+    oldSensorIzquierda -= DIFERENCIA_SENSOR_LLANTAS;
+    oldSensorEnfrente -= DIFERENCIA_SENSOR_LLANTAS;
+
     velocidadEstandar();
 
 }
@@ -359,10 +357,10 @@ void comportamientoBasico(void) {
 
             if (carroEspejeado && espejearCarroY && !llegoDestino) {
 
+                reiniciarPID = 1;
                 espejearCarroY = 0;
                 carroEspejeado = 0;
 
-                alinearDespuesCallejon();
                 regresarAlCruce(movimientosRealizados, numMovimientos);
                 limpiarMovimientos(movimientosRealizados, &numMovimientos);
 
@@ -371,7 +369,7 @@ void comportamientoBasico(void) {
                 contCaminosRecorridos++;
                 mouse.Next_state = ALTO;
             } else if (espejearCarroY && carroEspejeado && llegoDestino) {
-                alinearDespuesCallejon();
+                reiniciarPID = 1;
                 espejearCarroY = 0;
                 mouse.Next_state = ALTO;
 
@@ -448,6 +446,8 @@ void forzarParoAuto(void) {
 
     if (!ETAPA_PRUEBAS)
         __delay_ms(RETARDO_PARO_AUTO);
+    else
+        __delay_ms(RETARDO_PARO_AUTO / 2);
 }
 
 void forzarReversa(void) {
@@ -522,40 +522,6 @@ void forzarEspejeo(void) {
         forzarEspejeoIzquierda();
     else
         forzarEspejeoDerecha();
-
-    alinearDespuesCallejon();
-}
-
-void alinearDespuesCallejon(void) {
-    
-    forzarParoAuto();
-    velocidadEstandar();
-    leerSensores();
-
-    if (sensorIzquierda > sensorDerecha) {
-        while (sensorEnfrente < UMBRAL_OBSTACULO_ENFRENTE_CRUCE) {
-            IN1 = 0;
-            IN2 = 0;
-            IN3 = 1;
-            IN4 = 0;
-            __delay_ms(TIEMPO_AVANCE_LATERAL_MINIMO);
-            leerSensores();
-        }
-
-    } else {
-
-        while (sensorEnfrente < UMBRAL_OBSTACULO_ENFRENTE_CRUCE) {
-            IN1 = 1;
-            IN2 = 0;
-            IN3 = 0;
-            IN4 = 0;
-            __delay_ms(TIEMPO_AVANCE_LATERAL_MINIMO);
-            leerSensores();
-
-        }
-    }
-    
-    forzarParoAuto();
 }
 
 void moverCarrito(T_UBYTE espejearCarroY, T_UBYTE* carroEspejeado, T_BOOL* avanceRectoLargo) {
@@ -1240,6 +1206,10 @@ void leerSensores(void) {
     sensorIzquierda = (dameDistancia(IZQUIERDA) + oldSensorIzquierda) / 2;
     sensorEnfrente = (dameDistancia(ENFRENTE) + oldSensorEnfrente) / 2;
 
+    sensorDerecha -= DIFERENCIA_SENSOR_LLANTAS;
+    sensorIzquierda -= DIFERENCIA_SENSOR_LLANTAS;
+    sensorEnfrente -= DIFERENCIA_SENSOR_LLANTAS;
+
     oldSensorDerecha = sensorDerecha;
     oldSensorIzquierda = sensorIzquierda;
     oldSensorEnfrente = sensorEnfrente;
@@ -1265,40 +1235,6 @@ void leerSensores(void) {
 
     else
         DISTANCIA_PRIORIDAD_BAJA = sensorEnfrente;
-}
-
-void PID(void) {
-
-    T_INT dif = 0;
-    T_INT error = 0;
-    static T_INT difAnt = 0;
-
-    //calcula la diferencia
-    dif = sensorIzquierda - sensorDerecha;
-    // calculo del error (se redondea)
-    error = round(KP * (dif) + KD * (difAnt - dif));
-    // para mantener en memoria la dif anterior
-    difAnt = dif;
-    //recalcula las velocidades de motores
-    T_INT velocidadIzquierda = constrain(VELOCIDAD_MOTORES - error, 0, VELOCIDAD_MOTORES); //velocidad izquierda
-    T_INT velocidadDerecha = constrain(VELOCIDAD_MOTORES + error, 0, VELOCIDAD_MOTORES); //velcidad derecha
-
-    pwmDuty(velocidadIzquierda, ENA);
-    pwmDuty(velocidadDerecha, ENB);
-
-}
-
-void probarPID(void) {
-
-    leerSensores();
-
-    if (sensorEnfrente > UMBRAL_OBSTACULO_ENFRENTE_PID) { //Hay espacio hacia enfrente?
-        PID();
-        mouse.curr_state = ENFRENTE;
-        mover();
-    } else
-        finalizarRecorrido();
-
 }
 
 void probarCruceT(void) {
@@ -1358,6 +1294,19 @@ void velocidadBaja(void) {
 
     pwmDuty(VELOCIDAD_MOTORES_BAJA, ENA);
     pwmDuty(VELOCIDAD_MOTORES_BAJA, ENB);
+
+}
+
+void probarPID(void) {
+
+    leerSensores();
+
+    if (sensorEnfrente > UMBRAL_OBSTACULO_ENFRENTE_PID) { //Hay espacio hacia enfrente?
+        PID();
+        mouse.curr_state = ENFRENTE;
+        mover();
+    } else
+        finalizarRecorrido();
 
 }
 

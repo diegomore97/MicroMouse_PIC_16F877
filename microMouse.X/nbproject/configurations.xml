@@ -11,6 +11,7 @@
       <itemPath>variables.h</itemPath>
       <itemPath>adc.h</itemPath>
       <itemPath>constantesimportantes.h</itemPath>
+      <itemPath>control.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"

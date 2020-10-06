@@ -5937,151 +5937,15 @@ T_WORD dameLecturaAdc(T_BYTE canalLeer) {
 # 8 "main.c" 2
 
 # 1 "./constantesimportantes.h" 1
-# 30 "./constantesimportantes.h"
+# 27 "./constantesimportantes.h"
 T_UBYTE SENSOR_PRIORIDAD_ALTA = ENFRENTE;
 T_UBYTE SENSOR_PRIORIDAD_MEDIA = IZQUIERDA;
 T_UBYTE SENSOR_PRIORIDAD_BAJA = DERECHA;
 # 9 "main.c" 2
 
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdio.h" 1 3
-# 24 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdio.h" 3
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 1 3
+# 1 "./control.h" 1
 
 
-
-
-
-typedef void * va_list[1];
-
-
-
-
-typedef void * __isoc_va_list[1];
-# 137 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef long ssize_t;
-# 246 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef long long off_t;
-# 399 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef struct _IO_FILE FILE;
-# 24 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdio.h" 2 3
-# 52 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdio.h" 3
-typedef union _G_fpos64_t {
- char __opaque[16];
- double __align;
-} fpos_t;
-
-extern FILE *const stdin;
-extern FILE *const stdout;
-extern FILE *const stderr;
-
-
-
-
-
-FILE *fopen(const char *restrict, const char *restrict);
-FILE *freopen(const char *restrict, const char *restrict, FILE *restrict);
-int fclose(FILE *);
-
-int remove(const char *);
-int rename(const char *, const char *);
-
-int feof(FILE *);
-int ferror(FILE *);
-int fflush(FILE *);
-void clearerr(FILE *);
-
-int fseek(FILE *, long, int);
-long ftell(FILE *);
-void rewind(FILE *);
-
-int fgetpos(FILE *restrict, fpos_t *restrict);
-int fsetpos(FILE *, const fpos_t *);
-
-size_t fread(void *restrict, size_t, size_t, FILE *restrict);
-size_t fwrite(const void *restrict, size_t, size_t, FILE *restrict);
-
-int fgetc(FILE *);
-int getc(FILE *);
-int getchar(void);
-int ungetc(int, FILE *);
-
-int fputc(int, FILE *);
-int putc(int, FILE *);
-int putchar(int);
-
-char *fgets(char *restrict, int, FILE *restrict);
-
-char *gets(char *);
-
-
-int fputs(const char *restrict, FILE *restrict);
-int puts(const char *);
-
-#pragma printf_check(printf) const
-#pragma printf_check(vprintf) const
-#pragma printf_check(sprintf) const
-#pragma printf_check(snprintf) const
-#pragma printf_check(vsprintf) const
-#pragma printf_check(vsnprintf) const
-
-int printf(const char *restrict, ...);
-int fprintf(FILE *restrict, const char *restrict, ...);
-int sprintf(char *restrict, const char *restrict, ...);
-int snprintf(char *restrict, size_t, const char *restrict, ...);
-
-int vprintf(const char *restrict, __isoc_va_list);
-int vfprintf(FILE *restrict, const char *restrict, __isoc_va_list);
-int vsprintf(char *restrict, const char *restrict, __isoc_va_list);
-int vsnprintf(char *restrict, size_t, const char *restrict, __isoc_va_list);
-
-int scanf(const char *restrict, ...);
-int fscanf(FILE *restrict, const char *restrict, ...);
-int sscanf(const char *restrict, const char *restrict, ...);
-int vscanf(const char *restrict, __isoc_va_list);
-int vfscanf(FILE *restrict, const char *restrict, __isoc_va_list);
-int vsscanf(const char *restrict, const char *restrict, __isoc_va_list);
-
-void perror(const char *);
-
-int setvbuf(FILE *restrict, char *restrict, int, size_t);
-void setbuf(FILE *restrict, char *restrict);
-
-char *tmpnam(char *);
-FILE *tmpfile(void);
-
-
-
-
-FILE *fmemopen(void *restrict, size_t, const char *restrict);
-FILE *open_memstream(char **, size_t *);
-FILE *fdopen(int, const char *);
-FILE *popen(const char *, const char *);
-int pclose(FILE *);
-int fileno(FILE *);
-int fseeko(FILE *, off_t, int);
-off_t ftello(FILE *);
-int dprintf(int, const char *restrict, ...);
-int vdprintf(int, const char *restrict, __isoc_va_list);
-void flockfile(FILE *);
-int ftrylockfile(FILE *);
-void funlockfile(FILE *);
-int getc_unlocked(FILE *);
-int getchar_unlocked(void);
-int putc_unlocked(int, FILE *);
-int putchar_unlocked(int);
-ssize_t getdelim(char **restrict, size_t *restrict, int, FILE *restrict);
-ssize_t getline(char **restrict, size_t *restrict, FILE *restrict);
-int renameat(int, const char *, int, const char *);
-char *ctermid(char *);
-
-
-
-
-
-
-
-char *tempnam(const char *, const char *);
-# 10 "main.c" 2
 
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\math.h" 1 3
 # 10 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\math.h" 3
@@ -6544,8 +6408,188 @@ double jn(int, double);
 double y0(double);
 double y1(double);
 double yn(int, double);
+# 4 "./control.h" 2
+# 15 "./control.h"
+T_BOOL reiniciarPID;
+
+void PID(void);
+
+void PID(void) {
+
+    T_INT dif = 0;
+    T_INT error = 0;
+    static T_INT P, I = 0, D;
+    static T_INT difAnt = 0;
+
+    if (reiniciarPID) {
+        I = 0;
+        difAnt = 0;
+        reiniciarPID = 0;
+    }
+
+
+    dif = sensorDerecha - sensorIzquierda;
+
+
+    P = dif * 1.0;
+    I = (I + dif) * 0.1;
+    D = (dif - difAnt) * 1.3;
+
+    difAnt = dif;
+
+    error = roundf(P + I + D);
+
+
+
+    T_INT velocidadIzquierda = ((100 + error)<(0)?(0):((100 + error)>(100)?(100):(100 + error)));
+    T_INT velocidadDerecha = ((100 - error)<(0)?(0):((100 - error)>(100)?(100):(100 - error)));
+
+    pwmDuty(velocidadIzquierda, 1);
+    pwmDuty(velocidadDerecha, 2);
+
+}
+# 10 "main.c" 2
+
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdio.h" 1 3
+# 24 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdio.h" 3
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 1 3
+
+
+
+
+
+typedef void * va_list[1];
+
+
+
+
+typedef void * __isoc_va_list[1];
+# 137 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef long ssize_t;
+# 246 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef long long off_t;
+# 399 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef struct _IO_FILE FILE;
+# 24 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdio.h" 2 3
+# 52 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdio.h" 3
+typedef union _G_fpos64_t {
+ char __opaque[16];
+ double __align;
+} fpos_t;
+
+extern FILE *const stdin;
+extern FILE *const stdout;
+extern FILE *const stderr;
+
+
+
+
+
+FILE *fopen(const char *restrict, const char *restrict);
+FILE *freopen(const char *restrict, const char *restrict, FILE *restrict);
+int fclose(FILE *);
+
+int remove(const char *);
+int rename(const char *, const char *);
+
+int feof(FILE *);
+int ferror(FILE *);
+int fflush(FILE *);
+void clearerr(FILE *);
+
+int fseek(FILE *, long, int);
+long ftell(FILE *);
+void rewind(FILE *);
+
+int fgetpos(FILE *restrict, fpos_t *restrict);
+int fsetpos(FILE *, const fpos_t *);
+
+size_t fread(void *restrict, size_t, size_t, FILE *restrict);
+size_t fwrite(const void *restrict, size_t, size_t, FILE *restrict);
+
+int fgetc(FILE *);
+int getc(FILE *);
+int getchar(void);
+int ungetc(int, FILE *);
+
+int fputc(int, FILE *);
+int putc(int, FILE *);
+int putchar(int);
+
+char *fgets(char *restrict, int, FILE *restrict);
+
+char *gets(char *);
+
+
+int fputs(const char *restrict, FILE *restrict);
+int puts(const char *);
+
+#pragma printf_check(printf) const
+#pragma printf_check(vprintf) const
+#pragma printf_check(sprintf) const
+#pragma printf_check(snprintf) const
+#pragma printf_check(vsprintf) const
+#pragma printf_check(vsnprintf) const
+
+int printf(const char *restrict, ...);
+int fprintf(FILE *restrict, const char *restrict, ...);
+int sprintf(char *restrict, const char *restrict, ...);
+int snprintf(char *restrict, size_t, const char *restrict, ...);
+
+int vprintf(const char *restrict, __isoc_va_list);
+int vfprintf(FILE *restrict, const char *restrict, __isoc_va_list);
+int vsprintf(char *restrict, const char *restrict, __isoc_va_list);
+int vsnprintf(char *restrict, size_t, const char *restrict, __isoc_va_list);
+
+int scanf(const char *restrict, ...);
+int fscanf(FILE *restrict, const char *restrict, ...);
+int sscanf(const char *restrict, const char *restrict, ...);
+int vscanf(const char *restrict, __isoc_va_list);
+int vfscanf(FILE *restrict, const char *restrict, __isoc_va_list);
+int vsscanf(const char *restrict, const char *restrict, __isoc_va_list);
+
+void perror(const char *);
+
+int setvbuf(FILE *restrict, char *restrict, int, size_t);
+void setbuf(FILE *restrict, char *restrict);
+
+char *tmpnam(char *);
+FILE *tmpfile(void);
+
+
+
+
+FILE *fmemopen(void *restrict, size_t, const char *restrict);
+FILE *open_memstream(char **, size_t *);
+FILE *fdopen(int, const char *);
+FILE *popen(const char *, const char *);
+int pclose(FILE *);
+int fileno(FILE *);
+int fseeko(FILE *, off_t, int);
+off_t ftello(FILE *);
+int dprintf(int, const char *restrict, ...);
+int vdprintf(int, const char *restrict, __isoc_va_list);
+void flockfile(FILE *);
+int ftrylockfile(FILE *);
+void funlockfile(FILE *);
+int getc_unlocked(FILE *);
+int getchar_unlocked(void);
+int putc_unlocked(int, FILE *);
+int putchar_unlocked(int);
+ssize_t getdelim(char **restrict, size_t *restrict, int, FILE *restrict);
+ssize_t getline(char **restrict, size_t *restrict, FILE *restrict);
+int renameat(int, const char *, int, const char *);
+char *ctermid(char *);
+
+
+
+
+
+
+
+char *tempnam(const char *, const char *);
 # 11 "main.c" 2
-# 41 "main.c"
+# 37 "main.c"
 typedef struct {
     Direccion curr_state;
     Direccion Next_state;
@@ -6581,7 +6625,7 @@ T_BOOL hayCruce(T_UBYTE* caminosRecorrer, T_UBYTE investigandoCruce);
 void limpiarMovimientos(T_UBYTE* movimientos, T_UINT* numMovimientos);
 T_BOOL seLlegoAlDestino(void);
 void leerSensores(void);
-void PID(void);
+void probarPID(void);
 void velocidadEstandar(void);
 void velocidadBaja(void);
 void probarGirosAuto(void);
@@ -6591,13 +6635,11 @@ void forzarEspejeo(void);
 void forzarEspejeoIzquierda(void);
 void forzarEspejeoDerecha(void);
 void finalizarRecorrido(void);
-void probarPID(void);
 void probarCruceT(void);
 void forzarReversa(void);
 void forzarAvanceRecto(void);
 void forzarGiroIzquierda(void);
 void forzarGiroDerecha(void);
-void alinearDespuesCallejon(void);
 void mostrarDireccionElegida(T_UBYTE direccionElegida);
 void probarMapeoDireccionCruces(T_UBYTE* caminoFinal, T_UBYTE caminoActual, T_UBYTE* investigandoCruce,
         T_UBYTE* posicionInvCruce, T_UBYTE* mapear, T_UBYTE* cruceDetectado, T_UBYTE* contCaminosRecorridos,
@@ -6747,6 +6789,10 @@ void inicializarComportamientoBasico(void) {
     oldSensorIzquierda = dameDistancia(IZQUIERDA);
     oldSensorEnfrente = dameDistancia(ENFRENTE);
 
+    oldSensorDerecha -= 1.7;
+    oldSensorIzquierda -= 1.7;
+    oldSensorEnfrente -= 1.7;
+
     velocidadEstandar();
 
 }
@@ -6788,7 +6834,7 @@ void comportamientoBasico(void) {
                     pausa = 1;
                 }
             }
-# 306 "main.c"
+# 304 "main.c"
         }
 
         leerSensores();
@@ -6845,10 +6891,10 @@ void comportamientoBasico(void) {
 
             if (carroEspejeado && espejearCarroY && !llegoDestino) {
 
+                reiniciarPID = 1;
                 espejearCarroY = 0;
                 carroEspejeado = 0;
 
-                alinearDespuesCallejon();
                 regresarAlCruce(movimientosRealizados, numMovimientos);
                 limpiarMovimientos(movimientosRealizados, &numMovimientos);
 
@@ -6857,7 +6903,7 @@ void comportamientoBasico(void) {
                 contCaminosRecorridos++;
                 mouse.Next_state = ALTO;
             } else if (espejearCarroY && carroEspejeado && llegoDestino) {
-                alinearDespuesCallejon();
+                reiniciarPID = 1;
                 espejearCarroY = 0;
                 mouse.Next_state = ALTO;
 
@@ -6934,6 +6980,8 @@ void forzarParoAuto(void) {
 
     if (!0)
         _delay((unsigned long)((30)*(4000000/4000.0)));
+    else
+        _delay((unsigned long)((30 / 2)*(4000000/4000.0)));
 }
 
 void forzarReversa(void) {
@@ -7008,40 +7056,6 @@ void forzarEspejeo(void) {
         forzarEspejeoIzquierda();
     else
         forzarEspejeoDerecha();
-
-    alinearDespuesCallejon();
-}
-
-void alinearDespuesCallejon(void) {
-
-    forzarParoAuto();
-    velocidadEstandar();
-    leerSensores();
-
-    if (sensorIzquierda > sensorDerecha) {
-        while (sensorEnfrente < 35) {
-            LATB4 = 0;
-            LATB5 = 0;
-            LATB6 = 1;
-            LATB7 = 0;
-            _delay((unsigned long)((15)*(4000000/4000.0)));
-            leerSensores();
-        }
-
-    } else {
-
-        while (sensorEnfrente < 35) {
-            LATB4 = 1;
-            LATB5 = 0;
-            LATB6 = 0;
-            LATB7 = 0;
-            _delay((unsigned long)((15)*(4000000/4000.0)));
-            leerSensores();
-
-        }
-    }
-
-    forzarParoAuto();
 }
 
 void moverCarrito(T_UBYTE espejearCarroY, T_UBYTE* carroEspejeado, T_BOOL* avanceRectoLargo) {
@@ -7726,6 +7740,10 @@ void leerSensores(void) {
     sensorIzquierda = (dameDistancia(IZQUIERDA) + oldSensorIzquierda) / 2;
     sensorEnfrente = (dameDistancia(ENFRENTE) + oldSensorEnfrente) / 2;
 
+    sensorDerecha -= 1.7;
+    sensorIzquierda -= 1.7;
+    sensorEnfrente -= 1.7;
+
     oldSensorDerecha = sensorDerecha;
     oldSensorIzquierda = sensorIzquierda;
     oldSensorEnfrente = sensorEnfrente;
@@ -7751,40 +7769,6 @@ void leerSensores(void) {
 
     else
         DISTANCIA_PRIORIDAD_BAJA = sensorEnfrente;
-}
-
-void PID(void) {
-
-    T_INT dif = 0;
-    T_INT error = 0;
-    static T_INT difAnt = 0;
-
-
-    dif = sensorIzquierda - sensorDerecha;
-
-    error = roundf(1.5 * (dif) + 0.1 * (difAnt - dif));
-
-    difAnt = dif;
-
-    T_INT velocidadIzquierda = ((100 - error)<(0)?(0):((100 - error)>(100)?(100):(100 - error)));
-    T_INT velocidadDerecha = ((100 + error)<(0)?(0):((100 + error)>(100)?(100):(100 + error)));
-
-    pwmDuty(velocidadIzquierda, 1);
-    pwmDuty(velocidadDerecha, 2);
-
-}
-
-void probarPID(void) {
-
-    leerSensores();
-
-    if (sensorEnfrente > 14) {
-        PID();
-        mouse.curr_state = ENFRENTE;
-        mover();
-    } else
-        finalizarRecorrido();
-
 }
 
 void probarCruceT(void) {
@@ -7844,6 +7828,19 @@ void velocidadBaja(void) {
 
     pwmDuty(70, 1);
     pwmDuty(70, 2);
+
+}
+
+void probarPID(void) {
+
+    leerSensores();
+
+    if (sensorEnfrente > 14) {
+        PID();
+        mouse.curr_state = ENFRENTE;
+        mover();
+    } else
+        finalizarRecorrido();
 
 }
 

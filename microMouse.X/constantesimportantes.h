@@ -4,6 +4,7 @@
 //**************MODIFICAR ESTAS CONSTANTES SEGUN LA CONVENIENCIA DEL PLANO, 
 //DIMENSIONES Y PESO DEL CARRO ****************************
 
+#define DIFERENCIA_SENSOR_LLANTAS 1.7 //Diferencia en cm del sensor para detectar obstaculos a la llanta
 #define ETAPA_PRUEBAS 0 //Habilitar cuando se ejecute una funcion de pruebas
 #define MOSTRAR_INFORMACION_UART 0 //Habilita y deshabilita la comunicacion via UART
 #define UMBRAL_OBSTACULO_LATERAL 30 //expresado en cm | sensibilidad antes de que choque con un objeto
@@ -16,15 +17,11 @@
 #define VELOCIDAD_MOTORES_BAJA 70 //Porcentaje de ciclo de trabajo a la que trabajaran los motores
 #define TIEMPO_REVERSA 400 //Tiempo en milisegundos que avanzara el carro en reversa
 #define TIEMPO_AVANCE_LATERAL 410 //Tiempo en milisegundos que avanzara el carro al girar
-#define TIEMPO_AVANCE_LATERAL_MINIMO 15 //Para cuando queramos alinear despues de llegar a un cruce
+#define TIEMPO_AVANCE_LATERAL_MINIMO 50 //Para cuando queramos alinear despues de llegar a un cruce
 #define TIEMPO_AVANCE_RECTO 550 //Tiempo en milisegundos que avanzara el carro en linea recta
 #define RETARDO_MOV_ESPEJEO 100
 #define MAX_MOVIMIENTOS_GUARDADOS 200 //Para mapear y regresar a algun lugar si llegamos a un callejon
 #define MAX_MOVIMIENTOS_CAMINO_FINAL 20 //El maximo de movimientos a realizar para llegar al destino
-
-//Ajustar estas variables de control para evitar chocar con las paredes laterales
-#define KP 1.5 //Entre mas se aumente esta variable mas brusco sera el cambio para centrar
-#define KD 0.1 //Entre mas aumente esta variabe mas oscilara tratando de centrarse
 
 //Constantes que indican a que direccion deber girar el auto
 T_UBYTE SENSOR_PRIORIDAD_ALTA = ENFRENTE; //La mayor prioridad siempre debe ser enfrente (NO MODIFICAR)
