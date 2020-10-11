@@ -22,6 +22,7 @@ T_FLOAT sensorDerecha, sensorIzquierda, sensorEnfrente;
 T_FLOAT oldSensorDerecha = 0, oldSensorIzquierda = 0, oldSensorEnfrente = 0;
 
 T_FLOAT dameDistancia(T_UBYTE numeroSensor);
+void inicializarBanderasUltrasonico(void);
 
 T_FLOAT dameDistancia(T_UBYTE numeroSensor) {
 
@@ -79,6 +80,15 @@ T_FLOAT dameDistancia(T_UBYTE numeroSensor) {
 
     return distancia;
 
+}
+
+void inicializarBanderasUltrasonico(void) {
+    PIN_TRIGGER = 0; //Pin Trigger Salida
+    PIN_ECHO_1 = 1; //Pin Echo Entrada Sensor 1
+    PIN_ECHO_2 = 1; //Pin Echo Entrada Sensor 2
+    PIN_ECHO_3 = 1; //Pin Echo Entrada Sensor 3  
+    TRIGGER = 0; // Trigguer apagado
+    T1CON = 0b00000000; // FOSC / 4 Y que el preescaler 1:1; Iniciamoa Con el TMR1ON Apagado
 }
 
 

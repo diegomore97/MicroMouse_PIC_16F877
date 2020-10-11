@@ -1,15 +1,18 @@
 //HECHO EN CUCEI 2020
 
+#include <stdio.h>
+#include <math.h>
 #include "config.h"
 #include "variables.h"
 #include "pwm.h"
-#include "ultrasonico.h"
 #include "UART.h"
 #include "adc.h"
+//#include "ultrasonico.h"
+#include "sensorInfrarrojoIr.h"
 #include "constantesimportantes.h"
 #include "control.h"
-#include <stdio.h>
 
+//Pines del Puente H
 #define PIN_IN1  TRISB4
 #define PIN_IN2  TRISB5
 #define PIN_IN3  TRISB6
@@ -20,10 +23,13 @@
 #define IN3 LATB6
 #define IN4 LATB7
 
+//Pines de Indicador del estado del carrito
 #define PIN_BOTON_INICIO_ALTO TRISB0
 #define BOTON_INICIO_ALTO PORTBbits.RB0
 #define PIN_INDICADOR_ESTADO TRISDbits.RD2
 #define INDICADOR_ESTADO LATD2
+
+//Canal para el sensor Optico para saber si se llego al destino
 #define SENSOR_OPTICO_REFLEXIVO 0 //Ubicado en RA0 | canal Analogo 0
 
 #define RETARDO_ANTIREBOTE 100
@@ -62,7 +68,7 @@ void mover(void);
 void inicializarComportamientoBasico(void);
 void comportamientoBasico(void);
 void antiRebote(T_UBYTE pin);
-void probarUltrasonico(T_UBYTE numeroSensor);
+void probarMedirDistancia(T_UBYTE numeroSensor);
 void probarSensores(void);
 void regresarAlCruce(T_UBYTE* movimientos, T_UINT numMovimientos);
 T_BOOL hayCruce(T_UBYTE* caminosRecorrer, T_UBYTE investigandoCruce);
@@ -120,9 +126,9 @@ void probarSensores(void) {
 
     leerSensores();
 
-    probarUltrasonico(ENFRENTE);
-    probarUltrasonico(IZQUIERDA);
-    probarUltrasonico(DERECHA);
+    probarMedirDistancia(ENFRENTE);
+    probarMedirDistancia(IZQUIERDA);
+    probarMedirDistancia(DERECHA);
     T_WORD lecturaSensorOptico = dameLecturaAdc(SENSOR_OPTICO_REFLEXIVO);
 
     if (lecturaSensorOptico < UMBRAL_SENSOR_OPTICO_REFLEXIVO)
@@ -135,7 +141,7 @@ void probarSensores(void) {
 
 }
 
-void probarUltrasonico(T_UBYTE numeroSensor) {
+void probarMedirDistancia(T_UBYTE numeroSensor) {
 
     switch (numeroSensor) {
 
@@ -1355,11 +1361,6 @@ void main(void) {
     INTCONbits.INT0IE = 1; //Habilitar INT0
     INTCON2bits.INTEDG0 = 1; //Interrupción se activa en flanco de subida
 
-    PIN_TRIGGER = 0; //Pin Trigger Salida
-    PIN_ECHO_1 = 1; //Pin Echo Entrada Sensor 1
-    PIN_ECHO_2 = 1; //Pin Echo Entrada Sensor 2
-    PIN_ECHO_3 = 1; //Pin Echo Entrada Sensor 3
-
     PIN_IN1 = 0; //Declarando como salida
     PIN_IN2 = 0; //Declarando como salida
     PIN_IN3 = 0; //Declarando como salida
@@ -1368,15 +1369,13 @@ void main(void) {
     PIN_INDICADOR_ESTADO = 0; //Salida
     PIN_BOTON_INICIO_ALTO = 1; //Pin como entrada
 
-    TRIGGER = 0; // Trigguer apagado
     IN1 = 0; //Motor 1 Apagado
     IN2 = 0; //Motor 2 Apagado
     IN3 = 0; //Motor 3 Apagado
     IN4 = 0; //Motor 4 Apagado
     INDICADOR_ESTADO = 0; //Led apagado
-
-
-    T1CON = 0b00000000; // FOSC / 4 Y que el preescaler 1:1; Iniciamoa Con el TMR1ON Apagado
+    
+    //inicializarBanderasUltrasonico();
 
     configPwm(1); //Frencuencia de PWM de 500 Hz para el canal 1
     configPwm(2); //Frencuencia de PWM de 500 Hz para el canal 2
